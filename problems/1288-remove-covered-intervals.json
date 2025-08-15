@@ -1,0 +1,56 @@
+{
+  "title": "Remove Covered Intervals",
+  "problem_id": "1222",
+  "frontend_id": "1288",
+  "difficulty": "Medium",
+  "problem_slug": "remove-covered-intervals",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.\nThe interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d.\nReturn the number of remaining intervals.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: intervals = [[1,4],[3,6],[2,8]]\nOutput: 2\nExplanation: Interval [3,6] is covered by [2,8], therefore it is removed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: intervals = [[1,4],[2,3]]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= intervals.length <= 1000",
+    "intervals[i].length == 2",
+    "0 <= li < ri <= 105",
+    "All the given intervals are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How to check if an interval is covered by another?",
+    "Compare each interval to all others and check if it is covered by any interval."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int removeCoveredIntervals(vector<vector<int>>& intervals) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeCoveredIntervals(int[][] intervals) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeCoveredIntervals(self, intervals):\n        \"\"\"\n        :type intervals: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:\n        ",
+    "c": "int removeCoveredIntervals(int** intervals, int intervalsSize, int* intervalsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RemoveCoveredIntervals(int[][] intervals) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar removeCoveredIntervals = function(intervals) {\n    \n};",
+    "typescript": "function removeCoveredIntervals(intervals: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $intervals\n     * @return Integer\n     */\n    function removeCoveredIntervals($intervals) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeCoveredIntervals(_ intervals: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeCoveredIntervals(intervals: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int removeCoveredIntervals(List<List<int>> intervals) {\n    \n  }\n}",
+    "golang": "func removeCoveredIntervals(intervals [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} intervals\n# @return {Integer}\ndef remove_covered_intervals(intervals)\n    \nend",
+    "scala": "object Solution {\n    def removeCoveredIntervals(intervals: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_covered_intervals(intervals: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (remove-covered-intervals intervals)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec remove_covered_intervals(Intervals :: [[integer()]]) -> integer().\nremove_covered_intervals(Intervals) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_covered_intervals(intervals :: [[integer]]) :: integer\n  def remove_covered_intervals(intervals) do\n    \n  end\nend"
+  }
+}

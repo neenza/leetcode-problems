@@ -1,0 +1,54 @@
+{
+  "title": "Maximize the Topmost Element After K Moves",
+  "problem_id": "1346",
+  "frontend_id": "2202",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-the-topmost-element-after-k-moves",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed integer array nums representing the contents of a pile, where nums[0] is the topmost element of the pile.\nIn one move, you can perform either of the following:\nYou are also given an integer k, which denotes the total number of moves to be made.\nReturn the maximum value of the topmost element of the pile possible after exactly k moves. In case it is not possible to obtain a non-empty pile after k moves, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,2,2,4,0,6], k = 4\nOutput: 5\nExplanation:\nOne of the ways we can end with 5 at the top of the pile after 4 moves is as follows:\n- Step 1: Remove the topmost element = 5. The pile becomes [2,2,4,0,6].\n- Step 2: Remove the topmost element = 2. The pile becomes [2,4,0,6].\n- Step 3: Remove the topmost element = 2. The pile becomes [4,0,6].\n- Step 4: Add 5 back onto the pile. The pile becomes [5,4,0,6].\nNote that this is not the only way to end with 5 at the top of the pile. It can be shown that 5 is the largest answer possible after 4 moves.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2], k = 1\nOutput: -1\nExplanation: \nIn the first move, our only option is to pop the topmost element of the pile.\nSince it is not possible to obtain a non-empty pile after one move, we return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i], k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each index i, how can we check if nums[i] can be present at the top of the pile or not after k moves?",
+    "For which conditions will we end up with an empty pile?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumTop(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumTop(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumTop(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumTop(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maximumTop(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumTop(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maximumTop = function(nums, k) {\n    \n};",
+    "typescript": "function maximumTop(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximumTop($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumTop(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumTop(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumTop(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maximumTop(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef maximum_top(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maximumTop(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_top(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-top nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_top(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_top(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_top(nums :: [integer], k :: integer) :: integer\n  def maximum_top(nums, k) do\n    \n  end\nend"
+  }
+}

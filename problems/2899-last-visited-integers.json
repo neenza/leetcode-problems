@@ -1,0 +1,53 @@
+{
+  "title": "Last Visited Integers",
+  "problem_id": "3164",
+  "frontend_id": "2899",
+  "difficulty": "Easy",
+  "problem_slug": "last-visited-integers",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "Given an integer array nums where nums[i] is either a positive integer or -1. We need to find for each -1 the respective positive integer, which we call the last visited integer.\nTo achieve this goal, let's define two empty arrays: seen and ans.\nStart iterating from the beginning of the array nums.\nReturn the array ans.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,-1,-1,-1]\nOutput: [2,1,-1]\nExplanation:\nStart with seen = [] and ans = [] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,-1,2,-1,-1]\nOutput: [1,2,1]\nExplanation:\nStart with seen = [] and ans = [] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "nums[i] == -1 or 1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is sufficient to implement what the description is stating."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> lastVisitedIntegers(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> lastVisitedIntegers(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lastVisitedIntegers(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lastVisitedIntegers(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* lastVisitedIntegers(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> LastVisitedIntegers(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar lastVisitedIntegers = function(nums) {\n    \n};",
+    "typescript": "function lastVisitedIntegers(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function lastVisitedIntegers($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lastVisitedIntegers(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lastVisitedIntegers(nums: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> lastVisitedIntegers(List<int> nums) {\n    \n  }\n}",
+    "golang": "func lastVisitedIntegers(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef last_visited_integers(nums)\n    \nend",
+    "scala": "object Solution {\n    def lastVisitedIntegers(nums: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn last_visited_integers(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (last-visited-integers nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec last_visited_integers(Nums :: [integer()]) -> [integer()].\nlast_visited_integers(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec last_visited_integers(nums :: [integer]) :: [integer]\n  def last_visited_integers(nums) do\n    \n  end\nend"
+  }
+}

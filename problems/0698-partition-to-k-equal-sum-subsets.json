@@ -1,0 +1,58 @@
+{
+  "title": "Partition to K Equal Sum Subsets",
+  "problem_id": "698",
+  "frontend_id": "698",
+  "difficulty": "Medium",
+  "problem_slug": "partition-to-k-equal-sum-subsets",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Memoization",
+    "Bitmask"
+  ],
+  "description": "Given an integer array nums and an integer k, return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,3,2,3,5,2,1], k = 4\nOutput: true\nExplanation: It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4], k = 3\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= nums.length <= 16",
+    "1 <= nums[i] <= 104",
+    "The frequency of each element is in the range [1, 4]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can figure out what target each subset must sum to.  Then, let's recursively search, where at each call to our function, we choose which of k subsets the next value will join."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canPartitionKSubsets(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPartitionKSubsets(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canPartitionKSubsets(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:\n        ",
+    "c": "bool canPartitionKSubsets(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanPartitionKSubsets(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar canPartitionKSubsets = function(nums, k) {\n    \n};",
+    "typescript": "function canPartitionKSubsets(nums: number[], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Boolean\n     */\n    function canPartitionKSubsets($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canPartitionKSubsets(_ nums: [Int], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canPartitionKSubsets(nums: IntArray, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canPartitionKSubsets(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func canPartitionKSubsets(nums []int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Boolean}\ndef can_partition_k_subsets(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def canPartitionKSubsets(nums: Array[Int], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_partition_k_subsets(nums: Vec<i32>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-partition-k-subsets nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_partition_k_subsets(Nums :: [integer()], K :: integer()) -> boolean().\ncan_partition_k_subsets(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_partition_k_subsets(nums :: [integer], k :: integer) :: boolean\n  def can_partition_k_subsets(nums, k) do\n    \n  end\nend"
+  }
+}

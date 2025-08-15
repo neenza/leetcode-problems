@@ -1,0 +1,61 @@
+{
+  "title": "Process String with Special Operations II",
+  "problem_id": "3939",
+  "frontend_id": "3614",
+  "difficulty": "Hard",
+  "problem_slug": "process-string-with-special-operations-ii",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters and the special characters: '*', '#', and '%'.\nYou are also given an integer k.\nBuild a new string result by processing s according to the following rules from left to right:\nReturn the kth character of the final string result. If k is out of the bounds of result, return '.'.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"a#b%*\", k = 1\nOutput: \"a\"\nExplanation:\nThe final result is \"ba\" . The character at index k = 1 is 'a' .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cd%#*#\", k = 3\nOutput: \"d\"\nExplanation:\nThe final result is \"dcddcd\" . The character at index k = 3 is 'd' .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"z*#\", k = 0\nOutput: \".\"\nExplanation:\nThe final result is \"\" . Since index k = 0 is out of bounds, the output is '.' .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of only lowercase English letters and special characters '*', '#', and '%'.",
+    "0 <= k <= 1015",
+    "The length of result after processing s will not exceed 1015."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Track the length of the string after each operation on <code>s</code>.",
+    "Walk backwards through <code>s</code>, undoing each # by using modulus on the tracked lengths, and undoing each % by mirroring across the midpoint, to pinpoint the <code>k</code>th character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    char processStr(string s, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char processStr(String s, long k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def processStr(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def processStr(self, s: str, k: int) -> str:\n        ",
+    "c": "char processStr(char* s, long long k) {\n    \n}",
+    "csharp": "public class Solution {\n    public char ProcessStr(string s, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {character}\n */\nvar processStr = function(s, k) {\n    \n};",
+    "typescript": "function processStr(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function processStr($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func processStr(_ s: String, _ k: Int) -> Character {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun processStr(s: String, k: Long): Char {\n        \n    }\n}",
+    "dart": "class Solution {\n  String processStr(String s, int k) {\n    \n  }\n}",
+    "golang": "func processStr(s string, k int64) byte {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Character}\ndef process_str(s, k)\n    \nend",
+    "scala": "object Solution {\n    def processStr(s: String, k: Long): Char = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn process_str(s: String, k: i64) -> char {\n        \n    }\n}",
+    "racket": "(define/contract (process-str s k)\n  (-> string? exact-integer? char?)\n  )",
+    "erlang": "-spec process_str(S :: unicode:unicode_binary(), K :: integer()) -> char().\nprocess_str(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec process_str(s :: String.t, k :: integer) :: char\n  def process_str(s, k) do\n    \n  end\nend"
+  }
+}

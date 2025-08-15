@@ -1,0 +1,56 @@
+{
+  "title": "Count Distinct Numbers on Board",
+  "problem_id": "2679",
+  "frontend_id": "2549",
+  "difficulty": "Easy",
+  "problem_slug": "count-distinct-numbers-on-board",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Simulation"
+  ],
+  "description": "You are given a positive integer n, that is initially placed on a board. Every day, for 109 days, you perform the following procedure:\nReturn the number of distinct integers present on the board after 109 days have elapsed.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5\nOutput: 4\nExplanation: Initially, 5 is present on the board. \nThe next day, 2 and 4 will be added since 5 % 2 == 1 and 5 % 4 == 1. \nAfter that day, 3 will be added to the board because 4 % 3 == 1. \nAt the end of a billion days, the distinct numbers on the board will be 2, 3, 4, and 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3\nOutput: 2\nExplanation: \nSince 3 % 2 == 1, 2 will be added to the board. \nAfter a billion days, the only two distinct numbers on the board are 2 and 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For n > 2, n % (n - 1) == 1 thus n - 1 will be added on the board the next day.",
+    "As the operations are performed for so long time, all the numbers lesser than n except 1 will be added to the board.",
+    "What will happen if n == 1?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distinctIntegers(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctIntegers(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctIntegers(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctIntegers(self, n: int) -> int:\n        ",
+    "c": "int distinctIntegers(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistinctIntegers(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar distinctIntegers = function(n) {\n    \n};",
+    "typescript": "function distinctIntegers(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function distinctIntegers($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctIntegers(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctIntegers(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctIntegers(int n) {\n    \n  }\n}",
+    "golang": "func distinctIntegers(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef distinct_integers(n)\n    \nend",
+    "scala": "object Solution {\n    def distinctIntegers(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_integers(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-integers n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec distinct_integers(N :: integer()) -> integer().\ndistinct_integers(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_integers(n :: integer) :: integer\n  def distinct_integers(n) do\n    \n  end\nend"
+  }
+}

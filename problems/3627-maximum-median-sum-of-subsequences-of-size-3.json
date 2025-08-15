@@ -1,0 +1,52 @@
+{
+  "title": "Maximum Median Sum of Subsequences of Size 3",
+  "problem_id": "3766",
+  "frontend_id": "3627",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-median-sum-of-subsequences-of-size-3",
+  "topics": [],
+  "description": "You are given an integer array nums with a length divisible by 3.\nYou want to make the array empty in steps. In each step, you can select any three elements from the array, compute their median, and remove the selected elements from the array.\nThe median of an odd-length sequence is defined as the middle element of the sequence when it is sorted in non-decreasing order.\nReturn the maximum possible sum of the medians computed from the selected elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,3,2,1,3]\nOutput: 5\nExplanation:\nHence, the sum of the medians is 3 + 2 = 5 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,10,10,10,10]\nOutput: 20\nExplanation:\nHence, the sum of the medians is 10 + 10 = 20 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5 * 105",
+    "nums.length % 3 == 0",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the values in <code>nums</code>.",
+    "Repeatedly pick the largest 2 values and the minimum value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumMedianSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumMedianSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumMedianSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumMedianSum(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maximumMedianSum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumMedianSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumMedianSum = function(nums) {\n    \n};",
+    "typescript": "function maximumMedianSum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumMedianSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumMedianSum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumMedianSum(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumMedianSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumMedianSum(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_median_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumMedianSum(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_median_sum(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-median-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_median_sum(Nums :: [integer()]) -> integer().\nmaximum_median_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_median_sum(nums :: [integer]) :: integer\n  def maximum_median_sum(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Find the Divisibility Array of a String",
+  "problem_id": "2713",
+  "frontend_id": "2575",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-divisibility-array-of-a-string",
+  "topics": [
+    "Array",
+    "Math",
+    "String"
+  ],
+  "description": "You are given a 0-indexed string word of length n consisting of digits, and a positive integer m.\nThe divisibility array div of word is an integer array of length n such that:\nReturn the divisibility array of word.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"998244353\", m = 3\nOutput: [1,1,0,0,0,1,1,0,0]\nExplanation: There are only 4 prefixes that are divisible by 3: \"9\", \"99\", \"998244\", and \"9982443\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"1010\", m = 10\nOutput: [0,1,0,1]\nExplanation: There are only 2 prefixes that are divisible by 10: \"10\", and \"1010\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "word.length == n",
+    "word consists of digits from 0 to 9",
+    "1 <= m <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can check if the numeric value of the prefix of the given string is divisible by m by computing the remainder of the numeric value of the prefix when divided by m.",
+    "The remainder of the numeric value of a prefix ending at index i can be computed from the remainder of the prefix ending at index i-1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> divisibilityArray(string word, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] divisibilityArray(String word, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def divisibilityArray(self, word, m):\n        \"\"\"\n        :type word: str\n        :type m: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def divisibilityArray(self, word: str, m: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* divisibilityArray(char* word, int m, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] DivisibilityArray(string word, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} m\n * @return {number[]}\n */\nvar divisibilityArray = function(word, m) {\n    \n};",
+    "typescript": "function divisibilityArray(word: string, m: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @param Integer $m\n     * @return Integer[]\n     */\n    function divisibilityArray($word, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func divisibilityArray(_ word: String, _ m: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun divisibilityArray(word: String, m: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> divisibilityArray(String word, int m) {\n    \n  }\n}",
+    "golang": "func divisibilityArray(word string, m int) []int {\n    \n}",
+    "ruby": "# @param {String} word\n# @param {Integer} m\n# @return {Integer[]}\ndef divisibility_array(word, m)\n    \nend",
+    "scala": "object Solution {\n    def divisibilityArray(word: String, m: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn divisibility_array(word: String, m: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (divisibility-array word m)\n  (-> string? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec divisibility_array(Word :: unicode:unicode_binary(), M :: integer()) -> [integer()].\ndivisibility_array(Word, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec divisibility_array(word :: String.t, m :: integer) :: [integer]\n  def divisibility_array(word, m) do\n    \n  end\nend"
+  }
+}

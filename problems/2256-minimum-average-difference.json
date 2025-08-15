@@ -1,0 +1,54 @@
+{
+  "title": "Minimum Average Difference",
+  "problem_id": "2342",
+  "frontend_id": "2256",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-average-difference",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums of length n.\nThe average difference of the index i is the absolute difference between the average of the first i + 1 elements of nums and the average of the last n - i - 1 elements. Both averages should be rounded down to the nearest integer.\nReturn the index with the minimum average difference. If there are multiple such indices, return the smallest one.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,3,9,5,3]\nOutput: 3\nExplanation:\n- The average difference of index 0 is: |2 / 1 - (5 + 3 + 9 + 5 + 3) / 5| = |2 / 1 - 25 / 5| = |2 - 5| = 3.\n- The average difference of index 1 is: |(2 + 5) / 2 - (3 + 9 + 5 + 3) / 4| = |7 / 2 - 20 / 4| = |3 - 5| = 2.\n- The average difference of index 2 is: |(2 + 5 + 3) / 3 - (9 + 5 + 3) / 3| = |10 / 3 - 17 / 3| = |3 - 5| = 2.\n- The average difference of index 3 is: |(2 + 5 + 3 + 9) / 4 - (5 + 3) / 2| = |19 / 4 - 8 / 2| = |4 - 4| = 0.\n- The average difference of index 4 is: |(2 + 5 + 3 + 9 + 5) / 5 - 3 / 1| = |24 / 5 - 3 / 1| = |4 - 3| = 1.\n- The average difference of index 5 is: |(2 + 5 + 3 + 9 + 5 + 3) / 6 - 0| = |27 / 6 - 0| = |4 - 0| = 4.\nThe average difference of index 3 is the minimum average difference so return 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0]\nOutput: 0\nExplanation:\nThe only index is 0 so return 0.\nThe average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we use precalculation to efficiently calculate the average difference at an index?",
+    "Create a prefix and/or suffix sum array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumAverageDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumAverageDifference(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumAverageDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumAverageDifference(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumAverageDifference(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumAverageDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumAverageDifference = function(nums) {\n    \n};",
+    "typescript": "function minimumAverageDifference(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumAverageDifference($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumAverageDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumAverageDifference(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumAverageDifference(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumAverageDifference(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_average_difference(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumAverageDifference(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_average_difference(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-average-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_average_difference(Nums :: [integer()]) -> integer().\nminimum_average_difference(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_average_difference(nums :: [integer]) :: integer\n  def minimum_average_difference(nums) do\n    \n  end\nend"
+  }
+}

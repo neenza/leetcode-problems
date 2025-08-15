@@ -1,0 +1,55 @@
+{
+  "title": "Number of Days Between Two Dates",
+  "problem_id": "1274",
+  "frontend_id": "1360",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-days-between-two-dates",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "Write a program to count the number of days between two dates.\nThe two dates are given as strings, their format is YYYY-MM-DD as shown in the examples.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: date1 = \"2019-06-29\", date2 = \"2019-06-30\"\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: date1 = \"2020-01-15\", date2 = \"2019-12-31\"\nOutput: 15",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "The given dates are valid dates between the years 1971 and 2100."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create a function f(date) that counts the number of days from 1900-01-01 to date. How can we calculate the answer ?",
+    "The answer is just |f(date1) - f(date2)|.",
+    "How to construct f(date) ?",
+    "For each year from 1900 to year - 1 sum up 365 or 366 in case of leap years. Then sum up for each month the number of days, consider the case when the current year is leap, finally sum up the days."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int daysBetweenDates(string date1, string date2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int daysBetweenDates(String date1, String date2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def daysBetweenDates(self, date1, date2):\n        \"\"\"\n        :type date1: str\n        :type date2: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def daysBetweenDates(self, date1: str, date2: str) -> int:\n        ",
+    "c": "int daysBetweenDates(char* date1, char* date2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DaysBetweenDates(string date1, string date2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} date1\n * @param {string} date2\n * @return {number}\n */\nvar daysBetweenDates = function(date1, date2) {\n    \n};",
+    "typescript": "function daysBetweenDates(date1: string, date2: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $date1\n     * @param String $date2\n     * @return Integer\n     */\n    function daysBetweenDates($date1, $date2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func daysBetweenDates(_ date1: String, _ date2: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun daysBetweenDates(date1: String, date2: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int daysBetweenDates(String date1, String date2) {\n    \n  }\n}",
+    "golang": "func daysBetweenDates(date1 string, date2 string) int {\n    \n}",
+    "ruby": "# @param {String} date1\n# @param {String} date2\n# @return {Integer}\ndef days_between_dates(date1, date2)\n    \nend",
+    "scala": "object Solution {\n    def daysBetweenDates(date1: String, date2: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn days_between_dates(date1: String, date2: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (days-between-dates date1 date2)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec days_between_dates(Date1 :: unicode:unicode_binary(), Date2 :: unicode:unicode_binary()) -> integer().\ndays_between_dates(Date1, Date2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec days_between_dates(date1 :: String.t, date2 :: String.t) :: integer\n  def days_between_dates(date1, date2) do\n    \n  end\nend"
+  }
+}

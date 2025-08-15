@@ -1,0 +1,54 @@
+{
+  "title": "Sorting the Sentence",
+  "problem_id": "1970",
+  "frontend_id": "1859",
+  "difficulty": "Easy",
+  "problem_slug": "sorting-the-sentence",
+  "topics": [
+    "String",
+    "Sorting"
+  ],
+  "description": "A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of lowercase and uppercase English letters.\nA sentence can be shuffled by appending the 1-indexed word position to each word then rearranging the words in the sentence.\nGiven a shuffled sentence s containing no more than 9 words, reconstruct and return the original sentence.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"is2 sentence4 This1 a3\"\nOutput: \"This is a sentence\"\nExplanation: Sort the words in s to their original positions \"This1 is2 a3 sentence4\", then remove the numbers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"Myself2 Me1 I4 and3\"\nOutput: \"Me Myself and I\"\nExplanation: Sort the words in s to their original positions \"Me1 Myself2 and3 I4\", then remove the numbers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 200",
+    "s consists of lowercase and uppercase English letters, spaces, and digits from 1 to 9.",
+    "The number of words in s is between 1 and 9.",
+    "The words in s are separated by a single space.",
+    "s contains no leading or trailing spaces."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Divide the string into the words as an array of strings",
+    "Sort the words by removing the last character from each word and sorting according to it"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string sortSentence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String sortSentence(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortSentence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortSentence(self, s: str) -> str:\n        ",
+    "c": "\n\nchar * sortSentence(char * s){\n\n}",
+    "csharp": "public class Solution {\n    public string SortSentence(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar sortSentence = function(s) {\n    \n};",
+    "typescript": "function sortSentence(s: string): string {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function sortSentence($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortSentence(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortSentence(s: String): String {\n        \n    }\n}",
+    "golang": "func sortSentence(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef sort_sentence(s)\n    \nend",
+    "scala": "object Solution {\n    def sortSentence(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_sentence(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (sort-sentence s)\n  (-> string? string?)\n\n  )"
+  }
+}

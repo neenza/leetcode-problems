@@ -1,0 +1,64 @@
+{
+  "title": "Maximize the Number of Partitions After Operations",
+  "problem_id": "3233",
+  "frontend_id": "3003",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-the-number-of-partitions-after-operations",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given a string s and an integer k.\nFirst, you are allowed to change at most one index in s to another lowercase English letter.\nAfter that, do the following partitioning operation until s is empty:\nReturn an integer denoting the maximum number of resulting partitions after the operations by optimally choosing at most one index to change.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"accca\", k = 2\nOutput: 3\nExplanation:\nThe optimal way is to change s[2] to something other than a and c, for example, b. then it becomes \"acbca\" .\nThen we perform the operations:\nDoing the operations, the string is divided into 3 partitions, so the answer is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aabaab\", k = 3\nOutput: 1\nExplanation:\nInitially s contains 2 distinct characters, so whichever character we change, it will contain at most 3 distinct characters, so the longest prefix with at most 3 distinct characters would always be all of it, therefore the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"xxyz\", k = 1\nOutput: 4\nExplanation:\nThe optimal way is to change s[0] or s[1] to something other than characters in s , for example, to change s[0] to w .\nThen s becomes \"wxyz\" , which consists of 4 distinct characters, so as k is 1, it will divide into 4 partitions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists only of lowercase English letters.",
+    "1 <= k <= 26"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each position, try to brute-force the replacements.",
+    "To speed up the brute-force solution, we can precompute the following (without changing any index) using prefix sums and binary search:<ul>\r\n<li><code>pref[i]</code>: The number of resulting partitions from the operations by performing the operations on <code>s[0:i]</code>.</li>\r\n<li><code>suff[i]</code>: The number of resulting partitions from the operations by performing the operations on <code>s[i:n - 1]</code>, where <code>n == s.length</code>.</li>\r\n<li><code>partition_start[i]</code>: The start index of the partition containing the <code>i<sup>th</sup></code> index after performing the operations.</li>\r\n</ul>",
+    "Now, for a position <code>i</code>, we can try all possible <code>25</code> replacements:<br />\r\nFor a replacement, using prefix sums and binary search, we need to find the rightmost index, <code>r</code>, such that the number of distinct characters in the range <code>[partition_start[i], r]</code> is at most <code>k</code>.<br />\r\nThere are <code>2</code> cases:<ul>\r\n<li><code>r >= i</code>: the number of resulting partitions in this case is <code>1 + pref[partition_start[i] - 1] + suff[r + 1]</code>.</li>\r\n<li>Otherwise, we need to find the rightmost index <code>r<sub>2</sub></code> such that the number of distinct characters in the range <code>[r:r<sub>2</sub>]</code> is at most <code>k</code>. The answer in this case is <code>2 + pref[partition_start[i] - 1] + suff[r<sub>2</sub> + 1]</code></li>\r\n</ul>",
+    "The answer is the maximum among all replacements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPartitionsAfterOperations(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPartitionsAfterOperations(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPartitionsAfterOperations(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPartitionsAfterOperations(self, s: str, k: int) -> int:\n        ",
+    "c": "int maxPartitionsAfterOperations(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPartitionsAfterOperations(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxPartitionsAfterOperations = function(s, k) {\n    \n};",
+    "typescript": "function maxPartitionsAfterOperations(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxPartitionsAfterOperations($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPartitionsAfterOperations(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPartitionsAfterOperations(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPartitionsAfterOperations(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxPartitionsAfterOperations(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef max_partitions_after_operations(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxPartitionsAfterOperations(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_partitions_after_operations(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-partitions-after-operations s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_partitions_after_operations(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_partitions_after_operations(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_partitions_after_operations(s :: String.t, k :: integer) :: integer\n  def max_partitions_after_operations(s, k) do\n    \n  end\nend"
+  }
+}

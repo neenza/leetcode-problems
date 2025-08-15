@@ -1,0 +1,60 @@
+{
+  "title": "Manhattan Distances of All Arrangements of Pieces",
+  "problem_id": "3739",
+  "frontend_id": "3426",
+  "difficulty": "Hard",
+  "problem_slug": "manhattan-distances-of-all-arrangements-of-pieces",
+  "topics": [
+    "Math",
+    "Combinatorics"
+  ],
+  "description": "You are given three integers m, n, and k.\nThere is a rectangular grid of size m × n containing k identical pieces. Return the sum of Manhattan distances between every pair of pieces over all valid arrangements of pieces.\nA valid arrangement is a placement of all k pieces on the grid with at most one piece per cell.\nSince the answer may be very large, return it modulo 109 + 7.\nThe Manhattan Distance between two cells (xi, yi) and (xj, yj) is |xi - xj| + |yi - yj|.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 2, n = 2, k = 2\nOutput: 8\nExplanation:\nThe valid arrangements of pieces on the board are:\n\nThus, the total Manhattan distance across all valid arrangements is 1 + 1 + 1 + 1 + 2 + 2 = 8 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/25/4040example1.drawio",
+        "https://assets.leetcode.com/uploads/2024/12/25/untitled-diagramdrawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 1, n = 4, k = 3\nOutput: 20\nExplanation:\nThe valid arrangements of pieces on the board are:\n\nThe total Manhattan distance between all pairs of pieces across all arrangements is 4 + 6 + 6 + 4 = 20 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/25/4040example2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 105",
+    "2 <= m * n <= 105",
+    "2 <= k <= m * n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix two pieces in two specific locations and find the number of boards where this can happen.",
+    "A particular pair of positions will be counted exactly <code>C(m * n - 2, k - 2)</code> times. Calculate the total distance for all pairs of positions and multiply it with <code>C(m * n - 2, k - 2)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distanceSum(int m, int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distanceSum(int m, int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distanceSum(self, m, n, k):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distanceSum(self, m: int, n: int, k: int) -> int:\n        ",
+    "c": "int distanceSum(int m, int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistanceSum(int m, int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar distanceSum = function(m, n, k) {\n    \n};",
+    "typescript": "function distanceSum(m: number, n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function distanceSum($m, $n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distanceSum(_ m: Int, _ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distanceSum(m: Int, n: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distanceSum(int m, int n, int k) {\n    \n  }\n}",
+    "golang": "func distanceSum(m int, n int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef distance_sum(m, n, k)\n    \nend",
+    "scala": "object Solution {\n    def distanceSum(m: Int, n: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distance_sum(m: i32, n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distance-sum m n k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec distance_sum(M :: integer(), N :: integer(), K :: integer()) -> integer().\ndistance_sum(M, N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distance_sum(m :: integer, n :: integer, k :: integer) :: integer\n  def distance_sum(m, n, k) do\n    \n  end\nend"
+  }
+}

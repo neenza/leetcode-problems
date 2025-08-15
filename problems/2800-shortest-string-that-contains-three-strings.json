@@ -1,0 +1,55 @@
+{
+  "title": "Shortest String That Contains Three Strings",
+  "problem_id": "2877",
+  "frontend_id": "2800",
+  "difficulty": "Medium",
+  "problem_slug": "shortest-string-that-contains-three-strings",
+  "topics": [
+    "String",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "If there are multiple such strings, return the lexicographically smallest one.\nReturn a string denoting the answer to the problem.\nNotes\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = \"abc\", b = \"bca\", c = \"aaa\"\nOutput: \"aaabca\"\nExplanation:  We show that \"aaabca\" contains all the given strings: a = ans[2...4], b = ans[3..5], c = ans[0..2]. It can be shown that the length of the resulting string would be at least 6 and \"aaabca\" is the lexicographically smallest one.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = \"ab\", b = \"ba\", c = \"aba\"\nOutput: \"aba\"\nExplanation: We show that the string \"aba\" contains all the given strings: a = ans[0..1], b = ans[1..2], c = ans[0..2]. Since the length of c is 3, the length of the resulting string would be at least 3. It can be shown that \"aba\" is the lexicographically smallest one.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= a.length, b.length, c.length <= 100",
+    "a, b, c consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about how you can generate all possible strings that contain all three input strings as substrings. Can you come up with an efficient algorithm to do this?",
+    "Check all permutations of the words a, b, and c. For each permutation, begin by appending some letters to the end of the first word to form the second word. Then, proceed to add more letters to generate the third word."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string minimumString(string a, string b, string c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minimumString(String a, String b, String c) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumString(self, a, b, c):\n        \"\"\"\n        :type a: str\n        :type b: str\n        :type c: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumString(self, a: str, b: str, c: str) -> str:\n        ",
+    "c": "char* minimumString(char* a, char* b, char* c) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MinimumString(string a, string b, string c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} a\n * @param {string} b\n * @param {string} c\n * @return {string}\n */\nvar minimumString = function(a, b, c) {\n    \n};",
+    "typescript": "function minimumString(a: string, b: string, c: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $a\n     * @param String $b\n     * @param String $c\n     * @return String\n     */\n    function minimumString($a, $b, $c) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumString(_ a: String, _ b: String, _ c: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumString(a: String, b: String, c: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String minimumString(String a, String b, String c) {\n    \n  }\n}",
+    "golang": "func minimumString(a string, b string, c string) string {\n    \n}",
+    "ruby": "# @param {String} a\n# @param {String} b\n# @param {String} c\n# @return {String}\ndef minimum_string(a, b, c)\n    \nend",
+    "scala": "object Solution {\n    def minimumString(a: String, b: String, c: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_string(a: String, b: String, c: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-string a b c)\n  (-> string? string? string? string?)\n  )",
+    "erlang": "-spec minimum_string(A :: unicode:unicode_binary(), B :: unicode:unicode_binary(), C :: unicode:unicode_binary()) -> unicode:unicode_binary().\nminimum_string(A, B, C) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_string(a :: String.t, b :: String.t, c :: String.t) :: String.t\n  def minimum_string(a, b, c) do\n    \n  end\nend"
+  }
+}

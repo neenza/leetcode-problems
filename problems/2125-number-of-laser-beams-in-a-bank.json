@@ -1,0 +1,65 @@
+{
+  "title": "Number of Laser Beams in a Bank",
+  "problem_id": "2244",
+  "frontend_id": "2125",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-laser-beams-in-a-bank",
+  "topics": [
+    "Array",
+    "Math",
+    "String",
+    "Matrix"
+  ],
+  "description": "Anti-theft security devices are activated inside a bank. You are given a 0-indexed binary string array bank representing the floor plan of the bank, which is an m x n 2D matrix. bank[i] represents the ith row, consisting of '0's and '1's. '0' means the cell is empty, while'1' means the cell has a security device.\nThere is one laser beam between any two security devices if both conditions are met:\nLaser beams are independent, i.e., one beam does not interfere nor join with another.\nReturn the total number of laser beams in the bank.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: bank = [\"011001\",\"000000\",\"010100\",\"001000\"]\nOutput: 8\nExplanation: Between each of the following device pairs, there is one beam. In total, there are 8 beams:\n * bank[0][1] -- bank[2][1]\n * bank[0][1] -- bank[2][3]\n * bank[0][2] -- bank[2][1]\n * bank[0][2] -- bank[2][3]\n * bank[0][5] -- bank[2][1]\n * bank[0][5] -- bank[2][3]\n * bank[2][1] -- bank[3][2]\n * bank[2][3] -- bank[3][2]\nNote that there is no beam between any device on the 0th row with any on the 3rd row.\nThis is because the 2nd row contains security devices, which breaks the second condition.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/24/laser1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: bank = [\"000\",\"111\",\"000\"]\nOutput: 0\nExplanation: There does not exist two devices located on two different rows.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/24/laser2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == bank.length",
+    "n == bank[i].length",
+    "1 <= m, n <= 500",
+    "bank[i][j] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the commonality between security devices on the same row?",
+    "Each device on the same row has the same number of beams pointing towards the devices on the next row with devices.",
+    "If you were given an integer array where each element is the number of security devices on each row, can you solve it?",
+    "Convert the input to such an array, skip any row with no security device, then find the sum of the product between adjacent elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfBeams(vector<string>& bank) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfBeams(String[] bank) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfBeams(self, bank):\n        \"\"\"\n        :type bank: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfBeams(self, bank: List[str]) -> int:\n        ",
+    "c": "int numberOfBeams(char** bank, int bankSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfBeams(string[] bank) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} bank\n * @return {number}\n */\nvar numberOfBeams = function(bank) {\n    \n};",
+    "typescript": "function numberOfBeams(bank: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $bank\n     * @return Integer\n     */\n    function numberOfBeams($bank) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfBeams(_ bank: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfBeams(bank: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfBeams(List<String> bank) {\n    \n  }\n}",
+    "golang": "func numberOfBeams(bank []string) int {\n    \n}",
+    "ruby": "# @param {String[]} bank\n# @return {Integer}\ndef number_of_beams(bank)\n    \nend",
+    "scala": "object Solution {\n    def numberOfBeams(bank: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_beams(bank: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-beams bank)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec number_of_beams(Bank :: [unicode:unicode_binary()]) -> integer().\nnumber_of_beams(Bank) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_beams(bank :: [String.t]) :: integer\n  def number_of_beams(bank) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Greedy\n\n**Intuition**\n\nThe laser beam will exist from one row (let's call it row `a`) to another (row `b`) if all rows in between have no security devices. In such cases, there will be a laser beam from each safety device in row `a` to every safety device in row `b`. Therefore, if the first row has `M` devices and the second one has `N` devices, then the total number of laser beams will be `M * N` between these two rows. Note that it doesn't matter how many rows in between have no safety devices as the beams will only exist between the rows having the devices.\n\nIn continuation to the above scenario, the second row with safety devices has `N` devices, and suppose the third row with safety devices has `K` devices. Then the number of laser beams between the second and this third row will be `N * K`, and there will be no other beams between the third row and other previous rows. One thing to observe from here is that we can ignore the rows without safety devices as they will be passed through by the beams that are created by rows having devices. Also, the beams will only be there between adjacent rows with devices and the number of beams will be the product of their device count.\n\nWe will keep the count of devices in each row and then multiply it by the number of devices in the previous row which has devices (if it exists). The count of devices in the previous row will be stored in a variable `prev` and will be updated with the number of devices in the current row (only if the devices count is non zero). The sum of all these products of devices count of every adjacent row with non-zero devices will be our answer.\n\n![fig](../Figures/2125/2125A.png)\n\n**Algorithm**\n\n1. Initialize `prev` and `ans` to `0`.\n2. Iterate over each string in `bank` and initialize the `count` to `0`. Iterate over each character in the string and increment the counter `count` if the character is a `1`.\n3. After iterating over all characters of a string, if the `count` is not zero then add `prev * count` to `ans`. Also update the value of `prev` to `count` if `count != 0`.\n4. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nHere, $M$ is the number of strings in the `bank` and $N$ is the average length of the strings.\n\n* Time complexity: $O(M * N)$\n\n  We have to iterate over each character once to find the number of safety devices in each row and hence the time complexity is equal to $O(M * N)$.\n\n* Space complexity: $O(1)$\n\n  We only need three variables `prev`, `ans` and `count` and hence the space complexity is constant.---"
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Profitable Schemes",
+  "problem_id": "911",
+  "frontend_id": "879",
+  "difficulty": "Hard",
+  "problem_slug": "profitable-schemes",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "There is a group of n members, and a list of various crimes they could commit. The ith crime generates a profit[i] and requires group[i] members to participate in it. If a member participates in one crime, that member can't participate in another crime.\nLet's call a profitable scheme any subset of these crimes that generates at least minProfit profit, and the total number of members participating in that subset of crimes is at most n.\nReturn the number of schemes that can be chosen. Since the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, minProfit = 3, group = [2,2], profit = [2,3]\nOutput: 2\nExplanation: To make a profit of at least 3, the group could either commit crimes 0 and 1, or just crime 1.\nIn total, there are 2 schemes.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 10, minProfit = 5, group = [2,3,5], profit = [6,7,8]\nOutput: 7\nExplanation: To make a profit of at least 5, the group could commit any crimes, as long as they commit one.\nThere are 7 possible schemes: (0), (1), (2), (0,1), (0,2), (1,2), and (0,1,2).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100",
+    "0 <= minProfit <= 100",
+    "1 <= group.length <= 100",
+    "1 <= group[i] <= 100",
+    "profit.length == group.length",
+    "0 <= profit[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int profitableSchemes(int n, int minProfit, vector<int>& group, vector<int>& profit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int profitableSchemes(int n, int minProfit, int[] group, int[] profit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def profitableSchemes(self, n, minProfit, group, profit):\n        \"\"\"\n        :type n: int\n        :type minProfit: int\n        :type group: List[int]\n        :type profit: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def profitableSchemes(self, n: int, minProfit: int, group: List[int], profit: List[int]) -> int:\n        ",
+    "c": "int profitableSchemes(int n, int minProfit, int* group, int groupSize, int* profit, int profitSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ProfitableSchemes(int n, int minProfit, int[] group, int[] profit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} minProfit\n * @param {number[]} group\n * @param {number[]} profit\n * @return {number}\n */\nvar profitableSchemes = function(n, minProfit, group, profit) {\n    \n};",
+    "typescript": "function profitableSchemes(n: number, minProfit: number, group: number[], profit: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $minProfit\n     * @param Integer[] $group\n     * @param Integer[] $profit\n     * @return Integer\n     */\n    function profitableSchemes($n, $minProfit, $group, $profit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func profitableSchemes(_ n: Int, _ minProfit: Int, _ group: [Int], _ profit: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun profitableSchemes(n: Int, minProfit: Int, group: IntArray, profit: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int profitableSchemes(int n, int minProfit, List<int> group, List<int> profit) {\n    \n  }\n}",
+    "golang": "func profitableSchemes(n int, minProfit int, group []int, profit []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} min_profit\n# @param {Integer[]} group\n# @param {Integer[]} profit\n# @return {Integer}\ndef profitable_schemes(n, min_profit, group, profit)\n    \nend",
+    "scala": "object Solution {\n    def profitableSchemes(n: Int, minProfit: Int, group: Array[Int], profit: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn profitable_schemes(n: i32, min_profit: i32, group: Vec<i32>, profit: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (profitable-schemes n minProfit group profit)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec profitable_schemes(N :: integer(), MinProfit :: integer(), Group :: [integer()], Profit :: [integer()]) -> integer().\nprofitable_schemes(N, MinProfit, Group, Profit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec profitable_schemes(n :: integer, min_profit :: integer, group :: [integer], profit :: [integer]) :: integer\n  def profitable_schemes(n, min_profit, group, profit) do\n    \n  end\nend"
+  }
+}

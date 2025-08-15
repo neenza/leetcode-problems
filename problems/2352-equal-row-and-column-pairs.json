@@ -1,0 +1,62 @@
+{
+  "title": "Equal Row and Column Pairs",
+  "problem_id": "2428",
+  "frontend_id": "2352",
+  "difficulty": "Medium",
+  "problem_slug": "equal-row-and-column-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given a 0-indexed n x n integer matrix grid, return the number of pairs (ri, cj) such that row ri and column cj are equal.\nA row and column pair is considered equal if they contain the same elements in the same order (i.e., an equal array).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[3,2,1],[1,7,6],[2,7,7]]\nOutput: 1\nExplanation: There is 1 equal row and column pair:\n- (Row 2, Column 1): [2,7,7]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/06/01/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]\nOutput: 3\nExplanation: There are 3 equal row and column pairs:\n- (Row 0, Column 0): [3,1,2,2]\n- (Row 2, Column 2): [2,4,2,2]\n- (Row 3, Column 2): [2,4,2,2]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/06/01/ex2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "1 <= n <= 200",
+    "1 <= grid[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can use nested loops to compare every row against every column.",
+    "Another loop is necessary to compare the row and column element by element.",
+    "It is also possible to hash the arrays and compare the hashed values instead."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int equalPairs(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int equalPairs(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def equalPairs(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def equalPairs(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int equalPairs(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EqualPairs(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar equalPairs = function(grid) {\n    \n};",
+    "typescript": "function equalPairs(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function equalPairs($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func equalPairs(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun equalPairs(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int equalPairs(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func equalPairs(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef equal_pairs(grid)\n    \nend",
+    "scala": "object Solution {\n    def equalPairs(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn equal_pairs(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (equal-pairs grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec equal_pairs(Grid :: [[integer()]]) -> integer().\nequal_pairs(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec equal_pairs(grid :: [[integer]]) :: integer\n  def equal_pairs(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Lexicographically Minimum String After Removing Stars",
+  "problem_id": "3445",
+  "frontend_id": "3170",
+  "difficulty": "Medium",
+  "problem_slug": "lexicographically-minimum-string-after-removing-stars",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Stack",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given a string s. It may contain any number of '*' characters. Your task is to remove all '*' characters.\nWhile there is a '*', do the following operation:\nReturn the lexicographically smallest resulting string after removing all '*' characters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aaba*\"\nOutput: \"aab\"\nExplanation:\nWe should delete one of the 'a' characters with '*' . If we choose s[3] , s becomes the lexicographically smallest.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abc\"\nOutput: \"abc\"\nExplanation:\nThere is no '*' in the string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters and '*'.",
+    "The input is generated such that it is possible to delete all '*' characters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string clearStars(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String clearStars(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def clearStars(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def clearStars(self, s: str) -> str:\n        ",
+    "c": "char* clearStars(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ClearStars(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar clearStars = function(s) {\n    \n};",
+    "typescript": "function clearStars(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function clearStars($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func clearStars(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun clearStars(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String clearStars(String s) {\n    \n  }\n}",
+    "golang": "func clearStars(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef clear_stars(s)\n    \nend",
+    "scala": "object Solution {\n    def clearStars(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn clear_stars(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (clear-stars s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec clear_stars(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nclear_stars(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec clear_stars(s :: String.t) :: String.t\n  def clear_stars(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Greedy\n\n#### Intuition\n\nAccording to the problem statement, whenever a `*` is encountered, we must remove the smallest character (in lexicographical order) to its left. To ensure that the resulting string is as lexicographically small as possible, and following the greedy principle, it's better to remove characters from the end rather than the beginning. This helps keep the smaller characters closer to the front, which contributes to minimizing the overall lexicographical order of the string.\n\nWe traverse the string $s$ from left to right. Since the string contains only lowercase letters, we use $26$ stacks to store the indices of each character we've seen so far. The $k$-th stack stores the indices of the $k$-th lowercase letter (`a` corresponds to 0, `b` to 1, and so on).\n\n* When we encounter a `*`, we find the non-empty stack with the smallest lexicographical character, mark the corresponding character in the string $s$ as `*`, and remove the index from the top of that stack.\n* When we encounter a non-`*` character, we push its index into the corresponding stack.\n\nThe final answer is formed by selecting all characters from left to right in the string $s$ that are not `*`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ be the size of the character set. Since all characters in this problem are lowercase letters, we have $|\\Sigma| = 26$.\n\n- Time complexity: $O(n \\times |\\Sigma|)$.\n  \n  During traversal, whenever we encounter a `*`, we need to find the smallest character (in lexicographical order) to its left. This requires scanning through all $|\\Sigma|$ possible character stacks, which takes $O(|\\Sigma|)$ time. Since there can be at most $n$ occurrences of `*`, the total time complexity is $O(n \\times |\\Sigma|)$.\n\n- Space complexity: $O(n + |\\Sigma|)$.\n  \n  The space used is $O(n + |\\Sigma|)$: we need $O(n)$ space to store the indices of all characters in the string, and $O(|\\Sigma|)$ space for maintaining the stacks for each character."
+}

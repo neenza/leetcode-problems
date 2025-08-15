@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Cost Good Caption",
+  "problem_id": "3701",
+  "frontend_id": "3441",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-cost-good-caption",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string caption of length n. A good caption is a string where every character appears in groups of at least 3 consecutive occurrences.\nFor example:\nYou can perform the following operation any number of times:\nChoose an index i (where 0 <= i < n) and change the character at that index to either:\nYour task is to convert the given caption into a good caption using the minimum number of operations, and return it. If there are multiple possible good captions, return the lexicographically smallest one among them. If it is impossible to create a good caption, return an empty string \"\".\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: caption = \"cdcd\"\nOutput: \"cccc\"\nExplanation:\nIt can be shown that the given caption cannot be transformed into a good caption with fewer than 2 operations. The possible good captions that can be created using exactly 2 operations are:\nSince \"cccc\" is lexicographically smaller than \"dddd\" , return \"cccc\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: caption = \"aca\"\nOutput: \"aaa\"\nExplanation:\nIt can be proven that the given caption requires at least 2 operations to be transformed into a good caption. The only good caption that can be obtained with exactly 2 operations is as follows:\nThus, return \"aaa\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: caption = \"bc\"\nOutput: \"\"\nExplanation:\nIt can be shown that the given caption cannot be converted to a good caption by using any number of operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= caption.length <= 5 * 104",
+    "caption consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Construct a DP table and try all possible characters at every index.",
+    "Choose characters greedily to get the lexicographically smallest caption."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string minCostGoodCaption(string caption) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minCostGoodCaption(String caption) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCostGoodCaption(self, caption):\n        \"\"\"\n        :type caption: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCostGoodCaption(self, caption: str) -> str:\n        ",
+    "c": "char* minCostGoodCaption(char* caption) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MinCostGoodCaption(string caption) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} caption\n * @return {string}\n */\nvar minCostGoodCaption = function(caption) {\n    \n};",
+    "typescript": "function minCostGoodCaption(caption: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $caption\n     * @return String\n     */\n    function minCostGoodCaption($caption) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCostGoodCaption(_ caption: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCostGoodCaption(caption: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String minCostGoodCaption(String caption) {\n    \n  }\n}",
+    "golang": "func minCostGoodCaption(caption string) string {\n    \n}",
+    "ruby": "# @param {String} caption\n# @return {String}\ndef min_cost_good_caption(caption)\n    \nend",
+    "scala": "object Solution {\n    def minCostGoodCaption(caption: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost_good_caption(caption: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost-good-caption caption)\n  (-> string? string?)\n  )",
+    "erlang": "-spec min_cost_good_caption(Caption :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmin_cost_good_caption(Caption) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost_good_caption(caption :: String.t) :: String.t\n  def min_cost_good_caption(caption) do\n    \n  end\nend"
+  }
+}

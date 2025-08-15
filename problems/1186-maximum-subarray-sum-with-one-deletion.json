@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Subarray Sum with One Deletion",
+  "problem_id": "1288",
+  "frontend_id": "1186",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-subarray-sum-with-one-deletion",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "Given an array of integers, return the maximum sum for a non-empty subarray (contiguous elements) with at most one element deletion. In other words, you want to choose a subarray and optionally delete one element from it so that there is still at least one element left and the sum of the remaining elements is maximum possible.\nNote that the subarray needs to be non-empty after deleting one element.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [1,-2,0,3]\nOutput: 4\nExplanation: Because we can choose [1, -2, 0, 3] and drop -2, thus the subarray [1, 0, 3] becomes the maximum value.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,-2,-2,3]\nOutput: 3\nExplanation: We just choose [3] and it's the maximum sum.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [-1,-1,-1,-1]\nOutput: -1\nExplanation: The final subarray needs to be non-empty. You can't choose [-1] and delete -1 from it, then get an empty subarray to make the sum equals to 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 105",
+    "-104 <= arr[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How to solve this problem if no deletions are allowed ?",
+    "Try deleting each element and find the maximum subarray sum to both sides of that element.",
+    "To do that efficiently, use the idea of Kadane's algorithm."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumSum(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumSum(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumSum(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumSum(self, arr: List[int]) -> int:\n        ",
+    "c": "int maximumSum(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumSum(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar maximumSum = function(arr) {\n    \n};",
+    "typescript": "function maximumSum(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function maximumSum($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumSum(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumSum(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumSum(List<int> arr) {\n    \n  }\n}",
+    "golang": "func maximumSum(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef maximum_sum(arr)\n    \nend",
+    "scala": "object Solution {\n    def maximumSum(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_sum(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-sum arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_sum(Arr :: [integer()]) -> integer().\nmaximum_sum(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_sum(arr :: [integer]) :: integer\n  def maximum_sum(arr) do\n    \n  end\nend"
+  }
+}

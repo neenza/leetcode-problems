@@ -1,0 +1,58 @@
+{
+  "title": "Find the K-th Character in String Game II",
+  "problem_id": "3601",
+  "frontend_id": "3307",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-k-th-character-in-string-game-ii",
+  "topics": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion"
+  ],
+  "description": "Alice and Bob are playing a game. Initially, Alice has a string word = \"a\".\nYou are given a positive integer k. You are also given an integer array operations, where operations[i] represents the type of the ith operation.\nNow Bob will ask Alice to perform all operations in sequence:\nReturn the value of the kth character in word after performing all the operations.\nNote that the character 'z' can be changed to 'a' in the second type of operation.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 5, operations = [0,0,0]\nOutput: \"a\"\nExplanation:\nInitially, word == \"a\" . Alice performs the three operations as follows:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 10, operations = [0,1,0,1]\nOutput: \"b\"\nExplanation:\nInitially, word == \"a\" . Alice performs the four operations as follows:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 1014",
+    "1 <= operations.length <= 100",
+    "operations[i] is either 0 or 1.",
+    "The input is generated such that word has at least k characters after all operations."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to replay the operations <code>k<sup>th</sup></code> character was part of.",
+    "The <code>k<sup>th</sup></code> character is only affected if it is present in the first half of the string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    char kthCharacter(long long k, vector<int>& operations) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char kthCharacter(long k, int[] operations) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kthCharacter(self, k, operations):\n        \"\"\"\n        :type k: int\n        :type operations: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kthCharacter(self, k: int, operations: List[int]) -> str:\n        ",
+    "c": "char kthCharacter(long long k, int* operations, int operationsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public char KthCharacter(long k, int[] operations) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number[]} operations\n * @return {character}\n */\nvar kthCharacter = function(k, operations) {\n    \n};",
+    "typescript": "function kthCharacter(k: number, operations: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @param Integer[] $operations\n     * @return String\n     */\n    function kthCharacter($k, $operations) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kthCharacter(_ k: Int, _ operations: [Int]) -> Character {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kthCharacter(k: Long, operations: IntArray): Char {\n        \n    }\n}",
+    "dart": "class Solution {\n  String kthCharacter(int k, List<int> operations) {\n    \n  }\n}",
+    "golang": "func kthCharacter(k int64, operations []int) byte {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @param {Integer[]} operations\n# @return {Character}\ndef kth_character(k, operations)\n    \nend",
+    "scala": "object Solution {\n    def kthCharacter(k: Long, operations: Array[Int]): Char = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn kth_character(k: i64, operations: Vec<i32>) -> char {\n        \n    }\n}",
+    "racket": "(define/contract (kth-character k operations)\n  (-> exact-integer? (listof exact-integer?) char?)\n  )",
+    "erlang": "-spec kth_character(K :: integer(), Operations :: [integer()]) -> char().\nkth_character(K, Operations) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec kth_character(k :: integer, operations :: [integer]) :: char\n  def kth_character(k, operations) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Iteration\n\n#### Intuition\n\nThe general idea of this problem is the same as that of \"[Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/description/),\" with the only difference being that we need to determine which operation the current $k$ is located in.\n\nLet $k = 2^t + a$. If $a = 0$, then the current $k$ is in the $(t - 1)$-th operation; if $a \\neq 0$, then the current $k$ is in the $t$-th operation.\n\nThis conclusion can be easily derived by simulating with small amounts of data.\n\nAfter determining the number of operations corresponding to the current $k$, we can decide whether to accumulate the answer using the `operations` array provided in the problem. If `operations[t] = 1`, we perform the accumulation; otherwise, we do not.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(\\log k)$.\n  \n  Only related to the binary digits of $k$.\n\n- Space complexity: $O(1)$.\n\n### Approach 2: Mathematics\n\n#### Intuition\n\nChange the way of thinking: if you start counting from the character after the original string, reaching the $k$-th character is equivalent to moving forward $k - 1$ characters.\n\nWrite $k - 1$ in binary. When the $t$-th bit is $1$, it corresponds to shifting forward by $2^{t - 1}$ characters, which is equivalent to applying the $(t - 1)$-th operation.\n\nTherefore, we only need to pay attention to the positions of the binary number representing $k - 1$ where the bit is $1$. If the corresponding value in the `operations` array at that position is $1$, we add it to the answer.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(\\log k)$.\n  \n  This depends only on the number of binary digits in $k$.\n\n- Space complexity: $O(1)$."
+}

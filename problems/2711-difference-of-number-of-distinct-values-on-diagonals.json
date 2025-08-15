@@ -1,0 +1,55 @@
+{
+  "title": "Difference of Number of Distinct Values on Diagonals",
+  "problem_id": "2801",
+  "frontend_id": "2711",
+  "difficulty": "Medium",
+  "problem_slug": "difference-of-number-of-distinct-values-on-diagonals",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ],
+  "description": "Given a 2D grid of size m x n, you should find the matrix answer of size m x n.\nThe cell answer[r][c] is calculated by looking at the diagonal values of the cell grid[r][c]:\nA matrix diagonal is a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until the end of the matrix is reached.\nReturn the matrix answer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2,3],[3,1,5],[3,2,1]]\nOutput: Output: [[1,1,0],[1,0,1],[0,1,1]]\nExplanation:\nTo calculate the answer cells:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1]]\nOutput: Output: [[0]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n, grid[i][j] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the set to count the number of distinct elements on diagonals."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> differenceOfDistinctValues(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] differenceOfDistinctValues(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def differenceOfDistinctValues(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def differenceOfDistinctValues(self, grid: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** differenceOfDistinctValues(int** grid, int gridSize, int* gridColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] DifferenceOfDistinctValues(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number[][]}\n */\nvar differenceOfDistinctValues = function(grid) {\n    \n};",
+    "typescript": "function differenceOfDistinctValues(grid: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer[][]\n     */\n    function differenceOfDistinctValues($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func differenceOfDistinctValues(_ grid: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun differenceOfDistinctValues(grid: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> differenceOfDistinctValues(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func differenceOfDistinctValues(grid [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer[][]}\ndef difference_of_distinct_values(grid)\n    \nend",
+    "scala": "object Solution {\n    def differenceOfDistinctValues(grid: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn difference_of_distinct_values(grid: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (difference-of-distinct-values grid)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec difference_of_distinct_values(Grid :: [[integer()]]) -> [[integer()]].\ndifference_of_distinct_values(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec difference_of_distinct_values(grid :: [[integer]]) :: [[integer]]\n  def difference_of_distinct_values(grid) do\n    \n  end\nend"
+  }
+}

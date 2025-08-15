@@ -1,0 +1,66 @@
+{
+  "title": "Minimum Moves to Clean the Classroom",
+  "problem_id": "3870",
+  "frontend_id": "3568",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-moves-to-clean-the-classroom",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given an m x n grid classroom where a student volunteer is tasked with cleaning up litter scattered around the room. Each cell in the grid is one of the following:\nYou are also given an integer energy, representing the student's maximum energy capacity. The student starts with this energy from the starting position 'S'.\nEach move to an adjacent cell (up, down, left, or right) costs 1 unit of energy. If the energy reaches 0, the student can only continue if they are on a reset area 'R', which resets the energy to its maximum capacity energy.\nReturn the minimum number of moves required to collect all litter items, or -1 if it's impossible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: classroom = [\"S.\", \"XL\"], energy = 2\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: classroom = [\"LS\", \"RL\"], energy = 4\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: classroom = [\"L.S\", \"RXL\"], energy = 3\nOutput: -1\nExplanation:\nNo valid path collects all 'L' .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= m == classroom.length <= 20",
+    "1 <= n == classroom[i].length <= 20",
+    "classroom[i][j] is one of 'S', 'L', 'R', 'X', or '.'",
+    "1 <= energy <= 50",
+    "There is exactly one 'S' in the grid.",
+    "There are at most 10 'L' cells in the grid."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use BFS with states <code>(x, y, mask, e, steps)</code>, initializing with <code>(sx, sy, 0, energy, 0)</code>, and for each move update <code>e</code> (–1 per step), update <code>mask</code> on 'L', reset <code>e=energy</code> on 'R', and return <code>steps</code> when <code>mask == fullMask</code>.",
+    "Maintain a 3D array <code>bestEnergy[x][y][mask]</code> storing the maximum <code>e</code> seen for each <code>(x,y,mask)</code> and skip any new state with <code>e <= bestEnergy[x][y][mask]</code> to prune."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMoves(vector<string>& classroom, int energy) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMoves(String[] classroom, int energy) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMoves(self, classroom, energy):\n        \"\"\"\n        :type classroom: List[str]\n        :type energy: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMoves(self, classroom: List[str], energy: int) -> int:\n        ",
+    "c": "int minMoves(char** classroom, int classroomSize, int energy) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMoves(string[] classroom, int energy) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} classroom\n * @param {number} energy\n * @return {number}\n */\nvar minMoves = function(classroom, energy) {\n    \n};",
+    "typescript": "function minMoves(classroom: string[], energy: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $classroom\n     * @param Integer $energy\n     * @return Integer\n     */\n    function minMoves($classroom, $energy) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMoves(_ classroom: [String], _ energy: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMoves(classroom: Array<String>, energy: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMoves(List<String> classroom, int energy) {\n    \n  }\n}",
+    "golang": "func minMoves(classroom []string, energy int) int {\n    \n}",
+    "ruby": "# @param {String[]} classroom\n# @param {Integer} energy\n# @return {Integer}\ndef min_moves(classroom, energy)\n    \nend",
+    "scala": "object Solution {\n    def minMoves(classroom: Array[String], energy: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_moves(classroom: Vec<String>, energy: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-moves classroom energy)\n  (-> (listof string?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_moves(Classroom :: [unicode:unicode_binary()], Energy :: integer()) -> integer().\nmin_moves(Classroom, Energy) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_moves(classroom :: [String.t], energy :: integer) :: integer\n  def min_moves(classroom, energy) do\n    \n  end\nend"
+  }
+}

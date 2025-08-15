@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Number of Darts Inside of a Circular Dartboard",
+  "problem_id": "1563",
+  "frontend_id": "1453",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-darts-inside-of-a-circular-dartboard",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "Alice is throwing n darts on a very large wall. You are given an array darts where darts[i] = [xi, yi] is the position of the ith dart that Alice threw on the wall.\nBob knows the positions of the n darts on the wall. He wants to place a dartboard of radius r on the wall so that the maximum number of darts that Alice throws lie on the dartboard.\nGiven the integer r, return the maximum number of darts that can lie on the dartboard.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: darts = [[-2,0],[2,0],[0,2],[0,-2]], r = 2\nOutput: 4\nExplanation: Circle dartboard with center in (0,0) and radius = 2 contain all points.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/04/29/sample_1_1806.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: darts = [[-3,0],[3,0],[2,6],[5,4],[0,9],[7,8]], r = 5\nOutput: 5\nExplanation: Circle dartboard with center in (0,4) and radius = 5 contain all points except the point (7,8).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/04/29/sample_2_1806.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= darts.length <= 100",
+    "darts[i].length == 2",
+    "-104 <= xi, yi <= 104",
+    "All the darts are unique",
+    "1 <= r <= 5000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there is an optimal solution, you can always move the circle so that two points lie on the boundary of the circle.",
+    "When the radius is fixed, you can find either 0 or 1 or 2 circles that pass two given points at the same time.",
+    "Loop for each pair of points and find the center of the circle, after that count the number of points inside the circle."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numPoints(vector<vector<int>>& darts, int r) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numPoints(int[][] darts, int r) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numPoints(self, darts, r):\n        \"\"\"\n        :type darts: List[List[int]]\n        :type r: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numPoints(self, darts: List[List[int]], r: int) -> int:\n        ",
+    "c": "int numPoints(int** darts, int dartsSize, int* dartsColSize, int r) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumPoints(int[][] darts, int r) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} darts\n * @param {number} r\n * @return {number}\n */\nvar numPoints = function(darts, r) {\n    \n};",
+    "typescript": "function numPoints(darts: number[][], r: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $darts\n     * @param Integer $r\n     * @return Integer\n     */\n    function numPoints($darts, $r) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numPoints(_ darts: [[Int]], _ r: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numPoints(darts: Array<IntArray>, r: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numPoints(List<List<int>> darts, int r) {\n    \n  }\n}",
+    "golang": "func numPoints(darts [][]int, r int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} darts\n# @param {Integer} r\n# @return {Integer}\ndef num_points(darts, r)\n    \nend",
+    "scala": "object Solution {\n    def numPoints(darts: Array[Array[Int]], r: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_points(darts: Vec<Vec<i32>>, r: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-points darts r)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_points(Darts :: [[integer()]], R :: integer()) -> integer().\nnum_points(Darts, R) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_points(darts :: [[integer]], r :: integer) :: integer\n  def num_points(darts, r) do\n    \n  end\nend"
+  }
+}

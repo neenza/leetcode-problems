@@ -1,0 +1,68 @@
+{
+  "title": "Distribute Repeating Integers",
+  "problem_id": "1758",
+  "frontend_id": "1655",
+  "difficulty": "Hard",
+  "problem_slug": "distribute-repeating-integers",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given an array of n integers, nums, where there are at most 50 unique values in the array. You are also given an array of m customer order quantities, quantity, where quantity[i] is the amount of integers the ith customer ordered. Determine if it is possible to distribute nums such that:\nReturn true if it is possible to distribute nums according to the above conditions.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4], quantity = [2]\nOutput: false\nExplanation: The 0th customer cannot be given two different integers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,3], quantity = [2]\nOutput: true\nExplanation: The 0th customer is given [3,3]. The integers [1,2] are not used.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,2,2], quantity = [2,2]\nOutput: true\nExplanation: The 0th customer is given [1,1], and the 1st customer is given [2,2].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "1 <= nums[i] <= 1000",
+    "m == quantity.length",
+    "1 <= m <= 10",
+    "1 <= quantity[i] <= 105",
+    "There are at most 50 unique values in nums."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequencies of each number. For example, if nums = [4,4,5,5,5], frequencies = [2,3].",
+    "Each customer wants all of their numbers to be the same. This means that each customer will be assigned to one number.",
+    "Use dynamic programming. Iterate through the numbers' frequencies, and choose some subset of customers to be assigned to this number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canDistribute(vector<int>& nums, vector<int>& quantity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canDistribute(int[] nums, int[] quantity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canDistribute(self, nums, quantity):\n        \"\"\"\n        :type nums: List[int]\n        :type quantity: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canDistribute(self, nums: List[int], quantity: List[int]) -> bool:\n        ",
+    "c": "bool canDistribute(int* nums, int numsSize, int* quantity, int quantitySize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanDistribute(int[] nums, int[] quantity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} quantity\n * @return {boolean}\n */\nvar canDistribute = function(nums, quantity) {\n    \n};",
+    "typescript": "function canDistribute(nums: number[], quantity: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $quantity\n     * @return Boolean\n     */\n    function canDistribute($nums, $quantity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canDistribute(_ nums: [Int], _ quantity: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canDistribute(nums: IntArray, quantity: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canDistribute(List<int> nums, List<int> quantity) {\n    \n  }\n}",
+    "golang": "func canDistribute(nums []int, quantity []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} quantity\n# @return {Boolean}\ndef can_distribute(nums, quantity)\n    \nend",
+    "scala": "object Solution {\n    def canDistribute(nums: Array[Int], quantity: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_distribute(nums: Vec<i32>, quantity: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-distribute nums quantity)\n  (-> (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_distribute(Nums :: [integer()], Quantity :: [integer()]) -> boolean().\ncan_distribute(Nums, Quantity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_distribute(nums :: [integer], quantity :: [integer]) :: boolean\n  def can_distribute(nums, quantity) do\n    \n  end\nend"
+  }
+}

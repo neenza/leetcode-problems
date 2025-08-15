@@ -1,0 +1,59 @@
+{
+  "title": "Form Largest Integer With Digits That Add up to Target",
+  "problem_id": "1545",
+  "frontend_id": "1449",
+  "difficulty": "Hard",
+  "problem_slug": "form-largest-integer-with-digits-that-add-up-to-target",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "Given an array of integers cost and an integer target, return the maximum integer you can paint under the following rules:\nSince the answer may be very large, return it as a string. If there is no way to paint any integer given the condition, return \"0\".\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cost = [4,3,2,5,6,7,2,5,5], target = 9\nOutput: \"7772\"\nExplanation: The cost to paint the digit '7' is 2, and the digit '2' is 3. Then cost(\"7772\") = 2*3+ 3*1 = 9. You could also paint \"977\", but \"7772\" is the largest number.\nDigit    cost\n  1  ->   4\n  2  ->   3\n  3  ->   2\n  4  ->   5\n  5  ->   6\n  6  ->   7\n  7  ->   2\n  8  ->   5\n  9  ->   5",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cost = [7,6,5,5,5,6,8,7,8], target = 12\nOutput: \"85\"\nExplanation: The cost to paint the digit '8' is 7, and the digit '5' is 5. Then cost(\"85\") = 7 + 5 = 12.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: cost = [2,4,6,2,4,6,4,4,4], target = 5\nOutput: \"0\"\nExplanation: It is impossible to paint any integer with total cost equal to target.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "cost.length == 9",
+    "1 <= cost[i], target <= 5000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to find the maximum digits to paint given a total cost.",
+    "Build the largest number possible using this DP table."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestNumber(vector<int>& cost, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestNumber(int[] cost, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestNumber(self, cost, target):\n        \"\"\"\n        :type cost: List[int]\n        :type target: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestNumber(self, cost: List[int], target: int) -> str:\n        ",
+    "c": "char* largestNumber(int* cost, int costSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestNumber(int[] cost, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cost\n * @param {number} target\n * @return {string}\n */\nvar largestNumber = function(cost, target) {\n    \n};",
+    "typescript": "function largestNumber(cost: number[], target: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $cost\n     * @param Integer $target\n     * @return String\n     */\n    function largestNumber($cost, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestNumber(_ cost: [Int], _ target: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestNumber(cost: IntArray, target: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestNumber(List<int> cost, int target) {\n    \n  }\n}",
+    "golang": "func largestNumber(cost []int, target int) string {\n    \n}",
+    "ruby": "# @param {Integer[]} cost\n# @param {Integer} target\n# @return {String}\ndef largest_number(cost, target)\n    \nend",
+    "scala": "object Solution {\n    def largestNumber(cost: Array[Int], target: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_number(cost: Vec<i32>, target: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-number cost target)\n  (-> (listof exact-integer?) exact-integer? string?)\n  )",
+    "erlang": "-spec largest_number(Cost :: [integer()], Target :: integer()) -> unicode:unicode_binary().\nlargest_number(Cost, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_number(cost :: [integer], target :: integer) :: String.t\n  def largest_number(cost, target) do\n    \n  end\nend"
+  }
+}

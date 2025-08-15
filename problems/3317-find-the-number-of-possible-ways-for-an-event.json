@@ -1,0 +1,60 @@
+{
+  "title": "Find the Number of Possible Ways for an Event",
+  "problem_id": "3604",
+  "frontend_id": "3317",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-number-of-possible-ways-for-an-event",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "You are given three integers n, x, and y.\nAn event is being held for n performers. When a performer arrives, they are assigned to one of the x stages. All performers assigned to the same stage will perform together as a band, though some stages might remain empty.\nAfter all performances are completed, the jury will award each band a score in the range [1, y].\nReturn the total number of possible ways the event can take place.\nSince the answer may be very large, return it modulo 109 + 7.\nNote that two events are considered to have been held differently if either of the following conditions is satisfied:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1, x = 2, y = 3\nOutput: 6\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, x = 2, y = 1\nOutput: 32\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, x = 3, y = 4\nOutput: 684",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, x, y <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix the number of stages.",
+    "Assign the Performers to the stages.",
+    "Use inclusion-exclusion to ensure that no stage has 0 performers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(int n, int x, int y) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(int n, int x, int y) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWays(self, n, x, y):\n        \"\"\"\n        :type n: int\n        :type x: int\n        :type y: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWays(self, n: int, x: int, y: int) -> int:\n        ",
+    "c": "int numberOfWays(int n, int x, int y) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfWays(int n, int x, int y) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} x\n * @param {number} y\n * @return {number}\n */\nvar numberOfWays = function(n, x, y) {\n    \n};",
+    "typescript": "function numberOfWays(n: number, x: number, y: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $x\n     * @param Integer $y\n     * @return Integer\n     */\n    function numberOfWays($n, $x, $y) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWays(_ n: Int, _ x: Int, _ y: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWays(n: Int, x: Int, y: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWays(int n, int x, int y) {\n    \n  }\n}",
+    "golang": "func numberOfWays(n int, x int, y int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} x\n# @param {Integer} y\n# @return {Integer}\ndef number_of_ways(n, x, y)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWays(n: Int, x: Int, y: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_ways(n: i32, x: i32, y: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-ways n x y)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_ways(N :: integer(), X :: integer(), Y :: integer()) -> integer().\nnumber_of_ways(N, X, Y) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_ways(n :: integer, x :: integer, y :: integer) :: integer\n  def number_of_ways(n, x, y) do\n    \n  end\nend"
+  }
+}

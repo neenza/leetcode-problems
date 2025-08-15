@@ -1,0 +1,65 @@
+{
+  "title": "Maximum White Tiles Covered by a Carpet",
+  "problem_id": "2359",
+  "frontend_id": "2271",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-white-tiles-covered-by-a-carpet",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Sliding Window",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 2D integer array tiles where tiles[i] = [li, ri] represents that every tile j in the range li <= j <= ri is colored white.\nYou are also given an integer carpetLen, the length of a single carpet that can be placed anywhere.\nReturn the maximum number of white tiles that can be covered by the carpet.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tiles = [[1,5],[10,11],[12,18],[20,25],[30,32]], carpetLen = 10\nOutput: 9\nExplanation: Place the carpet starting on tile 10. \nIt covers 9 white tiles, so we return 9.\nNote that there may be other places where the carpet covers 9 white tiles.\nIt can be shown that the carpet cannot cover more than 9 white tiles.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/25/example1drawio3.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tiles = [[10,11],[1,1]], carpetLen = 2\nOutput: 2\nExplanation: Place the carpet starting on tile 10. \nIt covers 2 white tiles, so we return 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/24/example2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= tiles.length <= 5 * 104",
+    "tiles[i].length == 2",
+    "1 <= li <= ri <= 109",
+    "1 <= carpetLen <= 109",
+    "The tiles are non-overlapping."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about the potential placements of the carpet in an optimal solution.",
+    "Can we use Prefix Sum and Binary Search to determine how many tiles are covered for a given placement?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumWhiteTiles(int[][] tiles, int carpetLen) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumWhiteTiles(self, tiles, carpetLen):\n        \"\"\"\n        :type tiles: List[List[int]]\n        :type carpetLen: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumWhiteTiles(self, tiles: List[List[int]], carpetLen: int) -> int:\n        ",
+    "c": "int maximumWhiteTiles(int** tiles, int tilesSize, int* tilesColSize, int carpetLen) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumWhiteTiles(int[][] tiles, int carpetLen) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} tiles\n * @param {number} carpetLen\n * @return {number}\n */\nvar maximumWhiteTiles = function(tiles, carpetLen) {\n    \n};",
+    "typescript": "function maximumWhiteTiles(tiles: number[][], carpetLen: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $tiles\n     * @param Integer $carpetLen\n     * @return Integer\n     */\n    function maximumWhiteTiles($tiles, $carpetLen) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumWhiteTiles(_ tiles: [[Int]], _ carpetLen: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumWhiteTiles(tiles: Array<IntArray>, carpetLen: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumWhiteTiles(List<List<int>> tiles, int carpetLen) {\n    \n  }\n}",
+    "golang": "func maximumWhiteTiles(tiles [][]int, carpetLen int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} tiles\n# @param {Integer} carpet_len\n# @return {Integer}\ndef maximum_white_tiles(tiles, carpet_len)\n    \nend",
+    "scala": "object Solution {\n    def maximumWhiteTiles(tiles: Array[Array[Int]], carpetLen: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_white_tiles(tiles: Vec<Vec<i32>>, carpet_len: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-white-tiles tiles carpetLen)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_white_tiles(Tiles :: [[integer()]], CarpetLen :: integer()) -> integer().\nmaximum_white_tiles(Tiles, CarpetLen) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_white_tiles(tiles :: [[integer]], carpet_len :: integer) :: integer\n  def maximum_white_tiles(tiles, carpet_len) do\n    \n  end\nend"
+  }
+}

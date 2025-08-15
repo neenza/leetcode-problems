@@ -1,0 +1,61 @@
+{
+  "title": "Stone Game V",
+  "problem_id": "1685",
+  "frontend_id": "1563",
+  "difficulty": "Hard",
+  "problem_slug": "stone-game-v",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Game Theory"
+  ],
+  "description": "There are several stones arranged in a row, and each stone has an associated value which is an integer given in the array stoneValue.\nIn each round of the game, Alice divides the row into two non-empty rows (i.e. left row and right row), then Bob calculates the value of each row which is the sum of the values of all the stones in this row. Bob throws away the row which has the maximum value, and Alice's score increases by the value of the remaining row. If the value of the two rows are equal, Bob lets Alice decide which row will be thrown away. The next round starts with the remaining row.\nThe game ends when there is only one stone remaining. Alice's score is initially zero.\nReturn the maximum score that Alice can obtain.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stoneValue = [6,2,3,4,5,5]\nOutput: 18\nExplanation: In the first round, Alice divides the row to [6,2,3], [4,5,5]. The left row has the value 11 and the right row has value 14. Bob throws away the right row and Alice's score is now 11.\nIn the second round Alice divides the row to [6], [2,3]. This time Bob throws away the left row and Alice's score becomes 16 (11 + 5).\nThe last round Alice has only one choice to divide the row which is [2], [3]. Bob throws away the right row and Alice's score is now 18 (16 + 2). The game ends because only one stone is remaining in the row.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stoneValue = [7,7,7,7,7,7,7]\nOutput: 28",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: stoneValue = [4]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= stoneValue.length <= 500",
+    "1 <= stoneValue[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We need to try all possible divisions for the current row to get the max score.",
+    "As calculating all possible divisions will lead us to calculate some sub-problems more than once, we need to think of dynamic programming."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int stoneGameV(vector<int>& stoneValue) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int stoneGameV(int[] stoneValue) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGameV(self, stoneValue):\n        \"\"\"\n        :type stoneValue: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGameV(self, stoneValue: List[int]) -> int:\n        ",
+    "c": "int stoneGameV(int* stoneValue, int stoneValueSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int StoneGameV(int[] stoneValue) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stoneValue\n * @return {number}\n */\nvar stoneGameV = function(stoneValue) {\n    \n};",
+    "typescript": "function stoneGameV(stoneValue: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stoneValue\n     * @return Integer\n     */\n    function stoneGameV($stoneValue) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGameV(_ stoneValue: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGameV(stoneValue: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int stoneGameV(List<int> stoneValue) {\n    \n  }\n}",
+    "golang": "func stoneGameV(stoneValue []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} stone_value\n# @return {Integer}\ndef stone_game_v(stone_value)\n    \nend",
+    "scala": "object Solution {\n    def stoneGameV(stoneValue: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game_v(stone_value: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (stone-game-v stoneValue)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec stone_game_v(StoneValue :: [integer()]) -> integer().\nstone_game_v(StoneValue) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec stone_game_v(stone_value :: [integer]) :: integer\n  def stone_game_v(stone_value) do\n    \n  end\nend"
+  }
+}

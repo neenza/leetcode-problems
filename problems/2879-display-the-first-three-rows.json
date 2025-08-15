@@ -1,0 +1,30 @@
+{
+  "title": "Display the First Three Rows",
+  "problem_id": "3065",
+  "frontend_id": "2879",
+  "difficulty": "Easy",
+  "problem_slug": "display-the-first-three-rows",
+  "topics": [],
+  "description": "Write a solution to display the first 3 rows of this DataFrame.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame: employees\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| employee_id | int    |\n| name        | object |\n| department  | object |\n| salary      | int    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\nDataFrame employees\n+-------------+-----------+-----------------------+--------+\n| employee_id | name      | department            | salary |\n+-------------+-----------+-----------------------+--------+\n| 3           | Bob       | Operations            | 48675  |\n| 90          | Alice     | Sales                 | 11096  |\n| 9           | Tatiana   | Engineering           | 33805  |\n| 60          | Annabelle | InformationTechnology | 37678  |\n| 49          | Jonathan  | HumanResources        | 23793  |\n| 43          | Khaled    | Administration        | 40454  |\n+-------------+-----------+-----------------------+--------+\nOutput:\n+-------------+---------+-------------+--------+\n| employee_id | name    | department  | salary |\n+-------------+---------+-------------+--------+\n| 3           | Bob     | Operations  | 48675  |\n| 90          | Alice   | Sales       | 11096  |\n| 9           | Tatiana | Engineering | 33805  |\n+-------------+---------+-------------+--------+\nExplanation: \nOnly the first 3 rows are displayed.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using a built-in function in pandas library to retrieve the initial rows."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nThis problem requires us to return the first 3 rows of the `employees` DataFrame. \n\n**Key Concepts:**\n\n1. **DataFrame:** a 2D table-like structure, similar to a spreadsheet or SQL table. Each row represents an individual record and each column represents a different attribute. It is size-mutable and designed to handle a mix of different types of data.\n2. **`head` method**: a method provided by the pandas library that is used on a DataFrame to return the first `n` rows. If `n` is omitted, it defaults to returning the first 5 rows. This is useful to get an overview or quick look at the beginning of large datasets.\n\n\n### Intuition\n\nLet's explore step by step how to return the first 3 rows of a DataFrame.\n\n1. **Importing pandas**:\n   \n   ```python\n   import pandas as pd\n   ```\n   This line imports the pandas library and gives it an alias name `pd`. The pandas library provides fast, flexible, and expressive data structures designed to work with structured (tabular, multidimensional, potentially heterogeneous) data.\n\n2. **Utilizing `head`:**\n   \n    Let's look at an example to see how we can use `head` to solve our problem.\n\n    Given the `employees` DataFrame as:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering3380560AnnabelleInformationTechnology3767849JonathanHumanResources2379343KhaledAdministration40454We return the `employees` DataFrame using the the `head` function with an input of 3, to indicate we want to return the first 3 rows:\n\n    ```python\n    return employees.head(3)\n    ```\n\n    The dataframe returned is then:employee_idnamedepartmentsalary3BobOperations4867590AliceSales110969TatianaEngineering33805**Visualization of the `head` function applied to the `employees` DataFrame:**\n\n![fig](../Figures/3309/3309-1.png)\n\n### Implementation"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Max Pair Sum in an Array",
+  "problem_id": "2902",
+  "frontend_id": "2815",
+  "difficulty": "Easy",
+  "problem_slug": "max-pair-sum-in-an-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums. You have to find the maximum sum of a pair of numbers from nums such that the largest digit in both numbers is equal.\nFor example, 2373 is made up of three distinct digits: 2, 3, and 7, where 7 is the largest among them.\nReturn the maximum sum or -1 if no such pair exists.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [112,131,411]\nOutput: -1\nExplanation:\nEach numbers largest digit in order is [2,3,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2536,1613,3366,162]\nOutput: 5902\nExplanation:\nAll the numbers have 6 as their largest digit, so the answer is 2536 + 3366 = 5902.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [51,71,17,24,42]\nOutput: 88\nExplanation:\nEach number's largest digit in order is [5,7,7,4,4].\nSo we have only two possible pairs, 71 + 17 = 88 and 24 + 42 = 66.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the largest and second largest element with maximum digits equal to x where 1<=x<=9."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSum(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxSum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSum = function(nums) {\n    \n};",
+    "typescript": "function maxSum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSum(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxSum(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxSum(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_sum(Nums :: [integer()]) -> integer().\nmax_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum(nums :: [integer]) :: integer\n  def max_sum(nums) do\n    \n  end\nend"
+  }
+}

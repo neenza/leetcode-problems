@@ -1,0 +1,62 @@
+{
+  "title": "Can Make Palindrome from Substring",
+  "problem_id": "1281",
+  "frontend_id": "1177",
+  "difficulty": "Medium",
+  "problem_slug": "can-make-palindrome-from-substring",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given a string s and array queries where queries[i] = [lefti, righti, ki]. We may rearrange the substring s[lefti...righti] for each query and then choose up to ki of them to replace with any lowercase English letter.\nIf the substring is possible to be a palindrome string after the operations above, the result of the query is true. Otherwise, the result is false.\nReturn a boolean array answer where answer[i] is the result of the ith query queries[i].\nNote that each letter is counted individually for replacement, so if, for example s[lefti...righti] = \"aaa\", and ki = 2, we can only replace two of the letters. Also, note that no query modifies the initial string s.\nExample :\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcda\", queries = [[3,3,0],[1,2,0],[0,3,1],[0,3,2],[0,4,1]]\nOutput: [true,false,false,true,true]\nExplanation:\nqueries[0]: substring = \"d\", is palidrome.\nqueries[1]: substring = \"bc\", is not palidrome.\nqueries[2]: substring = \"abcd\", is not palidrome after replacing only 1 character.\nqueries[3]: substring = \"abcd\", could be changed to \"abba\" which is palidrome. Also this can be changed to \"baab\" first rearrange it \"bacd\" then replace \"cd\" with \"ab\".\nqueries[4]: substring = \"abcda\", could be changed to \"abcba\" which is palidrome.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"lyb\", queries = [[0,1,0],[2,2,1]]\nOutput: [false,true]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, queries.length <= 105",
+    "0 <= lefti <= righti < s.length",
+    "0 <= ki <= s.length",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since we can rearrange the substring, all we care about is the frequency of each character in that substring.",
+    "How to find the character frequencies efficiently ?",
+    "As a preprocess, calculate the accumulate frequency of all characters for all prefixes of the string.",
+    "How to check if a substring can be changed to a palindrome given its characters frequency ?",
+    "Count the number of odd frequencies, there can be at most one odd frequency in a palindrome."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> canMakePaliQueries(string s, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Boolean> canMakePaliQueries(String s, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canMakePaliQueries(self, s, queries):\n        \"\"\"\n        :type s: str\n        :type queries: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canMakePaliQueries(self, s: str, queries: List[List[int]]) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* canMakePaliQueries(char* s, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<bool> CanMakePaliQueries(string s, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[][]} queries\n * @return {boolean[]}\n */\nvar canMakePaliQueries = function(s, queries) {\n    \n};",
+    "typescript": "function canMakePaliQueries(s: string, queries: number[][]): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[][] $queries\n     * @return Boolean[]\n     */\n    function canMakePaliQueries($s, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canMakePaliQueries(_ s: String, _ queries: [[Int]]) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canMakePaliQueries(s: String, queries: Array<IntArray>): List<Boolean> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> canMakePaliQueries(String s, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func canMakePaliQueries(s string, queries [][]int) []bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[][]} queries\n# @return {Boolean[]}\ndef can_make_pali_queries(s, queries)\n    \nend",
+    "scala": "object Solution {\n    def canMakePaliQueries(s: String, queries: Array[Array[Int]]): List[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_make_pali_queries(s: String, queries: Vec<Vec<i32>>) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (can-make-pali-queries s queries)\n  (-> string? (listof (listof exact-integer?)) (listof boolean?))\n  )",
+    "erlang": "-spec can_make_pali_queries(S :: unicode:unicode_binary(), Queries :: [[integer()]]) -> [boolean()].\ncan_make_pali_queries(S, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_make_pali_queries(s :: String.t, queries :: [[integer]]) :: [boolean]\n  def can_make_pali_queries(s, queries) do\n    \n  end\nend"
+  }
+}

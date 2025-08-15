@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Number of Vowels in a Substring of Given Length",
+  "problem_id": "1567",
+  "frontend_id": "1456",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-vowels-in-a-substring-of-given-length",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.\nVowel letters in English are 'a', 'e', 'i', 'o', and 'u'.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abciiidef\", k = 3\nOutput: 3\nExplanation: The substring \"iii\" contains 3 vowel letters.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aeiou\", k = 2\nOutput: 2\nExplanation: Any substring of length 2 contains 2 vowels.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"leetcode\", k = 3\nOutput: 2\nExplanation: \"lee\", \"eet\" and \"ode\" contain 2 vowels.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters.",
+    "1 <= k <= s.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep a window of size k and maintain the number of vowels in it.",
+    "Keep moving the window and update the number of vowels while moving. Answer is max number of vowels of any window."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxVowels(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxVowels(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxVowels(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxVowels(self, s: str, k: int) -> int:\n        ",
+    "c": "int maxVowels(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxVowels(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxVowels = function(s, k) {\n    \n};",
+    "typescript": "function maxVowels(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxVowels($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxVowels(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxVowels(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxVowels(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxVowels(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef max_vowels(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxVowels(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_vowels(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-vowels s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_vowels(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_vowels(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_vowels(s :: String.t, k :: integer) :: integer\n  def max_vowels(s, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Statistics from a Large Sample",
+  "problem_id": "1183",
+  "frontend_id": "1093",
+  "difficulty": "Medium",
+  "problem_slug": "statistics-from-a-large-sample",
+  "topics": [
+    "Array",
+    "Math",
+    "Probability and Statistics"
+  ],
+  "description": "You are given a large sample of integers in the range [0, 255]. Since the sample is so large, it is represented by an array count where count[k] is the number of times that k appears in the sample.\nCalculate the following statistics:\nReturn the statistics of the sample as an array of floating-point numbers [minimum, maximum, mean, median, mode]. Answers within 10-5 of the actual answer will be accepted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: count = [0,1,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\nOutput: [1.00000,3.00000,2.37500,2.50000,3.00000]\nExplanation: The sample represented by count is [1,2,2,2,3,3,3,3].\nThe minimum and maximum are 1 and 3 respectively.\nThe mean is (1+2+2+2+3+3+3+3) / 8 = 19 / 8 = 2.375.\nSince the size of the sample is even, the median is the average of the two middle elements 2 and 3, which is 2.5.\nThe mode is 3 as it appears the most in the sample.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: count = [0,4,3,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\nOutput: [1.00000,4.00000,2.18182,2.00000,1.00000]\nExplanation: The sample represented by count is [1,1,1,1,2,2,2,3,3,4,4].\nThe minimum and maximum are 1 and 4 respectively.\nThe mean is (1+1+1+1+2+2+2+3+3+4+4) / 11 = 24 / 11 = 2.18181818... (for display purposes, the output shows the rounded number 2.18182).\nSince the size of the sample is odd, the median is the middle element 2.\nThe mode is 1 as it appears the most in the sample.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "count.length == 256",
+    "0 <= count[i] <= 109",
+    "1 <= sum(count) <= 109",
+    "The mode of the sample that count represents is unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The hard part is the median.  Write a helper function which finds the k-th element from the sample."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<double> sampleStats(vector<int>& count) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double[] sampleStats(int[] count) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sampleStats(self, count):\n        \"\"\"\n        :type count: List[int]\n        :rtype: List[float]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sampleStats(self, count: List[int]) -> List[float]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\ndouble* sampleStats(int* count, int countSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public double[] SampleStats(int[] count) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} count\n * @return {number[]}\n */\nvar sampleStats = function(count) {\n    \n};",
+    "typescript": "function sampleStats(count: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $count\n     * @return Float[]\n     */\n    function sampleStats($count) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sampleStats(_ count: [Int]) -> [Double] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sampleStats(count: IntArray): DoubleArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<double> sampleStats(List<int> count) {\n    \n  }\n}",
+    "golang": "func sampleStats(count []int) []float64 {\n    \n}",
+    "ruby": "# @param {Integer[]} count\n# @return {Float[]}\ndef sample_stats(count)\n    \nend",
+    "scala": "object Solution {\n    def sampleStats(count: Array[Int]): Array[Double] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sample_stats(count: Vec<i32>) -> Vec<f64> {\n        \n    }\n}",
+    "racket": "(define/contract (sample-stats count)\n  (-> (listof exact-integer?) (listof flonum?))\n  )",
+    "erlang": "-spec sample_stats(Count :: [integer()]) -> [float()].\nsample_stats(Count) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sample_stats(count :: [integer]) :: [float]\n  def sample_stats(count) do\n    \n  end\nend"
+  }
+}

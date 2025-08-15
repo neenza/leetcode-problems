@@ -1,0 +1,57 @@
+{
+  "title": "Kth Smallest Element in a Sorted Matrix",
+  "problem_id": "378",
+  "frontend_id": "378",
+  "difficulty": "Medium",
+  "problem_slug": "kth-smallest-element-in-a-sorted-matrix",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ],
+  "description": "Given an n x n matrix where each of the rows and columns is sorted in ascending order, return the kth smallest element in the matrix.\nNote that it is the kth smallest element in the sorted order, not the kth distinct element.\nYou must find a solution with a memory complexity better than O(n2).\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,5,9],[10,11,13],[12,13,15]], k = 8\nOutput: 13\nExplanation: The elements in the matrix are [1,5,9,10,11,12,13,13,15], and the 8th smallest number is 13",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[-5]], k = 1\nOutput: -5",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == matrix.length == matrix[i].length",
+    "1 <= n <= 300",
+    "-109 <= matrix[i][j] <= 109",
+    "All the rows and columns of matrix are guaranteed to be sorted in non-decreasing order.",
+    "1 <= k <= n2"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int kthSmallest(vector<vector<int>>& matrix, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kthSmallest(int[][] matrix, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kthSmallest(self, matrix, k):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:\n        ",
+    "c": "int kthSmallest(int** matrix, int matrixSize, int* matrixColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int KthSmallest(int[][] matrix, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} k\n * @return {number}\n */\nvar kthSmallest = function(matrix, k) {\n    \n};",
+    "typescript": "function kthSmallest(matrix: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @param Integer $k\n     * @return Integer\n     */\n    function kthSmallest($matrix, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kthSmallest(_ matrix: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kthSmallest(matrix: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int kthSmallest(List<List<int>> matrix, int k) {\n    \n  }\n}",
+    "golang": "func kthSmallest(matrix [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @param {Integer} k\n# @return {Integer}\ndef kth_smallest(matrix, k)\n    \nend",
+    "scala": "object Solution {\n    def kthSmallest(matrix: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn kth_smallest(matrix: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (kth-smallest matrix k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec kth_smallest(Matrix :: [[integer()]], K :: integer()) -> integer().\nkth_smallest(Matrix, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec kth_smallest(matrix :: [[integer]], k :: integer) :: integer\n  def kth_smallest(matrix, k) do\n    \n  end\nend"
+  }
+}

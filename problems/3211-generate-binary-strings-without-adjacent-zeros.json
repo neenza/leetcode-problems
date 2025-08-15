@@ -1,0 +1,55 @@
+{
+  "title": "Generate Binary Strings Without Adjacent Zeros",
+  "problem_id": "3453",
+  "frontend_id": "3211",
+  "difficulty": "Medium",
+  "problem_slug": "generate-binary-strings-without-adjacent-zeros",
+  "topics": [
+    "String",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a positive integer n.\nA binary string x is valid if all substrings of x of length 2 contain at least one \"1\".\nReturn all valid strings with length n, in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3\nOutput: [\"010\",\"011\",\"101\",\"110\",\"111\"]\nExplanation:\nThe valid strings of length 3 are: \"010\" , \"011\" , \"101\" , \"110\" , and \"111\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: [\"0\",\"1\"]\nExplanation:\nThe valid strings of length 1 are: \"0\" and \"1\" .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 18"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we have a string <code>s</code> of length <code>x</code>, we can generate all strings of length <code>x + 1</code>.",
+    "If <code>s</code> has 0 as the last character, we can only append 1, whereas if the last character is 1, we can append both 0 and 1.",
+    "We can use recursion and backtracking to generate all such strings."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> validStrings(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> validStrings(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validStrings(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validStrings(self, n: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** validStrings(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> ValidStrings(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar validStrings = function(n) {\n    \n};",
+    "typescript": "function validStrings(n: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return String[]\n     */\n    function validStrings($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validStrings(_ n: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validStrings(n: Int): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> validStrings(int n) {\n    \n  }\n}",
+    "golang": "func validStrings(n int) []string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {String[]}\ndef valid_strings(n)\n    \nend",
+    "scala": "object Solution {\n    def validStrings(n: Int): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_strings(n: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (valid-strings n)\n  (-> exact-integer? (listof string?))\n  )",
+    "erlang": "-spec valid_strings(N :: integer()) -> [unicode:unicode_binary()].\nvalid_strings(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_strings(n :: integer) :: [String.t]\n  def valid_strings(n) do\n    \n  end\nend"
+  }
+}

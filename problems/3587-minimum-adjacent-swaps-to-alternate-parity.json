@@ -1,0 +1,69 @@
+{
+  "title": "Minimum Adjacent Swaps to Alternate Parity",
+  "problem_id": "3904",
+  "frontend_id": "3587",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-adjacent-swaps-to-alternate-parity",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given an array nums of distinct integers.\nIn one operation, you can swap any two adjacent elements in the array.\nAn arrangement of the array is considered valid if the parity of adjacent elements alternates, meaning every pair of neighboring elements consists of one even and one odd number.\nReturn the minimum number of adjacent swaps required to transform nums into any valid arrangement.\nIf it is impossible to rearrange nums such that no two adjacent elements have the same parity, return -1.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,6,5,7]\nOutput: 3\nExplanation:\nSwapping 5 and 6, the array becomes [2,4,5,6,7]\nSwapping 5 and 4, the array becomes [2,5,4,6,7]\nSwapping 6 and 7, the array becomes [2,5,4,7,6] . The array is now a valid arrangement. Thus, the answer is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,5,7]\nOutput: 1\nExplanation:\nBy swapping 4 and 5, the array becomes [2,5,4,7] , which is a valid arrangement. Thus, the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 0\nExplanation:\nThe array is already a valid arrangement. Thus, no operations are needed.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: nums = [4,5,6,8]\nOutput: -1\nExplanation:\nNo valid arrangement is possible. Thus, the answer is -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "All elements in nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Compute <code>evenCnt</code> and <code>oddCnt</code> in <code>nums</code>. If abs(evenCnt - oddCnt) > 1, return -1 immediately.",
+    "Let <code>n</code> = len(nums). You’ll try at most two target parity‐patterns: one starting with even at index 0, one with odd at index 0.",
+    "If <code>n</code> is odd, only the pattern whose starting parity matches the larger of <code>evenCnt</code> or <code>oddCnt</code> is feasible. If <code>n</code> is even, both starting‐even and starting‐odd patterns are possible—compute both and take the minimum.",
+    "For a given target pattern, collect the indices of all even elements in <code>nums</code> (or odd elements) and the indices where an even (or odd) should go in the pattern.",
+    "The minimum adjacent‐swap cost to align those elements is the sum of absolute differences between each element’s current index and its target index.",
+    "Return the smallest cost over valid patterns."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSwaps(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSwaps(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSwaps(self, nums: List[int]) -> int:\n        ",
+    "c": "int minSwaps(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSwaps(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minSwaps = function(nums) {\n    \n};",
+    "typescript": "function minSwaps(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minSwaps($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwaps(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSwaps(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwaps(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minSwaps(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_swaps(nums)\n    \nend",
+    "scala": "object Solution {\n    def minSwaps(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-swaps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_swaps(Nums :: [integer()]) -> integer().\nmin_swaps(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_swaps(nums :: [integer]) :: integer\n  def min_swaps(nums) do\n    \n  end\nend"
+  }
+}

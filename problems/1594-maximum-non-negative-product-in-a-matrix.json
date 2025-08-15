@@ -1,0 +1,67 @@
+{
+  "title": "Maximum Non Negative Product in a Matrix",
+  "problem_id": "1716",
+  "frontend_id": "1594",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-non-negative-product-in-a-matrix",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given a m x n matrix grid. Initially, you are located at the top-left corner (0, 0), and in each step, you can only move right or down in the matrix.\nAmong all possible paths starting from the top-left corner (0, 0) and ending in the bottom-right corner (m - 1, n - 1), find the path with the maximum non-negative product. The product of a path is the product of all integers in the grid cells visited along the path.\nReturn the maximum non-negative product modulo 109 + 7. If the maximum product is negative, return -1.\nNotice that the modulo is performed after getting the maximum product.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[-1,-2,-3],[-2,-3,-3],[-3,-3,-2]]\nOutput: -1\nExplanation: It is not possible to get non-negative product in the path from (0, 0) to (2, 2), so return -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/23/product1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,-2,1],[1,-2,1],[3,-4,1]]\nOutput: 8\nExplanation: Maximum non-negative product is shown (1 * 1 * -2 * -4 * 1 = 8).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/23/product2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,3],[0,-4]]\nOutput: 0\nExplanation: Maximum non-negative product is shown (1 * 0 * -4 = 0).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/23/product3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 15",
+    "-4 <= grid[i][j] <= 4"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic programming. Keep the highest value and lowest value you can achieve up to a point."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxProductPath(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProductPath(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProductPath(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProductPath(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maxProductPath(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxProductPath(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxProductPath = function(grid) {\n    \n};",
+    "typescript": "function maxProductPath(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxProductPath($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProductPath(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProductPath(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProductPath(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maxProductPath(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_product_path(grid)\n    \nend",
+    "scala": "object Solution {\n    def maxProductPath(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_product_path(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-product-path grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_product_path(Grid :: [[integer()]]) -> integer().\nmax_product_path(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_product_path(grid :: [[integer]]) :: integer\n  def max_product_path(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Duplicate Emails",
+  "problem_id": "182",
+  "frontend_id": "182",
+  "difficulty": "Easy",
+  "problem_slug": "duplicate-emails",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Person\nWrite a solution to report all the duplicate emails. Note that it's guaranteed that the email field is not NULL.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| email       | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains an email. The emails will not contain uppercase letters.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nPerson table:\n+----+---------+\n| id | email   |\n+----+---------+\n| 1  | a@b.com |\n| 2  | c@d.com |\n| 3  | a@b.com |\n+----+---------+\nOutput: \n+---------+\n| Email   |\n+---------+\n| a@b.com |\n+---------+\nExplanation: a@b.com is repeated two times.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef duplicate_emails(person: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

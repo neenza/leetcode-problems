@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Time Visiting All Points",
+  "problem_id": "1395",
+  "frontend_id": "1266",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-time-visiting-all-points",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "On a 2D plane, there are n points with integer coordinates points[i] = [xi, yi]. Return the minimum time in seconds to visit all the points in the order given by points.\nYou can move according to these rules:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[1,1],[3,4],[-1,0]]\nOutput: 7\nExplanation: One optimal path is [1,1] -> [2,2] -> [3,3] -> [3,4] -> [2,3] -> [1,2] -> [0,1] -> [-1,0]   \nTime from [1,1] to [3,4] = 3 seconds \nTime from [3,4] to [-1,0] = 4 seconds\nTotal time = 7 seconds",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/14/1626_example_1.PNG"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[3,2],[-2,2]]\nOutput: 5",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/14/1626_example_1.PNG"
+      ]
+    }
+  ],
+  "constraints": [
+    "points.length == n",
+    "1 <= n <= 100",
+    "points[i].length == 2",
+    "-1000 <= points[i][0], points[i][1] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To walk from point A to point B there will be an optimal strategy to walk ?",
+    "Advance in diagonal as possible then after that go in straight line.",
+    "Repeat the process until visiting all the points."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minTimeToVisitAllPoints(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minTimeToVisitAllPoints(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTimeToVisitAllPoints(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int minTimeToVisitAllPoints(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinTimeToVisitAllPoints(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar minTimeToVisitAllPoints = function(points) {\n    \n};",
+    "typescript": "function minTimeToVisitAllPoints(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function minTimeToVisitAllPoints($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTimeToVisitAllPoints(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTimeToVisitAllPoints(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTimeToVisitAllPoints(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func minTimeToVisitAllPoints(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef min_time_to_visit_all_points(points)\n    \nend",
+    "scala": "object Solution {\n    def minTimeToVisitAllPoints(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_time_to_visit_all_points(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-time-to-visit-all-points points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_time_to_visit_all_points(Points :: [[integer()]]) -> integer().\nmin_time_to_visit_all_points(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_time_to_visit_all_points(points :: [[integer]]) :: integer\n  def min_time_to_visit_all_points(points) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Move Diagonally as Much as Possible\n\n**Intuition**\n\nBecause we have to visit each point in order, if we consider each pair of adjacent points as a segment, each segment is entirely independent. Our decisions within the current segment do not affect the decisions in other segments. Therefore, the optimal solution for this problem consists of the optimal solutions for each individual segment. To solve this problem, the first thing we need to determine is the optimal strategy for moving between adjacent points. \n\nAt each second, we have three options:\n\n1. Move 1 unit vertically toward our target.\n2. Move 1 unit horizontally toward our target.\n3. Move diagonally toward our target, which is 1 unit vertically and then 1 unit horizontally.\n\nNotice that the 3rd option of moving diagonally is actually the combination of the first two options. Because all three options take the same amount of time, moving diagonally is the most efficient option in terms of distance per time.\n\nThus, we should aim to move diagonally as much as possible. Let's say our current position is `currX, currY` and we are trying to reach a target at position `targetX, targetY`. \n\n![img](../Figures/1266/1.png)When does moving diagonally stop saving time? If either `currX = targetX` or `currY = targetY`, it means we are already lined up to our target in one of the directions. Thus, moving diagonally will not provide any benefit over moving horizontally or vertically. Some of the $$\\sqrt{2}$$ distance from moving diagonally will be wasted.\n\n![img](../Figures/1266/2.png)In the above image, you can see that if we keep moving diagonally after being lined up with the target, we will overshoot it on the x coordinate. Thus, we should only move diagonally until we are lined up in one direction, then make up the remaining distance with vertical or horizontal movements.\n\n![img](../Figures/1266/3.png)Using this strategy, how do we calculate the required time to travel between two points? We can think of two different stages for the movement:\n\n1. Move diagonally until lined up in a direction.\n2. Move horizontally or vertically the remaining distance.\n\nLet's say the difference in `x` coordinates between the current position and the target is `xDiff`. Similarly, the difference in `y` coordinates is `yDiff`. Step 1 will take `min(xDiff, yDiff)` time.\n\nHow much time will step 2 take? The larger horizontal or vertical distance at the beginning is `max(xDiff, yDiff)`, but we already traveled `min(xDiff, yDiff)` in both directions. Thus, step 2 will take `max(xDiff, yDiff) - min(xDiff, yDiff)`.\n\nThe sum of step 1 and step 2 is `min(xDiff, yDiff) + max(xDiff, yDiff) - min(xDiff, yDiff) = max(xDiff, yDiff)`. Thus, the time it will take to move between two points is `max(xDiff, yDiff)`.\n\n> This distance is also known as the [Chebyshev distance](https://en.wikipedia.org/wiki/Chebyshev_distance).\n\nThis brings us to our solution. We will iterate over each index `i` of `points` except for the last one. At each index, we treat `points[i]` as the current point and `points[i + 1]` as the target point. We then calculate the `x` difference and `y` difference using the absolute value function. Finally, we add the larger of the two to our answer.\n\n> The problem states that we must visit the points in order. Thus, if we are currently at `points[i]`, the next point we need to reach is `points[i + 1]`. The final point has no next point, which is why we stop iteration before the final index.\n\n**Algorithm**\n\n1. Initialize the answer `ans = 0`.\n2. Iterate `i` from `0` until `points.length - 1`:\n    - Set `currX` to `points[i][0]` and `currY` to `points[i][1]`\n    - Set `targetX` to `points[i + 1][0]` and `targetY` to `points[i + 1][1]`\n    - Add the maximum of `abs(targetX - currX)` and `abs(targetY - currY)` to `ans`.\n3. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `points`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate `i` over `n - 1` indices. At each iteration, we perform $$O(1)$$ work.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---"
+}

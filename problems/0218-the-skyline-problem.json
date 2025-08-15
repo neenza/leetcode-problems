@@ -1,0 +1,62 @@
+{
+  "title": "The Skyline Problem",
+  "problem_id": "218",
+  "frontend_id": "218",
+  "difficulty": "Hard",
+  "problem_slug": "the-skyline-problem",
+  "topics": [
+    "Array",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Line Sweep",
+    "Heap (Priority Queue)",
+    "Ordered Set"
+  ],
+  "description": "A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.\nThe geometric information of each building is given in the array buildings where buildings[i] = [lefti, righti, heighti]:\nYou may assume all buildings are perfect rectangles grounded on an absolutely flat surface at height 0.\nThe skyline should be represented as a list of \"key points\" sorted by their x-coordinate in the form [[x1,y1],[x2,y2],...]. Each key point is the left endpoint of some horizontal segment in the skyline except the last point in the list, which always has a y-coordinate 0 and is used to mark the skyline's termination where the rightmost building ends. Any ground between the leftmost and rightmost buildings should be part of the skyline's contour.\nNote: There must be no consecutive horizontal lines of equal height in the output skyline. For instance, [...,[2 3],[4 5],[7 5],[11 5],[12 7],...] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: [...,[2 3],[4 5],[12 7],...]\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]\nOutput: [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]\nExplanation:\nFigure A shows the buildings of the input.\nFigure B shows the skyline formed by those buildings. The red points in figure B represent the key points in the output list.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/12/01/merged.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: buildings = [[0,2,3],[2,5,3]]\nOutput: [[0,3],[5,0]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/12/01/merged.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= buildings.length <= 104",
+    "0 <= lefti < righti <= 231 - 1",
+    "1 <= heighti <= 231 - 1",
+    "buildings is sorted by lefti in non-decreasing order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> getSkyline(int[][] buildings) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getSkyline(self, buildings):\n        \"\"\"\n        :type buildings: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** getSkyline(int** buildings, int buildingsSize, int* buildingsColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> GetSkyline(int[][] buildings) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} buildings\n * @return {number[][]}\n */\nvar getSkyline = function(buildings) {\n    \n};",
+    "typescript": "function getSkyline(buildings: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $buildings\n     * @return Integer[][]\n     */\n    function getSkyline($buildings) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getSkyline(_ buildings: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getSkyline(buildings: Array<IntArray>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> getSkyline(List<List<int>> buildings) {\n    \n  }\n}",
+    "golang": "func getSkyline(buildings [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} buildings\n# @return {Integer[][]}\ndef get_skyline(buildings)\n    \nend",
+    "scala": "object Solution {\n    def getSkyline(buildings: Array[Array[Int]]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_skyline(buildings: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (get-skyline buildings)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec get_skyline(Buildings :: [[integer()]]) -> [[integer()]].\nget_skyline(Buildings) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_skyline(buildings :: [[integer]]) :: [[integer]]\n  def get_skyline(buildings) do\n    \n  end\nend"
+  }
+}

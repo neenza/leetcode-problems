@@ -1,0 +1,59 @@
+{
+  "title": "Daily Temperatures",
+  "problem_id": "739",
+  "frontend_id": "739",
+  "difficulty": "Medium",
+  "problem_slug": "daily-temperatures",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: temperatures = [73,74,75,71,69,72,76,73]\nOutput: [1,1,4,2,1,1,0,0]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: temperatures = [30,40,50,60]\nOutput: [1,1,1,0]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: temperatures = [30,60,90]\nOutput: [1,1,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= temperatures.length <= 105",
+    "30 <= temperatures[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the temperature is say, 70 today, then in the future a warmer temperature must be either 71, 72, 73, ..., 99, or 100.  We could remember when all of them occur next."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> dailyTemperatures(vector<int>& temperatures) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def dailyTemperatures(self, temperatures):\n        \"\"\"\n        :type temperatures: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] DailyTemperatures(int[] temperatures) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} temperatures\n * @return {number[]}\n */\nvar dailyTemperatures = function(temperatures) {\n    \n};",
+    "typescript": "function dailyTemperatures(temperatures: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $temperatures\n     * @return Integer[]\n     */\n    function dailyTemperatures($temperatures) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func dailyTemperatures(_ temperatures: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun dailyTemperatures(temperatures: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> dailyTemperatures(List<int> temperatures) {\n    \n  }\n}",
+    "golang": "func dailyTemperatures(temperatures []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} temperatures\n# @return {Integer[]}\ndef daily_temperatures(temperatures)\n    \nend",
+    "scala": "object Solution {\n    def dailyTemperatures(temperatures: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (daily-temperatures temperatures)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec daily_temperatures(Temperatures :: [integer()]) -> [integer()].\ndaily_temperatures(Temperatures) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec daily_temperatures(temperatures :: [integer]) :: [integer]\n  def daily_temperatures(temperatures) do\n    \n  end\nend"
+  }
+}

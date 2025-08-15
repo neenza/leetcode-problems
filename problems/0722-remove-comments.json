@@ -1,0 +1,57 @@
+{
+  "title": "Remove Comments",
+  "problem_id": "722",
+  "frontend_id": "722",
+  "difficulty": "Medium",
+  "problem_slug": "remove-comments",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "Given a C++ program, remove comments from it. The program source is an array of strings source where source[i] is the ith line of the source code. This represents the result of splitting the original source code string by the newline character '\\n'.\nIn C++, there are two types of comments, line comments, and block comments.\nThe first effective comment takes precedence over others.\nIf a certain line of code is empty after removing comments, you must not output that line: each string in the answer list will be non-empty.\nThere will be no control characters, single quote, or double quote characters.\nAlso, nothing else such as defines or macros will interfere with the comments.\nIt is guaranteed that every open block comment will eventually be closed, so \"/*\" outside of a line or block comment always starts a new comment.\nFinally, implicit newline characters can be deleted by block comments. Please see the examples below for details.\nAfter removing the comments from the source code, return the source code in the same format.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: source = [\"/*Test program */\", \"int main()\", \"{ \", \"  // variable declaration \", \"int a, b, c;\", \"/* This is a test\", \"   multiline  \", \"   comment for \", \"   testing */\", \"a = b + c;\", \"}\"]\nOutput: [\"int main()\",\"{ \",\"  \",\"int a, b, c;\",\"a = b + c;\",\"}\"]\nExplanation: The line by line code is visualized as below:\n/*Test program */\nint main()\n{ \n  // variable declaration \nint a, b, c;\n/* This is a test\n   multiline  \n   comment for \n   testing */\na = b + c;\n}\nThe string /* denotes a block comment, including line 1 and lines 6-9. The string // denotes line 4 as comments.\nThe line by line output code is visualized as below:\nint main()\n{ \n  \nint a, b, c;\na = b + c;\n}",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: source = [\"a/*comment\", \"line\", \"more_comment*/b\"]\nOutput: [\"ab\"]\nExplanation: The original source string is \"a/*comment\\nline\\nmore_comment*/b\", where we have bolded the newline characters.  After deletion, the implicit newline characters are deleted, leaving the string \"ab\", which when delimited by newline characters becomes [\"ab\"].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= source.length <= 100",
+    "0 <= source[i].length <= 80",
+    "source[i] consists of printable ASCII characters.",
+    "Every open block comment is eventually closed.",
+    "There are no single-quote or double-quote in the input."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Carefully parse each line according to the following rules:\r\n\r\n* If we start a block comment and we aren't in a block, then we will skip over the next two characters and change our state to be in a block.\r\n\r\n* If we end a block comment and we are in a block, then we will skip over the next two characters and change our state to be *not* in a block.\r\n\r\n* If we start a line comment and we aren't in a block, then we will ignore the rest of the line.\r\n\r\n* If we aren't in a block comment (and it wasn't the start of a comment), we will record the character we are at.\r\n\r\n* At the end of each line, if we aren't in a block, we will record the line."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> removeComments(vector<string>& source) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> removeComments(String[] source) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeComments(self, source):\n        \"\"\"\n        :type source: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeComments(self, source: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** removeComments(char** source, int sourceSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> RemoveComments(string[] source) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} source\n * @return {string[]}\n */\nvar removeComments = function(source) {\n    \n};",
+    "typescript": "function removeComments(source: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $source\n     * @return String[]\n     */\n    function removeComments($source) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeComments(_ source: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeComments(source: Array<String>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> removeComments(List<String> source) {\n    \n  }\n}",
+    "golang": "func removeComments(source []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} source\n# @return {String[]}\ndef remove_comments(source)\n    \nend",
+    "scala": "object Solution {\n    def removeComments(source: Array[String]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_comments(source: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (remove-comments source)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec remove_comments(Source :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nremove_comments(Source) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_comments(source :: [String.t]) :: [String.t]\n  def remove_comments(source) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1: Parsing [Accepted]\n\n**Intuition and Algorithm**\n\nWe need to parse the `source` line by line. Our state is that we either are in a block comment or not.\n\n* If we start a block comment and we aren't in a block, then we will skip over the next two characters and change our state to be in a block.\n\n* If we end a block comment and we are in a block, then we will skip over the next two characters and change our state to be *not* in a block.\n\n* If we start a line comment and we aren't in a block, then we will ignore the rest of the line.\n\n* If we aren't in a block comment (and it wasn't the start of a comment), we will record the character we are at.\n\n* At the end of each line, if we aren't in a block, we will record the line.\n\n**Python**\n```python\nclass Solution(object):\n    def removeComments(self, source):\n        in_block = False\n        ans = []\n        for line in source:\n            i = 0\n            if not in_block:\n                newline = []\n            while i < len(line):\n                if line[i:i+2] == '/*' and not in_block:\n                    in_block = True\n                    i += 1\n                elif line[i:i+2] == '*/' and in_block:\n                    in_block = False\n                    i += 1\n                elif not in_block and line[i:i+2] == '//':\n                    break\n                elif not in_block:\n                    newline.append(line[i])\n                i += 1\n            if newline and not in_block:\n                ans.append(\"\".join(newline))\n\n        return ans\n```\n\n**Java**\n```java\nclass Solution {\n    public ListremoveComments(String[] source) {\n        boolean inBlock = false;\n        StringBuilder newline = new StringBuilder();\n        Listans = new ArrayList();\n        for (String line: source) {\n            int i = 0;\n            char[] chars = line.toCharArray();\n            if (!inBlock) {\n                newline = new StringBuilder();\n            }\n            while (i < line.length()) {\n                if (!inBlock && i+1 < line.length() && chars[i] == '/' && chars[i+1] == '*') {\n                    inBlock = true;\n                    i++;\n                } else if (inBlock && i+1 < line.length() && chars[i] == '*' && chars[i+1] == '/') {\n                    inBlock = false;\n                    i++;\n                } else if (!inBlock && i+1 < line.length() && chars[i] == '/' && chars[i+1] == '/') {\n                    break;\n                } else if (!inBlock) {\n                    newline.append(chars[i]);\n                }\n                i++;\n            }\n            if (!inBlock && newline.length() > 0) {\n                ans.add(new String(newline));\n            }\n        }\n        return ans;\n    }\n}\n```\n\n**Complexity Analysis**\n\n* Time Complexity: $$O(S)$$, where $$S$$ is the total length of the source code.\n\n* Space Complexity: $$O(S)$$, the space used by recording the source code into `ans`."
+}

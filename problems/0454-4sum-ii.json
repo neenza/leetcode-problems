@@ -1,0 +1,55 @@
+{
+  "title": "4Sum II",
+  "problem_id": "454",
+  "frontend_id": "454",
+  "difficulty": "Medium",
+  "problem_slug": "4sum-ii",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, return the number of tuples (i, j, k, l) such that:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]\nOutput: 2\nExplanation:\nThe two tuples are:\n1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length",
+    "n == nums2.length",
+    "n == nums3.length",
+    "n == nums4.length",
+    "1 <= n <= 200",
+    "-228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def fourSumCount(self, nums1, nums2, nums3, nums4):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type nums3: List[int]\n        :type nums4: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def fourSumCount(self, nums1: List[int], nums2: List[int], nums3: List[int], nums4: List[int]) -> int:\n        ",
+    "c": "int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number[]} nums3\n * @param {number[]} nums4\n * @return {number}\n */\nvar fourSumCount = function(nums1, nums2, nums3, nums4) {\n    \n};",
+    "typescript": "function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @param Integer[] $nums3\n     * @param Integer[] $nums4\n     * @return Integer\n     */\n    function fourSumCount($nums1, $nums2, $nums3, $nums4) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func fourSumCount(_ nums1: [Int], _ nums2: [Int], _ nums3: [Int], _ nums4: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun fourSumCount(nums1: IntArray, nums2: IntArray, nums3: IntArray, nums4: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int fourSumCount(List<int> nums1, List<int> nums2, List<int> nums3, List<int> nums4) {\n    \n  }\n}",
+    "golang": "func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @param {Integer[]} nums3\n# @param {Integer[]} nums4\n# @return {Integer}\ndef four_sum_count(nums1, nums2, nums3, nums4)\n    \nend",
+    "scala": "object Solution {\n    def fourSumCount(nums1: Array[Int], nums2: Array[Int], nums3: Array[Int], nums4: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn four_sum_count(nums1: Vec<i32>, nums2: Vec<i32>, nums3: Vec<i32>, nums4: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (four-sum-count nums1 nums2 nums3 nums4)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec four_sum_count(Nums1 :: [integer()], Nums2 :: [integer()], Nums3 :: [integer()], Nums4 :: [integer()]) -> integer().\nfour_sum_count(Nums1, Nums2, Nums3, Nums4) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec four_sum_count(nums1 :: [integer], nums2 :: [integer], nums3 :: [integer], nums4 :: [integer]) :: integer\n  def four_sum_count(nums1, nums2, nums3, nums4) do\n    \n  end\nend"
+  }
+}

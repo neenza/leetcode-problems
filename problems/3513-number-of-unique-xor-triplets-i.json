@@ -1,0 +1,57 @@
+{
+  "title": "Number of Unique XOR Triplets I",
+  "problem_id": "3824",
+  "frontend_id": "3513",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-unique-xor-triplets-i",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer array nums of length n, where nums is a permutation of the numbers in the range [1, n].\nA XOR triplet is defined as the XOR of three elements nums[i] XOR nums[j] XOR nums[k] where i <= j <= k.\nReturn the number of unique XOR triplet values from all possible triplets (i, j, k).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2]\nOutput: 2\nExplanation:\nThe possible XOR triplet values are:\nThe unique XOR values are {1, 2} , so the output is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,1,2]\nOutput: 4\nExplanation:\nThe possible XOR triplet values include:\nThe unique XOR values are {0, 1, 2, 3} , so the output is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= n",
+    "nums is a permutation of integers from 1 to n."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the maximum and minimum value we can obtain using the given numbers?",
+    "Can we generate all numbers within that range?",
+    "For <code>n >= 3</code> we can obtain all numbers in <code>[0, 2^(msb(n) + 1) - 1]</code>, where <code>msb(n)</code> is the index of the most significant bit in <code>n</code>’s binary representation (i.e., the highest power of 2 less than or equal to <code>n</code>). Handle the case when <code>n <= 2</code> separately."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int uniqueXorTriplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniqueXorTriplets(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uniqueXorTriplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uniqueXorTriplets(self, nums: List[int]) -> int:\n        ",
+    "c": "int uniqueXorTriplets(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int UniqueXorTriplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar uniqueXorTriplets = function(nums) {\n    \n};",
+    "typescript": "function uniqueXorTriplets(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function uniqueXorTriplets($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniqueXorTriplets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uniqueXorTriplets(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniqueXorTriplets(List<int> nums) {\n    \n  }\n}",
+    "golang": "func uniqueXorTriplets(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef unique_xor_triplets(nums)\n    \nend",
+    "scala": "object Solution {\n    def uniqueXorTriplets(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_xor_triplets(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (unique-xor-triplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec unique_xor_triplets(Nums :: [integer()]) -> integer().\nunique_xor_triplets(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unique_xor_triplets(nums :: [integer]) :: integer\n  def unique_xor_triplets(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Difference Between Even and Odd Frequency I",
+  "problem_id": "3753",
+  "frontend_id": "3442",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-difference-between-even-and-odd-frequency-i",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters.\nYour task is to find the maximum difference diff = freq(a1) - freq(a2) between the frequency of characters a1 and a2 in the string such that:\nReturn this maximum difference.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aaaaabbc\"\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcabcab\"\nOutput: 1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 100",
+    "s consists only of lowercase English letters.",
+    "s contains at least one character with an odd frequency and one with an even frequency."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a frequency map to identify the maximum odd and minimum even frequencies. Then, calculate their difference."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDifference(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDifference(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDifference(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDifference(self, s: str) -> int:\n        ",
+    "c": "int maxDifference(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDifference(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxDifference = function(s) {\n    \n};",
+    "typescript": "function maxDifference(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxDifference($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDifference(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDifference(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDifference(String s) {\n    \n  }\n}",
+    "golang": "func maxDifference(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_difference(s)\n    \nend",
+    "scala": "object Solution {\n    def maxDifference(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_difference(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-difference s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_difference(S :: unicode:unicode_binary()) -> integer().\nmax_difference(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_difference(s :: String.t) :: integer\n  def max_difference(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Count The Frequency Of Each Character\n\n#### Intuition\n\nWe use a hash map to count the number of occurrences of each character in the string $s$. In each key-value pair of the hash map, the key represents a character, and the value represents the number of times that character appears.\n\nAfter the statistics are completed, we traverse the values in the hash map to find the largest odd number $\\textit{maxOdd}$ and the smallest even number $\\textit{minEven}$. The final answer is $\\textit{maxOdd} - \\textit{minEven}$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and $|\\Sigma|$ the size of its character set. Since $s$ contains only lowercase letters, $|\\Sigma| = 26$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(|\\Sigma|)$."
+}

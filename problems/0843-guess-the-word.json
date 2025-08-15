@@ -1,0 +1,54 @@
+{
+  "title": "Guess the Word",
+  "problem_id": "873",
+  "frontend_id": "843",
+  "difficulty": "Hard",
+  "problem_slug": "guess-the-word",
+  "topics": [
+    "Array",
+    "Math",
+    "String",
+    "Interactive",
+    "Game Theory"
+  ],
+  "description": "You are given an array of unique strings words where words[i] is six letters long. One word of words was chosen as a secret word.\nYou are also given the helper object Master. You may call Master.guess(word) where word is a six-letter-long string, and it must be from words. Master.guess(word) returns:\nThere is a parameter allowedGuesses for each test case where allowedGuesses is the maximum number of times you can call Master.guess(word).\nFor each test case, you should call Master.guess with the secret word without exceeding the maximum number of allowed guesses. You will get:\nThe test cases are generated such that you can guess the secret word with a reasonable strategy (other than using the bruteforce method).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: secret = \"acckzz\", words = [\"acckzz\",\"ccbazz\",\"eiowzz\",\"abcczz\"], allowedGuesses = 10\nOutput: You guessed the secret word correctly.\nExplanation:\nmaster.guess(\"aaaaaa\") returns -1, because \"aaaaaa\" is not in wordlist.\nmaster.guess(\"acckzz\") returns 6, because \"acckzz\" is secret and has all 6 matches.\nmaster.guess(\"ccbazz\") returns 3, because \"ccbazz\" has 3 matches.\nmaster.guess(\"eiowzz\") returns 2, because \"eiowzz\" has 2 matches.\nmaster.guess(\"abcczz\") returns 4, because \"abcczz\" has 4 matches.\nWe made 5 calls to master.guess, and one of them was the secret, so we pass the test case.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: secret = \"hamada\", words = [\"hamada\",\"khaled\"], allowedGuesses = 10\nOutput: You guessed the secret word correctly.\nExplanation: Since there are two words, you can guess both.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "words[i].length == 6",
+    "words[i] consist of lowercase English letters.",
+    "All the strings of wordlist are unique.",
+    "secret exists in words.",
+    "10 <= allowedGuesses <= 30"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *   public:\n *     int guess(string word);\n * };\n */\nclass Solution {\npublic:\n    void findSecretWord(vector<string>& words, Master& master) {\n        \n    }\n};",
+    "java": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * interface Master {\n *     public int guess(String word) {}\n * }\n */\nclass Solution {\n    public void findSecretWord(String[] words, Master master) {\n        \n    }\n}",
+    "python": "# \"\"\"\n# This is Master's API interface.\n# You should not implement it, or speculate about its implementation\n# \"\"\"\n#class Master(object):\n#    def guess(self, word):\n#        \"\"\"\n#        :type word: str\n#        :rtype int\n#        \"\"\"\n\nclass Solution(object):\n    def findSecretWord(self, words, master):\n        \"\"\"\n        :type words: List[Str]\n        :type master: Master\n        :rtype: None\n        \"\"\"\n        ",
+    "python3": "# \"\"\"\n# This is Master's API interface.\n# You should not implement it, or speculate about its implementation\n# \"\"\"\n# class Master:\n#     def guess(self, word: str) -> int:\n\nclass Solution:\n    def findSecretWord(self, words: List[str], master: 'Master') -> None:\n        ",
+    "c": "/**\n * *********************************************************************\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * *********************************************************************\n *\n * int guess(Master *, char *word);\n */\nvoid findSecretWord(char** words, int wordsSize, Master* master) {\n    \n}",
+    "csharp": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *     public int Guess(string word);\n * }\n */\nclass Solution {\n    public void FindSecretWord(string[] words, Master master) {\n        \n    }\n}",
+    "javascript": "/**\n * // This is the master's API interface.\n * // You should not implement it, or speculate about its implementation\n * function Master() {\n *\n *     @param {string} word\n *     @return {integer}\n *     this.guess = function(word) {\n *         ...\n *     };\n * };\n */\n/**\n * @param {string[]} words\n * @param {Master} master\n * @return {void}\n */\nvar findSecretWord = function(words, master) {\n    \n};",
+    "typescript": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *      guess(word: string): number {}\n * }\n */\n\nfunction findSecretWord(words: string[], master: Master) {\n\n};",
+    "php": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * interface Master {\n *     function guess($word) {}\n * }\n */\n\nclass Solution {\n    /**\n     * @param String[] $words\n     * @param Master $master\n     * @return \n     */\n    function findSecretWord($words, $master) {\n        \n    }\n}",
+    "swift": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *     public func guess(word: String) -> Int {}\n * }\n */\nclass Solution {\n    func findSecretWord(_ words: [String], _ master: Master) {\n        \n    }\n}",
+    "kotlin": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * interface Master {\n *     fun guess(word: String): Int {}\n * }\n */\nclass Solution {\n    fun findSecretWord(words: Array<String>, master: Master) {\n        \n    }\n}",
+    "golang": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * type Master struct {\n * }\n *\n * func (this *Master) Guess(word string) int {}\n */\nfunc findSecretWord(words []string, master *Master) {\n    \n}",
+    "ruby": "#    This is Master's API interface.\n#    You should not implement it, or speculate about its implementation\n#\n# class Master\n# =begin\n#     :type word: String\n#     :rtype: Integer\n# =end\n#     def guess(word)\n#         ...\n#     end\n# end\n#\n\n# @param {String[]} words\n# @param {Master} master\n# @return {Void}\ndef find_secret_word(words, master)\n    \nend",
+    "scala": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *\n *   def guess(word: String): Int = {}\n *\n * }\n */\nobject Solution {\n    def findSecretWord(words: Array[String], master: Master): Unit = {\n        \n    }\n}",
+    "rust": "/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * struct Master;\n * impl Master {\n *     fn guess(word:String)->int;\n * };\n */\n\nimpl Solution {\n    pub fn find_secret_word(words: Vec<String>, master: &Master) {\n        \n    }\n}"
+  }
+}

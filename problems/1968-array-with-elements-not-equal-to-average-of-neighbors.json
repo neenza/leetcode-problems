@@ -1,0 +1,55 @@
+{
+  "title": "Array With Elements Not Equal to Average of Neighbors",
+  "problem_id": "2085",
+  "frontend_id": "1968",
+  "difficulty": "Medium",
+  "problem_slug": "array-with-elements-not-equal-to-average-of-neighbors",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed array nums of distinct integers. You want to rearrange the elements in the array such that every element in the rearranged array is not equal to the average of its neighbors.\nMore formally, the rearranged array should have the property such that for every i in the range 1 <= i < nums.length - 1, (nums[i-1] + nums[i+1]) / 2 is not equal to nums[i].\nReturn any rearrangement of nums that meets the requirements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: [1,2,4,5,3]\nExplanation:\nWhen i=1, nums[i] = 2, and the average of its neighbors is (1+4) / 2 = 2.5.\nWhen i=2, nums[i] = 4, and the average of its neighbors is (2+5) / 2 = 3.5.\nWhen i=3, nums[i] = 5, and the average of its neighbors is (4+3) / 2 = 3.5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,2,0,9,7]\nOutput: [9,7,6,2,0]\nExplanation:\nWhen i=1, nums[i] = 7, and the average of its neighbors is (9+6) / 2 = 7.5.\nWhen i=2, nums[i] = 6, and the average of its neighbors is (7+2) / 2 = 4.5.\nWhen i=3, nums[i] = 2, and the average of its neighbors is (6+0) / 2 = 3.\nNote that the original array [6,2,0,9,7] also satisfies the conditions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 105",
+    "0 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A number can be the average of its neighbors if one neighbor is smaller than the number and the other is greater than the number.",
+    "We can put numbers smaller than the median on odd indices and the rest on even indices."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> rearrangeArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] rearrangeArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rearrangeArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rearrangeArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* rearrangeArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RearrangeArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar rearrangeArray = function(nums) {\n    \n};",
+    "typescript": "function rearrangeArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function rearrangeArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rearrangeArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rearrangeArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> rearrangeArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func rearrangeArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef rearrange_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def rearrangeArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rearrange_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (rearrange-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec rearrange_array(Nums :: [integer()]) -> [integer()].\nrearrange_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rearrange_array(nums :: [integer]) :: [integer]\n  def rearrange_array(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Furthest Building You Can Reach",
+  "problem_id": "1762",
+  "frontend_id": "1642",
+  "difficulty": "Medium",
+  "problem_slug": "furthest-building-you-can-reach",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an integer array heights representing the heights of buildings, some bricks, and some ladders.\nYou start your journey from building 0 and move to the next building by possibly using bricks or ladders.\nWhile moving from building i to building i+1 (0-indexed),\nReturn the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: heights = [4,2,7,6,9,14,12], bricks = 5, ladders = 1\nOutput: 4\nExplanation: Starting at building 0, you can follow these steps:\n- Go to building 1 without using ladders nor bricks since 4 >= 2.\n- Go to building 2 using 5 bricks. You must use either bricks or ladders because 2 < 7.\n- Go to building 3 without using ladders nor bricks since 7 >= 6.\n- Go to building 4 using your only ladder. You must use either bricks or ladders because 6 < 9.\nIt is impossible to go beyond building 4 because you do not have any more bricks or ladders.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/27/q4.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: heights = [4,12,2,7,3,18,20,3,19], bricks = 10, ladders = 2\nOutput: 7",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/27/q4.gif"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: heights = [14,3,19,3], bricks = 17, ladders = 0\nOutput: 3",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/27/q4.gif"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= heights.length <= 105",
+    "1 <= heights[i] <= 106",
+    "0 <= bricks <= 109",
+    "0 <= ladders <= heights.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Assume the problem is to check whether you can reach the last building or not.",
+    "You'll have to do a set of jumps, and choose for each one whether to do it using a ladder or bricks. It's always optimal to use ladders in the largest jumps.",
+    "Iterate on the buildings, maintaining the largest r jumps and the sum of the remaining ones so far, and stop whenever this sum exceeds b."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int furthestBuilding(vector<int>& heights, int bricks, int ladders) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int furthestBuilding(int[] heights, int bricks, int ladders) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def furthestBuilding(self, heights, bricks, ladders):\n        \"\"\"\n        :type heights: List[int]\n        :type bricks: int\n        :type ladders: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:\n        ",
+    "c": "int furthestBuilding(int* heights, int heightsSize, int bricks, int ladders) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FurthestBuilding(int[] heights, int bricks, int ladders) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} heights\n * @param {number} bricks\n * @param {number} ladders\n * @return {number}\n */\nvar furthestBuilding = function(heights, bricks, ladders) {\n    \n};",
+    "typescript": "function furthestBuilding(heights: number[], bricks: number, ladders: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $heights\n     * @param Integer $bricks\n     * @param Integer $ladders\n     * @return Integer\n     */\n    function furthestBuilding($heights, $bricks, $ladders) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func furthestBuilding(_ heights: [Int], _ bricks: Int, _ ladders: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun furthestBuilding(heights: IntArray, bricks: Int, ladders: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int furthestBuilding(List<int> heights, int bricks, int ladders) {\n    \n  }\n}",
+    "golang": "func furthestBuilding(heights []int, bricks int, ladders int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} heights\n# @param {Integer} bricks\n# @param {Integer} ladders\n# @return {Integer}\ndef furthest_building(heights, bricks, ladders)\n    \nend",
+    "scala": "object Solution {\n    def furthestBuilding(heights: Array[Int], bricks: Int, ladders: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn furthest_building(heights: Vec<i32>, bricks: i32, ladders: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (furthest-building heights bricks ladders)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec furthest_building(Heights :: [integer()], Bricks :: integer(), Ladders :: integer()) -> integer().\nfurthest_building(Heights, Bricks, Ladders) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec furthest_building(heights :: [integer], bricks :: integer, ladders :: integer) :: integer\n  def furthest_building(heights, bricks, ladders) do\n    \n  end\nend"
+  }
+}

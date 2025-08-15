@@ -1,0 +1,61 @@
+{
+  "title": "How Many Numbers Are Smaller Than the Current Number",
+  "problem_id": "1482",
+  "frontend_id": "1365",
+  "difficulty": "Easy",
+  "problem_slug": "how-many-numbers-are-smaller-than-the-current-number",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting Sort"
+  ],
+  "description": "Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].\nReturn the answer in an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [8,1,2,2,3]\nOutput: [4,0,1,1,3]\nExplanation: \nFor nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). \nFor nums[1]=1 does not exist any smaller number than it.\nFor nums[2]=2 there exist one smaller number than it (1). \nFor nums[3]=2 there exist one smaller number than it (1). \nFor nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,5,4,8]\nOutput: [2,1,0,3]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [7,7,7,7]\nOutput: [0,0,0,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 500",
+    "0 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute force for each array element.",
+    "In order to improve the time complexity, we can sort the array and get the answer for each array element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] smallerNumbersThanCurrent(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallerNumbersThanCurrent(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SmallerNumbersThanCurrent(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar smallerNumbersThanCurrent = function(nums) {\n    \n};",
+    "typescript": "function smallerNumbersThanCurrent(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function smallerNumbersThanCurrent($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallerNumbersThanCurrent(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> smallerNumbersThanCurrent(List<int> nums) {\n    \n  }\n}",
+    "golang": "func smallerNumbersThanCurrent(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef smaller_numbers_than_current(nums)\n    \nend",
+    "scala": "object Solution {\n    def smallerNumbersThanCurrent(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smaller_numbers_than_current(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (smaller-numbers-than-current nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec smaller_numbers_than_current(Nums :: [integer()]) -> [integer()].\nsmaller_numbers_than_current(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smaller_numbers_than_current(nums :: [integer]) :: [integer]\n  def smaller_numbers_than_current(nums) do\n    \n  end\nend"
+  }
+}

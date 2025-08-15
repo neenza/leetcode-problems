@@ -1,0 +1,58 @@
+{
+  "title": "Count Special Integers",
+  "problem_id": "2457",
+  "frontend_id": "2376",
+  "difficulty": "Hard",
+  "problem_slug": "count-special-integers",
+  "topics": [
+    "Math",
+    "Dynamic Programming"
+  ],
+  "description": "We call a positive integer special if all of its digits are distinct.\nGiven a positive integer n, return the number of special integers that belong to the interval [1, n].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 20\nOutput: 19\nExplanation: All the integers from 1 to 20, except 11, are special. Thus, there are 19 special integers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5\nOutput: 5\nExplanation: All the integers from 1 to 5 are special.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 135\nOutput: 110\nExplanation: There are 110 integers from 1 to 135 that are special.\nSome of the integers that are not special are: 22, 114, and 131.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2 * 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to think of dynamic programming.",
+    "Use the idea of digit dynamic programming to build the numbers, in addition to a bitmask that will tell which digits you have used so far on the number that you are building."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSpecialNumbers(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSpecialNumbers(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSpecialNumbers(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSpecialNumbers(self, n: int) -> int:\n        ",
+    "c": "int countSpecialNumbers(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSpecialNumbers(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countSpecialNumbers = function(n) {\n    \n};",
+    "typescript": "function countSpecialNumbers(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countSpecialNumbers($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSpecialNumbers(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSpecialNumbers(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSpecialNumbers(int n) {\n    \n  }\n}",
+    "golang": "func countSpecialNumbers(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_special_numbers(n)\n    \nend",
+    "scala": "object Solution {\n    def countSpecialNumbers(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_special_numbers(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-special-numbers n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_special_numbers(N :: integer()) -> integer().\ncount_special_numbers(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_special_numbers(n :: integer) :: integer\n  def count_special_numbers(n) do\n    \n  end\nend"
+  }
+}

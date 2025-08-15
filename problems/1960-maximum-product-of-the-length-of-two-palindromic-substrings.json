@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Product of the Length of Two Palindromic Substrings",
+  "problem_id": "1336",
+  "frontend_id": "1960",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-product-of-the-length-of-two-palindromic-substrings",
+  "topics": [
+    "String",
+    "Rolling Hash",
+    "Hash Function"
+  ],
+  "description": "You are given a 0-indexed string s and are tasked with finding two non-intersecting palindromic substrings of odd length such that the product of their lengths is maximized.\nMore formally, you want to choose four integers i, j, k, l such that 0 <= i <= j < k <= l < s.length and both the substrings s[i...j] and s[k...l] are palindromes and have odd lengths. s[i...j] denotes a substring from index i to index j inclusive.\nReturn the maximum possible product of the lengths of the two non-intersecting palindromic substrings.\nA palindrome is a string that is the same forward and backward. A substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ababbb\"\nOutput: 9\nExplanation: Substrings \"aba\" and \"bbb\" are palindromes with odd length. product = 3 * 3 = 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"zaaaxbbby\"\nOutput: 9\nExplanation: Substrings \"aaa\" and \"bbb\" are palindromes with odd length. product = 3 * 3 = 9.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 105",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can use Manacher's algorithm to get the maximum palindromic substring centered at each index",
+    "After using Manacher's for each center use a line sweep from the center to the left and from the center to the right to find for each index the farthest center to it with distance ≤ palin[center]",
+    "After that, find the maximum palindrome size for each prefix in the string and for each suffix and the answer would be max(prefix[i] * suffix[i + 1])"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxProduct(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxProduct(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProduct(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProduct(self, s: str) -> int:\n        ",
+    "c": "long long maxProduct(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxProduct(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxProduct = function(s) {\n    \n};",
+    "typescript": "function maxProduct(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxProduct($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProduct(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProduct(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProduct(String s) {\n    \n  }\n}",
+    "golang": "func maxProduct(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_product(s)\n    \nend",
+    "scala": "object Solution {\n    def maxProduct(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_product(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-product s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_product(S :: unicode:unicode_binary()) -> integer().\nmax_product(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_product(s :: String.t) :: integer\n  def max_product(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Repeated String Match",
+  "problem_id": "686",
+  "frontend_id": "686",
+  "difficulty": "Medium",
+  "problem_slug": "repeated-string-match",
+  "topics": [
+    "String",
+    "String Matching"
+  ],
+  "description": "Given two strings a and b, return the minimum number of times you should repeat string a so that string b is a substring of it. If it is impossible for b​​​​​​ to be a substring of a after repeating it, return -1.\nNotice: string \"abc\" repeated 0 times is \"\", repeated 1 time is \"abc\" and repeated 2 times is \"abcabc\".\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = \"abcd\", b = \"cdabcdab\"\nOutput: 3\nExplanation: We return 3 because by repeating a three times \"abcdabcdabcd\", b is a substring of it.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = \"a\", b = \"aa\"\nOutput: 2",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= a.length, b.length <= 104",
+    "a and b consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int repeatedStringMatch(string a, string b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int repeatedStringMatch(String a, String b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def repeatedStringMatch(self, a, b):\n        \"\"\"\n        :type a: str\n        :type b: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def repeatedStringMatch(self, a: str, b: str) -> int:\n        ",
+    "c": "int repeatedStringMatch(char* a, char* b) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RepeatedStringMatch(string a, string b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} a\n * @param {string} b\n * @return {number}\n */\nvar repeatedStringMatch = function(a, b) {\n    \n};",
+    "typescript": "function repeatedStringMatch(a: string, b: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $a\n     * @param String $b\n     * @return Integer\n     */\n    function repeatedStringMatch($a, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func repeatedStringMatch(_ a: String, _ b: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun repeatedStringMatch(a: String, b: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int repeatedStringMatch(String a, String b) {\n    \n  }\n}",
+    "golang": "func repeatedStringMatch(a string, b string) int {\n    \n}",
+    "ruby": "# @param {String} a\n# @param {String} b\n# @return {Integer}\ndef repeated_string_match(a, b)\n    \nend",
+    "scala": "object Solution {\n    def repeatedStringMatch(a: String, b: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn repeated_string_match(a: String, b: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (repeated-string-match a b)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec repeated_string_match(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> integer().\nrepeated_string_match(A, B) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec repeated_string_match(a :: String.t, b :: String.t) :: integer\n  def repeated_string_match(a, b) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1: Ad-Hoc [Accepted]\n\n**Intuition**\n\nThe question can be summarized as \"What is the smallest `k` for which `B` is a substring of `A * k`?\"  We can just try every `k`.\n\n**Algorithm**\n\nImagine we wrote `S = A+A+A+...`. If `B` is to be a substring of `S`, we only need to check whether some `S[0:], S[1:], ..., S[len(A) - 1:]` starts with `B`, as `S` is long enough to contain `B`, and `S` has a period at most `len(A)`.\n\nNow, suppose `q` is the least number for which `len(B) <= len(A * q)`. We only need to check whether `B` is a substring of `A * q` or `A * (q+1)`. If we try `k < q`, then `B` has a larger length than `A * q` and therefore can't be a substring. When `k = q+1`, `A * k` is already big enough to try all positions for `B`; namely, `A[i:i+len(B)] == B` for `i = 0, 1, ..., len(A) - 1`.**Complexity Analysis**\n\n* Time Complexity: $$O(N*(N+M))$$, where $$M, N$$ are the lengths of strings `A, B`. We create two strings `A * q`, `A * (q+1)` which have a length at most `O(M+N)`. When checking whether `B` is a substring of `A`, this check takes naively the product of their lengths.\n\n* Space complexity: As justified above, we created strings that used $$O(M+N)$$ space.\n\n---\n\n### Approach #2: Rabin-Karp (Rolling Hash) [Accepted]\n\n**Intuition**\n\nAs in *Approach #1*, we've reduced the problem to deciding whether B is a substring of some `A * k`. Using the following technique, we can decide whether `B` is a substring in $$O(len(A) * k)$$ time.\n\n**Algorithm**\n\nFor strings $$S$$, consider each $$S[i]$$ as some integer ASCII code. Then for some prime $$p$$, consider the following function modulo some prime modulus $$\\mathcal{M}$$:\n\n$$\\text{hash}(S) = \\sum_{0 \\leq i < len(S)} p^i * S[i]$$\n\nNotably, $$\\text{hash}(S[1:] + x) = \\frac{(\\text{hash}(S) - S[0])}{p} + p^{n-1} x$$. This shows we can get the hash of every substring of `A * q` in time complexity linear to its size (We will also use the fact that $$p^{-1} = p^{\\mathcal{M}-2} \\mod \\mathcal{M}$$).\n\nHowever, hashes may collide haphazardly. To be absolutely sure in theory, we should check the answer in the usual way. The expected number of checks we make is in the order of $$1 + \\frac{s}{\\mathcal{M}}$$ where $$s$$ is the number of substrings we computed hashes for (assuming the hashes are equally distributed), which is effectively 1.**Complexity Analysis**\n\n* Time Complexity: $$O(M+N)$$ (at these sizes), where $$M, N$$ are the lengths of strings `A, B`. As in *Approach #1*, we justify that `A * (q+1)` will be of length $$O(M + N)$$, and computing the rolling hashes was linear work. We will also do a linear $$O(N)$$ final check of our answer $$1 + O(M) / \\mathcal{M}$$ times. In total, this is $$O(M+N + N(1 + \\frac{M}{\\mathcal{M}}))$$ work. Since $$M \\leq 10000 < \\mathcal{M} = 10^9 + 7$$, we can consider this to be linear behavior.\n\n* Space complexity: $$O(1)$$. Only integers were stored with additional memory."
+}

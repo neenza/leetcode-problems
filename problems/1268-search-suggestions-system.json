@@ -1,0 +1,65 @@
+{
+  "title": "Search Suggestions System",
+  "problem_id": "1397",
+  "frontend_id": "1268",
+  "difficulty": "Medium",
+  "problem_slug": "search-suggestions-system",
+  "topics": [
+    "Array",
+    "String",
+    "Binary Search",
+    "Trie",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array of strings products and a string searchWord.\nDesign a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.\nReturn a list of lists of the suggested products after each character of searchWord is typed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: products = [\"mobile\",\"mouse\",\"moneypot\",\"monitor\",\"mousepad\"], searchWord = \"mouse\"\nOutput: [[\"mobile\",\"moneypot\",\"monitor\"],[\"mobile\",\"moneypot\",\"monitor\"],[\"mouse\",\"mousepad\"],[\"mouse\",\"mousepad\"],[\"mouse\",\"mousepad\"]]\nExplanation: products sorted lexicographically = [\"mobile\",\"moneypot\",\"monitor\",\"mouse\",\"mousepad\"].\nAfter typing m and mo all products match and we show user [\"mobile\",\"moneypot\",\"monitor\"].\nAfter typing mou, mous and mouse the system suggests [\"mouse\",\"mousepad\"].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: products = [\"havana\"], searchWord = \"havana\"\nOutput: [[\"havana\"],[\"havana\"],[\"havana\"],[\"havana\"],[\"havana\"],[\"havana\"]]\nExplanation: The only word \"havana\" will be always suggested while typing the search word.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= products.length <= 1000",
+    "1 <= products[i].length <= 3000",
+    "1 <= sum(products[i].length) <= 2 * 104",
+    "All the strings of products are unique.",
+    "products[i] consists of lowercase English letters.",
+    "1 <= searchWord.length <= 1000",
+    "searchWord consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute force is a good choice because length of the string is ≤ 1000.",
+    "Binary search the answer.",
+    "Use Trie data structure to store the best three matching. Traverse the Trie."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> suggestedProducts(vector<string>& products, string searchWord) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> suggestedProducts(String[] products, String searchWord) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def suggestedProducts(self, products, searchWord):\n        \"\"\"\n        :type products: List[str]\n        :type searchWord: str\n        :rtype: List[List[str]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def suggestedProducts(self, products: List[str], searchWord: str) -> List[List[str]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** suggestedProducts(char** products, int productsSize, char* searchWord, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<string>> SuggestedProducts(string[] products, string searchWord) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} products\n * @param {string} searchWord\n * @return {string[][]}\n */\nvar suggestedProducts = function(products, searchWord) {\n    \n};",
+    "typescript": "function suggestedProducts(products: string[], searchWord: string): string[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $products\n     * @param String $searchWord\n     * @return String[][]\n     */\n    function suggestedProducts($products, $searchWord) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func suggestedProducts(_ products: [String], _ searchWord: String) -> [[String]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun suggestedProducts(products: Array<String>, searchWord: String): List<List<String>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<String>> suggestedProducts(List<String> products, String searchWord) {\n    \n  }\n}",
+    "golang": "func suggestedProducts(products []string, searchWord string) [][]string {\n    \n}",
+    "ruby": "# @param {String[]} products\n# @param {String} search_word\n# @return {String[][]}\ndef suggested_products(products, search_word)\n    \nend",
+    "scala": "object Solution {\n    def suggestedProducts(products: Array[String], searchWord: String): List[List[String]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn suggested_products(products: Vec<String>, search_word: String) -> Vec<Vec<String>> {\n        \n    }\n}",
+    "racket": "(define/contract (suggested-products products searchWord)\n  (-> (listof string?) string? (listof (listof string?)))\n  )",
+    "erlang": "-spec suggested_products(Products :: [unicode:unicode_binary()], SearchWord :: unicode:unicode_binary()) -> [[unicode:unicode_binary()]].\nsuggested_products(Products, SearchWord) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec suggested_products(products :: [String.t], search_word :: String.t) :: [[String.t]]\n  def suggested_products(products, search_word) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Binary Search\n\n**Intuition**\n\nSince the question asks for the result in a sorted order, let's start with sorting `products`.\nAn advantage that comes with sorting is `Binary Search`, we can binary search for the prefix. Once we locate the first match of prefix, all we need to do is to add the next 3 words into the result (if there are any), since we sorted the words beforehand.\n\n**Algorithm**\n\n1. Sort the input `products`.\n2. Iterate each character of the `searchWord` adding it to the `prefix` to search for.\n3. After adding the current character to the `prefix` binary search for the `prefix` in the input.\n4. Add next 3 strings from the current binary search `start` index till the prefix remains same.\n5. Another optimization that can be done is reducing the binary search space to current `start` index (This is due to the fact that adding more characters to the prefix will make the next search result's index be at least > current search's index).**Complexity Analysis**\n\n* Time complexity : $$O(nlog(n)) + O(mlog(n))$$. Where `n` is the length of `products` and `m` is the length of the search word. Here we treat string comparison in sorting as  $$O(1)$$.  $$O(nlog(n))$$ comes from the sorting and $$O(mlog(n))$$ comes from running `binary search` on products `m` times.\n\n  * In Java there is an additional complexity of $$O(m^2)$$ due to Strings being immutable, here `m` is the length of `searchWord`.\n\n* Space complexity : Varies between $$O(1)$$ and $$O(n)$$ where `n` is the length of `products`, as it depends on the implementation used for sorting. We ignore the space required for output as it does not affect the algorithm's space complexity. See [Internal details of std::sort](https://www.geeksforgeeks.org/internal-details-of-stdsort-in-c/).\nSpace required for output is $$O(m)$$ where `m` is the length of the search word.---\n\n### Approach 2: Trie + DFS\n\n**Intuition**\n\nWhenever we come across questions with multiple strings, it is best to think if [Trie](https://en.wikipedia.org/wiki/Trie) can help us. What we need here is a way to search for all the words with given prefix, this is a well known problem that trie can solve. The question also asks for a sorted results, if you look closely a trie word is represented by it's preorder traversal. It is also worth noting that a preorder traversal of a trie will always result in a sorted traversal of results, thus all we need to do is limit the word traversal to 3.\n\nQuestions using Trie:\n\n[79. Word Search](https://leetcode.com/problems/word-search)\n\n[211. Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure)\n\n![diff](../Figures/1268/Trie.png)\n*Figure 1. A trie made from `words`*\n\n\n**Algorithm**\n\n1. Create a Trie from the given products input.\n2. Iterate each character of the `searchWord` adding it to the `prefix` to search for.\n3. After adding the current character to the `prefix` traverse the `trie` pointer to the node representing `prefix`.\n4. Now traverse the tree from `curr` pointer in a preorder fashion and record whenever we encounter a complete word.\n5. Limit the result to 3 and return `dfs` once reached this limit.\n6. Add the words to the final result.**Complexity Analysis**\n\n* Time complexity : $$O(M)$$ to build the `trie` where `M` is total number of characters in `products` For each `prefix` we find its representative node in $$O(\\text{len(prefix)})$$ and dfs to find at most 3 words which is an `O(1)` operation. Thus the overall complexity is dominated by the time required to build the `trie`.\n\n  * In Java there is an additional complexity of $$O(m^2)$$ due to Strings being immutable, here `m` is the length of `searchWord`.\n\n* Space complexity : $$O(26n)=O(n)$$. Here `n` is the number of nodes in the `trie`. `26` is the alphabet size.\nSpace required for output is $$O(m)$$ where `m` is the length of the search word."
+}

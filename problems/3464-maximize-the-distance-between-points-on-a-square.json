@@ -1,0 +1,74 @@
+{
+  "title": "Maximize the Distance Between Points on a Square",
+  "problem_id": "3781",
+  "frontend_id": "3464",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-the-distance-between-points-on-a-square",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy"
+  ],
+  "description": "You are given an integer side, representing the edge length of a square with corners at (0, 0), (0, side), (side, 0), and (side, side) on a Cartesian plane.\nYou are also given a positive integer k and a 2D integer array points, where points[i] = [xi, yi] represents the coordinate of a point lying on the boundary of the square.\nYou need to select k elements among points such that the minimum Manhattan distance between any two points is maximized.\nReturn the maximum possible minimum Manhattan distance between the selected k points.\nThe Manhattan Distance between two cells (xi, yi) and (xj, yj) is |xi - xj| + |yi - yj|.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: side = 2, points = [[0,2],[2,0],[2,2],[0,0]], k = 4\nOutput: 2\nExplanation:\n\nSelect all four points.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/28/4080_example0_revised.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: side = 2, points = [[0,0],[1,2],[2,0],[2,2],[2,1]], k = 4\nOutput: 1\nExplanation:\n\nSelect the points (0, 0) , (2, 0) , (2, 2) , and (2, 1) .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/28/4080_example1_revised.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: side = 2, points = [[0,0],[0,1],[0,2],[1,2],[2,0],[2,2],[2,1]], k = 5\nOutput: 1\nExplanation:\n\nSelect the points (0, 0) , (0, 1) , (0, 2) , (1, 2) , and (2, 2) .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/28/4080_example2_revised.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= side <= 109",
+    "4 <= points.length <= min(4 * side, 15 * 103)",
+    "points[i] == [xi, yi]",
+    "The input is generated such that:\n\t\npoints[i] lies on the boundary of the square.\nAll points[i] are unique.",
+    "points[i] lies on the boundary of the square.",
+    "All points[i] are unique.",
+    "4 <= k <= min(25, points.length)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use binary search for this problem?",
+    "Think of the coordinates on a straight line in clockwise order.",
+    "Binary search on the minimum Manhattan distance <code>x</code>.",
+    "During the binary search, for each coordinate, find the immediate next coordinate with distance >= <code>x</code>.",
+    "Greedily select up to <code>k</code> coordinates."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(int side, vector<vector<int>>& points, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(int side, int[][] points, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, side, points, k):\n        \"\"\"\n        :type side: int\n        :type points: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, side: int, points: List[List[int]], k: int) -> int:\n        ",
+    "c": "int maxDistance(int side, int** points, int pointsSize, int* pointsColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(int side, int[][] points, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} side\n * @param {number[][]} points\n * @param {number} k\n * @return {number}\n */\nvar maxDistance = function(side, points, k) {\n    \n};",
+    "typescript": "function maxDistance(side: number, points: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $side\n     * @param Integer[][] $points\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxDistance($side, $points, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ side: Int, _ points: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(side: Int, points: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(int side, List<List<int>> points, int k) {\n    \n  }\n}",
+    "golang": "func maxDistance(side int, points [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} side\n# @param {Integer[][]} points\n# @param {Integer} k\n# @return {Integer}\ndef max_distance(side, points, k)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(side: Int, points: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(side: i32, points: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance side points k)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_distance(Side :: integer(), Points :: [[integer()]], K :: integer()) -> integer().\nmax_distance(Side, Points, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(side :: integer, points :: [[integer]], k :: integer) :: integer\n  def max_distance(side, points, k) do\n    \n  end\nend"
+  }
+}

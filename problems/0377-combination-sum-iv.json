@@ -1,0 +1,55 @@
+{
+  "title": "Combination Sum IV",
+  "problem_id": "377",
+  "frontend_id": "377",
+  "difficulty": "Medium",
+  "problem_slug": "combination-sum-iv",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "Given an array of distinct integers nums and a target integer target, return the number of possible combinations that add up to target.\nThe test cases are generated so that the answer can fit in a 32-bit integer.\nExample 1:\nExample 2:\nConstraints:\nFollow up: What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], target = 4\nOutput: 7\nExplanation:\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\nNote that different sequences are counted as different combinations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [9], target = 3\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 200",
+    "1 <= nums[i] <= 1000",
+    "All the elements of nums are unique.",
+    "1 <= target <= 1000"
+  ],
+  "follow_ups": [
+    "What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int combinationSum4(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int combinationSum4(int[] nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def combinationSum4(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def combinationSum4(self, nums: List[int], target: int) -> int:\n        ",
+    "c": "int combinationSum4(int* nums, int numsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CombinationSum4(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar combinationSum4 = function(nums, target) {\n    \n};",
+    "typescript": "function combinationSum4(nums: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer\n     */\n    function combinationSum4($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func combinationSum4(_ nums: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun combinationSum4(nums: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int combinationSum4(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func combinationSum4(nums []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer}\ndef combination_sum4(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def combinationSum4(nums: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn combination_sum4(nums: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (combination-sum4 nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec combination_sum4(Nums :: [integer()], Target :: integer()) -> integer().\ncombination_sum4(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec combination_sum4(nums :: [integer], target :: integer) :: integer\n  def combination_sum4(nums, target) do\n    \n  end\nend"
+  }
+}

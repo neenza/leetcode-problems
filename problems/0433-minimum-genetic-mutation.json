@@ -1,0 +1,53 @@
+{
+  "title": "Minimum Genetic Mutation",
+  "problem_id": "433",
+  "frontend_id": "433",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-genetic-mutation",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Breadth-First Search"
+  ],
+  "description": "A gene string can be represented by an 8-character long string, with choices from 'A', 'C', 'G', and 'T'.\nSuppose we need to investigate a mutation from a gene string startGene to a gene string endGene where one mutation is defined as one single character changed in the gene string.\nThere is also a gene bank bank that records all the valid gene mutations. A gene must be in bank to make it a valid gene string.\nGiven the two gene strings startGene and endGene and the gene bank bank, return the minimum number of mutations needed to mutate from startGene to endGene. If there is no such a mutation, return -1.\nNote that the starting point is assumed to be valid, so it might not be included in the bank.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: startGene = \"AACCGGTT\", endGene = \"AACCGGTA\", bank = [\"AACCGGTA\"]\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: startGene = \"AACCGGTT\", endGene = \"AAACGGTA\", bank = [\"AACCGGTA\",\"AACCGCTA\",\"AAACGGTA\"]\nOutput: 2",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= bank.length <= 10",
+    "startGene.length == endGene.length == bank[i].length == 8",
+    "startGene, endGene, and bank[i] consist of only the characters ['A', 'C', 'G', 'T']."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMutation(string startGene, string endGene, vector<string>& bank) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMutation(String startGene, String endGene, String[] bank) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMutation(self, startGene, endGene, bank):\n        \"\"\"\n        :type startGene: str\n        :type endGene: str\n        :type bank: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:\n        ",
+    "c": "int minMutation(char* startGene, char* endGene, char** bank, int bankSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMutation(string startGene, string endGene, string[] bank) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} startGene\n * @param {string} endGene\n * @param {string[]} bank\n * @return {number}\n */\nvar minMutation = function(startGene, endGene, bank) {\n    \n};",
+    "typescript": "function minMutation(startGene: string, endGene: string, bank: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $startGene\n     * @param String $endGene\n     * @param String[] $bank\n     * @return Integer\n     */\n    function minMutation($startGene, $endGene, $bank) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMutation(_ startGene: String, _ endGene: String, _ bank: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMutation(startGene: String, endGene: String, bank: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMutation(String startGene, String endGene, List<String> bank) {\n    \n  }\n}",
+    "golang": "func minMutation(startGene string, endGene string, bank []string) int {\n    \n}",
+    "ruby": "# @param {String} start_gene\n# @param {String} end_gene\n# @param {String[]} bank\n# @return {Integer}\ndef min_mutation(start_gene, end_gene, bank)\n    \nend",
+    "scala": "object Solution {\n    def minMutation(startGene: String, endGene: String, bank: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_mutation(start_gene: String, end_gene: String, bank: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-mutation startGene endGene bank)\n  (-> string? string? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec min_mutation(StartGene :: unicode:unicode_binary(), EndGene :: unicode:unicode_binary(), Bank :: [unicode:unicode_binary()]) -> integer().\nmin_mutation(StartGene, EndGene, Bank) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_mutation(start_gene :: String.t, end_gene :: String.t, bank :: [String.t]) :: integer\n  def min_mutation(start_gene, end_gene, bank) do\n    \n  end\nend"
+  }
+}

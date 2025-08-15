@@ -1,0 +1,54 @@
+{
+  "title": "Largest Perimeter Triangle",
+  "problem_id": "1018",
+  "frontend_id": "976",
+  "difficulty": "Easy",
+  "problem_slug": "largest-perimeter-triangle",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,2]\nOutput: 5\nExplanation: You can form a triangle with three side lengths: 1, 2, and 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,1,10]\nOutput: 0\nExplanation: \nYou cannot use the side lengths 1, 1, and 2 to form a triangle.\nYou cannot use the side lengths 1, 1, and 10 to form a triangle.\nYou cannot use the side lengths 1, 2, and 10 to form a triangle.\nAs we cannot use any three side lengths to form a triangle of non-zero area, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 104",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestPerimeter(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestPerimeter(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestPerimeter(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestPerimeter(self, nums: List[int]) -> int:\n        ",
+    "c": "int largestPerimeter(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestPerimeter(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar largestPerimeter = function(nums) {\n    \n};",
+    "typescript": "function largestPerimeter(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function largestPerimeter($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestPerimeter(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestPerimeter(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestPerimeter(List<int> nums) {\n    \n  }\n}",
+    "golang": "func largestPerimeter(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef largest_perimeter(nums)\n    \nend",
+    "scala": "object Solution {\n    def largestPerimeter(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_perimeter(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-perimeter nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec largest_perimeter(Nums :: [integer()]) -> integer().\nlargest_perimeter(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_perimeter(nums :: [integer]) :: integer\n  def largest_perimeter(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Sort\n\n**Intuition**\n\nWithout loss of generality, say the sidelengths of the triangle are $$a \\leq b \\leq c$$.  The necessary and sufficient condition for these lengths to form a triangle of non-zero area is $$a + b > c$$.\n\nSay we knew $$c$$ already.  There is no reason not to choose the largest possible $$a$$ and $$b$$ from the array.  If $$a + b > c$$, then it forms a triangle, otherwise it doesn't.\n\n**Algorithm**\n\nThis leads to a simple algorithm:  Sort the array.  For any $$c$$ in the array, we choose the largest possible $$a \\leq b \\leq c$$:  these are just the two values adjacent to $$c$$.  If this forms a triangle, we return the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Fill a Special Grid",
+  "problem_id": "3822",
+  "frontend_id": "3537",
+  "difficulty": "Medium",
+  "problem_slug": "fill-a-special-grid",
+  "topics": [
+    "Array",
+    "Divide and Conquer",
+    "Matrix"
+  ],
+  "description": "You are given a non-negative integer n representing a 2n x 2n grid. You must fill the grid with integers from 0 to 22n - 1 to make it special. A grid is special if it satisfies all the following conditions:\nReturn the special 2n x 2n grid.\nNote: Any 1x1 grid is special.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 0\nOutput: [[0]]\nExplanation:\nThe only number that can be placed is 0, and there is only one possible position in the grid.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: [[3,0],[2,1]]\nExplanation:\nThe numbers in each quadrant are:\nSince 0 < 1 < 2 < 3 , this satisfies the given constraints.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2\nOutput: [[15,12,3,0],[14,13,2,1],[11,8,7,4],[10,9,6,5]]\nExplanation:\n\nThe numbers in each quadrant are:\nThis satisfies the first three requirements. Additionally, each quadrant is also a special grid. Thus, this is a special grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/05/4123example3p1drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 10"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Solve the problem recursively."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> specialGrid(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] specialGrid(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def specialGrid(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def specialGrid(self, n: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** specialGrid(int n, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] SpecialGrid(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[][]}\n */\nvar specialGrid = function(n) {\n    \n};",
+    "typescript": "function specialGrid(n: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[][]\n     */\n    function specialGrid($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func specialGrid(_ n: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun specialGrid(n: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> specialGrid(int n) {\n    \n  }\n}",
+    "golang": "func specialGrid(n int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[][]}\ndef special_grid(n)\n    \nend",
+    "scala": "object Solution {\n    def specialGrid(n: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn special_grid(n: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (special-grid n)\n  (-> exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec special_grid(N :: integer()) -> [[integer()]].\nspecial_grid(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec special_grid(n :: integer) :: [[integer]]\n  def special_grid(n) do\n    \n  end\nend"
+  }
+}

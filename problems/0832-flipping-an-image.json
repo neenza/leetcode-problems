@@ -1,0 +1,57 @@
+{
+  "title": "Flipping an Image",
+  "problem_id": "861",
+  "frontend_id": "832",
+  "difficulty": "Easy",
+  "problem_slug": "flipping-an-image",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Bit Manipulation",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given an n x n binary matrix image, flip the image horizontally, then invert it, and return the resulting image.\nTo flip an image horizontally means that each row of the image is reversed.\nTo invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: image = [[1,1,0],[1,0,1],[0,0,0]]\nOutput: [[1,0,0],[0,1,0],[1,1,1]]\nExplanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].\nThen, invert the image: [[1,0,0],[0,1,0],[1,1,1]]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: image = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]\nOutput: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]\nExplanation: First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]].\nThen invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == image.length",
+    "n == image[i].length",
+    "1 <= n <= 20",
+    "images[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] flipAndInvertImage(int[][] image) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def flipAndInvertImage(self, image):\n        \"\"\"\n        :type image: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** flipAndInvertImage(int** image, int imageSize, int* imageColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] FlipAndInvertImage(int[][] image) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} image\n * @return {number[][]}\n */\nvar flipAndInvertImage = function(image) {\n    \n};",
+    "typescript": "function flipAndInvertImage(image: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $image\n     * @return Integer[][]\n     */\n    function flipAndInvertImage($image) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func flipAndInvertImage(_ image: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun flipAndInvertImage(image: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> flipAndInvertImage(List<List<int>> image) {\n    \n  }\n}",
+    "golang": "func flipAndInvertImage(image [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} image\n# @return {Integer[][]}\ndef flip_and_invert_image(image)\n    \nend",
+    "scala": "object Solution {\n    def flipAndInvertImage(image: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn flip_and_invert_image(image: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (flip-and-invert-image image)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec flip_and_invert_image(Image :: [[integer()]]) -> [[integer()]].\nflip_and_invert_image(Image) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec flip_and_invert_image(image :: [[integer]]) :: [[integer]]\n  def flip_and_invert_image(image) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe can do this in place.  In each row, the `i`th value from the left is equal to the inverse of the `i`th value from the right.\n\nWe use `(C+1) / 2` (with floor division) to iterate over all indexes `i` in the first half of the row, including the center.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where `N` is the total number of elements in `A`.\n\n* Space Complexity: $$O(1)$$ in *additional* space complexity."
+}

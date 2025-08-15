@@ -1,0 +1,70 @@
+{
+  "title": "Minimum Number of Pushes to Type Word II",
+  "problem_id": "3276",
+  "frontend_id": "3016",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-pushes-to-type-word-ii",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given a string word containing lowercase English letters.\nTelephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key 2 is mapped with [\"a\",\"b\",\"c\"], we need to push the key one time to type \"a\", two times to type \"b\", and three times to type \"c\" .\nIt is allowed to remap the keys numbered 2 to 9 to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string word.\nReturn the minimum number of pushes needed to type word after remapping the keys.\nAn example mapping of letters to keys on a telephone keypad is given below. Note that 1, *, #, and 0 do not map to any letters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abcde\"\nOutput: 5\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\nTotal cost is 1 + 1 + 1 + 1 + 1 = 5.\nIt can be shown that no other mapping can provide a lower cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/26/keypadv1e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"xyzxyzxyzxyz\"\nOutput: 12\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"x\" -> one push on key 2\n\"y\" -> one push on key 3\n\"z\" -> one push on key 4\nTotal cost is 1 * 4 + 1 * 4 + 1 * 4 = 12\nIt can be shown that no other mapping can provide a lower cost.\nNote that the key 9 is not mapped to any letter: it is not necessary to map letters to every key, but to map all the letters.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/08/20/edited.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"aabbccddeeffgghhiiiiii\"\nOutput: 24\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\n\"f\" -> one push on key 7\n\"g\" -> one push on key 8\n\"h\" -> two pushes on key 9\n\"i\" -> one push on key 9\nTotal cost is 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 2 * 2 + 6 * 1 = 24.\nIt can be shown that no other mapping can provide a lower cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/27/keypadv2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 105",
+    "word consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We have 8 keys in total. We can type 8 characters with one push each, 8 different characters with two pushes each, and so on.",
+    "The optimal way is to map letters to keys evenly.",
+    "Sort the letters by frequencies in the word in non-increasing order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumPushes(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumPushes(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumPushes(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumPushes(self, word: str) -> int:\n        ",
+    "c": "int minimumPushes(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumPushes(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar minimumPushes = function(word) {\n    \n};",
+    "typescript": "function minimumPushes(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function minimumPushes($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumPushes(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumPushes(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumPushes(String word) {\n    \n  }\n}",
+    "golang": "func minimumPushes(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef minimum_pushes(word)\n    \nend",
+    "scala": "object Solution {\n    def minimumPushes(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_pushes(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-pushes word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_pushes(Word :: unicode:unicode_binary()) -> integer().\nminimum_pushes(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_pushes(word :: String.t) :: integer\n  def minimum_pushes(word) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThe challenge is inspired by traditional telephone keypads where each number key (2-9) corresponds to a group of letters. For instance, pressing the key `'2'` once corresponds to the letter `'a'`, pressing it twice corresponds to the letter `'b'`, and pressing it three times corresponds to the letter `'c'`. \n\nThis problem offers a twist: we can remap the letters to the keys as we see fit. Each letter must be assigned to exactly one key, but a key can have any number of letters (including no letters), and the sets of letters on each key must be distinct. The objective is to remap these letters so that typing the given string `word` requires the fewest key presses.\n\nExample: For the word \"abc\":\n- If mapped traditionally (letters `a`, `b`, and `c` are mapped to key `2`), typing would require 1 + 2 + 3 = 6 presses.\n- However, an optimal remapping might assign each letter to a different key, resulting in just 1 press per letter, for a total of 3 presses.\n\n---\n\n### Approach 1: Greedy Sorting\n\n#### Intuition\n\nTo solve this problem, we use a greedy algorithm approach combined with sorting. Keeping in mind that we have 8 keys available (2-9), the primary intuition is to remap the keys so the 8 most frequently occurring characters in the given string are assigned as first key presses, the next most common 8 characters as second key presses, and so on. \n\nWe begin by counting the occurrences of each letter using a counter, which provides the frequency of each distinct letter. Next, we sort these frequencies in descending order. \n\nSince there are 8 possible key assignments, we'll divide the frequency rank by 8 to group it as a first, second, or third key press. Note that dividing the frequencies by 8 will result in 0, 1, and 2. We must add 1 to this group number to get the actual number of presses required for letters in that group. Multiplying this by the number of times the character appears in the given string yields the total number of presses for that letter.\n\nFinally, we will sum the total presses required to type the word. \n\nThis greedy way, combined with sorting by frequency, ensures that each decision (assignment of letters to keys) is optimal for minimizing key presses.\n\n#### Algorithm\n\n- Initialize a frequency vector `frequency` of size 26 to store the count of each letter in the word.\n  - Iterate through each character `c` in `word` and increment the count in `frequency` at the index corresponding to `c - 'a'`.\n- Sort the `frequency` vector in descending order to prioritize letters with higher counts.\n- Initialize a variable `totalPushes` to store the total number of key presses required.\n- Iterate through the sorted `frequency` vector:\n  - If the frequency of a letter is zero, break the loop as there are no more letters to process.\n  - Calculate the number of pushes for each letter based on its position in the sorted list: `(i / 8 + 1) * frequency[i]`.\n  - Accumulate this value in `totalPushes`.\n- Return `totalPushes` as the minimum number of key presses required to type the word.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string.\n\n- Time complexity: $O(n)$\n\n    Iterating through the word string to count the frequency of each letter takes $O(n)$.\n\n    Sorting the frequency array, which has a fixed size of 26 (for each letter in the alphabet), takes $O(1)$ because the size of the array is constant.\n\n    Iterating through the frequency array to compute the total number of presses is $O(1)$ because the array size is constant.\n\n    Overall, the dominant term is $O(n)$ due to the frequency counting step.\n\n- Space complexity: $O(1)$\n\n    Frequency array and sorting takes $O(1)$ space, as it always requires space for 26 integers.  \n\n    Overall, the space complexity is $O(1)$ because the space used does not depend on the input size.\n\n---\n\n### Approach 2: Using Heap\n\n#### Intuition\n\nFollowing the initial approach that used sorting and a greedy strategy, we now explore a similar yet refined method.\n\nFirst, we count the frequency of each character in the word using an unordered map (or dictionary), where each key represents a character, and its value indicates how many times it appears in the word.\n\nNext, we use a priority queue (or max-heap) to efficiently manage these frequencies. The priority queue enables quick retrieval of the character with the highest frequency by giving the most frequent characters the highest priority.\n\nAs we process characters from the priority queue, we dynamically assign them to keys based on their frequencies. Specifically, at each iteration, we extract the character with the highest frequency and assign it to the key with the least number of characters assigned.\n\nTo facilitate this, we maintain a record of the number of letters assigned to each key press count. This helps us determine the next available key press count for assigning characters. For instance, once a key press count of 1 is fully utilized, we proceed to a key press count of 2, and so on.\n\nWe assign the character with the highest frequency to the least costly available key press count, updating our record to reflect this assignment and marking the key press count as occupied. This process continues until all characters are assigned.\n\nFinally, we calculate the total number of key presses required by summing the product of each character’s frequency and its assigned key press count. This gives us the optimal total number of key presses needed to type the word.\n\n#### Algorithm\n \n- Create a frequency map `frequencyMap` to store the count of each letter in the input string `word`.\n  - Iterate through `word` and for each character, increment its count in `frequencyMap`.\n\n- Create a priority queue `frequencyQueue` to store the frequencies of letters in descending order.\n  - Iterate through `frequencyMap` and push each frequency into `frequencyQueue`.\n\n- Initialize a variable `totalPushes` to 0 to keep track of the total number of presses.\n- Initialize an index variable `index` to 0.\n\n- Calculate the total number of presses by processing the frequencies in the priority queue.\n  - While `frequencyQueue` is not empty:\n    - Add the product of `(1 + (index / 8))` and the top frequency from `frequencyQueue` to `totalPushes`.\n    - Remove the top element from `frequencyQueue`.\n    - Increment `index` by 1.\n\n- Return `totalPushes` as the minimum number of presses needed.\n\nThe algorithm is visualized below:\n\n> Note: As shown in Slide 4, when calculating `totalPushes`, we multiply by 1. This value represents `frequencyQueue.top()`, which is 1 in the visual example.\n\n!?!../Documents/3016/approach2.json:920,440!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string.\n\n- Time complexity: $O(n)$\n\n    Iterating through the word string to count the frequency of each letter takes $O(n)$.\n\n    Inserting each frequency into the priority queue and extracting the maximum frequency both operate with a time complexity of $O(k \\log k)$, where `k` represents the number of distinct letters. Each of these operations—insertions, and extractions—is logarithmic due to the heap structure of the priority queue. However, since the number of distinct letters is limited to a maximum of 26 (one for each letter in the alphabet), the size of the priority queue remains constant and thus the time complexity effectively becomes $O(1)$ in practice.\n\n    Overall, the dominant term is $O(n)$ due to the frequency counting step.\n\n- Space complexity: $O(1)$\n\n    The frequency map and priority queue take $O(26) = O(1)$ space, as it always requires a fixed space for 26 integers.  \n\n    Overall, the space complexity is $O(1)$ because the space used does not depend on the input size.\n\n---"
+}

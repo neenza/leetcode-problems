@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Cost of Buying Candies With Discount",
+  "problem_id": "2248",
+  "frontend_id": "2144",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-cost-of-buying-candies-with-discount",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "A shop is selling candies at a discount. For every two candies sold, the shop gives a third candy for free.\nThe customer can choose any candy to take away for free as long as the cost of the chosen candy is less than or equal to the minimum cost of the two candies bought.\nGiven a 0-indexed integer array cost, where cost[i] denotes the cost of the ith candy, return the minimum cost of buying all the candies.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cost = [1,2,3]\nOutput: 5\nExplanation: We buy the candies with costs 2 and 3, and take the candy with cost 1 for free.\nThe total cost of buying all candies is 2 + 3 = 5. This is the only way we can buy the candies.\nNote that we cannot buy candies with costs 1 and 3, and then take the candy with cost 2 for free.\nThe cost of the free candy has to be less than or equal to the minimum cost of the purchased candies.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cost = [6,5,7,9,2,2]\nOutput: 23\nExplanation: The way in which we can get the minimum cost is described below:\n- Buy candies with costs 9 and 7\n- Take the candy with cost 6 for free\n- We buy candies with costs 5 and 2\n- Take the last remaining candy with cost 2 for free\nHence, the minimum cost to buy all candies is 9 + 7 + 5 + 2 = 23.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: cost = [5,5]\nOutput: 10\nExplanation: Since there are only 2 candies, we buy both of them. There is not a third candy we can take for free.\nHence, the minimum cost to buy all candies is 5 + 5 = 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= cost.length <= 100",
+    "1 <= cost[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we consider costs from high to low, what is the maximum cost of a single candy that we can get for free?",
+    "How can we generalize this approach to maximize the costs of the candies we get for free?",
+    "Can “sorting” the array help us find the minimum cost?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumCost(vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCost(int[] cost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumCost(self, cost):\n        \"\"\"\n        :type cost: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumCost(self, cost: List[int]) -> int:\n        ",
+    "c": "int minimumCost(int* cost, int costSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumCost(int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cost\n * @return {number}\n */\nvar minimumCost = function(cost) {\n    \n};",
+    "typescript": "function minimumCost(cost: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $cost\n     * @return Integer\n     */\n    function minimumCost($cost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumCost(_ cost: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumCost(cost: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumCost(List<int> cost) {\n    \n  }\n}",
+    "golang": "func minimumCost(cost []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} cost\n# @return {Integer}\ndef minimum_cost(cost)\n    \nend",
+    "scala": "object Solution {\n    def minimumCost(cost: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_cost(cost: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-cost cost)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_cost(Cost :: [integer()]) -> integer().\nminimum_cost(Cost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_cost(cost :: [integer]) :: integer\n  def minimum_cost(cost) do\n    \n  end\nend"
+  }
+}

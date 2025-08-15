@@ -1,0 +1,58 @@
+{
+  "title": "Number of Substrings With Only 1s",
+  "problem_id": "1636",
+  "frontend_id": "1513",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-substrings-with-only-1s",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "Given a binary string s, return the number of substrings with all characters 1's. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"0110111\"\nOutput: 9\nExplanation: There are 9 substring in total with only 1's characters.\n\"1\" -> 5 times.\n\"11\" -> 3 times.\n\"111\" -> 1 time.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"101\"\nOutput: 2\nExplanation: Substring \"1\" is shown 2 times in s.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"111111\"\nOutput: 21\nExplanation: Each substring contains only 1's characters.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count number of 1s in each consecutive-1 group. For a group with n consecutive 1s, the total contribution of it to the final answer is (n + 1) * n // 2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSub(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSub(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSub(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSub(self, s: str) -> int:\n        ",
+    "c": "int numSub(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSub(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numSub = function(s) {\n    \n};",
+    "typescript": "function numSub(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numSub($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSub(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSub(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSub(String s) {\n    \n  }\n}",
+    "golang": "func numSub(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_sub(s)\n    \nend",
+    "scala": "object Solution {\n    def numSub(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_sub(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-sub s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_sub(S :: unicode:unicode_binary()) -> integer().\nnum_sub(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_sub(s :: String.t) :: integer\n  def num_sub(s) do\n    \n  end\nend"
+  }
+}

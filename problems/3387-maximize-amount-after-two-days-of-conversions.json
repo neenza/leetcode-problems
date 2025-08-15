@@ -1,0 +1,73 @@
+{
+  "title": "Maximize Amount After Two Days of Conversions",
+  "problem_id": "3613",
+  "frontend_id": "3387",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-amount-after-two-days-of-conversions",
+  "topics": [
+    "Array",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph"
+  ],
+  "description": "You are given a string initialCurrency, and you start with 1.0 of initialCurrency.\nYou are also given four arrays with currency pairs (strings) and rates (real numbers):\nYou can perform any number of conversions, including zero, using rates1 on day 1, followed by any number of additional conversions, including zero, using rates2 on day 2.\nReturn the maximum amount of initialCurrency you can have after performing any number of conversions on both days in order.\nNote: Conversion rates are valid, and there will be no contradictions in the rates for either day. The rates for the days are independent of each other.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: initialCurrency = \"EUR\", pairs1 = [[\"EUR\",\"USD\"],[\"USD\",\"JPY\"]], rates1 = [2.0,3.0], pairs2 = [[\"JPY\",\"USD\"],[\"USD\",\"CHF\"],[\"CHF\",\"EUR\"]], rates2 = [4.0,5.0,6.0]\nOutput: 720.00000\nExplanation:\nTo get the maximum amount of EUR , starting with 1.0 EUR :",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: initialCurrency = \"NGN\", pairs1 = [[\"NGN\",\"EUR\"]] , rates1 = [9.0] , pairs2 = [[\"NGN\",\"EUR\"]] , rates2 = [6.0]\nOutput: 1.50000\nExplanation:\nConverting NGN to EUR on day 1 and EUR to NGN using the inverse rate on day 2 gives the maximum amount.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: initialCurrency = \"USD\", pairs1 = [[\"USD\",\"EUR\"]], rates1 = [1.0], pairs2 = [[\"EUR\",\"JPY\"]], rates2 = [10.0]\nOutput: 1.00000\nExplanation:\nIn this example, there is no need to make any conversions on either day.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= initialCurrency.length <= 3",
+    "initialCurrency consists only of uppercase English letters.",
+    "1 <= n == pairs1.length <= 10",
+    "1 <= m == pairs2.length <= 10",
+    "pairs1[i] == [startCurrencyi, targetCurrencyi]",
+    "pairs2[i] == [startCurrencyi, targetCurrencyi]",
+    "1 <= startCurrencyi.length, targetCurrencyi.length <= 3",
+    "startCurrencyi and targetCurrencyi consist only of uppercase English letters.",
+    "rates1.length == n",
+    "rates2.length == m",
+    "1.0 <= rates1[i], rates2[i] <= 10.0",
+    "The input is generated such that there are no contradictions or cycles in the conversion graphs for either day.",
+    "The input is generated such that the output is at most 5 * 1010."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Choose an intermediate currency. Convert from <code>initialCurrency</code> to this currency on day 1, and from that currency back to <code>initialCurrency</code> on day 2.",
+    "Use a DFS/BFS to calculate the direct conversion rate between any two currencies."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double maxAmount(string initialCurrency, vector<vector<string>>& pairs1, vector<double>& rates1, vector<vector<string>>& pairs2, vector<double>& rates2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double maxAmount(String initialCurrency, List<List<String>> pairs1, double[] rates1, List<List<String>> pairs2, double[] rates2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxAmount(self, initialCurrency, pairs1, rates1, pairs2, rates2):\n        \"\"\"\n        :type initialCurrency: str\n        :type pairs1: List[List[str]]\n        :type rates1: List[float]\n        :type pairs2: List[List[str]]\n        :type rates2: List[float]\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxAmount(self, initialCurrency: str, pairs1: List[List[str]], rates1: List[float], pairs2: List[List[str]], rates2: List[float]) -> float:\n        ",
+    "c": "double maxAmount(char* initialCurrency, char*** pairs1, int pairs1Size, int* pairs1ColSize, double* rates1, int rates1Size, char*** pairs2, int pairs2Size, int* pairs2ColSize, double* rates2, int rates2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public double MaxAmount(string initialCurrency, IList<IList<string>> pairs1, double[] rates1, IList<IList<string>> pairs2, double[] rates2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} initialCurrency\n * @param {string[][]} pairs1\n * @param {number[]} rates1\n * @param {string[][]} pairs2\n * @param {number[]} rates2\n * @return {number}\n */\nvar maxAmount = function(initialCurrency, pairs1, rates1, pairs2, rates2) {\n    \n};",
+    "typescript": "function maxAmount(initialCurrency: string, pairs1: string[][], rates1: number[], pairs2: string[][], rates2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $initialCurrency\n     * @param String[][] $pairs1\n     * @param Float[] $rates1\n     * @param String[][] $pairs2\n     * @param Float[] $rates2\n     * @return Float\n     */\n    function maxAmount($initialCurrency, $pairs1, $rates1, $pairs2, $rates2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxAmount(_ initialCurrency: String, _ pairs1: [[String]], _ rates1: [Double], _ pairs2: [[String]], _ rates2: [Double]) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxAmount(initialCurrency: String, pairs1: List<List<String>>, rates1: DoubleArray, pairs2: List<List<String>>, rates2: DoubleArray): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double maxAmount(String initialCurrency, List<List<String>> pairs1, List<double> rates1, List<List<String>> pairs2, List<double> rates2) {\n    \n  }\n}",
+    "golang": "func maxAmount(initialCurrency string, pairs1 [][]string, rates1 []float64, pairs2 [][]string, rates2 []float64) float64 {\n    \n}",
+    "ruby": "# @param {String} initial_currency\n# @param {String[][]} pairs1\n# @param {Float[]} rates1\n# @param {String[][]} pairs2\n# @param {Float[]} rates2\n# @return {Float}\ndef max_amount(initial_currency, pairs1, rates1, pairs2, rates2)\n    \nend",
+    "scala": "object Solution {\n    def maxAmount(initialCurrency: String, pairs1: List[List[String]], rates1: Array[Double], pairs2: List[List[String]], rates2: Array[Double]): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_amount(initial_currency: String, pairs1: Vec<Vec<String>>, rates1: Vec<f64>, pairs2: Vec<Vec<String>>, rates2: Vec<f64>) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-amount initialCurrency pairs1 rates1 pairs2 rates2)\n  (-> string? (listof (listof string?)) (listof flonum?) (listof (listof string?)) (listof flonum?) flonum?)\n  )",
+    "erlang": "-spec max_amount(InitialCurrency :: unicode:unicode_binary(), Pairs1 :: [[unicode:unicode_binary()]], Rates1 :: [float()], Pairs2 :: [[unicode:unicode_binary()]], Rates2 :: [float()]) -> float().\nmax_amount(InitialCurrency, Pairs1, Rates1, Pairs2, Rates2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_amount(initial_currency :: String.t, pairs1 :: [[String.t]], rates1 :: [float], pairs2 :: [[String.t]], rates2 :: [float]) :: float\n  def max_amount(initial_currency, pairs1, rates1, pairs2, rates2) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Operations to Make a Special Number",
+  "problem_id": "3046",
+  "frontend_id": "2844",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-make-a-special-number",
+  "topics": [
+    "Math",
+    "String",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed string num representing a non-negative integer.\nIn one operation, you can pick any digit of num and delete it. Note that if you delete all the digits of num, num becomes 0.\nReturn the minimum number of operations required to make num special.\nAn integer x is considered special if it is divisible by 25.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"2245047\"\nOutput: 2\nExplanation: Delete digits num[5] and num[6]. The resulting number is \"22450\" which is special since it is divisible by 25.\nIt can be shown that 2 is the minimum number of operations required to get a special number.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"2908305\"\nOutput: 3\nExplanation: Delete digits num[3], num[4], and num[6]. The resulting number is \"2900\" which is special since it is divisible by 25.\nIt can be shown that 3 is the minimum number of operations required to get a special number.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"10\"\nOutput: 1\nExplanation: Delete digit num[0]. The resulting number is \"0\" which is special since it is divisible by 25.\nIt can be shown that 1 is the minimum number of operations required to get a special number.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 100",
+    "num only consists of digits '0' through '9'.",
+    "num does not contain any leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If <code>num</code> contains a single zero digit then the answer is at most <code>n - 1</code>.",
+    "A number is divisible by <code>25</code> if its last two digits are <code>75</code>, <code>50</code>, <code>25</code>, or <code>00</code>.",
+    "Iterate over all possible pairs of indices <code>i &lt; j</code> such that <code>num[i] * 10 + num[j]</code> is in <code>[00,25,50,75]</code>. Then, set the answer to <code> min(answer, n - i - 2) </code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, num: str) -> int:\n        ",
+    "c": "int minimumOperations(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {number}\n */\nvar minimumOperations = function(num) {\n    \n};",
+    "typescript": "function minimumOperations(num: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return Integer\n     */\n    function minimumOperations($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ num: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(num: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(String num) {\n    \n  }\n}",
+    "golang": "func minimumOperations(num string) int {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {Integer}\ndef minimum_operations(num)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(num: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(num: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations num)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Num :: unicode:unicode_binary()) -> integer().\nminimum_operations(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(num :: String.t) :: integer\n  def minimum_operations(num) do\n    \n  end\nend"
+  }
+}

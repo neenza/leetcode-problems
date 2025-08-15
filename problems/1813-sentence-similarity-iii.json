@@ -1,0 +1,62 @@
+{
+  "title": "Sentence Similarity III",
+  "problem_id": "1923",
+  "frontend_id": "1813",
+  "difficulty": "Medium",
+  "problem_slug": "sentence-similarity-iii",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String"
+  ],
+  "description": "You are given two strings sentence1 and sentence2, each representing a sentence composed of words. A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each word consists of only uppercase and lowercase English characters.\nTwo sentences s1 and s2 are considered similar if it is possible to insert an arbitrary sentence (possibly empty) inside one of these sentences such that the two sentences become equal. Note that the inserted sentence must be separated from existing words by spaces.\nFor example,\nGiven two sentences sentence1 and sentence2, return true if sentence1 and sentence2 are similar. Otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: sentence1 = \"My name is Haley\", sentence2 = \"My Haley\"\nOutput: true\nExplanation:\nsentence2 can be turned to sentence1 by inserting \"name is\" between \"My\" and \"Haley\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: sentence1 = \"of\", sentence2 = \"A lot of words\"\nOutput: false\nExplanation:\nNo single sentence can be inserted inside one of the sentences to make it equal to the other.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: sentence1 = \"Eating right now\", sentence2 = \"Eating\"\nOutput: true\nExplanation:\nsentence2 can be turned to sentence1 by inserting \"right now\" at the end of the sentence.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= sentence1.length, sentence2.length <= 100",
+    "sentence1 and sentence2 consist of lowercase and uppercase English letters and spaces.",
+    "The words in sentence1 and sentence2 are separated by a single space."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One way to look at it is to find one sentence as a concatenation of a prefix and suffix from the other sentence.",
+    "Get the longest common prefix between them and the longest common suffix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool areSentencesSimilar(string sentence1, string sentence2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean areSentencesSimilar(String sentence1, String sentence2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def areSentencesSimilar(self, sentence1, sentence2):\n        \"\"\"\n        :type sentence1: str\n        :type sentence2: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def areSentencesSimilar(self, sentence1: str, sentence2: str) -> bool:\n        ",
+    "c": "bool areSentencesSimilar(char* sentence1, char* sentence2) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool AreSentencesSimilar(string sentence1, string sentence2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} sentence1\n * @param {string} sentence2\n * @return {boolean}\n */\nvar areSentencesSimilar = function(sentence1, sentence2) {\n    \n};",
+    "typescript": "function areSentencesSimilar(sentence1: string, sentence2: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $sentence1\n     * @param String $sentence2\n     * @return Boolean\n     */\n    function areSentencesSimilar($sentence1, $sentence2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func areSentencesSimilar(_ sentence1: String, _ sentence2: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun areSentencesSimilar(sentence1: String, sentence2: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool areSentencesSimilar(String sentence1, String sentence2) {\n    \n  }\n}",
+    "golang": "func areSentencesSimilar(sentence1 string, sentence2 string) bool {\n    \n}",
+    "ruby": "# @param {String} sentence1\n# @param {String} sentence2\n# @return {Boolean}\ndef are_sentences_similar(sentence1, sentence2)\n    \nend",
+    "scala": "object Solution {\n    def areSentencesSimilar(sentence1: String, sentence2: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn are_sentences_similar(sentence1: String, sentence2: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (are-sentences-similar sentence1 sentence2)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec are_sentences_similar(Sentence1 :: unicode:unicode_binary(), Sentence2 :: unicode:unicode_binary()) -> boolean().\nare_sentences_similar(Sentence1, Sentence2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec are_sentences_similar(sentence1 :: String.t, sentence2 :: String.t) :: boolean\n  def are_sentences_similar(sentence1, sentence2) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Deque\n\n#### Intuition\n\nGiven two string sentences `sentence1` and `sentence2`, we need to find if both the sentences are similar. Two sentences are similar if it is possible to insert an arbitrary sentence in one of the sentences to make them equal. All the words in the given sentences are separated by spaces.\n\nLet's assume that `sentence2` is the bigger sentence and contains more words than `sentence1`. Now, to check if both sentences can be made identical, we need to check for two conditions:\n- Matching the beginning (prefix): We compare words from the start of both sentences.\n- Matching the end (suffix): We compare words from the end of both sentences.\nIf all the words of the smaller sentence match either the prefix or the suffix of the bigger sentence, then both sentences can be made equal by inserting an arbitrary sentence.\n\nThis can be explained with an example:\n- Let's say `sentence1 = \"hello jane\"` and `sentence2 = \"hello my name is jane\"`.\n- Comparing the prefixes of `sentence1` and `sentence2`, `hello` is the longest matching prefix.\n- Similarly, `jane` is the longest common suffix.\n- Observe that no word is left in the `sentence1`. Therefore, it can be converted to `sentence2` by adding the string `my name is`.\n\nDeque allows for efficient insertion and popping operations from the front and the back in constant time. This is ideal because to check if a sentence can be matched as a prefix or suffix, we need to compare from both ends. So, we can use two deques and populate them with words from `sentence1` and `sentence2`.\n\nWe can pop the deques until the prefix words are equal for both. Similarly, we can pop them until the suffixes of both deques are equal. If one deque is emptied completely after this process, one sentence can be transformed into the other by removing the unmatched middle portion.\n\n#### Algorithm\n\n1. Split both sentences `s1` and `s2` into arrays of words and store them in two deques `deque1` and `deque2`.\n2. Compare the prefixes (beginning of the strings):\n   - While both deques are not empty and the front elements are equal, remove the front elements from both deques.\n3. Compare the suffixes (ending of the strings):\n   - While both deques are not empty and the last elements are equal, remove the last elements from both deques.\n4. After comparing both the prefixes and suffixes, return `true` if either `deque1` or `deque2` is empty.\n\n!?!../Documents/1813/Slideshow1.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the size of the given `sentence1` string and $n$ be the size of `sentence2`.\n\n- Time complexity: $O(m+n)$\n\n    We iterate through the words of the `sentence1` and `sentence2` exactly once. The total sum of the length of the words is given by $m$ and $n$ for both sentences. Therefore, the total time complexity is given by $O(m+n)$.\n\n- Space complexity: $O(m+n)$\n\n    We store the words of both sentences in the deque. The total sum of the length of the words is given by $m$ and $n$ for both sentences. Therefore, the total space complexity is given by $O(m+n)$.\n\n---\n\n### Approach 2: Two Pointers\n\n#### Intuition\n\nIn the deque-based approach, we compare and remove elements from both the front and back of two deques. Instead of popping from the front and back of a deque, we can simulate this process using two pointers, where the `start` pointer starts at the beginning (front) and the `end` pointer (j) starts at the end (back) of both sentences.\n\nThe goal is still the same: check if the sentences are similar by matching words from the beginning (prefix) and the end (suffix). If all words at the start and end match, the remaining words in the middle can be ignored, making the sentences similar. \n\nInitialize `start` and `end` at the beginning and end of each sentence, respectively. Move the pointers inward while the words at both ends match. Once the words stop matching, the middle words are ignored. If the pointers cross, meaning all necessary prefix and suffix words match, the sentences are considered similar.\n\n#### Algorithm\n\n1. Split both sentences `s1` and `s2` into arrays of words: `s1Words` and `s2Words`.\n2. Initialize four variables:\n   - `start` to 0, which will track matching words from the beginning.\n   - `ends1` to the last index of `s1Words` and `ends2` to the last index of `s2Words`, which will track matching words from the end.\n   - `s1WordsLength` and `s2WordsLength` to store the lengths of `s1Words` and `s2Words`.\n3. If `s1WordsLength` is greater than `s2WordsLength`, swap the sentences by calling the function recursively with `s2` and `s1`.\n4. Find the maximum number of matching words from the beginning of both arrays by incrementing `start` while the words at the current index are the same.\n5. Find the maximum number of matching words from the end by decrementing `ends1` and `ends2` while the words at the current indices are the same.\n6. If `ends1` is less than `start`, meaning all remaining words can be removed to make the sentences similar, return `true`. Otherwise, return `false`.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the size of the given `sentence1` string and $n$ be the size of `sentence2`.\n\n- Time complexity: $O(m+n)$\n\n    We iterate through the words of the `sentence1` and `sentence2` exactly once. The total sum of the length of the words is given by $m$ and $n$ for both sentences. Therefore, the total time complexity is given by $O(m+n)$.\n\n- Space complexity: $O(m+n)$\n\n    We store the words of both sentences in an array. The total sum of the length of the words is given by $m$ and $n$ for both sentences. Therefore, the total space complexity is given by $O(m+n)$.\n\n---"
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Maximize Active Section with Trade I",
+  "problem_id": "3805",
+  "frontend_id": "3499",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-active-section-with-trade-i",
+  "topics": [
+    "String",
+    "Enumeration"
+  ],
+  "description": "You are given a binary string s of length n, where:\nYou can perform at most one trade to maximize the number of active sections in s. In a trade, you:\nReturn the maximum number of active sections in s after making the optimal trade.\nNote: Treat s as if it is augmented with a '1' at both ends, forming t = '1' + s + '1'. The augmented '1's do not contribute to the final count.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"01\"\nOutput: 1\nExplanation:\nBecause there is no block of '1' s surrounded by '0' s, no valid trade is possible. The maximum number of active sections is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0100\"\nOutput: 4\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1000100\"\nOutput: 7\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"01010\"\nOutput: 4\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == s.length <= 105",
+    "s[i] is either '0' or '1'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Split the string into several zero-one segments.",
+    "For each one-segment, if it has two neighbors (i.e., it is surrounded by two zero-segments), the total sum of their lengths is one of the candidates for <code>delta</code>.",
+    "Find the maximum <code>delta</code> and add it to the total number of ones in the string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxActiveSectionsAfterTrade(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxActiveSectionsAfterTrade(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxActiveSectionsAfterTrade(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxActiveSectionsAfterTrade(self, s: str) -> int:\n        ",
+    "c": "int maxActiveSectionsAfterTrade(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxActiveSectionsAfterTrade(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxActiveSectionsAfterTrade = function(s) {\n    \n};",
+    "typescript": "function maxActiveSectionsAfterTrade(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxActiveSectionsAfterTrade($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxActiveSectionsAfterTrade(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxActiveSectionsAfterTrade(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxActiveSectionsAfterTrade(String s) {\n    \n  }\n}",
+    "golang": "func maxActiveSectionsAfterTrade(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_active_sections_after_trade(s)\n    \nend",
+    "scala": "object Solution {\n    def maxActiveSectionsAfterTrade(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_active_sections_after_trade(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-active-sections-after-trade s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_active_sections_after_trade(S :: unicode:unicode_binary()) -> integer().\nmax_active_sections_after_trade(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_active_sections_after_trade(s :: String.t) :: integer\n  def max_active_sections_after_trade(s) do\n    \n  end\nend"
+  }
+}

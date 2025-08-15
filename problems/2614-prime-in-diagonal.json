@@ -1,0 +1,61 @@
+{
+  "title": "Prime In Diagonal",
+  "problem_id": "2722",
+  "frontend_id": "2614",
+  "difficulty": "Easy",
+  "problem_slug": "prime-in-diagonal",
+  "topics": [
+    "Array",
+    "Math",
+    "Matrix",
+    "Number Theory"
+  ],
+  "description": "You are given a 0-indexed two-dimensional integer array nums.\nReturn the largest prime number that lies on at least one of the diagonals of nums. In case, no prime is present on any of the diagonals, return 0.\nNote that:\nIn the above diagram, one diagonal is [1,5,9] and another diagonal is [3,5,7].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [[1,2,3],[5,6,7],[9,10,11]]\nOutput: 11\nExplanation: The numbers 1, 3, 6, 9, and 11 are the only numbers present on at least one of the diagonals. Since 11 is the largest prime, we return 11.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/03/06/screenshot-2023-03-06-at-45648-pm.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [[1,2,3],[5,17,7],[9,11,10]]\nOutput: 17\nExplanation: The numbers 1, 3, 9, 10, and 17 are all present on at least one of the diagonals. 17 is the largest prime, so we return 17.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/03/06/screenshot-2023-03-06-at-45648-pm.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 300",
+    "nums.length == numsi.length",
+    "1 <= nums[i][j] <= 4*106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over the diagonals of the matrix and check for each element.",
+    "Check if the element is prime or not in O(sqrt(n)) time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int diagonalPrime(vector<vector<int>>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int diagonalPrime(int[][] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def diagonalPrime(self, nums):\n        \"\"\"\n        :type nums: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def diagonalPrime(self, nums: List[List[int]]) -> int:\n        ",
+    "c": "int diagonalPrime(int** nums, int numsSize, int* numsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DiagonalPrime(int[][] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} nums\n * @return {number}\n */\nvar diagonalPrime = function(nums) {\n    \n};",
+    "typescript": "function diagonalPrime(nums: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $nums\n     * @return Integer\n     */\n    function diagonalPrime($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func diagonalPrime(_ nums: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun diagonalPrime(nums: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int diagonalPrime(List<List<int>> nums) {\n    \n  }\n}",
+    "golang": "func diagonalPrime(nums [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} nums\n# @return {Integer}\ndef diagonal_prime(nums)\n    \nend",
+    "scala": "object Solution {\n    def diagonalPrime(nums: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn diagonal_prime(nums: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (diagonal-prime nums)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec diagonal_prime(Nums :: [[integer()]]) -> integer().\ndiagonal_prime(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec diagonal_prime(nums :: [[integer]]) :: integer\n  def diagonal_prime(nums) do\n    \n  end\nend"
+  }
+}

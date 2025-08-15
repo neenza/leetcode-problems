@@ -1,0 +1,44 @@
+{
+  "title": "Tree Node",
+  "problem_id": "608",
+  "frontend_id": "608",
+  "difficulty": "Medium",
+  "problem_slug": "tree-node",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Tree\nEach node in the tree can be one of three types:\nWrite a solution to report the type of each node in the tree.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:\nExample 2:\nNote: This question is the same as  3054: Binary Tree Nodes.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| p_id        | int  |\n+-------------+------+\nid is the column with unique values for this table.\nEach row of this table contains information about the id of a node and the id of its parent node in a tree.\nThe given structure is always a valid tree.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nTree table:\n+----+------+\n| id | p_id |\n+----+------+\n| 1  | null |\n| 2  | 1    |\n| 3  | 1    |\n| 4  | 2    |\n| 5  | 2    |\n+----+------+\nOutput: \n+----+-------+\n| id | type  |\n+----+-------+\n| 1  | Root  |\n| 2  | Inner |\n| 3  | Leaf  |\n| 4  | Leaf  |\n| 5  | Leaf  |\n+----+-------+\nExplanation: \nNode 1 is the root node because its parent node is null and it has child nodes 2 and 3.\nNode 2 is an inner node because it has parent node 1 and child node 4 and 5.\nNodes 3, 4, and 5 are leaf nodes because they have parent nodes and they do not have child nodes.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/22/tree1.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nTree table:\n+----+------+\n| id | p_id |\n+----+------+\n| 1  | null |\n+----+------+\nOutput: \n+----+-------+\n| id | type  |\n+----+-------+\n| 1  | Root  |\n+----+-------+\nExplanation: If there is only one node on the tree, you only need to output its root attributes.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/22/tree2.jpg"
+      ]
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "You can judge the node type by querying whether the node's id shows up in p_id column and whether the node's p_id is null."
+  ],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef tree_node(tree: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

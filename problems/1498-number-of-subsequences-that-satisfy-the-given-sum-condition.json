@@ -1,0 +1,63 @@
+{
+  "title": "Number of Subsequences That Satisfy the Given Sum Condition",
+  "problem_id": "1621",
+  "frontend_id": "1498",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-subsequences-that-satisfy-the-given-sum-condition",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "You are given an array of integers nums and an integer target.\nReturn the number of non-empty subsequences of nums such that the sum of the minimum and maximum element on it is less or equal to target. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,5,6,7], target = 9\nOutput: 4\nExplanation: There are 4 subsequences that satisfy the condition.\n[3] -> Min value + max value <= target (3 + 3 <= 9)\n[3,5] -> (3 + 5 <= 9)\n[3,5,6] -> (3 + 6 <= 9)\n[3,6] -> (3 + 6 <= 9)",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,3,6,8], target = 10\nOutput: 6\nExplanation: There are 6 subsequences that satisfy the condition. (nums can have repeated numbers).\n[3] , [3] , [3,3], [3,6] , [3,6] , [3,3,6]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,3,3,4,6,7], target = 12\nOutput: 61\nExplanation: There are 63 non-empty subsequences, two of them do not satisfy the condition ([6,7], [7]).\nNumber of valid subsequences (63 - 2 = 61).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 106",
+    "1 <= target <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array nums.",
+    "Use two pointers approach: Given an index i (choose it as the minimum in a subsequence) find the maximum j where j ≥ i and nums[i] +nums[j] ≤ target.",
+    "Count the number of subsequences."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSubseq(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSubseq(int[] nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSubseq(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSubseq(self, nums: List[int], target: int) -> int:\n        ",
+    "c": "int numSubseq(int* nums, int numsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSubseq(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar numSubseq = function(nums, target) {\n    \n};",
+    "typescript": "function numSubseq(nums: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer\n     */\n    function numSubseq($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSubseq(_ nums: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSubseq(nums: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSubseq(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func numSubseq(nums []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer}\ndef num_subseq(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def numSubseq(nums: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_subseq(nums: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-subseq nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_subseq(Nums :: [integer()], Target :: integer()) -> integer().\nnum_subseq(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_subseq(nums :: [integer], target :: integer) :: integer\n  def num_subseq(nums, target) do\n    \n  end\nend"
+  }
+}

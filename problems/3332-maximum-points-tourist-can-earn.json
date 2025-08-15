@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Points Tourist Can Earn",
+  "problem_id": "3587",
+  "frontend_id": "3332",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-points-tourist-can-earn",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given two integers, n and k, along with two 2D integer arrays, stayScore and travelScore.\nA tourist is visiting a country with n cities, where each city is directly connected to every other city. The tourist's journey consists of exactly k 0-indexed days, and they can choose any city as their starting point.\nEach day, the tourist has two choices:\nReturn the maximum possible points the tourist can earn.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, k = 1, stayScore = [[2,3]], travelScore = [[0,2],[1,0]]\nOutput: 3\nExplanation:\nThe tourist earns the maximum number of points by starting in city 1 and staying in that city.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, k = 2, stayScore = [[3,4,2],[2,1,2]], travelScore = [[0,2,1],[2,0,4],[3,2,0]]\nOutput: 8\nExplanation:\nThe tourist earns the maximum number of points by starting in city 1, staying in that city on day 0, and traveling to city 2 on day 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 200",
+    "1 <= k <= 200",
+    "n == travelScore.length == travelScore[i].length == stayScore[i].length",
+    "k == stayScore.length",
+    "1 <= stayScore[i][j] <= 100",
+    "0 <= travelScore[i][j] <= 100",
+    "travelScore[i][i] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use DP.",
+    "<code>dp[i][j]</code> is the maximum score that you can achieve in your last <code>i</code> actions by starting from city <code>j</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(int n, int k, vector<vector<int>>& stayScore, vector<vector<int>>& travelScore) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(int n, int k, int[][] stayScore, int[][] travelScore) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, n, k, stayScore, travelScore):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :type stayScore: List[List[int]]\n        :type travelScore: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, n: int, k: int, stayScore: List[List[int]], travelScore: List[List[int]]) -> int:\n        ",
+    "c": "int maxScore(int n, int k, int** stayScore, int stayScoreSize, int* stayScoreColSize, int** travelScore, int travelScoreSize, int* travelScoreColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxScore(int n, int k, int[][] stayScore, int[][] travelScore) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @param {number[][]} stayScore\n * @param {number[][]} travelScore\n * @return {number}\n */\nvar maxScore = function(n, k, stayScore, travelScore) {\n    \n};",
+    "typescript": "function maxScore(n: number, k: number, stayScore: number[][], travelScore: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @param Integer[][] $stayScore\n     * @param Integer[][] $travelScore\n     * @return Integer\n     */\n    function maxScore($n, $k, $stayScore, $travelScore) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ n: Int, _ k: Int, _ stayScore: [[Int]], _ travelScore: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(n: Int, k: Int, stayScore: Array<IntArray>, travelScore: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(int n, int k, List<List<int>> stayScore, List<List<int>> travelScore) {\n    \n  }\n}",
+    "golang": "func maxScore(n int, k int, stayScore [][]int, travelScore [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @param {Integer[][]} stay_score\n# @param {Integer[][]} travel_score\n# @return {Integer}\ndef max_score(n, k, stay_score, travel_score)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(n: Int, k: Int, stayScore: Array[Array[Int]], travelScore: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(n: i32, k: i32, stay_score: Vec<Vec<i32>>, travel_score: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score n k stayScore travelScore)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_score(N :: integer(), K :: integer(), StayScore :: [[integer()]], TravelScore :: [[integer()]]) -> integer().\nmax_score(N, K, StayScore, TravelScore) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(n :: integer, k :: integer, stay_score :: [[integer]], travel_score :: [[integer]]) :: integer\n  def max_score(n, k, stay_score, travel_score) do\n    \n  end\nend"
+  }
+}

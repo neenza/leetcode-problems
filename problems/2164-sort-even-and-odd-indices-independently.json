@@ -1,0 +1,55 @@
+{
+  "title": "Sort Even and Odd Indices Independently",
+  "problem_id": "2283",
+  "frontend_id": "2164",
+  "difficulty": "Easy",
+  "problem_slug": "sort-even-and-odd-indices-independently",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array nums. Rearrange the values of nums according to the following rules:\nReturn the array formed after rearranging the values of nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,1,2,3]\nOutput: [2,3,4,1]\nExplanation: \nFirst, we sort the values present at odd indices (1 and 3) in non-increasing order.\nSo, nums changes from [4,1,2,3] to [4,3,2,1].\nNext, we sort the values present at even indices (0 and 2) in non-decreasing order.\nSo, nums changes from [4,1,2,3] to [2,3,4,1].\nThus, the array formed after rearranging the values is [2,3,4,1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1]\nOutput: [2,1]\nExplanation: \nSince there is exactly one odd index and one even index, no rearrangement of values takes place.\nThe resultant array formed is [2,1], which is the same as the initial array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to separate the elements at odd indices from the elements at even indices.",
+    "Sort the two groups of elements individually.",
+    "Combine them to form the resultant array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sortEvenOdd(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] sortEvenOdd(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortEvenOdd(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortEvenOdd(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sortEvenOdd(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SortEvenOdd(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar sortEvenOdd = function(nums) {\n    \n};",
+    "typescript": "function sortEvenOdd(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function sortEvenOdd($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortEvenOdd(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortEvenOdd(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sortEvenOdd(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sortEvenOdd(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef sort_even_odd(nums)\n    \nend",
+    "scala": "object Solution {\n    def sortEvenOdd(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_even_odd(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (sort-even-odd nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec sort_even_odd(Nums :: [integer()]) -> [integer()].\nsort_even_odd(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_even_odd(nums :: [integer]) :: [integer]\n  def sort_even_odd(nums) do\n    \n  end\nend"
+  }
+}

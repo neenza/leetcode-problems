@@ -1,0 +1,63 @@
+{
+  "title": "Assign Elements to Groups with Constraints",
+  "problem_id": "3760",
+  "frontend_id": "3447",
+  "difficulty": "Medium",
+  "problem_slug": "assign-elements-to-groups-with-constraints",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array groups, where groups[i] represents the size of the ith group. You are also given an integer array elements.\nYour task is to assign one element to each group based on the following rules:\nReturn an integer array assigned, where assigned[i] is the index of the element chosen for group i, or -1 if no suitable element exists.\nNote: An element may be assigned to more than one group.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: groups = [8,4,3,2,4], elements = [4,2]\nOutput: [0,0,-1,1,0]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: groups = [2,3,5,7], elements = [5,3,3]\nOutput: [-1,1,0,-1]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: groups = [10,21,30,41], elements = [2,1]\nOutput: [0,1,0,1]\nExplanation:\nelements[0] = 2 is assigned to the groups with even values, and elements[1] = 1 is assigned to the groups with odd values.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= groups.length <= 105",
+    "1 <= elements.length <= 105",
+    "1 <= groups[i] <= 105",
+    "1 <= elements[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can a sieve-like approach be applied here?",
+    "Starting from the smallest index, iterate through the multiples of the element and assign it to groups divisible by that value.",
+    "Process each element once.",
+    "Find all divisors of each group, then match them with elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> assignElements(vector<int>& groups, vector<int>& elements) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] assignElements(int[] groups, int[] elements) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def assignElements(self, groups, elements):\n        \"\"\"\n        :type groups: List[int]\n        :type elements: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def assignElements(self, groups: List[int], elements: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* assignElements(int* groups, int groupsSize, int* elements, int elementsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] AssignElements(int[] groups, int[] elements) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} groups\n * @param {number[]} elements\n * @return {number[]}\n */\nvar assignElements = function(groups, elements) {\n    \n};",
+    "typescript": "function assignElements(groups: number[], elements: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $groups\n     * @param Integer[] $elements\n     * @return Integer[]\n     */\n    function assignElements($groups, $elements) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func assignElements(_ groups: [Int], _ elements: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun assignElements(groups: IntArray, elements: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> assignElements(List<int> groups, List<int> elements) {\n    \n  }\n}",
+    "golang": "func assignElements(groups []int, elements []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} groups\n# @param {Integer[]} elements\n# @return {Integer[]}\ndef assign_elements(groups, elements)\n    \nend",
+    "scala": "object Solution {\n    def assignElements(groups: Array[Int], elements: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn assign_elements(groups: Vec<i32>, elements: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (assign-elements groups elements)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec assign_elements(Groups :: [integer()], Elements :: [integer()]) -> [integer()].\nassign_elements(Groups, Elements) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec assign_elements(groups :: [integer], elements :: [integer]) :: [integer]\n  def assign_elements(groups, elements) do\n    \n  end\nend"
+  }
+}

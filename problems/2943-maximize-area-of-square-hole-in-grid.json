@@ -1,0 +1,67 @@
+{
+  "title": "Maximize Area of Square Hole in Grid",
+  "problem_id": "3214",
+  "frontend_id": "2943",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-area-of-square-hole-in-grid",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "You are given the two integers, n and m and two integer arrays, hBars and vBars. The grid has n + 2 horizontal and m + 2 vertical bars, creating 1 x 1 unit cells. The bars are indexed starting from 1.\nYou can remove some of the bars in hBars from horizontal bars and some of the bars in vBars from vertical bars. Note that other bars are fixed and cannot be removed.\nReturn an integer denoting the maximum area of a square-shaped hole in the grid, after removing some bars (possibly none).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, m = 1, hBars = [2,3], vBars = [2]\nOutput: 4\nExplanation:\nThe left image shows the initial grid formed by the bars. The horizontal bars are [1,2,3,4] , and the vertical bars are [1,2,3] .\nOne way to get the maximum square-shaped hole is by removing horizontal bar 2 and vertical bar 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, m = 1, hBars = [2], vBars = [2]\nOutput: 4\nExplanation:\nTo get the maximum square-shaped hole, we remove horizontal bar 2 and vertical bar 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, m = 3, hBars = [2,3], vBars = [2,4]\nOutput: 4\nExplanation:\nOne way to get the maximum square-shaped hole is by removing horizontal bar 3, and vertical bar 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 109",
+    "1 <= m <= 109",
+    "1 <= hBars.length <= 100",
+    "2 <= hBars[i] <= n + 1",
+    "1 <= vBars.length <= 100",
+    "2 <= vBars[i] <= m + 1",
+    "All values in hBars are distinct.",
+    "All values in vBars are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort <code>hBars</code> and <code>vBars</code> and consider them separately.",
+    "Compute the longest sequence of consecutive integer values in each array, denoted as <code>[hx, hy]</code> and <code>[vx, vy]</code>, respectively.",
+    "The maximum square length we can get is <code>min(hy - hx + 2, vy - vx + 2)</code>.",
+    "Square the maximum square length to get the area."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximizeSquareHoleArea(int n, int m, vector<int>& hBars, vector<int>& vBars) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximizeSquareHoleArea(int n, int m, int[] hBars, int[] vBars) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximizeSquareHoleArea(self, n, m, hBars, vBars):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type hBars: List[int]\n        :type vBars: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximizeSquareHoleArea(self, n: int, m: int, hBars: List[int], vBars: List[int]) -> int:\n        ",
+    "c": "int maximizeSquareHoleArea(int n, int m, int* hBars, int hBarsSize, int* vBars, int vBarsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximizeSquareHoleArea(int n, int m, int[] hBars, int[] vBars) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @param {number[]} hBars\n * @param {number[]} vBars\n * @return {number}\n */\nvar maximizeSquareHoleArea = function(n, m, hBars, vBars) {\n    \n};",
+    "typescript": "function maximizeSquareHoleArea(n: number, m: number, hBars: number[], vBars: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @param Integer[] $hBars\n     * @param Integer[] $vBars\n     * @return Integer\n     */\n    function maximizeSquareHoleArea($n, $m, $hBars, $vBars) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeSquareHoleArea(_ n: Int, _ m: Int, _ hBars: [Int], _ vBars: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximizeSquareHoleArea(n: Int, m: Int, hBars: IntArray, vBars: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeSquareHoleArea(int n, int m, List<int> hBars, List<int> vBars) {\n    \n  }\n}",
+    "golang": "func maximizeSquareHoleArea(n int, m int, hBars []int, vBars []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @param {Integer[]} h_bars\n# @param {Integer[]} v_bars\n# @return {Integer}\ndef maximize_square_hole_area(n, m, h_bars, v_bars)\n    \nend",
+    "scala": "object Solution {\n    def maximizeSquareHoleArea(n: Int, m: Int, hBars: Array[Int], vBars: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_square_hole_area(n: i32, m: i32, h_bars: Vec<i32>, v_bars: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximize-square-hole-area n m hBars vBars)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximize_square_hole_area(N :: integer(), M :: integer(), HBars :: [integer()], VBars :: [integer()]) -> integer().\nmaximize_square_hole_area(N, M, HBars, VBars) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximize_square_hole_area(n :: integer, m :: integer, h_bars :: [integer], v_bars :: [integer]) :: integer\n  def maximize_square_hole_area(n, m, h_bars, v_bars) do\n    \n  end\nend"
+  }
+}

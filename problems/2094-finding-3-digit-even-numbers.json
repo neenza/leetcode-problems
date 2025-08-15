@@ -1,0 +1,61 @@
+{
+  "title": "Finding 3-Digit Even Numbers",
+  "problem_id": "2215",
+  "frontend_id": "2094",
+  "difficulty": "Easy",
+  "problem_slug": "finding-3-digit-even-numbers",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Enumeration"
+  ],
+  "description": "You are given an integer array digits, where each element is a digit. The array may contain duplicates.\nYou need to find all the unique integers that follow the given requirements:\nFor example, if the given digits were [1, 2, 3], integers 132 and 312 follow the requirements.\nReturn a sorted array of the unique integers.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: digits = [2,1,3,0]\nOutput: [102,120,130,132,210,230,302,310,312,320]\nExplanation: All the possible integers that follow the requirements are in the output array. \nNotice that there are no odd integers or integers with leading zeros.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: digits = [2,2,8,8,2]\nOutput: [222,228,282,288,822,828,882]\nExplanation: The same digit can be used as many times as it appears in digits. \nIn this example, the digit 8 is used twice each time in 288, 828, and 882.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: digits = [3,7,5]\nOutput: []\nExplanation: No even integers can be formed using the given digits.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= digits.length <= 100",
+    "0 <= digits[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The range of possible answers includes all even numbers between 100 and 999 inclusive. Could you check each possible answer to see if it could be formed from the digits in the array?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findEvenNumbers(vector<int>& digits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findEvenNumbers(int[] digits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findEvenNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findEvenNumbers(self, digits: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findEvenNumbers(int* digits, int digitsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindEvenNumbers(int[] digits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} digits\n * @return {number[]}\n */\nvar findEvenNumbers = function(digits) {\n    \n};",
+    "typescript": "function findEvenNumbers(digits: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $digits\n     * @return Integer[]\n     */\n    function findEvenNumbers($digits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findEvenNumbers(_ digits: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findEvenNumbers(digits: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findEvenNumbers(List<int> digits) {\n    \n  }\n}",
+    "golang": "func findEvenNumbers(digits []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} digits\n# @return {Integer[]}\ndef find_even_numbers(digits)\n    \nend",
+    "scala": "object Solution {\n    def findEvenNumbers(digits: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_even_numbers(digits: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-even-numbers digits)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_even_numbers(Digits :: [integer()]) -> [integer()].\nfind_even_numbers(Digits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_even_numbers(digits :: [integer]) :: [integer]\n  def find_even_numbers(digits) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumerate the Element Combinations in an Array\n\n#### Intuition\n\nWe can enumerate all combinations of three integer digits from the array and determine whether the composed integer satisfies the following conditions:\n\n- The integer is **even**.\n- The integer does not contain leading zeros (i.e., it is not less than 100).\n- The three digits come from distinct array indices (i.e., indices cannot be duplicated).\n\nTo avoid repetition, we use a hash set to store the 3-digit even numbers that meet these requirements. If a number generated during enumeration satisfies all three conditions, we add it to the hash set.\n\nFinally, we convert the elements of the hash set into an array, sort it in ascending order, and return it.\n\n#### Implementation#### Complexity Analysis\n\nLet $M = \\min(n^3, 10^k)$ be the number of even numbers that meet the requirements, where $n$ is the length of the input array and $k$ is the number of digits in the target even number.\n\n- Time complexity: $O(n^3 + M \\log M)$\n\n  The time complexity for enumerating all combinations of three elements is $O(n^3)$. Sorting the valid even numbers stored in the set takes $O(M \\log M)$.\n\n- Space complexity: $O(M)$\n\n  This accounts for the space used by the hash set that stores all valid integers.\n\n### Approach 2: Traverse All Possible 3-Digit Even Numbers\n\n#### Intuition\n\nWe can also traverse all 3-digit even numbers from smallest to largest (i.e., all even numbers in the closed interval $[100, 999]$), and check whether their three digits can be formed using distinct elements from the input digit array. If they can, then the number qualifies as a target even number; otherwise, it does not.\n\nSpecifically, we first use a hash table $\\textit{freq}$ to record the frequency of each digit in the $\\textit{digits}$ array. While traversing even numbers, we use another hash table $\\textit{freq}_1$ to record the frequency of each digit in the current number. At this point, a **necessary and sufficient** condition for the number to be formed using the array is:\n\nEach digit in $\\textit{freq}_1$ must appear no more times than it does in $\\textit{freq}$.\n\nWe check each even number using this condition to determine whether it qualifies, and collect all such valid numbers. Finally, we return the sorted array of target even numbers.\n\n#### Implementation#### Complexity Analysis\n\nLet $k$ be the number of digits in the target even number.\n\n- Time complexity: $O(k \\cdot 10^k)$\n\n  This represents the time required to enumerate all even numbers with $k$ digits.\n\n- Space complexity: $O(1)$\n\n  The output array is not counted in the space complexity."
+}

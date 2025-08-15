@@ -1,0 +1,46 @@
+{
+  "title": "First Bad Version",
+  "problem_id": "278",
+  "frontend_id": "278",
+  "difficulty": "Easy",
+  "problem_slug": "first-bad-version",
+  "topics": [
+    "Binary Search",
+    "Interactive"
+  ],
+  "description": "You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.\nSuppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.\nYou are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, bad = 4\nOutput: 4\nExplanation:\ncall isBadVersion(3) -> false\ncall isBadVersion(5) -> true\ncall isBadVersion(4) -> true\nThen 4 is the first bad version.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, bad = 1\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= bad <= n <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "// The API isBadVersion is defined for you.\n// bool isBadVersion(int version);\n\nclass Solution {\npublic:\n    int firstBadVersion(int n) {\n        \n    }\n};",
+    "java": "/* The isBadVersion API is defined in the parent class VersionControl.\n      boolean isBadVersion(int version); */\n\npublic class Solution extends VersionControl {\n    public int firstBadVersion(int n) {\n        \n    }\n}",
+    "python": "# The isBadVersion API is already defined for you.\n# @param version, an integer\n# @return a bool\n# def isBadVersion(version):\n\nclass Solution(object):\n    def firstBadVersion(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "# The isBadVersion API is already defined for you.\n# def isBadVersion(version: int) -> bool:\n\nclass Solution:\n    def firstBadVersion(self, n: int) -> int:\n        ",
+    "c": "// The API isBadVersion is defined for you.\n// bool isBadVersion(int version);\n\nint firstBadVersion(int n) {\n    \n}",
+    "csharp": "/* The isBadVersion API is defined in the parent class VersionControl.\n      bool IsBadVersion(int version); */\n\npublic class Solution : VersionControl {\n    public int FirstBadVersion(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for isBadVersion()\n * \n * @param {integer} version number\n * @return {boolean} whether the version is bad\n * isBadVersion = function(version) {\n *     ...\n * };\n */\n\n/**\n * @param {function} isBadVersion()\n * @return {function}\n */\nvar solution = function(isBadVersion) {\n    /**\n     * @param {integer} n Total versions\n     * @return {integer} The first bad version\n     */\n    return function(n) {\n        \n    };\n};",
+    "typescript": "/**\n * The knows API is defined in the parent class Relation.\n * isBadVersion(version: number): boolean {\n *     ...\n * };\n */\n\nvar solution = function(isBadVersion: any) {\n\n    return function(n: number): number {\n        \n    };\n};",
+    "php": "/* The isBadVersion API is defined in the parent class VersionControl.\n      public function isBadVersion($version){} */\n\nclass Solution extends VersionControl {\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function firstBadVersion($n) {\n        \n    }\n}",
+    "swift": "/**\n * The knows API is defined in the parent class VersionControl.\n *     func isBadVersion(_ version: Int) -> Bool{}\n */\n\nclass Solution : VersionControl {\n    func firstBadVersion(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "/* The isBadVersion API is defined in the parent class VersionControl.\n      fun isBadVersion(version: Int) : Boolean {} */\n\nclass Solution: VersionControl() {\n    override fun firstBadVersion(n: Int) : Int {\n        \n\t}\n}",
+    "golang": "/** \n * Forward declaration of isBadVersion API.\n * @param   version   your guess about first bad version\n * @return \t \t      true if current version is bad \n *\t\t\t          false if current version is good\n * func isBadVersion(version int) bool;\n */\n\nfunc firstBadVersion(n int) int {\n    \n}",
+    "ruby": "# The is_bad_version API is already defined for you.\n# @param {Integer} version\n# @return {boolean} whether the version is bad\n# def is_bad_version(version):\n\n# @param {Integer} n\n# @return {Integer}\ndef first_bad_version(n)\n    \nend",
+    "scala": "/* The isBadVersion API is defined in the parent class VersionControl.\n      def isBadVersion(version: Int): Boolean = {} */\n\nclass Solution extends VersionControl {\n    def firstBadVersion(n: Int): Int = {\n        \n    }\n}",
+    "rust": "// The API isBadVersion is defined for you.\n// isBadVersion(version:i32)-> bool;\n// to call it use self.isBadVersion(version)\n\nimpl Solution {\n    pub fn first_bad_version(&self, n: i32) -> i32 {\n\t\t\n    }\n}"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Operations to Halve Array Sum",
+  "problem_id": "2310",
+  "frontend_id": "2208",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-halve-array-sum",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)\nReturn the minimum number of operations to reduce the sum of nums by at least half.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,19,8,1]\nOutput: 3\nExplanation: The initial sum of nums is equal to 5 + 19 + 8 + 1 = 33.\nThe following is one of the ways to reduce the sum by at least half:\nPick the number 19 and reduce it to 9.5.\nPick the number 9.5 and reduce it to 4.75.\nPick the number 8 and reduce it to 4.\nThe final array is [5, 4.75, 4, 1] with a total sum of 5 + 4.75 + 4 + 1 = 14.75. \nThe sum of nums has been reduced by 33 - 14.75 = 18.25, which is at least half of the initial sum, 18.25 >= 33/2 = 16.5.\nOverall, 3 operations were used so we return 3.\nIt can be shown that we cannot reduce the sum by at least half in less than 3 operations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,8,20]\nOutput: 3\nExplanation: The initial sum of nums is equal to 3 + 8 + 20 = 31.\nThe following is one of the ways to reduce the sum by at least half:\nPick the number 20 and reduce it to 10.\nPick the number 10 and reduce it to 5.\nPick the number 3 and reduce it to 1.5.\nThe final array is [1.5, 8, 5] with a total sum of 1.5 + 8 + 5 = 14.5. \nThe sum of nums has been reduced by 31 - 14.5 = 16.5, which is at least half of the initial sum, 16.5 >= 31/2 = 15.5.\nOverall, 3 operations were used so we return 3.\nIt can be shown that we cannot reduce the sum by at least half in less than 3 operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is always optimal to halve the largest element.",
+    "What data structure allows for an efficient query of the maximum element?",
+    "Use a heap or priority queue to maintain the current elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int halveArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int halveArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def halveArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def halveArray(self, nums: List[int]) -> int:\n        ",
+    "c": "int halveArray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int HalveArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar halveArray = function(nums) {\n    \n};",
+    "typescript": "function halveArray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function halveArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func halveArray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun halveArray(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int halveArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func halveArray(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef halve_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def halveArray(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn halve_array(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (halve-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec halve_array(Nums :: [integer()]) -> integer().\nhalve_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec halve_array(nums :: [integer]) :: integer\n  def halve_array(nums) do\n    \n  end\nend"
+  }
+}

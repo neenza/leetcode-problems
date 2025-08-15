@@ -1,0 +1,55 @@
+{
+  "title": "Count Tested Devices After Test Operations",
+  "problem_id": "3220",
+  "frontend_id": "2960",
+  "difficulty": "Easy",
+  "problem_slug": "count-tested-devices-after-test-operations",
+  "topics": [
+    "Array",
+    "Simulation",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed integer array batteryPercentages having length n, denoting the battery percentages of n 0-indexed devices.\nYour task is to test each device i in order from 0 to n - 1, by performing the following test operations:\nReturn an integer denoting the number of devices that will be tested after performing the test operations in order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: batteryPercentages = [1,1,2,1,3]\nOutput: 3\nExplanation: Performing the test operations in order starting from device 0:\nAt device 0, batteryPercentages[0] > 0, so there is now 1 tested device, and batteryPercentages becomes [1,0,1,0,2].\nAt device 1, batteryPercentages[1] == 0, so we move to the next device without testing.\nAt device 2, batteryPercentages[2] > 0, so there are now 2 tested devices, and batteryPercentages becomes [1,0,1,0,1].\nAt device 3, batteryPercentages[3] == 0, so we move to the next device without testing.\nAt device 4, batteryPercentages[4] > 0, so there are now 3 tested devices, and batteryPercentages stays the same.\nSo, the answer is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: batteryPercentages = [0,1,2]\nOutput: 2\nExplanation: Performing the test operations in order starting from device 0:\nAt device 0, batteryPercentages[0] == 0, so we move to the next device without testing.\nAt device 1, batteryPercentages[1] > 0, so there is now 1 tested device, and batteryPercentages becomes [0,1,1].\nAt device 2, batteryPercentages[2] > 0, so there are now 2 tested devices, and batteryPercentages stays the same.\nSo, the answer is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == batteryPercentages.length <= 100",
+    "0 <= batteryPercentages[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One solution is simulating the operations as explained in the problem statement, and it works in <code>O(n<sup>2</sup>)</code> time.",
+    "While going through the devices, you can maintain the number of previously tested devices, and the current device can be tested if <code>batteryPercentages[i]</code> is greater than the number of tested devices."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countTestedDevices(vector<int>& batteryPercentages) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTestedDevices(int[] batteryPercentages) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countTestedDevices(self, batteryPercentages):\n        \"\"\"\n        :type batteryPercentages: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countTestedDevices(self, batteryPercentages: List[int]) -> int:\n        ",
+    "c": "int countTestedDevices(int* batteryPercentages, int batteryPercentagesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountTestedDevices(int[] batteryPercentages) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} batteryPercentages\n * @return {number}\n */\nvar countTestedDevices = function(batteryPercentages) {\n    \n};",
+    "typescript": "function countTestedDevices(batteryPercentages: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $batteryPercentages\n     * @return Integer\n     */\n    function countTestedDevices($batteryPercentages) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countTestedDevices(_ batteryPercentages: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countTestedDevices(batteryPercentages: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countTestedDevices(List<int> batteryPercentages) {\n    \n  }\n}",
+    "golang": "func countTestedDevices(batteryPercentages []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} battery_percentages\n# @return {Integer}\ndef count_tested_devices(battery_percentages)\n    \nend",
+    "scala": "object Solution {\n    def countTestedDevices(batteryPercentages: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_tested_devices(battery_percentages: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-tested-devices batteryPercentages)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_tested_devices(BatteryPercentages :: [integer()]) -> integer().\ncount_tested_devices(BatteryPercentages) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_tested_devices(battery_percentages :: [integer]) :: integer\n  def count_tested_devices(battery_percentages) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Destroy Sequential Targets",
+  "problem_id": "2548",
+  "frontend_id": "2453",
+  "difficulty": "Medium",
+  "problem_slug": "destroy-sequential-targets",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed array nums consisting of positive integers, representing targets on a number line. You are also given an integer space.\nYou have a machine which can destroy targets. Seeding the machine with some nums[i] allows it to destroy all targets with values that can be represented as nums[i] + c * space, where c is any non-negative integer. You want to destroy the maximum number of targets in nums.\nReturn the minimum value of nums[i] you can seed the machine with to destroy the maximum number of targets.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,7,8,1,1,5], space = 2\nOutput: 1\nExplanation: If we seed the machine with nums[3], then we destroy all targets equal to 1,3,5,7,9,... \nIn this case, we would destroy 5 total targets (all except for nums[2]). \nIt is impossible to destroy more than 5 targets, so we return nums[3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,5,2,4,6], space = 2\nOutput: 1\nExplanation: Seeding the machine with nums[0], or nums[3] destroys 3 targets. \nIt is not possible to destroy more than 3 targets.\nSince nums[0] is the minimal integer that can destroy 3 targets, we return 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [6,2,5], space = 100\nOutput: 2\nExplanation: Whatever initial seed we select, we can only destroy 1 target. The minimal seed is nums[1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "1 <= space <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of nums[i] modulo k.",
+    "Iterate over nums in sorted order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int destroyTargets(vector<int>& nums, int space) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int destroyTargets(int[] nums, int space) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def destroyTargets(self, nums, space):\n        \"\"\"\n        :type nums: List[int]\n        :type space: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def destroyTargets(self, nums: List[int], space: int) -> int:\n        ",
+    "c": "int destroyTargets(int* nums, int numsSize, int space) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DestroyTargets(int[] nums, int space) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} space\n * @return {number}\n */\nvar destroyTargets = function(nums, space) {\n    \n};",
+    "typescript": "function destroyTargets(nums: number[], space: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $space\n     * @return Integer\n     */\n    function destroyTargets($nums, $space) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func destroyTargets(_ nums: [Int], _ space: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun destroyTargets(nums: IntArray, space: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int destroyTargets(List<int> nums, int space) {\n    \n  }\n}",
+    "golang": "func destroyTargets(nums []int, space int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} space\n# @return {Integer}\ndef destroy_targets(nums, space)\n    \nend",
+    "scala": "object Solution {\n    def destroyTargets(nums: Array[Int], space: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn destroy_targets(nums: Vec<i32>, space: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (destroy-targets nums space)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec destroy_targets(Nums :: [integer()], Space :: integer()) -> integer().\ndestroy_targets(Nums, Space) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec destroy_targets(nums :: [integer], space :: integer) :: integer\n  def destroy_targets(nums, space) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Find Invalid IP Addresses",
+  "problem_id": "3792",
+  "frontend_id": "3451",
+  "difficulty": "Hard",
+  "problem_slug": "find-invalid-ip-addresses",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table:  logs\nWrite a solution to find invalid IP addresses. An IPv4 address is invalid if it meets any of these conditions:\nReturn the result table ordered by invalid_count, ip in descending order respectively.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| log_id      | int     |\n| ip          | varchar |\n| status_code | int     |\n+-------------+---------+\nlog_id is the unique key for this table.\nEach row contains server access log information including IP address and HTTP status code.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+--------+---------------+-------------+\n| log_id | ip            | status_code | \n+--------+---------------+-------------+\n| 1      | 192.168.1.1   | 200         | \n| 2      | 256.1.2.3     | 404         | \n| 3      | 192.168.001.1 | 200         | \n| 4      | 192.168.1.1   | 200         | \n| 5      | 192.168.1     | 500         | \n| 6      | 256.1.2.3     | 404         | \n| 7      | 192.168.001.1 | 200         | \n+--------+---------------+-------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------------+--------------+\n| ip            | invalid_count|\n+---------------+--------------+\n| 256.1.2.3     | 2            |\n| 192.168.001.1 | 2            |\n| 192.168.1     | 1            |\n+---------------+--------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_invalid_ips(logs: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

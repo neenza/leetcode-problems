@@ -1,0 +1,58 @@
+{
+  "title": "Valid Word",
+  "problem_id": "3396",
+  "frontend_id": "3136",
+  "difficulty": "Easy",
+  "problem_slug": "valid-word",
+  "topics": [
+    "String"
+  ],
+  "description": "A word is considered valid if:\nYou are given a string word.\nReturn true if word is valid, otherwise, return false.\nNotes:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"234Adas\"\nOutput: true\nExplanation:\nThis word satisfies the conditions.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"b3\"\nOutput: false\nExplanation:\nThe length of this word is fewer than 3, and does not have a vowel.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"a3$e\"\nOutput: false\nExplanation:\nThis word contains a '$' character and does not have a consonant.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 20",
+    "word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use if-else to check all the conditions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isValid(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValid(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isValid(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isValid(self, word: str) -> bool:\n        ",
+    "c": "bool isValid(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsValid(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {boolean}\n */\nvar isValid = function(word) {\n    \n};",
+    "typescript": "function isValid(word: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Boolean\n     */\n    function isValid($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isValid(_ word: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isValid(word: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isValid(String word) {\n    \n  }\n}",
+    "golang": "func isValid(word string) bool {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Boolean}\ndef is_valid(word)\n    \nend",
+    "scala": "object Solution {\n    def isValid(word: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_valid(word: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-valid word)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_valid(Word :: unicode:unicode_binary()) -> boolean().\nis_valid(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_valid(word :: String.t) :: boolean\n  def is_valid(word) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: One-Time Traversal\n\n#### Intuition\n\nFirst, we check whether the length of the given word is at least 3. Then, using a single traversal, we determine whether the word contains at least one vowel letter, at least one consonant letter, and only valid characters, i.e., letters and digits. Any other characters are not allowed.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n  \n  We iterate through the word only once to check each character, so the time complexity is linear in the length of the word.\n\n- Space complexity: $O(1)$."
+}

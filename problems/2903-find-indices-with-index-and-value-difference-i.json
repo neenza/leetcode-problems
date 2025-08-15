@@ -1,0 +1,61 @@
+{
+  "title": "Find Indices With Index and Value Difference I",
+  "problem_id": "3165",
+  "frontend_id": "2903",
+  "difficulty": "Easy",
+  "problem_slug": "find-indices-with-index-and-value-difference-i",
+  "topics": [
+    "Array",
+    "Two Pointers"
+  ],
+  "description": "You are given a 0-indexed integer array nums having length n, an integer indexDifference, and an integer valueDifference.\nYour task is to find two indices i and j, both in the range [0, n - 1], that satisfy the following conditions:\nReturn an integer array answer, where answer = [i, j] if there are two such indices, and answer = [-1, -1] otherwise. If there are multiple choices for the two indices, return any of them.\nNote: i and j may be equal.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,1,4,1], indexDifference = 2, valueDifference = 4\nOutput: [0,3]\nExplanation: In this example, i = 0 and j = 3 can be selected.\nabs(0 - 3) >= 2 and abs(nums[0] - nums[3]) >= 4.\nHence, a valid answer is [0,3].\n[3,0] is also a valid answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1], indexDifference = 0, valueDifference = 0\nOutput: [0,0]\nExplanation: In this example, i = 0 and j = 0 can be selected.\nabs(0 - 0) >= 0 and abs(nums[0] - nums[0]) >= 0.\nHence, a valid answer is [0,0].\nOther valid answers are [0,1], [1,0], and [1,1].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3], indexDifference = 2, valueDifference = 4\nOutput: [-1,-1]\nExplanation: In this example, it can be shown that it is impossible to find two indices that satisfy both conditions.\nHence, [-1,-1] is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 100",
+    "0 <= nums[i] <= 50",
+    "0 <= indexDifference <= 100",
+    "0 <= valueDifference <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use bruteforce.",
+    "You can use a nested loop to compare each pair of indices <code>(i, j)</code> and check if the conditions are satisfied."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findIndices(vector<int>& nums, int indexDifference, int valueDifference) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findIndices(self, nums, indexDifference, valueDifference):\n        \"\"\"\n        :type nums: List[int]\n        :type indexDifference: int\n        :type valueDifference: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findIndices(self, nums: List[int], indexDifference: int, valueDifference: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findIndices(int* nums, int numsSize, int indexDifference, int valueDifference, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindIndices(int[] nums, int indexDifference, int valueDifference) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} indexDifference\n * @param {number} valueDifference\n * @return {number[]}\n */\nvar findIndices = function(nums, indexDifference, valueDifference) {\n    \n};",
+    "typescript": "function findIndices(nums: number[], indexDifference: number, valueDifference: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $indexDifference\n     * @param Integer $valueDifference\n     * @return Integer[]\n     */\n    function findIndices($nums, $indexDifference, $valueDifference) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findIndices(_ nums: [Int], _ indexDifference: Int, _ valueDifference: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findIndices(nums: IntArray, indexDifference: Int, valueDifference: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findIndices(List<int> nums, int indexDifference, int valueDifference) {\n    \n  }\n}",
+    "golang": "func findIndices(nums []int, indexDifference int, valueDifference int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} index_difference\n# @param {Integer} value_difference\n# @return {Integer[]}\ndef find_indices(nums, index_difference, value_difference)\n    \nend",
+    "scala": "object Solution {\n    def findIndices(nums: Array[Int], indexDifference: Int, valueDifference: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_indices(nums: Vec<i32>, index_difference: i32, value_difference: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-indices nums indexDifference valueDifference)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec find_indices(Nums :: [integer()], IndexDifference :: integer(), ValueDifference :: integer()) -> [integer()].\nfind_indices(Nums, IndexDifference, ValueDifference) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_indices(nums :: [integer], index_difference :: integer, value_difference :: integer) :: [integer]\n  def find_indices(nums, index_difference, value_difference) do\n    \n  end\nend"
+  }
+}

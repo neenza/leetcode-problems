@@ -1,0 +1,60 @@
+{
+  "title": "Decoded String at Index",
+  "problem_id": "916",
+  "frontend_id": "880",
+  "difficulty": "Medium",
+  "problem_slug": "decoded-string-at-index",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "You are given an encoded string s. To decode the string to a tape, the encoded string is read one character at a time and the following steps are taken:\nGiven an integer k, return the kth letter (1-indexed) in the decoded string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leet2code3\", k = 10\nOutput: \"o\"\nExplanation: The decoded string is \"leetleetcodeleetleetcodeleetleetcode\".\nThe 10th letter in the string is \"o\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ha22\", k = 5\nOutput: \"h\"\nExplanation: The decoded string is \"hahahaha\".\nThe 5th letter is \"h\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"a2345678999999999999999\", k = 1\nOutput: \"a\"\nExplanation: The decoded string is \"a\" repeated 8301530446056247680 times.\nThe 1st letter is \"a\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 100",
+    "s consists of lowercase English letters and digits 2 through 9.",
+    "s starts with a letter.",
+    "1 <= k <= 109",
+    "It is guaranteed that k is less than or equal to the length of the decoded string.",
+    "The decoded string is guaranteed to have less than 263 letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string decodeAtIndex(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String decodeAtIndex(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decodeAtIndex(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decodeAtIndex(self, s: str, k: int) -> str:\n        ",
+    "c": "char* decodeAtIndex(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string DecodeAtIndex(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar decodeAtIndex = function(s, k) {\n    \n};",
+    "typescript": "function decodeAtIndex(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function decodeAtIndex($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decodeAtIndex(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decodeAtIndex(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String decodeAtIndex(String s, int k) {\n    \n  }\n}",
+    "golang": "func decodeAtIndex(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef decode_at_index(s, k)\n    \nend",
+    "scala": "object Solution {\n    def decodeAtIndex(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decode_at_index(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (decode-at-index s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec decode_at_index(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ndecode_at_index(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decode_at_index(s :: String.t, k :: integer) :: String.t\n  def decode_at_index(s, k) do\n    \n  end\nend"
+  }
+}

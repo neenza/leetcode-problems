@@ -1,0 +1,53 @@
+{
+  "title": "Last Stone Weight",
+  "problem_id": "1127",
+  "frontend_id": "1046",
+  "difficulty": "Easy",
+  "problem_slug": "last-stone-weight",
+  "topics": [
+    "Array",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array of integers stones where stones[i] is the weight of the ith stone.\nWe are playing a game with the stones. On each turn, we choose the heaviest two stones and smash them together. Suppose the heaviest two stones have weights x and y with x <= y. The result of this smash is:\nAt the end of the game, there is at most one stone left.\nReturn the weight of the last remaining stone. If there are no stones left, return 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [2,7,4,1,8,1]\nOutput: 1\nExplanation: \nWe combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,\nwe combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,\nwe combine 2 and 1 to get 1 so the array converts to [1,1,1] then,\nwe combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [1]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= stones.length <= 30",
+    "1 <= stones[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process.  We can do it with a heap, or by sorting some list of stones every time we take a turn."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int lastStoneWeight(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lastStoneWeight(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lastStoneWeight(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lastStoneWeight(self, stones: List[int]) -> int:\n        ",
+    "c": "int lastStoneWeight(int* stones, int stonesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LastStoneWeight(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number}\n */\nvar lastStoneWeight = function(stones) {\n    \n};",
+    "typescript": "function lastStoneWeight(stones: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Integer\n     */\n    function lastStoneWeight($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lastStoneWeight(_ stones: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lastStoneWeight(stones: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lastStoneWeight(List<int> stones) {\n    \n  }\n}",
+    "golang": "func lastStoneWeight(stones []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Integer}\ndef last_stone_weight(stones)\n    \nend",
+    "scala": "object Solution {\n    def lastStoneWeight(stones: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn last_stone_weight(stones: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (last-stone-weight stones)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec last_stone_weight(Stones :: [integer()]) -> integer().\nlast_stone_weight(Stones) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec last_stone_weight(stones :: [integer]) :: integer\n  def last_stone_weight(stones) do\n    \n  end\nend"
+  }
+}

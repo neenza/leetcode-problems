@@ -1,0 +1,60 @@
+{
+  "title": "Baseball Game",
+  "problem_id": "682",
+  "frontend_id": "682",
+  "difficulty": "Easy",
+  "problem_slug": "baseball-game",
+  "topics": [
+    "Array",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "You are keeping the scores for a baseball game with strange rules. At the beginning of the game, you start with an empty record.\nYou are given a list of strings operations, where operations[i] is the ith operation you must apply to the record and is one of the following:\nReturn the sum of all the scores on the record after applying all the operations.\nThe test cases are generated such that the answer and all intermediate calculations fit in a 32-bit integer and that all operations are valid.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ops = [\"5\",\"2\",\"C\",\"D\",\"+\"]\nOutput: 30\nExplanation:\n\"5\" - Add 5 to the record, record is now [5].\n\"2\" - Add 2 to the record, record is now [5, 2].\n\"C\" - Invalidate and remove the previous score, record is now [5].\n\"D\" - Add 2 * 5 = 10 to the record, record is now [5, 10].\n\"+\" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].\nThe total sum is 5 + 10 + 15 = 30.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ops = [\"5\",\"-2\",\"4\",\"C\",\"D\",\"9\",\"+\",\"+\"]\nOutput: 27\nExplanation:\n\"5\" - Add 5 to the record, record is now [5].\n\"-2\" - Add -2 to the record, record is now [5, -2].\n\"4\" - Add 4 to the record, record is now [5, -2, 4].\n\"C\" - Invalidate and remove the previous score, record is now [5, -2].\n\"D\" - Add 2 * -2 = -4 to the record, record is now [5, -2, -4].\n\"9\" - Add 9 to the record, record is now [5, -2, -4, 9].\n\"+\" - Add -4 + 9 = 5 to the record, record is now [5, -2, -4, 9, 5].\n\"+\" - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].\nThe total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: ops = [\"1\",\"C\"]\nOutput: 0\nExplanation:\n\"1\" - Add 1 to the record, record is now [1].\n\"C\" - Invalidate and remove the previous score, record is now [].\nSince the record is empty, the total sum is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= operations.length <= 1000",
+    "operations[i] is \"C\", \"D\", \"+\", or a string representing an integer in the range [-3 * 104, 3 * 104].",
+    "For operation \"+\", there will always be at least two previous scores on the record.",
+    "For operations \"C\" and \"D\", there will always be at least one previous score on the record."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int calPoints(vector<string>& operations) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int calPoints(String[] operations) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def calPoints(self, operations):\n        \"\"\"\n        :type operations: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def calPoints(self, operations: List[str]) -> int:\n        ",
+    "c": "int calPoints(char** operations, int operationsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CalPoints(string[] operations) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} operations\n * @return {number}\n */\nvar calPoints = function(operations) {\n    \n};",
+    "typescript": "function calPoints(operations: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $operations\n     * @return Integer\n     */\n    function calPoints($operations) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func calPoints(_ operations: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun calPoints(operations: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int calPoints(List<String> operations) {\n    \n  }\n}",
+    "golang": "func calPoints(operations []string) int {\n    \n}",
+    "ruby": "# @param {String[]} operations\n# @return {Integer}\ndef cal_points(operations)\n    \nend",
+    "scala": "object Solution {\n    def calPoints(operations: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn cal_points(operations: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (cal-points operations)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec cal_points(Operations :: [unicode:unicode_binary()]) -> integer().\ncal_points(Operations) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec cal_points(operations :: [String.t]) :: integer\n  def cal_points(operations) do\n    \n  end\nend"
+  },
+  "solution": "### Approach #1: Stack [Accepted]\n\n**Intuition and Algorithm**\n\nLet's maintain the value of each valid round on a stack as we process the data. A stack is ideal since we only deal with operations involving the last or second-last valid round.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `ops`. We parse through every element in the given array once, and do $$O(1)$$ work for each element.\n\n* Space Complexity: $$O(N)$$, the space used to store our `stack`."
+}

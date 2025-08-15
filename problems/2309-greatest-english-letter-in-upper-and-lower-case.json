@@ -1,0 +1,60 @@
+{
+  "title": "Greatest English Letter in Upper and Lower Case",
+  "problem_id": "1363",
+  "frontend_id": "2309",
+  "difficulty": "Easy",
+  "problem_slug": "greatest-english-letter-in-upper-and-lower-case",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Enumeration"
+  ],
+  "description": "Given a string of English letters s, return the greatest English letter which occurs as both a lowercase and uppercase letter in s. The returned letter should be in uppercase. If no such letter exists, return an empty string.\nAn English letter b is greater than another letter a if b appears after a in the English alphabet.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"lEeTcOdE\"\nOutput: \"E\"\nExplanation:\nThe letter 'E' is the only letter to appear in both lower and upper case.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"arRAzFif\"\nOutput: \"R\"\nExplanation:\nThe letter 'R' is the greatest letter to appear in both lower and upper case.\nNote that 'A' and 'F' also appear in both lower and upper case, but 'R' is greater than 'F' or 'A'.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"AbCdEfGhIjK\"\nOutput: \"\"\nExplanation:\nThere is no letter that appears in both lower and upper case.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase and uppercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider iterating through the string and storing each unique character that occurs in a set.",
+    "From Z to A, check whether both the uppercase and lowercase version occur in the set."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string greatestLetter(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String greatestLetter(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def greatestLetter(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def greatestLetter(self, s: str) -> str:\n        ",
+    "c": "char* greatestLetter(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GreatestLetter(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar greatestLetter = function(s) {\n    \n};",
+    "typescript": "function greatestLetter(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function greatestLetter($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func greatestLetter(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun greatestLetter(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String greatestLetter(String s) {\n    \n  }\n}",
+    "golang": "func greatestLetter(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef greatest_letter(s)\n    \nend",
+    "scala": "object Solution {\n    def greatestLetter(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn greatest_letter(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (greatest-letter s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec greatest_letter(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\ngreatest_letter(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec greatest_letter(s :: String.t) :: String.t\n  def greatest_letter(s) do\n    \n  end\nend"
+  }
+}

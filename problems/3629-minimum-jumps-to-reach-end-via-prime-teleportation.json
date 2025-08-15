@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Jumps to Reach End via Prime Teleportation",
+  "problem_id": "3933",
+  "frontend_id": "3629",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-jumps-to-reach-end-via-prime-teleportation",
+  "topics": [],
+  "description": "You are given an integer array nums of length n.\nYou start at index 0, and your goal is to reach index n - 1.\nFrom any index i, you may perform one of the following operations:\nReturn the minimum number of jumps required to reach index n - 1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,4,6]\nOutput: 2\nExplanation:\nOne optimal sequence of jumps is:\nThus, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,4,7,9]\nOutput: 2\nExplanation:\nOne optimal sequence of jumps is:\nThus, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,6,5,8]\nOutput: 3\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a breadth-first search.",
+    "Precompute prime factors of each <code>nums[i]</code> via a sieve, and build a bucket <code>bucket[p]</code> mapping each prime <code>p</code> to all indices <code>j</code> with <code>nums[j] % p == 0</code>.",
+    "During the BFS, when at index <code>i</code>, enqueue its adjacent steps (<code>i+1</code> and <code>i-1</code>) and all indices in <code>bucket[p]</code> for each prime <code>p</code> dividing <code>nums[i]</code>, then clear <code>bucket[p]</code> so each prime's bucket is visited only once."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minJumps(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minJumps(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minJumps(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minJumps(self, nums: List[int]) -> int:\n        ",
+    "c": "int minJumps(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinJumps(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minJumps = function(nums) {\n    \n};",
+    "typescript": "function minJumps(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minJumps($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minJumps(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minJumps(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minJumps(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minJumps(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_jumps(nums)\n    \nend",
+    "scala": "object Solution {\n    def minJumps(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_jumps(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-jumps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_jumps(Nums :: [integer()]) -> integer().\nmin_jumps(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_jumps(nums :: [integer]) :: integer\n  def min_jumps(nums) do\n    \n  end\nend"
+  }
+}

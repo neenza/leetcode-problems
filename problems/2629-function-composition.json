@@ -1,0 +1,40 @@
+{
+  "title": "Function Composition",
+  "problem_id": "2741",
+  "frontend_id": "2629",
+  "difficulty": "Easy",
+  "problem_slug": "function-composition",
+  "topics": [],
+  "description": "Given an array of functions [f1, f2, f3, ..., fn], return a new function fn that is the function composition of the array of functions.\nThe function composition of [f(x), g(x), h(x)] is fn(x) = f(g(h(x))).\nThe function composition of an empty list of functions is the identity function f(x) = x.\nYou may assume each function in the array accepts one integer as input and returns one integer as output.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: functions = [x => x + 1, x => x * x, x => 2 * x], x = 4\nOutput: 65\nExplanation:\nEvaluating from right to left ...\nStarting with x = 4.\n2 * (4) = 8\n(8) * (8) = 64\n(64) + 1 = 65",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1\nOutput: 1000\nExplanation:\nEvaluating from right to left ...\n10 * (1) = 10\n10 * (10) = 100\n10 * (100) = 1000",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: functions = [], x = 42\nOutput: 42\nExplanation:\nThe composition of zero functions is the identity function",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "-1000 <= x <= 1000",
+    "0 <= functions.length <= 1000",
+    "all functions accept and return a single integer"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start by returning a function that takes in a number and returns a number.",
+    "Call each of the functions in the correct order. Each time passing the output of the previous function into the next function."
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @param {Function[]} functions\n * @return {Function}\n */\nvar compose = function(functions) {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */",
+    "typescript": "type F = (x: number) => number;\n\nfunction compose(functions: F[]): F {\n    \n    return function(x) {\n        \n    }\n};\n\n/**\n * const fn = compose([x => x + 1, x => 2 * x])\n * fn(4) // 9\n */"
+  }
+}

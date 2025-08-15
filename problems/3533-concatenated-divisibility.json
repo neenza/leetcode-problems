@@ -1,0 +1,64 @@
+{
+  "title": "Concatenated Divisibility",
+  "problem_id": "3841",
+  "frontend_id": "3533",
+  "difficulty": "Hard",
+  "problem_slug": "concatenated-divisibility",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given an array of positive integers nums and a positive integer k.\nA permutation of nums is said to form a divisible concatenation if, when you concatenate the decimal representations of the numbers in the order specified by the permutation, the resulting number is divisible by k.\nReturn the lexicographically smallest permutation (when considered as a list of integers) that forms a divisible concatenation. If no such permutation exists, return an empty list.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,12,45], k = 5\nOutput: [3,12,45]\nExplanation:\nThe lexicographically smallest permutation that forms a divisible concatenation is [3,12,45] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,5], k = 10\nOutput: [5,10]\nExplanation:\nThe lexicographically smallest permutation that forms a divisible concatenation is [5,10] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3], k = 5\nOutput: []\nExplanation:\nSince no permutation of nums forms a valid divisible concatenation, return an empty list.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 13",
+    "1 <= nums[i] <= 105",
+    "1 <= k <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we write a recursive solution for this?",
+    "Can we use bitmasks with dynamic programming to optimize the above recursion?",
+    "Use the idea of bitmask-based dynamic programming.",
+    "Use the idea to reconstruct the answer from the dynamic programming table using the state variables, such as <code>mask</code> and <code>remainder</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> concatenatedDivisibility(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] concatenatedDivisibility(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def concatenatedDivisibility(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def concatenatedDivisibility(self, nums: List[int], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* concatenatedDivisibility(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ConcatenatedDivisibility(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar concatenatedDivisibility = function(nums, k) {\n    \n};",
+    "typescript": "function concatenatedDivisibility(nums: number[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function concatenatedDivisibility($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func concatenatedDivisibility(_ nums: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun concatenatedDivisibility(nums: IntArray, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> concatenatedDivisibility(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func concatenatedDivisibility(nums []int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer[]}\ndef concatenated_divisibility(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def concatenatedDivisibility(nums: Array[Int], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn concatenated_divisibility(nums: Vec<i32>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (concatenated-divisibility nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec concatenated_divisibility(Nums :: [integer()], K :: integer()) -> [integer()].\nconcatenated_divisibility(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec concatenated_divisibility(nums :: [integer], k :: integer) :: [integer]\n  def concatenated_divisibility(nums, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Cost to Change the Final Value of Expression",
+  "problem_id": "2008",
+  "frontend_id": "1896",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-cost-to-change-the-final-value-of-expression",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Stack"
+  ],
+  "description": "You are given a valid boolean expression as a string expression consisting of the characters '1','0','&' (bitwise AND operator),'|' (bitwise OR operator),'(', and ')'.\nReturn the minimum cost to change the final value of the expression.\nThe cost of changing the final value of an expression is the number of operations performed on the expression. The types of operations are described as follows:\nNote: '&' does not take precedence over '|' in the order of calculation. Evaluate parentheses first, then in left-to-right order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: expression = \"1&(0|1)\"\nOutput: 1\nExplanation: We can turn \"1&(0|1)\" into \"1&(0&1)\" by changing the '|' to a '&' using 1 operation.\nThe new expression evaluates to 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: expression = \"(0&0)&(0&0&0)\"\nOutput: 3\nExplanation: We can turn \"(0&0)&(0&0&0)\" into \"(0|1)|(0&0&0)\" using 3 operations.\nThe new expression evaluates to 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: expression = \"(0|(1|0&1))\"\nOutput: 1\nExplanation: We can turn \"(0|(1|0&1))\" into \"(0|(0|0&1))\" using 1 operation.\nThe new expression evaluates to 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= expression.length <= 105",
+    "expression only contains '1','0','&','|','(', and ')'",
+    "All parentheses are properly matched.",
+    "There will be no empty parentheses (i.e: \"()\" is not a substring of expression)."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How many possible states are there for a given expression?",
+    "Is there a data structure that we can use to solve the problem optimally?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperationsToFlip(string expression) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperationsToFlip(String expression) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperationsToFlip(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperationsToFlip(self, expression: str) -> int:\n        ",
+    "c": "int minOperationsToFlip(char* expression) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperationsToFlip(string expression) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @return {number}\n */\nvar minOperationsToFlip = function(expression) {\n    \n};",
+    "typescript": "function minOperationsToFlip(expression: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $expression\n     * @return Integer\n     */\n    function minOperationsToFlip($expression) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperationsToFlip(_ expression: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperationsToFlip(expression: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperationsToFlip(String expression) {\n    \n  }\n}",
+    "golang": "func minOperationsToFlip(expression string) int {\n    \n}",
+    "ruby": "# @param {String} expression\n# @return {Integer}\ndef min_operations_to_flip(expression)\n    \nend",
+    "scala": "object Solution {\n    def minOperationsToFlip(expression: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations_to_flip(expression: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations-to-flip expression)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_operations_to_flip(Expression :: unicode:unicode_binary()) -> integer().\nmin_operations_to_flip(Expression) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations_to_flip(expression :: String.t) :: integer\n  def min_operations_to_flip(expression) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Rectangle Area II",
+  "problem_id": "880",
+  "frontend_id": "850",
+  "difficulty": "Hard",
+  "problem_slug": "rectangle-area-ii",
+  "topics": [
+    "Array",
+    "Segment Tree",
+    "Line Sweep",
+    "Ordered Set"
+  ],
+  "description": "You are given a 2D array of axis-aligned rectangles. Each rectangle[i] = [xi1, yi1, xi2, yi2] denotes the ith rectangle where (xi1, yi1) are the coordinates of the bottom-left corner, and (xi2, yi2) are the coordinates of the top-right corner.\nCalculate the total area covered by all rectangles in the plane. Any area covered by two or more rectangles should only be counted once.\nReturn the total area. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]\nOutput: 6\nExplanation: A total area of 6 is covered by all three rectangles, as illustrated in the picture.\nFrom (1,1) to (2,2), the green and red rectangles overlap.\nFrom (1,0) to (2,3), all three rectangles overlap.",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/06/rectangle_area_ii_pic.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rectangles = [[0,0,1000000000,1000000000]]\nOutput: 49\nExplanation: The answer is 1018 modulo (109 + 7), which is 49.",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/06/rectangle_area_ii_pic.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= rectangles.length <= 200",
+    "rectanges[i].length == 4",
+    "0 <= xi1, yi1, xi2, yi2 <= 109",
+    "xi1 <= xi2",
+    "yi1 <= yi2",
+    "All rectangles have non zero area."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int rectangleArea(vector<vector<int>>& rectangles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rectangleArea(int[][] rectangles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rectangleArea(self, rectangles):\n        \"\"\"\n        :type rectangles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rectangleArea(self, rectangles: List[List[int]]) -> int:\n        ",
+    "c": "int rectangleArea(int** rectangles, int rectanglesSize, int* rectanglesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RectangleArea(int[][] rectangles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} rectangles\n * @return {number}\n */\nvar rectangleArea = function(rectangles) {\n    \n};",
+    "typescript": "function rectangleArea(rectangles: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $rectangles\n     * @return Integer\n     */\n    function rectangleArea($rectangles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rectangleArea(_ rectangles: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rectangleArea(rectangles: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rectangleArea(List<List<int>> rectangles) {\n    \n  }\n}",
+    "golang": "func rectangleArea(rectangles [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} rectangles\n# @return {Integer}\ndef rectangle_area(rectangles)\n    \nend",
+    "scala": "object Solution {\n    def rectangleArea(rectangles: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rectangle_area(rectangles: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (rectangle-area rectangles)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec rectangle_area(Rectangles :: [[integer()]]) -> integer().\nrectangle_area(Rectangles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rectangle_area(rectangles :: [[integer]]) :: integer\n  def rectangle_area(rectangles) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n\n### Approach 1: Coordinate Compression\n\n#### IntuitionSuppose instead of `rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]`, we had `[[0,0,200,200],[100,0,200,300],[100,0,300,100]]`.  The answer would just be 100 times bigger.\n\nWhat about if `rectangles = [[0,0,2,2],[1,0,2,3],[1,0,30002,1]]` ?  Only the blue region would have area `30000` instead of `1`.\n\nOur idea is this: we'll take all the `x` and `y` coordinates, and re-map them to `0, 1, 2, ...` etc.  For example, if `rectangles  = [[0,0,200,200],[100,0,200,300],[100,0,300,100]]`, we could re-map it to `[[0,0,2,2],[1,0,2,3],[1,0,3,1]]`.  Then, we can solve the problem with brute force.  However, each region may actually represent some larger area, so we'll need to adjust for that at the end.\n\n#### Algorithm\n\nRe-map each `x` coordinate to `0, 1, 2, ...`.  Independently, re-map all `y` coordinates too.\n\nWe then have a problem that can be solved by brute force: for each rectangle with re-mapped coordinates `(rx1, ry1, rx2, ry2)`, we can fill the grid `grid[x][y] = True` for `rx1 <= x < rx2` and `ry1 <= y < ry2`.\n\nAfterwards, each `grid[rx][ry]` represents the area `(imapx(rx+1) - imapx(rx)) * (imapy(ry+1) - imapy(ry))`, where if `x` got remapped to `rx`, then `imapx(rx) = x` (\"inverse-map-x of remapped-x equals x\"), and similarly for `imapy`.\n\n#### Implementation#### Complexity Analysis\n\n* Time Complexity:  $$O(N^3)$$, where $$N$$ is the number of rectangles.\n\n* Space Complexity:  $$O(N^2)$$.---\n\n### Approach 2: Line Sweep\n\n#### Intuition\n\nImagine we pass a horizontal line from bottom to top over the shape.  We have some active intervals on this horizontal line, which gets updated twice for each rectangle.  In total, there are $$2 * N$$ events, and we can update our (up to $$N$$) active horizontal intervals for each update.\n\n#### Algorithm\n\nFor a rectangle like `rec = [1,0,3,1]`, the first update is to add `[1, 3]` to the active set at `y = 0`, and the second update is to remove `[1, 3]` at `y = 1`.  Note that adding and removing respects multiplicity - if we also added `[0, 2]` at `y = 0`, then removing `[1, 3]` at `y = 1` will still leave us with `[0, 2]` active.\n\nThis gives us a plan: create these two events for each rectangle, then process all the events in sorted order of `y`.  The issue now is deciding how to process the events `add(x1, x2)` and `remove(x1, x2)` such that we are able to `query()` the total horizontal length of our active intervals.\n\nWe can use the fact that our `remove(...)` operation will always be on an interval that was previously added.  Let's store all the `(x1, x2)` intervals in sorted order.  Then, we can `query()` in linear time using a technique similar to a classic LeetCode problem, [Merge Intervals](https://leetcode.com/problems/merge-intervals/).\n\n#### Implementation#### Complexity Analysis\n\n* Time Complexity:  $$O(N^2 \\log N)$$, where $$N$$ is the number of rectangles.\n\n* Space Complexity:  $$O(N)$$.---\n\n### Approach 3: Segment Tree\n\n#### Intuition and Algorithm\n\nAs in *Approach #3*, we want to support `add(x1, x2)`, `remove(x1, x2)`, and `query()`.  While outside the scope of a typical interview, this is the perfect setting for using a *segment tree*.  For completeness, we include the following implementation.\n\nYou can learn more about Segment Trees by visiting the articles of these problems: [Falling Squares](https://leetcode.com/problems/falling-squares/), [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/).\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the number of rectangles.\n\n* Time Complexity: $O(N^2)$\n\n    The update operation takes $O(\\log N)$ in the average case and $O(N)$ in the worst case when the segment tree is unbalanced. `update()` is called $N$ times, so the overall time complexity is $O(N \\log N)$ in the average case and $O(N^2)$ in the worst case.\n\n* Space Complexity:  $O(N)$."
+}

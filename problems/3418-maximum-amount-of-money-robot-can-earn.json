@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Amount of Money Robot Can Earn",
+  "problem_id": "3677",
+  "frontend_id": "3418",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-amount-of-money-robot-can-earn",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given an m x n grid. A robot starts at the top-left corner of the grid (0, 0) and wants to reach the bottom-right corner (m - 1, n - 1). The robot can move either right or down at any point in time.\nThe grid contains a value coins[i][j] in each cell:\nThe robot has a special ability to neutralize robbers in at most 2 cells on its path, preventing them from stealing coins in those cells.\nNote: The robot's total coins can be negative.\nReturn the maximum profit the robot can gain on the route.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coins = [[0,1,-1],[1,-2,3],[2,-3,4]]\nOutput: 8\nExplanation:\nAn optimal path for maximum coins is:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coins = [[10,10,10],[10,10,10]]\nOutput: 40\nExplanation:\nAn optimal path for maximum coins is:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == coins.length",
+    "n == coins[i].length",
+    "1 <= m, n <= 500",
+    "-1000 <= coins[i][j] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic Programming.",
+    "Let <code>dp[i][j][k]</code> denote the maximum amount of money a robot can earn by starting at cell <code>(i,j)</code> and having neutralized <code>k</code> robbers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumAmount(vector<vector<int>>& coins) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumAmount(int[][] coins) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumAmount(self, coins):\n        \"\"\"\n        :type coins: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumAmount(self, coins: List[List[int]]) -> int:\n        ",
+    "c": "int maximumAmount(int** coins, int coinsSize, int* coinsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumAmount(int[][] coins) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} coins\n * @return {number}\n */\nvar maximumAmount = function(coins) {\n    \n};",
+    "typescript": "function maximumAmount(coins: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $coins\n     * @return Integer\n     */\n    function maximumAmount($coins) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumAmount(_ coins: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumAmount(coins: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumAmount(List<List<int>> coins) {\n    \n  }\n}",
+    "golang": "func maximumAmount(coins [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} coins\n# @return {Integer}\ndef maximum_amount(coins)\n    \nend",
+    "scala": "object Solution {\n    def maximumAmount(coins: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_amount(coins: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-amount coins)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_amount(Coins :: [[integer()]]) -> integer().\nmaximum_amount(Coins) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_amount(coins :: [[integer]]) :: integer\n  def maximum_amount(coins) do\n    \n  end\nend"
+  }
+}

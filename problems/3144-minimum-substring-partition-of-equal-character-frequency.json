@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Substring Partition of Equal Character Frequency",
+  "problem_id": "3403",
+  "frontend_id": "3144",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-substring-partition-of-equal-character-frequency",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Counting"
+  ],
+  "description": "Given a string s, you need to partition it into one or more balanced substrings. For example, if s == \"ababcc\" then (\"abab\", \"c\", \"c\"), (\"ab\", \"abc\", \"c\"), and (\"ababcc\") are all valid partitions, but (\"a\", \"bab\", \"cc\"), (\"aba\", \"bc\", \"c\"), and (\"ab\", \"abcc\") are not. The unbalanced substrings are bolded.\nReturn the minimum number of substrings that you can partition s into.\nNote: A balanced string is a string where each character in the string occurs the same number of times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"fabccddg\"\nOutput: 3\nExplanation:\nWe can partition the string s into 3 substrings in one of the following ways: (\"fab, \"ccdd\", \"g\") , or (\"fabc\", \"cd\", \"dg\") .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abababaccddb\"\nOutput: 2\nExplanation:\nWe can partition the string s into 2 substrings like so: (\"abab\", \"abaccddb\") .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists only of English lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i]</code> be the minimum number of partitions for the prefix ending at index <code>i + 1</code>.",
+    "<code>dp[i]</code> can be calculated as the <code>min(dp[j])</code> over all <code>j</code> such that <code>j < i</code> and <code>word[j+1…i]</code> is valid."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumSubstringsInPartition(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSubstringsInPartition(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumSubstringsInPartition(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumSubstringsInPartition(self, s: str) -> int:\n        ",
+    "c": "int minimumSubstringsInPartition(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumSubstringsInPartition(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumSubstringsInPartition = function(s) {\n    \n};",
+    "typescript": "function minimumSubstringsInPartition(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minimumSubstringsInPartition($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSubstringsInPartition(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumSubstringsInPartition(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSubstringsInPartition(String s) {\n    \n  }\n}",
+    "golang": "func minimumSubstringsInPartition(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef minimum_substrings_in_partition(s)\n    \nend",
+    "scala": "object Solution {\n    def minimumSubstringsInPartition(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_substrings_in_partition(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-substrings-in-partition s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_substrings_in_partition(S :: unicode:unicode_binary()) -> integer().\nminimum_substrings_in_partition(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_substrings_in_partition(s :: String.t) :: integer\n  def minimum_substrings_in_partition(s) do\n    \n  end\nend"
+  }
+}

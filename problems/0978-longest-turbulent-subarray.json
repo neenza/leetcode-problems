@@ -1,0 +1,58 @@
+{
+  "title": "Longest Turbulent Subarray",
+  "problem_id": "1020",
+  "frontend_id": "978",
+  "difficulty": "Medium",
+  "problem_slug": "longest-turbulent-subarray",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "description": "Given an integer array arr, return the length of a maximum size turbulent subarray of arr.\nA subarray is turbulent if the comparison sign flips between each adjacent pair of elements in the subarray.\nMore formally, a subarray [arr[i], arr[i + 1], ..., arr[j]] of arr is said to be turbulent if and only if:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [9,4,2,10,7,8,8,1,9]\nOutput: 5\nExplanation: arr[1] > arr[2] < arr[3] > arr[4] < arr[5]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [4,8,12,16]\nOutput: 2",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [100]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 4 * 104",
+    "0 <= arr[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxTurbulenceSize(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxTurbulenceSize(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxTurbulenceSize(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxTurbulenceSize(self, arr: List[int]) -> int:\n        ",
+    "c": "int maxTurbulenceSize(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxTurbulenceSize(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar maxTurbulenceSize = function(arr) {\n    \n};",
+    "typescript": "function maxTurbulenceSize(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function maxTurbulenceSize($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxTurbulenceSize(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxTurbulenceSize(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxTurbulenceSize(List<int> arr) {\n    \n  }\n}",
+    "golang": "func maxTurbulenceSize(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef max_turbulence_size(arr)\n    \nend",
+    "scala": "object Solution {\n    def maxTurbulenceSize(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_turbulence_size(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-turbulence-size arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_turbulence_size(Arr :: [integer()]) -> integer().\nmax_turbulence_size(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_turbulence_size(arr :: [integer]) :: integer\n  def max_turbulence_size(arr) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Sliding Window\n\n**Intuition**\n\nEvidently, we only care about the comparisons between adjacent elements.  If the comparisons are represented by `-1, 0, 1` (for `<, =, >`), then we want the longest sequence of alternating `1, -1, 1, -1, ...` (starting with either `1` or `-1`).\n\nThese alternating comparisons form contiguous blocks.  We know when the next block ends: when it is the last two elements being compared, or when the sequence isn't alternating.\n\nFor example, take an array like `A = [9,4,2,10,7,8,8,1,9]`.  The comparisons are `[1,1,-1,1,-1,0,-1,1]`.  The blocks are `[1], [1,-1,1,-1], [0], [-1,1]`.\n\n**Algorithm**\n\nScan the array from left to right.  If we are at the end of a block (last elements OR it stopped alternating), then we should record the length of that block as our candidate answer, and set the start of the new block as the next element.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+}

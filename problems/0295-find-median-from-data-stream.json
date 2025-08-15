@@ -1,0 +1,50 @@
+{
+  "title": "Find Median from Data Stream",
+  "problem_id": "295",
+  "frontend_id": "295",
+  "difficulty": "Hard",
+  "problem_slug": "find-median-from-data-stream",
+  "topics": [
+    "Two Pointers",
+    "Design",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Data Stream"
+  ],
+  "description": "The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.\nImplement the MedianFinder class:\nExample 1:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"MedianFinder\", \"addNum\", \"addNum\", \"findMedian\", \"addNum\", \"findMedian\"]\n[[], [1], [2], [], [3], []]\nOutput\n[null, null, null, 1.5, null, 2.0]\n\nExplanation\nMedianFinder medianFinder = new MedianFinder();\nmedianFinder.addNum(1);    // arr = [1]\nmedianFinder.addNum(2);    // arr = [1, 2]\nmedianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)\nmedianFinder.addNum(3);    // arr[1, 2, 3]\nmedianFinder.findMedian(); // return 2.0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "-105 <= num <= 105",
+    "There will be at least one element in the data structure before calling findMedian.",
+    "At most 5 * 104 calls will be made to addNum and findMedian."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class MedianFinder {\npublic:\n    MedianFinder() {\n        \n    }\n    \n    void addNum(int num) {\n        \n    }\n    \n    double findMedian() {\n        \n    }\n};\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * MedianFinder* obj = new MedianFinder();\n * obj->addNum(num);\n * double param_2 = obj->findMedian();\n */",
+    "java": "class MedianFinder {\n\n    public MedianFinder() {\n        \n    }\n    \n    public void addNum(int num) {\n        \n    }\n    \n    public double findMedian() {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * MedianFinder obj = new MedianFinder();\n * obj.addNum(num);\n * double param_2 = obj.findMedian();\n */",
+    "python": "class MedianFinder(object):\n\n    def __init__(self):\n        \n\n    def addNum(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: None\n        \"\"\"\n        \n\n    def findMedian(self):\n        \"\"\"\n        :rtype: float\n        \"\"\"\n        \n\n\n# Your MedianFinder object will be instantiated and called as such:\n# obj = MedianFinder()\n# obj.addNum(num)\n# param_2 = obj.findMedian()",
+    "python3": "class MedianFinder:\n\n    def __init__(self):\n        \n\n    def addNum(self, num: int) -> None:\n        \n\n    def findMedian(self) -> float:\n        \n\n\n# Your MedianFinder object will be instantiated and called as such:\n# obj = MedianFinder()\n# obj.addNum(num)\n# param_2 = obj.findMedian()",
+    "c": "\n\n\ntypedef struct {\n    \n} MedianFinder;\n\n\nMedianFinder* medianFinderCreate() {\n    \n}\n\nvoid medianFinderAddNum(MedianFinder* obj, int num) {\n    \n}\n\ndouble medianFinderFindMedian(MedianFinder* obj) {\n    \n}\n\nvoid medianFinderFree(MedianFinder* obj) {\n    \n}\n\n/**\n * Your MedianFinder struct will be instantiated and called as such:\n * MedianFinder* obj = medianFinderCreate();\n * medianFinderAddNum(obj, num);\n \n * double param_2 = medianFinderFindMedian(obj);\n \n * medianFinderFree(obj);\n*/",
+    "csharp": "public class MedianFinder {\n\n    public MedianFinder() {\n        \n    }\n    \n    public void AddNum(int num) {\n        \n    }\n    \n    public double FindMedian() {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * MedianFinder obj = new MedianFinder();\n * obj.AddNum(num);\n * double param_2 = obj.FindMedian();\n */",
+    "javascript": "\nvar MedianFinder = function() {\n    \n};\n\n/** \n * @param {number} num\n * @return {void}\n */\nMedianFinder.prototype.addNum = function(num) {\n    \n};\n\n/**\n * @return {number}\n */\nMedianFinder.prototype.findMedian = function() {\n    \n};\n\n/** \n * Your MedianFinder object will be instantiated and called as such:\n * var obj = new MedianFinder()\n * obj.addNum(num)\n * var param_2 = obj.findMedian()\n */",
+    "typescript": "class MedianFinder {\n    constructor() {\n        \n    }\n\n    addNum(num: number): void {\n        \n    }\n\n    findMedian(): number {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * var obj = new MedianFinder()\n * obj.addNum(num)\n * var param_2 = obj.findMedian()\n */",
+    "php": "class MedianFinder {\n    /**\n     */\n    function __construct() {\n        \n    }\n  \n    /**\n     * @param Integer $num\n     * @return NULL\n     */\n    function addNum($num) {\n        \n    }\n  \n    /**\n     * @return Float\n     */\n    function findMedian() {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * $obj = MedianFinder();\n * $obj->addNum($num);\n * $ret_2 = $obj->findMedian();\n */",
+    "swift": "\nclass MedianFinder {\n\n    init() {\n        \n    }\n    \n    func addNum(_ num: Int) {\n        \n    }\n    \n    func findMedian() -> Double {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * let obj = MedianFinder()\n * obj.addNum(num)\n * let ret_2: Double = obj.findMedian()\n */",
+    "kotlin": "class MedianFinder() {\n\n    fun addNum(num: Int) {\n        \n    }\n\n    fun findMedian(): Double {\n        \n    }\n\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * var obj = MedianFinder()\n * obj.addNum(num)\n * var param_2 = obj.findMedian()\n */",
+    "dart": "class MedianFinder {\n\n  MedianFinder() {\n    \n  }\n  \n  void addNum(int num) {\n    \n  }\n  \n  double findMedian() {\n    \n  }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * MedianFinder obj = MedianFinder();\n * obj.addNum(num);\n * double param2 = obj.findMedian();\n */",
+    "golang": "type MedianFinder struct {\n    \n}\n\n\nfunc Constructor() MedianFinder {\n    \n}\n\n\nfunc (this *MedianFinder) AddNum(num int)  {\n    \n}\n\n\nfunc (this *MedianFinder) FindMedian() float64 {\n    \n}\n\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * obj := Constructor();\n * obj.AddNum(num);\n * param_2 := obj.FindMedian();\n */",
+    "ruby": "class MedianFinder\n    def initialize()\n        \n    end\n\n\n=begin\n    :type num: Integer\n    :rtype: Void\n=end\n    def add_num(num)\n        \n    end\n\n\n=begin\n    :rtype: Float\n=end\n    def find_median()\n        \n    end\n\n\nend\n\n# Your MedianFinder object will be instantiated and called as such:\n# obj = MedianFinder.new()\n# obj.add_num(num)\n# param_2 = obj.find_median()",
+    "scala": "class MedianFinder() {\n\n    def addNum(num: Int): Unit = {\n        \n    }\n\n    def findMedian(): Double = {\n        \n    }\n\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * val obj = new MedianFinder()\n * obj.addNum(num)\n * val param_2 = obj.findMedian()\n */",
+    "rust": "struct MedianFinder {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl MedianFinder {\n\n    fn new() -> Self {\n        \n    }\n    \n    fn add_num(&self, num: i32) {\n        \n    }\n    \n    fn find_median(&self) -> f64 {\n        \n    }\n}\n\n/**\n * Your MedianFinder object will be instantiated and called as such:\n * let obj = MedianFinder::new();\n * obj.add_num(num);\n * let ret_2: f64 = obj.find_median();\n */",
+    "racket": "(define median-finder%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; add-num : exact-integer? -> void?\n    (define/public (add-num num)\n      )\n    ; find-median : -> flonum?\n    (define/public (find-median)\n      )))\n\n;; Your median-finder% object will be instantiated and called as such:\n;; (define obj (new median-finder%))\n;; (send obj add-num num)\n;; (define param_2 (send obj find-median))",
+    "erlang": "-spec median_finder_init_() -> any().\nmedian_finder_init_() ->\n  .\n\n-spec median_finder_add_num(Num :: integer()) -> any().\nmedian_finder_add_num(Num) ->\n  .\n\n-spec median_finder_find_median() -> float().\nmedian_finder_find_median() ->\n  .\n\n\n%% Your functions will be called as such:\n%% median_finder_init_(),\n%% median_finder_add_num(Num),\n%% Param_2 = median_finder_find_median(),\n\n%% median_finder_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule MedianFinder do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec add_num(num :: integer) :: any\n  def add_num(num) do\n    \n  end\n\n  @spec find_median() :: float\n  def find_median() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# MedianFinder.init_()\n# MedianFinder.add_num(num)\n# param_2 = MedianFinder.find_median()\n\n# MedianFinder.init_ will be called before every test case, in which you can do some necessary initializations."
+  }
+}

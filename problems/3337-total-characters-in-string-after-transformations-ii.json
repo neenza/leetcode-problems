@@ -1,0 +1,61 @@
+{
+  "title": "Total Characters in String After Transformations II",
+  "problem_id": "3630",
+  "frontend_id": "3337",
+  "difficulty": "Hard",
+  "problem_slug": "total-characters-in-string-after-transformations-ii",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Counting"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters, an integer t representing the number of transformations to perform, and an array nums of size 26. In one transformation, every character in s is replaced according to the following rules:\nReturn the length of the resulting string after exactly t transformations.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcyy\", t = 2, nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]\nOutput: 7\nExplanation:\nFirst Transformation (t = 1):\nSecond Transformation (t = 2):\nFinal Length of the string: The string is \"cdeabab\" , which has 7 characters.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"azbk\", t = 1, nums = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]\nOutput: 8\nExplanation:\nFirst Transformation (t = 1):\nFinal Length of the string: The string is \"bcabcdlm\" , which has 8 characters.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters.",
+    "1 <= t <= 109",
+    "nums.length == 26",
+    "1 <= nums[i] <= 25"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Model the problem as a matrix multiplication problem.",
+    "Use exponentiation to quickly multiply matrices."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int lengthAfterTransformations(string s, int t, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthAfterTransformations(String s, int t, List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lengthAfterTransformations(self, s, t, nums):\n        \"\"\"\n        :type s: str\n        :type t: int\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lengthAfterTransformations(self, s: str, t: int, nums: List[int]) -> int:\n        ",
+    "c": "int lengthAfterTransformations(char* s, int t, int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LengthAfterTransformations(string s, int t, IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} t\n * @param {number[]} nums\n * @return {number}\n */\nvar lengthAfterTransformations = function(s, t, nums) {\n    \n};",
+    "typescript": "function lengthAfterTransformations(s: string, t: number, nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $t\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function lengthAfterTransformations($s, $t, $nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lengthAfterTransformations(_ s: String, _ t: Int, _ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lengthAfterTransformations(s: String, t: Int, nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lengthAfterTransformations(String s, int t, List<int> nums) {\n    \n  }\n}",
+    "golang": "func lengthAfterTransformations(s string, t int, nums []int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} t\n# @param {Integer[]} nums\n# @return {Integer}\ndef length_after_transformations(s, t, nums)\n    \nend",
+    "scala": "object Solution {\n    def lengthAfterTransformations(s: String, t: Int, nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn length_after_transformations(s: String, t: i32, nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (length-after-transformations s t nums)\n  (-> string? exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec length_after_transformations(S :: unicode:unicode_binary(), T :: integer(), Nums :: [integer()]) -> integer().\nlength_after_transformations(S, T, Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec length_after_transformations(s :: String.t, t :: integer, nums :: [integer]) :: integer\n  def length_after_transformations(s, t, nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Matrix Multiplication + Matrix Exponentiation By Squaring\n\n#### Intuition\n\nWe use $f(i, c)$ to represent the number of occurrences of the character $c$ in the string after $i$ transformations. For convenience, we let the value range of $c$ be $[0, 26)$, corresponding to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, all $f(0, c)$ values are equal to the number of occurrences of $c$ in the given string $s$. When we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$, we use the recurrence:\n\n$$\nf(i, c) = \\sum_{c'=0}^{25} \\left[ f(i-1, c') \\times T(c, c') \\right]\n$$\n\nHere, the value of $T(c, c')$ is either 0 or 1. If $c'$ is included in the substitution set of $c$ during a single transformation, the value is 1; otherwise, it is 0. The values of $T(c, c')$ can be obtained from the given array $\\textit{nums}$.\n\nThe time complexity of directly using the recurrence is high, so optimization is necessary. Notice that $T(c, c')$ is independent of $i$; it remains fixed in each round of iteration. Therefore, if we express $f(i, c)$ and $f(i-1, c')$ as $n \\times 1$ column vectors, and $T(c, c')$ as an $n \\times n$ matrix, the recurrence becomes a matrix multiplication:\n\n$$\n\\begin{pmatrix}\nf(i, 0) \\\\\nf(i, 1) \\\\\n\\vdots \\\\\nf(i, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}\n\\begin{pmatrix}\nf(i-1, 0) \\\\\nf(i-1, 1) \\\\\n\\vdots \\\\\nf(i-1, 25)\n\\end{pmatrix}\n$$\n\nSo, after $t$ iterations:\n\n$$\n\\begin{pmatrix}\nf(t, 0) \\\\\nf(t, 1) \\\\\n\\vdots \\\\\nf(t, 25)\n\\end{pmatrix}\n=\\begin{pmatrix}\nT(0, 0) & T(0, 1) & \\cdots & T(0, 25) \\\\\nT(1, 0) & T(1, 1) & \\cdots & T(1, 25) \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nT(25, 0) & T(25, 1) & \\cdots & T(25, 25)\n\\end{pmatrix}^t\n\\begin{pmatrix}\nf(0, 0) \\\\\nf(0, 1) \\\\\n\\vdots \\\\\nf(0, 25)\n\\end{pmatrix}\n$$\n\nThus, we can first compute the $t$-th power of the matrix corresponding to $T(c, c')$, and then multiply it by the initial column vector $f(0, \\cdots)$ to obtain all values $f(t, \\cdots)$. The sum of these values gives the final answer.\n\nThe exponentiation of the transformation matrix can be efficiently performed using [matrix exponentiation by squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring), which we will not elaborate on here.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ denote the size of the character set, which is 26 in this case.\n\n- Time complexity: $O(n + \\log t \\times |\\Sigma|^3)$.\n  \n  We first traverse the string to count the occurrences of each character. Then, we apply matrix exponentiation by squaring to compute repeated matrix multiplication.\n  \n- Space complexity: $O(|\\Sigma|^2)$.\n  \n  This is the space required to store the transformation matrix."
+}

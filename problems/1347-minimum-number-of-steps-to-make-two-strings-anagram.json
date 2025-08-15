@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Number of Steps to Make Two Strings Anagram",
+  "problem_id": "1469",
+  "frontend_id": "1347",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-steps-to-make-two-strings-anagram",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given two strings of the same length s and t. In one step you can choose any character of t and replace it with another character.\nReturn the minimum number of steps to make t an anagram of s.\nAn Anagram of a string is a string that contains the same characters with a different (or the same) ordering.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"bab\", t = \"aba\"\nOutput: 1\nExplanation: Replace the first 'a' in t with b, t = \"bba\" which is anagram of s.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leetcode\", t = \"practice\"\nOutput: 5\nExplanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to make t anagram of s.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"anagram\", t = \"mangaar\"\nOutput: 0\nExplanation: \"anagram\" and \"mangaar\" are anagrams.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 5 * 104",
+    "s.length == t.length",
+    "s and t consist of lowercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of characters of each string.",
+    "Loop over all characters if the frequency of a character in t is less than the frequency of the same character in s then add the difference between the frequencies to the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSteps(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSteps(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSteps(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSteps(self, s: str, t: str) -> int:\n        ",
+    "c": "int minSteps(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSteps(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar minSteps = function(s, t) {\n    \n};",
+    "typescript": "function minSteps(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function minSteps($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSteps(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSteps(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSteps(String s, String t) {\n    \n  }\n}",
+    "golang": "func minSteps(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef min_steps(s, t)\n    \nend",
+    "scala": "object Solution {\n    def minSteps(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_steps(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-steps s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec min_steps(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nmin_steps(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_steps(s :: String.t, t :: String.t) :: integer\n  def min_steps(s, t) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: HashMap\n\n#### Intuition\n\nThe two strings `s` and `t` have the same length, we need to find the minimum characters that need to be replaced in `t` to make it an anagram of `s`. One thing to observe here is that we do not need to touch the instances of a character that are present in both strings. For example, if the two strings are `s = ba` and `t = aa`, we do not need to change one of the `a` characters in both two strings.\n\nThe character instance which is in `t` but not in `s` can be replaced with a character that is present in `s`. To find the minimum characters required to make `t` and `s` anagrams, we can find the count of characters in `t` which are not present in `s`.\n\nTo find this, we can record the frequency of each character in both strings `s` and `t`, and calculate the frequency difference of each character (`freq in t - freq in s`). One important thing to note is that this difference can be positive or negative, for example, if `s = bba` and `t = baa`, the frequency difference of `a` is 1 (`t` has 2 occurrences of `a` while `s` has 1, 2 - 1 = 1) and the frequency difference of `b` is -1 (`t` has 1 occurrence of `b` while `s` has 2, 1 - 2 = -1). However, we only need to focus on the positive value which implies that there are more instances of this character in `t`, why?\n\nThis is because the two values (the sum of the positive and negative differences) are equal in absolute value! The positive value comes from the character in `t` that needs to be replaced, the negative value comes from the character in `s` that waits for the corresponding replacement in `t`. \n\nSince `t` and `s` are of equal length, and both remain the same after modifying `t` to make it an anagram of `s`, the absolute values of the two positive and negative values must be equal. Therefore, we can either sum only the negative differences or only the positive differences, and the result is the same for both.\n\nOne way to find the frequencies of characters in both strings is to use two different maps and then find the difference. Instead of storing the frequencies for both strings separately and then calculating the difference, we can simply add the frequencies for string `t`, and subtract the frequencies for string `s` on the fly. This way we will only have to keep one map to store the final difference in frequencies. We can then add up all the positive values and return the sum.\n\n![fig](../Figures/1347/1347A.png)\n\n#### Algorithm\n\n1. Initialize an array `count` of size `26`, all indices point to `0` initially to denote the frequency of each character.\n2. Iterate over the integer from `0` to the last index in `s` or `t`, for each index `i`:\n\n    1. Increment the frequency of character `t[i]` in the array `count`.\n    2. Decrement the frequency of character `s[i]` in the array `count`.\n3. Initialize the variable `ans` to `0`\n4. Iterate over the integers from `0` to `25`, and for each positive frequency difference, add it to the variable `ans`.\n5. Return `ans`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the size of the string `s` and `t`.\n\n* Time complexity: $O(N)$\n\n  We are iterating over the indices of string `s` or `t` to find the frequencies in the array `freq`. Then we iterate over the integers from `0` to `26` to find the final answer. Hence, the total time complexity is equal to $O(N)$.\n\n* Space complexity: $O(1)$\n\n  The only space required is the array `count` which has the constant size of `26`. Therefore, the total space complexity is constant.---"
+}

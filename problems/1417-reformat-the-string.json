@@ -1,0 +1,58 @@
+{
+  "title": "Reformat The String",
+  "problem_id": "1532",
+  "frontend_id": "1417",
+  "difficulty": "Easy",
+  "problem_slug": "reformat-the-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given an alphanumeric string s. (Alphanumeric string is a string consisting of lowercase English letters and digits).\nYou have to find a permutation of the string where no letter is followed by another letter and no digit is followed by another digit. That is, no two adjacent characters have the same type.\nReturn the reformatted string or return an empty string if it is impossible to reformat the string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"a0b1c2\"\nOutput: \"0a1b2c\"\nExplanation: No two adjacent characters have the same type in \"0a1b2c\". \"a0b1c2\", \"0a1b2c\", \"0c2a1b\" are also valid permutations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leetcode\"\nOutput: \"\"\nExplanation: \"leetcode\" has only characters so we cannot separate them by digits.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1229857369\"\nOutput: \"\"\nExplanation: \"1229857369\" has only digits so we cannot separate them by characters.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "s consists of only lowercase English letters and/or digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the number of letters and digits in the string. if cntLetters - cntDigits has any of the values [-1, 0, 1] we have an answer, otherwise we don't have any answer.",
+    "Build the string anyway as you wish. Keep in mind that you need to start with the type that have more characters if cntLetters ≠ cntDigits."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string reformat(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reformat(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reformat(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reformat(self, s: str) -> str:\n        ",
+    "c": "char* reformat(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string Reformat(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reformat = function(s) {\n    \n};",
+    "typescript": "function reformat(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function reformat($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reformat(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reformat(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reformat(String s) {\n    \n  }\n}",
+    "golang": "func reformat(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef reformat(s)\n    \nend",
+    "scala": "object Solution {\n    def reformat(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reformat(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (reformat s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec reformat(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreformat(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reformat(s :: String.t) :: String.t\n  def reformat(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Changes To Make Alternating Binary String",
+  "problem_id": "1884",
+  "frontend_id": "1758",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-changes-to-make-alternating-binary-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string s consisting only of the characters '0' and '1'. In one operation, you can change any '0' to '1' or vice versa.\nThe string is called alternating if no two adjacent characters are equal. For example, the string \"010\" is alternating, while the string \"0100\" is not.\nReturn the minimum number of operations needed to make s alternating.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"0100\"\nOutput: 1\nExplanation: If you change the last character to '1', s will be \"0101\", which is alternating.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"10\"\nOutput: 0\nExplanation: s is already alternating.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1111\"\nOutput: 2\nExplanation: You need two operations to reach \"0101\" or \"1010\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about how the final string will look like.",
+    "It will either start with a '0' and be like '010101010..' or with a '1' and be like '10101010..'",
+    "Try both ways, and check for each way, the number of changes needed to reach it from the given string. The answer is the minimum of both ways."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, s: str) -> int:\n        ",
+    "c": "int minOperations(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minOperations = function(s) {\n    \n};",
+    "typescript": "function minOperations(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minOperations($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(String s) {\n    \n  }\n}",
+    "golang": "func minOperations(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_operations(s)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(S :: unicode:unicode_binary()) -> integer().\nmin_operations(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(s :: String.t) :: integer\n  def min_operations(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Start with Zero or Start with One\n\n**Intuition**\n\nOnce we make `s` alternating, there are two possibilities:\n\n1. `s` starts with `0`.\n2. `s` starts with `1`.\n\n![example](../Figures/1758/1.png)In the above image, we have the original `s`, then two alternating strings: one that starts with `0` and one that starts with `1`. We must convert `s` to either of these alternating strings, and the squares in red indicate mismatched positions with the original `s`.\n\nTo fix any mismatched position, we require `1` operation. Thus, if we were to convert `s` to an alternating string starting with `0`, we would require `5` operations. If we were to convert `s` to an alternative string starting with `1`, we would require `2` operations. Since we want the minimum, we would have an answer of `2`.\n\nThis brings us to our solution. We initialize two integers:\n\n1. `start0` which represents the number of operations we require if we convert `s` to an alternating string starting with `0`.\n2. `start1` which represents the number of operations we require if we convert `s` to an alternating string starting with `1`.\n\nWe then iterate `i` over the indices of `s`. At each index, we check if `i` is an even index or an odd index. To determine if `i` is an even or odd index, we check the value if `i % 2`. Here, `%` is the modulus operator. If `i % 2 = 0`, then `i` is even. Otherwise, `i` is odd.\n\n**If `i` is even**\n\nWhen considering an alternating string that starts with `0`, all even indices should have `0`, as indices `0, 2, 4, ...` will be `0`.\n\nWhen considering an alternating string that starts with `1`, all even indices should have `1`, as indices `0, 2, 4, ...` will be `1`.\n\nThus, if `s[i] = '0'`, we will increment `start1` since `s[i]` is mismatched and we would need an operation to fix it. Otherwise, `s[i] = '1'` and we increment `start0`.\n\n![example](../Figures/1758/2.png)**If `i` is odd**\n\nWhen considering an alternating string that starts with `0`, all odd indices should have `1`, as indices `1, 3, 5, ...` will be `1`.\n\nWhen considering an alternating string that starts with `1`, all odd indices should have `0`, as indices `1, 3, 5, ...` will be `0`.\n\nThus, if `s[i] = '1'`, we will increment `start1` since `s[i]` is mismatched and we would need an operation to fix it. Otherwise, `s[i] = '0'` and we increment `start0`.\n\n![example](../Figures/1758/3.png)---\n\nOnce we have finished iterating over all characters of `s`, we return the minimum between `start0` and `start1`.\n\n**Algorithm**\n\n1. Initialize `start0 = 0` and `start1 = 0`.\n2. Iterate `i` over the indices of `s`:\n    - If `i % 2 = 0`:\n        - If `s[i] = '0'`, increment `start1`. \n        - Otherwise, increment `start0`.\n    - Else:\n        - If `s[i] = '0'`, increment `start1`. \n        - Otherwise, increment `start0`.\n3. Return the minimum between `start0, start1`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `s`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate over each character of `s` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---\n\n### Approach 2: Only Check One\n\n**Intuition**\n\nTake a look at the first image again:\n\n![example](../Figures/1758/1.png)Let `n` be the length of `s`. There are `n` indices. Notice that an index `i` only needs to be fixed for **either** `start0` or `start1`, but never both. In the above image, if we create an alternating string that starts with `0`, we need to perform operations at indices `0, 1, 4, 5, 6`. This means that indices `0, 1, 4, 5, 6` are already correct for the alternating string that starts with `1`.\n\nIf we create an alternating string that starts with `0`, indices `2, 3` are already correct. Thus, when considering the alternating string that starts with `1`, we would need to fix indices `2, 3`.\n\nWhat does this mean? For a given `s`, if we need `start0` operations to create the alternating string that starts with `0`, we will need exactly `n - start0` operations to create the alternating string that starts with `1`.\n\nThus, we only need to calculate either `start0` or `start1` (it doesn't matter which one, we'll calculate `start0` in this article). We can then obtain the other value by subtracting from `n`.\n\n**Algorithm**\n\n1. Initialize `start0 = 0`.\n2. Iterate `i` over the indices of `s`:\n    - If `i % 2 = 0`:\n        - If `s[i] = '1'`, increment `start0`\n    - Else:\n        - If `s[i] = '0'`, increment `start0`.\n3. Return the minimum between `start0` and `s.length - start0`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `s`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate over each character of `s` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---"
+}

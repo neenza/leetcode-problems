@@ -1,0 +1,56 @@
+{
+  "title": "Count Substrings That Differ by One Character",
+  "problem_id": "1743",
+  "frontend_id": "1638",
+  "difficulty": "Medium",
+  "problem_slug": "count-substrings-that-differ-by-one-character",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Enumeration"
+  ],
+  "description": "Given two strings s and t, find the number of ways you can choose a non-empty substring of s and replace a single character by a different character such that the resulting substring is a substring of t. In other words, find the number of substrings in s that differ from some substring in t by exactly one character.\nFor example, the underlined substrings in \"computer\" and \"computation\" only differ by the 'e'/'a', so this is a valid way.\nReturn the number of substrings that satisfy the condition above.\nA substring is a contiguous sequence of characters within a string.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aba\", t = \"baba\"\nOutput: 6\nExplanation: The following are the pairs of substrings from s and t that differ by exactly 1 character:\n(\"aba\", \"baba\")\n(\"aba\", \"baba\")\n(\"aba\", \"baba\")\n(\"aba\", \"baba\")\n(\"aba\", \"baba\")\n(\"aba\", \"baba\")\nThe underlined portions are the substrings that are chosen from s and t.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ab\", t = \"bb\"\nOutput: 3\nExplanation: The following are the pairs of substrings from s and t that differ by 1 character:\n(\"ab\", \"bb\")\n(\"ab\", \"bb\")\n(\"ab\", \"bb\")\n​​​​The underlined portions are the substrings that are chosen from s and t.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 100",
+    "s and t consist of lowercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Take every substring of s, change a character, and see how many substrings of t match that substring.",
+    "Use a Trie to store all substrings of t as a dictionary."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSubstrings(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubstrings(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubstrings(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubstrings(self, s: str, t: str) -> int:\n        ",
+    "c": "int countSubstrings(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSubstrings(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar countSubstrings = function(s, t) {\n    \n};",
+    "typescript": "function countSubstrings(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function countSubstrings($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubstrings(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubstrings(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubstrings(String s, String t) {\n    \n  }\n}",
+    "golang": "func countSubstrings(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef count_substrings(s, t)\n    \nend",
+    "scala": "object Solution {\n    def countSubstrings(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_substrings(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-substrings s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec count_substrings(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\ncount_substrings(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_substrings(s :: String.t, t :: String.t) :: integer\n  def count_substrings(s, t) do\n    \n  end\nend"
+  }
+}

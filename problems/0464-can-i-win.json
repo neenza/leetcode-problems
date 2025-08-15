@@ -1,0 +1,60 @@
+{
+  "title": "Can I Win",
+  "problem_id": "464",
+  "frontend_id": "464",
+  "difficulty": "Medium",
+  "problem_slug": "can-i-win",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Memoization",
+    "Game Theory",
+    "Bitmask"
+  ],
+  "description": "In the \"100 game\" two players take turns adding, to a running total, any integer from 1 to 10. The player who first causes the running total to reach or exceed 100 wins.\nWhat if we change the game so that players cannot re-use integers?\nFor example, two players might take turns drawing from a common pool of numbers from 1 to 15 without replacement until they reach a total >= 100.\nGiven two integers maxChoosableInteger and desiredTotal, return true if the first player to move can force a win, otherwise, return false. Assume both players play optimally.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: maxChoosableInteger = 10, desiredTotal = 11\nOutput: false\nExplanation:\nNo matter which integer the first player choose, the first player will lose.\nThe first player can choose an integer from 1 up to 10.\nIf the first player choose 1, the second player can only choose integers from 2 up to 10.\nThe second player will win by choosing 10 and get a total = 11, which is >= desiredTotal.\nSame with other integers chosen by the first player, the second player will always win.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: maxChoosableInteger = 10, desiredTotal = 0\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: maxChoosableInteger = 10, desiredTotal = 1\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= maxChoosableInteger <= 20",
+    "0 <= desiredTotal <= 300"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canIWin(int maxChoosableInteger, int desiredTotal) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canIWin(int maxChoosableInteger, int desiredTotal) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canIWin(self, maxChoosableInteger, desiredTotal):\n        \"\"\"\n        :type maxChoosableInteger: int\n        :type desiredTotal: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:\n        ",
+    "c": "bool canIWin(int maxChoosableInteger, int desiredTotal) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanIWin(int maxChoosableInteger, int desiredTotal) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} maxChoosableInteger\n * @param {number} desiredTotal\n * @return {boolean}\n */\nvar canIWin = function(maxChoosableInteger, desiredTotal) {\n    \n};",
+    "typescript": "function canIWin(maxChoosableInteger: number, desiredTotal: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $maxChoosableInteger\n     * @param Integer $desiredTotal\n     * @return Boolean\n     */\n    function canIWin($maxChoosableInteger, $desiredTotal) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canIWin(_ maxChoosableInteger: Int, _ desiredTotal: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canIWin(maxChoosableInteger: Int, desiredTotal: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canIWin(int maxChoosableInteger, int desiredTotal) {\n    \n  }\n}",
+    "golang": "func canIWin(maxChoosableInteger int, desiredTotal int) bool {\n    \n}",
+    "ruby": "# @param {Integer} max_choosable_integer\n# @param {Integer} desired_total\n# @return {Boolean}\ndef can_i_win(max_choosable_integer, desired_total)\n    \nend",
+    "scala": "object Solution {\n    def canIWin(maxChoosableInteger: Int, desiredTotal: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_i_win(max_choosable_integer: i32, desired_total: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-i-win maxChoosableInteger desiredTotal)\n  (-> exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_i_win(MaxChoosableInteger :: integer(), DesiredTotal :: integer()) -> boolean().\ncan_i_win(MaxChoosableInteger, DesiredTotal) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_i_win(max_choosable_integer :: integer, desired_total :: integer) :: boolean\n  def can_i_win(max_choosable_integer, desired_total) do\n    \n  end\nend"
+  }
+}

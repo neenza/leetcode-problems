@@ -1,0 +1,59 @@
+{
+  "title": "String Transformation",
+  "problem_id": "3024",
+  "frontend_id": "2851",
+  "difficulty": "Hard",
+  "problem_slug": "string-transformation",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "String Matching"
+  ],
+  "description": "You are given two strings s and t of equal length n. You can perform the following operation on the string s:\nYou are also given an integer k. Return the number of ways in which s can be transformed into t in exactly k operations.\nSince the answer can be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcd\", t = \"cdab\", k = 2\nOutput: 2\nExplanation: \nFirst way:\nIn first operation, choose suffix from index = 3, so resulting s = \"dabc\".\nIn second operation, choose suffix from index = 3, so resulting s = \"cdab\".\n\nSecond way:\nIn first operation, choose suffix from index = 1, so resulting s = \"bcda\".\nIn second operation, choose suffix from index = 1, so resulting s = \"cdab\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ababab\", t = \"ababab\", k = 1\nOutput: 2\nExplanation: \nFirst way:\nChoose suffix from index = 2, so resulting s = \"ababab\".\n\nSecond way:\nChoose suffix from index = 4, so resulting s = \"ababab\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 5 * 105",
+    "1 <= k <= 1015",
+    "s.length == t.length",
+    "s and t consist of only lowercase English alphabets."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "String <code>t</code> can be only constructed if it is a rotated version of string <code>s</code>.",
+    "Use KMP algorithm or Z algorithm to find the number of indices from where <code>s</code> is equal to <code>t</code>.",
+    "Use Dynamic Programming to count the number of ways."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(string s, string t, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(String s, String t, long k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWays(self, s, t, k):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWays(self, s: str, t: str, k: int) -> int:\n        ",
+    "c": "int numberOfWays(char* s, char* t, long long k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfWays(string s, string t, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number} k\n * @return {number}\n */\nvar numberOfWays = function(s, t, k) {\n    \n};",
+    "typescript": "function numberOfWays(s: string, t: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @param Integer $k\n     * @return Integer\n     */\n    function numberOfWays($s, $t, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWays(_ s: String, _ t: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWays(s: String, t: String, k: Long): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWays(String s, String t, int k) {\n    \n  }\n}",
+    "golang": "func numberOfWays(s string, t string, k int64) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @param {Integer} k\n# @return {Integer}\ndef number_of_ways(s, t, k)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWays(s: String, t: String, k: Long): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_ways(s: String, t: String, k: i64) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-ways s t k)\n  (-> string? string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_ways(S :: unicode:unicode_binary(), T :: unicode:unicode_binary(), K :: integer()) -> integer().\nnumber_of_ways(S, T, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_ways(s :: String.t, t :: String.t, k :: integer) :: integer\n  def number_of_ways(s, t, k) do\n    \n  end\nend"
+  }
+}

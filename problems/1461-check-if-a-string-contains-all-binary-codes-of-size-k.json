@@ -1,0 +1,63 @@
+{
+  "title": "Check If a String Contains All Binary Codes of Size K",
+  "problem_id": "1557",
+  "frontend_id": "1461",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-a-string-contains-all-binary-codes-of-size-k",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Rolling Hash",
+    "Hash Function"
+  ],
+  "description": "Given a binary string s and an integer k, return true if every binary code of length k is a substring of s. Otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"00110110\", k = 2\nOutput: true\nExplanation: The binary codes of length 2 are \"00\", \"01\", \"10\" and \"11\". They can be all found as substrings at indices 0, 1, 3 and 2 respectively.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0110\", k = 1\nOutput: true\nExplanation: The binary codes of length 1 are \"0\" and \"1\", it is clear that both exist as a substring.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"0110\", k = 2\nOutput: false\nExplanation: The binary code \"00\" is of length 2 and does not exist in the array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 5 * 105",
+    "s[i] is either '0' or '1'.",
+    "1 <= k <= 20"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We need only to check all sub-strings of length k.",
+    "The number of distinct sub-strings should be exactly 2^k."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasAllCodes(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasAllCodes(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasAllCodes(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasAllCodes(self, s: str, k: int) -> bool:\n        ",
+    "c": "bool hasAllCodes(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasAllCodes(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {boolean}\n */\nvar hasAllCodes = function(s, k) {\n    \n};",
+    "typescript": "function hasAllCodes(s: string, k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Boolean\n     */\n    function hasAllCodes($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasAllCodes(_ s: String, _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasAllCodes(s: String, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasAllCodes(String s, int k) {\n    \n  }\n}",
+    "golang": "func hasAllCodes(s string, k int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Boolean}\ndef has_all_codes(s, k)\n    \nend",
+    "scala": "object Solution {\n    def hasAllCodes(s: String, k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_all_codes(s: String, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-all-codes s k)\n  (-> string? exact-integer? boolean?)\n  )",
+    "erlang": "-spec has_all_codes(S :: unicode:unicode_binary(), K :: integer()) -> boolean().\nhas_all_codes(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_all_codes(s :: String.t, k :: integer) :: boolean\n  def has_all_codes(s, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Max Dot Product of Two Subsequences",
+  "problem_id": "1569",
+  "frontend_id": "1458",
+  "difficulty": "Hard",
+  "problem_slug": "max-dot-product-of-two-subsequences",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "Given two arrays nums1 and nums2.\nReturn the maximum dot product between non-empty subsequences of nums1 and nums2 with the same length.\nA subsequence of a array is a new array which is formed from the original array by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, [2,3,5] is a subsequence of [1,2,3,4,5] while [1,5,3] is not).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [2,1,-2,5], nums2 = [3,0,-6]\nOutput: 18\nExplanation: Take subsequence [2,-2] from nums1 and subsequence [3,-6] from nums2.\nTheir dot product is (2*3 + (-2)*(-6)) = 18.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [3,-2], nums2 = [2,-6,7]\nOutput: 21\nExplanation: Take subsequence [3] from nums1 and subsequence [7] from nums2.\nTheir dot product is (3*7) = 21.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [-1,-1], nums2 = [1,1]\nOutput: -1\nExplanation: Take subsequence [-1] from nums1 and subsequence [1] from nums2.\nTheir dot product is -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums1.length, nums2.length <= 500",
+    "-1000 <= nums1[i], nums2[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming, define DP[i][j] as the maximum dot product of two subsequences starting in the position i of nums1 and position j of nums2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDotProduct(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDotProduct(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDotProduct(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int maxDotProduct(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDotProduct(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar maxDotProduct = function(nums1, nums2) {\n    \n};",
+    "typescript": "function maxDotProduct(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function maxDotProduct($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDotProduct(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDotProduct(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDotProduct(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func maxDotProduct(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef max_dot_product(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def maxDotProduct(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_dot_product(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-dot-product nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_dot_product(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmax_dot_product(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_dot_product(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def max_dot_product(nums1, nums2) do\n    \n  end\nend"
+  }
+}

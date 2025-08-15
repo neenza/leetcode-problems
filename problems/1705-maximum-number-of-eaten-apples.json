@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Number of Eaten Apples",
+  "problem_id": "1824",
+  "frontend_id": "1705",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-eaten-apples",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "There is a special kind of apple tree that grows apples every day for n days. On the ith day, the tree grows apples[i] apples that will rot after days[i] days, that is on day i + days[i] the apples will be rotten and cannot be eaten. On some days, the apple tree does not grow any apples, which are denoted by apples[i] == 0 and days[i] == 0.\nYou decided to eat at most one apple a day (to keep the doctors away). Note that you can keep eating after the first n days.\nGiven two integer arrays days and apples of length n, return the maximum number of apples you can eat.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: apples = [1,2,3,5,2], days = [3,2,1,4,2]\nOutput: 7\nExplanation: You can eat 7 apples:\n- On the first day, you eat an apple that grew on the first day.\n- On the second day, you eat an apple that grew on the second day.\n- On the third day, you eat an apple that grew on the second day. After this day, the apples that grew on the third day rot.\n- On the fourth to the seventh days, you eat apples that grew on the fourth day.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: apples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]\nOutput: 5\nExplanation: You can eat 5 apples:\n- On the first to the third day you eat apples that grew on the first day.\n- Do nothing on the fouth and fifth days.\n- On the sixth and seventh days you eat apples that grew on the sixth day.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == apples.length == days.length",
+    "1 <= n <= 2 * 104",
+    "0 <= apples[i], days[i] <= 2 * 104",
+    "days[i] = 0 if and only if apples[i] = 0."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It's optimal to finish the apples that will rot first before those that will rot last",
+    "You need a structure to keep the apples sorted by their finish time"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int eatenApples(vector<int>& apples, vector<int>& days) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int eatenApples(int[] apples, int[] days) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def eatenApples(self, apples, days):\n        \"\"\"\n        :type apples: List[int]\n        :type days: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def eatenApples(self, apples: List[int], days: List[int]) -> int:\n        ",
+    "c": "int eatenApples(int* apples, int applesSize, int* days, int daysSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EatenApples(int[] apples, int[] days) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} apples\n * @param {number[]} days\n * @return {number}\n */\nvar eatenApples = function(apples, days) {\n    \n};",
+    "typescript": "function eatenApples(apples: number[], days: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $apples\n     * @param Integer[] $days\n     * @return Integer\n     */\n    function eatenApples($apples, $days) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func eatenApples(_ apples: [Int], _ days: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun eatenApples(apples: IntArray, days: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int eatenApples(List<int> apples, List<int> days) {\n    \n  }\n}",
+    "golang": "func eatenApples(apples []int, days []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} apples\n# @param {Integer[]} days\n# @return {Integer}\ndef eaten_apples(apples, days)\n    \nend",
+    "scala": "object Solution {\n    def eatenApples(apples: Array[Int], days: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn eaten_apples(apples: Vec<i32>, days: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (eaten-apples apples days)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec eaten_apples(Apples :: [integer()], Days :: [integer()]) -> integer().\neaten_apples(Apples, Days) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec eaten_apples(apples :: [integer], days :: [integer]) :: integer\n  def eaten_apples(apples, days) do\n    \n  end\nend"
+  }
+}

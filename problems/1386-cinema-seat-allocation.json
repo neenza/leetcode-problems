@@ -1,0 +1,72 @@
+{
+  "title": "Cinema Seat Allocation",
+  "problem_id": "1487",
+  "frontend_id": "1386",
+  "difficulty": "Medium",
+  "problem_slug": "cinema-seat-allocation",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "description": "A cinema has n rows of seats, numbered from 1 to n and there are ten seats in each row, labelled from 1 to 10 as shown in the figure above.\nGiven the array reservedSeats containing the numbers of seats already reserved, for example, reservedSeats[i] = [3,8] means the seat located in row 3 and labelled with 8 is already reserved.\nReturn the maximum number of four-person groups you can assign on the cinema seats. A four-person group occupies four adjacent seats in one single row. Seats across an aisle (such as [3,3] and [3,4]) are not considered to be adjacent, but there is an exceptional case on which an aisle split a four-person group, in that case, the aisle split a four-person group in the middle, which means to have two people on each side.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, reservedSeats = [[1,2],[1,3],[1,8],[2,6],[3,1],[3,10]]\nOutput: 4\nExplanation: The figure above shows the optimal allocation for four groups, where seats mark with blue are already reserved and contiguous seats mark with orange are for one group.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/14/cinema_seats_3.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, reservedSeats = [[2,1],[1,8],[2,6]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/14/cinema_seats_3.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, reservedSeats = [[4,3],[1,4],[4,6],[1,7]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/14/cinema_seats_3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 10^9",
+    "1 <= reservedSeats.length <= min(10*n, 10^4)",
+    "reservedSeats[i].length == 2",
+    "1 <= reservedSeats[i][0] <= n",
+    "1 <= reservedSeats[i][1] <= 10",
+    "All reservedSeats[i] are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note you can allocate at most two families in one row.",
+    "Greedily check if you can allocate seats for two families, one family or none.",
+    "Process only rows that appear in the input, for other rows you can always allocate seats for two families."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxNumberOfFamilies(int n, vector<vector<int>>& reservedSeats) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxNumberOfFamilies(int n, int[][] reservedSeats) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxNumberOfFamilies(self, n, reservedSeats):\n        \"\"\"\n        :type n: int\n        :type reservedSeats: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:\n        ",
+    "c": "int maxNumberOfFamilies(int n, int** reservedSeats, int reservedSeatsSize, int* reservedSeatsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxNumberOfFamilies(int n, int[][] reservedSeats) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} reservedSeats\n * @return {number}\n */\nvar maxNumberOfFamilies = function(n, reservedSeats) {\n    \n};",
+    "typescript": "function maxNumberOfFamilies(n: number, reservedSeats: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $reservedSeats\n     * @return Integer\n     */\n    function maxNumberOfFamilies($n, $reservedSeats) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxNumberOfFamilies(_ n: Int, _ reservedSeats: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxNumberOfFamilies(n: Int, reservedSeats: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxNumberOfFamilies(int n, List<List<int>> reservedSeats) {\n    \n  }\n}",
+    "golang": "func maxNumberOfFamilies(n int, reservedSeats [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} reserved_seats\n# @return {Integer}\ndef max_number_of_families(n, reserved_seats)\n    \nend",
+    "scala": "object Solution {\n    def maxNumberOfFamilies(n: Int, reservedSeats: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_number_of_families(n: i32, reserved_seats: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-number-of-families n reservedSeats)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_number_of_families(N :: integer(), ReservedSeats :: [[integer()]]) -> integer().\nmax_number_of_families(N, ReservedSeats) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_number_of_families(n :: integer, reserved_seats :: [[integer]]) :: integer\n  def max_number_of_families(n, reserved_seats) do\n    \n  end\nend"
+  }
+}

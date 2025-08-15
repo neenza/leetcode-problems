@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Number Game",
+  "problem_id": "3226",
+  "frontend_id": "2974",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-number-game",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums of even length and there is also an empty array arr. Alice and Bob decided to play a game where in every round Alice and Bob will do one move. The rules of the game are as follows:\nReturn the resulting array arr.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,4,2,3]\nOutput: [3,2,5,4]\nExplanation: In round one, first Alice removes 2 and then Bob removes 3. Then in arr firstly Bob appends 3 and then Alice appends 2. So arr = [3,2].\nAt the begining of round two, nums = [5,4]. Now, first Alice removes 4 and then Bob removes 5. Then both append in arr which becomes [3,2,5,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,5]\nOutput: [5,2]\nExplanation: In round one, first Alice removes 2 and then Bob removes 5. Then in arr firstly Bob appends and then Alice appends. So arr = [5,2].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "nums.length % 2 == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array in increasing order and then swap the adjacent elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> numberGame(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numberGame(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberGame(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberGame(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numberGame(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] NumberGame(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar numberGame = function(nums) {\n    \n};",
+    "typescript": "function numberGame(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function numberGame($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberGame(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberGame(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> numberGame(List<int> nums) {\n    \n  }\n}",
+    "golang": "func numberGame(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef number_game(nums)\n    \nend",
+    "scala": "object Solution {\n    def numberGame(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_game(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (number-game nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec number_game(Nums :: [integer()]) -> [integer()].\nnumber_game(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_game(nums :: [integer]) :: [integer]\n  def number_game(nums) do\n    \n  end\nend"
+  }
+}

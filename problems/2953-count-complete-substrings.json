@@ -1,0 +1,57 @@
+{
+  "title": "Count Complete Substrings",
+  "problem_id": "3223",
+  "frontend_id": "2953",
+  "difficulty": "Hard",
+  "problem_slug": "count-complete-substrings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a string word and an integer k.\nA substring s of word is complete if:\nReturn the number of complete substrings of word.\nA substring is a non-empty contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"igigee\", k = 2\nOutput: 3\nExplanation: The complete substrings where each character appears exactly twice and the difference between adjacent characters is at most 2 are: igigee, igigee, igigee.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"aaabbbccc\", k = 3\nOutput: 6\nExplanation: The complete substrings where each character appears exactly three times and the difference between adjacent characters is at most 2 are: aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 105",
+    "word consists only of lowercase English letters.",
+    "1 <= k <= word.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are at most 26 different lengths of the complete substrings: <code>k *1, k * 2, … k * 26</code>.****",
+    "For each length, we can use sliding window to count the frequency of each letter in the window.",
+    "We still need to check for all characters in the window that <code>abs(word[i] - word[i - 1]) <= 2</code>. We do this by maintaining the values of <code>abs(word[i] - word[i - 1])</code> in the sliding window dynamically in an ordered multiset or priority queue, so that we know the maximum value at each iteration."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countCompleteSubstrings(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCompleteSubstrings(String word, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCompleteSubstrings(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCompleteSubstrings(self, word: str, k: int) -> int:\n        ",
+    "c": "int countCompleteSubstrings(char* word, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountCompleteSubstrings(string word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar countCompleteSubstrings = function(word, k) {\n    \n};",
+    "typescript": "function countCompleteSubstrings(word: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @param Integer $k\n     * @return Integer\n     */\n    function countCompleteSubstrings($word, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCompleteSubstrings(_ word: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCompleteSubstrings(word: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCompleteSubstrings(String word, int k) {\n    \n  }\n}",
+    "golang": "func countCompleteSubstrings(word string, k int) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @param {Integer} k\n# @return {Integer}\ndef count_complete_substrings(word, k)\n    \nend",
+    "scala": "object Solution {\n    def countCompleteSubstrings(word: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_complete_substrings(word: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-complete-substrings word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_complete_substrings(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\ncount_complete_substrings(Word, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_complete_substrings(word :: String.t, k :: integer) :: integer\n  def count_complete_substrings(word, k) do\n    \n  end\nend"
+  }
+}

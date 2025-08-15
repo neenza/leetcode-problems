@@ -1,0 +1,33 @@
+{
+  "title": "Immediate Food Delivery II",
+  "problem_id": "1292",
+  "frontend_id": "1174",
+  "difficulty": "Medium",
+  "problem_slug": "immediate-food-delivery-ii",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Delivery\nIf the customer's preferred delivery date is the same as the order date, then the order is called immediate; otherwise, it is called scheduled.\nThe first order of a customer is the order with the earliest order date that the customer made. It is guaranteed that a customer has precisely one first order.\nWrite a solution to find the percentage of immediate orders in the first orders of all customers, rounded to 2 decimal places.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-----------------------------+---------+\n| Column Name                 | Type    |\n+-----------------------------+---------+\n| delivery_id                 | int     |\n| customer_id                 | int     |\n| order_date                  | date    |\n| customer_pref_delivery_date | date    |\n+-----------------------------+---------+\ndelivery_id is the column of unique values of this table.\nThe table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nDelivery table:\n+-------------+-------------+------------+-----------------------------+\n| delivery_id | customer_id | order_date | customer_pref_delivery_date |\n+-------------+-------------+------------+-----------------------------+\n| 1           | 1           | 2019-08-01 | 2019-08-02                  |\n| 2           | 2           | 2019-08-02 | 2019-08-02                  |\n| 3           | 1           | 2019-08-11 | 2019-08-12                  |\n| 4           | 3           | 2019-08-24 | 2019-08-24                  |\n| 5           | 3           | 2019-08-21 | 2019-08-22                  |\n| 6           | 2           | 2019-08-11 | 2019-08-13                  |\n| 7           | 4           | 2019-08-09 | 2019-08-09                  |\n+-------------+-------------+------------+-----------------------------+\nOutput: \n+----------------------+\n| immediate_percentage |\n+----------------------+\n| 50.00                |\n+----------------------+\nExplanation: \nThe customer id 1 has a first order with delivery id 1 and it is scheduled.\nThe customer id 2 has a first order with delivery id 2 and it is immediate.\nThe customer id 3 has a first order with delivery id 5 and it is scheduled.\nThe customer id 4 has a first order with delivery id 7 and it is immediate.\nHence, half the customers have immediate first orders.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef immediate_food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

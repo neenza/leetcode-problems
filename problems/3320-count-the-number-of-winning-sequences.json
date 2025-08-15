@@ -1,0 +1,55 @@
+{
+  "title": "Count The Number of Winning Sequences",
+  "problem_id": "3588",
+  "frontend_id": "3320",
+  "difficulty": "Hard",
+  "problem_slug": "count-the-number-of-winning-sequences",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Alice and Bob are playing a fantasy battle game consisting of n rounds where they summon one of three magical creatures each round: a Fire Dragon, a Water Serpent, or an Earth Golem. In each round, players simultaneously summon their creature and are awarded points as follows:\nYou are given a string s consisting of n characters 'F', 'W', and 'E', representing the sequence of creatures Alice will summon in each round:\nBob’s sequence of moves is unknown, but it is guaranteed that Bob will never summon the same creature in two consecutive rounds. Bob beats Alice if the total number of points awarded to Bob after n rounds is strictly greater than the points awarded to Alice.\nReturn the number of distinct sequences Bob can use to beat Alice.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"FFF\"\nOutput: 3\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"WFW\" , \"FWF\" , or \"WEW\" . Note that other winning sequences like \"WWE\" or \"EWW\" are invalid since Bob cannot make the same move twice in a row.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"FWEFW\"\nOutput: 18\nExplanation:\nBob can beat Alice by making one of the following sequences of moves: \"FWFWF\" , \"FWFWE\" , \"FWEFE\" , \"FWEWE\" , \"FEFWF\" , \"FEFWE\" , \"FEFEW\" , \"FEWFE\" , \"WFEFE\" , \"WFEWE\" , \"WEFWF\" , \"WEFWE\" , \"WEFEF\" , \"WEFEW\" , \"WEWFW\" , \"WEWFE\" , \"EWFWE\" , or \"EWEWE\" .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is one of 'F', 'W', or 'E'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "For <code>0 < i < n - 1</code>, <code>-n < j < n</code>, and <code>k</code> in <code>{’F’, ‘W’, ‘E’}</code>, let <code>dp[i][j][k]</code>  be the number of sequences consisting of the first <code>i</code> moves such that the difference between bob’s points and alice’s point is equal to <code>j</code> and the <code>i<sup>th</sup></code> move that Bob played is <code>k</code>.",
+    "The answer is the sum of <code>dp[n - 1][j][k]</code>over all <code>j > 0</code> and over all <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countWinningSequences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countWinningSequences(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countWinningSequences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countWinningSequences(self, s: str) -> int:\n        ",
+    "c": "int countWinningSequences(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountWinningSequences(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countWinningSequences = function(s) {\n    \n};",
+    "typescript": "function countWinningSequences(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countWinningSequences($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countWinningSequences(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countWinningSequences(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countWinningSequences(String s) {\n    \n  }\n}",
+    "golang": "func countWinningSequences(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_winning_sequences(s)\n    \nend",
+    "scala": "object Solution {\n    def countWinningSequences(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_winning_sequences(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-winning-sequences s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_winning_sequences(S :: unicode:unicode_binary()) -> integer().\ncount_winning_sequences(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_winning_sequences(s :: String.t) :: integer\n  def count_winning_sequences(s) do\n    \n  end\nend"
+  }
+}

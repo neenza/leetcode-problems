@@ -1,0 +1,66 @@
+{
+  "title": "Minimum Window Substring",
+  "problem_id": "76",
+  "frontend_id": "76",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-window-substring",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string \"\".\nThe testcases will be generated such that the answer is unique.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Could you find an algorithm that runs in O(m + n) time?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ADOBECODEBANC\", t = \"ABC\"\nOutput: \"BANC\"\nExplanation: The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"a\", t = \"a\"\nOutput: \"a\"\nExplanation: The entire string s is the minimum window.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"a\", t = \"aa\"\nOutput: \"\"\nExplanation: Both 'a's from t must be included in the window.\nSince the largest window of s only has one 'a', return empty string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == s.length",
+    "n == t.length",
+    "1 <= m, n <= 105",
+    "s and t consist of uppercase and lowercase English letters."
+  ],
+  "follow_ups": [
+    "Could you find an algorithm that runs in O(m + n) time?"
+  ],
+  "hints": [
+    "Use two pointers to create a window of letters in s, which would have all the characters from t.",
+    "Expand the right pointer until all the characters of t are covered.",
+    "Once all the characters are covered, move the left pointer and ensure that all the characters are still covered to minimize the subarray size.",
+    "Continue expanding the right and left pointers until you reach the end of s."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string minWindow(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minWindow(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minWindow(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minWindow(self, s: str, t: str) -> str:\n        ",
+    "c": "char* minWindow(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MinWindow(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {string}\n */\nvar minWindow = function(s, t) {\n    \n};",
+    "typescript": "function minWindow(s: string, t: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return String\n     */\n    function minWindow($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minWindow(_ s: String, _ t: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minWindow(s: String, t: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String minWindow(String s, String t) {\n    \n  }\n}",
+    "golang": "func minWindow(s string, t string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {String}\ndef min_window(s, t)\n    \nend",
+    "scala": "object Solution {\n    def minWindow(s: String, t: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_window(s: String, t: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (min-window s t)\n  (-> string? string? string?)\n  )",
+    "erlang": "-spec min_window(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmin_window(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_window(s :: String.t, t :: String.t) :: String.t\n  def min_window(s, t) do\n    \n  end\nend"
+  }
+}

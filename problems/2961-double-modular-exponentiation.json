@@ -1,0 +1,54 @@
+{
+  "title": "Double Modular Exponentiation",
+  "problem_id": "3234",
+  "frontend_id": "2961",
+  "difficulty": "Medium",
+  "problem_slug": "double-modular-exponentiation",
+  "topics": [
+    "Array",
+    "Math",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed 2D array variables where variables[i] = [ai, bi, ci, mi], and an integer target.\nAn index i is good if the following formula holds:\nReturn an array consisting of good indices in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: variables = [[2,3,3,10],[3,3,3,1],[6,1,1,4]], target = 2\nOutput: [0,2]\nExplanation: For each index i in the variables array:\n1) For the index 0, variables[0] = [2,3,3,10], (23 % 10)3 % 10 = 2.\n2) For the index 1, variables[1] = [3,3,3,1], (33 % 10)3 % 1 = 0.\n3) For the index 2, variables[2] = [6,1,1,4], (61 % 10)1 % 4 = 2.\nTherefore we return [0,2] as the answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: variables = [[39,3,1000,1000]], target = 17\nOutput: []\nExplanation: For each index i in the variables array:\n1) For the index 0, variables[0] = [39,3,1000,1000], (393 % 10)1000 % 1000 = 1.\nTherefore we return [] as the answer.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= variables.length <= 100",
+    "variables[i] == [ai, bi, ci, mi]",
+    "1 <= ai, bi, ci, mi <= 103",
+    "0 <= target <= 103"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getGoodIndices(vector<vector<int>>& variables, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> getGoodIndices(int[][] variables, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getGoodIndices(self, variables, target):\n        \"\"\"\n        :type variables: List[List[int]]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getGoodIndices(self, variables: List[List[int]], target: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getGoodIndices(int** variables, int variablesSize, int* variablesColSize, int target, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> GetGoodIndices(int[][] variables, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} variables\n * @param {number} target\n * @return {number[]}\n */\nvar getGoodIndices = function(variables, target) {\n    \n};",
+    "typescript": "function getGoodIndices(variables: number[][], target: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $variables\n     * @param Integer $target\n     * @return Integer[]\n     */\n    function getGoodIndices($variables, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getGoodIndices(_ variables: [[Int]], _ target: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getGoodIndices(variables: Array<IntArray>, target: Int): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getGoodIndices(List<List<int>> variables, int target) {\n    \n  }\n}",
+    "golang": "func getGoodIndices(variables [][]int, target int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} variables\n# @param {Integer} target\n# @return {Integer[]}\ndef get_good_indices(variables, target)\n    \nend",
+    "scala": "object Solution {\n    def getGoodIndices(variables: Array[Array[Int]], target: Int): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_good_indices(variables: Vec<Vec<i32>>, target: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (get-good-indices variables target)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec get_good_indices(Variables :: [[integer()]], Target :: integer()) -> [integer()].\nget_good_indices(Variables, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_good_indices(variables :: [[integer]], target :: integer) :: [integer]\n  def get_good_indices(variables, target) do\n    \n  end\nend"
+  }
+}

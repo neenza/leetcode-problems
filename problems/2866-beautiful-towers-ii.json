@@ -1,0 +1,63 @@
+{
+  "title": "Beautiful Towers II",
+  "problem_id": "3113",
+  "frontend_id": "2866",
+  "difficulty": "Medium",
+  "problem_slug": "beautiful-towers-ii",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "You are given a 0-indexed array maxHeights of n integers.\nYou are tasked with building n towers in the coordinate line. The ith tower is built at coordinate i and has a height of heights[i].\nA configuration of towers is beautiful if the following conditions hold:\nArray heights is a mountain if there exists an index i such that:\nReturn the maximum possible sum of heights of a beautiful configuration of towers.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: maxHeights = [5,3,4,1,1]\nOutput: 13\nExplanation: One beautiful configuration with a maximum sum is heights = [5,3,3,1,1]. This configuration is beautiful since:\n- 1 <= heights[i] <= maxHeights[i]  \n- heights is a mountain of peak i = 0.\nIt can be shown that there exists no other beautiful configuration with a sum of heights greater than 13.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: maxHeights = [6,5,3,9,2,7]\nOutput: 22\nExplanation: One beautiful configuration with a maximum sum is heights = [3,3,3,9,2,2]. This configuration is beautiful since:\n- 1 <= heights[i] <= maxHeights[i]\n- heights is a mountain of peak i = 3.\nIt can be shown that there exists no other beautiful configuration with a sum of heights greater than 22.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: maxHeights = [3,2,5,5,2,3]\nOutput: 18\nExplanation: One beautiful configuration with a maximum sum is heights = [2,2,5,5,2,2]. This configuration is beautiful since:\n- 1 <= heights[i] <= maxHeights[i]\n- heights is a mountain of peak i = 2. \nNote that, for this configuration, i = 3 can also be considered a peak.\nIt can be shown that there exists no other beautiful configuration with a sum of heights greater than 18.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == maxHeights.length <= 105",
+    "1 <= maxHeights[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try all the possible indices <code>i</code> as the peak.",
+    "Let <code>left[i]</code> be the maximum sum of heights for the prefix <code>0, …, i</code> when index <code>i</code> is the peak.",
+    "Let <code>right[i]</code> be the maximum sum of heights for suffix <code>i, …, (n - 1)</code> when <code>i</code> is the peak",
+    "Compute values of <code>left[i]</code> from left to right using DP.\r\nFor each <code>i</code> from <code>0</code> to <code>n - 1</code>, <code>left[i] = maxHeights * (i - j) + answer[j]</code>, where <code>j</code> is the rightmost index to the left of <code>i</code> such that <code>maxHeights[j] < maxHeights[i] </code>.",
+    "For each <code>i</code> from <code>n - 1</code> to <code>0</code>, <code>right[i] = maxHeights * (j - i) + answer[j]</code>, where <code>j</code> is the leftmost index to the right of <code>i</code> such that <code>maxHeights[j] < maxHeights[i] </code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumSumOfHeights(vector<int>& maxHeights) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumSumOfHeights(List<Integer> maxHeights) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumSumOfHeights(self, maxHeights):\n        \"\"\"\n        :type maxHeights: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumSumOfHeights(self, maxHeights: List[int]) -> int:\n        ",
+    "c": "long long maximumSumOfHeights(int* maxHeights, int maxHeightsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumSumOfHeights(IList<int> maxHeights) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} maxHeights\n * @return {number}\n */\nvar maximumSumOfHeights = function(maxHeights) {\n    \n};",
+    "typescript": "function maximumSumOfHeights(maxHeights: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $maxHeights\n     * @return Integer\n     */\n    function maximumSumOfHeights($maxHeights) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumSumOfHeights(_ maxHeights: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumSumOfHeights(maxHeights: List<Int>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumSumOfHeights(List<int> maxHeights) {\n    \n  }\n}",
+    "golang": "func maximumSumOfHeights(maxHeights []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} max_heights\n# @return {Integer}\ndef maximum_sum_of_heights(max_heights)\n    \nend",
+    "scala": "object Solution {\n    def maximumSumOfHeights(maxHeights: List[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_sum_of_heights(max_heights: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-sum-of-heights maxHeights)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_sum_of_heights(MaxHeights :: [integer()]) -> integer().\nmaximum_sum_of_heights(MaxHeights) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_sum_of_heights(max_heights :: [integer]) :: integer\n  def maximum_sum_of_heights(max_heights) do\n    \n  end\nend"
+  }
+}

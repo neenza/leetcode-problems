@@ -1,0 +1,60 @@
+{
+  "title": "Number of Ways Where Square of Number Is Equal to Product of Two Numbers",
+  "problem_id": "1699",
+  "frontend_id": "1577",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-ways-where-square-of-number-is-equal-to-product-of-two-numbers",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Two Pointers"
+  ],
+  "description": "Given two arrays of integers nums1 and nums2, return the number of triplets formed (type 1 and type 2) under the following rules:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [7,4], nums2 = [5,2,8,9]\nOutput: 1\nExplanation: Type 1: (1, 1, 2), nums1[1]2 = nums2[1] * nums2[2]. (42 = 2 * 8).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [1,1], nums2 = [1,1,1]\nOutput: 9\nExplanation: All Triplets are valid, because 12 = 1 * 1.\nType 1: (0,0,1), (0,0,2), (0,1,2), (1,0,1), (1,0,2), (1,1,2).  nums1[i]2 = nums2[j] * nums2[k].\nType 2: (0,0,1), (1,0,1), (2,0,1). nums2[i]2 = nums1[j] * nums1[k].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [7,7,8,3], nums2 = [1,2,9,7]\nOutput: 2\nExplanation: There are 2 valid triplets.\nType 1: (3,0,2).  nums1[3]2 = nums2[0] * nums2[2].\nType 2: (3,0,1).  nums2[3]2 = nums1[0] * nums1[1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums1.length, nums2.length <= 1000",
+    "1 <= nums1[i], nums2[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precalculate the frequencies of all nums1[i]^2 and nums2[i]^2"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numTriplets(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numTriplets(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numTriplets(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int numTriplets(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumTriplets(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar numTriplets = function(nums1, nums2) {\n    \n};",
+    "typescript": "function numTriplets(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function numTriplets($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numTriplets(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numTriplets(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numTriplets(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func numTriplets(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef num_triplets(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def numTriplets(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_triplets(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-triplets nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_triplets(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nnum_triplets(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_triplets(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def num_triplets(nums1, nums2) do\n    \n  end\nend"
+  }
+}

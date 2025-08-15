@@ -1,0 +1,62 @@
+{
+  "title": "Rearrange K Substrings to Form Target String",
+  "problem_id": "3595",
+  "frontend_id": "3365",
+  "difficulty": "Medium",
+  "problem_slug": "rearrange-k-substrings-to-form-target-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "You are given two strings s and t, both of which are anagrams of each other, and an integer k.\nYour task is to determine whether it is possible to split the string s into k equal-sized substrings, rearrange the substrings, and concatenate them in any order to create a new string that matches the given string t.\nReturn true if this is possible, otherwise, return false.\nAn anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.\nA substring is a contiguous non-empty sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcd\", t = \"cdab\", k = 2\nOutput: true\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aabbcc\", t = \"bbaacc\", k = 3\nOutput: true\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"aabbcc\", t = \"bbaacc\", k = 2\nOutput: false\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length == t.length <= 2 * 105",
+    "1 <= k <= s.length",
+    "s.length is divisible by k.",
+    "s and t consist only of lowercase English letters.",
+    "The input is generated such that s and t are anagrams of each other."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Split <code>s</code> into <code>k</code> equal-sized substrings, use a map to track frequencies, and check if rearranging them can form <code>t</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPossibleToRearrange(string s, string t, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPossibleToRearrange(String s, String t, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPossibleToRearrange(self, s, t, k):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPossibleToRearrange(self, s: str, t: str, k: int) -> bool:\n        ",
+    "c": "bool isPossibleToRearrange(char* s, char* t, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPossibleToRearrange(string s, string t, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number} k\n * @return {boolean}\n */\nvar isPossibleToRearrange = function(s, t, k) {\n    \n};",
+    "typescript": "function isPossibleToRearrange(s: string, t: string, k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @param Integer $k\n     * @return Boolean\n     */\n    function isPossibleToRearrange($s, $t, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPossibleToRearrange(_ s: String, _ t: String, _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPossibleToRearrange(s: String, t: String, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPossibleToRearrange(String s, String t, int k) {\n    \n  }\n}",
+    "golang": "func isPossibleToRearrange(s string, t string, k int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @param {Integer} k\n# @return {Boolean}\ndef is_possible_to_rearrange(s, t, k)\n    \nend",
+    "scala": "object Solution {\n    def isPossibleToRearrange(s: String, t: String, k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_possible_to_rearrange(s: String, t: String, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-possible-to-rearrange s t k)\n  (-> string? string? exact-integer? boolean?)\n  )",
+    "erlang": "-spec is_possible_to_rearrange(S :: unicode:unicode_binary(), T :: unicode:unicode_binary(), K :: integer()) -> boolean().\nis_possible_to_rearrange(S, T, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_possible_to_rearrange(s :: String.t, t :: String.t, k :: integer) :: boolean\n  def is_possible_to_rearrange(s, t, k) do\n    \n  end\nend"
+  }
+}

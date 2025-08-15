@@ -1,0 +1,58 @@
+{
+  "title": "Maximize Score of Numbers in Ranges",
+  "problem_id": "3485",
+  "frontend_id": "3281",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-score-of-numbers-in-ranges",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an array of integers start and an integer d, representing n intervals [start[i], start[i] + d].\nYou are asked to choose n integers where the ith integer must belong to the ith interval. The score of the chosen integers is defined as the minimum absolute difference between any two integers that have been chosen.\nReturn the maximum possible score of the chosen integers.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: start = [6,0,3], d = 2\nOutput: 4\nExplanation:\nThe maximum possible score can be obtained by choosing integers: 8, 0, and 4. The score of these chosen integers is min(|8 - 0|, |8 - 4|, |0 - 4|) which equals 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: start = [2,6,13,13], d = 5\nOutput: 5\nExplanation:\nThe maximum possible score can be obtained by choosing integers: 2, 7, 13, and 18. The score of these chosen integers is min(|2 - 7|, |2 - 13|, |2 - 18|, |7 - 13|, |7 - 18|, |13 - 18|) which equals 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= start.length <= 105",
+    "0 <= start[i] <= 109",
+    "0 <= d <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use binary search here?",
+    "Suppose that the answer is <code>x</code>. We can find a valid configuration of integers by sorting <code>start</code>, the first integer should be <code>start[0]</code>, then each subsequent integer should be the smallest one in <code>[start[i], start[i] + d]</code> that is greater than <code>last_chosen_value + x</code>.",
+    "Binary search over <code>x</code>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPossibleScore(vector<int>& start, int d) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPossibleScore(int[] start, int d) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPossibleScore(self, start, d):\n        \"\"\"\n        :type start: List[int]\n        :type d: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPossibleScore(self, start: List[int], d: int) -> int:\n        ",
+    "c": "int maxPossibleScore(int* start, int startSize, int d) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPossibleScore(int[] start, int d) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} start\n * @param {number} d\n * @return {number}\n */\nvar maxPossibleScore = function(start, d) {\n    \n};",
+    "typescript": "function maxPossibleScore(start: number[], d: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $start\n     * @param Integer $d\n     * @return Integer\n     */\n    function maxPossibleScore($start, $d) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPossibleScore(_ start: [Int], _ d: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPossibleScore(start: IntArray, d: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPossibleScore(List<int> start, int d) {\n    \n  }\n}",
+    "golang": "func maxPossibleScore(start []int, d int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} start\n# @param {Integer} d\n# @return {Integer}\ndef max_possible_score(start, d)\n    \nend",
+    "scala": "object Solution {\n    def maxPossibleScore(start: Array[Int], d: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_possible_score(start: Vec<i32>, d: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-possible-score start d)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_possible_score(Start :: [integer()], D :: integer()) -> integer().\nmax_possible_score(Start, D) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_possible_score(start :: [integer], d :: integer) :: integer\n  def max_possible_score(start, d) do\n    \n  end\nend"
+  }
+}

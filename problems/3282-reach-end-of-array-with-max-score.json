@@ -1,0 +1,53 @@
+{
+  "title": "Reach End of Array With Max Score",
+  "problem_id": "3528",
+  "frontend_id": "3282",
+  "difficulty": "Medium",
+  "problem_slug": "reach-end-of-array-with-max-score",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given an integer array nums of length n.\nYour goal is to start at index 0 and reach index n - 1. You can only jump to indices greater than your current index.\nThe score for a jump from index i to index j is calculated as (j - i) * nums[i].\nReturn the maximum possible total score by the time you reach the last index.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,1,5]\nOutput: 7\nExplanation:\nFirst, jump to index 1 and then jump to the last index. The final score is 1 * 1 + 2 * 3 = 7 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,3,1,3,2]\nOutput: 16\nExplanation:\nJump directly to the last index. The final score is 4 * 4 = 16 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It can be proven that from each index <code>i</code>, the optimal solution is to jump to the nearest index <code>j > i</code> such that <code>nums[j] > nums[i]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long findMaximumScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findMaximumScore(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMaximumScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMaximumScore(self, nums: List[int]) -> int:\n        ",
+    "c": "long long findMaximumScore(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long FindMaximumScore(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findMaximumScore = function(nums) {\n    \n};",
+    "typescript": "function findMaximumScore(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findMaximumScore($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMaximumScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMaximumScore(nums: List<Int>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMaximumScore(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findMaximumScore(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_maximum_score(nums)\n    \nend",
+    "scala": "object Solution {\n    def findMaximumScore(nums: List[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_maximum_score(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (find-maximum-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_maximum_score(Nums :: [integer()]) -> integer().\nfind_maximum_score(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_maximum_score(nums :: [integer]) :: integer\n  def find_maximum_score(nums) do\n    \n  end\nend"
+  }
+}

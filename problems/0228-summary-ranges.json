@@ -1,0 +1,52 @@
+{
+  "title": "Summary Ranges",
+  "problem_id": "228",
+  "frontend_id": "228",
+  "difficulty": "Easy",
+  "problem_slug": "summary-ranges",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a sorted unique integer array nums.\nA range [a,b] is the set of all integers from a to b (inclusive).\nReturn the smallest sorted list of ranges that cover all the numbers in the array exactly. That is, each element of nums is covered by exactly one of the ranges, and there is no integer x such that x is in one of the ranges but not in nums.\nEach range [a,b] in the list should be output as:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,2,4,5,7]\nOutput: [\"0->2\",\"4->5\",\"7\"]\nExplanation: The ranges are:\n[0,2] --> \"0->2\"\n[4,5] --> \"4->5\"\n[7,7] --> \"7\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,2,3,4,6,8,9]\nOutput: [\"0\",\"2->4\",\"6\",\"8->9\"]\nExplanation: The ranges are:\n[0,0] --> \"0\"\n[2,4] --> \"2->4\"\n[6,6] --> \"6\"\n[8,9] --> \"8->9\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= nums.length <= 20",
+    "-231 <= nums[i] <= 231 - 1",
+    "All the values of nums are unique.",
+    "nums is sorted in ascending order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> summaryRanges(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> summaryRanges(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def summaryRanges(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def summaryRanges(self, nums: List[int]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** summaryRanges(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> SummaryRanges(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {string[]}\n */\nvar summaryRanges = function(nums) {\n    \n};",
+    "typescript": "function summaryRanges(nums: number[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return String[]\n     */\n    function summaryRanges($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func summaryRanges(_ nums: [Int]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun summaryRanges(nums: IntArray): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> summaryRanges(List<int> nums) {\n    \n  }\n}",
+    "golang": "func summaryRanges(nums []int) []string {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {String[]}\ndef summary_ranges(nums)\n    \nend",
+    "scala": "object Solution {\n    def summaryRanges(nums: Array[Int]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn summary_ranges(nums: Vec<i32>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (summary-ranges nums)\n  (-> (listof exact-integer?) (listof string?))\n  )",
+    "erlang": "-spec summary_ranges(Nums :: [integer()]) -> [unicode:unicode_binary()].\nsummary_ranges(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec summary_ranges(nums :: [integer]) :: [String.t]\n  def summary_ranges(nums) do\n    \n  end\nend"
+  }
+}

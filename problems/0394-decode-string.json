@@ -1,0 +1,59 @@
+{
+  "title": "Decode String",
+  "problem_id": "394",
+  "frontend_id": "394",
+  "difficulty": "Medium",
+  "problem_slug": "decode-string",
+  "topics": [
+    "String",
+    "Stack",
+    "Recursion"
+  ],
+  "description": "Given an encoded string, return its decoded string.\nThe encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.\nYou may assume that the input string is always valid; there are no extra white spaces, square brackets are well-formed, etc. Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there will not be input like 3a or 2[4].\nThe test cases are generated so that the length of the output will never exceed 105.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"3[a]2[bc]\"\nOutput: \"aaabcbc\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"3[a2[c]]\"\nOutput: \"accaccacc\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"2[abc]3[cd]ef\"\nOutput: \"abcabccdcdcdef\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 30",
+    "s consists of lowercase English letters, digits, and square brackets '[]'.",
+    "s is guaranteed to be a valid input.",
+    "All the integers in s are in the range [1, 300]."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string decodeString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String decodeString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decodeString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decodeString(self, s: str) -> str:\n        ",
+    "c": "char* decodeString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string DecodeString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar decodeString = function(s) {\n    \n};",
+    "typescript": "function decodeString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function decodeString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decodeString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decodeString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String decodeString(String s) {\n    \n  }\n}",
+    "golang": "func decodeString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef decode_string(s)\n    \nend",
+    "scala": "object Solution {\n    def decodeString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decode_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (decode-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec decode_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\ndecode_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decode_string(s :: String.t) :: String.t\n  def decode_string(s) do\n    \n  end\nend"
+  }
+}

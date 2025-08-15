@@ -1,0 +1,62 @@
+{
+  "title": "Shortest Cycle in a Graph",
+  "problem_id": "2671",
+  "frontend_id": "2608",
+  "difficulty": "Hard",
+  "problem_slug": "shortest-cycle-in-a-graph",
+  "topics": [
+    "Breadth-First Search",
+    "Graph"
+  ],
+  "description": "There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1. The edges in the graph are represented by a given 2D integer array edges, where edges[i] = [ui, vi] denotes an edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.\nReturn the length of the shortest cycle in the graph. If no cycle exists, return -1.\nA cycle is a path that starts and ends at the same node, and each edge in the path is used only once.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 7, edges = [[0,1],[1,2],[2,0],[3,4],[4,5],[5,6],[6,3]]\nOutput: 3\nExplanation: The cycle with the smallest length is : 0 -> 1 -> 2 -> 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/04/cropped.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, edges = [[0,1],[0,2]]\nOutput: -1\nExplanation: There are no cycles in this graph.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/04/croppedagin.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "1 <= edges.length <= 1000",
+    "edges[i].length == 2",
+    "0 <= ui, vi < n",
+    "ui != vi",
+    "There are no repeated edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can BFS be used?",
+    "For each vertex u, calculate the length of the shortest cycle that contains vertex u using BFS"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findShortestCycle(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findShortestCycle(int n, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findShortestCycle(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findShortestCycle(self, n: int, edges: List[List[int]]) -> int:\n        ",
+    "c": "int findShortestCycle(int n, int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindShortestCycle(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number}\n */\nvar findShortestCycle = function(n, edges) {\n    \n};",
+    "typescript": "function findShortestCycle(n: number, edges: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @return Integer\n     */\n    function findShortestCycle($n, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findShortestCycle(_ n: Int, _ edges: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findShortestCycle(n: Int, edges: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findShortestCycle(int n, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func findShortestCycle(n int, edges [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Integer}\ndef find_shortest_cycle(n, edges)\n    \nend",
+    "scala": "object Solution {\n    def findShortestCycle(n: Int, edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_shortest_cycle(n: i32, edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-shortest-cycle n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_shortest_cycle(N :: integer(), Edges :: [[integer()]]) -> integer().\nfind_shortest_cycle(N, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_shortest_cycle(n :: integer, edges :: [[integer]]) :: integer\n  def find_shortest_cycle(n, edges) do\n    \n  end\nend"
+  }
+}

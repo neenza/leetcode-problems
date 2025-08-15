@@ -1,0 +1,52 @@
+{
+  "title": "Minimum Operations to Make Array Equal",
+  "problem_id": "1674",
+  "frontend_id": "1551",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-make-array-equal",
+  "topics": [
+    "Math"
+  ],
+  "description": "You have an array arr of length n where arr[i] = (2 * i) + 1 for all valid values of i (i.e., 0 <= i < n).\nIn one operation, you can select two indices x and y where 0 <= x, y < n and subtract 1 from arr[x] and add 1 to arr[y] (i.e., perform arr[x] -=1 and arr[y] += 1). The goal is to make all the elements of the array equal. It is guaranteed that all the elements of the array can be made equal using some operations.\nGiven an integer n, the length of the array, return the minimum number of operations needed to make all the elements of arr equal.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3\nOutput: 2\nExplanation: arr = [1, 3, 5]\nFirst operation choose x = 2 and y = 0, this leads arr to be [2, 3, 4]\nIn the second operation choose x = 2 and y = 0 again, thus arr = [3, 3, 3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6\nOutput: 9",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Build the array arr using the given formula, define target = sum(arr) / n",
+    "What is the number of operations needed to convert arr so that all elements equal target ?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, n: int) -> int:\n        ",
+    "c": "int minOperations(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar minOperations = function(n) {\n    \n};",
+    "typescript": "function minOperations(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function minOperations($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(int n) {\n    \n  }\n}",
+    "golang": "func minOperations(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef min_operations(n)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(N :: integer()) -> integer().\nmin_operations(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(n :: integer) :: integer\n  def min_operations(n) do\n    \n  end\nend"
+  }
+}

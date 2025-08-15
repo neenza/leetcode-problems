@@ -1,0 +1,51 @@
+{
+  "title": "Longest Continuous Increasing Subsequence",
+  "problem_id": "674",
+  "frontend_id": "674",
+  "difficulty": "Easy",
+  "problem_slug": "longest-continuous-increasing-subsequence",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an unsorted array of integers nums, return the length of the longest continuous increasing subsequence (i.e. subarray). The subsequence must be strictly increasing.\nA continuous increasing subsequence is defined by two indices l and r (l < r) such that it is [nums[l], nums[l + 1], ..., nums[r - 1], nums[r]] and for each l <= i < r, nums[i] < nums[i + 1].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,5,4,7]\nOutput: 3\nExplanation: The longest continuous increasing subsequence is [1,3,5] with length 3.\nEven though [1,3,5,7] is an increasing subsequence, it is not continuous as elements 5 and 7 are separated by element\n4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,2,2,2,2]\nOutput: 1\nExplanation: The longest continuous increasing subsequence is [2] with length 1. Note that it must be strictly\nincreasing.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findLengthOfLCIS(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLengthOfLCIS(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLengthOfLCIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLengthOfLCIS(self, nums: List[int]) -> int:\n        ",
+    "c": "int findLengthOfLCIS(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindLengthOfLCIS(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findLengthOfLCIS = function(nums) {\n    \n};",
+    "typescript": "function findLengthOfLCIS(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findLengthOfLCIS($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLengthOfLCIS(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLengthOfLCIS(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLengthOfLCIS(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findLengthOfLCIS(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_length_of_lcis(nums)\n    \nend",
+    "scala": "object Solution {\n    def findLengthOfLCIS(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_length_of_lcis(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-length-of-lcis nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_length_of_lcis(Nums :: [integer()]) -> integer().\nfind_length_of_lcis(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_length_of_lcis(nums :: [integer]) :: integer\n  def find_length_of_lcis(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n\n### Approach #1: Sliding Window [Accepted]\n\n**Intuition and Algorithm**\n\nEvery (continuous) increasing subsequence is disjoint, and the boundary of each such subsequence occurs whenever `nums[i-1] >= nums[i]`. When it does, it marks the start of a new increasing subsequence at `nums[i]`, and we store such `i` in the variable `anchor`.\n\nFor example, if `nums = [7, 8, 9, 1, 2, 3]`, then `anchor` starts at `0` (`nums[anchor] = 7`) and gets set again to `anchor = 3` (`nums[anchor] = 1`). Regardless of the value of `anchor`, we record a candidate answer of `i - anchor + 1`, the length of the subarray `nums[anchor], nums[anchor+1], ..., nums[i]`, and our answer gets updated appropriately.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `nums`. We perform one loop through `nums`.\n\n* Space Complexity: $$O(1)$$, the space used by `anchor` and `ans`."
+}

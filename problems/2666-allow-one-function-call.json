@@ -1,0 +1,33 @@
+{
+  "title": "Allow One Function Call",
+  "problem_id": "2796",
+  "frontend_id": "2666",
+  "difficulty": "Easy",
+  "problem_slug": "allow-one-function-call",
+  "topics": [],
+  "description": "Given a function fn, return a new function that is identical to the original function except that it ensures fn is called at most once.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: fn = (a,b,c) => (a + b + c), calls = [[1,2,3],[2,3,6]]\nOutput: [{\"calls\":1,\"value\":6}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(1, 2, 3); // 6\nonceFn(2, 3, 6); // undefined, fn was not called",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: fn = (a,b,c) => (a * b * c), calls = [[5,7,4],[2,3,6],[4,6,8]]\nOutput: [{\"calls\":1,\"value\":140}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(5, 7, 4); // 140\nonceFn(2, 3, 6); // undefined, fn was not called\nonceFn(4, 6, 8); // undefined, fn was not called",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "calls is a valid JSON array",
+    "1 <= calls.length <= 10",
+    "1 <= calls[i].length <= 100",
+    "2 <= JSON.stringify(calls).length <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "javascript": "/**\n * @param {Function} fn\n * @return {Function}\n */\nvar once = function(fn) {\n    \n    return function(...args){\n        \n    }\n};\n\n/**\n * let fn = (a,b,c) => (a + b + c)\n * let onceFn = once(fn)\n *\n * onceFn(1,2,3); // 6\n * onceFn(2,3,6); // returns undefined without calling fn\n */\n",
+    "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\ntype OnceFn = (...args: JSONValue[]) => JSONValue | undefined\n\nfunction once(fn: Function): OnceFn {\n    \n    return function (...args) {\n        \n    };\n}\n\n/**\n * let fn = (a,b,c) => (a + b + c)\n * let onceFn = once(fn)\n *\n * onceFn(1,2,3); // 6\n * onceFn(2,3,6); // returns undefined without calling fn\n */"
+  }
+}

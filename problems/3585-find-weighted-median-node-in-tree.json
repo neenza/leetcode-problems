@@ -1,0 +1,78 @@
+{
+  "title": "Find Weighted Median Node in Tree",
+  "problem_id": "3900",
+  "frontend_id": "3585",
+  "difficulty": "Hard",
+  "problem_slug": "find-weighted-median-node-in-tree",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "You are given an integer n and an undirected, weighted tree rooted at node 0 with n nodes numbered from 0 to n - 1. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, wi] indicates an edge from node ui to vi with weight wi.\nThe weighted median node is defined as the first node x on the path from ui to vi such that the sum of edge weights from ui to x is greater than or equal to half of the total path weight.\nYou are given a 2D integer array queries. For each queries[j] = [uj, vj], determine the weighted median node along the path from uj to vj.\nReturn an array ans, where ans[j] is the node index of the weighted median for queries[j].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, edges = [[0,1,7]], queries = [[1,0],[0,1]]\nOutput: [0,1]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/05/26/screenshot-2025-05-26-at-193447.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1,2],[2,0,4]], queries = [[0,1],[2,0],[1,2]]\nOutput: [1,0,2]\nE xplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/05/26/screenshot-2025-05-26-at-193610.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, edges = [[0,1,2],[0,2,5],[1,3,1],[2,4,3]], queries = [[3,4],[1,2]]\nOutput: [2,2]\nExplanation:\n\nSum from 1 → 0 = 2 < 3.5 . Sum from 1 → 2 = 2 + 5 = 7 >= 3.5 , median is node 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/05/26/screenshot-2025-05-26-at-193857.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[i] == [ui, vi, wi]",
+    "0 <= ui, vi < n",
+    "1 <= wi <= 109",
+    "1 <= queries.length <= 105",
+    "queries[j] == [uj, vj]",
+    "0 <= uj, vj < n",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use binary lifting and lowest common ancestor.",
+    "Let the query nodes be <code>u</code> and <code>v</code>, with lowest common ancestor <code>l</code> and total path weight <code>tot</code>.",
+    "If the median lies on the path from <code>u</code> up to <code>l</code>: find the first node where <code>2 * sum >= tot</code> (equivalently, the last where <code>2 * sum < tot</code> and move one node above).",
+    "Otherwise, it lies on the path from <code>v</code> up to <code>l</code>: use the same <code>2 * sum >= tot</code> criterion as you climb.",
+    "In both cases, binary lifting with sparse tables lets you jump by powers of two while tracking cumulative weights to locate the weighted median in O(log n)"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findMedian(int n, vector<vector<int>>& edges, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findMedian(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMedian(self, n, edges, queries):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMedian(self, n: int, edges: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findMedian(int n, int** edges, int edgesSize, int* edgesColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindMedian(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar findMedian = function(n, edges, queries) {\n    \n};",
+    "typescript": "function findMedian(n: number, edges: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function findMedian($n, $edges, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMedian(_ n: Int, _ edges: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMedian(n: Int, edges: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findMedian(int n, List<List<int>> edges, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func findMedian(n int, edges [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef find_median(n, edges, queries)\n    \nend",
+    "scala": "object Solution {\n    def findMedian(n: Int, edges: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_median(n: i32, edges: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-median n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_median(N :: integer(), Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nfind_median(N, Edges, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_median(n :: integer, edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def find_median(n, edges, queries) do\n    \n  end\nend"
+  }
+}

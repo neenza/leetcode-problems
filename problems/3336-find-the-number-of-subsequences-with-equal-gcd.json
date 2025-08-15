@@ -1,0 +1,60 @@
+{
+  "title": "Find the Number of Subsequences With Equal GCD",
+  "problem_id": "3608",
+  "frontend_id": "3336",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-number-of-subsequences-with-equal-gcd",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums.\nYour task is to find the number of pairs of non-empty subsequences (seq1, seq2) of nums that satisfy the following conditions:\nReturn the total number of such pairs.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 10\nExplanation:\nThe subsequence pairs which have the GCD of their elements equal to 1 are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,20,30]\nOutput: 2\nExplanation:\nThe subsequence pairs which have the GCD of their elements equal to 10 are:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1,1]\nOutput: 50",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 200",
+    "1 <= nums[i] <= 200"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to store number of subsequences up till index <code>i</code> with GCD <code>g1</code> and <code>g2</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int subsequencePairCount(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int subsequencePairCount(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def subsequencePairCount(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def subsequencePairCount(self, nums: List[int]) -> int:\n        ",
+    "c": "int subsequencePairCount(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SubsequencePairCount(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar subsequencePairCount = function(nums) {\n    \n};",
+    "typescript": "function subsequencePairCount(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function subsequencePairCount($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func subsequencePairCount(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun subsequencePairCount(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int subsequencePairCount(List<int> nums) {\n    \n  }\n}",
+    "golang": "func subsequencePairCount(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef subsequence_pair_count(nums)\n    \nend",
+    "scala": "object Solution {\n    def subsequencePairCount(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn subsequence_pair_count(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (subsequence-pair-count nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec subsequence_pair_count(Nums :: [integer()]) -> integer().\nsubsequence_pair_count(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec subsequence_pair_count(nums :: [integer]) :: integer\n  def subsequence_pair_count(nums) do\n    \n  end\nend"
+  }
+}

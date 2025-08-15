@@ -1,0 +1,71 @@
+{
+  "title": "Time Taken to Mark All Nodes",
+  "problem_id": "3532",
+  "frontend_id": "3241",
+  "difficulty": "Hard",
+  "problem_slug": "time-taken-to-mark-all-nodes",
+  "topics": [
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search",
+    "Graph"
+  ],
+  "description": "There exists an undirected tree with n nodes numbered 0 to n - 1. You are given a 2D integer array edges of length n - 1, where edges[i] = [ui, vi] indicates that there is an edge between nodes ui and vi in the tree.\nInitially, all nodes are unmarked. For each node i:\nReturn an array times where times[i] is the time when all nodes get marked in the tree, if you mark node i at time t = 0.\nNote that the answer for each times[i] is independent, i.e. when you mark node i all other nodes are unmarked.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1],[0,2]]\nOutput: [2,4,3]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/01/screenshot-2024-06-02-122236.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[0,1]]\nOutput: [1,2]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/01/screenshot-2024-06-02-122249.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: edges = [[2,4],[0,1],[2,3],[0,2]]\nOutput: [4,6,3,5,5]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/03/screenshot-2024-06-03-210550.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[i].length == 2",
+    "0 <= edges[i][0], edges[i][1] <= n - 1",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use dp on trees?",
+    "Store the two most distant children for each node.",
+    "When re-rooting the tree, keep a variable for distance to the root node."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> timeTaken(vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] timeTaken(int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def timeTaken(self, edges):\n        \"\"\"\n        :type edges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def timeTaken(self, edges: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* timeTaken(int** edges, int edgesSize, int* edgesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] TimeTaken(int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @return {number[]}\n */\nvar timeTaken = function(edges) {\n    \n};",
+    "typescript": "function timeTaken(edges: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @return Integer[]\n     */\n    function timeTaken($edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func timeTaken(_ edges: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun timeTaken(edges: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> timeTaken(List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func timeTaken(edges [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @return {Integer[]}\ndef time_taken(edges)\n    \nend",
+    "scala": "object Solution {\n    def timeTaken(edges: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn time_taken(edges: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (time-taken edges)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec time_taken(Edges :: [[integer()]]) -> [integer()].\ntime_taken(Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec time_taken(edges :: [[integer]]) :: [integer]\n  def time_taken(edges) do\n    \n  end\nend"
+  }
+}

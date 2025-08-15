@@ -1,0 +1,30 @@
+{
+  "title": "Drop Duplicate Rows",
+  "problem_id": "3071",
+  "frontend_id": "2882",
+  "difficulty": "Easy",
+  "problem_slug": "drop-duplicate-rows",
+  "topics": [],
+  "description": "There are some duplicate rows in the DataFrame based on the email column.\nWrite a solution to remove these duplicate rows and keep only the first occurrence.\nThe result format is in the following example.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame customers\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| customer_id | int    |\n| name        | object |\n| email       | object |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Example 1:\nInput:\n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 5           | Finn    | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\nOutput:  \n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\nExplanation:\nAlic (customer_id = 4) and Finn (customer_id = 5) both use john@example.com, so only the first occurrence of this email is retained.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using a build-in function in pandas library to remove the duplicate rows based on specified data."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\n\nIn this problem, we have a DataFrame named `customers` that consists of details like `customer_id`, `name`, and `email`. The goal is to remove duplicate rows based on the `email` column and only keep the first occurrence of any duplicated email.\n\n**Key Concepts**:\n1. **DataFrame:** a 2D table-like structure, similar to a spreadsheet or SQL table. Each row represents an individual record and each column represents a different attribute. It is size-mutable and designed to handle a mix of different types of data. \n2. **`drop_duplicates` Function:** The `drop_duplicates` function is a method of the DataFrame object in the pandas library. Its purpose is to drop duplicate rows, and you can specify the criteria based on which the rows are considered duplicates.\n\n**`drop_duplicates` Function Argument Definition:**\n- `subset`: This is the column label or sequence of labels to consider for identifying duplicate rows. If not provided, it considers all columns in the DataFrame.\n  \n- `keep`: This argument determines which duplicate row to retain.\n  - `'first'`: (default) Drop duplicates except for the first occurrence.\n  - `'last'`: Drop duplicates except for the last occurrence.\n  - `False`: Drop all duplicates.\n\n- `inplace`: If set to `True`, the changes are made directly to the object without returning a new object. If set to `False` (default), a new object with duplicates dropped will be returned.\n\n### Intuition\n\nLet’s go step by step through the provided solution:\n\n**1. Importing pandas:**\n```python\nimport pandas as pd\n```\n\nThis imports the pandas library and gives it an alias `pd`. pandas is a fast, powerful, flexible, and easy-to-use open-source data analysis and data manipulation library built on top of the Python programming language.\n\n**2. Defining the function:**\n```python\ndef dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:\n```\n\nThis line defines a new function named `dropDuplicateEmails` which takes a DataFrame `customers` as an input argument and returns a DataFrame.\n\n**3. Dropping duplicate rows based on email:**\n```python\ncustomers.drop_duplicates(subset='email', keep='first', inplace=True)\n```\n\nThis line uses the `drop_duplicates` method on the `customers` DataFrame. \n - `subset='email'`: This means that we are considering duplicates based on the `email` column only.\n - `keep='first'`: This indicates that we want to keep the first occurrence of any duplicated email and drop the subsequent occurrences.\n - `inplace=True`: This means the changes will be made directly to the passed DataFrame (`customers`) without returning a new one.\n\n**4. Returning the modified DataFrame:**\n```python\nreturn customers\n```\n\nFinally, we return the modified `customers` DataFrame with the duplicate rows based on email removed.\n\n**Using the Solution**\n\nBy using the provided function, you can clean up the data in your `customers` DataFrame and ensure that each customer's email is unique, helping maintain data integrity. If two customers have the same email address, only the first one encountered will be kept in the resulting DataFrame.\n\n**Visualization of `dropDuplicateEmails` function**\n\n![fig](../Figures/3315/3315-1.png)\n\nWhen you pass this DataFrame to the function:customer_idnameemail1Ellaemily@example.com2Davidmichael@example.com3Zacharysarah@example.com4Alicejohn@example.com5Finnjohn@example.com6Violetalice@example.comIt will return:customer_idnameemail1Ellaemily@example.com2Davidmichael@example.com3Zacharysarah@example.com4Alicejohn@example.com6Violetalice@example.com### Implementation**Note:** using `inplace=True` modifies the original DataFrame. To retain the original DataFrame and get a new one with duplicates removed, we should set `inplace=False` and assign the result to a new variable."
+}

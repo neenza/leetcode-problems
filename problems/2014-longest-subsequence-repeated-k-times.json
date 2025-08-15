@@ -1,0 +1,72 @@
+{
+  "title": "Longest Subsequence Repeated k Times",
+  "problem_id": "2140",
+  "frontend_id": "2014",
+  "difficulty": "Hard",
+  "problem_slug": "longest-subsequence-repeated-k-times",
+  "topics": [
+    "String",
+    "Backtracking",
+    "Greedy",
+    "Counting",
+    "Enumeration"
+  ],
+  "description": "You are given a string s of length n, and an integer k. You are tasked to find the longest subsequence repeated k times in string s.\nA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.\nA subsequence seq is repeated k times in the string s if seq * k is a subsequence of s, where seq * k represents a string constructed by concatenating seq k times.\nReturn the longest subsequence repeated k times in string s. If multiple such subsequences are found, return the lexicographically largest one. If there is no such subsequence, return an empty string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"letsleetcode\", k = 2\nOutput: \"let\"\nExplanation: There are two longest subsequences repeated 2 times: \"let\" and \"ete\".\n\"let\" is the lexicographically largest one.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/30/longest-subsequence-repeat-k-times.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"bb\", k = 2\nOutput: \"b\"\nExplanation: The longest subsequence repeated 2 times is \"b\".",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/30/longest-subsequence-repeat-k-times.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"ab\", k = 2\nOutput: \"\"\nExplanation: There is no subsequence repeated 2 times. Empty string is returned.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/30/longest-subsequence-repeat-k-times.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == s.length",
+    "2 <= k <= 2000",
+    "2 <= n < min(2001, k * 8)",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The length of the longest subsequence does not exceed n/k. Do you know why?",
+    "Find the characters that could be included in the potential answer. A character occurring more than or equal to k times can be used in the answer up to (count of the character / k) times.",
+    "Try all possible candidates in reverse lexicographic order, and check the string for the subsequence condition."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string longestSubsequenceRepeatedK(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestSubsequenceRepeatedK(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSubsequenceRepeatedK(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSubsequenceRepeatedK(self, s: str, k: int) -> str:\n        ",
+    "c": "char* longestSubsequenceRepeatedK(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LongestSubsequenceRepeatedK(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar longestSubsequenceRepeatedK = function(s, k) {\n    \n};",
+    "typescript": "function longestSubsequenceRepeatedK(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function longestSubsequenceRepeatedK($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSubsequenceRepeatedK(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSubsequenceRepeatedK(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String longestSubsequenceRepeatedK(String s, int k) {\n    \n  }\n}",
+    "golang": "func longestSubsequenceRepeatedK(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef longest_subsequence_repeated_k(s, k)\n    \nend",
+    "scala": "object Solution {\n    def longestSubsequenceRepeatedK(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_subsequence_repeated_k(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (longest-subsequence-repeated-k s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec longest_subsequence_repeated_k(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nlongest_subsequence_repeated_k(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_subsequence_repeated_k(s :: String.t, k :: integer) :: String.t\n  def longest_subsequence_repeated_k(s, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Brute-force Enumeration\n\n#### Intuition\n\nAccording to the problem statement, the task is to find the longest subsequence of characters that appears at least $k$ times and is lexicographically largest. Therefore, the characters that make up this subsequence must appear at least $k$ times in $s$. Characters that appear fewer than $k$ times in $s$ can be filtered out directly.\n\nLet the length of $s$ be $n$. We only consider characters in $s$ that appear at least $k$ times. The longest valid subsequence can only be composed of these characters, and their count cannot exceed $\\left\\lfloor \\dfrac{n}{k} \\right\\rfloor$. Since the problem states that $n < 8k$, the length of the longest valid subsequence must be at most $7$, and the number of qualifying characters is also at most $7$. Therefore, the number of candidate subsequences does not exceed $2^7 = 128$, making it feasible to use brute-force enumeration to find the correct answer.\n\nWe start by counting the frequency of each character to identify those that meet the required threshold. Then, we enumerate all possible permutations formed from any combination of these characters. For each such permutation $\\textit{permutation}_i$, we check whether it appears in $s$ at least $k$ times. Among all valid permutations, we return the one with the maximum length and the greatest lexicographical order.\n\nTo generate all permutations, we can use a queue. Each time, we pop the current valid subsequence $\\textit{curr}$ from the queue and attempt to append a valid character $c$ to form a new string $\\textit{next}$. If $\\textit{next}$ appears in $s$ at least $k$ times, we push it into the queue to continue expanding it. By enumerating characters in reverse lexicographical order (from largest to smallest), we ensure that the largest lexicographical string is generated first. This allows us to return the longest and lexicographically largest valid subsequence efficiently.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the given string, and let $k$ be the given number.\n\n- Time complexity: $O(n \\cdot {\\lfloor \\dfrac{n}{k} \\rfloor}!)$.\n  \n  According to the analysis, the length of the subsequence does not exceed $m = \\lfloor \\frac{n}{k} \\rfloor$. At this point, there are $i!$ combinations of strings of length $i$, so the total number of possible string combinations is\n\n$$S = \\sum_{i=1}^{m} \\binom{m}{i} \\cdot i! = \\sum_{i=1}^{m} \\frac{m!}{i! \\cdot (m-i)!} \\cdot i! = \\sum_{i=1}^{m} \\frac{m!}{(m-i)!} = m! \\sum_{i=1}^{m} \\frac{1}{(m-i)!}.$$\n\n  Therefore, there are at most $2m!$ candidate subsequences. After generating the candidate subsequences, it still takes $O(n)$ time to match and check them, so the total time complexity is $O(n \\cdot \\lfloor \\frac{n}{k} \\rfloor!)$.\n\n- Space complexity: $O(\\lfloor \\dfrac{n}{k} \\rfloor!)$.\n\n  There can be at most $\\lfloor \\dfrac{n}{k} \\rfloor!$ candidate subsequences, and at most $\\lfloor \\dfrac{n}{k} \\rfloor!$ elements can exist in the queue. Thus, the space complexity is $O(\\lfloor \\dfrac{n}{k} \\rfloor!)$."
+}

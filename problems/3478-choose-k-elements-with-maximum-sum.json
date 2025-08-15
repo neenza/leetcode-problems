@@ -1,0 +1,57 @@
+{
+  "title": "Choose K Elements With Maximum Sum",
+  "problem_id": "3759",
+  "frontend_id": "3478",
+  "difficulty": "Medium",
+  "problem_slug": "choose-k-elements-with-maximum-sum",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k.\nFor each index i from 0 to n - 1, perform the following:\nReturn an array answer of size n, where answer[i] represents the result for the corresponding index i.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [4,2,1,5,3], nums2 = [10,20,30,40,50], k = 2\nOutput: [80,30,0,80,50]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [2,2,2,2], nums2 = [3,1,2,3], k = 1\nOutput: [0,0,0,0]\nExplanation:\nSince all elements in nums1 are equal, no indices satisfy the condition nums1[j] < nums1[i] for any i , resulting in 0 for all positions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length == nums2.length",
+    "1 <= n <= 105",
+    "1 <= nums1[i], nums2[i] <= 106",
+    "1 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort <code>nums1</code> and its corresponding <code>nums2</code> values together based on <code>nums1</code>.",
+    "Use a max heap to track the top <code>k</code> values of <code>nums2</code> as you process each element in the sorted order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> findMaxSum(vector<int>& nums1, vector<int>& nums2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] findMaxSum(int[] nums1, int[] nums2, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMaxSum(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMaxSum(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* findMaxSum(int* nums1, int nums1Size, int* nums2, int nums2Size, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] FindMaxSum(int[] nums1, int[] nums2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} k\n * @return {number[]}\n */\nvar findMaxSum = function(nums1, nums2, k) {\n    \n};",
+    "typescript": "function findMaxSum(nums1: number[], nums2: number[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function findMaxSum($nums1, $nums2, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMaxSum(_ nums1: [Int], _ nums2: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMaxSum(nums1: IntArray, nums2: IntArray, k: Int): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findMaxSum(List<int> nums1, List<int> nums2, int k) {\n    \n  }\n}",
+    "golang": "func findMaxSum(nums1 []int, nums2 []int, k int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @param {Integer} k\n# @return {Integer[]}\ndef find_max_sum(nums1, nums2, k)\n    \nend",
+    "scala": "object Solution {\n    def findMaxSum(nums1: Array[Int], nums2: Array[Int], k: Int): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_max_sum(nums1: Vec<i32>, nums2: Vec<i32>, k: i32) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (find-max-sum nums1 nums2 k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec find_max_sum(Nums1 :: [integer()], Nums2 :: [integer()], K :: integer()) -> [integer()].\nfind_max_sum(Nums1, Nums2, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_max_sum(nums1 :: [integer], nums2 :: [integer], k :: integer) :: [integer]\n  def find_max_sum(nums1, nums2, k) do\n    \n  end\nend"
+  }
+}

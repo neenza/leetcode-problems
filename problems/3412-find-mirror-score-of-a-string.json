@@ -1,0 +1,56 @@
+{
+  "title": "Find Mirror Score of a String",
+  "problem_id": "3634",
+  "frontend_id": "3412",
+  "difficulty": "Medium",
+  "problem_slug": "find-mirror-score-of-a-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "You are given a string s.\nWe define the mirror of a letter in the English alphabet as its corresponding letter when the alphabet is reversed. For example, the mirror of 'a' is 'z', and the mirror of 'y' is 'b'.\nInitially, all characters in the string s are unmarked.\nYou start with a score of 0, and you perform the following process on the string s:\nReturn the total score at the end of the process.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aczzx\"\nOutput: 5\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdef\"\nOutput: 0\nExplanation:\nFor each index i , there is no index j that satisfies the conditions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create a stack for every character.",
+    "For each index, check if the stack for mirror of the letter at that index is empty."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long calculateScore(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long calculateScore(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def calculateScore(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def calculateScore(self, s: str) -> int:\n        ",
+    "c": "long long calculateScore(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CalculateScore(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar calculateScore = function(s) {\n    \n};",
+    "typescript": "function calculateScore(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function calculateScore($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func calculateScore(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun calculateScore(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int calculateScore(String s) {\n    \n  }\n}",
+    "golang": "func calculateScore(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef calculate_score(s)\n    \nend",
+    "scala": "object Solution {\n    def calculateScore(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn calculate_score(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (calculate-score s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec calculate_score(S :: unicode:unicode_binary()) -> integer().\ncalculate_score(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec calculate_score(s :: String.t) :: integer\n  def calculate_score(s) do\n    \n  end\nend"
+  }
+}

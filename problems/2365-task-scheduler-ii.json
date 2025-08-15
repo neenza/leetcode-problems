@@ -1,0 +1,56 @@
+{
+  "title": "Task Scheduler II",
+  "problem_id": "2483",
+  "frontend_id": "2365",
+  "difficulty": "Medium",
+  "problem_slug": "task-scheduler-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed array of positive integers tasks, representing tasks that need to be completed in order, where tasks[i] represents the type of the ith task.\nYou are also given a positive integer space, which represents the minimum number of days that must pass after the completion of a task before another task of the same type can be performed.\nEach day, until all tasks have been completed, you must either:\nReturn the minimum number of days needed to complete all tasks.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tasks = [1,2,1,2,3,1], space = 3\nOutput: 9\nExplanation:\nOne way to complete all tasks in 9 days is as follows:\nDay 1: Complete the 0th task.\nDay 2: Complete the 1st task.\nDay 3: Take a break.\nDay 4: Take a break.\nDay 5: Complete the 2nd task.\nDay 6: Complete the 3rd task.\nDay 7: Take a break.\nDay 8: Complete the 4th task.\nDay 9: Complete the 5th task.\nIt can be shown that the tasks cannot be completed in less than 9 days.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tasks = [5,8,8,5], space = 2\nOutput: 6\nExplanation:\nOne way to complete all tasks in 6 days is as follows:\nDay 1: Complete the 0th task.\nDay 2: Complete the 1st task.\nDay 3: Take a break.\nDay 4: Take a break.\nDay 5: Complete the 2nd task.\nDay 6: Complete the 3rd task.\nIt can be shown that the tasks cannot be completed in less than 6 days.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= tasks.length <= 105",
+    "1 <= tasks[i] <= 109",
+    "1 <= space <= tasks.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try taking breaks as late as possible, such that tasks are still spaced appropriately.",
+    "Whenever considering whether to complete the next task, if it is not the first task of its type, check how many days ago the previous task was completed and add an appropriate number of breaks."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long taskSchedulerII(vector<int>& tasks, int space) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long taskSchedulerII(int[] tasks, int space) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def taskSchedulerII(self, tasks, space):\n        \"\"\"\n        :type tasks: List[int]\n        :type space: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def taskSchedulerII(self, tasks: List[int], space: int) -> int:\n        ",
+    "c": "long long taskSchedulerII(int* tasks, int tasksSize, int space) {\n    \n}",
+    "csharp": "public class Solution {\n    public long TaskSchedulerII(int[] tasks, int space) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} tasks\n * @param {number} space\n * @return {number}\n */\nvar taskSchedulerII = function(tasks, space) {\n    \n};",
+    "typescript": "function taskSchedulerII(tasks: number[], space: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $tasks\n     * @param Integer $space\n     * @return Integer\n     */\n    function taskSchedulerII($tasks, $space) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func taskSchedulerII(_ tasks: [Int], _ space: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun taskSchedulerII(tasks: IntArray, space: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int taskSchedulerII(List<int> tasks, int space) {\n    \n  }\n}",
+    "golang": "func taskSchedulerII(tasks []int, space int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} tasks\n# @param {Integer} space\n# @return {Integer}\ndef task_scheduler_ii(tasks, space)\n    \nend",
+    "scala": "object Solution {\n    def taskSchedulerII(tasks: Array[Int], space: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn task_scheduler_ii(tasks: Vec<i32>, space: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (task-scheduler-ii tasks space)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec task_scheduler_ii(Tasks :: [integer()], Space :: integer()) -> integer().\ntask_scheduler_ii(Tasks, Space) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec task_scheduler_ii(tasks :: [integer], space :: integer) :: integer\n  def task_scheduler_ii(tasks, space) do\n    \n  end\nend"
+  }
+}

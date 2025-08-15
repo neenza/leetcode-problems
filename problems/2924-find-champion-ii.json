@@ -1,0 +1,63 @@
+{
+  "title": "Find Champion II",
+  "problem_id": "3189",
+  "frontend_id": "2924",
+  "difficulty": "Medium",
+  "problem_slug": "find-champion-ii",
+  "topics": [
+    "Graph"
+  ],
+  "description": "There are n teams numbered from 0 to n - 1 in a tournament; each team is also a node in a DAG.\nYou are given the integer n and a 0-indexed 2D integer array edges of length m representing the DAG, where edges[i] = [ui, vi] indicates that there is a directed edge from team ui to team vi in the graph.\nA directed edge from a to b in the graph means that team a is stronger than team b and team b is weaker than team a.\nTeam a will be the champion of the tournament if there is no team b that is stronger than team a.\nReturn the team that will be the champion of the tournament if there is a unique champion, otherwise, return -1.\nNotes\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1],[1,2]]\nOutput: 0\nExplanation: Team 1 is weaker than team 0. Team 2 is weaker than team 1. So the champion is team 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/10/19/graph-3.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, edges = [[0,2],[1,3],[1,2]]\nOutput: -1\nExplanation: Team 2 is weaker than team 0 and team 1. Team 3 is weaker than team 1. But team 1 and team 0 are not weaker than any other teams. So the answer is -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/10/19/graph-4.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100",
+    "m == edges.length",
+    "0 <= m <= n * (n - 1) / 2",
+    "edges[i].length == 2",
+    "0 <= edge[i][j] <= n - 1",
+    "edges[i][0] != edges[i][1]",
+    "The input is generated such that if team a is stronger than team b, team b is not stronger than team a.",
+    "The input is generated such that if team a is stronger than team b and team b is stronger than team c, then team a is stronger than team c."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The champion(s) should have in-degree <code>0</code> in the DAG."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findChampion(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findChampion(int n, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findChampion(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findChampion(self, n: int, edges: List[List[int]]) -> int:\n        ",
+    "c": "int findChampion(int n, int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindChampion(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number}\n */\nvar findChampion = function(n, edges) {\n    \n};",
+    "typescript": "function findChampion(n: number, edges: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @return Integer\n     */\n    function findChampion($n, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findChampion(_ n: Int, _ edges: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findChampion(n: Int, edges: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findChampion(int n, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func findChampion(n int, edges [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Integer}\ndef find_champion(n, edges)\n    \nend",
+    "scala": "object Solution {\n    def findChampion(n: Int, edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_champion(n: i32, edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-champion n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_champion(N :: integer(), Edges :: [[integer()]]) -> integer().\nfind_champion(N, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_champion(n :: integer, edges :: [[integer]]) :: integer\n  def find_champion(n, edges) do\n    \n  end\nend"
+  },
+  "solution": "## Solution\n\n---\n\n### Approach: In-degree Count\n\n#### Intuition\n\nWe are given `n` teams labeled from `0` to `n - 1`, with some teams being stronger than others. Directed edges represent comparisons between teams: if there is a directed edge from team `u` to team `v`, it indicates that team `u` is stronger than team `v`.\n\nThis problem builds upon [Find Champion I](https://leetcode.com/problems/find-champion-i/description/), where a boolean matrix indicates the strength relationships between teams. In that problem, the goal is to identify the champion by finding the team for which all entries in its row (except the diagonal) are `1`, signifying that it is stronger than all other teams.\n\nIn this problem, we aim to determine the champion team, defined as a team that is not weaker than any other team. Formally, the champion team has no incoming edges, meaning its indegree is zero. Additionally, there must be exactly one such team with zero indegree. If there are multiple teams with zero indegree, we should return `-1` to indicate the absence of a unique champion.\n\nThus, the problem boils down to counting the number of edges directed towards each team (indegree). A team with zero indegrees is a potential champion for which we will return the team index. In case of multiple such teams, we will return `-1`.\n\n![fig](../Figures/2924/2924A.png)\n\n#### Algorithm\n\n1. Initialize an Indegree Array:\n\n    - Create an array indegree of size `n` (the number of teams) and initialize all elements to `0`. This array will store the number of incoming edges for each team.\n\n2. Calculate the Indegree of each team:\n\n    - Loop through each edge in the given edges list.\n        - Each edge is a pair `[u, v]` where team `u` is a stronger team than `v`.\n        - Increment the indegree of team `v` by 1 for every edge `(u, v)`.\n\n3. Identify Potential Champions:\n\n    - Initialize `champ`  to `-1` and `champCount` (number of potential champions) to `0`.\n    - Loop through all teams from `0` to `n -1`:\n        - For each team `i`, check if its indegree is `0`\n        - If the indegree is `0`, increment `champCount` by `1` and set champ to` i`\n\n4. Determine the Final Champion:\n\n    - After the loop, check the value of `champCount`:\n        - If `champCount` is greater than `1`, it means there are multiple teams with indegree `0`, and thus no unique champion. Return `-1`.\n        - If `champCount` is exactly `1`, return the value of `champ`\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of teams given, and $M$ is the number of edges.\n\n- Time complexity: $O(N + M)$\n\n  We iterate over each edge to store the indegree of each team, this takes $O(M)$ time. Then we iterate over each team to find the teams with zero indegree to get the champion which will take $O(N)$ time. Hence, the total time complexity is equal to $O(N + M)$\n\n- Space complexity: $O(N)$\n\n  We need a list `indegree` to store the indegree of each of the $N$ teams. Hence, the total space complexity is equal to $O(N)$.\n---"
+}

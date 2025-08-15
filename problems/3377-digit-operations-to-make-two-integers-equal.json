@@ -1,0 +1,62 @@
+{
+  "title": "Digit Operations to Make Two Integers Equal",
+  "problem_id": "3655",
+  "frontend_id": "3377",
+  "difficulty": "Medium",
+  "problem_slug": "digit-operations-to-make-two-integers-equal",
+  "topics": [
+    "Math",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Number Theory",
+    "Shortest Path"
+  ],
+  "description": "You are given two integers n and m that consist of the same number of digits.\nYou can perform the following operations any number of times:\nThe integer n must not be a prime number at any point, including its original value and after each operation.\nThe cost of a transformation is the sum of all values that n takes throughout the operations performed.\nReturn the minimum cost to transform n into m. If it is impossible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 10, m = 12\nOutput: 85\nExplanation:\nWe perform the following operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, m = 8\nOutput: -1\nExplanation:\nIt is impossible to make n equal to m .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 6, m = 2\nOutput: -1\nExplanation:\nSince 2 is already a prime, we can't make n equal to m .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, m < 104",
+    "n and m consist of the same number of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider a directed, weighted graph where an edge exists from a node <code>x</code> to a node <code>y</code> if and only if <code>x</code> can be transformed into <code>y</code> through a single operation.",
+    "Apply a shortest path algorithm on this graph to find the shortest path from <code>n</code> to <code>m</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(int n, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int n, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, n, m):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, n: int, m: int) -> int:\n        ",
+    "c": "int minOperations(int n, int m) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int n, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @return {number}\n */\nvar minOperations = function(n, m) {\n    \n};",
+    "typescript": "function minOperations(n: number, m: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @return Integer\n     */\n    function minOperations($n, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ n: Int, _ m: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(n: Int, m: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(int n, int m) {\n    \n  }\n}",
+    "golang": "func minOperations(n int, m int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @return {Integer}\ndef min_operations(n, m)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(n: Int, m: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(n: i32, m: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(N :: integer(), M :: integer()) -> integer().\nmin_operations(N, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(n :: integer, m :: integer) :: integer\n  def min_operations(n, m) do\n    \n  end\nend"
+  }
+}

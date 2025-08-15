@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Operations to Make the Array K-Increasing",
+  "problem_id": "2234",
+  "frontend_id": "2111",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-operations-to-make-the-array-k-increasing",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "You are given a 0-indexed array arr consisting of n positive integers, and a positive integer k.\nThe array arr is called K-increasing if arr[i-k] <= arr[i] holds for every index i, where k <= i <= n-1.\nIn one operation, you can choose an index i and change arr[i] into any positive integer.\nReturn the minimum number of operations required to make the array K-increasing for the given k.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [5,4,3,2,1], k = 1\nOutput: 4\nExplanation:\nFor k = 1, the resultant array has to be non-decreasing.\nSome of the K-increasing arrays that can be formed are [5,6,7,8,9], [1,1,1,1,1], [2,2,3,4,4]. All of them require 4 operations.\nIt is suboptimal to change the array to, for example, [6,7,8,9,10] because it would take 5 operations.\nIt can be shown that we cannot make the array K-increasing in less than 4 operations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [4,1,5,2,6,2], k = 2\nOutput: 0\nExplanation:\nThis is the same example as the one in the problem description.\nHere, for every index i where 2 <= i <= 5, arr[i-2] <= arr[i].\nSince the given array is already K-increasing, we do not need to perform any operations.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [4,1,5,2,6,2], k = 3\nOutput: 2\nExplanation:\nIndices 3 and 5 are the only ones not satisfying arr[i-3] <= arr[i] for 3 <= i <= 5.\nOne of the ways we can make the array K-increasing is by changing arr[3] to 4 and arr[5] to 5.\nThe array will now be [4,1,5,4,6,5].\nNote that there can be other ways to make the array K-increasing, but none of them require less than 2 operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 105",
+    "1 <= arr[i], k <= arr.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we divide the array into non-overlapping subsequences and simplify the problem?",
+    "In the final array, arr[i-k] ≤ arr[i] should hold. We can use this to divide the array into at most k non-overlapping sequences, where arr[i] will belong to the (i%k)th sequence.",
+    "Now our problem boils down to performing the minimum operations on each sequence such that it becomes non-decreasing. Our answer will be the sum of operations on each sequence.",
+    "Which indices of a sequence should we not change in order to count the minimum operations? Can finding the longest non-decreasing subsequence of the sequence help?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int kIncreasing(vector<int>& arr, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kIncreasing(int[] arr, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kIncreasing(self, arr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kIncreasing(self, arr: List[int], k: int) -> int:\n        ",
+    "c": "int kIncreasing(int* arr, int arrSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int KIncreasing(int[] arr, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} k\n * @return {number}\n */\nvar kIncreasing = function(arr, k) {\n    \n};",
+    "typescript": "function kIncreasing(arr: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $k\n     * @return Integer\n     */\n    function kIncreasing($arr, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kIncreasing(_ arr: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kIncreasing(arr: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int kIncreasing(List<int> arr, int k) {\n    \n  }\n}",
+    "golang": "func kIncreasing(arr []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} k\n# @return {Integer}\ndef k_increasing(arr, k)\n    \nend",
+    "scala": "object Solution {\n    def kIncreasing(arr: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn k_increasing(arr: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (k-increasing arr k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec k_increasing(Arr :: [integer()], K :: integer()) -> integer().\nk_increasing(Arr, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec k_increasing(arr :: [integer], k :: integer) :: integer\n  def k_increasing(arr, k) do\n    \n  end\nend"
+  }
+}

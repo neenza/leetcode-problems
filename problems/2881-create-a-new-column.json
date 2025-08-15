@@ -1,0 +1,30 @@
+{
+  "title": "Create a New Column",
+  "problem_id": "3066",
+  "frontend_id": "2881",
+  "difficulty": "Easy",
+  "problem_slug": "create-a-new-column",
+  "topics": [],
+  "description": "A company plans to provide its employees with a bonus.\nWrite a solution to create a new column name bonus that contains the doubled values of the salary column.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame employees\n+-------------+--------+\n| Column Name | Type.  |\n+-------------+--------+\n| name        | object |\n| salary      | int.   |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\nDataFrame employees\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Piper   | 4548   |\n| Grace   | 28150  |\n| Georgia | 1103   |\n| Willow  | 6593   |\n| Finn    | 74576  |\n| Thomas  | 24433  |\n+---------+--------+\nOutput:\n+---------+--------+--------+\n| name    | salary | bonus  |\n+---------+--------+--------+\n| Piper   | 4548   | 9096   |\n| Grace   | 28150  | 56300  |\n| Georgia | 1103   | 2206   |\n| Willow  | 6593   | 13186  |\n| Finn    | 74576  | 149152 |\n| Thomas  | 24433  | 48866  |\n+---------+--------+--------+\nExplanation: \nA new column bonus is created by doubling the value in the column salary.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using the `[]` brackets with the new column name at the left side of the assignment. The calculation of the value is done element-wise."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nThis problem requires us to create a new column 'bonus' in the DataFrame `employees`. The new column should contain  double the value of each employee's salary.\n\n**Key Concepts:**\n\n1. **pandas Series:** a one dimensional data structure provided by the pandas library. A Series can be thought of as a column of data in a pandas DataFrame. A Series can contain of a wide-range of data types, however they are homogenous, meaning that all elements within one pandas Series must be of the same data type. Like DataFrames, Series are indexed and can be labeled for easy data retrieval.\n2. **pandas DataFrame:** similar to a SQL table, a DataFrame is a collection of Series displayed as columns. They are size-mutable, meaning we can add, delete, and alter values, rows, and columns in a DataFrame.\n3. **column-wise operations:** operations that can be performed on each individual element in a DataFrame Series. A few examples of types of column-wise operations are  arithmetic operations, aggregate functions, filtering and conditional operations, and string operations.\n\n### Intuition\n\nTo solve this problem, we can create a new column and calculate the bonus using the column-wise operation `*` to multiply the salary column by 2. \n\nThe simplest way to create a new column will be to assign the new column to the `employees` DataFrame using the column name. Then, we will set it equal to the value of the `salary` column multiplied by two. \n\n**Visualization of column-wise operations**\n\n![fig](../Figures/3310/3310-1.png)\n\n\n**Example:**\nIf you have the following DataFrame:namesalaryPiper4548Grace28150`employees['salary']` would give:indexsalary04548128150pandas allows for vectorized operations. When you multiply a Series by a scalar (a single number), it multiplies every single element in the Series by that number. In our case, we want to use this to double each value in the `salary` column.\n\nUsing the previous DataFrame, `employees['salary'] * 2` would result in:indexbonus09096156300We can assign these values to a new (or existing) column in the DataFrame. If the column `bonus` doesn't already exist, pandas will create it. \n\nWhen we do `employees['bonus'] = employees['salary'] * 2`, we're creating a new column called `bonus` in the DataFrame `employees`, and populating it with the doubled values of the `salary` column.\n\n### Implementation"
+}

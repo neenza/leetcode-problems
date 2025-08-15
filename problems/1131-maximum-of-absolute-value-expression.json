@@ -1,0 +1,53 @@
+{
+  "title": "Maximum of Absolute Value Expression",
+  "problem_id": "1230",
+  "frontend_id": "1131",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-of-absolute-value-expression",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "Given two arrays of integers with equal lengths, return the maximum value of:\n|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|\nwhere the maximum is taken over all 0 <= i, j < arr1.length.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr1 = [1,2,3,4], arr2 = [-1,4,5,6]\nOutput: 13",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr1 = [1,-2,-5,0,10], arr2 = [0,-2,-1,-7,-4]\nOutput: 20",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= arr1.length == arr2.length <= 40000",
+    "-10^6 <= arr1[i], arr2[i] <= 10^6"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the idea that abs(A) + abs(B) = max(A+B, A-B, -A+B, -A-B)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxAbsValExpr(vector<int>& arr1, vector<int>& arr2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxAbsValExpr(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxAbsValExpr(self, arr1, arr2):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:\n        ",
+    "c": "int maxAbsValExpr(int* arr1, int arr1Size, int* arr2, int arr2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxAbsValExpr(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr1\n * @param {number[]} arr2\n * @return {number}\n */\nvar maxAbsValExpr = function(arr1, arr2) {\n    \n};",
+    "typescript": "function maxAbsValExpr(arr1: number[], arr2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr1\n     * @param Integer[] $arr2\n     * @return Integer\n     */\n    function maxAbsValExpr($arr1, $arr2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxAbsValExpr(_ arr1: [Int], _ arr2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxAbsValExpr(arr1: IntArray, arr2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxAbsValExpr(List<int> arr1, List<int> arr2) {\n    \n  }\n}",
+    "golang": "func maxAbsValExpr(arr1 []int, arr2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr1\n# @param {Integer[]} arr2\n# @return {Integer}\ndef max_abs_val_expr(arr1, arr2)\n    \nend",
+    "scala": "object Solution {\n    def maxAbsValExpr(arr1: Array[Int], arr2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_abs_val_expr(arr1: Vec<i32>, arr2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-abs-val-expr arr1 arr2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_abs_val_expr(Arr1 :: [integer()], Arr2 :: [integer()]) -> integer().\nmax_abs_val_expr(Arr1, Arr2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_abs_val_expr(arr1 :: [integer], arr2 :: [integer]) :: integer\n  def max_abs_val_expr(arr1, arr2) do\n    \n  end\nend"
+  }
+}

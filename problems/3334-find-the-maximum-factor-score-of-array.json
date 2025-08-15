@@ -1,0 +1,60 @@
+{
+  "title": "Find the Maximum Factor Score of Array",
+  "problem_id": "3593",
+  "frontend_id": "3334",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-maximum-factor-score-of-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums.\nThe factor score of an array is defined as the product of the LCM and GCD of all elements of that array.\nReturn the maximum factor score of nums after removing at most one element from it.\nNote that both the LCM and GCD of a single number are the number itself, and the factor score of an empty array is 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,8,16]\nOutput: 64\nExplanation:\nOn removing 2, the GCD of the rest of the elements is 4 while the LCM is 16, which gives a maximum factor score of 4 * 16 = 64 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: 60\nExplanation:\nThe maximum factor score of 60 can be obtained without removing any elements.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3]\nOutput: 9",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 30"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use brute force approach with two loops.",
+    "Optimize using prefix and suffix arrays."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maxScore(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "typescript": "function maxScore(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxScore($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxScore(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_score(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_score(Nums :: [integer()]) -> integer().\nmax_score(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer]) :: integer\n  def max_score(nums) do\n    \n  end\nend"
+  }
+}

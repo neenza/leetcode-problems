@@ -1,0 +1,58 @@
+{
+  "title": "Unique Substrings in Wraparound String",
+  "problem_id": "467",
+  "frontend_id": "467",
+  "difficulty": "Medium",
+  "problem_slug": "unique-substrings-in-wraparound-string",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "We define the string base to be the infinite wraparound string of \"abcdefghijklmnopqrstuvwxyz\", so base will look like this:\nGiven a string s, return the number of unique non-empty substrings of s are present in base.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"a\"\nOutput: 1\nExplanation: Only the substring \"a\" of s is in base.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cac\"\nOutput: 2\nExplanation: There are two substrings (\"a\", \"c\") of s in base.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"zab\"\nOutput: 6\nExplanation: There are six substrings (\"z\", \"a\", \"b\", \"za\", \"ab\", and \"zab\") of s in base.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One possible solution might be to consider allocating an array size of 26 for each character in the alphabet. (Credits to @r2ysxu)"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findSubstringInWraproundString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findSubstringInWraproundString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findSubstringInWraproundString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findSubstringInWraproundString(self, s: str) -> int:\n        ",
+    "c": "int findSubstringInWraproundString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindSubstringInWraproundString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar findSubstringInWraproundString = function(s) {\n    \n};",
+    "typescript": "function findSubstringInWraproundString(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function findSubstringInWraproundString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findSubstringInWraproundString(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findSubstringInWraproundString(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findSubstringInWraproundString(String s) {\n    \n  }\n}",
+    "golang": "func findSubstringInWraproundString(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef find_substring_in_wrapround_string(s)\n    \nend",
+    "scala": "object Solution {\n    def findSubstringInWraproundString(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_substring_in_wrapround_string(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-substring-in-wrapround-string s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec find_substring_in_wrapround_string(S :: unicode:unicode_binary()) -> integer().\nfind_substring_in_wrapround_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_substring_in_wrapround_string(s :: String.t) :: integer\n  def find_substring_in_wrapround_string(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Minimum Swaps To Make Sequences Increasing",
+  "problem_id": "819",
+  "frontend_id": "801",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-swaps-to-make-sequences-increasing",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given two integer arrays of the same length nums1 and nums2. In one operation, you are allowed to swap nums1[i] with nums2[i].\nReturn the minimum number of needed operations to make nums1 and nums2 strictly increasing. The test cases are generated so that the given input always makes it possible.\nAn array arr is strictly increasing if and only if arr[0] < arr[1] < arr[2] < ... < arr[arr.length - 1].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,3,5,4], nums2 = [1,2,3,7]\nOutput: 1\nExplanation: \nSwap nums1[3] and nums2[3]. Then the sequences are:\nnums1 = [1, 3, 5, 7] and nums2 = [1, 2, 3, 4]\nwhich are both strictly increasing.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [0,3,5,8,9], nums2 = [2,1,4,6,9]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums1.length <= 105",
+    "nums2.length == nums1.length",
+    "0 <= nums1[i], nums2[i] <= 2 * 105"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSwap(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwap(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSwap(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSwap(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int minSwap(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSwap(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar minSwap = function(nums1, nums2) {\n    \n};",
+    "typescript": "function minSwap(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function minSwap($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwap(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSwap(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwap(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func minSwap(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef min_swap(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def minSwap(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swap(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-swap nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_swap(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmin_swap(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_swap(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def min_swap(nums1, nums2) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Kth Smallest Amount With Single Denomination Combination",
+  "problem_id": "3375",
+  "frontend_id": "3116",
+  "difficulty": "Hard",
+  "problem_slug": "kth-smallest-amount-with-single-denomination-combination",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Bit Manipulation",
+    "Combinatorics",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array coins representing coins of different denominations and an integer k.\nYou have an infinite number of coins of each denomination. However, you are not allowed to combine coins of different denominations.\nReturn the kth smallest amount that can be made using these coins.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coins = [3,6,9], k = 3\nOutput: 9\nExplanation: The given coins can make the following amounts: Coin 3 produces multiples of 3: 3, 6, 9, 12, 15, etc. Coin 6 produces multiples of 6: 6, 12, 18, 24, etc. Coin 9 produces multiples of 9: 9, 18, 27, 36, etc. All of the coins combined produce: 3, 6, 9 , 12, 15, etc.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coins = [5,2], k = 7\nOutput: 12\nExplanation: The given coins can make the following amounts: Coin 5 produces multiples of 5: 5, 10, 15, 20, etc. Coin 2 produces multiples of 2: 2, 4, 6, 8, 10, 12, etc. All of the coins combined produce: 2, 4, 5, 6, 8, 10, 12 , 14, 15, etc.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= coins.length <= 15",
+    "1 <= coins[i] <= 25",
+    "1 <= k <= 2 * 109",
+    "coins contains pairwise distinct integers."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary search the answer <code>x</code>.",
+    "Use the inclusion-exclusion principle to count the number of distinct amounts that can be made up to <code>x</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long findKthSmallest(vector<int>& coins, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findKthSmallest(int[] coins, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findKthSmallest(self, coins, k):\n        \"\"\"\n        :type coins: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findKthSmallest(self, coins: List[int], k: int) -> int:\n        ",
+    "c": "long long findKthSmallest(int* coins, int coinsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long FindKthSmallest(int[] coins, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} coins\n * @param {number} k\n * @return {number}\n */\nvar findKthSmallest = function(coins, k) {\n    \n};",
+    "typescript": "function findKthSmallest(coins: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $coins\n     * @param Integer $k\n     * @return Integer\n     */\n    function findKthSmallest($coins, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findKthSmallest(_ coins: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findKthSmallest(coins: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findKthSmallest(List<int> coins, int k) {\n    \n  }\n}",
+    "golang": "func findKthSmallest(coins []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} coins\n# @param {Integer} k\n# @return {Integer}\ndef find_kth_smallest(coins, k)\n    \nend",
+    "scala": "object Solution {\n    def findKthSmallest(coins: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_kth_smallest(coins: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (find-kth-smallest coins k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_kth_smallest(Coins :: [integer()], K :: integer()) -> integer().\nfind_kth_smallest(Coins, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_kth_smallest(coins :: [integer], k :: integer) :: integer\n  def find_kth_smallest(coins, k) do\n    \n  end\nend"
+  }
+}

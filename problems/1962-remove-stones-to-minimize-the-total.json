@@ -1,0 +1,57 @@
+{
+  "title": "Remove Stones to Minimize the Total",
+  "problem_id": "2094",
+  "frontend_id": "1962",
+  "difficulty": "Medium",
+  "problem_slug": "remove-stones-to-minimize-the-total",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given a 0-indexed integer array piles, where piles[i] represents the number of stones in the ith pile, and an integer k. You should apply the following operation exactly k times:\nNotice that you can apply the operation on the same pile more than once.\nReturn the minimum possible total number of stones remaining after applying the k operations.\nfloor(x) is the largest integer that is smaller than or equal to x (i.e., rounds x down).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: piles = [5,4,9], k = 2\nOutput: 12\nExplanation: Steps of a possible scenario are:\n- Apply the operation on pile 2. The resulting piles are [5,4,5].\n- Apply the operation on pile 0. The resulting piles are [3,4,5].\nThe total number of stones in [3,4,5] is 12.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: piles = [4,3,6,7], k = 3\nOutput: 12\nExplanation: Steps of a possible scenario are:\n- Apply the operation on pile 2. The resulting piles are [4,3,3,7].\n- Apply the operation on pile 3. The resulting piles are [4,3,3,4].\n- Apply the operation on pile 0. The resulting piles are [2,3,3,4].\nThe total number of stones in [2,3,3,4] is 12.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= piles.length <= 105",
+    "1 <= piles[i] <= 104",
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Choose the pile with the maximum number of stones each time.",
+    "Use a data structure that helps you find the mentioned pile each time efficiently.",
+    "One such data structure is a Priority Queue."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minStoneSum(vector<int>& piles, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minStoneSum(int[] piles, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minStoneSum(self, piles, k):\n        \"\"\"\n        :type piles: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minStoneSum(self, piles: List[int], k: int) -> int:\n        ",
+    "c": "int minStoneSum(int* piles, int pilesSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinStoneSum(int[] piles, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} piles\n * @param {number} k\n * @return {number}\n */\nvar minStoneSum = function(piles, k) {\n    \n};",
+    "typescript": "function minStoneSum(piles: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $piles\n     * @param Integer $k\n     * @return Integer\n     */\n    function minStoneSum($piles, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minStoneSum(_ piles: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minStoneSum(piles: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minStoneSum(List<int> piles, int k) {\n    \n  }\n}",
+    "golang": "func minStoneSum(piles []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} piles\n# @param {Integer} k\n# @return {Integer}\ndef min_stone_sum(piles, k)\n    \nend",
+    "scala": "object Solution {\n    def minStoneSum(piles: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_stone_sum(piles: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-stone-sum piles k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_stone_sum(Piles :: [integer()], K :: integer()) -> integer().\nmin_stone_sum(Piles, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_stone_sum(piles :: [integer], k :: integer) :: integer\n  def min_stone_sum(piles, k) do\n    \n  end\nend"
+  }
+}

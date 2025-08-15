@@ -1,0 +1,62 @@
+{
+  "title": "Count Common Words With One Occurrence",
+  "problem_id": "2190",
+  "frontend_id": "2085",
+  "difficulty": "Easy",
+  "problem_slug": "count-common-words-with-one-occurrence",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "Given two string arrays words1 and words2, return the number of strings that appear exactly once in each of the two arrays.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words1 = [\"leetcode\",\"is\",\"amazing\",\"as\",\"is\"], words2 = [\"amazing\",\"leetcode\",\"is\"]\nOutput: 2\nExplanation:\n- \"leetcode\" appears exactly once in each of the two arrays. We count this string.\n- \"amazing\" appears exactly once in each of the two arrays. We count this string.\n- \"is\" appears in each of the two arrays, but there are 2 occurrences of it in words1. We do not count this string.\n- \"as\" appears once in words1, but does not appear in words2. We do not count this string.\nThus, there are 2 strings that appear exactly once in each of the two arrays.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words1 = [\"b\",\"bb\",\"bbb\"], words2 = [\"a\",\"aa\",\"aaa\"]\nOutput: 0\nExplanation: There are no strings that appear in each of the two arrays.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words1 = [\"a\",\"ab\"], words2 = [\"a\",\"a\",\"a\",\"ab\"]\nOutput: 1\nExplanation: The only string that appears exactly once in each of the two arrays is \"ab\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words1.length, words2.length <= 1000",
+    "1 <= words1[i].length, words2[j].length <= 30",
+    "words1[i] and words2[j] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Could you try every word?",
+    "Could you use a hash map to achieve a good complexity?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countWords(vector<string>& words1, vector<string>& words2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countWords(String[] words1, String[] words2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countWords(self, words1, words2):\n        \"\"\"\n        :type words1: List[str]\n        :type words2: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countWords(self, words1: List[str], words2: List[str]) -> int:\n        ",
+    "c": "int countWords(char** words1, int words1Size, char** words2, int words2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountWords(string[] words1, string[] words2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words1\n * @param {string[]} words2\n * @return {number}\n */\nvar countWords = function(words1, words2) {\n    \n};",
+    "typescript": "function countWords(words1: string[], words2: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words1\n     * @param String[] $words2\n     * @return Integer\n     */\n    function countWords($words1, $words2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countWords(_ words1: [String], _ words2: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countWords(words1: Array<String>, words2: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countWords(List<String> words1, List<String> words2) {\n    \n  }\n}",
+    "golang": "func countWords(words1 []string, words2 []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words1\n# @param {String[]} words2\n# @return {Integer}\ndef count_words(words1, words2)\n    \nend",
+    "scala": "object Solution {\n    def countWords(words1: Array[String], words2: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_words(words1: Vec<String>, words2: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-words words1 words2)\n  (-> (listof string?) (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec count_words(Words1 :: [unicode:unicode_binary()], Words2 :: [unicode:unicode_binary()]) -> integer().\ncount_words(Words1, Words2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_words(words1 :: [String.t], words2 :: [String.t]) :: integer\n  def count_words(words1, words2) do\n    \n  end\nend"
+  }
+}

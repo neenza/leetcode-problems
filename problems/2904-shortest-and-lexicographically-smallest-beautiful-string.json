@@ -1,0 +1,59 @@
+{
+  "title": "Shortest and Lexicographically Smallest Beautiful String",
+  "problem_id": "3150",
+  "frontend_id": "2904",
+  "difficulty": "Medium",
+  "problem_slug": "shortest-and-lexicographically-smallest-beautiful-string",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a binary string s and a positive integer k.\nA substring of s is beautiful if the number of 1's in it is exactly k.\nLet len be the length of the shortest beautiful substring.\nReturn the lexicographically smallest beautiful substring of string s with length equal to len. If s doesn't contain a beautiful substring, return an empty string.\nA string a is lexicographically larger than a string b (of the same length) if in the first position where a and b differ, a has a character strictly larger than the corresponding character in b.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"100011001\", k = 3\nOutput: \"11001\"\nExplanation: There are 7 beautiful substrings in this example:\n1. The substring \"100011001\".\n2. The substring \"100011001\".\n3. The substring \"100011001\".\n4. The substring \"100011001\".\n5. The substring \"100011001\".\n6. The substring \"100011001\".\n7. The substring \"100011001\".\nThe length of the shortest beautiful substring is 5.\nThe lexicographically smallest beautiful substring with length 5 is the substring \"11001\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"1011\", k = 2\nOutput: \"11\"\nExplanation: There are 3 beautiful substrings in this example:\n1. The substring \"1011\".\n2. The substring \"1011\".\n3. The substring \"1011\".\nThe length of the shortest beautiful substring is 2.\nThe lexicographically smallest beautiful substring with length 2 is the substring \"11\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"000\", k = 1\nOutput: \"\"\nExplanation: There are no beautiful substrings in this example.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "1 <= k <= s.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that if we consider that index <code>i</code> is the leftmost index of a beautiful substring, it has only one candidate <code>j</code>, such that <code>s[i:j]</code> is beautiful and shortest too.",
+    "We can iterate over all possibilities of leftmost index <code>i</code> take <code>s[i:j]</code> and compare with the shortest and the lexicographically smallest beautiful string we could get before index <code>i</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string shortestBeautifulSubstring(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestBeautifulSubstring(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestBeautifulSubstring(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestBeautifulSubstring(self, s: str, k: int) -> str:\n        ",
+    "c": "char* shortestBeautifulSubstring(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ShortestBeautifulSubstring(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar shortestBeautifulSubstring = function(s, k) {\n    \n};",
+    "typescript": "function shortestBeautifulSubstring(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function shortestBeautifulSubstring($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestBeautifulSubstring(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestBeautifulSubstring(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String shortestBeautifulSubstring(String s, int k) {\n    \n  }\n}",
+    "golang": "func shortestBeautifulSubstring(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef shortest_beautiful_substring(s, k)\n    \nend",
+    "scala": "object Solution {\n    def shortestBeautifulSubstring(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_beautiful_substring(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-beautiful-substring s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec shortest_beautiful_substring(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nshortest_beautiful_substring(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_beautiful_substring(s :: String.t, k :: integer) :: String.t\n  def shortest_beautiful_substring(s, k) do\n    \n  end\nend"
+  }
+}

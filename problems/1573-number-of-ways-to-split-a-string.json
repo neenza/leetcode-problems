@@ -1,0 +1,60 @@
+{
+  "title": "Number of Ways to Split a String",
+  "problem_id": "1678",
+  "frontend_id": "1573",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-ways-to-split-a-string",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "Given a binary string s, you can split s into 3 non-empty strings s1, s2, and s3 where s1 + s2 + s3 = s.\nReturn the number of ways s can be split such that the number of ones is the same in s1, s2, and s3. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"10101\"\nOutput: 4\nExplanation: There are four ways to split s in 3 parts where each part contain the same number of letters '1'.\n\"1|010|1\"\n\"1|01|01\"\n\"10|10|1\"\n\"10|1|01\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"1001\"\nOutput: 0",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"0000\"\nOutput: 3\nExplanation: There are three ways to split s in 3 parts.\n\"0|0|00\"\n\"0|00|0\"\n\"00|0|0\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There is no way if the sum (number of '1's) is not divisible by the number of splits. So sum%3 should be 0.",
+    "Preffix s1 , and suffix s3 should have sum/3 characters '1'.",
+    "Follow up: Can you generalize the problem with numbers between [-10^9, 10^9] such the sum between subarrays s1, s2, s3 are the same?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numWays(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numWays(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numWays(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numWays(self, s: str) -> int:\n        ",
+    "c": "int numWays(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumWays(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numWays = function(s) {\n    \n};",
+    "typescript": "function numWays(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numWays($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numWays(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numWays(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numWays(String s) {\n    \n  }\n}",
+    "golang": "func numWays(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_ways(s)\n    \nend",
+    "scala": "object Solution {\n    def numWays(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_ways(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-ways s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_ways(S :: unicode:unicode_binary()) -> integer().\nnum_ways(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_ways(s :: String.t) :: integer\n  def num_ways(s) do\n    \n  end\nend"
+  }
+}

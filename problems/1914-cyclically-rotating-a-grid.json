@@ -1,0 +1,60 @@
+{
+  "title": "Cyclically Rotating a Grid",
+  "problem_id": "2043",
+  "frontend_id": "1914",
+  "difficulty": "Medium",
+  "problem_slug": "cyclically-rotating-a-grid",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given an m x n integer matrix grid​​​, where m and n are both even integers, and an integer k.\nThe matrix is composed of several layers, which is shown in the below image, where each color is its own layer:\nA cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element in the counter-clockwise direction. An example rotation is shown below:\nReturn the matrix after applying k cyclic rotations to it.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[40,10],[30,20]], k = 1\r\nOutput: [[10,20],[40,30]]\r\nExplanation: The figures above represent the grid at every state.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/19/rod2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]], k = 2\r\nOutput: [[3,4,8,12],[2,11,10,16],[1,7,6,15],[5,9,13,14]]\r\nExplanation: The figures above represent the grid at every state.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/10/ringofgrid7.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "2 <= m, n <= 50",
+    "Both m and n are even integers.",
+    "1 <= grid[i][j] <= 5000",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "First, you need to consider each layer separately as an array.",
+    "Just cycle this array and then re-assign it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\r\npublic:\r\n    vector<vector<int>> rotateGrid(vector<vector<int>>& grid, int k) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public int[][] rotateGrid(int[][] grid, int k) {\r\n        \r\n    }\r\n}",
+    "python": "class Solution(object):\r\n    def rotateGrid(self, grid, k):\r\n        \"\"\"\r\n        :type grid: List[List[int]]\r\n        :type k: int\r\n        :rtype: List[List[int]]\r\n        \"\"\"",
+    "python3": "class Solution:\r\n    def rotateGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:",
+    "c": "/**\r\n * Return an array of arrays of size *returnSize.\r\n * The sizes of the arrays are returned as *returnColumnSizes array.\r\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\r\n */\r\nint** rotateGrid(int** grid, int gridSize, int* gridColSize, int k, int* returnSize, int** returnColumnSizes){\r\n\r\n}",
+    "csharp": "public class Solution {\r\n    public int[][] RotateGrid(int[][] grid, int k) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[][]} grid\r\n * @param {number} k\r\n * @return {number[][]}\r\n */\r\nvar rotateGrid = function(grid, k) {\r\n    \r\n};",
+    "typescript": "function rotateGrid(grid: number[][], k: number): number[][] {\r\n\r\n};",
+    "php": "class Solution {\r\n\r\n    /**\r\n     * @param Integer[][] $grid\r\n     * @param Integer $k\r\n     * @return Integer[][]\r\n     */\r\n    function rotateGrid($grid, $k) {\r\n        \r\n    }\r\n}",
+    "swift": "class Solution {\r\n    func rotateGrid(_ grid: [[Int]], _ k: Int) -> [[Int]] {\r\n        \r\n    }\r\n}",
+    "kotlin": "class Solution {\r\n    fun rotateGrid(grid: Array<IntArray>, k: Int): Array<IntArray> {\r\n        \r\n    }\r\n}",
+    "golang": "func rotateGrid(grid [][]int, k int) [][]int {\r\n    \r\n}",
+    "ruby": "# @param {Integer[][]} grid\r\n# @param {Integer} k\r\n# @return {Integer[][]}\r\ndef rotate_grid(grid, k)\r\n    \r\nend",
+    "scala": "object Solution {\r\n    def rotateGrid(grid: Array[Array[Int]], k: Int): Array[Array[Int]] = {\r\n        \r\n    }\r\n}",
+    "rust": "impl Solution {\r\n    pub fn rotate_grid(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {\r\n        \r\n    }\r\n}",
+    "racket": "(define/contract (rotate-grid grid k)\r\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\r\n\r\n  )"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Partition String Into Substrings With Values at Most K",
+  "problem_id": "2511",
+  "frontend_id": "2522",
+  "difficulty": "Medium",
+  "problem_slug": "partition-string-into-substrings-with-values-at-most-k",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a string s consisting of digits from 1 to 9 and an integer k.\nA partition of a string s is called good if:\nReturn the minimum number of substrings in a good partition of s. If no good partition of s exists, return -1.\nNote that:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"165462\", k = 60\nOutput: 4\nExplanation: We can partition the string into substrings \"16\", \"54\", \"6\", and \"2\". Each substring has a value less than or equal to k = 60.\nIt can be shown that we cannot partition the string into less than 4 substrings.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"238182\", k = 5\nOutput: -1\nExplanation: There is no good partition for this string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is a digit from '1' to '9'.",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumPartition(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumPartition(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumPartition(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumPartition(self, s: str, k: int) -> int:\n        ",
+    "c": "int minimumPartition(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumPartition(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar minimumPartition = function(s, k) {\n    \n};",
+    "typescript": "function minimumPartition(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function minimumPartition($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumPartition(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumPartition(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumPartition(String s, int k) {\n    \n  }\n}",
+    "golang": "func minimumPartition(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef minimum_partition(s, k)\n    \nend",
+    "scala": "object Solution {\n    def minimumPartition(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_partition(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-partition s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_partition(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_partition(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_partition(s :: String.t, k :: integer) :: integer\n  def minimum_partition(s, k) do\n    \n  end\nend"
+  }
+}

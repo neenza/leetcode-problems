@@ -1,0 +1,57 @@
+{
+  "title": "Lexicographically Smallest Beautiful String",
+  "problem_id": "2687",
+  "frontend_id": "2663",
+  "difficulty": "Hard",
+  "problem_slug": "lexicographically-smallest-beautiful-string",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "A string is beautiful if:\nYou are given a beautiful string s of length n and a positive integer k.\nReturn the lexicographically smallest string of length n, which is larger than s and is beautiful. If there is no such string, return an empty string.\nA string a is lexicographically larger than a string b (of the same length) if in the first position where a and b differ, a has a character strictly larger than the corresponding character in b.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcz\", k = 26\nOutput: \"abda\"\nExplanation: The string \"abda\" is beautiful and lexicographically larger than the string \"abcz\".\nIt can be proven that there is no string that is lexicographically larger than the string \"abcz\", beautiful, and lexicographically smaller than the string \"abda\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"dc\", k = 4\nOutput: \"\"\nExplanation: It can be proven that there is no string that is lexicographically larger than the string \"dc\" and is beautiful.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == s.length <= 105",
+    "4 <= k <= 26",
+    "s is a beautiful string."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the string does not contain any palindromic substrings of lengths 2 and 3, then the string does not contain any palindromic substrings at all.",
+    "Iterate from right to left and if it is possible to increase character at index i without creating any palindromic substrings of lengths 2 and 3, then increase it.",
+    "After increasing the character at index i, set every character after index i equal to character a. With this, we will ensure that we have created a lexicographically larger string than s, which does not contain any palindromes before index i and is lexicographically the smallest.",
+    "Finally, we are just left with a case to fix palindromic substrings, which come after index i. This can be done with a similar method mentioned in the second hint."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestBeautifulString(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestBeautifulString(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestBeautifulString(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestBeautifulString(self, s: str, k: int) -> str:\n        ",
+    "c": "char* smallestBeautifulString(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestBeautifulString(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar smallestBeautifulString = function(s, k) {\n    \n};",
+    "typescript": "function smallestBeautifulString(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function smallestBeautifulString($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestBeautifulString(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestBeautifulString(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestBeautifulString(String s, int k) {\n    \n  }\n}",
+    "golang": "func smallestBeautifulString(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef smallest_beautiful_string(s, k)\n    \nend",
+    "scala": "object Solution {\n    def smallestBeautifulString(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_beautiful_string(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-beautiful-string s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec smallest_beautiful_string(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nsmallest_beautiful_string(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_beautiful_string(s :: String.t, k :: integer) :: String.t\n  def smallest_beautiful_string(s, k) do\n    \n  end\nend"
+  }
+}

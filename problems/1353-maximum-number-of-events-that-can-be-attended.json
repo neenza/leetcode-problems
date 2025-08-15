@@ -1,0 +1,62 @@
+{
+  "title": "Maximum Number of Events That Can Be Attended",
+  "problem_id": "1478",
+  "frontend_id": "1353",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-events-that-can-be-attended",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array of events where events[i] = [startDayi, endDayi]. Every event i starts at startDayi and ends at endDayi.\nYou can attend an event i at any day d where startDayi <= d <= endDayi. You can only attend one event at any time d.\nReturn the maximum number of events you can attend.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: events = [[1,2],[2,3],[3,4]]\nOutput: 3\nExplanation: You can attend all the three events.\nOne way to attend them all is as shown.\nAttend the first event on day 1.\nAttend the second event on day 2.\nAttend the third event on day 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/05/e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: events= [[1,2],[2,3],[3,4],[1,2]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/05/e1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= events.length <= 105",
+    "events[i].length == 2",
+    "1 <= startDayi <= endDayi <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the events by the start time and in case of tie by the end time in ascending order.",
+    "Loop over the sorted events. Attend as much as you can and keep the last day occupied. When you try to attend new event keep in mind the first day you can attend a new event in."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxEvents(vector<vector<int>>& events) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxEvents(int[][] events) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxEvents(self, events):\n        \"\"\"\n        :type events: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxEvents(self, events: List[List[int]]) -> int:\n        ",
+    "c": "int maxEvents(int** events, int eventsSize, int* eventsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxEvents(int[][] events) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} events\n * @return {number}\n */\nvar maxEvents = function(events) {\n    \n};",
+    "typescript": "function maxEvents(events: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $events\n     * @return Integer\n     */\n    function maxEvents($events) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxEvents(_ events: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxEvents(events: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxEvents(List<List<int>> events) {\n    \n  }\n}",
+    "golang": "func maxEvents(events [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} events\n# @return {Integer}\ndef max_events(events)\n    \nend",
+    "scala": "object Solution {\n    def maxEvents(events: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_events(events: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-events events)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_events(Events :: [[integer()]]) -> integer().\nmax_events(Events) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_events(events :: [[integer]]) :: integer\n  def max_events(events) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Greedy\n\n#### Intuition\n\nAccording to the problem statement, meeting $i$ starts on $\\textit{startDay}_i$ and ends on $\\textit{endDay}_i$. You are allowed to attend a meeting on any day within the interval $[\\textit{startDay}_i, \\textit{endDay}_i]$. Since only one meeting can be attended per day, we apply a greedy strategy: if it's possible to attend both meetings $i$ and $j$ on day $k$, we should prioritize the one with the earlier end time, i.e., $\\min(\\textit{endDay}_i, \\textit{endDay}_j)$. This ensures we leave more room to accommodate other meetings later.\n\nFollowing this principle, we assume that the latest any meeting ends is $\\textit{maxDay}$. We can then iterate through each day from $1$ to $\\textit{maxDay}$ and greedily choose which meeting to attend on each day. To do this efficiently, we use a min-heap to keep track of the end times of currently available meetings. We also sort all meetings by their start time in advance.\n\nLet the current day be $i$. At each day, we perform the following steps:\n\n+ Add to the candidate queue (the min-heap) all meetings whose start day is less than or equal to $i$. At this point, the heap contains all meetings available to attend on day $i$ or earlier.\n\n+ Remove from the heap all meetings whose end day is less than $i$, as they can no longer be attended.\n\n+ If the heap is not empty, we attend the meeting with the earliest end time (which is at the top of the heap), increment the count of attended meetings by $1$, and remove it from the heap.\n\nFinally, return the total number of meetings attended.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of meetings in the given array $\\textit{events}$, and let $T$ be the maximum value of any end time in $\\textit{events}$.\n\n- Time complexity: $O((T + n) \\log n)$.\n  \n  Sorting the array $\\textit{events}$ takes $O(n \\log n)$ time. After sorting, we iterate over each day from $1$ to $T$, giving us $T$ time points to process. For each day, we may add or remove meetings from the priority queue, which maintains at most $n$ elements. Each insertion or deletion operation in the heap takes $O(\\log n)$ time. Therefore, the total cost of heap operations across all days is $O(T \\log n)$. Combining both steps, the overall time complexity becomes $O((T + n) \\log n)$.\n\n- Space complexity: $O(n)$.\n  \n  We use a priority queue (min-heap) to store the end times of meetings that are available to attend. Since there are at most $n$ meetings, the heap will contain at most $n$ elements at any given time. Thus, the space complexity is $O(n)$.\n\n---"
+}

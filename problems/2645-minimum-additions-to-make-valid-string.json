@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Additions to Make Valid String",
+  "problem_id": "2736",
+  "frontend_id": "2645",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-additions-to-make-valid-string",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Stack",
+    "Greedy"
+  ],
+  "description": "Given a string word to which you can insert letters \"a\", \"b\" or \"c\" anywhere and any number of times, return the minimum number of letters that must be inserted so that word becomes valid.\nA string is called valid if it can be formed by concatenating the string \"abc\" several times.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"b\"\nOutput: 2\nExplanation: Insert the letter \"a\" right before \"b\", and the letter \"c\" right next to \"b\" to obtain the valid string \"abc\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"aaa\"\nOutput: 6\nExplanation: Insert letters \"b\" and \"c\" next to each \"a\" to obtain the valid string \"abcabcabc\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"abc\"\nOutput: 0\nExplanation: word is already valid. No modifications are needed.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 50",
+    "word consists of letters \"a\", \"b\" and \"c\" only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain a pointer on word and another pointer on string “abc”.",
+    "If the two characters that are being pointed to differ, Increment the answer and the pointer to the string “abc” by one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int addMinimum(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int addMinimum(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def addMinimum(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def addMinimum(self, word: str) -> int:\n        ",
+    "c": "int addMinimum(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AddMinimum(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar addMinimum = function(word) {\n    \n};",
+    "typescript": "function addMinimum(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function addMinimum($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func addMinimum(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun addMinimum(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int addMinimum(String word) {\n    \n  }\n}",
+    "golang": "func addMinimum(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef add_minimum(word)\n    \nend",
+    "scala": "object Solution {\n    def addMinimum(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn add_minimum(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (add-minimum word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec add_minimum(Word :: unicode:unicode_binary()) -> integer().\nadd_minimum(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec add_minimum(word :: String.t) :: integer\n  def add_minimum(word) do\n    \n  end\nend"
+  }
+}

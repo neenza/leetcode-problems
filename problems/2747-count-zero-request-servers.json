@@ -1,0 +1,63 @@
+{
+  "title": "Count Zero Request Servers",
+  "problem_id": "2833",
+  "frontend_id": "2747",
+  "difficulty": "Medium",
+  "problem_slug": "count-zero-request-servers",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window",
+    "Sorting"
+  ],
+  "description": "You are given an integer n denoting the total number of servers and a 2D 0-indexed integer array logs, where logs[i] = [server_id, time] denotes that the server with id server_id received a request at time time.\nYou are also given an integer x and a 0-indexed integer array queries.\nReturn a 0-indexed integer array arr of length queries.length where arr[i] represents the number of servers that did not receive any requests during the time interval [queries[i] - x, queries[i]].\nNote that the time intervals are inclusive.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, logs = [[1,3],[2,6],[1,5]], x = 5, queries = [10,11]\nOutput: [1,2]\nExplanation: \nFor queries[0]: The servers with ids 1 and 2 get requests in the duration of [5, 10]. Hence, only server 3 gets zero requests.\nFor queries[1]: Only the server with id 2 gets a request in duration of [6,11]. Hence, the servers with ids 1 and 3 are the only servers that do not receive any requests during that time period.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, logs = [[2,4],[2,1],[1,2],[3,1]], x = 2, queries = [3,4]\nOutput: [0,1]\nExplanation: \nFor queries[0]: All servers get at least one request in the duration of [1, 3].\nFor queries[1]: Only server with id 3 gets no request in the duration [2,4].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "1 <= logs.length <= 105",
+    "1 <= queries.length <= 105",
+    "logs[i].length == 2",
+    "1 <= logs[i][0] <= n",
+    "1 <= logs[i][1] <= 106",
+    "1 <= x <= 105",
+    "x < queries[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use sorting and two-pointer approach here?",
+    "Sort the queries array and logs array based on time in increasing order.",
+    "For every window of size x, use sliding window and two-pointer approach to find the answer to the queries."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countServers(int n, vector<vector<int>>& logs, int x, vector<int>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countServers(int n, int[][] logs, int x, int[] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countServers(self, n, logs, x, queries):\n        \"\"\"\n        :type n: int\n        :type logs: List[List[int]]\n        :type x: int\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countServers(self, n: int, logs: List[List[int]], x: int, queries: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countServers(int n, int** logs, int logsSize, int* logsColSize, int x, int* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountServers(int n, int[][] logs, int x, int[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} logs\n * @param {number} x\n * @param {number[]} queries\n * @return {number[]}\n */\nvar countServers = function(n, logs, x, queries) {\n    \n};",
+    "typescript": "function countServers(n: number, logs: number[][], x: number, queries: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $logs\n     * @param Integer $x\n     * @param Integer[] $queries\n     * @return Integer[]\n     */\n    function countServers($n, $logs, $x, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countServers(_ n: Int, _ logs: [[Int]], _ x: Int, _ queries: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countServers(n: Int, logs: Array<IntArray>, x: Int, queries: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countServers(int n, List<List<int>> logs, int x, List<int> queries) {\n    \n  }\n}",
+    "golang": "func countServers(n int, logs [][]int, x int, queries []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} logs\n# @param {Integer} x\n# @param {Integer[]} queries\n# @return {Integer[]}\ndef count_servers(n, logs, x, queries)\n    \nend",
+    "scala": "object Solution {\n    def countServers(n: Int, logs: Array[Array[Int]], x: Int, queries: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_servers(n: i32, logs: Vec<Vec<i32>>, x: i32, queries: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-servers n logs x queries)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec count_servers(N :: integer(), Logs :: [[integer()]], X :: integer(), Queries :: [integer()]) -> [integer()].\ncount_servers(N, Logs, X, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_servers(n :: integer, logs :: [[integer]], x :: integer, queries :: [integer]) :: [integer]\n  def count_servers(n, logs, x, queries) do\n    \n  end\nend"
+  }
+}

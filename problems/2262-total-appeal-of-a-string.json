@@ -1,0 +1,57 @@
+{
+  "title": "Total Appeal of A String",
+  "problem_id": "2340",
+  "frontend_id": "2262",
+  "difficulty": "Hard",
+  "problem_slug": "total-appeal-of-a-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "The appeal of a string is the number of distinct characters found in the string.\nGiven a string s, return the total appeal of all of its substrings.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abbca\"\nOutput: 28\nExplanation: The following are the substrings of \"abbca\":\n- Substrings of length 1: \"a\", \"b\", \"b\", \"c\", \"a\" have an appeal of 1, 1, 1, 1, and 1 respectively. The sum is 5.\n- Substrings of length 2: \"ab\", \"bb\", \"bc\", \"ca\" have an appeal of 2, 1, 2, and 2 respectively. The sum is 7.\n- Substrings of length 3: \"abb\", \"bbc\", \"bca\" have an appeal of 2, 2, and 3 respectively. The sum is 7.\n- Substrings of length 4: \"abbc\", \"bbca\" have an appeal of 3 and 3 respectively. The sum is 6.\n- Substrings of length 5: \"abbca\" has an appeal of 3. The sum is 3.\nThe total sum is 5 + 7 + 7 + 6 + 3 = 28.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"code\"\nOutput: 20\nExplanation: The following are the substrings of \"code\":\n- Substrings of length 1: \"c\", \"o\", \"d\", \"e\" have an appeal of 1, 1, 1, and 1 respectively. The sum is 4.\n- Substrings of length 2: \"co\", \"od\", \"de\" have an appeal of 2, 2, and 2 respectively. The sum is 6.\n- Substrings of length 3: \"cod\", \"ode\" have an appeal of 3 and 3 respectively. The sum is 6.\n- Substrings of length 4: \"code\" has an appeal of 4. The sum is 4.\nThe total sum is 4 + 6 + 6 + 4 = 20.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider the set of substrings that end at a certain index i. Then, consider a specific alphabetic character. How do you count the number of substrings ending at index i that contain that character?",
+    "The number of substrings that contain the alphabetic character is equivalent to 1 plus the index of the last occurrence of the character before index i + 1.",
+    "The total appeal of all substrings ending at index i is the total sum of the number of substrings that contain each alphabetic character.",
+    "To find the total appeal of all substrings, we simply sum up the total appeal for each index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long appealSum(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long appealSum(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def appealSum(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def appealSum(self, s: str) -> int:\n        ",
+    "c": "long long appealSum(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long AppealSum(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar appealSum = function(s) {\n    \n};",
+    "typescript": "function appealSum(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function appealSum($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func appealSum(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun appealSum(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int appealSum(String s) {\n    \n  }\n}",
+    "golang": "func appealSum(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef appeal_sum(s)\n    \nend",
+    "scala": "object Solution {\n    def appealSum(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn appeal_sum(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (appeal-sum s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec appeal_sum(S :: unicode:unicode_binary()) -> integer().\nappeal_sum(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec appeal_sum(s :: String.t) :: integer\n  def appeal_sum(s) do\n    \n  end\nend"
+  }
+}

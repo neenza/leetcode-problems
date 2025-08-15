@@ -1,0 +1,75 @@
+{
+  "title": "Maximum Weighted K-Edge Path",
+  "problem_id": "3856",
+  "frontend_id": "3543",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-weighted-k-edge-path",
+  "topics": [
+    "Hash Table",
+    "Dynamic Programming",
+    "Graph"
+  ],
+  "description": "You are given an integer n and a Directed Acyclic Graph (DAG) with n nodes labeled from 0 to n - 1. This is represented by a 2D array edges, where edges[i] = [ui, vi, wi] indicates a directed edge from node ui to vi with weight wi.\nYou are also given two integers, k and t.\nYour task is to determine the maximum possible sum of edge weights for any path in the graph such that:\nReturn the maximum possible sum of weights for such a path. If no such path exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1,1],[1,2,2]], k = 2, t = 4\nOutput: 3\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-061326.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1,2],[0,2,3]], k = 1, t = 3\nOutput: 2\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-061406.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, edges = [[0,1,6],[1,2,8]], k = 1, t = 6\nOutput: -1\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-061442.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 300",
+    "0 <= edges.length <= 300",
+    "edges[i] = [ui, vi, wi]",
+    "0 <= ui, vi < n",
+    "ui != vi",
+    "1 <= wi <= 10",
+    "0 <= k <= 300",
+    "1 <= t <= 600",
+    "The input graph is guaranteed to be a DAG.",
+    "There are no duplicate edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic Programming",
+    "How many paths and path sums are possible? Can we maintain the pathSums for a given path length ending at a particular node in a set?",
+    "The set <code>dp[i][j]</code> contains all possible path weights that end at node <code>i</code>, have total weight less than <code>T</code>, and consist of exactly <code>j</code> edges"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxWeight(int n, vector<vector<int>>& edges, int k, int t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxWeight(int n, int[][] edges, int k, int t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxWeight(self, n, edges, k, t):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type k: int\n        :type t: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxWeight(self, n: int, edges: List[List[int]], k: int, t: int) -> int:\n        ",
+    "c": "int maxWeight(int n, int** edges, int edgesSize, int* edgesColSize, int k, int t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxWeight(int n, int[][] edges, int k, int t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} k\n * @param {number} t\n * @return {number}\n */\nvar maxWeight = function(n, edges, k, t) {\n    \n};",
+    "typescript": "function maxWeight(n: number, edges: number[][], k: number, t: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer $k\n     * @param Integer $t\n     * @return Integer\n     */\n    function maxWeight($n, $edges, $k, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxWeight(_ n: Int, _ edges: [[Int]], _ k: Int, _ t: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxWeight(n: Int, edges: Array<IntArray>, k: Int, t: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxWeight(int n, List<List<int>> edges, int k, int t) {\n    \n  }\n}",
+    "golang": "func maxWeight(n int, edges [][]int, k int, t int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer} k\n# @param {Integer} t\n# @return {Integer}\ndef max_weight(n, edges, k, t)\n    \nend",
+    "scala": "object Solution {\n    def maxWeight(n: Int, edges: Array[Array[Int]], k: Int, t: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_weight(n: i32, edges: Vec<Vec<i32>>, k: i32, t: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-weight n edges k t)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_weight(N :: integer(), Edges :: [[integer()]], K :: integer(), T :: integer()) -> integer().\nmax_weight(N, Edges, K, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_weight(n :: integer, edges :: [[integer]], k :: integer, t :: integer) :: integer\n  def max_weight(n, edges, k, t) do\n    \n  end\nend"
+  }
+}

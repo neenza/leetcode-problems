@@ -1,0 +1,59 @@
+{
+  "title": "Reformat Phone Number",
+  "problem_id": "1812",
+  "frontend_id": "1694",
+  "difficulty": "Easy",
+  "problem_slug": "reformat-phone-number",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a phone number as a string number. number consists of digits, spaces ' ', and/or dashes '-'.\nYou would like to reformat the phone number in a certain manner. Firstly, remove all spaces and dashes. Then, group the digits from left to right into blocks of length 3 until there are 4 or fewer digits. The final digits are then grouped as follows:\nThe blocks are then joined by dashes. Notice that the reformatting process should never produce any blocks of length 1 and produce at most two blocks of length 2.\nReturn the phone number after formatting.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: number = \"1-23-45 6\"\nOutput: \"123-456\"\nExplanation: The digits are \"123456\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 3 digits remaining, so put them in a single block of length 3. The 2nd block is \"456\".\nJoining the blocks gives \"123-456\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: number = \"123 4-567\"\nOutput: \"123-45-67\"\nExplanation: The digits are \"1234567\".\nStep 1: There are more than 4 digits, so group the next 3 digits. The 1st block is \"123\".\nStep 2: There are 4 digits left, so split them into two blocks of length 2. The blocks are \"45\" and \"67\".\nJoining the blocks gives \"123-45-67\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: number = \"123 4-5678\"\nOutput: \"123-456-78\"\nExplanation: The digits are \"12345678\".\nStep 1: The 1st block is \"123\".\nStep 2: The 2nd block is \"456\".\nStep 3: There are 2 digits left, so put them in a single block of length 2. The 3rd block is \"78\".\nJoining the blocks gives \"123-456-78\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= number.length <= 100",
+    "number consists of digits and the characters '-' and ' '.",
+    "There are at least two digits in number."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Discard all the spaces and dashes.",
+    "Use a while loop. While the string still has digits, check its length and see which rule to apply."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string reformatNumber(string number) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reformatNumber(String number) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reformatNumber(self, number):\n        \"\"\"\n        :type number: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reformatNumber(self, number: str) -> str:\n        ",
+    "c": "char* reformatNumber(char* number) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ReformatNumber(string number) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} number\n * @return {string}\n */\nvar reformatNumber = function(number) {\n    \n};",
+    "typescript": "function reformatNumber(number: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $number\n     * @return String\n     */\n    function reformatNumber($number) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reformatNumber(_ number: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reformatNumber(number: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reformatNumber(String number) {\n    \n  }\n}",
+    "golang": "func reformatNumber(number string) string {\n    \n}",
+    "ruby": "# @param {String} number\n# @return {String}\ndef reformat_number(number)\n    \nend",
+    "scala": "object Solution {\n    def reformatNumber(number: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reformat_number(number: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (reformat-number number)\n  (-> string? string?)\n  )",
+    "erlang": "-spec reformat_number(Number :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreformat_number(Number) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reformat_number(number :: String.t) :: String.t\n  def reformat_number(number) do\n    \n  end\nend"
+  }
+}

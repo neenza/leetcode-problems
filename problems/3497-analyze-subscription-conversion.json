@@ -1,0 +1,38 @@
+{
+  "title": "Analyze Subscription Conversion ",
+  "problem_id": "3848",
+  "frontend_id": "3497",
+  "difficulty": "Medium",
+  "problem_slug": "analyze-subscription-conversion",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: UserActivity\nA subscription service wants to analyze user behavior patterns. The company offers a 7-day free trial, after which users can subscribe to a paid plan or cancel. Write a solution to:\nReturn the result table ordered by user_id in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+------------------+---------+\n| Column Name      | Type    | \n+------------------+---------+\n| user_id          | int     |\n| activity_date    | date    |\n| activity_type    | varchar |\n| activity_duration| int     |\n+------------------+---------+\n(user_id, activity_date, activity_type) is the unique key for this table.\nactivity_type is one of ('free_trial', 'paid', 'cancelled').\nactivity_duration is the number of minutes the user spent on the platform that day.\nEach row represents a user's activity on a specific date.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------+---------------+---------------+-------------------+\n| user_id | activity_date | activity_type | activity_duration |\n+---------+---------------+---------------+-------------------+\n| 1       | 2023-01-01    | free_trial    | 45                |\n| 1       | 2023-01-02    | free_trial    | 30                |\n| 1       | 2023-01-05    | free_trial    | 60                |\n| 1       | 2023-01-10    | paid          | 75                |\n| 1       | 2023-01-12    | paid          | 90                |\n| 1       | 2023-01-15    | paid          | 65                |\n| 2       | 2023-02-01    | free_trial    | 55                |\n| 2       | 2023-02-03    | free_trial    | 25                |\n| 2       | 2023-02-07    | free_trial    | 50                |\n| 2       | 2023-02-10    | cancelled     | 0                 |\n| 3       | 2023-03-05    | free_trial    | 70                |\n| 3       | 2023-03-06    | free_trial    | 60                |\n| 3       | 2023-03-08    | free_trial    | 80                |\n| 3       | 2023-03-12    | paid          | 50                |\n| 3       | 2023-03-15    | paid          | 55                |\n| 3       | 2023-03-20    | paid          | 85                |\n| 4       | 2023-04-01    | free_trial    | 40                |\n| 4       | 2023-04-03    | free_trial    | 35                |\n| 4       | 2023-04-05    | paid          | 45                |\n| 4       | 2023-04-07    | cancelled     | 0                 |\n+---------+---------------+---------------+-------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------+--------------------+-------------------+\n| user_id | trial_avg_duration | paid_avg_duration |\n+---------+--------------------+-------------------+\n| 1       | 45.00              | 76.67             |\n| 3       | 70.00              | 63.33             |\n| 4       | 37.50              | 45.00             |\n+---------+--------------------+-------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef analyze_subscription_conversion(user_activity: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

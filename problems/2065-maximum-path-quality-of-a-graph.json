@@ -1,0 +1,74 @@
+{
+  "title": "Maximum Path Quality of a Graph",
+  "problem_id": "2189",
+  "frontend_id": "2065",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-path-quality-of-a-graph",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Graph"
+  ],
+  "description": "There is an undirected graph with n nodes numbered from 0 to n - 1 (inclusive). You are given a 0-indexed integer array values where values[i] is the value of the ith node. You are also given a 0-indexed 2D integer array edges, where each edges[j] = [uj, vj, timej] indicates that there is an undirected edge between the nodes uj and vj, and it takes timej seconds to travel between the two nodes. Finally, you are given an integer maxTime.\nA valid path in the graph is any path that starts at node 0, ends at node 0, and takes at most maxTime seconds to complete. You may visit the same node multiple times. The quality of a valid path is the sum of the values of the unique nodes visited in the path (each node's value is added at most once to the sum).\nReturn the maximum quality of a valid path.\nNote: There are at most four edges connected to each node.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: values = [0,32,10,43], edges = [[0,1,10],[1,2,15],[0,3,10]], maxTime = 49\nOutput: 75\nExplanation:\nOne possible path is 0 -> 1 -> 0 -> 3 -> 0. The total time taken is 10 + 10 + 10 + 10 = 40 <= 49.\nThe nodes visited are 0, 1, and 3, giving a maximal path quality of 0 + 32 + 43 = 75.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/19/ex1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: values = [5,10,15,20], edges = [[0,1,10],[1,2,10],[0,3,10]], maxTime = 30\nOutput: 25\nExplanation:\nOne possible path is 0 -> 3 -> 0. The total time taken is 10 + 10 = 20 <= 30.\nThe nodes visited are 0 and 3, giving a maximal path quality of 5 + 20 = 25.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/19/ex2drawio.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: values = [1,2,3,4], edges = [[0,1,10],[1,2,11],[2,3,12],[1,3,13]], maxTime = 50\nOutput: 7\nExplanation:\nOne possible path is 0 -> 1 -> 3 -> 1 -> 0. The total time taken is 10 + 13 + 13 + 10 = 46 <= 50.\nThe nodes visited are 0, 1, and 3, giving a maximal path quality of 1 + 2 + 4 = 7.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/19/ex31drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == values.length",
+    "1 <= n <= 1000",
+    "0 <= values[i] <= 108",
+    "0 <= edges.length <= 2000",
+    "edges[j].length == 3",
+    "0 <= uj < vj <= n - 1",
+    "10 <= timej, maxTime <= 100",
+    "All the pairs [uj, vj] are unique.",
+    "There are at most four edges connected to each node.",
+    "The graph may not be connected."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How many nodes can you visit within maxTime seconds?",
+    "Can you try every valid path?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximalPathQuality(vector<int>& values, vector<vector<int>>& edges, int maxTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximalPathQuality(int[] values, int[][] edges, int maxTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximalPathQuality(self, values, edges, maxTime):\n        \"\"\"\n        :type values: List[int]\n        :type edges: List[List[int]]\n        :type maxTime: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximalPathQuality(self, values: List[int], edges: List[List[int]], maxTime: int) -> int:\n        ",
+    "c": "int maximalPathQuality(int* values, int valuesSize, int** edges, int edgesSize, int* edgesColSize, int maxTime) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximalPathQuality(int[] values, int[][] edges, int maxTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} values\n * @param {number[][]} edges\n * @param {number} maxTime\n * @return {number}\n */\nvar maximalPathQuality = function(values, edges, maxTime) {\n    \n};",
+    "typescript": "function maximalPathQuality(values: number[], edges: number[][], maxTime: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $values\n     * @param Integer[][] $edges\n     * @param Integer $maxTime\n     * @return Integer\n     */\n    function maximalPathQuality($values, $edges, $maxTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximalPathQuality(_ values: [Int], _ edges: [[Int]], _ maxTime: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximalPathQuality(values: IntArray, edges: Array<IntArray>, maxTime: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximalPathQuality(List<int> values, List<List<int>> edges, int maxTime) {\n    \n  }\n}",
+    "golang": "func maximalPathQuality(values []int, edges [][]int, maxTime int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} values\n# @param {Integer[][]} edges\n# @param {Integer} max_time\n# @return {Integer}\ndef maximal_path_quality(values, edges, max_time)\n    \nend",
+    "scala": "object Solution {\n    def maximalPathQuality(values: Array[Int], edges: Array[Array[Int]], maxTime: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximal_path_quality(values: Vec<i32>, edges: Vec<Vec<i32>>, max_time: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximal-path-quality values edges maxTime)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximal_path_quality(Values :: [integer()], Edges :: [[integer()]], MaxTime :: integer()) -> integer().\nmaximal_path_quality(Values, Edges, MaxTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximal_path_quality(values :: [integer], edges :: [[integer]], max_time :: integer) :: integer\n  def maximal_path_quality(values, edges, max_time) do\n    \n  end\nend"
+  }
+}

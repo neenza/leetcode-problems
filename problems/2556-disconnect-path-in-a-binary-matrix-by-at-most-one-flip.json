@@ -1,0 +1,65 @@
+{
+  "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+  "problem_id": "2641",
+  "frontend_id": "2556",
+  "difficulty": "Medium",
+  "problem_slug": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given a 0-indexed m x n binary matrix grid. You can move from a cell (row, col) to any of the cells (row + 1, col) or (row, col + 1) that has the value 1. The matrix is disconnected if there is no path from (0, 0) to (m - 1, n - 1).\nYou can flip the value of at most one (possibly none) cell. You cannot flip the cells (0, 0) and (m - 1, n - 1).\nReturn true if it is possible to make the matrix disconnect or false otherwise.\nNote that flipping a cell changes its value from 0 to 1 or from 1 to 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,1,1],[1,0,0],[1,1,1]]\nOutput: true\nExplanation: We can change the cell shown in the diagram above. There is no path from (0, 0) to (2, 2) in the resulting grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/07/yetgrid2drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: false\nExplanation: It is not possible to change at most one cell such that there is not path from (0, 0) to (2, 2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/07/yetgrid3drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 1000",
+    "1 <= m * n <= 105",
+    "grid[i][j] is either 0 or 1.",
+    "grid[0][0] == grid[m - 1][n - 1] == 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can consider the grid a graph with edges between adjacent cells.",
+    "If you can find two non-intersecting paths from (0, 0) to (m - 1, n - 1) then the answer is false. Otherwise, it is always true."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPossibleToCutPath(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPossibleToCutPath(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPossibleToCutPath(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPossibleToCutPath(self, grid: List[List[int]]) -> bool:\n        ",
+    "c": "bool isPossibleToCutPath(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPossibleToCutPath(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar isPossibleToCutPath = function(grid) {\n    \n};",
+    "typescript": "function isPossibleToCutPath(grid: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Boolean\n     */\n    function isPossibleToCutPath($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPossibleToCutPath(_ grid: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPossibleToCutPath(grid: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPossibleToCutPath(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func isPossibleToCutPath(grid [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Boolean}\ndef is_possible_to_cut_path(grid)\n    \nend",
+    "scala": "object Solution {\n    def isPossibleToCutPath(grid: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_possible_to_cut_path(grid: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-possible-to-cut-path grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec is_possible_to_cut_path(Grid :: [[integer()]]) -> boolean().\nis_possible_to_cut_path(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_possible_to_cut_path(grid :: [[integer]]) :: boolean\n  def is_possible_to_cut_path(grid) do\n    \n  end\nend"
+  }
+}

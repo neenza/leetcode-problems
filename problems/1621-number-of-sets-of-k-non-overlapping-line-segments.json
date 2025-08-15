@@ -1,0 +1,66 @@
+{
+  "title": "Number of Sets of K Non-Overlapping Line Segments",
+  "problem_id": "1725",
+  "frontend_id": "1621",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-sets-of-k-non-overlapping-line-segments",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "Given n points on a 1-D plane, where the ith point (from 0 to n-1) is at x = i, find the number of ways we can draw exactly k non-overlapping line segments such that each segment covers two or more points. The endpoints of each segment must have integral coordinates. The k line segments do not have to cover all n points, and they are allowed to share endpoints.\nReturn the number of ways we can draw k non-overlapping line segments. Since this number can be huge, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, k = 2\nOutput: 5\nExplanation: The two line segments are shown in red and blue.\nThe image above shows the 5 different ways {(0,2),(2,3)}, {(0,1),(1,3)}, {(0,1),(2,3)}, {(1,2),(2,3)}, {(0,1),(1,2)}.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/07/ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, k = 1\nOutput: 3\nExplanation: The 3 ways are {(0,1)}, {(0,2)}, {(1,2)}.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/07/ex1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 30, k = 7\nOutput: 796297179\nExplanation: The total number of possible ways to draw 7 line segments is 3796297200. Taking this number modulo 109 + 7 gives us 796297179.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/07/ex1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "1 <= k <= n-1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to use dynamic programming where the current index and remaining number of line segments to form can describe any intermediate state.",
+    "To make the computation of each state in constant time, we could add another flag to the state that indicates whether or not we are in the middle of placing a line (placed start point but no endpoint)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfSets(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSets(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSets(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSets(self, n: int, k: int) -> int:\n        ",
+    "c": "int numberOfSets(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfSets(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar numberOfSets = function(n, k) {\n    \n};",
+    "typescript": "function numberOfSets(n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function numberOfSets($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSets(_ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSets(n: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSets(int n, int k) {\n    \n  }\n}",
+    "golang": "func numberOfSets(n int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef number_of_sets(n, k)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSets(n: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_sets(n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-sets n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_sets(N :: integer(), K :: integer()) -> integer().\nnumber_of_sets(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_sets(n :: integer, k :: integer) :: integer\n  def number_of_sets(n, k) do\n    \n  end\nend"
+  }
+}

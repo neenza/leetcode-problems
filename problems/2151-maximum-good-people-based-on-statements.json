@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Good People Based on Statements",
+  "problem_id": "2272",
+  "frontend_id": "2151",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-good-people-based-on-statements",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "description": "There are two types of persons:\nYou are given a 0-indexed 2D integer array statements of size n x n that represents the statements made by n people about each other. More specifically, statements[i][j] could be one of the following:\nAdditionally, no person ever makes a statement about themselves. Formally, we have that statements[i][i] = 2 for all 0 <= i < n.\nReturn the maximum number of people who can be good based on the statements made by the n people.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: statements = [[2,1,2],[1,2,2],[2,0,2]]\nOutput: 2\nExplanation: Each person makes a single statement.\n- Person 0 states that person 1 is good.\n- Person 1 states that person 0 is good.\n- Person 2 states that person 1 is bad.\nLet's take person 2 as the key.\n- Assuming that person 2 is a good person:\n    - Based on the statement made by person 2, person 1 is a bad person.\n    - Now we know for sure that person 1 is bad and person 2 is good.\n    - Based on the statement made by person 1, and since person 1 is bad, they could be:\n        - telling the truth. There will be a contradiction in this case and this assumption is invalid.\n        - lying. In this case, person 0 is also a bad person and lied in their statement.\n    - Following that person 2 is a good person, there will be only one good person in the group.\n- Assuming that person 2 is a bad person:\n    - Based on the statement made by person 2, and since person 2 is bad, they could be:\n        - telling the truth. Following this scenario, person 0 and 1 are both bad as explained before.\n            - Following that person 2 is bad but told the truth, there will be no good persons in the group.\n        - lying. In this case person 1 is a good person.\n            - Since person 1 is a good person, person 0 is also a good person.\n            - Following that person 2 is bad and lied, there will be two good persons in the group.\nWe can see that at most 2 persons are good in the best case, so we return 2.\nNote that there is more than one way to arrive at this conclusion.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/01/15/logic1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: statements = [[2,0],[0,2]]\nOutput: 1\nExplanation: Each person makes a single statement.\n- Person 0 states that person 1 is bad.\n- Person 1 states that person 0 is bad.\nLet's take person 0 as the key.\n- Assuming that person 0 is a good person:\n    - Based on the statement made by person 0, person 1 is a bad person and was lying.\n    - Following that person 0 is a good person, there will be only one good person in the group.\n- Assuming that person 0 is a bad person:\n    - Based on the statement made by person 0, and since person 0 is bad, they could be:\n        - telling the truth. Following this scenario, person 0 and 1 are both bad.\n            - Following that person 0 is bad but told the truth, there will be no good persons in the group.\n        - lying. In this case person 1 is a good person.\n            - Following that person 0 is bad and lied, there will be only one good person in the group.\nWe can see that at most, one person is good in the best case, so we return 1.\nNote that there is more than one way to arrive at this conclusion.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/01/15/logic2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == statements.length == statements[i].length",
+    "2 <= n <= 15",
+    "statements[i][j] is either 0, 1, or 2.",
+    "statements[i][i] == 2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You should test every possible assignment of good and bad people, using a bitmask.",
+    "In each bitmask, if the person i is good, then his statements should be consistent with the bitmask in order for the assignment to be valid.",
+    "If the assignment is valid, count how many people are good and keep track of the maximum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumGood(vector<vector<int>>& statements) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumGood(int[][] statements) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumGood(self, statements):\n        \"\"\"\n        :type statements: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumGood(self, statements: List[List[int]]) -> int:\n        ",
+    "c": "int maximumGood(int** statements, int statementsSize, int* statementsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumGood(int[][] statements) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} statements\n * @return {number}\n */\nvar maximumGood = function(statements) {\n    \n};",
+    "typescript": "function maximumGood(statements: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $statements\n     * @return Integer\n     */\n    function maximumGood($statements) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumGood(_ statements: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumGood(statements: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumGood(List<List<int>> statements) {\n    \n  }\n}",
+    "golang": "func maximumGood(statements [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} statements\n# @return {Integer}\ndef maximum_good(statements)\n    \nend",
+    "scala": "object Solution {\n    def maximumGood(statements: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_good(statements: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-good statements)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_good(Statements :: [[integer()]]) -> integer().\nmaximum_good(Statements) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_good(statements :: [[integer]]) :: integer\n  def maximum_good(statements) do\n    \n  end\nend"
+  }
+}

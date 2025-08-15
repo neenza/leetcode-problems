@@ -1,0 +1,63 @@
+{
+  "title": "Palindrome Pairs",
+  "problem_id": "336",
+  "frontend_id": "336",
+  "difficulty": "Hard",
+  "problem_slug": "palindrome-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Trie"
+  ],
+  "description": "You are given a 0-indexed array of unique strings words.\nA palindrome pair is a pair of integers (i, j) such that:\nReturn an array of all the palindrome pairs of words.\nYou must write an algorithm with O(sum of words[i].length) runtime complexity.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abcd\",\"dcba\",\"lls\",\"s\",\"sssll\"]\nOutput: [[0,1],[1,0],[3,2],[2,4]]\nExplanation: The palindromes are [\"abcddcba\",\"dcbaabcd\",\"slls\",\"llssssll\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"bat\",\"tab\",\"cat\"]\nOutput: [[0,1],[1,0]]\nExplanation: The palindromes are [\"battab\",\"tabbat\"]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"a\",\"\"]\nOutput: [[0,1],[1,0]]\nExplanation: The palindromes are [\"a\",\"a\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 5000",
+    "0 <= words[i].length <= 300",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Checking every two pairs will exceed the time limit. It will be O(n^2 * k). We need a faster way.",
+    "If we hash every string in the array, how can we check if two pairs form a palindrome after the concatenation?",
+    "We can check every string in words and consider it as words[j] (i.e., the suffix of the target palindrome). We can check if there is a hash of string that can be the prefix to make it a palindrome."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> palindromePairs(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> palindromePairs(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def palindromePairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def palindromePairs(self, words: List[str]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** palindromePairs(char** words, int wordsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> PalindromePairs(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[][]}\n */\nvar palindromePairs = function(words) {\n    \n};",
+    "typescript": "function palindromePairs(words: string[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer[][]\n     */\n    function palindromePairs($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func palindromePairs(_ words: [String]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun palindromePairs(words: Array<String>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> palindromePairs(List<String> words) {\n    \n  }\n}",
+    "golang": "func palindromePairs(words []string) [][]int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer[][]}\ndef palindrome_pairs(words)\n    \nend",
+    "scala": "object Solution {\n    def palindromePairs(words: Array[String]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn palindrome_pairs(words: Vec<String>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (palindrome-pairs words)\n  (-> (listof string?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec palindrome_pairs(Words :: [unicode:unicode_binary()]) -> [[integer()]].\npalindrome_pairs(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec palindrome_pairs(words :: [String.t]) :: [[integer]]\n  def palindrome_pairs(words) do\n    \n  end\nend"
+  }
+}

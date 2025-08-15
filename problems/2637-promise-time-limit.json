@@ -1,0 +1,49 @@
+{
+  "title": "Promise Time Limit",
+  "problem_id": "2749",
+  "frontend_id": "2637",
+  "difficulty": "Medium",
+  "problem_slug": "promise-time-limit",
+  "topics": [],
+  "description": "Given an asynchronous function fn and a time t in milliseconds, return a new time limited version of the input function. fn takes arguments provided to the time limited function.\nThe time limited function should follow these rules:\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: \nfn = async (n) => { \n  await new Promise(res => setTimeout(res, 100)); \n  return n * n; \n}\ninputs = [5]\nt = 50\nOutput: {\"rejected\":\"Time Limit Exceeded\",\"time\":50}\nExplanation:\nconst limited = timeLimit(fn, t)\nconst start = performance.now()\nlet result;\ntry {\n   const res = await limited(...inputs)\n   result = {\"resolved\": res, \"time\": Math.floor(performance.now() - start)};\n} catch (err) {\n   result = {\"rejected\": err, \"time\": Math.floor(performance.now() - start)};\n}\nconsole.log(result) // Output\n\nThe provided function is set to resolve after 100ms. However, the time limit is set to 50ms. It rejects at t=50ms because the time limit was reached.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nfn = async (n) => { \n  await new Promise(res => setTimeout(res, 100)); \n  return n * n; \n}\ninputs = [5]\nt = 150\nOutput: {\"resolved\":25,\"time\":100}\nExplanation:\nThe function resolved 5 * 5 = 25 at t=100ms. The time limit is never reached.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nfn = async (a, b) => { \n  await new Promise(res => setTimeout(res, 120)); \n  return a + b; \n}\ninputs = [5,10]\nt = 150\nOutput: {\"resolved\":15,\"time\":120}\nExplanation:\n​​​​The function resolved 5 + 10 = 15 at t=120ms. The time limit is never reached.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: \nfn = async () => { \n  throw \"Error\";\n}\ninputs = []\nt = 1000\nOutput: {\"rejected\":\"Error\",\"time\":0}\nExplanation:\nThe function immediately throws an error.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= inputs.length <= 10",
+    "0 <= t <= 1000",
+    "fn returns a promise"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can return a copy of a function with: \r\n\r\nfunction outerFunction(fn) { \r\n  return function innerFunction(...params) {\r\n    return fn(...params);\r\n  };\r\n}",
+    "Inside the inner function, you will need to return a new Promise.",
+    "You can create a new promise like: new Promise((resolve, reject) => {}).",
+    "You can execute code with a delay with \"setTimeout(fn, delay)\"",
+    "To reject a promise after a delay, \"setTimeout(() => reject('err'), delay)\"",
+    "You can resolve and reject when the passed promise resolves or rejects with: \"fn(...params).then(resolve).catch(reject)\""
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @param {Function} fn\n * @param {number} t\n * @return {Function}\n */\nvar timeLimit = function(fn, t) {\n    \n    return async function(...args) {\n        \n    }\n};\n\n/**\n * const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);\n * limited(150).catch(console.log) // \"Time Limit Exceeded\" at t=100ms\n */",
+    "typescript": "type Fn = (...params: any[]) => Promise<any>;\n\nfunction timeLimit(fn: Fn, t: number): Fn {\n    \n    return async function(...args) {\n        \n    }\n};\n\n/**\n * const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);\n * limited(150).catch(console.log) // \"Time Limit Exceeded\" at t=100ms\n */"
+  }
+}

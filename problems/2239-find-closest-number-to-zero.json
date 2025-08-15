@@ -1,0 +1,53 @@
+{
+  "title": "Find Closest Number to Zero",
+  "problem_id": "2350",
+  "frontend_id": "2239",
+  "difficulty": "Easy",
+  "problem_slug": "find-closest-number-to-zero",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an integer array nums of size n, return the number with the value closest to 0 in nums. If there are multiple answers, return the number with the largest value.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-4,-2,1,4,8]\nOutput: 1\nExplanation:\nThe distance from -4 to 0 is |-4| = 4.\nThe distance from -2 to 0 is |-2| = 2.\nThe distance from 1 to 0 is |1| = 1.\nThe distance from 4 to 0 is |4| = 4.\nThe distance from 8 to 0 is |8| = 8.\nThus, the closest number to 0 in the array is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,-1,1]\nOutput: 1\nExplanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000",
+    "-105 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of the number closest to 0 as you iterate through the array.",
+    "Ensure that if multiple numbers are closest to 0, you store the one with the largest value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findClosestNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findClosestNumber(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findClosestNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        ",
+    "c": "int findClosestNumber(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindClosestNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findClosestNumber = function(nums) {\n    \n};",
+    "typescript": "function findClosestNumber(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findClosestNumber($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findClosestNumber(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findClosestNumber(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findClosestNumber(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findClosestNumber(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_closest_number(nums)\n    \nend",
+    "scala": "object Solution {\n    def findClosestNumber(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_closest_number(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-closest-number nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_closest_number(Nums :: [integer()]) -> integer().\nfind_closest_number(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_closest_number(nums :: [integer]) :: integer\n  def find_closest_number(nums) do\n    \n  end\nend"
+  }
+}

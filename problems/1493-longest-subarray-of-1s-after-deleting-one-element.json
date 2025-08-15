@@ -1,0 +1,60 @@
+{
+  "title": "Longest Subarray of 1's After Deleting One Element",
+  "problem_id": "1586",
+  "frontend_id": "1493",
+  "difficulty": "Medium",
+  "problem_slug": "longest-subarray-of-1s-after-deleting-one-element",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "description": "Given a binary array nums, you should delete one element from it.\nReturn the size of the longest non-empty subarray containing only 1's in the resulting array. Return 0 if there is no such subarray.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,0,1]\nOutput: 3\nExplanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1,1,1,0,1,1,0,1]\nOutput: 5\nExplanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1]\nOutput: 2\nExplanation: You must delete one element.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "nums[i] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain a sliding window where there is at most one zero in it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestSubarray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubarray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSubarray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSubarray(self, nums: List[int]) -> int:\n        ",
+    "c": "int longestSubarray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestSubarray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar longestSubarray = function(nums) {\n    \n};",
+    "typescript": "function longestSubarray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function longestSubarray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSubarray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSubarray(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestSubarray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func longestSubarray(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef longest_subarray(nums)\n    \nend",
+    "scala": "object Solution {\n    def longestSubarray(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_subarray(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-subarray nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec longest_subarray(Nums :: [integer()]) -> integer().\nlongest_subarray(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_subarray(nums :: [integer]) :: integer\n  def longest_subarray(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n### Approach: Sliding Window\n\n**Intuition**\n\nWe have a binary array `nums` with size $N$; we need to delete exactly one element from it and then return the longest subarray having only `1`. Since we need to maximize the count of `1` in the subarray, we should not delete a `1`, except in the case when the array has all elements as `1` (then we don't have a choice).\n\nAlthough we need a subarray with all elements as `1`, we can afford to have one `0` as we can delete it. We will keep a window and keep adding elements as long as the count of `0`s in it doesn't exceed one. Once the number of `0`s exceeds one, we will shrink the window from the left side till the count of `0` comes under the limit; then, we can compare the size of the current window with the longest subarray we have got so far.\n\n![fig](../Figures/1493/1493A.png)\n\nThis algorithm will cover the edge case with no zeroes, as in that case, the `zeroCount` will never exceed `1`, and our window will cover the whole array. In the end, the difference between the first and last index would provide the array size minus 1, which is intended as we need to delete one element.\n\n**Algorithm**\n\n1. Initialize three variables:\n\n   a. `zeroCount` to `0`; this is the number of zeroes in the current window.\n\n   b. `longestWindow` to `0`; this is the longest window having at most one `0` we have seen so far.\n\n   c. `start` to `0`; this is the left end of the window from where it starts.\n\n2. Iterate over the array from index `i` to `array.length - 1` (inclusive), and keep counting the zeroes in the variable `zeroCount`.\n3. After every element, check if the `zeroCount` exceeds `1`; if yes, keep removing elements from the left until the value of `zeroCount` becomes `<= 1`.\n4. Update the variable `longestWindow` with the current window length, i.e. `i - start`. Note that this subtraction will give the number of elements in the window minus `1`, as we need to delete one element too.\n5. Return `longestWindow`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the size of the array `nums`.\n\n* Time complexity: $O(N)$\n\n  Each element in the array will be iterated over twice at most. Each element will be iterated over for the first time in the for loop; then, it might be possible to re-iterate while shrinking the window in the while loop. No element can be iterated more than twice. Therefore, the total time complexity would be $O(N)$.\n\n* Space complexity: $O(1)$\n\n  Apart from the three variables, we don't need any extra space; hence the total space complexity is constant.---"
+}

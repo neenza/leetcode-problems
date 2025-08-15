@@ -1,0 +1,59 @@
+{
+  "title": "Maximum Frequency After Subarray Operation",
+  "problem_id": "3751",
+  "frontend_id": "3434",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-frequency-after-subarray-operation",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Greedy",
+    "Enumeration",
+    "Prefix Sum"
+  ],
+  "description": "You are given an array nums of length n. You are also given an integer k.\nYou perform the following operation on nums once:\nFind the maximum frequency of the value k after the operation.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5,6], k = 1\nOutput: 2\nExplanation:\nAfter adding -5 to nums[2..5] , 1 has a frequency of 2 in [1, 2, -2, -1, 0, 1] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,2,3,4,5,5,4,3,2,2], k = 10\nOutput: 4\nExplanation:\nAfter adding 8 to nums[1..9] , 10 has a frequency of 4 in [10, 10, 11, 12, 13, 13, 12, 11, 10, 10] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 50",
+    "1 <= k <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix the element you want to convert to <code>k</code>.",
+    "Use prefix sums to optimize counting occurrences of an element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxFrequency(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxFrequency(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxFrequency(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxFrequency(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maxFrequency(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxFrequency(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxFrequency = function(nums, k) {\n    \n};",
+    "typescript": "function maxFrequency(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxFrequency($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxFrequency(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxFrequency(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxFrequency(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxFrequency(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_frequency(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxFrequency(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_frequency(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-frequency nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_frequency(Nums :: [integer()], K :: integer()) -> integer().\nmax_frequency(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_frequency(nums :: [integer], k :: integer) :: integer\n  def max_frequency(nums, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Shifting Letters",
+  "problem_id": "878",
+  "frontend_id": "848",
+  "difficulty": "Medium",
+  "problem_slug": "shifting-letters",
+  "topics": [
+    "Array",
+    "String",
+    "Prefix Sum"
+  ],
+  "description": "You are given a string s of lowercase English letters and an integer array shifts of the same length.\nCall the shift() of a letter, the next letter in the alphabet, (wrapping around so that 'z' becomes 'a').\nNow for each shifts[i] = x, we want to shift the first i + 1 letters of s, x times.\nReturn the final string after all such shifts to s are applied.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\", shifts = [3,5,9]\nOutput: \"rpl\"\nExplanation: We start with \"abc\".\nAfter shifting the first 1 letters of s by 3, we have \"dbc\".\nAfter shifting the first 2 letters of s by 5, we have \"igc\".\nAfter shifting the first 3 letters of s by 9, we have \"rpl\", the answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaa\", shifts = [1,2,3]\nOutput: \"gfd\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters.",
+    "shifts.length == s.length",
+    "0 <= shifts[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string shiftingLetters(string s, vector<int>& shifts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shiftingLetters(String s, int[] shifts) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shiftingLetters(self, s, shifts):\n        \"\"\"\n        :type s: str\n        :type shifts: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shiftingLetters(self, s: str, shifts: List[int]) -> str:\n        ",
+    "c": "char* shiftingLetters(char* s, int* shifts, int shiftsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ShiftingLetters(string s, int[] shifts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} shifts\n * @return {string}\n */\nvar shiftingLetters = function(s, shifts) {\n    \n};",
+    "typescript": "function shiftingLetters(s: string, shifts: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $shifts\n     * @return String\n     */\n    function shiftingLetters($s, $shifts) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shiftingLetters(_ s: String, _ shifts: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shiftingLetters(s: String, shifts: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String shiftingLetters(String s, List<int> shifts) {\n    \n  }\n}",
+    "golang": "func shiftingLetters(s string, shifts []int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} shifts\n# @return {String}\ndef shifting_letters(s, shifts)\n    \nend",
+    "scala": "object Solution {\n    def shiftingLetters(s: String, shifts: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shifting_letters(s: String, shifts: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (shifting-letters s shifts)\n  (-> string? (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec shifting_letters(S :: unicode:unicode_binary(), Shifts :: [integer()]) -> unicode:unicode_binary().\nshifting_letters(S, Shifts) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shifting_letters(s :: String.t, shifts :: [integer]) :: String.t\n  def shifting_letters(s, shifts) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Prefix Sum [Accepted]\n\n**Intuition**\n\nLet's ask how many times the `i`th character is shifted.\n\n**Algorithm**\n\nThe `i`th character is shifted `shifts[i] + shifts[i+1] + ... + shifts[shifts.length - 1]` times.  That's because only operations at the `i`th operation and after, affect the `i`th character.\n\nLet `X` be the number of times the current `i`th character is shifted.  Then the next character `i+1` is shifted `X - shifts[i]` times.\n\nFor example, if `S.length = 4` and `S[0]` is shifted `X = shifts[0] + shifts[1] + shifts[2] + shifts[3]` times, then `S[1]` is shifted `shifts[1] + shifts[2] + shifts[3]` times, `S[2]` is shifted `shifts[2] + shifts[3]` times, and so on.\n\nIn general, we need to do `X -= shifts[i]` to maintain the correct value of `X` as we increment `i`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S` (and `shifts`).\n\n* Space Complexity:  $$O(N)$$, the space needed to output the answer."
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Divide Array Into Arrays With Max Difference",
+  "problem_id": "3241",
+  "frontend_id": "2966",
+  "difficulty": "Medium",
+  "problem_slug": "divide-array-into-arrays-with-max-difference",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer array nums of size n where n is a multiple of 3 and a positive integer k.\nDivide the array nums into n / 3 arrays of size 3 satisfying the following condition:\nReturn a 2D array containing the arrays. If it is impossible to satisfy the conditions, return an empty array. And if there are multiple answers, return any of them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,4,8,7,9,3,5,1], k = 2\nOutput: [[1,1,3],[3,4,5],[7,8,9]]\nExplanation:\nThe difference between any two elements in each array is less than or equal to 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,2,2,5,2], k = 2\nOutput: []\nExplanation:\nDifferent ways to divide nums into 2 arrays of size 3 are:\nBecause there are four 2s there will be an array with the elements 2 and 5 no matter how we divide it. since 5 - 2 = 3 > k , the condition is not satisfied and so there is no valid division.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,2,9,8,2,12,7,12,10,5,8,5,5,7,9,2,5,11], k = 14\nOutput: [[2,2,2],[4,5,5],[5,5,7],[7,8,8],[9,9,10],[11,12,12]]\nExplanation:\nThe difference between any two elements in each array is less than or equal to 14.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "n is a multiple of 3",
+    "1 <= nums[i] <= 105",
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to use a greedy approach.",
+    "Sort the array and try to group each <code>3</code> consecutive elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> divideArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] divideArray(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def divideArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def divideArray(self, nums: List[int], k: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** divideArray(int* nums, int numsSize, int k, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] DivideArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[][]}\n */\nvar divideArray = function(nums, k) {\n    \n};",
+    "typescript": "function divideArray(nums: number[], k: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer[][]\n     */\n    function divideArray($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func divideArray(_ nums: [Int], _ k: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun divideArray(nums: IntArray, k: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> divideArray(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func divideArray(nums []int, k int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer[][]}\ndef divide_array(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def divideArray(nums: Array[Int], k: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn divide_array(nums: Vec<i32>, k: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (divide-array nums k)\n  (-> (listof exact-integer?) exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec divide_array(Nums :: [integer()], K :: integer()) -> [[integer()]].\ndivide_array(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec divide_array(nums :: [integer], k :: integer) :: [[integer]]\n  def divide_array(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThe goal of this problem is to find a valid partition or determine that no valid partition exists. If a valid partition exists, the algorithm should return a 2D array containing all the arrays. If there are multiple valid solutions, any of them can be returned. We have found a valid partition if each element of `nums` is in exactly one subarray and the difference between any two elements in one subarray is less than or equal to `k`. `nums` is of length `n`, and `n` is guaranteed to be divisible by 3.\n\nReal-life applications for this problem include scenarios where data needs to be grouped or segmented based on specific criteria. For example, in the fields of data analysis or signal processing, this problem could represent the need to divide a dataset or a signal into segments such that the values within each segment are close to each other, satisfying a specified condition (in this case, the condition is the difference between any two elements being less than or equal to `k`). Understanding and solving such problems can be crucial in various domains, including data science, telecommunications, and sensor data processing.\n\n---\n\n### Approach: Sorting\n\n#### Intuition\n\nWe need to partition an integer array into subarrays of size three, each adhering to specific conditions. These conditions stipulate that every array element must be allocated to exactly one subarray, and the difference between any two elements within a given subarray should not exceed a positive integer, denoted as `k`.\n\nElements closer in value to each other are more likely to meet the criteria that the difference between any two elements in one subarray is less than or equal to `k`. Given that the elements should be distributed among subarrays of size three, a logical approach involves ordering elements with similar values such that they are proximate. Sorting the array in ascending order emerges as a strategic move. Sorting not only facilitates a systematic exploration of the elements but also streamlines the identification of valid subarrays.\n\nThe essence of the solution lies in traversing the sorted array in increments of three because the subarrays are of size three. This traversal through the sorted `nums` array is instrumental in constructing subarrays that satisfy the conditions outlined in the problem statement. To satisfy the condition that the difference between any two elements in one subarray is less than or equal to `k`, the loop iterates through the sorted array, and at each step, it assesses the difference between the first and third elements within the current triplet.\n\nThe rationale behind this method is that the sorted nature of the array guarantees that the smallest and largest elements within each triplet are positioned at the extremes. By examining the difference between these elements, one can effectively determine whether the conditions of the problem are met. If the difference between the third and first elements exceeds the specified threshold `k`, it signifies an impossibility of forming valid subarrays, and an empty array is returned.\n\nTake, for instance, the array `[a, a+1, a+2, a+3, a+4, a+5]` with `k = 2` where `a` is any positive number. A valid partition is achieved by creating subarrays such as `[[a, a+1, a+2], [a+3, a+4, a+5]]`, where the difference between any two elements within each subarray is less than or equal to `k`.\n\nPartitioning the `nums` array differently, we can build the valid subarray `[a+2, a+3, a+4]`, but this disrupts the possibility of creating a second valid subarray. After creating `[a+2, a+3, a+4]`, the remaining numbers are `[a, a+1, a+5]`, where the difference between the first and last element is 5, exceeding the threshold `k = 2`. This example illustrates that the most promising strategy involves keeping the elements with the closest values in sorted order within the same subarray. Placing the first, second, and third elements in sorted order together, followed by the fourth, fifth, and sixth elements in another triplet, adheres to the principle that elements with minimal differences are grouped. This approach offers a guaranteed solution if one exists, and aligns with the problem constraints.\n\nNow, consider the scenario presented by the example `[a, a+1, a+3, a+4, a+5, a+6]` with a given threshold `k = 2`, where `a` represents any positive number. Notably, the initial triplet `[a, a+1, a+3]` does not constitute a valid subarray. In response, one explores the possibility of forming a valid subarray with `a+3` and other numbers. Successfully, `[a+3, a+4, a+5]` emerges as a valid triplet.\n\nThen, to complete the initial triplet `[a, a+1, ?]`, the task is to find a suitable number from the remaining array. Importantly, due to the sorted order, the remaining numbers are greater than `a+3`. If the triplet `[a, a+1, ?]` could not form a valid subarray with `a+3`, it logically follows that it is impossible for these elements to form a valid subarray with any subsequent number in the array.\n\nThis observation underscores a critical aspect of the solution strategy. The impossibility in the previous example of forming a valid triplet with the initial elements and `a+3` means that further attempts with subsequent numbers are invalid, ensuring the algorithm provides an optimal solution for various cases while meeting the specified constraints.\n\n![figB](../Figures/2966/2966-2.png)\n\nWhen the difference between the third and first elements of the triplet is within the specified threshold `k`, the triplet is appended to the result array, which eventually contains all valid subarrays. The loop continues this process until the entirety of the sorted array is traversed. Incrementing by 3's through the sorted array ensures that the constructed subarrays are inherently compliant with the defined conditions: each element of `num` is in exactly one subarray, the subarrays are of size 3, and the difference between any two elements in one subarray is less than or equal to `k`.\n\n![figA](../Figures/2966/2966-1.png)\n\n#### Algorithm\n\n1. Sort the given array `nums` in ascending order.\n2. Initialize an empty array `ans` to store the result, which will be a 2D array containing arrays of size 3.\n3. Use a `for` loop to iterate through the sorted array `nums` with a step size of 3. The loop variable `i` represents the starting index of each potential array of size 3.\n4. For each potential array of size 3, check if the difference between the third element (`nums[i + 2]`) and the first element (`nums[i]`) is greater than `k`. If the difference exceeds `k`, the conditions are not satisfied and return an empty array.\n5. If the difference condition is met for the current potential array, append a new array to the result (`ans`). The new array consists of the three elements at indices `i`, `i + 1`, and `i + 2` in the sorted array.\n6. After processing all potential arrays, return the final 2D array `ans` containing valid arrays of size 3.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the length of `nums`.\n\n* Time complexity: $O(N\\cdot logN)$. Sorting `nums` incurs a time complexity of $O(N\\cdot logN)$. Iterating over `nums` incurs a time complexity of $O(N)$, which can be ignored since $O(N\\cdot logN)$ is the dominating term.\n\n* Space complexity: $O(N)$ or $O(\\log N)$. Some extra space is used when we sort an array of size $N$ in place. The space complexity of the sorting algorithm depends on the programming language.\n    - In Python, the `sort` method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has a space complexity of $$O(N)$$.\n    - In C++, the sort() function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worst-case space complexity of $$O(\\log N)$$.\n    - In Java, Arrays.sort() is implemented using a variant of the Quick Sort algorithm which has a space complexity of $$O(\\log N)$$.\n\n---"
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Find the Winning Player in Coin Game",
+  "problem_id": "3511",
+  "frontend_id": "3222",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-winning-player-in-coin-game",
+  "topics": [
+    "Math",
+    "Simulation",
+    "Game Theory"
+  ],
+  "description": "You are given two positive integers x and y, denoting the number of coins with values 75 and 10 respectively.\nAlice and Bob are playing a game. Each turn, starting with Alice, the player must pick up coins with a total value 115. If the player is unable to do so, they lose the game.\nReturn the name of the player who wins the game if both players play optimally.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: x = 2, y = 7\nOutput: \"Alice\"\nExplanation:\nThe game ends in a single turn:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: x = 4, y = 11\nOutput: \"Bob\"\nExplanation:\nThe game ends in 2 turns:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= x, y <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The only way to make 115 is to use one coin of value 75 and four coins of value 10. Each turn uses up these many coins.",
+    "Hence the number of turns is <code>min(x, y / 4)</code>.",
+    "Determine the winner from its parity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string winningPlayer(int x, int y) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String winningPlayer(int x, int y) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def winningPlayer(self, x, y):\n        \"\"\"\n        :type x: int\n        :type y: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def winningPlayer(self, x: int, y: int) -> str:\n        ",
+    "c": "char* winningPlayer(int x, int y) {\n    \n}",
+    "csharp": "public class Solution {\n    public string WinningPlayer(int x, int y) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} x\n * @param {number} y\n * @return {string}\n */\nvar winningPlayer = function(x, y) {\n    \n};",
+    "typescript": "function winningPlayer(x: number, y: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $x\n     * @param Integer $y\n     * @return String\n     */\n    function winningPlayer($x, $y) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func winningPlayer(_ x: Int, _ y: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun winningPlayer(x: Int, y: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String winningPlayer(int x, int y) {\n    \n  }\n}",
+    "golang": "func winningPlayer(x int, y int) string {\n    \n}",
+    "ruby": "# @param {Integer} x\n# @param {Integer} y\n# @return {String}\ndef winning_player(x, y)\n    \nend",
+    "scala": "object Solution {\n    def winningPlayer(x: Int, y: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn winning_player(x: i32, y: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (winning-player x y)\n  (-> exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec winning_player(X :: integer(), Y :: integer()) -> unicode:unicode_binary().\nwinning_player(X, Y) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec winning_player(x :: integer, y :: integer) :: String.t\n  def winning_player(x, y) do\n    \n  end\nend"
+  }
+}

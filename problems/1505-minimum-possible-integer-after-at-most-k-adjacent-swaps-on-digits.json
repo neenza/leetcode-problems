@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Possible Integer After at Most K Adjacent Swaps On Digits",
+  "problem_id": "1629",
+  "frontend_id": "1505",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+  "topics": [
+    "String",
+    "Greedy",
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ],
+  "description": "You are given a string num representing the digits of a very large integer and an integer k. You are allowed to swap any two adjacent digits of the integer at most k times.\nReturn the minimum integer you can obtain also as a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"4321\", k = 4\nOutput: \"1342\"\nExplanation: The steps to obtain the minimum integer from 4321 with 4 adjacent swaps are shown.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/q4_1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"100\", k = 1\nOutput: \"010\"\nExplanation: It's ok for the output to have leading zeros, but the input is guaranteed not to have any leading zeros.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/q4_1.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"36789\", k = 1000\nOutput: \"36789\"\nExplanation: We can keep the number without any swaps.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/q4_1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 3 * 104",
+    "num consists of only digits and does not contain leading zeros.",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We want to make the smaller digits the most significant digits in the number.",
+    "For each index i, check the smallest digit in a window of size k and append it to the answer. Update the indices of all digits in this range accordingly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string minInteger(string num, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minInteger(String num, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minInteger(self, num, k):\n        \"\"\"\n        :type num: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minInteger(self, num: str, k: int) -> str:\n        ",
+    "c": "char* minInteger(char* num, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MinInteger(string num, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @param {number} k\n * @return {string}\n */\nvar minInteger = function(num, k) {\n    \n};",
+    "typescript": "function minInteger(num: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @param Integer $k\n     * @return String\n     */\n    function minInteger($num, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minInteger(_ num: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minInteger(num: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String minInteger(String num, int k) {\n    \n  }\n}",
+    "golang": "func minInteger(num string, k int) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @param {Integer} k\n# @return {String}\ndef min_integer(num, k)\n    \nend",
+    "scala": "object Solution {\n    def minInteger(num: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_integer(num: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (min-integer num k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec min_integer(Num :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nmin_integer(Num, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_integer(num :: String.t, k :: integer) :: String.t\n  def min_integer(num, k) do\n    \n  end\nend"
+  }
+}

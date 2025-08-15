@@ -1,0 +1,58 @@
+{
+  "title": "Minimum Operations to Exceed Threshold Value II",
+  "problem_id": "3332",
+  "frontend_id": "3066",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-exceed-threshold-value-ii",
+  "topics": [
+    "Array",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums, and an integer k.\nYou are allowed to perform some operations on nums, where in a single operation, you can:\nNote that you can only apply the described operation if nums contains at least two elements.\nReturn the minimum number of operations needed so that all elements of the array are greater than or equal to k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,11,10,1,3], k = 10\nOutput: 2\nExplanation:\nAt this stage, all the elements of nums are greater than or equal to 10 so we can stop.\nIt can be shown that 2 is the minimum number of operations needed so that all elements of the array are greater than or equal to 10.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,2,4,9], k = 20\nOutput: 4\nExplanation:\nAt this stage, all the elements of nums are greater than 20 so we can stop.\nIt can be shown that 4 is the minimum number of operations needed so that all elements of the array are greater than or equal to 20.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 2 * 105",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= 109",
+    "The input is generated such that an answer always exists. That is, after performing some number of operations, all elements of the array are greater than or equal to k."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use priority queue to keep track of minimum elements.",
+    "Remove the minimum two elements, perform the operation, and insert the resulting number into the priority queue."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minOperations = function(nums, k) {\n    \n};",
+    "typescript": "function minOperations(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minOperations($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_operations(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()], K :: integer()) -> integer().\nmin_operations(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], k :: integer) :: integer\n  def min_operations(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview \n\nWe are given an array `nums` and an integer `k`. We repeatedly have to apply the following operation until all elements of `nums` are greater than or equal to `k`:\n\n1. Remove the two smallest numbers `x` and `y` from `nums` from the array.\n2. Add a new element `min(x, y) * 2 + max(x, y)` back into `nums`. The placement of this element doesn't matter.\n\nWe have to find out how many of the above operations are needed to make all elements in `nums` greater than or equal to `k`.\n\n> Note that the described operation can only be applied if `nums` contains at least two elements.\n\n### Approach: Priority Queue\n\n#### Intuition\n\nFor a straightforward approach, we can simulate the operations by maintaining a list that holds the current elements of `nums`. Then, we can scan through all elements of `nums` in this list and take out the two smallest integers. If these integers are not greater than or equal to `k`, then we know we have to keep applying the operation, so we can append `min(x, y) * 2 + max(x, y)` to our list. We can maintain a counter and repeat this operation until the two smallest integers are greater than or equal to `k` (if the two smallest integers are greater than or equal to `k`, then so are the rest of the elements, and we can stop applying the operations).\n\nHowever, this simulation is time-consuming. Scanning through `nums` and finding the two smallest integers before each operation takes $O(N)$ time. To find the two smallest integers more efficiently, we can use a priority queue (min-heap) instead of a list.\n\nIn a min heap, the smallest element is at the top of the tree and can be removed in $O(\\log N)$ time. Thus, for each operation, we can remove from the top of the heap twice to get the two smallest integers `x` and `y`, and then add back into our heap `min(x, y) * 2 + max(x, y)`. Note that adding elements into our heap also takes $(\\log N)$ time. Thus, using a heap will improve our operation time from $O(N)$ to $O(\\log N)$.\n\nFurthermore, checking for our stopping condition is also quicker. With a min heap, we can access the smallest element in $O(1)$ time. Until this smallest element is greater than or equal to `k`, we know we have to keep applying the operation. \n\n> Note: For large values of `x` and `y`, assigning `min(x, y) * 2 + max(x, y)` to an integer will lead to an integer overflow for typed languages. In our implementation, we use larger data types (i.e. `long`) to prevent this case.\n\n#### Algorithm\n\n- Create a min heap `minHeap` and initialize it with the elements in `nums`. Note that initializing heaps with `nums` directly will take advantage of the $O(N)$ time of heapify. Manually pushing each element of `nums` into `minHeap` will take a total of $O(N \\log N)$.\n- Create a counter variable `numOperations` to keep track of the number of operations applied so far.\n- While the top element (minimum element) of our `minHeap` is less than `k`:\n    - Remove the top element of the `minHeap` twice, and save them in `x` and `y`.\n    - Add `min(x, y) * 2 + max(x, y)` to `minHeap`\n    - Increment `numOperations`.\n- Return `numOperations`.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the size of `nums`.\n\n* Time Complexity: $O(N \\log N)$\n\n    In the worst case, we have to apply $N$ operations because each operation reduces the heap size by 1 (removing two elements and adding one). Each heap operation takes $O(\\log N)$ time, resulting in an overall time complexity of $O(N \\log N)$.\n\n* Space Complexity: $O(N)$\n\n    At the start, our heap contains all elements from `nums`, so the space complexity is $O(N)$.\n\n---"
+}

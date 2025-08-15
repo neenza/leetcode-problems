@@ -1,0 +1,63 @@
+{
+  "title": "Make Costs of Paths Equal in a Binary Tree",
+  "problem_id": "2780",
+  "frontend_id": "2673",
+  "difficulty": "Medium",
+  "problem_slug": "make-costs-of-paths-equal-in-a-binary-tree",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Tree",
+    "Binary Tree"
+  ],
+  "description": "You are given an integer n representing the number of nodes in a perfect binary tree consisting of nodes numbered from 1 to n. The root of the tree is node 1 and each node i in the tree has two children where the left child is the node 2 * i and the right child is 2 * i + 1.\nEach node in the tree also has a cost represented by a given 0-indexed integer array cost of size n where cost[i] is the cost of node i + 1. You are allowed to increment the cost of any node by 1 any number of times.\nReturn the minimum number of increments you need to make the cost of paths from the root to each leaf node equal.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 7, cost = [1,5,2,2,3,3,1]\nOutput: 6\nExplanation: We can do the following increments:\n- Increase the cost of node 4 one time.\n- Increase the cost of node 3 three times.\n- Increase the cost of node 7 two times.\nEach path from the root to a leaf will have a total cost of 9.\nThe total increments we did is 1 + 3 + 2 = 6.\nIt can be shown that this is the minimum answer we can achieve.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/04/04/binaryytreeedrawio-4.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, cost = [5,3,3]\nOutput: 0\nExplanation: The two paths already have equal total costs, so no increments are needed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/04/04/binaryytreee2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 105",
+    "n + 1 is a power of 2",
+    "cost.length == n",
+    "1 <= cost[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The path from the root to a leaf that has the maximum cost should not be modified.",
+    "The optimal way is to increase all other paths to make their costs equal to the path with maximum cost."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minIncrements(int n, vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minIncrements(int n, int[] cost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minIncrements(self, n, cost):\n        \"\"\"\n        :type n: int\n        :type cost: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minIncrements(self, n: int, cost: List[int]) -> int:\n        ",
+    "c": "int minIncrements(int n, int* cost, int costSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinIncrements(int n, int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} cost\n * @return {number}\n */\nvar minIncrements = function(n, cost) {\n    \n};",
+    "typescript": "function minIncrements(n: number, cost: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $cost\n     * @return Integer\n     */\n    function minIncrements($n, $cost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minIncrements(_ n: Int, _ cost: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minIncrements(n: Int, cost: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minIncrements(int n, List<int> cost) {\n    \n  }\n}",
+    "golang": "func minIncrements(n int, cost []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} cost\n# @return {Integer}\ndef min_increments(n, cost)\n    \nend",
+    "scala": "object Solution {\n    def minIncrements(n: Int, cost: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_increments(n: i32, cost: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-increments n cost)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_increments(N :: integer(), Cost :: [integer()]) -> integer().\nmin_increments(N, Cost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_increments(n :: integer, cost :: [integer]) :: integer\n  def min_increments(n, cost) do\n    \n  end\nend"
+  }
+}

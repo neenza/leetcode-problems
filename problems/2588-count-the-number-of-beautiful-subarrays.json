@@ -1,0 +1,57 @@
+{
+  "title": "Count the Number of Beautiful Subarrays",
+  "problem_id": "2656",
+  "frontend_id": "2588",
+  "difficulty": "Medium",
+  "problem_slug": "count-the-number-of-beautiful-subarrays",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums. In one operation, you can:\nA subarray is beautiful if it is possible to make all of its elements equal to 0 after applying the above operation any number of times (including zero).\nReturn the number of beautiful subarrays in the array nums.\nA subarray is a contiguous non-empty sequence of elements within an array.\nNote: Subarrays where all elements are initially 0 are considered beautiful, as no operation is needed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,3,1,2,4]\nOutput: 2\nExplanation: There are 2 beautiful subarrays in nums: [4,3,1,2,4] and [4,3,1,2,4].\n- We can make all elements in the subarray [3,1,2] equal to 0 in the following way:\n  - Choose [3, 1, 2] and k = 1. Subtract 21 from both numbers. The subarray becomes [1, 1, 0].\n  - Choose [1, 1, 0] and k = 0. Subtract 20 from both numbers. The subarray becomes [0, 0, 0].\n- We can make all elements in the subarray [4,3,1,2,4] equal to 0 in the following way:\n  - Choose [4, 3, 1, 2, 4] and k = 2. Subtract 22 from both numbers. The subarray becomes [0, 3, 1, 2, 0].\n  - Choose [0, 3, 1, 2, 0] and k = 0. Subtract 20 from both numbers. The subarray becomes [0, 2, 0, 2, 0].\n  - Choose [0, 2, 0, 2, 0] and k = 1. Subtract 21 from both numbers. The subarray becomes [0, 0, 0, 0, 0].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,10,4]\nOutput: 0\nExplanation: There are no beautiful subarrays in nums.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A subarray is beautiful if its xor is equal to zero.",
+    "Compute the prefix xor for every index, then the xor of subarray [left, right] is equal to zero if prefix_xor[left] ^ perfix_xor[right] == 0",
+    "Iterate from left to right and maintain a hash table to count the number of indices equal to the current prefix xor."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long beautifulSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long beautifulSubarrays(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def beautifulSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def beautifulSubarrays(self, nums: List[int]) -> int:\n        ",
+    "c": "long long beautifulSubarrays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long BeautifulSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar beautifulSubarrays = function(nums) {\n    \n};",
+    "typescript": "function beautifulSubarrays(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function beautifulSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func beautifulSubarrays(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun beautifulSubarrays(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int beautifulSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func beautifulSubarrays(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef beautiful_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def beautifulSubarrays(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn beautiful_subarrays(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (beautiful-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec beautiful_subarrays(Nums :: [integer()]) -> integer().\nbeautiful_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec beautiful_subarrays(nums :: [integer]) :: integer\n  def beautiful_subarrays(nums) do\n    \n  end\nend"
+  }
+}

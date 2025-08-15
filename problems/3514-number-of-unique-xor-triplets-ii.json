@@ -1,0 +1,59 @@
+{
+  "title": "Number of Unique XOR Triplets II",
+  "problem_id": "3820",
+  "frontend_id": "3514",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-unique-xor-triplets-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "description": "You are given an integer array nums.\nA XOR triplet is defined as the XOR of three elements nums[i] XOR nums[j] XOR nums[k] where i <= j <= k.\nReturn the number of unique XOR triplet values from all possible triplets (i, j, k).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3]\nOutput: 2\nExplanation:\nThe possible XOR triplet values are:\nThe unique XOR values are {1, 3} . Thus, the output is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,7,8,9]\nOutput: 4\nExplanation:\nThe possible XOR triplet values are {6, 7, 8, 9} . Thus, the output is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1500",
+    "1 <= nums[i] <= 1500"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the maximum possible XOR value achievable by any triplet?",
+    "Let the maximum possible XOR value be stored in <code>max_xor</code>.",
+    "For each index <code>i</code>, consider all pairs of indices <code>(j, k)</code> such that <code>i <= j <= k</code>. For each such pair, compute the triplet XOR as <code>nums[i] XOR nums[j] XOR nums[k]</code>.",
+    "You can optimize the calculation by precomputing or reusing intermediate XOR results. For example, after fixing an index <code>i</code>, compute XORs of pairs <code>(j, k)</code> in <code>O(n<sup>2</sup>)</code> time instead of checking all three indices independently.",
+    "Finally, count the number of unique XOR values obtained from all triplets."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int uniqueXorTriplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniqueXorTriplets(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uniqueXorTriplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uniqueXorTriplets(self, nums: List[int]) -> int:\n        ",
+    "c": "int uniqueXorTriplets(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int UniqueXorTriplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar uniqueXorTriplets = function(nums) {\n    \n};",
+    "typescript": "function uniqueXorTriplets(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function uniqueXorTriplets($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniqueXorTriplets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uniqueXorTriplets(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniqueXorTriplets(List<int> nums) {\n    \n  }\n}",
+    "golang": "func uniqueXorTriplets(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef unique_xor_triplets(nums)\n    \nend",
+    "scala": "object Solution {\n    def uniqueXorTriplets(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_xor_triplets(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (unique-xor-triplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec unique_xor_triplets(Nums :: [integer()]) -> integer().\nunique_xor_triplets(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unique_xor_triplets(nums :: [integer]) :: integer\n  def unique_xor_triplets(nums) do\n    \n  end\nend"
+  }
+}

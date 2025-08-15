@@ -1,0 +1,53 @@
+{
+  "title": "Check if The Number is Fascinating",
+  "problem_id": "2824",
+  "frontend_id": "2729",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-the-number-is-fascinating",
+  "topics": [
+    "Hash Table",
+    "Math"
+  ],
+  "description": "You are given an integer n that consists of exactly 3 digits.\nWe call the number n fascinating if, after the following modification, the resulting number contains all the digits from 1 to 9 exactly once and does not contain any 0's:\nReturn true if n is fascinating, or false otherwise.\nConcatenating two numbers means joining them together. For example, the concatenation of 121 and 371 is 121371.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 192\nOutput: true\nExplanation: We concatenate the numbers n = 192 and 2 * n = 384 and 3 * n = 576. The resulting number is 192384576. This number contains all the digits from 1 to 9 exactly once.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 100\nOutput: false\nExplanation: We concatenate the numbers n = 100 and 2 * n = 200 and 3 * n = 300. The resulting number is 100200300. This number does not satisfy any of the conditions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "100 <= n <= 999"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider changing the number to the way it is described in the statement.",
+    "Check if the resulting number contains all the digits from 1 to 9 exactly once."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isFascinating(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isFascinating(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isFascinating(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isFascinating(self, n: int) -> bool:\n        ",
+    "c": "bool isFascinating(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsFascinating(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar isFascinating = function(n) {\n    \n};",
+    "typescript": "function isFascinating(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function isFascinating($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isFascinating(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isFascinating(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isFascinating(int n) {\n    \n  }\n}",
+    "golang": "func isFascinating(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef is_fascinating(n)\n    \nend",
+    "scala": "object Solution {\n    def isFascinating(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_fascinating(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-fascinating n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec is_fascinating(N :: integer()) -> boolean().\nis_fascinating(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_fascinating(n :: integer) :: boolean\n  def is_fascinating(n) do\n    \n  end\nend"
+  }
+}

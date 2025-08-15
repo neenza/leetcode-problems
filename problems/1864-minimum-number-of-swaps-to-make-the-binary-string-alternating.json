@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Number of Swaps to Make the Binary String Alternating",
+  "problem_id": "1994",
+  "frontend_id": "1864",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-swaps-to-make-the-binary-string-alternating",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "Given a binary string s, return the minimum number of character swaps to make it alternating, or -1 if it is impossible.\nThe string is called alternating if no two adjacent characters are equal. For example, the strings \"010\" and \"1010\" are alternating, while the string \"0100\" is not.\nAny two characters may be swapped, even if they are not adjacent.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"111000\"\nOutput: 1\nExplanation: Swap positions 1 and 4: \"111000\" -> \"101010\"\nThe string is now alternating.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"010\"\nOutput: 0\nExplanation: The string is already alternating, no swaps are needed.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1110\"\nOutput: -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about all valid strings of length n.",
+    "Try to count the mismatched positions with each valid string of length n."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSwaps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSwaps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSwaps(self, s: str) -> int:\n        ",
+    "c": "int minSwaps(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSwaps(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minSwaps = function(s) {\n    \n};",
+    "typescript": "function minSwaps(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minSwaps($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwaps(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSwaps(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwaps(String s) {\n    \n  }\n}",
+    "golang": "func minSwaps(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_swaps(s)\n    \nend",
+    "scala": "object Solution {\n    def minSwaps(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-swaps s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_swaps(S :: unicode:unicode_binary()) -> integer().\nmin_swaps(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_swaps(s :: String.t) :: integer\n  def min_swaps(s) do\n    \n  end\nend"
+  }
+}

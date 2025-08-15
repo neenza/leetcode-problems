@@ -1,0 +1,54 @@
+{
+  "title": "Apply Operations to Make All Array Elements Equal to Zero",
+  "problem_id": "2878",
+  "frontend_id": "2772",
+  "difficulty": "Medium",
+  "problem_slug": "apply-operations-to-make-all-array-elements-equal-to-zero",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums and a positive integer k.\nYou can apply the following operation on the array any number of times:\nReturn true if you can make all the array elements equal to 0, or false otherwise.\nA subarray is a contiguous non-empty part of an array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,2,3,1,1,0], k = 3\nOutput: true\nExplanation: We can do the following operations:\n- Choose the subarray [2,2,3]. The resulting array will be nums = [1,1,2,1,1,0].\n- Choose the subarray [2,1,1]. The resulting array will be nums = [1,1,1,0,0,0].\n- Choose the subarray [1,1,1]. The resulting array will be nums = [0,0,0,0,0,0].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,1,1], k = 2\nOutput: false\nExplanation: It is not possible to make all the array elements equal to 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= nums.length <= 105",
+    "0 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In case it is possible, then how can you do the operations? which subarrays do you choose and in what order?",
+    "The order of the chosen subarrays should be from the left to the right of the array"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkArray(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkArray(self, nums: List[int], k: int) -> bool:\n        ",
+    "c": "bool checkArray(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar checkArray = function(nums, k) {\n    \n};",
+    "typescript": "function checkArray(nums: number[], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Boolean\n     */\n    function checkArray($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkArray(_ nums: [Int], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkArray(nums: IntArray, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkArray(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func checkArray(nums []int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Boolean}\ndef check_array(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def checkArray(nums: Array[Int], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_array(nums: Vec<i32>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-array nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec check_array(Nums :: [integer()], K :: integer()) -> boolean().\ncheck_array(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_array(nums :: [integer], k :: integer) :: boolean\n  def check_array(nums, k) do\n    \n  end\nend"
+  }
+}

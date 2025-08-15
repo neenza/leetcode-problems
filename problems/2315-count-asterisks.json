@@ -1,0 +1,59 @@
+{
+  "title": "Count Asterisks",
+  "problem_id": "2401",
+  "frontend_id": "2315",
+  "difficulty": "Easy",
+  "problem_slug": "count-asterisks",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string s, where every two consecutive vertical bars '|' are grouped into a pair. In other words, the 1st and 2nd '|' make a pair, the 3rd and 4th '|' make a pair, and so forth.\nReturn the number of '*' in s, excluding the '*' between each pair of '|'.\nNote that each '|' will belong to exactly one pair.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"l|*e*et|c**o|*de|\"\nOutput: 2\nExplanation: The considered characters are underlined: \"l|*e*et|c**o|*de|\".\nThe characters between the first and second '|' are excluded from the answer.\nAlso, the characters between the third and fourth '|' are excluded from the answer.\nThere are 2 asterisks considered. Therefore, we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"iamprogrammer\"\nOutput: 0\nExplanation: In this example, there are no asterisks in s. Therefore, we return 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"yo|uar|e**|b|e***au|tifu|l\"\nOutput: 5\nExplanation: The considered characters are underlined: \"yo|uar|e**|b|e***au|tifu|l\". There are 5 asterisks considered. Therefore, we return 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase English letters, vertical bars '|', and asterisks '*'.",
+    "s contains an even number of vertical bars '|'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate through each character, while maintaining whether we are currently between a pair of ‘|’ or not.",
+    "If we are not in between a pair of ‘|’ and there is a ‘*’, increment the answer by 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countAsterisks(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countAsterisks(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countAsterisks(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countAsterisks(self, s: str) -> int:\n        ",
+    "c": "int countAsterisks(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountAsterisks(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countAsterisks = function(s) {\n    \n};",
+    "typescript": "function countAsterisks(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countAsterisks($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countAsterisks(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countAsterisks(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countAsterisks(String s) {\n    \n  }\n}",
+    "golang": "func countAsterisks(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_asterisks(s)\n    \nend",
+    "scala": "object Solution {\n    def countAsterisks(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_asterisks(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-asterisks s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_asterisks(S :: unicode:unicode_binary()) -> integer().\ncount_asterisks(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_asterisks(s :: String.t) :: integer\n  def count_asterisks(s) do\n    \n  end\nend"
+  }
+}

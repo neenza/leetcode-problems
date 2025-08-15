@@ -1,0 +1,59 @@
+{
+  "title": "First Unique Character in a String",
+  "problem_id": "387",
+  "frontend_id": "387",
+  "difficulty": "Easy",
+  "problem_slug": "first-unique-character-in-a-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Queue",
+    "Counting"
+  ],
+  "description": "Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcode\"\nOutput: 0\nExplanation:\nThe character 'l' at index 0 is the first character that does not occur at any other index.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"loveleetcode\"\nOutput: 2",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"aabb\"\nOutput: -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int firstUniqChar(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int firstUniqChar(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def firstUniqChar(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def firstUniqChar(self, s: str) -> int:\n        ",
+    "c": "int firstUniqChar(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FirstUniqChar(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar firstUniqChar = function(s) {\n    \n};",
+    "typescript": "function firstUniqChar(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function firstUniqChar($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func firstUniqChar(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun firstUniqChar(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int firstUniqChar(String s) {\n    \n  }\n}",
+    "golang": "func firstUniqChar(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef first_uniq_char(s)\n    \nend",
+    "scala": "object Solution {\n    def firstUniqChar(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn first_uniq_char(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (first-uniq-char s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec first_uniq_char(S :: unicode:unicode_binary()) -> integer().\nfirst_uniq_char(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec first_uniq_char(s :: String.t) :: integer\n  def first_uniq_char(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Video Solution\n---## Solution Article\n\n---\n\n### Approach 1: Linear time solution\n\nThe best possible solution here could be of a linear time because to ensure that the character is unique you have to check the whole string anyway. \n\nThe idea is to go through the string and save in a hash map the number of times each character appears in the string. That would take $$\\mathcal{O}(N)$$ time, where `N` is the number of characters in the string.\n \nThen we go through the string the second time, this time we use the hash map as a reference to check if a character is unique or not. If the character is unique, one could just return its index. The complexity of the second iteration is $$\\mathcal{O}(N)$$ as well.\n\n!?!../Documents/387_LIS.json:1000,621!?!**Complexity Analysis**\n\n* Time complexity: $$\\mathcal{O}(N)$$ since we go through the string of length `N` two times. \n* Space complexity: $$\\mathcal{O}(1)$$ because English alphabet contains 26 letters."
+}

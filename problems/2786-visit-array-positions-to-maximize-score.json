@@ -1,0 +1,54 @@
+{
+  "title": "Visit Array Positions to Maximize Score",
+  "problem_id": "2893",
+  "frontend_id": "2786",
+  "difficulty": "Medium",
+  "problem_slug": "visit-array-positions-to-maximize-score",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a 0-indexed integer array nums and a positive integer x.\nYou are initially at position 0 in the array and you can visit other positions according to the following rules:\nReturn the maximum total score you can get.\nNote that initially you have nums[0] points.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,6,1,9,2], x = 5\nOutput: 13\nExplanation: We can visit the following positions in the array: 0 -> 2 -> 3 -> 4.\nThe corresponding values are 2, 6, 1 and 9. Since the integers 6 and 1 have different parities, the move 2 -> 3 will make you lose a score of x = 5.\nThe total score will be: 2 + 6 + 1 + 9 - 5 = 13.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,6,8], x = 3\nOutput: 20\nExplanation: All the integers in the array have the same parities, so we can visit all of them without losing any score.\nThe total score is: 2 + 4 + 6 + 8 = 20.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i], x <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we use dynamic programming to solve the problem?",
+    "Let dp[i] be the answer to the subarray nums[0…i]. What are the transitions of this dp?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& nums, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] nums, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, nums, x):\n        \"\"\"\n        :type nums: List[int]\n        :type x: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, nums: List[int], x: int) -> int:\n        ",
+    "c": "long long maxScore(int* nums, int numsSize, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxScore(int[] nums, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} x\n * @return {number}\n */\nvar maxScore = function(nums, x) {\n    \n};",
+    "typescript": "function maxScore(nums: number[], x: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $x\n     * @return Integer\n     */\n    function maxScore($nums, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int], _ x: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray, x: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums, int x) {\n    \n  }\n}",
+    "golang": "func maxScore(nums []int, x int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} x\n# @return {Integer}\ndef max_score(nums, x)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int], x: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>, x: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score nums x)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_score(Nums :: [integer()], X :: integer()) -> integer().\nmax_score(Nums, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer], x :: integer) :: integer\n  def max_score(nums, x) do\n    \n  end\nend"
+  }
+}

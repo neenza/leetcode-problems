@@ -1,0 +1,60 @@
+{
+  "title": "Number of Ways to Separate Numbers",
+  "problem_id": "2091",
+  "frontend_id": "1977",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-ways-to-separate-numbers",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Suffix Array"
+  ],
+  "description": "You wrote down many positive integers in a string called num. However, you realized that you forgot to add commas to seperate the different numbers. You remember that the list of integers was non-decreasing and that no integer had leading zeros.\nReturn the number of possible lists of integers that you could have written down to get the string num. Since the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"327\"\nOutput: 2\nExplanation: You could have written down the numbers:\n3, 27\n327",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"094\"\nOutput: 0\nExplanation: No numbers can have leading zeros and all numbers must be positive.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"0\"\nOutput: 0\nExplanation: No numbers can have leading zeros and all numbers must be positive.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 3500",
+    "num consists of digits '0' through '9'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we know the current number has d digits, how many digits can the previous number have?",
+    "Is there a quick way of calculating the number of possibilities for the previous number if we know that it must have less than or equal to d digits? Try to do some pre-processing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfCombinations(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfCombinations(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfCombinations(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfCombinations(self, num: str) -> int:\n        ",
+    "c": "int numberOfCombinations(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfCombinations(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {number}\n */\nvar numberOfCombinations = function(num) {\n    \n};",
+    "typescript": "function numberOfCombinations(num: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return Integer\n     */\n    function numberOfCombinations($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfCombinations(_ num: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfCombinations(num: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfCombinations(String num) {\n    \n  }\n}",
+    "golang": "func numberOfCombinations(num string) int {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {Integer}\ndef number_of_combinations(num)\n    \nend",
+    "scala": "object Solution {\n    def numberOfCombinations(num: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_combinations(num: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-combinations num)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec number_of_combinations(Num :: unicode:unicode_binary()) -> integer().\nnumber_of_combinations(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_combinations(num :: String.t) :: integer\n  def number_of_combinations(num) do\n    \n  end\nend"
+  }
+}

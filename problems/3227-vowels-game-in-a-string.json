@@ -1,0 +1,57 @@
+{
+  "title": "Vowels Game in a String",
+  "problem_id": "3462",
+  "frontend_id": "3227",
+  "difficulty": "Medium",
+  "problem_slug": "vowels-game-in-a-string",
+  "topics": [
+    "Math",
+    "String",
+    "Brainteaser",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob are playing a game on a string.\nYou are given a string s, Alice and Bob will take turns playing the following game where Alice starts first:\nThe first player who cannot make a move on their turn loses the game. We assume that both Alice and Bob play optimally.\nReturn true if Alice wins the game, and false otherwise.\nThe English vowels are: a, e, i, o, and u.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcoder\"\nOutput: true\nExplanation: Alice can win the game as follows:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"bbcd\"\nOutput: false\nExplanation: There is no valid play for Alice in her first turn, so Alice loses the game.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there are no vowels in the initial string, then Bob wins.",
+    "If the number of vowels in the initial string is odd, then Alice can remove the whole string on her first turn and win.",
+    "What if the number of vowels in the initial string is even? What’s the optimal play for Alice’s first turn?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool doesAliceWin(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean doesAliceWin(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def doesAliceWin(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def doesAliceWin(self, s: str) -> bool:\n        ",
+    "c": "bool doesAliceWin(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool DoesAliceWin(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar doesAliceWin = function(s) {\n    \n};",
+    "typescript": "function doesAliceWin(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function doesAliceWin($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func doesAliceWin(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun doesAliceWin(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool doesAliceWin(String s) {\n    \n  }\n}",
+    "golang": "func doesAliceWin(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef does_alice_win(s)\n    \nend",
+    "scala": "object Solution {\n    def doesAliceWin(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn does_alice_win(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (does-alice-win s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec does_alice_win(S :: unicode:unicode_binary()) -> boolean().\ndoes_alice_win(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec does_alice_win(s :: String.t) :: boolean\n  def does_alice_win(s) do\n    \n  end\nend"
+  }
+}

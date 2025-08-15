@@ -1,0 +1,60 @@
+{
+  "title": "Number of Ways to Assign Edge Weights I",
+  "problem_id": "3844",
+  "frontend_id": "3558",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-ways-to-assign-edge-weights-i",
+  "topics": [
+    "Math",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "There is an undirected tree with n nodes labeled from 1 to n, rooted at node 1. The tree is represented by a 2D integer array edges of length n - 1, where edges[i] = [ui, vi] indicates that there is an edge between nodes ui and vi.\nInitially, all edges have a weight of 0. You must assign each edge a weight of either 1 or 2.\nThe cost of a path between any two nodes u and v is the total weight of all edges in the path connecting them.\nSelect any one node x at the maximum depth. Return the number of ways to assign edge weights in the path from node 1 to x such that its total cost is odd.\nSince the answer may be large, return it modulo 109 + 7.\nNote: Ignore all edges not in the path from node 1 to x.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[1,2]]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[1,2],[1,3],[3,4],[3,5]]\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[i] == [ui, vi]",
+    "1 <= ui, vi <= n",
+    "edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Depth‑First Search (DFS) to compute the depth of each node from the root.",
+    "Find the maximum depth, <code>max_depth</code>.",
+    "The number of <code>2</code>s doesn’t affect parity; we only need an odd number of <code>1</code>s along the path.",
+    "The number of ways to choose an odd count of 1s among <code>max_depth</code> edges is <code>2^(max_depth-1)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int assignEdgeWeights(vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int assignEdgeWeights(int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def assignEdgeWeights(self, edges):\n        \"\"\"\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def assignEdgeWeights(self, edges: List[List[int]]) -> int:\n        ",
+    "c": "int assignEdgeWeights(int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AssignEdgeWeights(int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @return {number}\n */\nvar assignEdgeWeights = function(edges) {\n    \n};",
+    "typescript": "function assignEdgeWeights(edges: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @return Integer\n     */\n    function assignEdgeWeights($edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func assignEdgeWeights(_ edges: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun assignEdgeWeights(edges: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int assignEdgeWeights(List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func assignEdgeWeights(edges [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @return {Integer}\ndef assign_edge_weights(edges)\n    \nend",
+    "scala": "object Solution {\n    def assignEdgeWeights(edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn assign_edge_weights(edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (assign-edge-weights edges)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec assign_edge_weights(Edges :: [[integer()]]) -> integer().\nassign_edge_weights(Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec assign_edge_weights(edges :: [[integer]]) :: integer\n  def assign_edge_weights(edges) do\n    \n  end\nend"
+  }
+}

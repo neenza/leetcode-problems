@@ -1,0 +1,54 @@
+{
+  "title": "Construct the Minimum Bitwise Array I",
+  "problem_id": "3605",
+  "frontend_id": "3314",
+  "difficulty": "Easy",
+  "problem_slug": "construct-the-minimum-bitwise-array-i",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an array nums consisting of n prime integers.\nYou need to construct an array ans of length n, such that, for each index i, the bitwise OR of ans[i] and ans[i] + 1 is equal to nums[i], i.e. ans[i] OR (ans[i] + 1) == nums[i].\nAdditionally, you must minimize each value of ans[i] in the resulting array.\nIf it is not possible to find such a value for ans[i] that satisfies the condition, then set ans[i] = -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,5,7]\nOutput: [-1,1,4,3]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [11,13,31]\nOutput: [9,12,15]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "2 <= nums[i] <= 1000",
+    "nums[i] is a prime number."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small, allowing you to iterate over all potential values for <code>ans[i]</code> directly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minBitwiseArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minBitwiseArray(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minBitwiseArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minBitwiseArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minBitwiseArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinBitwiseArray(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar minBitwiseArray = function(nums) {\n    \n};",
+    "typescript": "function minBitwiseArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function minBitwiseArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minBitwiseArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minBitwiseArray(nums: List<Int>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minBitwiseArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minBitwiseArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef min_bitwise_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def minBitwiseArray(nums: List[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_bitwise_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (min-bitwise-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec min_bitwise_array(Nums :: [integer()]) -> [integer()].\nmin_bitwise_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_bitwise_array(nums :: [integer]) :: [integer]\n  def min_bitwise_array(nums) do\n    \n  end\nend"
+  }
+}

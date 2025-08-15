@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Number of Coins for Fruits",
+  "problem_id": "3209",
+  "frontend_id": "2944",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-coins-for-fruits",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Queue",
+    "Heap (Priority Queue)",
+    "Monotonic Queue"
+  ],
+  "description": "You are given an 0-indexed integer array prices where prices[i] denotes the number of coins needed to purchase the (i + 1)th fruit.\nThe fruit market has the following reward for each fruit:\nNote that even if you can take fruit j for free, you can still purchase it for prices[j - 1] coins to receive its reward.\nReturn the minimum number of coins needed to acquire all the fruits.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: prices = [3,1,2]\nOutput: 4\nExplanation:\nNote that even though you could take the 2 nd fruit for free as a reward of buying 1 st fruit, you purchase it to receive its reward, which is more optimal.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: prices = [1,10,1,1]\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: prices = [26,18,6,12,49,7,45,45]\nOutput: 39\nExplanation:\nNote that even though you could take the 6 th fruit for free as a reward of buying 3 rd fruit, you purchase it to receive its reward, which is more optimal.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= prices.length <= 1000",
+    "1 <= prices[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The intended solution uses Dynamic Programming.",
+    "Let <code>dp[i]</code> denote the minimum number of coins, such that we bought <code>i<sup>th</sup></code> fruit and acquired all the fruits in the range <code>[i...n]</code>.",
+    "<code>dp[i] = min(dp[i], dp[j] + prices[i]) </code>, where <code>j</code> is in the range <code>[i + 1, i + 1 + i]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumCoins(vector<int>& prices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCoins(int[] prices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumCoins(self, prices):\n        \"\"\"\n        :type prices: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumCoins(self, prices: List[int]) -> int:\n        ",
+    "c": "int minimumCoins(int* prices, int pricesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumCoins(int[] prices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} prices\n * @return {number}\n */\nvar minimumCoins = function(prices) {\n    \n};",
+    "typescript": "function minimumCoins(prices: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $prices\n     * @return Integer\n     */\n    function minimumCoins($prices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumCoins(_ prices: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumCoins(prices: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumCoins(List<int> prices) {\n    \n  }\n}",
+    "golang": "func minimumCoins(prices []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} prices\n# @return {Integer}\ndef minimum_coins(prices)\n    \nend",
+    "scala": "object Solution {\n    def minimumCoins(prices: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_coins(prices: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-coins prices)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_coins(Prices :: [integer()]) -> integer().\nminimum_coins(Prices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_coins(prices :: [integer]) :: integer\n  def minimum_coins(prices) do\n    \n  end\nend"
+  }
+}

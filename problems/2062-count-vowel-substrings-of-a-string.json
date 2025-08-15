@@ -1,0 +1,59 @@
+{
+  "title": "Count Vowel Substrings of a String",
+  "problem_id": "2186",
+  "frontend_id": "2062",
+  "difficulty": "Easy",
+  "problem_slug": "count-vowel-substrings-of-a-string",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "A substring is a contiguous (non-empty) sequence of characters within a string.\nA vowel substring is a substring that only consists of vowels ('a', 'e', 'i', 'o', and 'u') and has all five vowels present in it.\nGiven a string word, return the number of vowel substrings in word.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"aeiouu\"\nOutput: 2\nExplanation: The vowel substrings of word are as follows (underlined):\n- \"aeiouu\"\n- \"aeiouu\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"unicornarihan\"\nOutput: 0\nExplanation: Not all 5 vowels are present, so there are no vowel substrings.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"cuaieuouac\"\nOutput: 7\nExplanation: The vowel substrings of word are as follows (underlined):\n- \"cuaieuouac\"\n- \"cuaieuouac\"\n- \"cuaieuouac\"\n- \"cuaieuouac\"\n- \"cuaieuouac\"\n- \"cuaieuouac\"\n- \"cuaieuouac\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 100",
+    "word consists of lowercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "While generating substrings starting at any index, do you need to continue generating larger substrings if you encounter a consonant?",
+    "Can you store the count of characters to avoid generating substrings altogether?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countVowelSubstrings(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countVowelSubstrings(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countVowelSubstrings(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countVowelSubstrings(self, word: str) -> int:\n        ",
+    "c": "int countVowelSubstrings(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountVowelSubstrings(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar countVowelSubstrings = function(word) {\n    \n};",
+    "typescript": "function countVowelSubstrings(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function countVowelSubstrings($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countVowelSubstrings(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countVowelSubstrings(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countVowelSubstrings(String word) {\n    \n  }\n}",
+    "golang": "func countVowelSubstrings(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef count_vowel_substrings(word)\n    \nend",
+    "scala": "object Solution {\n    def countVowelSubstrings(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_vowel_substrings(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-vowel-substrings word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_vowel_substrings(Word :: unicode:unicode_binary()) -> integer().\ncount_vowel_substrings(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_vowel_substrings(word :: String.t) :: integer\n  def count_vowel_substrings(word) do\n    \n  end\nend"
+  }
+}

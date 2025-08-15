@@ -1,0 +1,58 @@
+{
+  "title": "Count Number of Bad Pairs",
+  "problem_id": "2448",
+  "frontend_id": "2364",
+  "difficulty": "Medium",
+  "problem_slug": "count-number-of-bad-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed integer array nums. A pair of indices (i, j) is a bad pair if i < j and j - i != nums[j] - nums[i].\nReturn the total number of bad pairs in nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,1,3,3]\nOutput: 5\nExplanation: The pair (0, 1) is a bad pair since 1 - 0 != 1 - 4.\nThe pair (0, 2) is a bad pair since 2 - 0 != 3 - 4, 2 != -1.\nThe pair (0, 3) is a bad pair since 3 - 0 != 3 - 4, 3 != -1.\nThe pair (1, 2) is a bad pair since 2 - 1 != 3 - 1, 1 != 2.\nThe pair (2, 3) is a bad pair since 3 - 2 != 3 - 3, 1 != 0.\nThere are a total of 5 bad pairs, so we return 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: 0\nExplanation: There are no bad pairs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Would it be easier to count the number of pairs that are not bad pairs?",
+    "Notice that (j - i != nums[j] - nums[i]) is the same as (nums[i] - i != nums[j] - j).",
+    "Keep a counter of nums[i] - i. To be efficient, use a HashMap."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countBadPairs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countBadPairs(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countBadPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countBadPairs(self, nums: List[int]) -> int:\n        ",
+    "c": "long long countBadPairs(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountBadPairs(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countBadPairs = function(nums) {\n    \n};",
+    "typescript": "function countBadPairs(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countBadPairs($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countBadPairs(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countBadPairs(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countBadPairs(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countBadPairs(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_bad_pairs(nums)\n    \nend",
+    "scala": "object Solution {\n    def countBadPairs(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_bad_pairs(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-bad-pairs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_bad_pairs(Nums :: [integer()]) -> integer().\ncount_bad_pairs(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_bad_pairs(nums :: [integer]) :: integer\n  def count_bad_pairs(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n    \n---\n\n### Approach: Hash Map\n\n#### Intuition\n\nFirst, let's understand what makes a pair \"good\" rather than \"bad\". For any two positions `i` and `j` in our array, they form a good pair if the difference between their positions equals the difference between their values. Mathematically, we can write this as: `j - i = nums[j] - nums[i]`.\n\nRearranging this equation gives us:\n\n$$\n\\begin{aligned}\nj - nums[j] = i - nums[i]\n\\end{aligned}\n$$\n\nThis transformation highlights a key insight: for two positions to form a good pair, the difference between their position and their value (`position - value`) must be the same. In other words, the value of `j - nums[j]` must match the value of `i - nums[i]`. This \"`position - value`\" difference is the key to identifying good pairs.\n\nFor example, if the array is `nums = [1, 1, 2, 1]` at positions `0, 1, 2, 3`, then calculating `position - number` gives us `[-1, 0, 0, 2]`. Here, positions `1` and `2` both have the same tag `0`, forming a good pair.\n\nAs the number of bad pairs would be the total number of pairs minus the number of good pairs, let's focus on finding the number of good pairs each element can make. Since an element can form a good pair only with elements occurring before it, we can iterate over the `nums` array and keep a running count of all the good pairs we find. \n\nWe can use a hash map to keep track of the counts of each `position - number` value as we iterate through the array. For each index `j`, the value `j - nums[j]` tells us how many indices before `j` could form good pairs with it. These counts are stored in the hash map. \n\n- For an index `j`, all previous indices `0` to `j - 1` can potentially form pairs with it. This means `j` total pairs are possible.\n- Out of these, the number of good pairs is determined by the count of `j - nums[j]` stored in the hash map.\n- The difference between the total pairs (`j`) and the good pairs gives the number of bad pairs contributed by `nums[j]`.\n\nAs we iterate, we keep updating the hash map with the current `position - number` values and accumulate the count of bad pairs. After processing the entire array, we return the total count of bad pairs.\n\nThe slideshow below demonstrates the algorithm in action:\n\n!?!../Documents/2364/slideshow.json:710,862!?!\n\n> For a more comprehensive understanding of hash tables, check out the [Hash Table Explore Card 🔗](https://leetcode.com/explore/learn/card/hash-table/). This resource provides an in-depth look at hash tables, explaining their key concepts and applications with a variety of problems to solidify understanding of the pattern.\n\n#### Algorithm\n\n- Initialize:\n  - a variable `badPairs` to `0` to keep track of the total count of bad pairs.\n  - a hash map `diffCount` to store the frequency of differences between position and value.\n\n- For each position `pos` from `0` to the length of the array:\n  - Calculate the difference between the current position and its value (`pos - nums[pos]`).\n  - Get the count of previous positions that had the same difference value, defaulting to `0` if not found.\n  - Add to `badPairs` the number of total possible pairs up to the current position (`pos`) minus the count of good pairs (`goodPairsCount`).\n  - Update the frequency map by incrementing the count for the current difference by `1`.\n\n- Return the total count of bad pairs stored in `badPairs`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input array `nums`.\n\n- Time complexity: $O(n)$\n\n    The algorithm iterates through the array exactly once. At each position, the operations performed (calculating difference, accessing, and updating the hash map) are all $O(1)$ on average. Therefore, the total time complexity is linear with respect to the array length.\n\n- Space complexity: $O(n)$\n\n    The algorithm uses a hash map to store differences between position and value. In the worst case, each position could have a unique difference value, causing the hash map to store $n$ key-value pairs. No other data structures that scale with input size are used. Therefore, the space complexity is $O(n)$. \n\n---"
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Sum of Variable Length Subarrays",
+  "problem_id": "3731",
+  "frontend_id": "3427",
+  "difficulty": "Easy",
+  "problem_slug": "sum-of-variable-length-subarrays",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of size n. For each index i where 0 <= i < n, define a subarray nums[start ... i] where start = max(0, i - nums[i]).\nReturn the total sum of all elements from the subarray defined for each index in the array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,1]\nOutput: 11\nExplanation:\nThe total sum is 11. Hence, 11 is the output.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,1,1,2]\nOutput: 13\nExplanation:\nThe total sum is 13. Hence, 13 is the output.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 100",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small, so brute force for each index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int subarraySum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int subarraySum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def subarraySum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def subarraySum(self, nums: List[int]) -> int:\n        ",
+    "c": "int subarraySum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SubarraySum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar subarraySum = function(nums) {\n    \n};",
+    "typescript": "function subarraySum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function subarraySum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func subarraySum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun subarraySum(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int subarraySum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func subarraySum(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef subarray_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def subarraySum(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn subarray_sum(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (subarray-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec subarray_sum(Nums :: [integer()]) -> integer().\nsubarray_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec subarray_sum(nums :: [integer]) :: integer\n  def subarray_sum(nums) do\n    \n  end\nend"
+  }
+}

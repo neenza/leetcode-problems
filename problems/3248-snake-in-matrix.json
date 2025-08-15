@@ -1,0 +1,56 @@
+{
+  "title": "Snake in Matrix",
+  "problem_id": "3533",
+  "frontend_id": "3248",
+  "difficulty": "Easy",
+  "problem_slug": "snake-in-matrix",
+  "topics": [
+    "Array",
+    "String",
+    "Simulation"
+  ],
+  "description": "There is a snake in an n x n matrix grid and can move in four possible directions. Each cell in the grid is identified by the position: grid[i][j] = (i * n) + j.\nThe snake starts at cell 0 and follows a sequence of commands.\nYou are given an integer n representing the size of the grid and an array of strings commands where each command[i] is either \"UP\", \"RIGHT\", \"DOWN\", and \"LEFT\". It's guaranteed that the snake will remain within the grid boundaries throughout its movement.\nReturn the position of the final cell where the snake ends up after executing commands.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, commands = [\"RIGHT\",\"DOWN\"]\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, commands = [\"DOWN\",\"RIGHT\",\"UP\"]\nOutput: 1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 10",
+    "1 <= commands.length <= 100",
+    "commands consists only of \"UP\", \"RIGHT\", \"DOWN\", and \"LEFT\".",
+    "The input is generated such the snake will not move outside of the boundaries."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to update the row and column of the snake after each command."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int finalPositionOfSnake(int n, vector<string>& commands) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int finalPositionOfSnake(int n, List<String> commands) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def finalPositionOfSnake(self, n, commands):\n        \"\"\"\n        :type n: int\n        :type commands: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:\n        ",
+    "c": "int finalPositionOfSnake(int n, char** commands, int commandsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FinalPositionOfSnake(int n, IList<string> commands) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {string[]} commands\n * @return {number}\n */\nvar finalPositionOfSnake = function(n, commands) {\n    \n};",
+    "typescript": "function finalPositionOfSnake(n: number, commands: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param String[] $commands\n     * @return Integer\n     */\n    function finalPositionOfSnake($n, $commands) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func finalPositionOfSnake(_ n: Int, _ commands: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun finalPositionOfSnake(n: Int, commands: List<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int finalPositionOfSnake(int n, List<String> commands) {\n    \n  }\n}",
+    "golang": "func finalPositionOfSnake(n int, commands []string) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {String[]} commands\n# @return {Integer}\ndef final_position_of_snake(n, commands)\n    \nend",
+    "scala": "object Solution {\n    def finalPositionOfSnake(n: Int, commands: List[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn final_position_of_snake(n: i32, commands: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (final-position-of-snake n commands)\n  (-> exact-integer? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec final_position_of_snake(N :: integer(), Commands :: [unicode:unicode_binary()]) -> integer().\nfinal_position_of_snake(N, Commands) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec final_position_of_snake(n :: integer, commands :: [String.t]) :: integer\n  def final_position_of_snake(n, commands) do\n    \n  end\nend"
+  }
+}

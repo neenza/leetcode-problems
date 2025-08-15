@@ -1,0 +1,53 @@
+{
+  "title": "Bulls and Cows",
+  "problem_id": "299",
+  "frontend_id": "299",
+  "difficulty": "Medium",
+  "problem_slug": "bulls-and-cows",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are playing the Bulls and Cows game with your friend.\nYou write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info:\nGiven the secret number secret and your friend's guess guess, return the hint for your friend's guess.\nThe hint should be formatted as \"xAyB\", where x is the number of bulls and y is the number of cows. Note that both secret and guess may contain duplicate digits.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: secret = \"1807\", guess = \"7810\"\nOutput: \"1A3B\"\nExplanation: Bulls are connected with a '|' and cows are underlined:\n\"1807\"\n  |\n\"7810\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: secret = \"1123\", guess = \"0111\"\nOutput: \"1A1B\"\nExplanation: Bulls are connected with a '|' and cows are underlined:\n\"1123\"        \"1123\"\n  |      or     |\n\"0111\"        \"0111\"\nNote that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= secret.length, guess.length <= 1000",
+    "secret.length == guess.length",
+    "secret and guess consist of digits only."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string getHint(string secret, string guess) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getHint(String secret, String guess) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getHint(self, secret, guess):\n        \"\"\"\n        :type secret: str\n        :type guess: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getHint(self, secret: str, guess: str) -> str:\n        ",
+    "c": "char* getHint(char* secret, char* guess) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GetHint(string secret, string guess) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} secret\n * @param {string} guess\n * @return {string}\n */\nvar getHint = function(secret, guess) {\n    \n};",
+    "typescript": "function getHint(secret: string, guess: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $secret\n     * @param String $guess\n     * @return String\n     */\n    function getHint($secret, $guess) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getHint(_ secret: String, _ guess: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getHint(secret: String, guess: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String getHint(String secret, String guess) {\n    \n  }\n}",
+    "golang": "func getHint(secret string, guess string) string {\n    \n}",
+    "ruby": "# @param {String} secret\n# @param {String} guess\n# @return {String}\ndef get_hint(secret, guess)\n    \nend",
+    "scala": "object Solution {\n    def getHint(secret: String, guess: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_hint(secret: String, guess: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (get-hint secret guess)\n  (-> string? string? string?)\n  )",
+    "erlang": "-spec get_hint(Secret :: unicode:unicode_binary(), Guess :: unicode:unicode_binary()) -> unicode:unicode_binary().\nget_hint(Secret, Guess) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_hint(secret :: String.t, guess :: String.t) :: String.t\n  def get_hint(secret, guess) do\n    \n  end\nend"
+  }
+}

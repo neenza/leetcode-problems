@@ -1,0 +1,62 @@
+{
+  "title": "Number of Pairs Satisfying Inequality",
+  "problem_id": "2513",
+  "frontend_id": "2426",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-pairs-satisfying-inequality",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Merge Sort",
+    "Ordered Set"
+  ],
+  "description": "You are given two 0-indexed integer arrays nums1 and nums2, each of size n, and an integer diff. Find the number of pairs (i, j) such that:\nReturn the number of pairs that satisfy the conditions.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [3,2,5], nums2 = [2,2,1], diff = 1\nOutput: 3\nExplanation:\nThere are 3 pairs that satisfy the conditions:\n1. i = 0, j = 1: 3 - 2 <= 2 - 2 + 1. Since i < j and 1 <= 1, this pair satisfies the conditions.\n2. i = 0, j = 2: 3 - 5 <= 2 - 1 + 1. Since i < j and -2 <= 2, this pair satisfies the conditions.\n3. i = 1, j = 2: 2 - 5 <= 2 - 1 + 1. Since i < j and -3 <= 2, this pair satisfies the conditions.\nTherefore, we return 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [3,-1], nums2 = [-2,2], diff = -1\nOutput: 0\nExplanation:\nSince there does not exist any pair that satisfies the conditions, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length == nums2.length",
+    "2 <= n <= 105",
+    "-104 <= nums1[i], nums2[i] <= 104",
+    "-104 <= diff <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try rearranging the equation.",
+    "Once the equation is rearranged properly, think how a segment tree or a Fenwick tree can be used to solve the rearranged equation.",
+    "Iterate through the array backwards."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numberOfPairs(vector<int>& nums1, vector<int>& nums2, int diff) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int diff) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfPairs(self, nums1, nums2, diff):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type diff: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfPairs(self, nums1: List[int], nums2: List[int], diff: int) -> int:\n        ",
+    "c": "long long numberOfPairs(int* nums1, int nums1Size, int* nums2, int nums2Size, int diff) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumberOfPairs(int[] nums1, int[] nums2, int diff) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} diff\n * @return {number}\n */\nvar numberOfPairs = function(nums1, nums2, diff) {\n    \n};",
+    "typescript": "function numberOfPairs(nums1: number[], nums2: number[], diff: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @param Integer $diff\n     * @return Integer\n     */\n    function numberOfPairs($nums1, $nums2, $diff) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfPairs(_ nums1: [Int], _ nums2: [Int], _ diff: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfPairs(nums1: IntArray, nums2: IntArray, diff: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfPairs(List<int> nums1, List<int> nums2, int diff) {\n    \n  }\n}",
+    "golang": "func numberOfPairs(nums1 []int, nums2 []int, diff int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @param {Integer} diff\n# @return {Integer}\ndef number_of_pairs(nums1, nums2, diff)\n    \nend",
+    "scala": "object Solution {\n    def numberOfPairs(nums1: Array[Int], nums2: Array[Int], diff: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_pairs(nums1: Vec<i32>, nums2: Vec<i32>, diff: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-pairs nums1 nums2 diff)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_pairs(Nums1 :: [integer()], Nums2 :: [integer()], Diff :: integer()) -> integer().\nnumber_of_pairs(Nums1, Nums2, Diff) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_pairs(nums1 :: [integer], nums2 :: [integer], diff :: integer) :: integer\n  def number_of_pairs(nums1, nums2, diff) do\n    \n  end\nend"
+  }
+}

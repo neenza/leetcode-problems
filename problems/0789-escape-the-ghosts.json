@@ -1,0 +1,60 @@
+{
+  "title": "Escape The Ghosts",
+  "problem_id": "805",
+  "frontend_id": "789",
+  "difficulty": "Medium",
+  "problem_slug": "escape-the-ghosts",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are playing a simplified PAC-MAN game on an infinite 2-D grid. You start at the point [0, 0], and you are given a destination point target = [xtarget, ytarget] that you are trying to get to. There are several ghosts on the map with their starting positions given as a 2D array ghosts, where ghosts[i] = [xi, yi] represents the starting position of the ith ghost. All inputs are integral coordinates.\nEach turn, you and all the ghosts may independently choose to either move 1 unit in any of the four cardinal directions: north, east, south, or west, or stay still. All actions happen simultaneously.\nYou escape if and only if you can reach the target before any ghost reaches you. If you reach any square (including the target) at the same time as a ghost, it does not count as an escape.\nReturn true if it is possible to escape regardless of how the ghosts move, otherwise return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ghosts = [[1,0],[0,3]], target = [0,1]\nOutput: true\nExplanation: You can reach the destination (0, 1) after 1 turn, while the ghosts located at (1, 0) and (0, 3) cannot catch up with you.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ghosts = [[1,0]], target = [2,0]\nOutput: false\nExplanation: You need to reach the destination (2, 0), but the ghost at (1, 0) lies between you and the destination.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: ghosts = [[2,0]], target = [1,0]\nOutput: false\nExplanation: The ghost can reach the target at the same time as you.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= ghosts.length <= 100",
+    "ghosts[i].length == 2",
+    "-104 <= xi, yi <= 104",
+    "There can be multiple ghosts in the same location.",
+    "target.length == 2",
+    "-104 <= xtarget, ytarget <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool escapeGhosts(vector<vector<int>>& ghosts, vector<int>& target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean escapeGhosts(int[][] ghosts, int[] target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def escapeGhosts(self, ghosts, target):\n        \"\"\"\n        :type ghosts: List[List[int]]\n        :type target: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def escapeGhosts(self, ghosts: List[List[int]], target: List[int]) -> bool:\n        ",
+    "c": "bool escapeGhosts(int** ghosts, int ghostsSize, int* ghostsColSize, int* target, int targetSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool EscapeGhosts(int[][] ghosts, int[] target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} ghosts\n * @param {number[]} target\n * @return {boolean}\n */\nvar escapeGhosts = function(ghosts, target) {\n    \n};",
+    "typescript": "function escapeGhosts(ghosts: number[][], target: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $ghosts\n     * @param Integer[] $target\n     * @return Boolean\n     */\n    function escapeGhosts($ghosts, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func escapeGhosts(_ ghosts: [[Int]], _ target: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun escapeGhosts(ghosts: Array<IntArray>, target: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool escapeGhosts(List<List<int>> ghosts, List<int> target) {\n    \n  }\n}",
+    "golang": "func escapeGhosts(ghosts [][]int, target []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} ghosts\n# @param {Integer[]} target\n# @return {Boolean}\ndef escape_ghosts(ghosts, target)\n    \nend",
+    "scala": "object Solution {\n    def escapeGhosts(ghosts: Array[Array[Int]], target: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn escape_ghosts(ghosts: Vec<Vec<i32>>, target: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (escape-ghosts ghosts target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec escape_ghosts(Ghosts :: [[integer()]], Target :: [integer()]) -> boolean().\nescape_ghosts(Ghosts, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec escape_ghosts(ghosts :: [[integer]], target :: [integer]) :: boolean\n  def escape_ghosts(ghosts, target) do\n    \n  end\nend"
+  }
+}

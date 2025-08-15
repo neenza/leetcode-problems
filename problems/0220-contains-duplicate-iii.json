@@ -1,0 +1,59 @@
+{
+  "title": "Contains Duplicate III",
+  "problem_id": "220",
+  "frontend_id": "220",
+  "difficulty": "Hard",
+  "problem_slug": "contains-duplicate-iii",
+  "topics": [
+    "Array",
+    "Sliding Window",
+    "Sorting",
+    "Bucket Sort",
+    "Ordered Set"
+  ],
+  "description": "You are given an integer array nums and two integers indexDiff and valueDiff.\nFind a pair of indices (i, j) such that:\nReturn true if such pair exists or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,1], indexDiff = 3, valueDiff = 0\nOutput: true\nExplanation: We can choose (i, j) = (0, 3).\nWe satisfy the three conditions:\ni != j --> 0 != 3\nabs(i - j) <= indexDiff --> abs(0 - 3) <= 3\nabs(nums[i] - nums[j]) <= valueDiff --> abs(1 - 1) <= 0",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,5,9,1,5,9], indexDiff = 2, valueDiff = 3\nOutput: false\nExplanation: After trying all the possible pairs (i, j), we cannot satisfy the three conditions, so we return false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "-109 <= nums[i] <= 109",
+    "1 <= indexDiff <= nums.length",
+    "0 <= valueDiff <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Time complexity O(n logk)  - This will give an indication that sorting is involved for k elements.",
+    "Use already existing state to evaluate next state  -  Like, a set of k sorted numbers are only needed to be tracked. When we are processing the next number in array, then we can utilize the existing sorted state and it is not necessary to sort next overlapping set of k numbers again."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool containsNearbyAlmostDuplicate(vector<int>& nums, int indexDiff, int valueDiff) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def containsNearbyAlmostDuplicate(self, nums, indexDiff, valueDiff):\n        \"\"\"\n        :type nums: List[int]\n        :type indexDiff: int\n        :type valueDiff: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def containsNearbyAlmostDuplicate(self, nums: List[int], indexDiff: int, valueDiff: int) -> bool:\n        ",
+    "c": "bool containsNearbyAlmostDuplicate(int* nums, int numsSize, int indexDiff, int valueDiff) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ContainsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} indexDiff\n * @param {number} valueDiff\n * @return {boolean}\n */\nvar containsNearbyAlmostDuplicate = function(nums, indexDiff, valueDiff) {\n    \n};",
+    "typescript": "function containsNearbyAlmostDuplicate(nums: number[], indexDiff: number, valueDiff: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $indexDiff\n     * @param Integer $valueDiff\n     * @return Boolean\n     */\n    function containsNearbyAlmostDuplicate($nums, $indexDiff, $valueDiff) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func containsNearbyAlmostDuplicate(_ nums: [Int], _ indexDiff: Int, _ valueDiff: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun containsNearbyAlmostDuplicate(nums: IntArray, indexDiff: Int, valueDiff: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool containsNearbyAlmostDuplicate(List<int> nums, int indexDiff, int valueDiff) {\n    \n  }\n}",
+    "golang": "func containsNearbyAlmostDuplicate(nums []int, indexDiff int, valueDiff int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} index_diff\n# @param {Integer} value_diff\n# @return {Boolean}\ndef contains_nearby_almost_duplicate(nums, index_diff, value_diff)\n    \nend",
+    "scala": "object Solution {\n    def containsNearbyAlmostDuplicate(nums: Array[Int], indexDiff: Int, valueDiff: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn contains_nearby_almost_duplicate(nums: Vec<i32>, index_diff: i32, value_diff: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (contains-nearby-almost-duplicate nums indexDiff valueDiff)\n  (-> (listof exact-integer?) exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec contains_nearby_almost_duplicate(Nums :: [integer()], IndexDiff :: integer(), ValueDiff :: integer()) -> boolean().\ncontains_nearby_almost_duplicate(Nums, IndexDiff, ValueDiff) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec contains_nearby_almost_duplicate(nums :: [integer], index_diff :: integer, value_diff :: integer) :: boolean\n  def contains_nearby_almost_duplicate(nums, index_diff, value_diff) do\n    \n  end\nend"
+  }
+}

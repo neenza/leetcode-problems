@@ -1,0 +1,62 @@
+{
+  "title": "Minimize the Maximum Adjacent Element Difference",
+  "problem_id": "3658",
+  "frontend_id": "3357",
+  "difficulty": "Hard",
+  "problem_slug": "minimize-the-maximum-adjacent-element-difference",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy"
+  ],
+  "description": "You are given an array of integers nums. Some values in nums are missing and are denoted by -1.\nYou must choose a pair of positive integers (x, y) exactly once and replace each missing element with either x or y.\nYou need to minimize the maximum absolute difference between adjacent elements of nums after replacements.\nReturn the minimum possible difference.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,-1,10,8]\nOutput: 4\nExplanation:\nBy choosing the pair as (6, 7) , nums can be changed to [1, 2, 6, 10, 8] .\nThe absolute differences between adjacent elements are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,-1,-1]\nOutput: 0\nExplanation:\nBy choosing the pair as (4, 4) , nums can be changed to [4, 4, 4] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [-1,10,-1,8]\nOutput: 1\nExplanation:\nBy choosing the pair as (11, 9) , nums can be changed to [11, 10, 9, 8] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "nums[i] is either -1 or in the range [1, 109]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "More than 2 occurrences of -1 can be ignored.",
+    "We can add the first positive number to the beginning and the last positive number to the end so that any consecutive of -1s are surrounded by positive numbers.",
+    "Suppose the answer is <code>d</code>, it can be proved that for the optimal case we'll replace -1s with values <code>0 < x <= y</code> and it's always optimal to select <code>x = min(a) + d</code>. So we only need to select <code>y</code>.",
+    "Binary search on <code>d</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDifference(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDifference(self, nums: List[int]) -> int:\n        ",
+    "c": "int minDifference(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minDifference = function(nums) {\n    \n};",
+    "typescript": "function minDifference(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minDifference($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDifference(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDifference(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minDifference(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_difference(nums)\n    \nend",
+    "scala": "object Solution {\n    def minDifference(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_difference(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_difference(Nums :: [integer()]) -> integer().\nmin_difference(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_difference(nums :: [integer]) :: integer\n  def min_difference(nums) do\n    \n  end\nend"
+  }
+}

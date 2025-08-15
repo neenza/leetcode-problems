@@ -1,0 +1,62 @@
+{
+  "title": "Rearrange Characters to Make Target String",
+  "problem_id": "2372",
+  "frontend_id": "2287",
+  "difficulty": "Easy",
+  "problem_slug": "rearrange-characters-to-make-target-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given two 0-indexed strings s and target. You can take some letters from s and rearrange them to form new strings.\nReturn the maximum number of copies of target that can be formed by taking letters from s and rearranging them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nNote: This question is the same as  1189: Maximum Number of Balloons.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ilovecodingonleetcode\", target = \"code\"\nOutput: 2\nExplanation:\nFor the first copy of \"code\", take the letters at indices 4, 5, 6, and 7.\nFor the second copy of \"code\", take the letters at indices 17, 18, 19, and 20.\nThe strings that are formed are \"ecod\" and \"code\" which can both be rearranged into \"code\".\nWe can make at most two copies of \"code\", so we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcba\", target = \"abc\"\nOutput: 1\nExplanation:\nWe can make one copy of \"abc\" by taking the letters at indices 0, 1, and 2.\nWe can make at most one copy of \"abc\", so we return 1.\nNote that while there is an extra 'a' and 'b' at indices 3 and 4, we cannot reuse the letter 'c' at index 2, so we cannot make a second copy of \"abc\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abbaccaddaeea\", target = \"aaaaa\"\nOutput: 1\nExplanation:\nWe can make one copy of \"aaaaa\" by taking the letters at indices 0, 3, 6, 9, and 12.\nWe can make at most one copy of \"aaaaa\", so we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "1 <= target.length <= 10",
+    "s and target consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of each character in s and target.",
+    "Consider each letter one at a time. If there are x occurrences of a letter in s and y occurrences of the same letter in target, how many copies of this letter can we make?",
+    "We can make floor(x / y) copies of the letter."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int rearrangeCharacters(string s, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rearrangeCharacters(String s, String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rearrangeCharacters(self, s, target):\n        \"\"\"\n        :type s: str\n        :type target: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rearrangeCharacters(self, s: str, target: str) -> int:\n        ",
+    "c": "int rearrangeCharacters(char* s, char* target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RearrangeCharacters(string s, string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} target\n * @return {number}\n */\nvar rearrangeCharacters = function(s, target) {\n    \n};",
+    "typescript": "function rearrangeCharacters(s: string, target: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $target\n     * @return Integer\n     */\n    function rearrangeCharacters($s, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rearrangeCharacters(_ s: String, _ target: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rearrangeCharacters(s: String, target: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rearrangeCharacters(String s, String target) {\n    \n  }\n}",
+    "golang": "func rearrangeCharacters(s string, target string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} target\n# @return {Integer}\ndef rearrange_characters(s, target)\n    \nend",
+    "scala": "object Solution {\n    def rearrangeCharacters(s: String, target: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rearrange_characters(s: String, target: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (rearrange-characters s target)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec rearrange_characters(S :: unicode:unicode_binary(), Target :: unicode:unicode_binary()) -> integer().\nrearrange_characters(S, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rearrange_characters(s :: String.t, target :: String.t) :: integer\n  def rearrange_characters(s, target) do\n    \n  end\nend"
+  }
+}

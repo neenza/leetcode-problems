@@ -1,0 +1,61 @@
+{
+  "title": "Naming a Company",
+  "problem_id": "2390",
+  "frontend_id": "2306",
+  "difficulty": "Hard",
+  "problem_slug": "naming-a-company",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "description": "You are given an array of strings ideas that represents a list of names to be used in the process of naming a company. The process of naming a company is as follows:\nReturn the number of distinct valid names for the company.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ideas = [\"coffee\",\"donuts\",\"time\",\"toffee\"]\nOutput: 6\nExplanation: The following selections are valid:\n- (\"coffee\", \"donuts\"): The company name created is \"doffee conuts\".\n- (\"donuts\", \"coffee\"): The company name created is \"conuts doffee\".\n- (\"donuts\", \"time\"): The company name created is \"tonuts dime\".\n- (\"donuts\", \"toffee\"): The company name created is \"tonuts doffee\".\n- (\"time\", \"donuts\"): The company name created is \"dime tonuts\".\n- (\"toffee\", \"donuts\"): The company name created is \"doffee tonuts\".\nTherefore, there are a total of 6 distinct company names.\n\nThe following are some examples of invalid selections:\n- (\"coffee\", \"time\"): The name \"toffee\" formed after swapping already exists in the original array.\n- (\"time\", \"toffee\"): Both names are still the same after swapping and exist in the original array.\n- (\"coffee\", \"toffee\"): Both names formed after swapping already exist in the original array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ideas = [\"lack\",\"back\"]\nOutput: 0\nExplanation: There are no valid selections. Therefore, 0 is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= ideas.length <= 5 * 104",
+    "1 <= ideas[i].length <= 10",
+    "ideas[i] consists of lowercase English letters.",
+    "All the strings in ideas are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we divide the ideas into groups to make it easier to find valid pairs?",
+    "Group ideas that share the same suffix (all characters except the first) together and notice that a pair of ideas from the same group is invalid. What about pairs of ideas from different groups?",
+    "The first letter of the idea in the first group must not be the first letter of an idea in the second group and vice versa.",
+    "We can efficiently count the valid pairings for an idea if we already know how many ideas starting with a letter x are within a group that does not contain any ideas with starting letter y for all letters x and y."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long distinctNames(vector<string>& ideas) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long distinctNames(String[] ideas) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctNames(self, ideas):\n        \"\"\"\n        :type ideas: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctNames(self, ideas: List[str]) -> int:\n        ",
+    "c": "long long distinctNames(char** ideas, int ideasSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long DistinctNames(string[] ideas) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} ideas\n * @return {number}\n */\nvar distinctNames = function(ideas) {\n    \n};",
+    "typescript": "function distinctNames(ideas: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $ideas\n     * @return Integer\n     */\n    function distinctNames($ideas) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctNames(_ ideas: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctNames(ideas: Array<String>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctNames(List<String> ideas) {\n    \n  }\n}",
+    "golang": "func distinctNames(ideas []string) int64 {\n    \n}",
+    "ruby": "# @param {String[]} ideas\n# @return {Integer}\ndef distinct_names(ideas)\n    \nend",
+    "scala": "object Solution {\n    def distinctNames(ideas: Array[String]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_names(ideas: Vec<String>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-names ideas)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec distinct_names(Ideas :: [unicode:unicode_binary()]) -> integer().\ndistinct_names(Ideas) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_names(ideas :: [String.t]) :: integer\n  def distinct_names(ideas) do\n    \n  end\nend"
+  }
+}

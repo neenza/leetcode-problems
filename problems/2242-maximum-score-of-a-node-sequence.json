@@ -1,0 +1,68 @@
+{
+  "title": "Maximum Score of a Node Sequence",
+  "problem_id": "2353",
+  "frontend_id": "2242",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-score-of-a-node-sequence",
+  "topics": [
+    "Array",
+    "Graph",
+    "Sorting",
+    "Enumeration"
+  ],
+  "description": "There is an undirected graph with n nodes, numbered from 0 to n - 1.\nYou are given a 0-indexed integer array scores of length n where scores[i] denotes the score of node i. You are also given a 2D integer array edges where edges[i] = [ai, bi] denotes that there exists an undirected edge connecting nodes ai and bi.\nA node sequence is valid if it meets the following conditions:\nThe score of a node sequence is defined as the sum of the scores of the nodes in the sequence.\nReturn the maximum score of a valid node sequence with a length of 4. If no such sequence exists, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: scores = [5,2,9,8,4], edges = [[0,1],[1,2],[2,3],[0,2],[1,3],[2,4]]\nOutput: 24\nExplanation: The figure above shows the graph and the chosen node sequence [0,1,2,3].\nThe score of the node sequence is 5 + 2 + 9 + 8 = 24.\nIt can be shown that no other node sequence has a score of more than 24.\nNote that the sequences [3,1,2,0] and [1,0,2,3] are also valid and have a score of 24.\nThe sequence [0,3,2,4] is not valid since no edge connects nodes 0 and 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/04/15/ex1new3.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: scores = [9,20,6,4,11,12], edges = [[0,3],[5,3],[2,4],[1,3]]\nOutput: -1\nExplanation: The figure above shows the graph.\nThere are no valid node sequences of length 4, so we return -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/17/ex2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == scores.length",
+    "4 <= n <= 5 * 104",
+    "1 <= scores[i] <= 108",
+    "0 <= edges.length <= 5 * 104",
+    "edges[i].length == 2",
+    "0 <= ai, bi <= n - 1",
+    "ai != bi",
+    "There are no duplicate edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For every node sequence of length 4, there are 3 relevant edges. How can we consider valid triplets of edges?",
+    "Fix the middle 2 nodes connected by an edge in the node sequence. Can you determine the other 2 nodes that will give the highest possible score?",
+    "The other 2 nodes must each be connected to one of the middle nodes. If we only consider nodes with the highest scores, how many should we store to ensure we don’t choose duplicate nodes?",
+    "For each node, we should store the 3 adjacent nodes with the highest scores to ensure we can find a sequence with no duplicate nodes via the method above."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumScore(vector<int>& scores, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumScore(int[] scores, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumScore(self, scores, edges):\n        \"\"\"\n        :type scores: List[int]\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumScore(self, scores: List[int], edges: List[List[int]]) -> int:\n        ",
+    "c": "int maximumScore(int* scores, int scoresSize, int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumScore(int[] scores, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} scores\n * @param {number[][]} edges\n * @return {number}\n */\nvar maximumScore = function(scores, edges) {\n    \n};",
+    "typescript": "function maximumScore(scores: number[], edges: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $scores\n     * @param Integer[][] $edges\n     * @return Integer\n     */\n    function maximumScore($scores, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumScore(_ scores: [Int], _ edges: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumScore(scores: IntArray, edges: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumScore(List<int> scores, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func maximumScore(scores []int, edges [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} scores\n# @param {Integer[][]} edges\n# @return {Integer}\ndef maximum_score(scores, edges)\n    \nend",
+    "scala": "object Solution {\n    def maximumScore(scores: Array[Int], edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_score(scores: Vec<i32>, edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-score scores edges)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_score(Scores :: [integer()], Edges :: [[integer()]]) -> integer().\nmaximum_score(Scores, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_score(scores :: [integer], edges :: [[integer]]) :: integer\n  def maximum_score(scores, edges) do\n    \n  end\nend"
+  }
+}

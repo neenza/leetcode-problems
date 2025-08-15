@@ -1,0 +1,58 @@
+{
+  "title": "Find the Minimum Number of Fibonacci Numbers Whose Sum Is K",
+  "problem_id": "1515",
+  "frontend_id": "1414",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "description": "Given an integer k, return the minimum number of Fibonacci numbers whose sum is equal to k. The same Fibonacci number can be used multiple times.\nThe Fibonacci numbers are defined as:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 7\nOutput: 2 \nExplanation: The Fibonacci numbers are: 1, 1, 2, 3, 5, 8, 13, ... \nFor k = 7 we can use 2 + 5 = 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 10\nOutput: 2 \nExplanation: For k = 10 we can use 2 + 8 = 10.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: k = 19\nOutput: 3 \nExplanation: For k = 19 we can use 1 + 5 + 13 = 19.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Generate all Fibonacci numbers up to the limit (they are few).",
+    "Use greedy solution, taking at every time the greatest Fibonacci number which is smaller than or equal to the current number. Subtract this Fibonacci number from the current number and repeat again the process."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMinFibonacciNumbers(int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinFibonacciNumbers(int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMinFibonacciNumbers(self, k):\n        \"\"\"\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMinFibonacciNumbers(self, k: int) -> int:\n        ",
+    "c": "int findMinFibonacciNumbers(int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMinFibonacciNumbers(int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @return {number}\n */\nvar findMinFibonacciNumbers = function(k) {\n    \n};",
+    "typescript": "function findMinFibonacciNumbers(k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @return Integer\n     */\n    function findMinFibonacciNumbers($k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMinFibonacciNumbers(_ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMinFibonacciNumbers(k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMinFibonacciNumbers(int k) {\n    \n  }\n}",
+    "golang": "func findMinFibonacciNumbers(k int) int {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @return {Integer}\ndef find_min_fibonacci_numbers(k)\n    \nend",
+    "scala": "object Solution {\n    def findMinFibonacciNumbers(k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_min_fibonacci_numbers(k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-min-fibonacci-numbers k)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_min_fibonacci_numbers(K :: integer()) -> integer().\nfind_min_fibonacci_numbers(K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_min_fibonacci_numbers(k :: integer) :: integer\n  def find_min_fibonacci_numbers(k) do\n    \n  end\nend"
+  }
+}

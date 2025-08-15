@@ -1,0 +1,60 @@
+{
+  "title": "Maximize the Total Height of Unique Towers",
+  "problem_id": "3510",
+  "frontend_id": "3301",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-the-total-height-of-unique-towers",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an array maximumHeight, where maximumHeight[i] denotes the maximum height the ith tower can be assigned.\nYour task is to assign a height to each tower so that:\nReturn the maximum possible total sum of the tower heights. If it's not possible to assign heights, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: maximumHeight = [2,3,4,3]\nOutput: 10\nExplanation:\nWe can assign heights in the following way: [1, 2, 4, 3] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: maximumHeight = [15,10]\nOutput: 25\nExplanation:\nWe can assign heights in the following way: [15, 10] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: maximumHeight = [2,2,1]\nOutput: -1\nExplanation:\nIt's impossible to assign positive heights to each index so that no two towers have the same height.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= maximumHeight.length <= 105",
+    "1 <= maximumHeight[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array <code>maximumHeight</code> in descending order.",
+    "After sorting, it can be seen that the maximum height that we can assign to the <code>i<sup>th</sup></code> element is <code>min(maximumHeight[i], maximumHeight[i - 1] - 1)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumTotalSum(vector<int>& maximumHeight) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumTotalSum(int[] maximumHeight) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumTotalSum(self, maximumHeight):\n        \"\"\"\n        :type maximumHeight: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumTotalSum(self, maximumHeight: List[int]) -> int:\n        ",
+    "c": "long long maximumTotalSum(int* maximumHeight, int maximumHeightSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumTotalSum(int[] maximumHeight) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} maximumHeight\n * @return {number}\n */\nvar maximumTotalSum = function(maximumHeight) {\n    \n};",
+    "typescript": "function maximumTotalSum(maximumHeight: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $maximumHeight\n     * @return Integer\n     */\n    function maximumTotalSum($maximumHeight) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumTotalSum(_ maximumHeight: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumTotalSum(maximumHeight: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumTotalSum(List<int> maximumHeight) {\n    \n  }\n}",
+    "golang": "func maximumTotalSum(maximumHeight []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} maximum_height\n# @return {Integer}\ndef maximum_total_sum(maximum_height)\n    \nend",
+    "scala": "object Solution {\n    def maximumTotalSum(maximumHeight: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_total_sum(maximum_height: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-total-sum maximumHeight)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_total_sum(MaximumHeight :: [integer()]) -> integer().\nmaximum_total_sum(MaximumHeight) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_total_sum(maximum_height :: [integer]) :: integer\n  def maximum_total_sum(maximum_height) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Find Duplicate File in System",
+  "problem_id": "609",
+  "frontend_id": "609",
+  "difficulty": "Medium",
+  "problem_slug": "find-duplicate-file-in-system",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a list paths of directory info, including the directory path, and all the files with contents in this directory, return all the duplicate files in the file system in terms of their paths. You may return the answer in any order.\nA group of duplicate files consists of at least two files that have the same content.\nA single directory info string in the input list has the following format:\nIt means there are n files (f1.txt, f2.txt ... fn.txt) with content (f1_content, f2_content ... fn_content) respectively in the directory \"root/d1/d2/.../dm\". Note that n >= 1 and m >= 0. If m = 0, it means the directory is just the root directory.\nThe output is a list of groups of duplicate file paths. For each group, it contains all the file paths of the files that have the same content. A file path is a string that has the following format:\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: paths = [\"root/a 1.txt(abcd) 2.txt(efgh)\",\"root/c 3.txt(abcd)\",\"root/c/d 4.txt(efgh)\",\"root 4.txt(efgh)\"]\nOutput: [[\"root/a/2.txt\",\"root/c/d/4.txt\",\"root/4.txt\"],[\"root/a/1.txt\",\"root/c/3.txt\"]]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: paths = [\"root/a 1.txt(abcd) 2.txt(efgh)\",\"root/c 3.txt(abcd)\",\"root/c/d 4.txt(efgh)\"]\nOutput: [[\"root/a/2.txt\",\"root/c/d/4.txt\"],[\"root/a/1.txt\",\"root/c/3.txt\"]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= paths.length <= 2 * 104",
+    "1 <= paths[i].length <= 3000",
+    "1 <= sum(paths[i].length) <= 5 * 105",
+    "paths[i] consist of English letters, digits, '/', '.', '(', ')', and ' '.",
+    "You may assume no files or directories share the same name in the same directory.",
+    "You may assume each given directory info represents a unique directory. A single blank space separates the directory path and file info."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> findDuplicate(vector<string>& paths) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> findDuplicate(String[] paths) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findDuplicate(self, paths):\n        \"\"\"\n        :type paths: List[str]\n        :rtype: List[List[str]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findDuplicate(self, paths: List[str]) -> List[List[str]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** findDuplicate(char** paths, int pathsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<string>> FindDuplicate(string[] paths) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} paths\n * @return {string[][]}\n */\nvar findDuplicate = function(paths) {\n    \n};",
+    "typescript": "function findDuplicate(paths: string[]): string[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $paths\n     * @return String[][]\n     */\n    function findDuplicate($paths) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findDuplicate(_ paths: [String]) -> [[String]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findDuplicate(paths: Array<String>): List<List<String>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<String>> findDuplicate(List<String> paths) {\n    \n  }\n}",
+    "golang": "func findDuplicate(paths []string) [][]string {\n    \n}",
+    "ruby": "# @param {String[]} paths\n# @return {String[][]}\ndef find_duplicate(paths)\n    \nend",
+    "scala": "object Solution {\n    def findDuplicate(paths: Array[String]): List[List[String]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_duplicate(paths: Vec<String>) -> Vec<Vec<String>> {\n        \n    }\n}",
+    "racket": "(define/contract (find-duplicate paths)\n  (-> (listof string?) (listof (listof string?)))\n  )",
+    "erlang": "-spec find_duplicate(Paths :: [unicode:unicode_binary()]) -> [[unicode:unicode_binary()]].\nfind_duplicate(Paths) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_duplicate(paths :: [String.t]) :: [[String.t]]\n  def find_duplicate(paths) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Brute Force [Time Limit Exceeded]\n\n**Algorithm**\n\nFor the brute force solution, firstly we obtain the directory paths, the filenames and file contents separately by appropriately splitting the elements of the $$paths$$ list. While doing so, we keep on creating a $$list$$ which contains the full path of every file along with the contents of the file. The $$list$$ contains data in the form $$[ [file_1\\_full\\_path, file_1\\_contents], [file_2\\_full\\_path, file_2\\_contents]..., [file_n\\_full\\_path, file_n\\_contents] ]$$.\n\nOnce this is done, we iterate over this $$list$$. For every element $$i$$ chosen from the list, we iterate over the whole $$list$$ to find another element $$j$$ whose file contents are the same as the $$i^{th}$$ element. For every such element found, we put the $$j^{th}$$ element's file path in a temporary list $$l$$ and we also mark the $$j^{th}$$ element as visited so that this element isn't considered again in the future. Thus, when we reach the end of the array for every $$i^{th}$$ element, we obtain a list of file paths in $$l$$, which have the same contents as the file corresponding to the $$i^{th}$$ element. If this list isn't empty, it indicates that there exists content duplicate to the $$i^{th}$$ element. Thus, we also need to put the $$i^{th}$$ element's file path in the $$l$$. \n\nAt the end of each iteration, we put this list $$l$$ obtained in the resultant list $$res$$ and reset the list $$l$$ for finding the duplicates of the next element.**Complexity Analysis**\n\n* Time complexity : $$O(n*x + f^2*s)$$. Creation of $$list$$ will take $$O(n*x)$$, where n is the number of directories and x is the average string length. Every file is compared with every other file. Let $$f$$ files are there with average size of $$s$$, then files comparision will take $$O(f^2*s)$$, equals can take $$O(s)$$. Here, Worst case will be when all files are unique.\n\n* Space complexity : $$O(n*x)$$. Size of lists $$res$$ and $$list$$ can grow upto $$n*x$$.\n\n---\n### Approach #2 Using HashMap [Accepted]\n\nIn this approach, firstly we obtain the directory paths, the file names and their contents separately by appropriately splitting each string in the given $$paths$$ list. In order to find the files with duplicate contents, we make use of a HashMap $$map$$, which stores the data in the form $$(contents, list\\_of\\_file\\_paths\\_with\\_this\\_content)$$. Thus, for every file's contents, we check if the same content already exist in the hashmap. If so, we add the current file's path to the list of files corresponding to the current contents. Otherwise, we create a new entry in the $$map$$, with the current contents as the key and the value being a list with only one entry(the current file's path).\n\nAt the end, we find out the contents corresponding to which atleast two file paths exist. We obtain the resultant list $$res$$, which is a list of lists containing these file paths corresponding to the same contents.\n\nThe following animation illustrates the process for a clearer understanding.\n\n!?!../Documents/609_Find_Duplicate.json:1000,563!?!**Complexity Analysis**\n\n* Time complexity : $$O(n*x)$$. $$n$$ strings of average length $$x$$ is parsed.\n\n* Space complexity : $$O(n*x)$$. $$map$$ and $$res$$ size grows upto $$n*x$$."
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Lexicographically Smallest String After Operations With Constraint",
+  "problem_id": "3346",
+  "frontend_id": "3106",
+  "difficulty": "Medium",
+  "problem_slug": "lexicographically-smallest-string-after-operations-with-constraint",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string s and an integer k.\nDefine a function distance(s1, s2) between two strings s1 and s2 of the same length n as:\nFor example, distance(\"ab\", \"cd\") == 4, and distance(\"a\", \"z\") == 1.\nYou can change any letter of s to any other lowercase English letter, any number of times.\nReturn a string denoting the lexicographically smallest string t you can get after some changes, such that distance(s, t) <= k.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"zbbz\", k = 3\nOutput: \"aaaz\"\nExplanation:\nChange s to \"aaaz\" . The distance between \"zbbz\" and \"aaaz\" is equal to k = 3 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"xaxcd\", k = 4\nOutput: \"aawcd\"\nExplanation:\nThe distance between \"xaxcd\" and \"aawcd\" is equal to k = 4.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"lol\", k = 0\nOutput: \"lol\"\nExplanation:\nIt's impossible to change any character as k = 0 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "0 <= k <= 2000",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The problem can be approached greedily.",
+    "For each index in order from <code>0</code> to <code>n - 1</code>, we try all letters from <code>'a'</code> to <code>'z'</code>, selecting the first one as long as the current total distance accumulated is not larger than <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getSmallestString(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getSmallestString(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getSmallestString(self, s: str, k: int) -> str:\n        ",
+    "c": "char* getSmallestString(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GetSmallestString(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar getSmallestString = function(s, k) {\n    \n};",
+    "typescript": "function getSmallestString(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function getSmallestString($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getSmallestString(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getSmallestString(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String getSmallestString(String s, int k) {\n    \n  }\n}",
+    "golang": "func getSmallestString(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef get_smallest_string(s, k)\n    \nend",
+    "scala": "object Solution {\n    def getSmallestString(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_smallest_string(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (get-smallest-string s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec get_smallest_string(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nget_smallest_string(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_smallest_string(s :: String.t, k :: integer) :: String.t\n  def get_smallest_string(s, k) do\n    \n  end\nend"
+  }
+}

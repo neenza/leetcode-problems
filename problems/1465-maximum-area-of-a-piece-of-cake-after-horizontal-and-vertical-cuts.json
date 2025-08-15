@@ -1,0 +1,71 @@
+{
+  "title": "Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
+  "problem_id": "1575",
+  "frontend_id": "1465",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a rectangular cake of size h x w and two arrays of integers horizontalCuts and verticalCuts where:\nReturn the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays horizontalCuts and verticalCuts. Since the answer can be a large number, return this modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]\nOutput: 4 \nExplanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/05/14/leetcode_max_area_2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: h = 5, w = 4, horizontalCuts = [3,1], verticalCuts = [1]\nOutput: 6\nExplanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green and yellow pieces of cake have the maximum area.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/05/14/leetcode_max_area_3.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: h = 5, w = 4, horizontalCuts = [3], verticalCuts = [3]\nOutput: 9",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/05/14/leetcode_max_area_3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= h, w <= 109",
+    "1 <= horizontalCuts.length <= min(h - 1, 105)",
+    "1 <= verticalCuts.length <= min(w - 1, 105)",
+    "1 <= horizontalCuts[i] < h",
+    "1 <= verticalCuts[i] < w",
+    "All the elements in horizontalCuts are distinct.",
+    "All the elements in verticalCuts are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the arrays, then compute the maximum difference between two consecutive elements for horizontal cuts and vertical cuts.",
+    "The answer is the product of these maximum values in horizontal cuts and vertical cuts."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxArea(int h, int w, vector<int>& horizontalCuts, vector<int>& verticalCuts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxArea(self, h, w, horizontalCuts, verticalCuts):\n        \"\"\"\n        :type h: int\n        :type w: int\n        :type horizontalCuts: List[int]\n        :type verticalCuts: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:\n        ",
+    "c": "int maxArea(int h, int w, int* horizontalCuts, int horizontalCutsSize, int* verticalCuts, int verticalCutsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} h\n * @param {number} w\n * @param {number[]} horizontalCuts\n * @param {number[]} verticalCuts\n * @return {number}\n */\nvar maxArea = function(h, w, horizontalCuts, verticalCuts) {\n    \n};",
+    "typescript": "function maxArea(h: number, w: number, horizontalCuts: number[], verticalCuts: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $h\n     * @param Integer $w\n     * @param Integer[] $horizontalCuts\n     * @param Integer[] $verticalCuts\n     * @return Integer\n     */\n    function maxArea($h, $w, $horizontalCuts, $verticalCuts) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxArea(_ h: Int, _ w: Int, _ horizontalCuts: [Int], _ verticalCuts: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxArea(h: Int, w: Int, horizontalCuts: IntArray, verticalCuts: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxArea(int h, int w, List<int> horizontalCuts, List<int> verticalCuts) {\n    \n  }\n}",
+    "golang": "func maxArea(h int, w int, horizontalCuts []int, verticalCuts []int) int {\n    \n}",
+    "ruby": "# @param {Integer} h\n# @param {Integer} w\n# @param {Integer[]} horizontal_cuts\n# @param {Integer[]} vertical_cuts\n# @return {Integer}\ndef max_area(h, w, horizontal_cuts, vertical_cuts)\n    \nend",
+    "scala": "object Solution {\n    def maxArea(h: Int, w: Int, horizontalCuts: Array[Int], verticalCuts: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_area(h: i32, w: i32, horizontal_cuts: Vec<i32>, vertical_cuts: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-area h w horizontalCuts verticalCuts)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_area(H :: integer(), W :: integer(), HorizontalCuts :: [integer()], VerticalCuts :: [integer()]) -> integer().\nmax_area(H, W, HorizontalCuts, VerticalCuts) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_area(h :: integer, w :: integer, horizontal_cuts :: [integer], vertical_cuts :: [integer]) :: integer\n  def max_area(h, w, horizontal_cuts, vertical_cuts) do\n    \n  end\nend"
+  }
+}

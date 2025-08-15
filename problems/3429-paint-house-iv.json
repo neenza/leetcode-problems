@@ -1,0 +1,57 @@
+{
+  "title": "Paint House IV",
+  "problem_id": "3737",
+  "frontend_id": "3429",
+  "difficulty": "Medium",
+  "problem_slug": "paint-house-iv",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an even integer n representing the number of houses arranged in a straight line, and a 2D array cost of size n x 3, where cost[i][j] represents the cost of painting house i with color j + 1.\nThe houses will look beautiful if they satisfy the following conditions:\nReturn the minimum cost to paint the houses such that they look beautiful.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, cost = [[3,5,7],[6,2,9],[4,8,1],[7,3,5]]\nOutput: 9\nExplanation:\nThe optimal painting sequence is [1, 2, 3, 2] with corresponding costs [3, 2, 1, 3] . This satisfies the following conditions:\nThe minimum cost to paint the houses so that they look beautiful is 3 + 2 + 1 + 3 = 9 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, cost = [[2,4,6],[5,3,8],[7,1,9],[4,6,2],[3,5,7],[8,2,4]]\nOutput: 18\nExplanation:\nThe optimal painting sequence is [1, 3, 2, 3, 1, 2] with corresponding costs [2, 8, 1, 2, 3, 2] . This satisfies the following conditions:\nThe minimum cost to paint the houses so that they look beautiful is 2 + 8 + 1 + 2 + 3 + 2 = 18 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "n is even.",
+    "cost.length == n",
+    "cost[i].length == 3",
+    "0 <= cost[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to calculate the minimum cost while ensuring that the adjacency and equidistant constraints are satisfied.",
+    "Try all 9 combinations of colors for equidistant pairs to get the minimum cost."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minCost(int n, vector<vector<int>>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int n, int[][] cost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, n, cost):\n        \"\"\"\n        :type n: int\n        :type cost: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, n: int, cost: List[List[int]]) -> int:\n        ",
+    "c": "long long minCost(int n, int** cost, int costSize, int* costColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinCost(int n, int[][] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} cost\n * @return {number}\n */\nvar minCost = function(n, cost) {\n    \n};",
+    "typescript": "function minCost(n: number, cost: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $cost\n     * @return Integer\n     */\n    function minCost($n, $cost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ n: Int, _ cost: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(n: Int, cost: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(int n, List<List<int>> cost) {\n    \n  }\n}",
+    "golang": "func minCost(n int, cost [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} cost\n# @return {Integer}\ndef min_cost(n, cost)\n    \nend",
+    "scala": "object Solution {\n    def minCost(n: Int, cost: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(n: i32, cost: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost n cost)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_cost(N :: integer(), Cost :: [[integer()]]) -> integer().\nmin_cost(N, Cost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(n :: integer, cost :: [[integer]]) :: integer\n  def min_cost(n, cost) do\n    \n  end\nend"
+  }
+}

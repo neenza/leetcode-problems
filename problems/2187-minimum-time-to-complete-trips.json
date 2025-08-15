@@ -1,0 +1,54 @@
+{
+  "title": "Minimum Time to Complete Trips",
+  "problem_id": "2294",
+  "frontend_id": "2187",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-complete-trips",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "You are given an array time where time[i] denotes the time taken by the ith bus to complete one trip.\nEach bus can make multiple trips successively; that is, the next trip can start immediately after completing the current trip. Also, each bus operates independently; that is, the trips of one bus do not influence the trips of any other bus.\nYou are also given an integer totalTrips, which denotes the number of trips all buses should make in total. Return the minimum time required for all buses to complete at least totalTrips trips.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: time = [1,2,3], totalTrips = 5\nOutput: 3\nExplanation:\n- At time t = 1, the number of trips completed by each bus are [1,0,0]. \n  The total number of trips completed is 1 + 0 + 0 = 1.\n- At time t = 2, the number of trips completed by each bus are [2,1,0]. \n  The total number of trips completed is 2 + 1 + 0 = 3.\n- At time t = 3, the number of trips completed by each bus are [3,1,1]. \n  The total number of trips completed is 3 + 1 + 1 = 5.\nSo the minimum time needed for all buses to complete at least 5 trips is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: time = [2], totalTrips = 1\nOutput: 2\nExplanation:\nThere is only one bus, and it will complete its first trip at t = 2.\nSo the minimum time needed to complete 1 trip is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= time.length <= 105",
+    "1 <= time[i], totalTrips <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For a given amount of time, how can we count the total number of trips completed by all buses within that time?",
+    "Consider using binary search."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumTime(vector<int>& time, int totalTrips) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumTime(int[] time, int totalTrips) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTime(self, time, totalTrips):\n        \"\"\"\n        :type time: List[int]\n        :type totalTrips: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTime(self, time: List[int], totalTrips: int) -> int:\n        ",
+    "c": "long long minimumTime(int* time, int timeSize, int totalTrips) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumTime(int[] time, int totalTrips) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} time\n * @param {number} totalTrips\n * @return {number}\n */\nvar minimumTime = function(time, totalTrips) {\n    \n};",
+    "typescript": "function minimumTime(time: number[], totalTrips: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $time\n     * @param Integer $totalTrips\n     * @return Integer\n     */\n    function minimumTime($time, $totalTrips) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTime(_ time: [Int], _ totalTrips: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTime(time: IntArray, totalTrips: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTime(List<int> time, int totalTrips) {\n    \n  }\n}",
+    "golang": "func minimumTime(time []int, totalTrips int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} time\n# @param {Integer} total_trips\n# @return {Integer}\ndef minimum_time(time, total_trips)\n    \nend",
+    "scala": "object Solution {\n    def minimumTime(time: Array[Int], totalTrips: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_time(time: Vec<i32>, total_trips: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-time time totalTrips)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_time(Time :: [integer()], TotalTrips :: integer()) -> integer().\nminimum_time(Time, TotalTrips) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_time(time :: [integer], total_trips :: integer) :: integer\n  def minimum_time(time, total_trips) do\n    \n  end\nend"
+  }
+}

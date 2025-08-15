@@ -1,0 +1,75 @@
+{
+  "title": "Equal Sum Grid Partition II",
+  "problem_id": "3850",
+  "frontend_id": "3548",
+  "difficulty": "Hard",
+  "problem_slug": "equal-sum-grid-partition-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix",
+    "Enumeration",
+    "Prefix Sum"
+  ],
+  "description": "You are given an m x n matrix grid of positive integers. Your task is to determine if it is possible to make either one horizontal or one vertical cut on the grid such that:\nReturn true if such a partition exists; otherwise, return false.\nNote: A section is connected if every cell in it can be reached from any other cell by moving up, down, left, or right through other cells in the section.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,4],[2,3]]\nOutput: true\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/30/lc.jpeg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,2],[3,4]]\nOutput: true\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/01/chatgpt-image-apr-1-2025-at-05_28_12-pm.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,2,4],[2,3,5]]\nOutput: false\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/01/chatgpt-image-apr-2-2025-at-02_50_29-am.png"
+      ]
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: grid = [[4,1,8],[3,2,6]]\nOutput: false\nExplanation:\nNo valid cut exists, so the answer is false .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= m == grid.length <= 105",
+    "1 <= n == grid[i].length <= 105",
+    "2 <= m * n <= 105",
+    "1 <= grid[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In a grid (or any subgrid), when can a section be disconnected? Can disconnected components occur if the section spans more than one row and more than one column?",
+    "Handle single rows or single columns separately. For all other partitions, maintain the sums and value frequencies of each section to check whether removing at most one element from one section can make the two sums equal."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canPartitionGrid(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPartitionGrid(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canPartitionGrid(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canPartitionGrid(self, grid: List[List[int]]) -> bool:\n        ",
+    "c": "bool canPartitionGrid(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanPartitionGrid(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar canPartitionGrid = function(grid) {\n    \n};",
+    "typescript": "function canPartitionGrid(grid: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Boolean\n     */\n    function canPartitionGrid($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canPartitionGrid(_ grid: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canPartitionGrid(grid: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canPartitionGrid(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func canPartitionGrid(grid [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Boolean}\ndef can_partition_grid(grid)\n    \nend",
+    "scala": "object Solution {\n    def canPartitionGrid(grid: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_partition_grid(grid: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-partition-grid grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec can_partition_grid(Grid :: [[integer()]]) -> boolean().\ncan_partition_grid(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_partition_grid(grid :: [[integer]]) :: boolean\n  def can_partition_grid(grid) do\n    \n  end\nend"
+  }
+}

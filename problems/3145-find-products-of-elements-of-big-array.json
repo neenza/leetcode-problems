@@ -1,0 +1,58 @@
+{
+  "title": "Find Products of Elements of Big Array",
+  "problem_id": "3411",
+  "frontend_id": "3145",
+  "difficulty": "Hard",
+  "problem_slug": "find-products-of-elements-of-big-array",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Bit Manipulation"
+  ],
+  "description": "The powerful array of a non-negative integer x is defined as the shortest sorted array of powers of two that sum up to x. The table below illustrates examples of how the powerful array is determined. It can be proven that the powerful array of x is unique.\nThe array big_nums is created by concatenating the powerful arrays for every positive integer i in ascending order: 1, 2, 3, and so on. Thus, big_nums begins as [1, 2, 1, 2, 4, 1, 4, 2, 4, 1, 2, 4, 8, ...].\nYou are given a 2D integer matrix queries, where for queries[i] = [fromi, toi, modi] you should calculate (big_nums[fromi] * big_nums[fromi + 1] * ... * big_nums[toi]) % modi.\nReturn an integer array answer such that answer[i] is the answer to the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [[1,3,7]]\nOutput: [4]\nExplanation:\nThere is one query.\nbig_nums[1..3] = [2,1,2] . The product of them is 4. The result is 4 % 7 = 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [[2,5,3],[7,7,4]]\nOutput: [2,2]\nExplanation:\nThere are two queries.\nFirst query: big_nums[2..5] = [1,2,4,1] . The product of them is 8. The result is 8 % 3 = 2 .\nSecond query: big_nums[7] = 2 . The result is 2 % 4 = 2 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= queries.length <= 500",
+    "queries[i].length == 3",
+    "0 <= queries[i][0] <= queries[i][1] <= 1015",
+    "1 <= queries[i][2] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find a way to calculate <code>f(n, i)</code> which is the total number of numbers in <code>[1, n]</code> when the <code>i<sup>th</sup></code> bit is set in <code>O(log(n))</code> time.",
+    "Use binary search to find the last number for each query (and there might be one “incomplete” number for the query).",
+    "Use a similar way to find the product (we only need to save the sum of exponents of power of <code>2</code>)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findProductsOfElements(vector<vector<long long>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findProductsOfElements(long[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findProductsOfElements(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findProductsOfElements(self, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findProductsOfElements(long long** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindProductsOfElements(long[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar findProductsOfElements = function(queries) {\n    \n};",
+    "typescript": "function findProductsOfElements(queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function findProductsOfElements($queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findProductsOfElements(_ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findProductsOfElements(queries: Array<LongArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findProductsOfElements(List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func findProductsOfElements(queries [][]int64) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} queries\n# @return {Integer[]}\ndef find_products_of_elements(queries)\n    \nend",
+    "scala": "object Solution {\n    def findProductsOfElements(queries: Array[Array[Long]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_products_of_elements(queries: Vec<Vec<i64>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-products-of-elements queries)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_products_of_elements(Queries :: [[integer()]]) -> [integer()].\nfind_products_of_elements(Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_products_of_elements(queries :: [[integer]]) :: [integer]\n  def find_products_of_elements(queries) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Closest Subsequence Sum",
+  "problem_id": "1881",
+  "frontend_id": "1755",
+  "difficulty": "Hard",
+  "problem_slug": "closest-subsequence-sum",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Sorting",
+    "Bitmask"
+  ],
+  "description": "You are given an integer array nums and an integer goal.\nYou want to choose a subsequence of nums such that the sum of its elements is the closest possible to goal. That is, if the sum of the subsequence's elements is sum, then you want to minimize the absolute difference abs(sum - goal).\nReturn the minimum possible value of abs(sum - goal).\nNote that a subsequence of an array is an array formed by removing some elements (possibly all or none) of the original array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,-7,3,5], goal = 6\nOutput: 0\nExplanation: Choose the whole array as a subsequence, with a sum of 6.\nThis is equal to the goal, so the absolute difference is 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [7,-9,15,-2], goal = -5\nOutput: 1\nExplanation: Choose the subsequence [7,-9,-2], with a sum of -4.\nThe absolute difference is abs(-4 - (-5)) = abs(1) = 1, which is the minimum.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3], goal = -7\nOutput: 7",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 40",
+    "-107 <= nums[i] <= 107",
+    "-109 <= goal <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The naive solution is to check all possible subsequences. This works in O(2^n).",
+    "Divide the array into two parts of nearly is equal size.",
+    "Consider all subsets of one part and make a list of all possible subset sums and sort this list.",
+    "Consider all subsets of the other part, and for each one, let its sum = x, do binary search to get the nearest possible value to goal - x in the first part."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minAbsDifference(vector<int>& nums, int goal) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minAbsDifference(int[] nums, int goal) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minAbsDifference(self, nums, goal):\n        \"\"\"\n        :type nums: List[int]\n        :type goal: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minAbsDifference(self, nums: List[int], goal: int) -> int:\n        ",
+    "c": "int minAbsDifference(int* nums, int numsSize, int goal) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinAbsDifference(int[] nums, int goal) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} goal\n * @return {number}\n */\nvar minAbsDifference = function(nums, goal) {\n    \n};",
+    "typescript": "function minAbsDifference(nums: number[], goal: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $goal\n     * @return Integer\n     */\n    function minAbsDifference($nums, $goal) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minAbsDifference(_ nums: [Int], _ goal: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minAbsDifference(nums: IntArray, goal: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minAbsDifference(List<int> nums, int goal) {\n    \n  }\n}",
+    "golang": "func minAbsDifference(nums []int, goal int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} goal\n# @return {Integer}\ndef min_abs_difference(nums, goal)\n    \nend",
+    "scala": "object Solution {\n    def minAbsDifference(nums: Array[Int], goal: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_abs_difference(nums: Vec<i32>, goal: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-abs-difference nums goal)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_abs_difference(Nums :: [integer()], Goal :: integer()) -> integer().\nmin_abs_difference(Nums, Goal) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_abs_difference(nums :: [integer], goal :: integer) :: integer\n  def min_abs_difference(nums, goal) do\n    \n  end\nend"
+  }
+}

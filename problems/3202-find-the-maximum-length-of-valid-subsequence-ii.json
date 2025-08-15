@@ -1,0 +1,57 @@
+{
+  "title": "Find the Maximum Length of Valid Subsequence II",
+  "problem_id": "3491",
+  "frontend_id": "3202",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-maximum-length-of-valid-subsequence-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "A subsequence sub of nums with length x is called valid if it satisfies:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5], k = 2\nOutput: 5\nExplanation:\nThe longest valid subsequence is [1, 2, 3, 4, 5] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,4,2,3,1,4], k = 3\nOutput: 4\nExplanation:\nThe longest valid subsequence is [1, 4, 1, 4] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 103",
+    "1 <= nums[i] <= 107",
+    "1 <= k <= 103"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix the value of <code>(subs[0] + subs[1]) % k</code> from the <code>k</code> possible values. Let it be <code>val</code>.",
+    "Let <code>dp[i]</code> store the maximum length of a subsequence with its last element <code>x</code> such that <code>x % k == i</code>.",
+    "Answer for a subsequence ending at index <code>y</code> is <code>dp[(k + val - (y % k)) % k] + 1</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumLength(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumLength(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumLength(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumLength(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maximumLength(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumLength(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maximumLength = function(nums, k) {\n    \n};",
+    "typescript": "function maximumLength(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximumLength($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumLength(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumLength(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumLength(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maximumLength(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef maximum_length(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maximumLength(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_length(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-length nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_length(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_length(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_length(nums :: [integer], k :: integer) :: integer\n  def maximum_length(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Dynamic Programming\n\n#### Intuition\n\nAccording to the definition of a valid subsequence, all elements at odd indices in the subsequence must be congruent modulo $k$, and all elements at even indices must also be congruent modulo $k$. This means that, considering the remainders modulo $k$ of the last two elements of the subsequence, there are a total of $k^2$ possible combinations. We use a two-dimensional array $\\textit{dp}$ to represent the maximum length of such subsequences, where $\\textit{dp}[i][j]$ denotes the maximum length of a valid subsequence whose last two elements have remainders $i$ and $j$ modulo $k$, respectively.\n\nWe traverse through $\\textit{nums}$ to update $\\textit{dp}$. For each number $\\textit{num}$, we try to append it to existing subsequences. Specifically, we calculate $\\textit{curr} = \\textit{num} \\bmod k$ and then iterate over all possible values of $\\textit{prev}$ modulo $k$, updating $\\textit{dp}[\\textit{prev}][\\textit{curr}]$ to $\\textit{dp}[\\textit{curr}][\\textit{prev}] + 1$. Finally, we return the maximum value found in the $\\textit{dp}$ array.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n* Time Complexity: $O(n \\times k)$\n\n  For each element in $\\textit{nums}$, we iterate over all possible values of the previous remainder modulo $k$. This leads to $O(k)$ work per element, resulting in a total of $O(n \\times k)$. The initialization of the $k \\times k$ DP table takes $O(k^2)$ time, but this is negligible compared to the main loop when $n \\gg k$, so we typically report the overall time complexity as $O(n \\times k)$.\n\n- Space complexity: $O(k^2)$.\n  \n  We need a two-dimensional array for dynamic programming.\n\n---"
+}

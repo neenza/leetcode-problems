@@ -1,0 +1,71 @@
+{
+  "title": "Maximum Students Taking Exam",
+  "problem_id": "1471",
+  "frontend_id": "1349",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-students-taking-exam",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Matrix",
+    "Bitmask"
+  ],
+  "description": "Given a m * n matrix seats  that represent seats distributions in a classroom. If a seat is broken, it is denoted by '#' character otherwise it is denoted by a '.' character.\nStudents can see the answers of those sitting next to the left, right, upper left and upper right, but he cannot see the answers of the student sitting directly in front or behind him. Return the maximum number of students that can take the exam together without any cheating being possible.\nStudents must be placed in seats in good condition.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: seats = [[\"#\",\".\",\"#\",\"#\",\".\",\"#\"],\n                [\".\",\"#\",\"#\",\"#\",\"#\",\".\"],\n                [\"#\",\".\",\"#\",\"#\",\".\",\"#\"]]\nOutput: 4\nExplanation: Teacher can place 4 students in available seats so they don't cheat on the exam.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/29/image.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: seats = [[\".\",\"#\"],\n                [\"#\",\"#\"],\n                [\"#\",\".\"],\n                [\"#\",\"#\"],\n                [\".\",\"#\"]]\nOutput: 3\nExplanation: Place all students in available seats.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/29/image.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: seats = [[\"#\",\".\",\".\",\".\",\"#\"],\n                [\".\",\"#\",\".\",\"#\",\".\"],\n                [\".\",\".\",\"#\",\".\",\".\"],\n                [\".\",\"#\",\".\",\"#\",\".\"],\n                [\"#\",\".\",\".\",\".\",\"#\"]]\nOutput: 10\nExplanation: Place students in available seats in column 1, 3 and 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/29/image.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "seats contains only characters '.' and'#'.",
+    "m == seats.length",
+    "n == seats[i].length",
+    "1 <= m <= 8",
+    "1 <= n <= 8"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Students in row i only can see exams in row i+1.",
+    "Use Dynamic programming to compute the result given a (current row, bitmask people seated in previous row)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxStudents(vector<vector<char>>& seats) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxStudents(char[][] seats) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxStudents(self, seats):\n        \"\"\"\n        :type seats: List[List[str]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxStudents(self, seats: List[List[str]]) -> int:\n        ",
+    "c": "int maxStudents(char** seats, int seatsSize, int* seatsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxStudents(char[][] seats) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} seats\n * @return {number}\n */\nvar maxStudents = function(seats) {\n    \n};",
+    "typescript": "function maxStudents(seats: string[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $seats\n     * @return Integer\n     */\n    function maxStudents($seats) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxStudents(_ seats: [[Character]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxStudents(seats: Array<CharArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxStudents(List<List<String>> seats) {\n    \n  }\n}",
+    "golang": "func maxStudents(seats [][]byte) int {\n    \n}",
+    "ruby": "# @param {Character[][]} seats\n# @return {Integer}\ndef max_students(seats)\n    \nend",
+    "scala": "object Solution {\n    def maxStudents(seats: Array[Array[Char]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_students(seats: Vec<Vec<char>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-students seats)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
+    "erlang": "-spec max_students(Seats :: [[char()]]) -> integer().\nmax_students(Seats) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_students(seats :: [[char]]) :: integer\n  def max_students(seats) do\n    \n  end\nend"
+  }
+}

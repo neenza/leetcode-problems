@@ -1,0 +1,68 @@
+{
+  "title": "Number of Integers With Popcount-Depth Equal to K II",
+  "problem_id": "3941",
+  "frontend_id": "3624",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-integers-with-popcount-depth-equal-to-k-ii",
+  "topics": [
+    "Array",
+    "Segment Tree"
+  ],
+  "description": "You are given an integer array nums.\nFor any positive integer x, define the following sequence:\nThis sequence will eventually reach the value 1.\nThe popcount-depth of x is defined as the smallest integer d >= 0 such that pd = 1.\nFor example, if x = 7 (binary representation \"111\"). Then, the sequence is: 7 → 3 → 2 → 1, so the popcount-depth of 7 is 3.\nYou are also given a 2D integer array queries, where each queries[i] is either:\nReturn an integer array answer, where answer[i] is the number of indices for the ith query of type [1, l, r, k].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4], queries = [[1,0,1,1],[2,1,1],[1,0,1,0]]\nOutput: [2,1]\nExplanation:\nThus, the final answer is [2, 1] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,5,6], queries = [[1,0,2,2],[2,1,4],[1,1,2,1],[1,0,1,0]]\nOutput: [3,1,0]\nExplanation:\nThus, the final answer is [3, 1, 0] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2], queries = [[1,0,1,1],[2,0,3],[1,0,0,1],[1,0,0,2]]\nOutput: [1,0,1]\nExplanation:\nThus, the final answer is [1, 0, 1] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 1015",
+    "1 <= queries.length <= 105",
+    "queries[i].length == 3 or 4\n\nqueries[i] == [1, l, r, k] or,\nqueries[i] == [2, idx, val]\n0 <= l <= r <= n - 1\n0 <= k <= 5\n0 <= idx <= n - 1\n1 <= val <= 1015",
+    "queries[i] == [1, l, r, k] or,",
+    "queries[i] == [2, idx, val]",
+    "0 <= l <= r <= n - 1",
+    "0 <= k <= 5",
+    "0 <= idx <= n - 1",
+    "1 <= val <= 1015"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precompute <code>depth[i]</code> for each <code>nums[i]</code> by applying popcount until you reach 1.",
+    "Maintain six Fenwick trees <code>fenw[0]</code> through <code>fenw[5]</code>, where <code>fenw[d]</code> stores a 1 at index <code>i</code> iff <code>depth[i] == d</code>.",
+    "For an update <code>[2, idx, val]</code>, remove index idx from its old <code>fenw[old_depth]</code> and insert into <code>fenw[new_depth]</code>; for a query <code>[1, l, r, k]</code>, return <code>fenw[k].query(r) - fenw[k].query(l-1)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> popcountDepth(vector<long long>& nums, vector<vector<long long>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] popcountDepth(long[] nums, long[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def popcountDepth(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def popcountDepth(self, nums: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* popcountDepth(long long* nums, int numsSize, long long** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] PopcountDepth(long[] nums, long[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar popcountDepth = function(nums, queries) {\n    \n};",
+    "typescript": "function popcountDepth(nums: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function popcountDepth($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func popcountDepth(_ nums: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun popcountDepth(nums: LongArray, queries: Array<LongArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> popcountDepth(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func popcountDepth(nums []int64, queries [][]int64) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef popcount_depth(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def popcountDepth(nums: Array[Long], queries: Array[Array[Long]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn popcount_depth(nums: Vec<i64>, queries: Vec<Vec<i64>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (popcount-depth nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec popcount_depth(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\npopcount_depth(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec popcount_depth(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def popcount_depth(nums, queries) do\n    \n  end\nend"
+  }
+}

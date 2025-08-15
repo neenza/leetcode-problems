@@ -1,0 +1,54 @@
+{
+  "title": "Largest Number After Digit Swaps by Parity",
+  "problem_id": "2327",
+  "frontend_id": "2231",
+  "difficulty": "Easy",
+  "problem_slug": "largest-number-after-digit-swaps-by-parity",
+  "topics": [
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).\nReturn the largest possible value of num after any number of swaps.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 1234\nOutput: 3412\nExplanation: Swap the digit 3 with the digit 1, this results in the number 3214.\nSwap the digit 2 with the digit 4, this results in the number 3412.\nNote that there may be other sequences of swaps but it can be shown that 3412 is the largest possible number.\nAlso note that we may not swap the digit 4 with the digit 1 since they are of different parities.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 65875\nOutput: 87655\nExplanation: Swap the digit 8 with the digit 6, this results in the number 85675.\nSwap the first digit 5 with the digit 7, this results in the number 87655.\nNote that there may be other sequences of swaps but it can be shown that 87655 is the largest possible number.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The bigger digit should appear first (more to the left) because it contributes more to the value of the number.",
+    "Get all the even digits, as well as odd digits. Sort them separately.",
+    "Reconstruct the number by giving the earlier digits the highest available digit of the same parity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestInteger(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestInteger(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestInteger(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestInteger(self, num: int) -> int:\n        ",
+    "c": "int largestInteger(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestInteger(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar largestInteger = function(num) {\n    \n};",
+    "typescript": "function largestInteger(num: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer\n     */\n    function largestInteger($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestInteger(_ num: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestInteger(num: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestInteger(int num) {\n    \n  }\n}",
+    "golang": "func largestInteger(num int) int {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer}\ndef largest_integer(num)\n    \nend",
+    "scala": "object Solution {\n    def largestInteger(num: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_integer(num: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-integer num)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec largest_integer(Num :: integer()) -> integer().\nlargest_integer(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_integer(num :: integer) :: integer\n  def largest_integer(num) do\n    \n  end\nend"
+  }
+}

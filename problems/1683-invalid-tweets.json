@@ -1,0 +1,33 @@
+{
+  "title": "Invalid Tweets",
+  "problem_id": "1827",
+  "frontend_id": "1683",
+  "difficulty": "Easy",
+  "problem_slug": "invalid-tweets",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Tweets\nWrite a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| tweet_id       | int     |\n| content        | varchar |\n+----------------+---------+\ntweet_id is the primary key (column with unique values) for this table.\ncontent consists of alphanumeric characters, '!', or ' ' and no other special characters.\nThis table contains all the tweets in a social media app.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nTweets table:\n+----------+-----------------------------------+\n| tweet_id | content                           |\n+----------+-----------------------------------+\n| 1        | Let us Code                       |\n| 2        | More than fifteen chars are here! |\n+----------+-----------------------------------+\nOutput: \n+----------+\n| tweet_id |\n+----------+\n| 2        |\n+----------+\nExplanation: \nTweet 1 has length = 11. It is a valid tweet.\nTweet 2 has length = 33. It is an invalid tweet.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

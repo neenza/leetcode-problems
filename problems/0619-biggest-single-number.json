@@ -1,0 +1,38 @@
+{
+  "title": "Biggest Single Number",
+  "problem_id": "619",
+  "frontend_id": "619",
+  "difficulty": "Easy",
+  "problem_slug": "biggest-single-number",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: MyNumbers\nA single number is a number that appeared only once in the MyNumbers table.\nFind the largest single number. If there is no single number, report null.\nThe result format is in the following example.\nExample 1:\nExample 2:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| num         | int  |\n+-------------+------+\nThis table may contain duplicates (In other words, there is no primary key for this table in SQL).\nEach row of this table contains an integer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nMyNumbers table:\n+-----+\n| num |\n+-----+\n| 8   |\n| 8   |\n| 3   |\n| 3   |\n| 1   |\n| 4   |\n| 5   |\n| 6   |\n+-----+\nOutput: \n+-----+\n| num |\n+-----+\n| 6   |\n+-----+\nExplanation: The single numbers are 1, 4, 5, and 6.\nSince 6 is the largest single number, we return it.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nMyNumbers table:\n+-----+\n| num |\n+-----+\n| 8   |\n| 8   |\n| 7   |\n| 7   |\n| 3   |\n| 3   |\n| 3   |\n+-----+\nOutput: \n+------+\n| num  |\n+------+\n| null |\n+------+\nExplanation: There are no single numbers in the input table so we return null.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef biggest_single_number(my_numbers: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

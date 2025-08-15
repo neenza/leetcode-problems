@@ -1,0 +1,60 @@
+{
+  "title": "Find Words That Can Be Formed by Characters",
+  "problem_id": "1112",
+  "frontend_id": "1160",
+  "difficulty": "Easy",
+  "problem_slug": "find-words-that-can-be-formed-by-characters",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given an array of strings words and a string chars.\nA string is good if it can be formed by characters from chars (each character can only be used once for each word in words).\nReturn the sum of lengths of all good strings in words.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"cat\",\"bt\",\"hat\",\"tree\"], chars = \"atach\"\nOutput: 6\nExplanation: The strings that can be formed are \"cat\" and \"hat\" so the answer is 3 + 3 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"hello\",\"world\",\"leetcode\"], chars = \"welldonehoneyr\"\nOutput: 10\nExplanation: The strings that can be formed are \"hello\" and \"world\" so the answer is 5 + 5 = 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 1000",
+    "1 <= words[i].length, chars.length <= 100",
+    "words[i] and chars consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Solve the problem for each string in <code>words</code> independently.",
+    "Now try to think in frequency of letters.",
+    "Count how many times each character occurs in string <code>chars</code>.",
+    "To form a string using characters from <code>chars</code>, the frequency of each character in <code>chars</code> must be greater than or equal the frequency of that character in the string to be formed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countCharacters(vector<string>& words, string chars) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCharacters(String[] words, String chars) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCharacters(self, words, chars):\n        \"\"\"\n        :type words: List[str]\n        :type chars: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCharacters(self, words: List[str], chars: str) -> int:\n        ",
+    "c": "int countCharacters(char** words, int wordsSize, char* chars) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountCharacters(string[] words, string chars) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} chars\n * @return {number}\n */\nvar countCharacters = function(words, chars) {\n    \n};",
+    "typescript": "function countCharacters(words: string[], chars: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $chars\n     * @return Integer\n     */\n    function countCharacters($words, $chars) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCharacters(_ words: [String], _ chars: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCharacters(words: Array<String>, chars: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCharacters(List<String> words, String chars) {\n    \n  }\n}",
+    "golang": "func countCharacters(words []string, chars string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} chars\n# @return {Integer}\ndef count_characters(words, chars)\n    \nend",
+    "scala": "object Solution {\n    def countCharacters(words: Array[String], chars: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_characters(words: Vec<String>, chars: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-characters words chars)\n  (-> (listof string?) string? exact-integer?)\n  )",
+    "erlang": "-spec count_characters(Words :: [unicode:unicode_binary()], Chars :: unicode:unicode_binary()) -> integer().\ncount_characters(Words, Chars) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_characters(words :: [String.t], chars :: String.t) :: integer\n  def count_characters(words, chars) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Count With Hash Map\n\n**Intuition**\n\nIf you are not already familiar with hash maps, please check out our relevant [LeetCode explore card](https://leetcode.com/explore/learn/card/hash-table/).\n\nIn this problem, we need to determine which elements in `words` can be built using the letters from `chars`. A `word` can be built from `chars` if and only if the following condition is true:\n\nFor each unique character `c` in `word`, the frequency of `c` is not greater in `word` than it is in `chars`. That is, there are no characters that appear more in `word` than in `chars`.\n\nIf any character appears more in `word` than in `chars`, there won't be enough of that character in `chars` to build `word` with. To solve this problem, we will start by counting the frequency of every character in `chars` using a hash map `counts`.\n\nOnce we have calculated `counts`, we can check each `word` one by one. For a given `word`, we count the frequency of its characters using a hash map `wordCount`. Then, we can iterate over each unique character `c` in `wordCount`. For each character in `c`, we can find the frequency in `chars` by checking `counts[c]`. We can also find the frequency in `word` by checking `wordCount[c]`. We then compare these values.\n\nIf `counts[c] < wordCount[c]` for ANY character, the current word cannot be built. We will use a boolean flag `good` to indicate if a given `word` can be built or not. Initially, we set `good = true`. If we find `counts[c] < wordCount[c]` for any character, we set `good = false`. Once we have finished checking all the characters of a `word`, we check the flag `good`. If it is still `true`, we know we can build `word` and add the length of `word` to our answer.\n\n**Algorithm**\n\n1. Create a hash map `counts` that records the frequency of every character in `chars`.\n2. Initialize the answer `ans = 0`.\n3. Iterate over each `word` in `words`:\n    - Create a hash map `wordCount` that records the frequency of every character in `words`.\n    - Set `good = true`.\n    - Iterate over each key `c` in `wordCount`. Let `freq = wordCount[c]`.\n        - If `counts[c] < freq`, set `good = false` and break from the loop.\n    - If `good = true`, add the length of `word` to `ans`.\n4. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `chars`, $$m$$ as the length of `words` and $$k$$ as the average length of each word in `words`,\n\n* Time complexity: $$O(n + m \\cdot k)$$\n\n    To calculate `counts`, we iterate over each character of `chars` once, costing $$O(n)$$.\n\n    Next, we iterate over $$O(m)$$ elements in `words`. For each element, we calculate `wordCount` by iterating over the element, which costs $$O(k)$$. We then iterate over `wordCount`. As the input only contains lowercase English letters, this costs $$O(1)$$ since `wordCount` cannot have a length greater than `26`. Overall, the for loop costs $$O(m \\cdot k)$$.\n\n* Space complexity: $$O(1)$$\n\n    We use extra space for `counts` and `wordCount`. However, the input only contains lowercase English letters. Thus, the size of these hash maps never exceed `26`, so we use $$O(1)$$ space.---\n\n### Approach 2: Count With Array\n\n**Intuition**\n\nBecause the input only contains lowercase English letters, we can use an array to implement `counts` and `wordCount` instead of a hash map. Each letter is assigned a unique integer in ASCII encodings and as these values are contiguous, we can subtract the ASCII value of `'a'` from the ASCII value of the letter to map it to a relative position in the alphabet. For example, `'a' - 'a'` results in 0, `'b' - 'a'` results in 1, `'c' - 'a'` results in 2, and so on. In this way, each letter can be mapped directly to an index in the array. \n\nLet's start by converting each letter to its position in the alphabet according to the rules above,\n\n- We convert the letter `'a'` to the integer `0`.\n- We convert the letter `'b'` to the integer `1`.\n- We convert the letter `'c'` to the integer `2`.\n- ...\n- We convert the letter `'z'` to the integer `25`.\n\nNow, we let `counts` and `wordCount` be an array of length `26`. We let `counts[x]` represent the frequency of `x` in `chars`, where `x` is the letter at position `x` in the alphabet. `wordCount` functions similarly.\n\nAside from this change, the algorithm is the same as in the previous approach.\n\n**Algorithm**\n\n1. Create an array `counts` of length `26`.\n2. Iterate over each `c` in `chars`:\n    - Increment `counts[c - 'a']`.\n3. Initialize the answer `ans = 0`.\n4. Iterate over each `word` in `words`:\n    - Create an array `wordCount` of length `26` and calculate it for `word` in the same manner as `counts`.\n    - Set `good = true`.\n    - Iterate `i` from `0` until `26`:\n        - If `counts[i] < wordCount[i]`, set `good = false` and break from the loop.\n    - If `good = true`, add the length of `word` to `ans`.\n5. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `chars`, $$m$$ as the length of `words`, and $$k$$ as the average length of each word in `words`,\n\n* Time complexity: $$O(n + m \\cdot k)$$\n\n    To calculate `counts`, we iterate over each character of `chars` once, costing $$O(n)$$.\n\n    Next, we iterate over $$O(m)$$ elements in `words`. For each element, we calculate `wordCount` by iterating over the element, which costs $$O(k)$$. We then perform a loop over `26` indices, costing $$O(1)$$. Overall, the for loop costs $$O(m \\cdot k)$$.\n\n* Space complexity: $$O(1)$$\n\n    `counts` and `wordCount` both have a fixed length of `26`.---"
+}

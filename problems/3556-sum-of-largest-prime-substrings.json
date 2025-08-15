@@ -1,0 +1,58 @@
+{
+  "title": "Sum of Largest Prime Substrings",
+  "problem_id": "3815",
+  "frontend_id": "3556",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-largest-prime-substrings",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Sorting",
+    "Number Theory"
+  ],
+  "description": "Given a string s, find the sum of the 3 largest unique prime numbers that can be formed using any of its substrings.\nReturn the sum of the three largest unique prime numbers that can be formed. If fewer than three exist, return the sum of all available primes. If no prime numbers can be formed, return 0.\nNote: Each prime number should be counted only once, even if it appears in multiple substrings. Additionally, when converting a substring to an integer, any leading zeros are ignored.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"12234\"\nOutput: 1469\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"111\"\nOutput: 11\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 10",
+    "s consists of only digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over all substrings of <code>s</code> to generate candidate numbers.",
+    "Check each candidate for primality in <code>O(sqrt(n))</code> time.",
+    "Store unique primes, then sum the three largest (or all if fewer than three)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long sumOfLargestPrimes(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long sumOfLargestPrimes(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfLargestPrimes(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfLargestPrimes(self, s: str) -> int:\n        ",
+    "c": "long long sumOfLargestPrimes(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long SumOfLargestPrimes(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar sumOfLargestPrimes = function(s) {\n    \n};",
+    "typescript": "function sumOfLargestPrimes(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function sumOfLargestPrimes($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfLargestPrimes(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfLargestPrimes(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumOfLargestPrimes(String s) {\n    \n  }\n}",
+    "golang": "func sumOfLargestPrimes(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef sum_of_largest_primes(s)\n    \nend",
+    "scala": "object Solution {\n    def sumOfLargestPrimes(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_largest_primes(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-largest-primes s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec sum_of_largest_primes(S :: unicode:unicode_binary()) -> integer().\nsum_of_largest_primes(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_largest_primes(s :: String.t) :: integer\n  def sum_of_largest_primes(s) do\n    \n  end\nend"
+  }
+}

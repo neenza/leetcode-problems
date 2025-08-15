@@ -1,0 +1,55 @@
+{
+  "title": "Binary Number with Alternating Bits",
+  "problem_id": "693",
+  "frontend_id": "693",
+  "difficulty": "Easy",
+  "problem_slug": "binary-number-with-alternating-bits",
+  "topics": [
+    "Bit Manipulation"
+  ],
+  "description": "Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5\nOutput: true\nExplanation: The binary representation of 5 is: 101",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 7\nOutput: false\nExplanation: The binary representation of 7 is: 111.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 11\nOutput: false\nExplanation: The binary representation of 11 is: 1011.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasAlternatingBits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasAlternatingBits(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasAlternatingBits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasAlternatingBits(self, n: int) -> bool:\n        ",
+    "c": "bool hasAlternatingBits(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasAlternatingBits(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar hasAlternatingBits = function(n) {\n    \n};",
+    "typescript": "function hasAlternatingBits(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function hasAlternatingBits($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasAlternatingBits(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasAlternatingBits(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasAlternatingBits(int n) {\n    \n  }\n}",
+    "golang": "func hasAlternatingBits(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef has_alternating_bits(n)\n    \nend",
+    "scala": "object Solution {\n    def hasAlternatingBits(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_alternating_bits(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-alternating-bits n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec has_alternating_bits(N :: integer()) -> boolean().\nhas_alternating_bits(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_alternating_bits(n :: integer) :: boolean\n  def has_alternating_bits(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1: Convert to String [Accepted]\n\n**Intuition and Algorithm**\n\nLet's convert the given number into a string of binary digits. Then, we should simply check that no two adjacent digits are the same.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$, or alternatively $$O(w)$$.\n\n---\n\n### Approach #2: Divide By Two [Accepted]\n\n**Intuition and Algorithm**\n\nWe can get the last bit and the rest of the bits via `n % 2` and `n // 2` operations. Let's remember `cur`, the last bit of `n`. If the last bit ever equals the last bit of the remaining, then two adjacent bits have the same value, and the answer is `False`.  Otherwise, the answer is `True`.\n\nAlso note that instead of `n % 2` and `n // 2`, we could have used operators `n & 1` and `n >>= 1` instead.**Complexity Analysis**\n\n* Time Complexity: $$O(1)$$. For arbitrary inputs, we do $$O(w)$$ work, where $$w$$ is the number of bits in `n`. However, $$w \\leq 32$$.\n\n* Space complexity: $$O(1)$$."
+}

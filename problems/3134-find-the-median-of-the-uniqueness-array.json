@@ -1,0 +1,62 @@
+{
+  "title": "Find the Median of the Uniqueness Array",
+  "problem_id": "3362",
+  "frontend_id": "3134",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-median-of-the-uniqueness-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Sliding Window"
+  ],
+  "description": "You are given an integer array nums. The uniqueness array of nums is the sorted array that contains the number of distinct elements of all the subarrays of nums. In other words, it is a sorted array consisting of distinct(nums[i..j]), for all 0 <= i <= j < nums.length.\nHere, distinct(nums[i..j]) denotes the number of distinct elements in the subarray that starts at index i and ends at index j.\nReturn the median of the uniqueness array of nums.\nNote that the median of an array is defined as the middle element of the array when it is sorted in non-decreasing order. If there are two choices for a median, the smaller of the two values is taken.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 1\nExplanation:\nThe uniqueness array of nums is [distinct(nums[0..0]), distinct(nums[1..1]), distinct(nums[2..2]), distinct(nums[0..1]), distinct(nums[1..2]), distinct(nums[0..2])] which is equal to [1, 1, 1, 2, 2, 3] . The uniqueness array has a median of 1. Therefore, the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,4,3,4,5]\nOutput: 2\nExplanation:\nThe uniqueness array of nums is [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3] . The uniqueness array has a median of 2. Therefore, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,3,5,4]\nOutput: 2\nExplanation:\nThe uniqueness array of nums is [1, 1, 1, 1, 2, 2, 2, 3, 3, 3] . The uniqueness array has a median of 2. Therefore, the answer is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary search over the answer.",
+    "For a given <code>x</code>, you need to check if <code>x</code> is the median, to the left of the median, or to the right of the median. You can do that by counting the number of sub-arrays <code>nums[i…j]</code> such that <code>distinct(num[i…j]) <= x</code>.",
+    "Use the sliding window to solve the counting problem in the hint above."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int medianOfUniquenessArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int medianOfUniquenessArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def medianOfUniquenessArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def medianOfUniquenessArray(self, nums: List[int]) -> int:\n        ",
+    "c": "int medianOfUniquenessArray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MedianOfUniquenessArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar medianOfUniquenessArray = function(nums) {\n    \n};",
+    "typescript": "function medianOfUniquenessArray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function medianOfUniquenessArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func medianOfUniquenessArray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun medianOfUniquenessArray(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int medianOfUniquenessArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func medianOfUniquenessArray(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef median_of_uniqueness_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def medianOfUniquenessArray(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn median_of_uniqueness_array(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (median-of-uniqueness-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec median_of_uniqueness_array(Nums :: [integer()]) -> integer().\nmedian_of_uniqueness_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec median_of_uniqueness_array(nums :: [integer]) :: integer\n  def median_of_uniqueness_array(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Maximum Subarray Sum With Length Divisible by K",
+  "problem_id": "3653",
+  "frontend_id": "3381",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-subarray-sum-with-length-divisible-by-k",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given an array of integers nums and an integer k.\nReturn the maximum sum of a subarray of nums, such that the size of the subarray is divisible by k.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2], k = 1\nOutput: 3\nExplanation:\nThe subarray [1, 2] with sum 3 has length equal to 2 which is divisible by 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,-2,-3,-4,-5], k = 4\nOutput: -10\nExplanation:\nThe maximum sum subarray is [-1, -2, -3, -4] which has length equal to 4 which is divisible by 4.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [-5,1,2,-3,4], k = 2\nOutput: 4\nExplanation:\nThe maximum sum subarray is [1, 2, -3, 4] which has length equal to 4 which is divisible by 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= nums.length <= 2 * 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain minimum prefix sum ending at every possible <code>index%k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxSubarraySum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxSubarraySum(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubarraySum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubarraySum(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long maxSubarraySum(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxSubarraySum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxSubarraySum = function(nums, k) {\n    \n};",
+    "typescript": "function maxSubarraySum(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxSubarraySum($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubarraySum(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubarraySum(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSubarraySum(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxSubarraySum(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_subarray_sum(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxSubarraySum(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_subarray_sum(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-subarray-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_subarray_sum(Nums :: [integer()], K :: integer()) -> integer().\nmax_subarray_sum(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_subarray_sum(nums :: [integer], k :: integer) :: integer\n  def max_subarray_sum(nums, k) do\n    \n  end\nend"
+  }
+}

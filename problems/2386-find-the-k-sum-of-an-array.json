@@ -1,0 +1,57 @@
+{
+  "title": "Find the K-Sum of an Array",
+  "problem_id": "2462",
+  "frontend_id": "2386",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-k-sum-of-an-array",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an integer array nums and a positive integer k. You can choose any subsequence of the array and sum all of its elements together.\nWe define the K-Sum of the array as the kth largest subsequence sum that can be obtained (not necessarily distinct).\nReturn the K-Sum of the array.\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\nNote that the empty subsequence is considered to have a sum of 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,-2], k = 5\nOutput: 2\nExplanation: All the possible subsequence sums that we can obtain are the following sorted in decreasing order:\n- 6, 4, 4, 2, 2, 0, 0, -2.\nThe 5-Sum of the array is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,-2,3,4,-10,12], k = 16\nOutput: 10\nExplanation: The 16-Sum of the array is 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "-109 <= nums[i] <= 109",
+    "1 <= k <= min(2000, 2n)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start from the largest sum possible, and keep finding the next largest sum until you reach the kth sum.",
+    "Starting from a sum, what are the two next largest sums that you can obtain from it?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long kSum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long kSum(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kSum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kSum(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long kSum(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long KSum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar kSum = function(nums, k) {\n    \n};",
+    "typescript": "function kSum(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function kSum($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kSum(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kSum(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int kSum(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func kSum(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef k_sum(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def kSum(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn k_sum(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (k-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec k_sum(Nums :: [integer()], K :: integer()) -> integer().\nk_sum(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec k_sum(nums :: [integer], k :: integer) :: integer\n  def k_sum(nums, k) do\n    \n  end\nend"
+  }
+}

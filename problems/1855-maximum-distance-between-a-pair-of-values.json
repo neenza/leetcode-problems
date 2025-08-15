@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Distance Between a Pair of Values",
+  "problem_id": "1984",
+  "frontend_id": "1855",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-distance-between-a-pair-of-values",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search"
+  ],
+  "description": "You are given two non-increasing 0-indexed integer arrays nums1​​​​​​ and nums2​​​​​​.\nA pair of indices (i, j), where 0 <= i < nums1.length and 0 <= j < nums2.length, is valid if both i <= j and nums1[i] <= nums2[j]. The distance of the pair is j - i​​​​.\nReturn the maximum distance of any valid pair (i, j). If there are no valid pairs, return 0.\nAn array arr is non-increasing if arr[i-1] >= arr[i] for every 1 <= i < arr.length.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [55,30,5,4,2], nums2 = [100,20,10,10,5]\nOutput: 2\nExplanation: The valid pairs are (0,0), (2,2), (2,3), (2,4), (3,3), (3,4), and (4,4).\nThe maximum distance is 2 with pair (2,4).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [2,2,2], nums2 = [10,10,1]\nOutput: 1\nExplanation: The valid pairs are (0,0), (0,1), and (1,1).\nThe maximum distance is 1 with pair (0,1).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [30,29,19,5], nums2 = [25,25,25,25,25]\nOutput: 2\nExplanation: The valid pairs are (2,2), (2,3), (2,4), (3,3), and (3,4).\nThe maximum distance is 2 with pair (2,4).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums1.length, nums2.length <= 105",
+    "1 <= nums1[i], nums2[j] <= 105",
+    "Both nums1 and nums2 are non-increasing."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since both arrays are sorted in a non-increasing way this means that for each value in the first array. We can find the farthest value smaller than it using binary search.",
+    "There is another solution using a two pointers approach since the first array is non-increasing the farthest j such that nums2[j] ≥ nums1[i] is at least as far as the farthest j such that nums2[j] ≥ nums1[i-1]"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int maxDistance(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar maxDistance = function(nums1, nums2) {\n    \n};",
+    "typescript": "function maxDistance(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function maxDistance($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func maxDistance(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef max_distance(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_distance(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmax_distance(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def max_distance(nums1, nums2) do\n    \n  end\nend"
+  }
+}

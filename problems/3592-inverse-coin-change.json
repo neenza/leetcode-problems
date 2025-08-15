@@ -1,0 +1,62 @@
+{
+  "title": "Inverse Coin Change",
+  "problem_id": "3903",
+  "frontend_id": "3592",
+  "difficulty": "Medium",
+  "problem_slug": "inverse-coin-change",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a 1-indexed integer array numWays, where numWays[i] represents the number of ways to select a total amount i using an infinite supply of some fixed coin denominations. Each denomination is a positive integer with value at most numWays.length.\nHowever, the exact coin denominations have been lost. Your task is to recover the set of denominations that could have resulted in the given numWays array.\nReturn a sorted array containing unique integers which represents this set of denominations.\nIf no such set exists, return an empty array.\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numWays = [0,1,0,2,0,3,0,4,0,5]\nOutput: [2,4,6]\nExplanation:\nInput: numWays = [1,2,2,3,4]\nOutput: [1,2,5]\nExplanation:\nExample 3:\nInput: numWays = [1,2,3,4,15]\nOutput: []\nExplanation:\nNo set of denomination satisfies this array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numWays = [1,2,2,3,4]\nOutput: [1,2,5]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: numWays = [1,2,3,4,15]\nOutput: []\nExplanation:\nNo set of denomination satisfies this array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= numWays.length <= 100",
+    "0 <= numWays[i] <= 2 * 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Observe that for the smallest denomination <code>c</code>, you must have <code>numWays[c] == 1</code>.",
+    "Find the smallest <code>c > 0</code> with <code>numWays[c] == 1</code> and append <code>c</code> to your <code>ans</code> list.",
+    "\"Remove\" that coin’s contribution by doing, for each <code>s</code> from <code>c</code> up to <code>n</code>: numWays[s] -= numWays[s - c]",
+    "Repeat: pick the next smallest <code>c</code> with <code>numWays[c] == 1</code>, remove it, and so on.",
+    "At the end, if <code>numWays</code> is all zeros, your <code>ans</code> is valid; otherwise, return an empty array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findCoins(vector<int>& numWays) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findCoins(int[] numWays) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findCoins(self, numWays):\n        \"\"\"\n        :type numWays: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findCoins(self, numWays: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findCoins(int* numWays, int numWaysSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindCoins(int[] numWays) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} numWays\n * @return {number[]}\n */\nvar findCoins = function(numWays) {\n    \n};",
+    "typescript": "function findCoins(numWays: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $numWays\n     * @return Integer[]\n     */\n    function findCoins($numWays) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findCoins(_ numWays: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findCoins(numWays: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findCoins(List<int> numWays) {\n    \n  }\n}",
+    "golang": "func findCoins(numWays []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} num_ways\n# @return {Integer[]}\ndef find_coins(num_ways)\n    \nend",
+    "scala": "object Solution {\n    def findCoins(numWays: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_coins(num_ways: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-coins numWays)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_coins(NumWays :: [integer()]) -> [integer()].\nfind_coins(NumWays) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_coins(num_ways :: [integer]) :: [integer]\n  def find_coins(num_ways) do\n    \n  end\nend"
+  }
+}

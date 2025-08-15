@@ -1,0 +1,58 @@
+{
+  "title": "Combination Sum",
+  "problem_id": "39",
+  "frontend_id": "39",
+  "difficulty": "Medium",
+  "problem_slug": "combination-sum",
+  "topics": [
+    "Array",
+    "Backtracking"
+  ],
+  "description": "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.\nThe same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.\nThe test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: candidates = [2,3,6,7], target = 7\nOutput: [[2,2,3],[7]]\nExplanation:\n2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.\n7 is a candidate, and 7 = 7.\nThese are the only two combinations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: candidates = [2,3,5], target = 8\nOutput: [[2,2,2,2],[2,3,3],[3,5]]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: candidates = [2], target = 1\nOutput: []",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= candidates.length <= 30",
+    "2 <= candidates[i] <= 40",
+    "All elements of candidates are distinct.",
+    "1 <= target <= 40"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def combinationSum(self, candidates, target):\n        \"\"\"\n        :type candidates: List[int]\n        :type target: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** combinationSum(int* candidates, int candidatesSize, int target, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> CombinationSum(int[] candidates, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum = function(candidates, target) {\n    \n};",
+    "typescript": "function combinationSum(candidates: number[], target: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $candidates\n     * @param Integer $target\n     * @return Integer[][]\n     */\n    function combinationSum($candidates, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> combinationSum(List<int> candidates, int target) {\n    \n  }\n}",
+    "golang": "func combinationSum(candidates []int, target int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[]} candidates\n# @param {Integer} target\n# @return {Integer[][]}\ndef combination_sum(candidates, target)\n    \nend",
+    "scala": "object Solution {\n    def combinationSum(candidates: Array[Int], target: Int): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn combination_sum(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (combination-sum candidates target)\n  (-> (listof exact-integer?) exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec combination_sum(Candidates :: [integer()], Target :: integer()) -> [[integer()]].\ncombination_sum(Candidates, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec combination_sum(candidates :: [integer], target :: integer) :: [[integer]]\n  def combination_sum(candidates, target) do\n    \n  end\nend"
+  }
+}

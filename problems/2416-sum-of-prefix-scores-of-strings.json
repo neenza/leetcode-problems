@@ -1,0 +1,58 @@
+{
+  "title": "Sum of Prefix Scores of Strings",
+  "problem_id": "2494",
+  "frontend_id": "2416",
+  "difficulty": "Hard",
+  "problem_slug": "sum-of-prefix-scores-of-strings",
+  "topics": [
+    "Array",
+    "String",
+    "Trie",
+    "Counting"
+  ],
+  "description": "You are given an array words of size n consisting of non-empty strings.\nWe define the score of a string term as the number of strings words[i] such that term is a prefix of words[i].\nReturn an array answer of size n where answer[i] is the sum of scores of every non-empty prefix of words[i].\nNote that a string is considered as a prefix of itself.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abc\",\"ab\",\"bc\",\"b\"]\nOutput: [5,4,3,2]\nExplanation: The answer for each string is the following:\n- \"abc\" has 3 prefixes: \"a\", \"ab\", and \"abc\".\n- There are 2 strings with the prefix \"a\", 2 strings with the prefix \"ab\", and 1 string with the prefix \"abc\".\nThe total is answer[0] = 2 + 2 + 1 = 5.\n- \"ab\" has 2 prefixes: \"a\" and \"ab\".\n- There are 2 strings with the prefix \"a\", and 2 strings with the prefix \"ab\".\nThe total is answer[1] = 2 + 2 = 4.\n- \"bc\" has 2 prefixes: \"b\" and \"bc\".\n- There are 2 strings with the prefix \"b\", and 1 string with the prefix \"bc\".\nThe total is answer[2] = 2 + 1 = 3.\n- \"b\" has 1 prefix: \"b\".\n- There are 2 strings with the prefix \"b\".\nThe total is answer[3] = 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"abcd\"]\nOutput: [4]\nExplanation:\n\"abcd\" has 4 prefixes: \"a\", \"ab\", \"abc\", and \"abcd\".\nEach prefix has a score of one, so the total is answer[0] = 1 + 1 + 1 + 1 = 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 1000",
+    "1 <= words[i].length <= 1000",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What data structure will allow you to efficiently keep track of the score of each prefix?",
+    "Use a Trie. Insert all the words into it, and keep a counter at each node that will tell you how many times we have visited each prefix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sumPrefixScores(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] sumPrefixScores(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumPrefixScores(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumPrefixScores(self, words: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sumPrefixScores(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SumPrefixScores(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[]}\n */\nvar sumPrefixScores = function(words) {\n    \n};",
+    "typescript": "function sumPrefixScores(words: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer[]\n     */\n    function sumPrefixScores($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumPrefixScores(_ words: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumPrefixScores(words: Array<String>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sumPrefixScores(List<String> words) {\n    \n  }\n}",
+    "golang": "func sumPrefixScores(words []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer[]}\ndef sum_prefix_scores(words)\n    \nend",
+    "scala": "object Solution {\n    def sumPrefixScores(words: Array[String]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_prefix_scores(words: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (sum-prefix-scores words)\n  (-> (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec sum_prefix_scores(Words :: [unicode:unicode_binary()]) -> [integer()].\nsum_prefix_scores(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_prefix_scores(words :: [String.t]) :: [integer]\n  def sum_prefix_scores(words) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]  \n\n## Solution\n\n---\n\n### Approach: Tries\n\n#### Intuition\n\nWe are given an array of strings called `words`. Our task is to find the score for each string, where the score is defined as the number of times a string appears as a prefix for all strings in `words`. We need to return an array where each element is the total score of the corresponding string in `words`.\n\nOne way to approach this is by using a hashmap to store the frequency of each prefix. We would count how often each prefix appears and then sum these counts for each string. However, this method can be improved with a trie data structure.\n\nA trie, or prefix tree, helps in searching for prefixes efficiently. If you are not familiar with tries, it would be useful to review an introduction to tries, such as the one in the [Implement trie prefix tree](https://leetcode.com/problems/implement-trie-prefix-tree/solution). For now, we'll assume you have a basic understanding of tries.\n\nA trie is a tree where each node represents a character. The path from the root to a leaf node forms a complete word. This structure is effective for problems involving prefix matching because all descendants of a node share the same prefix. This aligns with our goal of counting matching prefixes.\n\nTo implement this, we start by building a trie and inserting each prefix of every string into the trie, character by character. We will keep track of how many times each prefix appears.\n\n![fig](../Figures/2416/Slide2.png)\n\nWe need to find the total of all these counts for all prefixes of every string in `words`. Therefore, we can iterate through the `words` array, iterate through the prefixes of all strings, appending one character at a time, and calculate the running sum for the count value of these prefixes. Store these running sum values in an array and return it as the answer. Checkout the example below to understand the counting process:\n\n![fig](../Figures/2416/Slide1.png)\n\n#### Algorithm\n\n`TrieNode Structure`\n\n- Each `TrieNode` has two properties:\n    - `next`: An array of size 26 (for lowercase English letters) to store pointers to child nodes.\n    - `cnt`: An integer value initialized to `0` to store the count of words that pass through the node.\n- The constructor initializes all elements in the `next` array to `null` and `cnt` to `0`.\n\n`Insert(string word)`\n\n- Starts from the `root` node.\n- For each character `c` in the word:\n  - Calculate the index corresponding to the character (`c - 'a'`).\n  - If the child node at the calculated index doesn't exist, create a new `TrieNode` and assign it to that index.\n  - Increment the count (`cnt`) for the child node.\n  - Move to the child node.\n\n`Count(string s)`\n\n- Starts iterating from the `root` node.\n- Initialize an integer `ans` to store the sum of prefix counts.\n- For each character `c` in the string `s`:\n  - Calculate the index corresponding to the character (`c - 'a'`).\n  - Add the `cnt` value of the child node at the calculated index to `ans`.\n  - Move to the child node.\n- Return `ans`.\n\n`Main function - sumPrefixScores(words)`\n\n- For each `word` in `words`:\n    - Call `Insert(word)`.\n- Initialize an array `scores` of size equal to the number of words, with all elements set to `0`.\n- For each `word` in `words`:\n    - Store `Count(word)` in `scores[i]`.\n- Return the `scores` array.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the size of `words` array, and $M$ be the average length of the strings in `words`.\n\n- Time complexity: $O(N \\cdot M)$\n\n    The insert operation takes $O(length)$ time for a string of size `length`. The total time taken to perform the insert operations on the strings of the `words` array is given by $O(N \\cdot M)$.\n\n    Similarly, the count operation takes $O(length)$ time for a string of size `length`. The total time taken to perform the count operations on the strings of the `words` array is given by $O(N \\cdot M)$.\n\n    Therefore, the total time complexity is given by $O(N \\cdot M)$.\n   \n- Space complexity: $O(N \\cdot M)$\n   \n    The insert operation takes $O(length)$ space for a string of size `length`. The total space taken to perform the insert operations on the strings of the `words` array is given by $O(N \\cdot M)$.\n\n    The count operation does not use any additional space. Therefore, the total time complexity is given by $O(N \\cdot M)$.\n\n---"
+}

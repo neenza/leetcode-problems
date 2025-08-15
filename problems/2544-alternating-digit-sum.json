@@ -1,0 +1,58 @@
+{
+  "title": "Alternating Digit Sum",
+  "problem_id": "2630",
+  "frontend_id": "2544",
+  "difficulty": "Easy",
+  "problem_slug": "alternating-digit-sum",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given a positive integer n. Each digit of n has a sign according to the following rules:\nReturn the sum of all digits with their corresponding sign.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 521\nOutput: 4\nExplanation: (+5) + (-2) + (+1) = 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 111\nOutput: 1\nExplanation: (+1) + (-1) + (+1) = 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 886996\nOutput: 0\nExplanation: (+8) + (-8) + (+6) + (-9) + (+9) + (-6) = 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The first step is to loop over the digits. We can convert the integer into a string, an array of digits, or just loop over its digits.",
+    "Keep a variable sign that initially equals 1 and a variable answer that initially equals 0.",
+    "Each time you loop over a digit i, add sign * i to answer, then multiply sign by -1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int alternateDigitSum(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int alternateDigitSum(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def alternateDigitSum(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def alternateDigitSum(self, n: int) -> int:\n        ",
+    "c": "int alternateDigitSum(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AlternateDigitSum(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar alternateDigitSum = function(n) {\n    \n};",
+    "typescript": "function alternateDigitSum(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function alternateDigitSum($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func alternateDigitSum(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun alternateDigitSum(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int alternateDigitSum(int n) {\n    \n  }\n}",
+    "golang": "func alternateDigitSum(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef alternate_digit_sum(n)\n    \nend",
+    "scala": "object Solution {\n    def alternateDigitSum(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn alternate_digit_sum(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (alternate-digit-sum n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec alternate_digit_sum(N :: integer()) -> integer().\nalternate_digit_sum(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec alternate_digit_sum(n :: integer) :: integer\n  def alternate_digit_sum(n) do\n    \n  end\nend"
+  }
+}

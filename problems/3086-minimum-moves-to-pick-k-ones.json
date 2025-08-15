@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Moves to Pick K Ones",
+  "problem_id": "3327",
+  "frontend_id": "3086",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-moves-to-pick-k-ones",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "You are given a binary array nums of length n, a positive integer k and a non-negative integer maxChanges.\nAlice plays a game, where the goal is for Alice to pick up k ones from nums using the minimum number of moves. When the game starts, Alice picks up any index aliceIndex in the range [0, n - 1] and stands there. If nums[aliceIndex] == 1 , Alice picks up the one and nums[aliceIndex] becomes 0(this does not count as a move). After this, Alice can make any number of moves (including zero) where in each move Alice must perform exactly one of the following actions:\nReturn the minimum number of moves required by Alice to pick exactly k ones.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,0,0,0,1,1,0,0,1], k = 3, maxChanges = 1\nOutput: 3\nExplanation: Alice can pick up 3 ones in 3 moves, if Alice performs the following actions in each move when standing at aliceIndex == 1 :\nNote that it may be possible for Alice to pick up 3 ones using some other sequence of 3 moves.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,0,0,0], k = 2, maxChanges = 3\nOutput: 4\nExplanation: Alice can pick up 2 ones in 4 moves, if Alice performs the following actions in each move when standing at aliceIndex == 0 :",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "0 <= nums[i] <= 1",
+    "1 <= k <= 105",
+    "0 <= maxChanges <= 105",
+    "maxChanges + sum(nums) >= k"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Ones created using a change require <code>2</code> moves. Hence except for the immediate neighbors of the index where we move all the ones, we should try to use change operations.",
+    "For some subset of ones, it is always better to move the ones to the median position.",
+    "We only need to be concerned with the indices where <code>nums[i] == 1</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumMoves(vector<int>& nums, int k, int maxChanges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumMoves(int[] nums, int k, int maxChanges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumMoves(self, nums, k, maxChanges):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type maxChanges: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumMoves(self, nums: List[int], k: int, maxChanges: int) -> int:\n        ",
+    "c": "long long minimumMoves(int* nums, int numsSize, int k, int maxChanges) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumMoves(int[] nums, int k, int maxChanges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} maxChanges\n * @return {number}\n */\nvar minimumMoves = function(nums, k, maxChanges) {\n    \n};",
+    "typescript": "function minimumMoves(nums: number[], k: number, maxChanges: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer $maxChanges\n     * @return Integer\n     */\n    function minimumMoves($nums, $k, $maxChanges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumMoves(_ nums: [Int], _ k: Int, _ maxChanges: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumMoves(nums: IntArray, k: Int, maxChanges: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumMoves(List<int> nums, int k, int maxChanges) {\n    \n  }\n}",
+    "golang": "func minimumMoves(nums []int, k int, maxChanges int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer} max_changes\n# @return {Integer}\ndef minimum_moves(nums, k, max_changes)\n    \nend",
+    "scala": "object Solution {\n    def minimumMoves(nums: Array[Int], k: Int, maxChanges: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_moves(nums: Vec<i32>, k: i32, max_changes: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-moves nums k maxChanges)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_moves(Nums :: [integer()], K :: integer(), MaxChanges :: integer()) -> integer().\nminimum_moves(Nums, K, MaxChanges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_moves(nums :: [integer], k :: integer, max_changes :: integer) :: integer\n  def minimum_moves(nums, k, max_changes) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Count the Number of Houses at a Certain Distance II",
+  "problem_id": "3310",
+  "frontend_id": "3017",
+  "difficulty": "Hard",
+  "problem_slug": "count-the-number-of-houses-at-a-certain-distance-ii",
+  "topics": [
+    "Graph",
+    "Prefix Sum"
+  ],
+  "description": "You are given three positive integers n, x, and y.\nIn a city, there exist houses numbered 1 to n connected by n streets. There is a street connecting the house numbered i with the house numbered i + 1 for all 1 <= i <= n - 1 . An additional street connects the house numbered x with the house numbered y.\nFor each k, such that 1 <= k <= n, you need to find the number of pairs of houses (house1, house2) such that the minimum number of streets that need to be traveled to reach house2 from house1 is k.\nReturn a 1-indexed array result of length n where result[k] represents the total number of pairs of houses such that the minimum streets required to reach one house from the other is k.\nNote that x and y can be equal.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, x = 1, y = 3\nOutput: [6,0,0]\nExplanation: Let's look at each pair of houses:\n- For the pair (1, 2), we can go from house 1 to house 2 directly.\n- For the pair (2, 1), we can go from house 2 to house 1 directly.\n- For the pair (1, 3), we can go from house 1 to house 3 directly.\n- For the pair (3, 1), we can go from house 3 to house 1 directly.\n- For the pair (2, 3), we can go from house 2 to house 3 directly.\n- For the pair (3, 2), we can go from house 3 to house 2 directly.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/20/example2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, x = 2, y = 4\nOutput: [10,8,2,0,0]\nExplanation: For each distance k the pairs are:\n- For k == 1, the pairs are (1, 2), (2, 1), (2, 3), (3, 2), (2, 4), (4, 2), (3, 4), (4, 3), (4, 5), and (5, 4).\n- For k == 2, the pairs are (1, 3), (3, 1), (1, 4), (4, 1), (2, 5), (5, 2), (3, 5), and (5, 3).\n- For k == 3, the pairs are (1, 5), and (5, 1).\n- For k == 4 and k == 5, there are no pairs.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/20/example3.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, x = 1, y = 1\nOutput: [6,4,2,0]\nExplanation: For each distance k the pairs are:\n- For k == 1, the pairs are (1, 2), (2, 1), (2, 3), (3, 2), (3, 4), and (4, 3).\n- For k == 2, the pairs are (1, 3), (3, 1), (2, 4), and (4, 2).\n- For k == 3, the pairs are (1, 4), and (4, 1).\n- For k == 4, there are no pairs.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/20/example5.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= x, y <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there were no additional street connecting house <code>x</code> to house <code>y</code>, there would be <code>2 * (n - i)</code> pairs of houses at distance <code>i</code>.",
+    "The shortest distance between house <code>i</code> and house <code>j</code> (<code>j < i</code>) is along one of these paths:\r\n- <code>i -> j</code>\r\n- <code>i -> y---x -> j</code>",
+    "Try to change the distances calculated by path <code>i ->j</code> to the other path.",
+    "Can we use prefix sums to compute the answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> countOfPairs(int n, int x, int y) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] countOfPairs(int n, int x, int y) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countOfPairs(self, n, x, y):\n        \"\"\"\n        :type n: int\n        :type x: int\n        :type y: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countOfPairs(self, n: int, x: int, y: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* countOfPairs(int n, int x, int y, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] CountOfPairs(int n, int x, int y) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} x\n * @param {number} y\n * @return {number[]}\n */\nvar countOfPairs = function(n, x, y) {\n    \n};",
+    "typescript": "function countOfPairs(n: number, x: number, y: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $x\n     * @param Integer $y\n     * @return Integer[]\n     */\n    function countOfPairs($n, $x, $y) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countOfPairs(_ n: Int, _ x: Int, _ y: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countOfPairs(n: Int, x: Int, y: Int): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countOfPairs(int n, int x, int y) {\n    \n  }\n}",
+    "golang": "func countOfPairs(n int, x int, y int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} x\n# @param {Integer} y\n# @return {Integer[]}\ndef count_of_pairs(n, x, y)\n    \nend",
+    "scala": "object Solution {\n    def countOfPairs(n: Int, x: Int, y: Int): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_of_pairs(n: i32, x: i32, y: i32) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (count-of-pairs n x y)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec count_of_pairs(N :: integer(), X :: integer(), Y :: integer()) -> [integer()].\ncount_of_pairs(N, X, Y) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_of_pairs(n :: integer, x :: integer, y :: integer) :: [integer]\n  def count_of_pairs(n, x, y) do\n    \n  end\nend"
+  }
+}

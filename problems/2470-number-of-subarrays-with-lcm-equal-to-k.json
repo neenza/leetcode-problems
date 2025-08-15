@@ -1,0 +1,56 @@
+{
+  "title": "Number of Subarrays With LCM Equal to K",
+  "problem_id": "2557",
+  "frontend_id": "2470",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-subarrays-with-lcm-equal-to-k",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "Given an integer array nums and an integer k, return the number of subarrays of nums where the least common multiple of the subarray's elements is k.\nA subarray is a contiguous non-empty sequence of elements within an array.\nThe least common multiple of an array is the smallest positive integer that is divisible by all the array elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,6,2,7,1], k = 6\nOutput: 4\nExplanation: The subarrays of nums where 6 is the least common multiple of all the subarray's elements are:\n- [3,6,2,7,1]\n- [3,6,2,7,1]\n- [3,6,2,7,1]\n- [3,6,2,7,1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3], k = 2\nOutput: 0\nExplanation: There are no subarrays of nums where 2 is the least common multiple of all the subarray's elements.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i], k <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints on nums.length are small. It is possible to check every subarray.",
+    "To calculate LCM, you can use a built-in function or the formula lcm(a, b) = a * b / gcd(a, b).",
+    "As you calculate the LCM of more numbers, it can only become greater. Once it becomes greater than k, you know that any larger subarrays containing all the current elements will not work."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int subarrayLCM(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int subarrayLCM(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def subarrayLCM(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def subarrayLCM(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int subarrayLCM(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SubarrayLCM(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar subarrayLCM = function(nums, k) {\n    \n};",
+    "typescript": "function subarrayLCM(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function subarrayLCM($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func subarrayLCM(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun subarrayLCM(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int subarrayLCM(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func subarrayLCM(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef subarray_lcm(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def subarrayLCM(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn subarray_lcm(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (subarray-lcm nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec subarray_lcm(Nums :: [integer()], K :: integer()) -> integer().\nsubarray_lcm(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec subarray_lcm(nums :: [integer], k :: integer) :: integer\n  def subarray_lcm(nums, k) do\n    \n  end\nend"
+  }
+}

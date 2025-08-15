@@ -1,0 +1,39 @@
+{
+  "title": "Combine Two Tables",
+  "problem_id": "175",
+  "frontend_id": "175",
+  "difficulty": "Easy",
+  "problem_slug": "combine-two-tables",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Person\nTable: Address\nWrite a solution to report the first name, last name, city, and state of each person in the Person table. If the address of a personId is not present in the Address table, report null instead.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| personId    | int     |\n| lastName    | varchar |\n| firstName   | varchar |\n+-------------+---------+\npersonId is the primary key (column with unique values) for this table.\nThis table contains information about the ID of some persons and their first and last names.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| addressId   | int     |\n| personId    | int     |\n| city        | varchar |\n| state       | varchar |\n+-------------+---------+\naddressId is the primary key (column with unique values) for this table.\nEach row of this table contains information about the city and state of one person with ID = PersonId.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nPerson table:\n+----------+----------+-----------+\n| personId | lastName | firstName |\n+----------+----------+-----------+\n| 1        | Wang     | Allen     |\n| 2        | Alice    | Bob       |\n+----------+----------+-----------+\nAddress table:\n+-----------+----------+---------------+------------+\n| addressId | personId | city          | state      |\n+-----------+----------+---------------+------------+\n| 1         | 2        | New York City | New York   |\n| 2         | 3        | Leetcode      | California |\n+-----------+----------+---------------+------------+\nOutput: \n+-----------+----------+---------------+----------+\n| firstName | lastName | city          | state    |\n+-----------+----------+---------------+----------+\n| Allen     | Wang     | Null          | Null     |\n| Bob       | Alice    | New York City | New York |\n+-----------+----------+---------------+----------+\nExplanation: \nThere is no address in the address table for the personId = 1 so we return null in their city and state.\naddressId = 1 contains information about the address of personId = 2.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n# Solution\n---\n\n## pandas\n\n### Approach 1: Using `merge`\n\n**Visualization of approach 1**\n\n![fig](../Figures/175/175-1.png)\n\n#### Intuition\n\nLet's breakdown the steps given the following input DataFrames:\n\n`person`:personIdlastNamefirstName1WangAllen2AliceBob`address`:addressIdpersonIdcitystate12New York CityNew York23LeetcodeCalifornia1. **Merging the DataFrames**\n   \n   ```python\n   result = pd.merge(person, address, on='personId', how='left')\n   ```\n   In this step, we are merging the `person` and `address` dataframes using a left join operation with the `pd.merge()` function. Here:\n   - `on='personId'` specifies that we are using the 'personId' column as the key for merging the data. This column is present in both dataframes, and it holds unique identifiers for the individuals.\n   - `how='left'` specifies that we are performing a left join, meaning all the records from the `person` dataframe (the left dataframe) will be retained, and the matching records from the `address` dataframe (the right dataframe) will be merged where the 'personId' values match. If a 'personId' from the `person` dataframe does not have a matching 'personId' in the `address` dataframe, the 'city' and 'state' columns for that record will contain Null values (representing missing data).personIdlastNamefirstNameaddressIdcitystate1WangAllenNullNullNull2AliceBob1.0New York CityNew York2. **Selecting Relevant Columns**\n\n   ```python\n   result = result[['firstName', 'lastName', 'city', 'state']]\n   ```\n   In this step, we select only the columns that we are interested in for the final output. Since the merging operation can potentially bring in other columns from the `address` dataframe, we are explicitly selecting only the 'firstName', 'lastName', 'city', and 'state' columns to be in our final result. This helps in maintaining a clean and focused dataset which contains only the information we are interested in.firstNamelastNamecitystateAllenWangNullNullBobAliceNew York CityNew YorkIn summary, this script is taking two separate dataframes and merging them into a single dataframe where each row represents a person and contains their first name, last name, city, and state. This is done using the person's unique identifier to correctly match each person with their address. It's a common operation when you want to bring together information from different sources into a unified view.\n\n#### Implementation---\n\n## Database\n\n### Approach 1: Using `outer join`\n\n#### Intuition\n\nSince the *PersonId* in table **Address** is the foreign key of table **Person**, we can join these two tables to get the address information of a person.\n\nConsidering there might be no address information for every person, we should use `outer join` instead of the default `inner join`.\n\n#### Implementation\n\n> Note: For MySQL, an `outer join` is performed either using `left join` or `right join`. \n\n\n```sql\nselect FirstName, LastName, City, State\nfrom Person left join Address\non Person.PersonId = Address.PersonId\n;\n```\n\n> Note: Using the `where` clause to filter the records will fail if there is no address information for a person because it will not display the name information."
+}

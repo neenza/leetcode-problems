@@ -1,0 +1,58 @@
+{
+  "title": "Minimum Value to Get Positive Step by Step Sum",
+  "problem_id": "1514",
+  "frontend_id": "1413",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-value-to-get-positive-step-by-step-sum",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "Given an array of integers nums, you start with an initial positive value startValue.\nIn each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).\nReturn the minimum positive value of startValue such that the step by step sum is never less than 1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-3,2,-3,4,2]\nOutput: 5\nExplanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.\nstep by step sum\nstartValue = 4 | startValue = 5 | nums\n  (4 -3 ) = 1  | (5 -3 ) = 2    |  -3\n  (1 +2 ) = 3  | (2 +2 ) = 4    |   2\n  (3 -3 ) = 0  | (4 -3 ) = 1    |  -3\n  (0 +4 ) = 4  | (1 +4 ) = 5    |   4\n  (4 +2 ) = 6  | (5 +2 ) = 7    |   2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2]\nOutput: 1\nExplanation: Minimum start value should be positive.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,-2,-3]\nOutput: 5",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the minimum prefix sum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minStartValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minStartValue(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minStartValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minStartValue(self, nums: List[int]) -> int:\n        ",
+    "c": "int minStartValue(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinStartValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minStartValue = function(nums) {\n    \n};",
+    "typescript": "function minStartValue(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minStartValue($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minStartValue(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minStartValue(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minStartValue(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minStartValue(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_start_value(nums)\n    \nend",
+    "scala": "object Solution {\n    def minStartValue(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_start_value(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-start-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_start_value(Nums :: [integer()]) -> integer().\nmin_start_value(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_start_value(nums :: [integer]) :: integer\n  def min_start_value(nums) do\n    \n  end\nend"
+  }
+}

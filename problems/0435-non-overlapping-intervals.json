@@ -1,0 +1,59 @@
+{
+  "title": "Non-overlapping Intervals",
+  "problem_id": "435",
+  "frontend_id": "435",
+  "difficulty": "Medium",
+  "problem_slug": "non-overlapping-intervals",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.\nNote that intervals which only touch at a point are non-overlapping. For example, [1, 2] and [2, 3] are non-overlapping.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: intervals = [[1,2],[2,3],[3,4],[1,3]]\nOutput: 1\nExplanation: [1,3] can be removed and the rest of the intervals are non-overlapping.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: intervals = [[1,2],[1,2],[1,2]]\nOutput: 2\nExplanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: intervals = [[1,2],[2,3]]\nOutput: 0\nExplanation: You don't need to remove any of the intervals since they're already non-overlapping.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= intervals.length <= 105",
+    "intervals[i].length == 2",
+    "-5 * 104 <= starti < endi <= 5 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int eraseOverlapIntervals(vector<vector<int>>& intervals) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int eraseOverlapIntervals(int[][] intervals) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def eraseOverlapIntervals(self, intervals):\n        \"\"\"\n        :type intervals: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:\n        ",
+    "c": "int eraseOverlapIntervals(int** intervals, int intervalsSize, int* intervalsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EraseOverlapIntervals(int[][] intervals) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar eraseOverlapIntervals = function(intervals) {\n    \n};",
+    "typescript": "function eraseOverlapIntervals(intervals: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $intervals\n     * @return Integer\n     */\n    function eraseOverlapIntervals($intervals) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func eraseOverlapIntervals(_ intervals: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int eraseOverlapIntervals(List<List<int>> intervals) {\n    \n  }\n}",
+    "golang": "func eraseOverlapIntervals(intervals [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} intervals\n# @return {Integer}\ndef erase_overlap_intervals(intervals)\n    \nend",
+    "scala": "object Solution {\n    def eraseOverlapIntervals(intervals: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn erase_overlap_intervals(intervals: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (erase-overlap-intervals intervals)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec erase_overlap_intervals(Intervals :: [[integer()]]) -> integer().\nerase_overlap_intervals(Intervals) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec erase_overlap_intervals(intervals :: [[integer]]) :: integer\n  def erase_overlap_intervals(intervals) do\n    \n  end\nend"
+  }
+}

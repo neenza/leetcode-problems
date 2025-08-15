@@ -1,0 +1,72 @@
+{
+  "title": "Last Moment Before All Ants Fall Out of a Plank",
+  "problem_id": "1627",
+  "frontend_id": "1503",
+  "difficulty": "Medium",
+  "problem_slug": "last-moment-before-all-ants-fall-out-of-a-plank",
+  "topics": [
+    "Array",
+    "Brainteaser",
+    "Simulation"
+  ],
+  "description": "We have a wooden plank of the length n units. Some ants are walking on the plank, each ant moves with a speed of 1 unit per second. Some of the ants move to the left, the other move to the right.\nWhen two ants moving in two different directions meet at some point, they change their directions and continue moving again. Assume changing directions does not take any additional time.\nWhen an ant reaches one end of the plank at a time t, it falls out of the plank immediately.\nGiven an integer n and two integer arrays left and right, the positions of the ants moving to the left and the right, return the moment when the last ant(s) fall out of the plank.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, left = [4,3], right = [0,1]\nOutput: 4\nExplanation: In the image above:\n-The ant at index 0 is named A and going to the right.\n-The ant at index 1 is named B and going to the right.\n-The ant at index 3 is named C and going to the left.\n-The ant at index 4 is named D and going to the left.\nThe last moment when an ant was on the plank is t = 4 seconds. After that, it falls immediately out of the plank. (i.e., We can say that at t = 4.0000000001, there are no ants on the plank).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/ants.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 7, left = [], right = [0,1,2,3,4,5,6,7]\nOutput: 7\nExplanation: All ants are going to the right, the ant at index 0 needs 7 seconds to fall.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/ants2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 7, left = [0,1,2,3,4,5,6,7], right = []\nOutput: 7\nExplanation: All ants are going to the left, the ant at index 7 needs 7 seconds to fall.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/17/ants3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 104",
+    "0 <= left.length <= n + 1",
+    "0 <= left[i] <= n",
+    "0 <= right.length <= n + 1",
+    "0 <= right[i] <= n",
+    "1 <= left.length + right.length <= n + 1",
+    "All values of left and right are unique, and each value can appear only in one of the two arrays."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The ants change their way when they meet is equivalent to continue moving without changing their direction.",
+    "Answer is the max distance for one ant to reach the end of the plank in the facing direction."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int getLastMoment(int n, vector<int>& left, vector<int>& right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getLastMoment(int n, int[] left, int[] right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getLastMoment(self, n, left, right):\n        \"\"\"\n        :type n: int\n        :type left: List[int]\n        :type right: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getLastMoment(self, n: int, left: List[int], right: List[int]) -> int:\n        ",
+    "c": "int getLastMoment(int n, int* left, int leftSize, int* right, int rightSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GetLastMoment(int n, int[] left, int[] right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} left\n * @param {number[]} right\n * @return {number}\n */\nvar getLastMoment = function(n, left, right) {\n    \n};",
+    "typescript": "function getLastMoment(n: number, left: number[], right: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $left\n     * @param Integer[] $right\n     * @return Integer\n     */\n    function getLastMoment($n, $left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getLastMoment(_ n: Int, _ left: [Int], _ right: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getLastMoment(n: Int, left: IntArray, right: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getLastMoment(int n, List<int> left, List<int> right) {\n    \n  }\n}",
+    "golang": "func getLastMoment(n int, left []int, right []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} left\n# @param {Integer[]} right\n# @return {Integer}\ndef get_last_moment(n, left, right)\n    \nend",
+    "scala": "object Solution {\n    def getLastMoment(n: Int, left: Array[Int], right: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_last_moment(n: i32, left: Vec<i32>, right: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (get-last-moment n left right)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec get_last_moment(N :: integer(), Left :: [integer()], Right :: [integer()]) -> integer().\nget_last_moment(N, Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_last_moment(n :: integer, left :: [integer], right :: [integer]) :: integer\n  def get_last_moment(n, left, right) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Ants Pass Each Other!\n\n**Intuition**\n\nInitially, this problem may seem daunting as there could be many possible collisions between the ants.\n\nHowever, we can make a few observations that simplify the problem greatly. The first thing to notice is that collisions happen instantaneously. The second thing to notice is that all ants walk at the same speed. The final thing to notice is that the ants eventually fall off the plank, so there won't be any infinite collisions.\n\nThis brings us to the critical observation. Let's say we have an ant `A` walking right and an ant `B` walking left, and they are on a collision course.\n\n![example](../Figures/1503/1.png)At `t = 1`, the ants are about to collide. At `t = 2`, the ants try to walk forward and collide, thus swapping directions.\n\n![example](../Figures/1503/2.png)At `t = 3`, they reach the end of the plank and fall off.\n\n![example](../Figures/1503/3.png)Now, let's consider a new scenario with the same ants `A` and `B`. Imagine if all the ants walking left were on one plank, and all the ants walking right were on a different plank.\n\n![example](../Figures/1503/4.png)![example](../Figures/1503/5.png)At `t = 2` in the original scenario, the ants collide and swap directions. In the new scenario, the ants will simply pass each other.\n\n![example](../Figures/1503/6.png)![example](../Figures/1503/7.png)The two scenarios are actually equivalent! That is, the collisions are completely irrelevant. Why?\n\nWhen the ants collide, they do not change position because their attempt at moving forward is blocked. What we mean here is that at `t = 2`, `A` is at index `1` and tries to walk to the right. However, it collides into `B` and stays at index `1`. The same can be said for `B` remaining at position `2`.\n\nHowever, the ant that they collided with is at the position that they **would have been at** had there not been any collision. The ant they collided with also now has their original velocity (since their velocities swapped after the collision).\n\nBecause all the ants here are the same, we previously referred to them as `A` and `B` for better distinction. They have no differences in reality. Thus two ants colliding according to the rules and simply passing through each other are two entirely identical scenarios. If the ant they collided with has their original velocity and is at the same position they would have been at had there not been any collision (and vice-versa), did the collision really change anything? No.\n\nThus, we can consider the ants walking right simply passing through those walking left. So what will be our answer?\n\n- An ant walking left from position `num` will take `num` time to fall off the plank.\n- An ant walking right from position `num` will take `n - num` time to fall off the plank.\n\nWe simply take the maximum of all these times.\n\n**Algorithm**\n\n1. Initialize `ans = 0`.\n2. Iterate over `left`. For each `num`:\n    - Update `ans` with `num` if it is larger.\n3. Iterate over `right`. For each `num`:\n    - Update `ans` with `n - num` if it is larger.\n4. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `left` and $$m$$ as the length of `right`, \n\n* Time complexity: $$O(n + m)$$\n\n    We iterate over `left` and `right` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space except the for loop iteration variable.---"
+}

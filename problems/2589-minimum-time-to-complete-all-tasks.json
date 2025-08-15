@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Time to Complete All Tasks",
+  "problem_id": "2657",
+  "frontend_id": "2589",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-time-to-complete-all-tasks",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Stack",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "There is a computer that can run an unlimited number of tasks at the same time. You are given a 2D integer array tasks where tasks[i] = [starti, endi, durationi] indicates that the ith task should run for a total of durationi seconds (not necessarily continuous) within the inclusive time range [starti, endi].\nYou may turn on the computer only when it needs to run a task. You can also turn it off if it is idle.\nReturn the minimum time during which the computer should be turned on to complete all tasks.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tasks = [[2,3,1],[4,5,1],[1,5,2]]\nOutput: 2\nExplanation: \n- The first task can be run in the inclusive time range [2, 2].\n- The second task can be run in the inclusive time range [5, 5].\n- The third task can be run in the two inclusive time ranges [2, 2] and [5, 5].\nThe computer will be on for a total of 2 seconds.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tasks = [[1,3,2],[2,5,3],[5,6,2]]\nOutput: 4\nExplanation: \n- The first task can be run in the inclusive time range [2, 3].\n- The second task can be run in the inclusive time ranges [2, 3] and [5, 5].\n- The third task can be run in the two inclusive time range [5, 6].\nThe computer will be on for a total of 4 seconds.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= tasks.length <= 2000",
+    "tasks[i].length == 3",
+    "1 <= starti, endi <= 2000",
+    "1 <= durationi <= endi - starti + 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the tasks in ascending order of end time",
+    "Since there are only up to 2000 time points to consider, you can check them one by one",
+    "It is always beneficial to run the task as late as possible so that later tasks can run simultaneously."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMinimumTime(vector<vector<int>>& tasks) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinimumTime(int[][] tasks) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMinimumTime(self, tasks):\n        \"\"\"\n        :type tasks: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMinimumTime(self, tasks: List[List[int]]) -> int:\n        ",
+    "c": "int findMinimumTime(int** tasks, int tasksSize, int* tasksColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMinimumTime(int[][] tasks) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} tasks\n * @return {number}\n */\nvar findMinimumTime = function(tasks) {\n    \n};",
+    "typescript": "function findMinimumTime(tasks: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $tasks\n     * @return Integer\n     */\n    function findMinimumTime($tasks) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMinimumTime(_ tasks: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMinimumTime(tasks: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMinimumTime(List<List<int>> tasks) {\n    \n  }\n}",
+    "golang": "func findMinimumTime(tasks [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} tasks\n# @return {Integer}\ndef find_minimum_time(tasks)\n    \nend",
+    "scala": "object Solution {\n    def findMinimumTime(tasks: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_minimum_time(tasks: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-minimum-time tasks)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_minimum_time(Tasks :: [[integer()]]) -> integer().\nfind_minimum_time(Tasks) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_minimum_time(tasks :: [[integer]]) :: integer\n  def find_minimum_time(tasks) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Find the Most Common Response",
+  "problem_id": "3707",
+  "frontend_id": "3527",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-most-common-response",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a 2D string array responses where each responses[i] is an array of strings representing survey responses from the ith day.\nReturn the most common response across all days after removing duplicate responses within each responses[i]. If there is a tie, return the lexicographically smallest response.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: responses = [[\"good\",\"ok\",\"good\",\"ok\"],[\"ok\",\"bad\",\"good\",\"ok\",\"ok\"],[\"good\"],[\"bad\"]]\nOutput: \"good\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: responses = [[\"good\",\"ok\",\"good\"],[\"ok\",\"bad\"],[\"bad\",\"notsure\"],[\"great\",\"good\"]]\nOutput: \"bad\"\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= responses.length <= 1000",
+    "1 <= responses[i].length <= 1000",
+    "1 <= responses[i][j].length <= 10",
+    "responses[i][j] consists of only lowercase English letters"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a HashMap."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string findCommonResponse(vector<vector<string>>& responses) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findCommonResponse(List<List<String>> responses) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findCommonResponse(self, responses):\n        \"\"\"\n        :type responses: List[List[str]]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findCommonResponse(self, responses: List[List[str]]) -> str:\n        ",
+    "c": "char* findCommonResponse(char*** responses, int responsesSize, int* responsesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FindCommonResponse(IList<IList<string>> responses) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} responses\n * @return {string}\n */\nvar findCommonResponse = function(responses) {\n    \n};",
+    "typescript": "function findCommonResponse(responses: string[][]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $responses\n     * @return String\n     */\n    function findCommonResponse($responses) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findCommonResponse(_ responses: [[String]]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findCommonResponse(responses: List<List<String>>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findCommonResponse(List<List<String>> responses) {\n    \n  }\n}",
+    "golang": "func findCommonResponse(responses [][]string) string {\n    \n}",
+    "ruby": "# @param {String[][]} responses\n# @return {String}\ndef find_common_response(responses)\n    \nend",
+    "scala": "object Solution {\n    def findCommonResponse(responses: List[List[String]]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_common_response(responses: Vec<Vec<String>>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (find-common-response responses)\n  (-> (listof (listof string?)) string?)\n  )",
+    "erlang": "-spec find_common_response(Responses :: [[unicode:unicode_binary()]]) -> unicode:unicode_binary().\nfind_common_response(Responses) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_common_response(responses :: [[String.t]]) :: String.t\n  def find_common_response(responses) do\n    \n  end\nend"
+  }
+}

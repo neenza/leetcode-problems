@@ -1,0 +1,56 @@
+{
+  "title": "Construct the Longest New String",
+  "problem_id": "2850",
+  "frontend_id": "2745",
+  "difficulty": "Medium",
+  "problem_slug": "construct-the-longest-new-string",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Greedy",
+    "Brainteaser"
+  ],
+  "description": "You are given three integers x, y, and z.\nYou have x strings equal to \"AA\", y strings equal to \"BB\", and z strings equal to \"AB\". You want to choose some (possibly all or none) of these strings and concatenate them in some order to form a new string. This new string must not contain \"AAA\" or \"BBB\" as a substring.\nReturn the maximum possible length of the new string.\nA substring is a contiguous non-empty sequence of characters within a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: x = 2, y = 5, z = 1\nOutput: 12\nExplanation: We can concatenate the strings \"BB\", \"AA\", \"BB\", \"AA\", \"BB\", and \"AB\" in that order. Then, our new string is \"BBAABBAABBAB\". \nThat string has length 12, and we can show that it is impossible to construct a string of longer length.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: x = 3, y = 2, z = 2\nOutput: 14\nExplanation: We can concatenate the strings \"AB\", \"AB\", \"AA\", \"BB\", \"AA\", \"BB\", and \"AA\" in that order. Then, our new string is \"ABABAABBAABBAA\". \nThat string has length 14, and we can show that it is impossible to construct a string of longer length.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= x, y, z <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It can be proved that ALL “AB”s can be used in the optimal solution.\r\n(1) If the final string starts with 'A', we can put all unused “AB”s at the very beginning.\r\n(2) If the final string starts with 'B' (meaning) it starts with “BB”, we can put all unused “AB”s after the 2nd 'B'.",
+    "Using “AB” doesn’t increase the number of “AA”s or “BB”s we can use.\r\nIf we put an “AB” after “BB”, then we still need to append “AA” as before, so it doesn’t change the state.",
+    "We only need to consider strings “AA” and “BB”; we can either use the pattern “AABBAABB…” or the pattern “BBAABBAA…”, depending on which one of x and y is larger."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestString(int x, int y, int z) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestString(int x, int y, int z) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestString(self, x, y, z):\n        \"\"\"\n        :type x: int\n        :type y: int\n        :type z: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestString(self, x: int, y: int, z: int) -> int:\n        ",
+    "c": "int longestString(int x, int y, int z) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestString(int x, int y, int z) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} x\n * @param {number} y\n * @param {number} z\n * @return {number}\n */\nvar longestString = function(x, y, z) {\n    \n};",
+    "typescript": "function longestString(x: number, y: number, z: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $x\n     * @param Integer $y\n     * @param Integer $z\n     * @return Integer\n     */\n    function longestString($x, $y, $z) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestString(_ x: Int, _ y: Int, _ z: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestString(x: Int, y: Int, z: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestString(int x, int y, int z) {\n    \n  }\n}",
+    "golang": "func longestString(x int, y int, z int) int {\n    \n}",
+    "ruby": "# @param {Integer} x\n# @param {Integer} y\n# @param {Integer} z\n# @return {Integer}\ndef longest_string(x, y, z)\n    \nend",
+    "scala": "object Solution {\n    def longestString(x: Int, y: Int, z: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_string(x: i32, y: i32, z: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-string x y z)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec longest_string(X :: integer(), Y :: integer(), Z :: integer()) -> integer().\nlongest_string(X, Y, Z) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_string(x :: integer, y :: integer, z :: integer) :: integer\n  def longest_string(x, y, z) do\n    \n  end\nend"
+  }
+}

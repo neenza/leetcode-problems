@@ -1,0 +1,59 @@
+{
+  "title": "Find Valid Pair of Adjacent Digits in String",
+  "problem_id": "3736",
+  "frontend_id": "3438",
+  "difficulty": "Easy",
+  "problem_slug": "find-valid-pair-of-adjacent-digits-in-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s consisting only of digits. A valid pair is defined as two adjacent digits in s such that:\nReturn the first valid pair found in the string s when traversing from left to right. If no valid pair exists, return an empty string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"2523533\"\nOutput: \"23\"\nExplanation:\nDigit '2' appears 2 times and digit '3' appears 3 times. Each digit in the pair \"23\" appears in s exactly as many times as its numeric value. Hence, the output is \"23\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"221\"\nOutput: \"21\"\nExplanation:\nDigit '2' appears 2 times and digit '1' appears 1 time. Hence, the output is \"21\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"22\"\nOutput: \"\"\nExplanation:\nThere are no valid adjacent pairs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 100",
+    "s only consists of digits from '1' to '9'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a HashMap to count the frequency of each digit."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string findValidPair(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findValidPair(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findValidPair(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findValidPair(self, s: str) -> str:\n        ",
+    "c": "char* findValidPair(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FindValidPair(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar findValidPair = function(s) {\n    \n};",
+    "typescript": "function findValidPair(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function findValidPair($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findValidPair(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findValidPair(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findValidPair(String s) {\n    \n  }\n}",
+    "golang": "func findValidPair(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef find_valid_pair(s)\n    \nend",
+    "scala": "object Solution {\n    def findValidPair(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_valid_pair(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (find-valid-pair s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec find_valid_pair(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfind_valid_pair(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_valid_pair(s :: String.t) :: String.t\n  def find_valid_pair(s) do\n    \n  end\nend"
+  }
+}

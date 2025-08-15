@@ -1,0 +1,60 @@
+{
+  "title": "The Latest Time to Catch a Bus",
+  "problem_id": "2417",
+  "frontend_id": "2332",
+  "difficulty": "Medium",
+  "problem_slug": "the-latest-time-to-catch-a-bus",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array buses of length n, where buses[i] represents the departure time of the ith bus. You are also given a 0-indexed integer array passengers of length m, where passengers[j] represents the arrival time of the jth passenger. All bus departure times are unique. All passenger arrival times are unique.\nYou are given an integer capacity, which represents the maximum number of passengers that can get on each bus.\nWhen a passenger arrives, they will wait in line for the next available bus. You can get on a bus that departs at x minutes if you arrive at y minutes where y <= x, and the bus is not full. Passengers with the earliest arrival times get on the bus first.\nMore formally when a bus arrives, either:\nReturn the latest time you may arrive at the bus station to catch a bus. You cannot arrive at the same time as another passenger.\nNote: The arrays buses and passengers are not necessarily sorted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: buses = [10,20], passengers = [2,17,18,19], capacity = 2\nOutput: 16\nExplanation: Suppose you arrive at time 16.\nAt time 10, the first bus departs with the 0th passenger. \nAt time 20, the second bus departs with you and the 1st passenger.\nNote that you may not arrive at the same time as another passenger, which is why you must arrive before the 1st passenger to catch the bus.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: buses = [20,30,10], passengers = [19,13,26,4,25,11,21], capacity = 2\nOutput: 20\nExplanation: Suppose you arrive at time 20.\nAt time 10, the first bus departs with the 3rd passenger. \nAt time 20, the second bus departs with the 5th and 1st passengers.\nAt time 30, the third bus departs with the 0th passenger and you.\nNotice if you had arrived any later, then the 6th passenger would have taken your seat on the third bus.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == buses.length",
+    "m == passengers.length",
+    "1 <= n, m, capacity <= 105",
+    "2 <= buses[i], passengers[i] <= 109",
+    "Each element in buses is unique.",
+    "Each element in passengers is unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the buses and passengers arrays.",
+    "Use 2 pointers to traverse buses and passengers with a simulation of passengers getting on a particular bus."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int latestTimeCatchTheBus(vector<int>& buses, vector<int>& passengers, int capacity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int latestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def latestTimeCatchTheBus(self, buses, passengers, capacity):\n        \"\"\"\n        :type buses: List[int]\n        :type passengers: List[int]\n        :type capacity: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def latestTimeCatchTheBus(self, buses: List[int], passengers: List[int], capacity: int) -> int:\n        ",
+    "c": "int latestTimeCatchTheBus(int* buses, int busesSize, int* passengers, int passengersSize, int capacity) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LatestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} buses\n * @param {number[]} passengers\n * @param {number} capacity\n * @return {number}\n */\nvar latestTimeCatchTheBus = function(buses, passengers, capacity) {\n    \n};",
+    "typescript": "function latestTimeCatchTheBus(buses: number[], passengers: number[], capacity: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $buses\n     * @param Integer[] $passengers\n     * @param Integer $capacity\n     * @return Integer\n     */\n    function latestTimeCatchTheBus($buses, $passengers, $capacity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func latestTimeCatchTheBus(_ buses: [Int], _ passengers: [Int], _ capacity: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun latestTimeCatchTheBus(buses: IntArray, passengers: IntArray, capacity: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int latestTimeCatchTheBus(List<int> buses, List<int> passengers, int capacity) {\n    \n  }\n}",
+    "golang": "func latestTimeCatchTheBus(buses []int, passengers []int, capacity int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} buses\n# @param {Integer[]} passengers\n# @param {Integer} capacity\n# @return {Integer}\ndef latest_time_catch_the_bus(buses, passengers, capacity)\n    \nend",
+    "scala": "object Solution {\n    def latestTimeCatchTheBus(buses: Array[Int], passengers: Array[Int], capacity: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn latest_time_catch_the_bus(buses: Vec<i32>, passengers: Vec<i32>, capacity: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (latest-time-catch-the-bus buses passengers capacity)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec latest_time_catch_the_bus(Buses :: [integer()], Passengers :: [integer()], Capacity :: integer()) -> integer().\nlatest_time_catch_the_bus(Buses, Passengers, Capacity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec latest_time_catch_the_bus(buses :: [integer], passengers :: [integer], capacity :: integer) :: integer\n  def latest_time_catch_the_bus(buses, passengers, capacity) do\n    \n  end\nend"
+  }
+}

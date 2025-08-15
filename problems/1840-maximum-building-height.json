@@ -1,0 +1,69 @@
+{
+  "title": "Maximum Building Height",
+  "problem_id": "1968",
+  "frontend_id": "1840",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-building-height",
+  "topics": [
+    "Array",
+    "Math",
+    "Sorting"
+  ],
+  "description": "You want to build n new buildings in a city. The new buildings will be built in a line and are labeled from 1 to n.\nHowever, there are city restrictions on the heights of the new buildings:\nAdditionally, there are city restrictions on the maximum height of specific buildings. These restrictions are given as a 2D integer array restrictions where restrictions[i] = [idi, maxHeighti] indicates that building idi must have a height less than or equal to maxHeighti.\nIt is guaranteed that each building will appear at most once in restrictions, and building 1 will not be in restrictions.\nReturn the maximum possible height of the tallest building.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, restrictions = [[2,1],[4,1]]\nOutput: 2\nExplanation: The green area in the image indicates the maximum allowed height for each building.\nWe can build the buildings with heights [0,1,2,1,2], and the tallest building has a height of 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/08/ic236-q4-ex1-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, restrictions = []\nOutput: 5\nExplanation: The green area in the image indicates the maximum allowed height for each building.\nWe can build the buildings with heights [0,1,2,3,4,5], and the tallest building has a height of 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/08/ic236-q4-ex2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 10, restrictions = [[5,3],[2,5],[7,4],[10,3]]\nOutput: 5\nExplanation: The green area in the image indicates the maximum allowed height for each building.\nWe can build the buildings with heights [0,1,2,3,3,4,4,5,4,3], and the tallest building has a height of 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/08/ic236-q4-ex3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 109",
+    "0 <= restrictions.length <= min(n - 1, 105)",
+    "2 <= idi <= n",
+    "idi is unique.",
+    "0 <= maxHeighti <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is it possible to find the max height if given the height range of a particular building?",
+    "You can find the height range of a restricted building by doing 2 passes from the left and right."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxBuilding(int n, vector<vector<int>>& restrictions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxBuilding(int n, int[][] restrictions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxBuilding(self, n, restrictions):\n        \"\"\"\n        :type n: int\n        :type restrictions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxBuilding(self, n: int, restrictions: List[List[int]]) -> int:\n        ",
+    "c": "int maxBuilding(int n, int** restrictions, int restrictionsSize, int* restrictionsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxBuilding(int n, int[][] restrictions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} restrictions\n * @return {number}\n */\nvar maxBuilding = function(n, restrictions) {\n    \n};",
+    "typescript": "function maxBuilding(n: number, restrictions: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $restrictions\n     * @return Integer\n     */\n    function maxBuilding($n, $restrictions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxBuilding(_ n: Int, _ restrictions: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxBuilding(n: Int, restrictions: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxBuilding(int n, List<List<int>> restrictions) {\n    \n  }\n}",
+    "golang": "func maxBuilding(n int, restrictions [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} restrictions\n# @return {Integer}\ndef max_building(n, restrictions)\n    \nend",
+    "scala": "object Solution {\n    def maxBuilding(n: Int, restrictions: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_building(n: i32, restrictions: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-building n restrictions)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_building(N :: integer(), Restrictions :: [[integer()]]) -> integer().\nmax_building(N, Restrictions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_building(n :: integer, restrictions :: [[integer]]) :: integer\n  def max_building(n, restrictions) do\n    \n  end\nend"
+  }
+}

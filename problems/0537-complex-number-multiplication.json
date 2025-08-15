@@ -1,0 +1,52 @@
+{
+  "title": "Complex Number Multiplication",
+  "problem_id": "537",
+  "frontend_id": "537",
+  "difficulty": "Medium",
+  "problem_slug": "complex-number-multiplication",
+  "topics": [
+    "Math",
+    "String",
+    "Simulation"
+  ],
+  "description": "A complex number can be represented as a string on the form \"real+imaginaryi\" where:\nGiven two complex numbers num1 and num2 as strings, return a string of the complex number that represents their multiplications.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num1 = \"1+1i\", num2 = \"1+1i\"\nOutput: \"0+2i\"\nExplanation: (1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num1 = \"1+-1i\", num2 = \"1+-1i\"\nOutput: \"0+-2i\"\nExplanation: (1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "num1 and num2 are valid complex numbers."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string complexNumberMultiply(string num1, string num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String complexNumberMultiply(String num1, String num2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def complexNumberMultiply(self, num1, num2):\n        \"\"\"\n        :type num1: str\n        :type num2: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def complexNumberMultiply(self, num1: str, num2: str) -> str:\n        ",
+    "c": "char* complexNumberMultiply(char* num1, char* num2) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ComplexNumberMultiply(string num1, string num2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num1\n * @param {string} num2\n * @return {string}\n */\nvar complexNumberMultiply = function(num1, num2) {\n    \n};",
+    "typescript": "function complexNumberMultiply(num1: string, num2: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num1\n     * @param String $num2\n     * @return String\n     */\n    function complexNumberMultiply($num1, $num2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func complexNumberMultiply(_ num1: String, _ num2: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun complexNumberMultiply(num1: String, num2: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String complexNumberMultiply(String num1, String num2) {\n    \n  }\n}",
+    "golang": "func complexNumberMultiply(num1 string, num2 string) string {\n    \n}",
+    "ruby": "# @param {String} num1\n# @param {String} num2\n# @return {String}\ndef complex_number_multiply(num1, num2)\n    \nend",
+    "scala": "object Solution {\n    def complexNumberMultiply(num1: String, num2: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn complex_number_multiply(num1: String, num2: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (complex-number-multiply num1 num2)\n  (-> string? string? string?)\n  )",
+    "erlang": "-spec complex_number_multiply(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncomplex_number_multiply(Num1, Num2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec complex_number_multiply(num1 :: String.t, num2 :: String.t) :: String.t\n  def complex_number_multiply(num1, num2) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Simple Solution[Accepted]\n\n**Algorithm**\n\nMultiplication of two complex numbers can be done as:\n\n$$\n(a+ib) \\times (x+iy)=ax+i^2by+i(bx+ay)=ax-by+i(bx+ay)\n$$\n\nWe simply split up the real and the imaginary parts of the given complex strings based on the '+' and the 'i' symbols. We store the real parts of the two strings $$a$$ and $$b$$ as $$x[0]$$ and $$y[0]$$ respectively and the imaginary parts as $$x[1]$$ and $$y[1]$$ respectively. Then, we multiply the real and the imaginary parts as required after converting the extracted parts into integers. Then, we again form the return string in the required format and return the result.**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. Here splitting takes constant time as length of the string is very small $$(<20)$$.\n\n* Space complexity : $$O(1)$$. Constant extra space is used."
+}

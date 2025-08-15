@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Number of Subsequences After One Inserting",
+  "problem_id": "3948",
+  "frontend_id": "3628",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-subsequences-after-one-inserting",
+  "topics": [],
+  "description": "You are given a string s consisting of uppercase English letters.\nYou are allowed to insert at most one uppercase English letter at any position (including the beginning or end) of the string.\nReturn the maximum number of \"LCT\" subsequences that can be formed in the resulting string after at most one insertion.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"LMCT\"\nOutput: 2\nExplanation:\nWe can insert a \"L\" at the beginning of the string s to make \"LLMCT\" , which has 2 subsequences, at indices [0, 3, 4] and [1, 3, 4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"LCCT\"\nOutput: 4\nExplanation:\nWe can insert a \"L\" at the beginning of the string s to make \"LLCCT\" , which has 4 subsequences, at indices [0, 2, 4], [0, 3, 4], [1, 2, 4] and [1, 3, 4].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"L\"\nOutput: 0\nExplanation:\nSince it is not possible to obtain the subsequence \"LCT\" by inserting a single letter, the result is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of uppercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precompute <code>preL</code>, <code>preLC</code>, <code>sufT</code>, and <code>sufCT</code> arrays to count L’s, LC’s, T’s, and CT’s at each position.",
+    "Compute <code>base</code> as the sum over all i of <code>preLC[i] * sufT[i]</code>.",
+    "For each insert position i, compute gains <code>sufCT[i]</code> for ‘L’, <code>preL[i] * sufT[i]</code> for ‘C’, and <code>preLC[i]</code> for ‘T’, and take the maximum of <code>base</code> and <code>base + gain</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numOfSubsequences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numOfSubsequences(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfSubsequences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfSubsequences(self, s: str) -> int:\n        ",
+    "c": "long long numOfSubsequences(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumOfSubsequences(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numOfSubsequences = function(s) {\n    \n};",
+    "typescript": "function numOfSubsequences(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numOfSubsequences($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfSubsequences(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfSubsequences(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfSubsequences(String s) {\n    \n  }\n}",
+    "golang": "func numOfSubsequences(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_of_subsequences(s)\n    \nend",
+    "scala": "object Solution {\n    def numOfSubsequences(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_subsequences(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-subsequences s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_of_subsequences(S :: unicode:unicode_binary()) -> integer().\nnum_of_subsequences(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_subsequences(s :: String.t) :: integer\n  def num_of_subsequences(s) do\n    \n  end\nend"
+  }
+}

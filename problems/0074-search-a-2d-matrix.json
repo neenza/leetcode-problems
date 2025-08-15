@@ -1,0 +1,58 @@
+{
+  "title": "Search a 2D Matrix",
+  "problem_id": "74",
+  "frontend_id": "74",
+  "difficulty": "Medium",
+  "problem_slug": "search-a-2d-matrix",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer matrix matrix with the following two properties:\nGiven an integer target, return true if target is in matrix or false otherwise.\nYou must write a solution in O(log(m * n)) time complexity.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/05/mat.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/05/mat2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 100",
+    "-104 <= matrix[i][j], target <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:\n        ",
+    "c": "bool searchMatrix(int** matrix, int matrixSize, int* matrixColSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool SearchMatrix(int[][] matrix, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} target\n * @return {boolean}\n */\nvar searchMatrix = function(matrix, target) {\n    \n};",
+    "typescript": "function searchMatrix(matrix: number[][], target: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @param Integer $target\n     * @return Boolean\n     */\n    function searchMatrix($matrix, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool searchMatrix(List<List<int>> matrix, int target) {\n    \n  }\n}",
+    "golang": "func searchMatrix(matrix [][]int, target int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @param {Integer} target\n# @return {Boolean}\ndef search_matrix(matrix, target)\n    \nend",
+    "scala": "object Solution {\n    def searchMatrix(matrix: Array[Array[Int]], target: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (search-matrix matrix target)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
+    "erlang": "-spec search_matrix(Matrix :: [[integer()]], Target :: integer()) -> boolean().\nsearch_matrix(Matrix, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec search_matrix(matrix :: [[integer]], target :: integer) :: boolean\n  def search_matrix(matrix, target) do\n    \n  end\nend"
+  }
+}

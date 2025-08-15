@@ -1,0 +1,59 @@
+{
+  "title": "Number of Pairs of Interchangeable Rectangles",
+  "problem_id": "2129",
+  "frontend_id": "2001",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-pairs-of-interchangeable-rectangles",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting",
+    "Number Theory"
+  ],
+  "description": "You are given n rectangles represented by a 0-indexed 2D integer array rectangles, where rectangles[i] = [widthi, heighti] denotes the width and height of the ith rectangle.\nTwo rectangles i and j (i < j) are considered interchangeable if they have the same width-to-height ratio. More formally, two rectangles are interchangeable if widthi/heighti == widthj/heightj (using decimal division, not integer division).\nReturn the number of pairs of interchangeable rectangles in rectangles.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rectangles = [[4,8],[3,6],[10,20],[15,30]]\nOutput: 6\nExplanation: The following are the interchangeable pairs of rectangles by index (0-indexed):\n- Rectangle 0 with rectangle 1: 4/8 == 3/6.\n- Rectangle 0 with rectangle 2: 4/8 == 10/20.\n- Rectangle 0 with rectangle 3: 4/8 == 15/30.\n- Rectangle 1 with rectangle 2: 3/6 == 10/20.\n- Rectangle 1 with rectangle 3: 3/6 == 15/30.\n- Rectangle 2 with rectangle 3: 10/20 == 15/30.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rectangles = [[4,5],[7,8]]\nOutput: 0\nExplanation: There are no interchangeable pairs of rectangles.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == rectangles.length",
+    "1 <= n <= 105",
+    "rectangles[i].length == 2",
+    "1 <= widthi, heighti <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Store the rectangle height and width ratio in a hashmap.",
+    "Traverse the ratios, and for each ratio, use the frequency of the ratio to add to the total pair count."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long interchangeableRectangles(vector<vector<int>>& rectangles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long interchangeableRectangles(int[][] rectangles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def interchangeableRectangles(self, rectangles):\n        \"\"\"\n        :type rectangles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def interchangeableRectangles(self, rectangles: List[List[int]]) -> int:\n        ",
+    "c": "long long interchangeableRectangles(int** rectangles, int rectanglesSize, int* rectanglesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long InterchangeableRectangles(int[][] rectangles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} rectangles\n * @return {number}\n */\nvar interchangeableRectangles = function(rectangles) {\n    \n};",
+    "typescript": "function interchangeableRectangles(rectangles: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $rectangles\n     * @return Integer\n     */\n    function interchangeableRectangles($rectangles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func interchangeableRectangles(_ rectangles: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun interchangeableRectangles(rectangles: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int interchangeableRectangles(List<List<int>> rectangles) {\n    \n  }\n}",
+    "golang": "func interchangeableRectangles(rectangles [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} rectangles\n# @return {Integer}\ndef interchangeable_rectangles(rectangles)\n    \nend",
+    "scala": "object Solution {\n    def interchangeableRectangles(rectangles: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn interchangeable_rectangles(rectangles: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (interchangeable-rectangles rectangles)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec interchangeable_rectangles(Rectangles :: [[integer()]]) -> integer().\ninterchangeable_rectangles(Rectangles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec interchangeable_rectangles(rectangles :: [[integer]]) :: integer\n  def interchangeable_rectangles(rectangles) do\n    \n  end\nend"
+  }
+}

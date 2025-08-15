@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Operations to Make Array Elements Zero",
+  "problem_id": "3744",
+  "frontend_id": "3495",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-operations-to-make-array-elements-zero",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a 2D array queries, where queries[i] is of the form [l, r]. Each queries[i] defines an array of integers nums consisting of elements ranging from l to r, both inclusive.\nIn one operation, you can:\nYour task is to determine the minimum number of operations required to reduce all elements of the array to zero for each query. Return the sum of the results for all queries.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [[1,2],[2,4]]\nOutput: 3\nExplanation:\nFor queries[0] :\nFor queries[1] :\nThe output is 1 + 2 = 3 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [[2,6]]\nOutput: 4\nExplanation:\nFor queries[0] :\nThe output is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= queries.length <= 105",
+    "queries[i].length == 2",
+    "queries[i] == [l, r]",
+    "1 <= l < r <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For a number <code>x</code>, the number of <code>\"/4\"</code> operations to change it to 0 is <code>floor(log4(x)) + 1</code>.",
+    "Always pair the 2 numbers with the maximum <code>\"/4\"</code> operations needed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minOperations(vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minOperations(int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, queries: List[List[int]]) -> int:\n        ",
+    "c": "long long minOperations(int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinOperations(int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @return {number}\n */\nvar minOperations = function(queries) {\n    \n};",
+    "typescript": "function minOperations(queries: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $queries\n     * @return Integer\n     */\n    function minOperations($queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ queries: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(queries: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func minOperations(queries [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} queries\n# @return {Integer}\ndef min_operations(queries)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(queries: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(queries: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations queries)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Queries :: [[integer()]]) -> integer().\nmin_operations(Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(queries :: [[integer]]) :: integer\n  def min_operations(queries) do\n    \n  end\nend"
+  }
+}

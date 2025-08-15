@@ -1,0 +1,63 @@
+{
+  "title": "Maximize Sum of Weights after Edge Removals",
+  "problem_id": "3675",
+  "frontend_id": "3367",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-sum-of-weights-after-edge-removals",
+  "topics": [
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "There exists an undirected tree with n nodes numbered 0 to n - 1. You are given a 2D integer array edges of length n - 1, where edges[i] = [ui, vi, wi] indicates that there is an edge between nodes ui and vi with weight wi in the tree.\nYour task is to remove zero or more edges such that:\nReturn the maximum possible sum of weights for the remaining edges after making the necessary removals.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1,4],[0,2,2],[2,3,12],[2,4,6]], k = 2\nOutput: 22\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/10/30/test1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[0,1,5],[1,2,10],[0,3,15],[3,4,20],[3,5,5],[0,6,10]], k = 3\nOutput: 65\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= k <= n - 1",
+    "edges.length == n - 1",
+    "edges[i].length == 3",
+    "0 <= edges[i][0] <= n - 1",
+    "0 <= edges[i][1] <= n - 1",
+    "1 <= edges[i][2] <= 106",
+    "The input is generated such that edges form a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use DFS based approach here?",
+    "For each edge, find two sums: one including the edge and one excluding it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximizeSumOfWeights(vector<vector<int>>& edges, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximizeSumOfWeights(int[][] edges, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximizeSumOfWeights(self, edges, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximizeSumOfWeights(self, edges: List[List[int]], k: int) -> int:\n        ",
+    "c": "long long maximizeSumOfWeights(int** edges, int edgesSize, int* edgesColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximizeSumOfWeights(int[][] edges, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number} k\n * @return {number}\n */\nvar maximizeSumOfWeights = function(edges, k) {\n    \n};",
+    "typescript": "function maximizeSumOfWeights(edges: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximizeSumOfWeights($edges, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeSumOfWeights(_ edges: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximizeSumOfWeights(edges: Array<IntArray>, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeSumOfWeights(List<List<int>> edges, int k) {\n    \n  }\n}",
+    "golang": "func maximizeSumOfWeights(edges [][]int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer} k\n# @return {Integer}\ndef maximize_sum_of_weights(edges, k)\n    \nend",
+    "scala": "object Solution {\n    def maximizeSumOfWeights(edges: Array[Array[Int]], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_sum_of_weights(edges: Vec<Vec<i32>>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximize-sum-of-weights edges k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximize_sum_of_weights(Edges :: [[integer()]], K :: integer()) -> integer().\nmaximize_sum_of_weights(Edges, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximize_sum_of_weights(edges :: [[integer]], k :: integer) :: integer\n  def maximize_sum_of_weights(edges, k) do\n    \n  end\nend"
+  }
+}

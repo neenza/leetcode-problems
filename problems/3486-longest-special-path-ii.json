@@ -1,0 +1,68 @@
+{
+  "title": "Longest Special Path II",
+  "problem_id": "3798",
+  "frontend_id": "3486",
+  "difficulty": "Hard",
+  "problem_slug": "longest-special-path-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Tree",
+    "Depth-First Search",
+    "Prefix Sum"
+  ],
+  "description": "You are given an undirected tree rooted at node 0, with n nodes numbered from 0 to n - 1. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, lengthi] indicates an edge between nodes ui and vi with length lengthi. You are also given an integer array nums, where nums[i] represents the value at node i.\nA special path is defined as a downward path from an ancestor node to a descendant node in which all node values are distinct, except for at most one value that may appear twice.\nReturn an array result of size 2, where result[0] is the length of the longest special path, and result[1] is the minimum number of nodes in all possible longest special paths.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1,1],[1,2,3],[1,3,1],[2,4,6],[4,7,2],[3,5,2],[3,6,5],[6,8,3]], nums = [1,1,0,3,1,2,1,1,0]\nOutput: [9,3]\nExplanation:\nIn the image below, nodes are colored by their corresponding values in nums .\n\nThe longest special paths are 1 -> 2 -> 4 and 1 -> 3 -> 6 -> 8 , both having a length of 9. The minimum number of nodes across all longest special paths is 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/02/18/e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[1,0,3],[0,2,4],[0,3,5]], nums = [1,1,0,2]\nOutput: [5,2]\nExplanation:\n\nThe longest path is 0 -> 3 consisting of 2 nodes with a length of 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/02/18/e2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 5 * 104",
+    "edges.length == n - 1",
+    "edges[i].length == 3",
+    "0 <= ui, vi < n",
+    "1 <= lengthi <= 103",
+    "nums.length == n",
+    "0 <= nums[i] <= 5 * 104",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain a special path (from root to current node) dynamically.",
+    "Also, maintain the positions of each value on the path so we can adjust the start point of the path.",
+    "Use prefix sum to calculate the path length."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> longestSpecialPath(vector<vector<int>>& edges, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestSpecialPath(int[][] edges, int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSpecialPath(self, edges, nums):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSpecialPath(self, edges: List[List[int]], nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestSpecialPath(int** edges, int edgesSize, int* edgesColSize, int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] LongestSpecialPath(int[][] edges, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} nums\n * @return {number[]}\n */\nvar longestSpecialPath = function(edges, nums) {\n    \n};",
+    "typescript": "function longestSpecialPath(edges: number[][], nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function longestSpecialPath($edges, $nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSpecialPath(_ edges: [[Int]], _ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSpecialPath(edges: Array<IntArray>, nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> longestSpecialPath(List<List<int>> edges, List<int> nums) {\n    \n  }\n}",
+    "golang": "func longestSpecialPath(edges [][]int, nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer[]} nums\n# @return {Integer[]}\ndef longest_special_path(edges, nums)\n    \nend",
+    "scala": "object Solution {\n    def longestSpecialPath(edges: Array[Array[Int]], nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_special_path(edges: Vec<Vec<i32>>, nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (longest-special-path edges nums)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec longest_special_path(Edges :: [[integer()]], Nums :: [integer()]) -> [integer()].\nlongest_special_path(Edges, Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_special_path(edges :: [[integer]], nums :: [integer]) :: [integer]\n  def longest_special_path(edges, nums) do\n    \n  end\nend"
+  }
+}

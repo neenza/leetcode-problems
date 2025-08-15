@@ -1,0 +1,59 @@
+{
+  "title": "Max Increase to Keep City Skyline",
+  "problem_id": "825",
+  "frontend_id": "807",
+  "difficulty": "Medium",
+  "problem_slug": "max-increase-to-keep-city-skyline",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "description": "There is a city composed of n x n blocks, where each block contains a single building shaped like a vertical square prism. You are given a 0-indexed n x n integer matrix grid where grid[r][c] represents the height of the building located in the block at row r and column c.\nA city's skyline is the outer contour formed by all the building when viewing the side of the city from a distance. The skyline from each cardinal direction north, east, south, and west may be different.\nWe are allowed to increase the height of any number of buildings by any amount (the amount can be different per building). The height of a 0-height building can also be increased. However, increasing the height of a building should not affect the city's skyline from any cardinal direction.\nReturn the maximum total sum that the height of the buildings can be increased by without changing the city's skyline from any cardinal direction.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]\nOutput: 35\nExplanation: The building heights are shown in the center of the above image.\nThe skylines when viewed from each cardinal direction are drawn in red.\nThe grid after increasing the height of buildings without affecting skylines is:\ngridNew = [ [8, 4, 8, 7],\n            [7, 4, 7, 7],\n            [9, 4, 8, 7],\n            [3, 3, 3, 3] ]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/21/807-ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,0,0],[0,0,0],[0,0,0]]\nOutput: 0\nExplanation: Increasing the height of any building will result in the skyline changing.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/21/807-ex1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length",
+    "n == grid[r].length",
+    "2 <= n <= 50",
+    "0 <= grid[r][c] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxIncreaseKeepingSkyline(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxIncreaseKeepingSkyline(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxIncreaseKeepingSkyline(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maxIncreaseKeepingSkyline(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxIncreaseKeepingSkyline(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxIncreaseKeepingSkyline = function(grid) {\n    \n};",
+    "typescript": "function maxIncreaseKeepingSkyline(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxIncreaseKeepingSkyline($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxIncreaseKeepingSkyline(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxIncreaseKeepingSkyline(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxIncreaseKeepingSkyline(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maxIncreaseKeepingSkyline(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_increase_keeping_skyline(grid)\n    \nend",
+    "scala": "object Solution {\n    def maxIncreaseKeepingSkyline(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_increase_keeping_skyline(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-increase-keeping-skyline grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_increase_keeping_skyline(Grid :: [[integer()]]) -> integer().\nmax_increase_keeping_skyline(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_increase_keeping_skyline(grid :: [[integer]]) :: integer\n  def max_increase_keeping_skyline(grid) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Row and Column Maximums [Accepted]\n\n**Intuition and Algorithm**\n\nThe skyline looking from the top is `col_maxes = [max(column_0), max(column_1), ...]`.  Similarly, the skyline from the left is `row_maxes [max(row_0), max(row_1), ...]`\n\nIn particular, each building `grid[r][c]` could become height `min(max(row_r), max(col_c))`, and this is the largest such height.  If it were larger, say `grid[r][c] > max(row_r)`, then the part of the skyline `row_maxes = [..., max(row_r), ...]` would change.\n\nThese increases are also independent (none of them change the skyline), so we can perform them independently.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the number of rows (and columns) of the grid.  We iterate through every cell of the grid.\n\n* Space Complexity: $$O(N)$$, the space used by `row_maxes` and `col_maxes`."
+}

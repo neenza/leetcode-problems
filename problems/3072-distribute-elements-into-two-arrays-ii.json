@@ -1,0 +1,61 @@
+{
+  "title": "Distribute Elements Into Two Arrays II",
+  "problem_id": "3350",
+  "frontend_id": "3072",
+  "difficulty": "Hard",
+  "problem_slug": "distribute-elements-into-two-arrays-ii",
+  "topics": [
+    "Array",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Simulation"
+  ],
+  "description": "You are given a 1-indexed array of integers nums of length n.\nWe define a function greaterCount such that greaterCount(arr, val) returns the number of elements in arr that are strictly greater than val.\nYou need to distribute all the elements of nums between two arrays arr1 and arr2 using n operations. In the first operation, append nums[1] to arr1. In the second operation, append nums[2] to arr2. Afterwards, in the ith operation:\nThe array result is formed by concatenating the arrays arr1 and arr2. For example, if arr1 == [1,2,3] and arr2 == [4,5,6], then result = [1,2,3,4,5,6].\nReturn the integer array result.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,3,3]\nOutput: [2,3,1,3]\nExplanation: After the first 2 operations, arr1 = [2] and arr2 = [1].\nIn the 3rd operation, the number of elements greater than 3 is zero in both arrays. Also, the lengths are equal, hence, append nums[3] to arr1.\nIn the 4th operation, the number of elements greater than 3 is zero in both arrays. As the length of arr2 is lesser, hence, append nums[4] to arr2.\nAfter 4 operations, arr1 = [2,3] and arr2 = [1,3].\nHence, the array result formed by concatenation is [2,3,1,3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,14,3,1,2]\nOutput: [5,3,1,2,14]\nExplanation: After the first 2 operations, arr1 = [5] and arr2 = [14].\nIn the 3rd operation, the number of elements greater than 3 is one in both arrays. Also, the lengths are equal, hence, append nums[3] to arr1.\nIn the 4th operation, the number of elements greater than 1 is greater in arr1 than arr2 (2 > 1). Hence, append nums[4] to arr1.\nIn the 5th operation, the number of elements greater than 2 is greater in arr1 than arr2 (2 > 1). Hence, append nums[5] to arr1.\nAfter 5 operations, arr1 = [5,3,1,2] and arr2 = [14].\nHence, the array result formed by concatenation is [5,3,1,2,14].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,3,3,3]\nOutput: [3,3,3,3]\nExplanation: At the end of 4 operations, arr1 = [3,3] and arr2 = [3,3].\nHence, the array result formed by concatenation is [3,3,3,3].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We need a data structure that counts the number of integers greater than a given value <code>x</code> and supports insertion.",
+    "Use Segment Tree or Binary Indexed Tree by compressing the numbers to the range <code>[1,n]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> resultArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] resultArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def resultArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def resultArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* resultArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ResultArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar resultArray = function(nums) {\n    \n};",
+    "typescript": "function resultArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function resultArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func resultArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun resultArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> resultArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func resultArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef result_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def resultArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn result_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (result-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec result_array(Nums :: [integer()]) -> [integer()].\nresult_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec result_array(nums :: [integer]) :: [integer]\n  def result_array(nums) do\n    \n  end\nend"
+  }
+}

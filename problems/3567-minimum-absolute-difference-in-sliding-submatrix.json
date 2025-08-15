@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Absolute Difference in Sliding Submatrix",
+  "problem_id": "3884",
+  "frontend_id": "3567",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-absolute-difference-in-sliding-submatrix",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer matrix grid and an integer k.\nFor every contiguous k x k submatrix of grid, compute the minimum absolute difference between any two distinct values within that submatrix.\nReturn a 2D array ans of size (m - k + 1) x (n - k + 1), where ans[i][j] is the minimum absolute difference in the submatrix whose top-left corner is (i, j) in grid.\nNote: If all elements in the submatrix have the same value, the answer will be 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,8],[3,-2]], k = 2\nOutput: [[2]]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[3,-1]], k = 1\nOutput: [[0,0]]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,-2,3],[2,3,5]], k = 2\nOutput: [[1,2]]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= m == grid.length <= 30",
+    "1 <= n == grid[i].length <= 30",
+    "-105 <= grid[i][j] <= 105",
+    "1 <= k <= min(m, n)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use bruteforce over the submatrices"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> minAbsDiff(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] minAbsDiff(int[][] grid, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minAbsDiff(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minAbsDiff(self, grid: List[List[int]], k: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** minAbsDiff(int** grid, int gridSize, int* gridColSize, int k, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] MinAbsDiff(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number[][]}\n */\nvar minAbsDiff = function(grid, k) {\n    \n};",
+    "typescript": "function minAbsDiff(grid: number[][], k: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $k\n     * @return Integer[][]\n     */\n    function minAbsDiff($grid, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minAbsDiff(_ grid: [[Int]], _ k: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minAbsDiff(grid: Array<IntArray>, k: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> minAbsDiff(List<List<int>> grid, int k) {\n    \n  }\n}",
+    "golang": "func minAbsDiff(grid [][]int, k int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} k\n# @return {Integer[][]}\ndef min_abs_diff(grid, k)\n    \nend",
+    "scala": "object Solution {\n    def minAbsDiff(grid: Array[Array[Int]], k: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_abs_diff(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (min-abs-diff grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec min_abs_diff(Grid :: [[integer()]], K :: integer()) -> [[integer()]].\nmin_abs_diff(Grid, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_abs_diff(grid :: [[integer]], k :: integer) :: [[integer]]\n  def min_abs_diff(grid, k) do\n    \n  end\nend"
+  }
+}

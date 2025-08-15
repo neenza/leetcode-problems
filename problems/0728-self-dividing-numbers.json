@@ -1,0 +1,52 @@
+{
+  "title": "Self Dividing Numbers",
+  "problem_id": "728",
+  "frontend_id": "728",
+  "difficulty": "Easy",
+  "problem_slug": "self-dividing-numbers",
+  "topics": [
+    "Math"
+  ],
+  "description": "A self-dividing number is a number that is divisible by every digit it contains.\nA self-dividing number is not allowed to contain the digit zero.\nGiven two integers left and right, return a list of all the self-dividing numbers in the range [left, right] (both inclusive).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: left = 1, right = 22\nOutput: [1,2,3,4,5,6,7,8,9,11,12,15,22]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: left = 47, right = 85\nOutput: [48,55,66,77]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= left <= right <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each number in the range, check whether it is self dividing by converting that number to a character array (or string in Python), then checking that each digit is nonzero and divides the original number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> selfDividingNumbers(int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> selfDividingNumbers(int left, int right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def selfDividingNumbers(self, left, right):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def selfDividingNumbers(self, left: int, right: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* selfDividingNumbers(int left, int right, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> SelfDividingNumbers(int left, int right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} left\n * @param {number} right\n * @return {number[]}\n */\nvar selfDividingNumbers = function(left, right) {\n    \n};",
+    "typescript": "function selfDividingNumbers(left: number, right: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $left\n     * @param Integer $right\n     * @return Integer[]\n     */\n    function selfDividingNumbers($left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func selfDividingNumbers(_ left: Int, _ right: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun selfDividingNumbers(left: Int, right: Int): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> selfDividingNumbers(int left, int right) {\n    \n  }\n}",
+    "golang": "func selfDividingNumbers(left int, right int) []int {\n    \n}",
+    "ruby": "# @param {Integer} left\n# @param {Integer} right\n# @return {Integer[]}\ndef self_dividing_numbers(left, right)\n    \nend",
+    "scala": "object Solution {\n    def selfDividingNumbers(left: Int, right: Int): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (self-dividing-numbers left right)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec self_dividing_numbers(Left :: integer(), Right :: integer()) -> [integer()].\nself_dividing_numbers(Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec self_dividing_numbers(left :: integer, right :: integer) :: [integer]\n  def self_dividing_numbers(left, right) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach : Brute Force [Accepted]\n\n**Intuition and Algorithm**\n\nFor each number in the given range, we will directly test if that number is self-dividing.\n\nBy definition, we want to test each whether each digit is non-zero and divide the number. For example, with `128`, we want to test `d != 0 && 128 % d == 0` for `d = 1, 2, 8`.  To do that, we need to iterate over each digit of the number.\n\nA straightforward approach to that problem would be to convert the number into a character array (string in Python), and then convert it back to an integer to perform the modulo operation when checking `n % d == 0`.\n\nWe could also continually divide the number by 10 and peek at the last digit.  That is shown as a variation in a comment.**Complexity Analysis**\n\n* Time Complexity: We iterate through each digit in the given number; therefore, the time complexity is $O(D)$, where $D$ represents the number of digits in the number.\n\n* Space Complexity: $$O(1)$$, since we do not include the output size in space complexity calculations and only consider the intermediate variables or references used during the computation."
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Count Pairs With XOR in a Range",
+  "problem_id": "1907",
+  "frontend_id": "1803",
+  "difficulty": "Hard",
+  "problem_slug": "count-pairs-with-xor-in-a-range",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Trie"
+  ],
+  "description": "Given a (0-indexed) integer array nums and two integers low and high, return the number of nice pairs.\nA nice pair is a pair (i, j) where 0 <= i < j < nums.length and low <= (nums[i] XOR nums[j]) <= high.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,4,2,7], low = 2, high = 6\r\nOutput: 6\r\nExplanation: All nice pairs (i, j) are as follows:\r\n    - (0, 1): nums[0] XOR nums[1] = 5 \r\n    - (0, 2): nums[0] XOR nums[2] = 3\r\n    - (0, 3): nums[0] XOR nums[3] = 6\r\n    - (1, 2): nums[1] XOR nums[2] = 6\r\n    - (1, 3): nums[1] XOR nums[3] = 3\r\n    - (2, 3): nums[2] XOR nums[3] = 5",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [9,8,4,2,1], low = 5, high = 14\r\nOutput: 8\r\nExplanation: All nice pairs (i, j) are as follows:\r\n​​​​​    - (0, 2): nums[0] XOR nums[2] = 13\r\n    - (0, 3): nums[0] XOR nums[3] = 11\r\n    - (0, 4): nums[0] XOR nums[4] = 8\r\n    - (1, 2): nums[1] XOR nums[2] = 12\r\n    - (1, 3): nums[1] XOR nums[3] = 10\r\n    - (1, 4): nums[1] XOR nums[4] = 9\r\n    - (2, 3): nums[2] XOR nums[3] = 6\r\n    - (2, 4): nums[2] XOR nums[4] = 5",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2 * 104",
+    "1 <= nums[i] <= 2 * 104",
+    "1 <= low <= high <= 2 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let's note that we can count all pairs with XOR ≤ K, so the answer would be to subtract the number of pairs withs XOR < low from the number of pairs with XOR ≤ high.",
+    "For each value, find out the number of values when you XOR it with the result is  ≤ K using a trie."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPairs(vector<int>& nums, int low, int high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPairs(int[] nums, int low, int high) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairs(self, nums, low, high):\n        \"\"\"\n        :type nums: List[int]\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairs(self, nums: List[int], low: int, high: int) -> int:\n        ",
+    "c": "\n\nint countPairs(int* nums, int numsSize, int low, int high){\n\n}",
+    "csharp": "public class Solution {\n    public int CountPairs(int[] nums, int low, int high) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} low\n * @param {number} high\n * @return {number}\n */\nvar countPairs = function(nums, low, high) {\n    \n};",
+    "typescript": "function countPairs(nums: number[], low: number, high: number): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $low\n     * @param Integer $high\n     * @return Integer\n     */\n    function countPairs($nums, $low, $high) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairs(_ nums: [Int], _ low: Int, _ high: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairs(nums: IntArray, low: Int, high: Int): Int {\n        \n    }\n}",
+    "golang": "func countPairs(nums []int, low int, high int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} low\n# @param {Integer} high\n# @return {Integer}\ndef count_pairs(nums, low, high)\n    \nend",
+    "scala": "object Solution {\n    def countPairs(nums: Array[Int], low: Int, high: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs(nums: Vec<i32>, low: i32, high: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs nums low high)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n\n  )"
+  }
+}

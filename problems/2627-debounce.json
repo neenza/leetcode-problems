@@ -1,0 +1,47 @@
+{
+  "title": "Debounce",
+  "problem_id": "2743",
+  "frontend_id": "2627",
+  "difficulty": "Medium",
+  "problem_slug": "debounce",
+  "topics": [],
+  "description": "Given a function fn and a time in milliseconds t, return a debounced version of that function.\nA debounced function is a function whose execution is delayed by t milliseconds and whose execution is cancelled if it is called again within that window of time. The debounced function should also receive the passed parameters.\nFor example, let's say t = 50ms, and the function was called at 30ms, 60ms, and 100ms.\nThe first 2 function calls would be cancelled, and the 3rd function call would be executed at 150ms.\nIf instead t = 35ms, The 1st call would be cancelled, the 2nd would be executed at 95ms, and the 3rd would be executed at 135ms.\nThe above diagram shows how debounce will transform events. Each rectangle represents 100ms and the debounce time is 400ms. Each color represents a different set of inputs.\nPlease solve it without using lodash's _.debounce() function.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: \nt = 50\ncalls = [\n  {\"t\": 50, inputs: [1]},\n  {\"t\": 75, inputs: [2]}\n]\nOutput: [{\"t\": 125, inputs: [2]}]\nExplanation:\nlet start = Date.now();\nfunction log(...inputs) { \n  console.log([Date.now() - start, inputs ])\n}\nconst dlog = debounce(log, 50);\nsetTimeout(() => dlog(1), 50);\nsetTimeout(() => dlog(2), 75);\n\nThe 1st call is cancelled by the 2nd call because the 2nd call occurred before 100ms\nThe 2nd call is delayed by 50ms and executed at 125ms. The inputs were (2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/04/08/screen-shot-2023-04-08-at-11048-pm.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nt = 20\ncalls = [\n  {\"t\": 50, inputs: [1]},\n  {\"t\": 100, inputs: [2]}\n]\nOutput: [{\"t\": 70, inputs: [1]}, {\"t\": 120, inputs: [2]}]\nExplanation:\nThe 1st call is delayed until 70ms. The inputs were (1).\nThe 2nd call is delayed until 120ms. The inputs were (2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/04/08/screen-shot-2023-04-08-at-11048-pm.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nt = 150\ncalls = [\n  {\"t\": 50, inputs: [1, 2]},\n  {\"t\": 300, inputs: [3, 4]},\n  {\"t\": 300, inputs: [5, 6]}\n]\nOutput: [{\"t\": 200, inputs: [1,2]}, {\"t\": 450, inputs: [5, 6]}]\nExplanation:\nThe 1st call is delayed by 150ms and ran at 200ms. The inputs were (1, 2).\nThe 2nd call is cancelled by the 3rd call\nThe 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/04/08/screen-shot-2023-04-08-at-11048-pm.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "0 <= t <= 1000",
+    "1 <= calls.length <= 10",
+    "0 <= calls[i].t <= 1000",
+    "0 <= calls[i].inputs.length <= 10"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You execute code with a delay with \"ref = setTimeout(fn, delay)\". You can abort the execution of that code with \"clearTimeout(ref)\"",
+    "Whenever you call the function, you should abort any existing scheduled code. Then, you should schedule code to be executed after some delay."
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @param {Function} fn\n * @param {number} t milliseconds\n * @return {Function}\n */\nvar debounce = function(fn, t) {\n    \n    return function(...args) {\n        \n    }\n};\n\n/**\n * const log = debounce(console.log, 100);\n * log('Hello'); // cancelled\n * log('Hello'); // cancelled\n * log('Hello'); // Logged at t=100ms\n */",
+    "typescript": "type F = (...args: number[]) => void\n\nfunction debounce(fn: F, t: number): F {\n    \n    return function(...args) {\n        \n    }\n};\n\n/**\n * const log = debounce(console.log, 100);\n * log('Hello'); // cancelled\n * log('Hello'); // cancelled\n * log('Hello'); // Logged at t=100ms\n */"
+  }
+}

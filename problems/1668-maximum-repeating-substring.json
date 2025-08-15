@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Repeating Substring",
+  "problem_id": "1764",
+  "frontend_id": "1668",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-repeating-substring",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "String Matching"
+  ],
+  "description": "For a string sequence, a string word is k-repeating if word concatenated k times is a substring of sequence. The word's maximum k-repeating value is the highest value k where word is k-repeating in sequence. If word is not a substring of sequence, word's maximum k-repeating value is 0.\nGiven strings sequence and word, return the maximum k-repeating value of word in sequence.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: sequence = \"ababc\", word = \"ab\"\nOutput: 2\nExplanation: \"abab\" is a substring in \"ababc\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: sequence = \"ababc\", word = \"ba\"\nOutput: 1\nExplanation: \"ba\" is a substring in \"ababc\". \"baba\" is not a substring in \"ababc\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: sequence = \"ababc\", word = \"ac\"\nOutput: 0\nExplanation: \"ac\" is not a substring in \"ababc\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= sequence.length <= 100",
+    "1 <= word.length <= 100",
+    "sequence and word contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are low enough for a brute force approach.",
+    "Try every k value from 0 upwards until word is no longer k-repeating."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxRepeating(string sequence, string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRepeating(String sequence, String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRepeating(self, sequence, word):\n        \"\"\"\n        :type sequence: str\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRepeating(self, sequence: str, word: str) -> int:\n        ",
+    "c": "int maxRepeating(char* sequence, char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxRepeating(string sequence, string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} sequence\n * @param {string} word\n * @return {number}\n */\nvar maxRepeating = function(sequence, word) {\n    \n};",
+    "typescript": "function maxRepeating(sequence: string, word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $sequence\n     * @param String $word\n     * @return Integer\n     */\n    function maxRepeating($sequence, $word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRepeating(_ sequence: String, _ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRepeating(sequence: String, word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRepeating(String sequence, String word) {\n    \n  }\n}",
+    "golang": "func maxRepeating(sequence string, word string) int {\n    \n}",
+    "ruby": "# @param {String} sequence\n# @param {String} word\n# @return {Integer}\ndef max_repeating(sequence, word)\n    \nend",
+    "scala": "object Solution {\n    def maxRepeating(sequence: String, word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_repeating(sequence: String, word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-repeating sequence word)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec max_repeating(Sequence :: unicode:unicode_binary(), Word :: unicode:unicode_binary()) -> integer().\nmax_repeating(Sequence, Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_repeating(sequence :: String.t, word :: String.t) :: integer\n  def max_repeating(sequence, word) do\n    \n  end\nend"
+  }
+}

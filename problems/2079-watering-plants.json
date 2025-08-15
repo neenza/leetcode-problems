@@ -1,0 +1,61 @@
+{
+  "title": "Watering Plants",
+  "problem_id": "1310",
+  "frontend_id": "2079",
+  "difficulty": "Medium",
+  "problem_slug": "watering-plants",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "You want to water n plants in your garden with a watering can. The plants are arranged in a row and are labeled from 0 to n - 1 from left to right where the ith plant is located at x = i. There is a river at x = -1 that you can refill your watering can at.\nEach plant needs a specific amount of water. You will water the plants in the following way:\nYou are initially at the river (i.e., x = -1). It takes one step to move one unit on the x-axis.\nGiven a 0-indexed integer array plants of n integers, where plants[i] is the amount of water the ith plant needs, and an integer capacity representing the watering can capacity, return the number of steps needed to water all the plants.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: plants = [2,2,3,3], capacity = 5\nOutput: 14\nExplanation: Start at the river with a full watering can:\n- Walk to plant 0 (1 step) and water it. Watering can has 3 units of water.\n- Walk to plant 1 (1 step) and water it. Watering can has 1 unit of water.\n- Since you cannot completely water plant 2, walk back to the river to refill (2 steps).\n- Walk to plant 2 (3 steps) and water it. Watering can has 2 units of water.\n- Since you cannot completely water plant 3, walk back to the river to refill (3 steps).\n- Walk to plant 3 (4 steps) and water it.\nSteps needed = 1 + 1 + 2 + 3 + 3 + 4 = 14.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: plants = [1,1,1,4,2,3], capacity = 4\nOutput: 30\nExplanation: Start at the river with a full watering can:\n- Water plants 0, 1, and 2 (3 steps). Return to river (3 steps).\n- Water plant 3 (4 steps). Return to river (4 steps).\n- Water plant 4 (5 steps). Return to river (5 steps).\n- Water plant 5 (6 steps).\nSteps needed = 3 + 3 + 4 + 4 + 5 + 5 + 6 = 30.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: plants = [7,7,7,7,7,7,7], capacity = 8\nOutput: 49\nExplanation: You have to refill before watering each plant.\nSteps needed = 1 + 1 + 2 + 2 + 3 + 3 + 4 + 4 + 5 + 5 + 6 + 6 + 7 = 49.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == plants.length",
+    "1 <= n <= 1000",
+    "1 <= plants[i] <= 106",
+    "max(plants[i]) <= capacity <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process.",
+    "Return to refill the container once you meet a plant that needs more water than you have."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int wateringPlants(vector<int>& plants, int capacity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int wateringPlants(int[] plants, int capacity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def wateringPlants(self, plants, capacity):\n        \"\"\"\n        :type plants: List[int]\n        :type capacity: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def wateringPlants(self, plants: List[int], capacity: int) -> int:\n        ",
+    "c": "int wateringPlants(int* plants, int plantsSize, int capacity) {\n    \n}",
+    "csharp": "public class Solution {\n    public int WateringPlants(int[] plants, int capacity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} plants\n * @param {number} capacity\n * @return {number}\n */\nvar wateringPlants = function(plants, capacity) {\n    \n};",
+    "typescript": "function wateringPlants(plants: number[], capacity: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $plants\n     * @param Integer $capacity\n     * @return Integer\n     */\n    function wateringPlants($plants, $capacity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func wateringPlants(_ plants: [Int], _ capacity: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun wateringPlants(plants: IntArray, capacity: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int wateringPlants(List<int> plants, int capacity) {\n    \n  }\n}",
+    "golang": "func wateringPlants(plants []int, capacity int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} plants\n# @param {Integer} capacity\n# @return {Integer}\ndef watering_plants(plants, capacity)\n    \nend",
+    "scala": "object Solution {\n    def wateringPlants(plants: Array[Int], capacity: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn watering_plants(plants: Vec<i32>, capacity: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (watering-plants plants capacity)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec watering_plants(Plants :: [integer()], Capacity :: integer()) -> integer().\nwatering_plants(Plants, Capacity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec watering_plants(plants :: [integer], capacity :: integer) :: integer\n  def watering_plants(plants, capacity) do\n    \n  end\nend"
+  }
+}

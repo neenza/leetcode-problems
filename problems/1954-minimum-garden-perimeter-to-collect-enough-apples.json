@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Garden Perimeter to Collect Enough Apples",
+  "problem_id": "1295",
+  "frontend_id": "1954",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-garden-perimeter-to-collect-enough-apples",
+  "topics": [
+    "Math",
+    "Binary Search"
+  ],
+  "description": "In a garden represented as an infinite 2D grid, there is an apple tree planted at every integer coordinate. The apple tree planted at an integer coordinate (i, j) has |i| + |j| apples growing on it.\nYou will buy an axis-aligned square plot of land that is centered at (0, 0).\nGiven an integer neededApples, return the minimum perimeter of a plot such that at least neededApples apples are inside or on the perimeter of that plot.\nThe value of |x| is defined as:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: neededApples = 1\nOutput: 8\nExplanation: A square plot of side length 1 does not contain any apples.\nHowever, a square plot of side length 2 has 12 apples inside (as depicted in the image above).\nThe perimeter is 2 * 4 = 8.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/08/30/1527_example_1_2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: neededApples = 13\nOutput: 16",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/08/30/1527_example_1_2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: neededApples = 1000000000\nOutput: 5040",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/08/30/1527_example_1_2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= neededApples <= 1015"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find a formula for the number of apples inside a square with a side length L.",
+    "Iterate over the possible lengths of the square until enough apples are collected."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumPerimeter(long long neededApples) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumPerimeter(long neededApples) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumPerimeter(self, neededApples):\n        \"\"\"\n        :type neededApples: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumPerimeter(self, neededApples: int) -> int:\n        ",
+    "c": "long long minimumPerimeter(long long neededApples) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumPerimeter(long neededApples) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} neededApples\n * @return {number}\n */\nvar minimumPerimeter = function(neededApples) {\n    \n};",
+    "typescript": "function minimumPerimeter(neededApples: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $neededApples\n     * @return Integer\n     */\n    function minimumPerimeter($neededApples) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumPerimeter(_ neededApples: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumPerimeter(neededApples: Long): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumPerimeter(int neededApples) {\n    \n  }\n}",
+    "golang": "func minimumPerimeter(neededApples int64) int64 {\n    \n}",
+    "ruby": "# @param {Integer} needed_apples\n# @return {Integer}\ndef minimum_perimeter(needed_apples)\n    \nend",
+    "scala": "object Solution {\n    def minimumPerimeter(neededApples: Long): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_perimeter(needed_apples: i64) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-perimeter neededApples)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_perimeter(NeededApples :: integer()) -> integer().\nminimum_perimeter(NeededApples) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_perimeter(needed_apples :: integer) :: integer\n  def minimum_perimeter(needed_apples) do\n    \n  end\nend"
+  }
+}

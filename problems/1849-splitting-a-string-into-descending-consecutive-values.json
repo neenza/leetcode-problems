@@ -1,0 +1,60 @@
+{
+  "title": "Splitting a String Into Descending Consecutive Values",
+  "problem_id": "1976",
+  "frontend_id": "1849",
+  "difficulty": "Medium",
+  "problem_slug": "splitting-a-string-into-descending-consecutive-values",
+  "topics": [
+    "String",
+    "Backtracking",
+    "Enumeration"
+  ],
+  "description": "You are given a string s that consists of only digits.\nCheck if we can split s into two or more non-empty substrings such that the numerical values of the substrings are in descending order and the difference between numerical values of every two adjacent substrings is equal to 1.\nReturn true if it is possible to split s​​​​​​ as described above, or false otherwise.\nA substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1234\"\nOutput: false\nExplanation: There is no valid way to split s.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"050043\"\nOutput: true\nExplanation: s can be split into [\"05\", \"004\", \"3\"] with numerical values [5,4,3].\nThe values are in descending order with adjacent values differing by 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"9080701\"\nOutput: false\nExplanation: There is no valid way to split s.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 20",
+    "s only consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One solution is to try all possible splits using backtrack",
+    "Look out for trailing zeros in string"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool splitString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean splitString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitString(self, s: str) -> bool:\n        ",
+    "c": "bool splitString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool SplitString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar splitString = function(s) {\n    \n};",
+    "typescript": "function splitString(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function splitString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitString(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitString(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool splitString(String s) {\n    \n  }\n}",
+    "golang": "func splitString(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef split_string(s)\n    \nend",
+    "scala": "object Solution {\n    def splitString(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_string(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (split-string s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec split_string(S :: unicode:unicode_binary()) -> boolean().\nsplit_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_string(s :: String.t) :: boolean\n  def split_string(s) do\n    \n  end\nend"
+  }
+}

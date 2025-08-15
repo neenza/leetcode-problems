@@ -1,0 +1,59 @@
+{
+  "title": "Friends Of Appropriate Ages",
+  "problem_id": "852",
+  "frontend_id": "825",
+  "difficulty": "Medium",
+  "problem_slug": "friends-of-appropriate-ages",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "There are n persons on a social media website. You are given an integer array ages where ages[i] is the age of the ith person.\nA Person x will not send a friend request to a person y (x != y) if any of the following conditions is true:\nOtherwise, x will send a friend request to y.\nNote that if x sends a request to y, y will not necessarily send a request to x. Also, a person will not send a friend request to themself.\nReturn the total number of friend requests made.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ages = [16,16]\nOutput: 2\nExplanation: 2 people friend request each other.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ages = [16,17,18]\nOutput: 2\nExplanation: Friend requests are made 17 -> 16, 18 -> 17.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: ages = [20,30,100,110,120]\nOutput: 3\nExplanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == ages.length",
+    "1 <= n <= 2 * 104",
+    "1 <= ages[i] <= 120"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numFriendRequests(vector<int>& ages) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numFriendRequests(int[] ages) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numFriendRequests(self, ages):\n        \"\"\"\n        :type ages: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numFriendRequests(self, ages: List[int]) -> int:\n        ",
+    "c": "int numFriendRequests(int* ages, int agesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumFriendRequests(int[] ages) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} ages\n * @return {number}\n */\nvar numFriendRequests = function(ages) {\n    \n};",
+    "typescript": "function numFriendRequests(ages: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $ages\n     * @return Integer\n     */\n    function numFriendRequests($ages) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numFriendRequests(_ ages: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numFriendRequests(ages: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numFriendRequests(List<int> ages) {\n    \n  }\n}",
+    "golang": "func numFriendRequests(ages []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} ages\n# @return {Integer}\ndef num_friend_requests(ages)\n    \nend",
+    "scala": "object Solution {\n    def numFriendRequests(ages: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_friend_requests(ages: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-friend-requests ages)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_friend_requests(Ages :: [integer()]) -> integer().\nnum_friend_requests(Ages) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_friend_requests(ages :: [integer]) :: integer\n  def num_friend_requests(ages) do\n    \n  end\nend"
+  }
+}

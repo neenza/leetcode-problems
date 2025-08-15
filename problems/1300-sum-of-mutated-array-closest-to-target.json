@@ -1,0 +1,61 @@
+{
+  "title": "Sum of Mutated Array Closest to Target",
+  "problem_id": "1232",
+  "frontend_id": "1300",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-mutated-array-closest-to-target",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "Given an integer array arr and a target value target, return the integer value such that when we change all the integers larger than value in the given array to be equal to value, the sum of the array gets as close as possible (in absolute difference) to target.\nIn case of a tie, return the minimum such integer.\nNotice that the answer is not neccesarilly a number from arr.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [4,9,3], target = 10\nOutput: 3\nExplanation: When using 3 arr converts to [3, 3, 3] which sums 9 and that's the optimal answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [2,3,5], target = 10\nOutput: 5",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [60864,25176,27249,21296,20204], target = 56803\nOutput: 11361",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 104",
+    "1 <= arr[i], target <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If you draw a graph with the value on one axis and the absolute difference between the target and the array sum, what will you get?",
+    "That graph is uni-modal.",
+    "Use ternary search on that graph to find the best value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findBestValue(vector<int>& arr, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findBestValue(int[] arr, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findBestValue(self, arr, target):\n        \"\"\"\n        :type arr: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findBestValue(self, arr: List[int], target: int) -> int:\n        ",
+    "c": "int findBestValue(int* arr, int arrSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindBestValue(int[] arr, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} target\n * @return {number}\n */\nvar findBestValue = function(arr, target) {\n    \n};",
+    "typescript": "function findBestValue(arr: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $target\n     * @return Integer\n     */\n    function findBestValue($arr, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findBestValue(_ arr: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findBestValue(arr: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findBestValue(List<int> arr, int target) {\n    \n  }\n}",
+    "golang": "func findBestValue(arr []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} target\n# @return {Integer}\ndef find_best_value(arr, target)\n    \nend",
+    "scala": "object Solution {\n    def findBestValue(arr: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_best_value(arr: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-best-value arr target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_best_value(Arr :: [integer()], Target :: integer()) -> integer().\nfind_best_value(Arr, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_best_value(arr :: [integer], target :: integer) :: integer\n  def find_best_value(arr, target) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Sales Analysis III",
+  "problem_id": "1174",
+  "frontend_id": "1084",
+  "difficulty": "Easy",
+  "problem_slug": "sales-analysis-iii",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Product\nTable: Sales\nWrite a solution to report the products that were only sold in the first quarter of 2019. That is, between 2019-01-01 and 2019-03-31 inclusive.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| product_id   | int     |\n| product_name | varchar |\n| unit_price   | int     |\n+--------------+---------+\nproduct_id is the primary key (column with unique values) of this table.\nEach row of this table indicates the name and the price of each product.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| seller_id   | int     |\n| product_id  | int     |\n| buyer_id    | int     |\n| sale_date   | date    |\n| quantity    | int     |\n| price       | int     |\n+-------------+---------+\nThis table can have duplicate rows.\nproduct_id is a foreign key (reference column) to the Product table.\nEach row of this table contains some information about one sale.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nProduct table:\n+------------+--------------+------------+\n| product_id | product_name | unit_price |\n+------------+--------------+------------+\n| 1          | S8           | 1000       |\n| 2          | G4           | 800        |\n| 3          | iPhone       | 1400       |\n+------------+--------------+------------+\nSales table:\n+-----------+------------+----------+------------+----------+-------+\n| seller_id | product_id | buyer_id | sale_date  | quantity | price |\n+-----------+------------+----------+------------+----------+-------+\n| 1         | 1          | 1        | 2019-01-21 | 2        | 2000  |\n| 1         | 2          | 2        | 2019-02-17 | 1        | 800   |\n| 2         | 2          | 3        | 2019-06-02 | 1        | 800   |\n| 3         | 3          | 4        | 2019-05-13 | 2        | 2800  |\n+-----------+------------+----------+------------+----------+-------+\nOutput: \n+-------------+--------------+\n| product_id  | product_name |\n+-------------+--------------+\n| 1           | S8           |\n+-------------+--------------+\nExplanation: \nThe product with id 1 was only sold in the spring of 2019.\nThe product with id 2 was sold in the spring of 2019 but was also sold after the spring of 2019.\nThe product with id 3 was sold after spring 2019.\nWe return only product 1 as it is the product that was only sold in the spring of 2019.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef sales_analysis(product: pd.DataFrame, sales: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n# Solution\n\n---\n\n## pandas### Approach 1: Filter `sales` and Merge with `product`#### Algorithm\nThe problem asks us to find all products that were sold **only** between `2019-01-01` and `2019-03-31`. This means that, for a given `product_id`, the following two conditions need to hold:\n- the earliest date is larger or equal to '2019-01-01', `min(sale_date) >= '2019-01-01'`\n- the latest date is smaller or equal to '2019-03-31', `max(sale_date) <= '2019-03-31'`\n\nBased on the above analysis, we begin by grouping the `sales` table according to the `product_id` column. Next, we utilize the `filter` function to select groups (product ids) that meet the aforementioned two conditions.\n```python\nstart_time = pd.to_datetime('2019-01-01')\nend_time =  pd.to_datetime('2019-03-31')\ndf = sales.groupby('product_id').filter(lambda x:\n    min(x['sale_date']) >= start_time and max(x['sale_date']) <= end_time\n)\n```\n|seller_id|product_id|buyer_id|sale_date|quantity|price|\n|---|---|---|---|---|---|\n|1|1|1|2019-01-21|2|2000|Now, we have a table (data frame) that contains all product ids of our interest but there might be duplicates. Therefore, we use the `drop_duplicates` function to keep only one record for each `product_id`.\n```python\ndf = df.drop_duplicates(subset = 'product_id')\n```\n\nNext, we merge with the `product` table to find the product name for each product id.\n```python\ndf = df.merge(product, left_on = 'product_id', right_on = 'product_id')\n```\n\n|seller_id|product_id|buyer_id|sale_date|quantity|price|product_name|unit_price|\n|---|---|---|---|---|---|---|---|\n|1|1|1|2019-01-21|2|2000|S8|1000|Finally, we simply return the `product_id` and `product_name` columns from the above table.\n```python\nreturn df[['product_id', 'product_name']]\n```#### Implementation-----\n\n## Database### Approach 1: Group By and Use Having Clause#### Algorithm\n\nWe first join two tables `sales` and `product` on equal product ids. Then we group the table by the `product_id` column.\n\n\n```sql\nSELECT DISTINCT p.product_id, p.product_name\nFROM Sales s\nLEFT JOIN Product p ON p.product_id = s.product_id\nGROUP BY p.product_id\n```\n\nNote that we need to guarantee there are no duplicates, therefore we use the `SELECT DISTINCT` statement here.\n\nNext, we use the `HAVING` clause to select groups (product ids) of interest that satisfy the following conditions:\n- the earliest date is larger or equal to '2019-01-01', `MIN(sale_date) >= '2019-01-01'`\n- the latest date is smaller or equal to '2019-03-31', `MAX(sale_date) <= '2019-03-31'`\n\n```sql\nHAVING MIN(sale_date) >= '2019-01-01' AND MAX(sale_date) <= '2019-03-31';\n```#### Implementation\n\n```sql\nSELECT DISTINCT p.product_id, p.product_name\nFROM Sales s\nLEFT JOIN Product p ON p.product_id = s.product_id\nGROUP BY p.product_id\nHAVING MIN(sale_date) >= '2019-01-01' AND MAX(sale_date) <= '2019-03-31';\n```"
+}

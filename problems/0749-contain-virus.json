@@ -1,0 +1,70 @@
+{
+  "title": "Contain Virus",
+  "problem_id": "750",
+  "frontend_id": "749",
+  "difficulty": "Hard",
+  "problem_slug": "contain-virus",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "A virus is spreading rapidly, and your task is to quarantine the infected area by installing walls.\nThe world is modeled as an m x n binary grid isInfected, where isInfected[i][j] == 0 represents uninfected cells, and isInfected[i][j] == 1 represents cells contaminated with the virus. A wall (and only one wall) can be installed between any two 4-directionally adjacent cells, on the shared boundary.\nEvery night, the virus spreads to all neighboring cells in all four directions unless blocked by a wall. Resources are limited. Each day, you can install walls around only one region (i.e., the affected area (continuous block of infected cells) that threatens the most uninfected cells the following night). There will never be a tie.\nReturn the number of walls used to quarantine all the infected regions. If the world will become fully infected, return the number of walls used.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: isInfected = [[0,1,0,0,0,0,0,1],[0,1,0,0,0,0,0,1],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0]]\nOutput: 10\nExplanation: There are 2 contaminated regions.\nOn the first day, add 5 walls to quarantine the viral region on the left. The board after the virus spreads is:\n\nOn the second day, add 5 walls to quarantine the viral region on the right. The virus is fully contained.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/01/virus11-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: isInfected = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: 4\nExplanation: Even though there is only one cell saved, there are 4 walls built.\nNotice that walls are only built on the shared boundary of two different cells.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/01/virus2-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: isInfected = [[1,1,1,0,0,0,0,0,0],[1,0,1,0,1,1,1,1,1],[1,1,1,0,0,0,0,0,0]]\nOutput: 13\nExplanation: The region on the left only builds two new walls.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/01/virus2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == isInfected.length",
+    "n == isInfected[i].length",
+    "1 <= m, n <= 50",
+    "isInfected[i][j] is either 0 or 1.",
+    "There is always a contiguous viral region throughout the described process that will infect strictly more uncontaminated squares in the next round."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The implementation is long - we want to perfrom the following steps:\r\n\r\n* Find all viral regions (connected components), additionally for each region keeping track of the frontier (neighboring uncontaminated cells), and the perimeter of the region.\r\n\r\n* Disinfect the most viral region, adding it's perimeter to the answer.\r\n\r\n* Spread the virus in the remaining regions outward by 1 square."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int containVirus(vector<vector<int>>& isInfected) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int containVirus(int[][] isInfected) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def containVirus(self, isInfected):\n        \"\"\"\n        :type isInfected: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def containVirus(self, isInfected: List[List[int]]) -> int:\n        ",
+    "c": "int containVirus(int** isInfected, int isInfectedSize, int* isInfectedColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ContainVirus(int[][] isInfected) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} isInfected\n * @return {number}\n */\nvar containVirus = function(isInfected) {\n    \n};",
+    "typescript": "function containVirus(isInfected: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $isInfected\n     * @return Integer\n     */\n    function containVirus($isInfected) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func containVirus(_ isInfected: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun containVirus(isInfected: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int containVirus(List<List<int>> isInfected) {\n    \n  }\n}",
+    "golang": "func containVirus(isInfected [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} is_infected\n# @return {Integer}\ndef contain_virus(is_infected)\n    \nend",
+    "scala": "object Solution {\n    def containVirus(isInfected: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn contain_virus(is_infected: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (contain-virus isInfected)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec contain_virus(IsInfected :: [[integer()]]) -> integer().\ncontain_virus(IsInfected) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec contain_virus(is_infected :: [[integer]]) :: integer\n  def contain_virus(is_infected) do\n    \n  end\nend"
+  }
+}

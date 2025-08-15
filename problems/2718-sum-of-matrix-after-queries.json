@@ -1,0 +1,63 @@
+{
+  "title": "Sum of Matrix After Queries",
+  "problem_id": "2838",
+  "frontend_id": "2718",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-matrix-after-queries",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer n and a 0-indexed 2D array queries where queries[i] = [typei, indexi, vali].\nInitially, there is a 0-indexed n x n matrix filled with 0's. For each query, you must apply one of the following changes:\nReturn the sum of integers in the matrix after all queries are applied.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, queries = [[0,0,1],[1,2,2],[0,2,3],[1,0,4]]\nOutput: 23\nExplanation: The image above describes the matrix after each query. The sum of the matrix after all queries are applied is 23.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/05/11/exm1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, queries = [[0,0,4],[0,1,2],[1,0,1],[0,2,3],[1,2,1]]\nOutput: 17\nExplanation: The image above describes the matrix after each query. The sum of the matrix after all queries are applied is 17.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/05/11/exm2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 104",
+    "1 <= queries.length <= 5 * 104",
+    "queries[i].length == 3",
+    "0 <= typei <= 1",
+    "0 <= indexi < n",
+    "0 <= vali <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Process queries in reversed order, as the latest queries represent the most recent changes in the matrix.",
+    "Once you encounter an operation on some row/column, no further operations will affect the values in this row/column. Keep track of seen rows and columns with a set.",
+    "When operating on an unseen row/column, the number of affected cells is the number of columns/rows you haven’t previously seen."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long matrixSumQueries(int n, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long matrixSumQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matrixSumQueries(self, n, queries):\n        \"\"\"\n        :type n: int\n        :type queries: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matrixSumQueries(self, n: int, queries: List[List[int]]) -> int:\n        ",
+    "c": "long long matrixSumQueries(int n, int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MatrixSumQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} queries\n * @return {number}\n */\nvar matrixSumQueries = function(n, queries) {\n    \n};",
+    "typescript": "function matrixSumQueries(n: number, queries: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $queries\n     * @return Integer\n     */\n    function matrixSumQueries($n, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matrixSumQueries(_ n: Int, _ queries: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matrixSumQueries(n: Int, queries: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int matrixSumQueries(int n, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func matrixSumQueries(n int, queries [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} queries\n# @return {Integer}\ndef matrix_sum_queries(n, queries)\n    \nend",
+    "scala": "object Solution {\n    def matrixSumQueries(n: Int, queries: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn matrix_sum_queries(n: i32, queries: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (matrix-sum-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec matrix_sum_queries(N :: integer(), Queries :: [[integer()]]) -> integer().\nmatrix_sum_queries(N, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec matrix_sum_queries(n :: integer, queries :: [[integer]]) :: integer\n  def matrix_sum_queries(n, queries) do\n    \n  end\nend"
+  }
+}

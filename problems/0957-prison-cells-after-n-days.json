@@ -1,0 +1,54 @@
+{
+  "title": "Prison Cells After N Days",
+  "problem_id": "994",
+  "frontend_id": "957",
+  "difficulty": "Medium",
+  "problem_slug": "prison-cells-after-n-days",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "description": "There are 8 prison cells in a row and each cell is either occupied or vacant.\nEach day, whether the cell is occupied or vacant changes according to the following rules:\nNote that because the prison is a row, the first and the last cells in the row can't have two adjacent neighbors.\nYou are given an integer array cells where cells[i] == 1 if the ith cell is occupied and cells[i] == 0 if the ith cell is vacant, and you are given an integer n.\nReturn the state of the prison after n days (i.e., n such changes described above).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cells = [0,1,0,1,1,0,0,1], n = 7\nOutput: [0,0,1,1,0,0,0,0]\nExplanation: The following table summarizes the state of the prison on each day:\nDay 0: [0, 1, 0, 1, 1, 0, 0, 1]\nDay 1: [0, 1, 1, 0, 0, 0, 0, 0]\nDay 2: [0, 0, 0, 0, 1, 1, 1, 0]\nDay 3: [0, 1, 1, 0, 0, 1, 0, 0]\nDay 4: [0, 0, 0, 0, 0, 1, 0, 0]\nDay 5: [0, 1, 1, 1, 0, 1, 0, 0]\nDay 6: [0, 0, 1, 0, 1, 1, 0, 0]\nDay 7: [0, 0, 1, 1, 0, 0, 0, 0]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cells = [1,0,0,1,0,0,1,0], n = 1000000000\nOutput: [0,0,1,1,1,1,1,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "cells.length == 8",
+    "cells[i] is either 0 or 1.",
+    "1 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> prisonAfterNDays(vector<int>& cells, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] prisonAfterNDays(int[] cells, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def prisonAfterNDays(self, cells, n):\n        \"\"\"\n        :type cells: List[int]\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def prisonAfterNDays(self, cells: List[int], n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* prisonAfterNDays(int* cells, int cellsSize, int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] PrisonAfterNDays(int[] cells, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cells\n * @param {number} n\n * @return {number[]}\n */\nvar prisonAfterNDays = function(cells, n) {\n    \n};",
+    "typescript": "function prisonAfterNDays(cells: number[], n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $cells\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function prisonAfterNDays($cells, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func prisonAfterNDays(_ cells: [Int], _ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun prisonAfterNDays(cells: IntArray, n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> prisonAfterNDays(List<int> cells, int n) {\n    \n  }\n}",
+    "golang": "func prisonAfterNDays(cells []int, n int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} cells\n# @param {Integer} n\n# @return {Integer[]}\ndef prison_after_n_days(cells, n)\n    \nend",
+    "scala": "object Solution {\n    def prisonAfterNDays(cells: Array[Int], n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn prison_after_n_days(cells: Vec<i32>, n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (prison-after-n-days cells n)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec prison_after_n_days(Cells :: [integer()], N :: integer()) -> [integer()].\nprison_after_n_days(Cells, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec prison_after_n_days(cells :: [integer], n :: integer) :: [integer]\n  def prison_after_n_days(cells, n) do\n    \n  end\nend"
+  }
+}

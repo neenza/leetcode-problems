@@ -1,0 +1,63 @@
+{
+  "title": "Remove Digit From Number to Maximize Result",
+  "problem_id": "2337",
+  "frontend_id": "2259",
+  "difficulty": "Easy",
+  "problem_slug": "remove-digit-from-number-to-maximize-result",
+  "topics": [
+    "String",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "You are given a string number representing a positive integer and a character digit.\nReturn the resulting string after removing exactly one occurrence of digit from number such that the value of the resulting string in decimal form is maximized. The test cases are generated such that digit occurs at least once in number.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: number = \"123\", digit = \"3\"\nOutput: \"12\"\nExplanation: There is only one '3' in \"123\". After removing '3', the result is \"12\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: number = \"1231\", digit = \"1\"\nOutput: \"231\"\nExplanation: We can remove the first '1' to get \"231\" or remove the second '1' to get \"123\".\nSince 231 > 123, we return \"231\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: number = \"551\", digit = \"5\"\nOutput: \"51\"\nExplanation: We can remove either the first or second '5' from \"551\".\nBoth result in the string \"51\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= number.length <= 100",
+    "number consists of digits from '1' to '9'.",
+    "digit is a digit from '1' to '9'.",
+    "digit occurs at least once in number."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The maximum length of number is really small.",
+    "Iterate through the digits of number and every time we see digit, try removing it.",
+    "To remove a character at index i, concatenate the substring from index 0 to i - 1 and the substring from index i + 1 to number.length - 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string removeDigit(string number, char digit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String removeDigit(String number, char digit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeDigit(self, number, digit):\n        \"\"\"\n        :type number: str\n        :type digit: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeDigit(self, number: str, digit: str) -> str:\n        ",
+    "c": "char* removeDigit(char* number, char digit) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RemoveDigit(string number, char digit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} number\n * @param {character} digit\n * @return {string}\n */\nvar removeDigit = function(number, digit) {\n    \n};",
+    "typescript": "function removeDigit(number: string, digit: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $number\n     * @param String $digit\n     * @return String\n     */\n    function removeDigit($number, $digit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeDigit(_ number: String, _ digit: Character) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeDigit(number: String, digit: Char): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String removeDigit(String number, String digit) {\n    \n  }\n}",
+    "golang": "func removeDigit(number string, digit byte) string {\n    \n}",
+    "ruby": "# @param {String} number\n# @param {Character} digit\n# @return {String}\ndef remove_digit(number, digit)\n    \nend",
+    "scala": "object Solution {\n    def removeDigit(number: String, digit: Char): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_digit(number: String, digit: char) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (remove-digit number digit)\n  (-> string? char? string?)\n  )",
+    "erlang": "-spec remove_digit(Number :: unicode:unicode_binary(), Digit :: char()) -> unicode:unicode_binary().\nremove_digit(Number, Digit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_digit(number :: String.t, digit :: char) :: String.t\n  def remove_digit(number, digit) do\n    \n  end\nend"
+  }
+}

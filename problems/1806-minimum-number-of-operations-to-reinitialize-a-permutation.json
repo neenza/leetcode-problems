@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Number of Operations to Reinitialize a Permutation",
+  "problem_id": "1935",
+  "frontend_id": "1806",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-operations-to-reinitialize-a-permutation",
+  "topics": [
+    "Array",
+    "Math",
+    "Simulation"
+  ],
+  "description": "You are given an even integer n​​​​​​. You initially have a permutation perm of size n​​ where perm[i] == i​ (0-indexed)​​​​.\nIn one operation, you will create a new array arr, and for each i:\nYou will then assign arr​​​​ to perm.\nReturn the minimum non-zero number of operations you need to perform on perm to return the permutation to its initial value.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: 1\nExplanation: perm = [0,1] initially.\nAfter the 1st operation, perm = [0,1]\nSo it takes only 1 operation.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4\nOutput: 2\nExplanation: perm = [0,1,2,3] initially.\nAfter the 1st operation, perm = [0,2,1,3]\nAfter the 2nd operation, perm = [0,1,2,3]\nSo it takes only 2 operations.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 6\nOutput: 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "n​​​​​​ is even."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is safe to assume the number of  operations isn't more than n",
+    "The number is small enough to apply a brute force solution."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int reinitializePermutation(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int reinitializePermutation(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reinitializePermutation(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reinitializePermutation(self, n: int) -> int:\n        ",
+    "c": "int reinitializePermutation(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ReinitializePermutation(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar reinitializePermutation = function(n) {\n    \n};",
+    "typescript": "function reinitializePermutation(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function reinitializePermutation($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reinitializePermutation(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reinitializePermutation(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int reinitializePermutation(int n) {\n    \n  }\n}",
+    "golang": "func reinitializePermutation(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef reinitialize_permutation(n)\n    \nend",
+    "scala": "object Solution {\n    def reinitializePermutation(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reinitialize_permutation(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (reinitialize-permutation n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec reinitialize_permutation(N :: integer()) -> integer().\nreinitialize_permutation(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reinitialize_permutation(n :: integer) :: integer\n  def reinitialize_permutation(n) do\n    \n  end\nend"
+  }
+}

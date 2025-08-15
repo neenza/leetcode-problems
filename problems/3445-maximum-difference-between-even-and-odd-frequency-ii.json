@@ -1,0 +1,64 @@
+{
+  "title": "Maximum Difference Between Even and Odd Frequency II",
+  "problem_id": "3761",
+  "frontend_id": "3445",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-difference-between-even-and-odd-frequency-ii",
+  "topics": [
+    "String",
+    "Sliding Window",
+    "Enumeration",
+    "Prefix Sum"
+  ],
+  "description": "You are given a string s and an integer k. Your task is to find the maximum difference between the frequency of two characters, freq[a] - freq[b], in a substring subs of s, such that:\nReturn the maximum difference.\nNote that subs can contain more than 2 distinct characters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"12233\", k = 4\nOutput: -1\nExplanation:\nFor the substring \"12233\" , the frequency of '1' is 1 and the frequency of '3' is 2. The difference is 1 - 2 = -1 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"1122211\", k = 3\nOutput: 1\nExplanation:\nFor the substring \"11222\" , the frequency of '2' is 3 and the frequency of '1' is 2. The difference is 3 - 2 = 1 .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"110\", k = 3\nOutput: -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 3 * 104",
+    "s consists only of digits '0' to '4'.",
+    "The input is generated that at least one substring has a character with an even frequency and a character with an odd frequency.",
+    "1 <= k <= s.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix the two characters.",
+    "Use prefix sum (maintain 2 characters' parities as status)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDifference(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDifference(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDifference(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDifference(self, s: str, k: int) -> int:\n        ",
+    "c": "int maxDifference(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDifference(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxDifference = function(s, k) {\n    \n};",
+    "typescript": "function maxDifference(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxDifference($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDifference(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDifference(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDifference(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxDifference(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef max_difference(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxDifference(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_difference(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-difference s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_difference(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_difference(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_difference(s :: String.t, k :: integer) :: integer\n  def max_difference(s, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Enumerate Two Characters + Two Pointers\n\n#### Intuition\n\nSince the string $s$ only contains digit characters $[0, 4]$, we can first enumerate the characters $a$ and $b$ described in the problem, where $a$ must appear an odd number of times, $b$ must appear an even number of times, and $a$ and $b$ must be different. The parity of the number of occurrences of a character can be represented by a binary bit, where $0$ indicates an even count and $1$ indicates an odd count. We place the parity of $a$'s occurrences in front and the parity of $b$'s at the end, resulting in 4 possible cases: $[00, 01, 10, 11]$. The string we are looking for must correspond to the $10$ case.\n\nWe consider a two-pointer approach, where the right pointer $\\textit{right}$ moves one step at a time, representing the right endpoint of the current substring. As it moves, we update the count of $a$ and $b$ up to index $\\textit{right}$, denoted as $\\textit{cnt}_a$ and $\\textit{cnt}_b$, and compute the corresponding state:\n\n$$\n\\textit{status}_\\textit{right} = (\\textit{cnt}_a \\bmod 2) \\times 2 + (\\textit{cnt}_b \\bmod 2)\n$$\n\nAt the same time, the left pointer $\\textit{left}$ only advances when certain conditions are met. That is, only indices less than or equal to $\\textit{left}$ can serve as the left endpoint of a valid substring. We use $\\textit{prev}_a$ and $\\textit{prev}_b$ to record the count of $a$ and $b$ up to index $\\textit{left}$, and move $\\textit{left}$ only when both conditions below are satisfied:\n\n- $\\textit{right} - \\textit{left} \\geq k$, i.e., the substring length is at least $k$.\n\n- $\\textit{cnt}_b - \\textit{prev}_b \\geq 2$, meaning $b$ appears an even number of times in the substring, but zero occurrences must be excluded.\n\nFor any such valid $\\textit{left}$, the corresponding result is $(\\textit{cnt}_a - \\textit{cnt}_b) - (\\textit{prev}_a - \\textit{prev}_b)$. Therefore, we maintain a length-4 array $\\textit{best}$ that keeps track of the minimum value of $\\textit{prev}_a - \\textit{prev}_b$ for each possible state:\n\n$$\n\\textit{status}_\\textit{left} = (\\textit{prev}_a \\bmod 2) \\times 2 + (\\textit{prev}_b \\bmod 2)\n$$\n\nWe then use $\\textit{prev}_a - \\textit{prev}b$ to update $\\textit{best}[\\textit{status}\\textit{left}]$.\n\nAfter moving the left pointer, we compute the answer for the current right pointer. Since we are looking for substrings with state $10$, the required left endpoint must have the state $\\textit{status}_\\textit{right} \\oplus (10)_2$, where $\\oplus$ denotes the XOR operation. So the answer becomes:\n\n$$\n(\\textit{cnt}_a - \\textit{cnt}_b) - \\textit{best}[\\textit{status}_\\textit{right} \\oplus (10)_2]\n$$\n\nWe return the maximum value among all such results as the final answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ denote the size of the character set. Since $s$ contains only the digits $[0, 4]$, we have $|\\Sigma| = 5$.\n\n- Time complexity: $O(n\\times|\\Sigma|^2)$.\n  \n  Enumerating all possible pairs of characters $(a, b)$ takes $O(|\\Sigma|^2)$ time. For each such pair, we apply a two-pointer approach using $\\textit{left}$ and $\\textit{right}$ to compute the answer. Each pointer traverses the string at most once, resulting in $O(n)$ time per pair. Hence, the total time complexity is $O(n \\times |\\Sigma|^2)$.\n\n- Space complexity: $O(1)$.\n  \n  Only a few additional variables are needed."
+}

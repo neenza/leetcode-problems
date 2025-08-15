@@ -1,0 +1,51 @@
+{
+  "title": "Long Pressed Name",
+  "problem_id": "961",
+  "frontend_id": "925",
+  "difficulty": "Easy",
+  "problem_slug": "long-pressed-name",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Your friend is typing his name into a keyboard. Sometimes, when typing a character c, the key might get long pressed, and the character will be typed 1 or more times.\nYou examine the typed characters of the keyboard. Return True if it is possible that it was your friends name, with some characters (possibly none) being long pressed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: name = \"alex\", typed = \"aaleex\"\nOutput: true\nExplanation: 'a' and 'e' in 'alex' were long pressed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: name = \"saeed\", typed = \"ssaaedd\"\nOutput: false\nExplanation: 'e' must have been pressed twice, but it was not in the typed output.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= name.length, typed.length <= 1000",
+    "name and typed consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isLongPressedName(string name, string typed) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isLongPressedName(String name, String typed) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isLongPressedName(self, name, typed):\n        \"\"\"\n        :type name: str\n        :type typed: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isLongPressedName(self, name: str, typed: str) -> bool:\n        ",
+    "c": "bool isLongPressedName(char* name, char* typed) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsLongPressedName(string name, string typed) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} name\n * @param {string} typed\n * @return {boolean}\n */\nvar isLongPressedName = function(name, typed) {\n    \n};",
+    "typescript": "function isLongPressedName(name: string, typed: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $name\n     * @param String $typed\n     * @return Boolean\n     */\n    function isLongPressedName($name, $typed) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isLongPressedName(_ name: String, _ typed: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isLongPressedName(name: String, typed: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isLongPressedName(String name, String typed) {\n    \n  }\n}",
+    "golang": "func isLongPressedName(name string, typed string) bool {\n    \n}",
+    "ruby": "# @param {String} name\n# @param {String} typed\n# @return {Boolean}\ndef is_long_pressed_name(name, typed)\n    \nend",
+    "scala": "object Solution {\n    def isLongPressedName(name: String, typed: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_long_pressed_name(name: String, typed: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-long-pressed-name name typed)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec is_long_pressed_name(Name :: unicode:unicode_binary(), Typed :: unicode:unicode_binary()) -> boolean().\nis_long_pressed_name(Name, Typed) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_long_pressed_name(name :: String.t, typed :: String.t) :: boolean\n  def is_long_pressed_name(name, typed) do\n    \n  end\nend"
+  }
+}

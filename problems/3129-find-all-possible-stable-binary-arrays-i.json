@@ -1,0 +1,58 @@
+{
+  "title": "Find All Possible Stable Binary Arrays I",
+  "problem_id": "3406",
+  "frontend_id": "3129",
+  "difficulty": "Medium",
+  "problem_slug": "find-all-possible-stable-binary-arrays-i",
+  "topics": [
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You are given 3 positive integers zero, one, and limit.\nA binary array arr is called stable if:\nReturn the total number of stable binary arrays.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: zero = 1, one = 1, limit = 2\nOutput: 2\nExplanation:\nThe two possible stable binary arrays are [1,0] and [0,1] , as both arrays have a single 0 and a single 1, and no subarray has a length greater than 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: zero = 1, one = 2, limit = 1\nOutput: 1\nExplanation:\nThe only possible stable binary array is [1,0,1] .\nNote that the binary arrays [1,1,0] and [0,1,1] have subarrays of length 2 with identical elements, hence, they are not stable.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: zero = 3, one = 3, limit = 2\nOutput: 14\nExplanation:\nAll the possible stable binary arrays are [0,0,1,0,1,1] , [0,0,1,1,0,1] , [0,1,0,0,1,1] , [0,1,0,1,0,1] , [0,1,0,1,1,0] , [0,1,1,0,0,1] , [0,1,1,0,1,0] , [1,0,0,1,0,1] , [1,0,0,1,1,0] , [1,0,1,0,0,1] , [1,0,1,0,1,0] , [1,0,1,1,0,0] , [1,1,0,0,1,0] , and [1,1,0,1,0,0] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= zero, one, limit <= 200"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[a][b][c = 0/1][d]</code> be the number of stable arrays with exactly <code>a</code> 0s, <code>b</code> 1s and consecutive <code>d</code> value of <code>c</code>’s at the end.",
+    "Try each case by appending a 0/1 at last to get the inductions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfStableArrays(int zero, int one, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfStableArrays(int zero, int one, int limit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfStableArrays(self, zero, one, limit):\n        \"\"\"\n        :type zero: int\n        :type one: int\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:\n        ",
+    "c": "int numberOfStableArrays(int zero, int one, int limit) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfStableArrays(int zero, int one, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} zero\n * @param {number} one\n * @param {number} limit\n * @return {number}\n */\nvar numberOfStableArrays = function(zero, one, limit) {\n    \n};",
+    "typescript": "function numberOfStableArrays(zero: number, one: number, limit: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $zero\n     * @param Integer $one\n     * @param Integer $limit\n     * @return Integer\n     */\n    function numberOfStableArrays($zero, $one, $limit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfStableArrays(_ zero: Int, _ one: Int, _ limit: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfStableArrays(zero: Int, one: Int, limit: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfStableArrays(int zero, int one, int limit) {\n    \n  }\n}",
+    "golang": "func numberOfStableArrays(zero int, one int, limit int) int {\n    \n}",
+    "ruby": "# @param {Integer} zero\n# @param {Integer} one\n# @param {Integer} limit\n# @return {Integer}\ndef number_of_stable_arrays(zero, one, limit)\n    \nend",
+    "scala": "object Solution {\n    def numberOfStableArrays(zero: Int, one: Int, limit: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_stable_arrays(zero: i32, one: i32, limit: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-stable-arrays zero one limit)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_stable_arrays(Zero :: integer(), One :: integer(), Limit :: integer()) -> integer().\nnumber_of_stable_arrays(Zero, One, Limit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_stable_arrays(zero :: integer, one :: integer, limit :: integer) :: integer\n  def number_of_stable_arrays(zero, one, limit) do\n    \n  end\nend"
+  }
+}

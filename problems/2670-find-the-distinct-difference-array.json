@@ -1,0 +1,54 @@
+{
+  "title": "Find the Distinct Difference Array",
+  "problem_id": "2777",
+  "frontend_id": "2670",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-distinct-difference-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given a 0-indexed array nums of length n.\nThe distinct difference array of nums is an array diff of length n such that diff[i] is equal to the number of distinct elements in the suffix nums[i + 1, ..., n - 1] subtracted from the number of distinct elements in the prefix nums[0, ..., i].\nReturn the distinct difference array of nums.\nNote that nums[i, ..., j] denotes the subarray of nums starting at index i and ending at index j inclusive. Particularly, if i > j then nums[i, ..., j] denotes an empty subarray.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: [-3,-1,1,3,5]\nExplanation: For index i = 0, there is 1 element in the prefix and 4 distinct elements in the suffix. Thus, diff[0] = 1 - 4 = -3.\nFor index i = 1, there are 2 distinct elements in the prefix and 3 distinct elements in the suffix. Thus, diff[1] = 2 - 3 = -1.\nFor index i = 2, there are 3 distinct elements in the prefix and 2 distinct elements in the suffix. Thus, diff[2] = 3 - 2 = 1.\nFor index i = 3, there are 4 distinct elements in the prefix and 1 distinct element in the suffix. Thus, diff[3] = 4 - 1 = 3.\nFor index i = 4, there are 5 distinct elements in the prefix and no elements in the suffix. Thus, diff[4] = 5 - 0 = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,2,3,4,2]\nOutput: [-2,-1,0,2,3]\nExplanation: For index i = 0, there is 1 element in the prefix and 3 distinct elements in the suffix. Thus, diff[0] = 1 - 3 = -2.\nFor index i = 1, there are 2 distinct elements in the prefix and 3 distinct elements in the suffix. Thus, diff[1] = 2 - 3 = -1.\nFor index i = 2, there are 2 distinct elements in the prefix and 2 distinct elements in the suffix. Thus, diff[2] = 2 - 2 = 0.\nFor index i = 3, there are 3 distinct elements in the prefix and 1 distinct element in the suffix. Thus, diff[3] = 3 - 1 = 2.\nFor index i = 4, there are 3 distinct elements in the prefix and no elements in the suffix. Thus, diff[4] = 3 - 0 = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 50",
+    "1 <= nums[i] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Which data structure will help you maintain distinct elements?",
+    "Iterate over all possible prefix sizes. Then, use a nested loop to add the elements of the prefix to a set, and another nested loop to add the elements of the suffix to another set."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> distinctDifferenceArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] distinctDifferenceArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctDifferenceArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctDifferenceArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* distinctDifferenceArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] DistinctDifferenceArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar distinctDifferenceArray = function(nums) {\n    \n};",
+    "typescript": "function distinctDifferenceArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function distinctDifferenceArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctDifferenceArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctDifferenceArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> distinctDifferenceArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func distinctDifferenceArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef distinct_difference_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def distinctDifferenceArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_difference_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-difference-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec distinct_difference_array(Nums :: [integer()]) -> [integer()].\ndistinct_difference_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_difference_array(nums :: [integer]) :: [integer]\n  def distinct_difference_array(nums) do\n    \n  end\nend"
+  }
+}

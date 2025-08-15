@@ -1,0 +1,53 @@
+{
+  "title": "Largest Time for Given Digits",
+  "problem_id": "986",
+  "frontend_id": "949",
+  "difficulty": "Medium",
+  "problem_slug": "largest-time-for-given-digits",
+  "topics": [
+    "Array",
+    "String",
+    "Backtracking",
+    "Enumeration"
+  ],
+  "description": "Given an array arr of 4 digits, find the latest 24-hour time that can be made using each digit exactly once.\n24-hour times are formatted as \"HH:MM\", where HH is between 00 and 23, and MM is between 00 and 59. The earliest 24-hour time is 00:00, and the latest is 23:59.\nReturn the latest 24-hour time in \"HH:MM\" format. If no valid time can be made, return an empty string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [1,2,3,4]\nOutput: \"23:41\"\nExplanation: The valid 24-hour times are \"12:34\", \"12:43\", \"13:24\", \"13:42\", \"14:23\", \"14:32\", \"21:34\", \"21:43\", \"23:14\", and \"23:41\". Of these times, \"23:41\" is the latest.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [5,5,5,5]\nOutput: \"\"\nExplanation: There are no valid 24-hour times as \"55:55\" is not valid.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "arr.length == 4",
+    "0 <= arr[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestTimeFromDigits(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestTimeFromDigits(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestTimeFromDigits(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestTimeFromDigits(self, arr: List[int]) -> str:\n        ",
+    "c": "char* largestTimeFromDigits(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestTimeFromDigits(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {string}\n */\nvar largestTimeFromDigits = function(arr) {\n    \n};",
+    "typescript": "function largestTimeFromDigits(arr: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return String\n     */\n    function largestTimeFromDigits($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestTimeFromDigits(_ arr: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestTimeFromDigits(arr: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestTimeFromDigits(List<int> arr) {\n    \n  }\n}",
+    "golang": "func largestTimeFromDigits(arr []int) string {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {String}\ndef largest_time_from_digits(arr)\n    \nend",
+    "scala": "object Solution {\n    def largestTimeFromDigits(arr: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_time_from_digits(arr: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-time-from-digits arr)\n  (-> (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec largest_time_from_digits(Arr :: [integer()]) -> unicode:unicode_binary().\nlargest_time_from_digits(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_time_from_digits(arr :: [integer]) :: String.t\n  def largest_time_from_digits(arr) do\n    \n  end\nend"
+  }
+}

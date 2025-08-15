@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Rounds to Complete All Tasks",
+  "problem_id": "2362",
+  "frontend_id": "2244",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-rounds-to-complete-all-tasks",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed integer array tasks, where tasks[i] represents the difficulty level of a task. In each round, you can complete either 2 or 3 tasks of the same difficulty level.\nReturn the minimum rounds required to complete all the tasks, or -1 if it is not possible to complete all the tasks.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as 2870: Minimum Number of Operations to Make Array Empty.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tasks = [2,2,3,3,2,4,4,4,4,4]\nOutput: 4\nExplanation: To complete all the tasks, a possible plan is:\n- In the first round, you complete 3 tasks of difficulty level 2. \n- In the second round, you complete 2 tasks of difficulty level 3. \n- In the third round, you complete 3 tasks of difficulty level 4. \n- In the fourth round, you complete 2 tasks of difficulty level 4.  \nIt can be shown that all the tasks cannot be completed in fewer than 4 rounds, so the answer is 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tasks = [2,3,3]\nOutput: -1\nExplanation: There is only 1 task of difficulty level 2, but in each round, you can only complete either 2 or 3 tasks of the same difficulty level. Hence, you cannot complete all the tasks, and the answer is -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= tasks.length <= 105",
+    "1 <= tasks[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Which data structure can you use to store the number of tasks of each difficulty level?",
+    "For any particular difficulty level, what can be the optimal strategy to complete the tasks using minimum rounds?",
+    "When can we not complete all tasks of a difficulty level?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumRounds(vector<int>& tasks) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumRounds(int[] tasks) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumRounds(self, tasks):\n        \"\"\"\n        :type tasks: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumRounds(self, tasks: List[int]) -> int:\n        ",
+    "c": "int minimumRounds(int* tasks, int tasksSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumRounds(int[] tasks) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} tasks\n * @return {number}\n */\nvar minimumRounds = function(tasks) {\n    \n};",
+    "typescript": "function minimumRounds(tasks: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $tasks\n     * @return Integer\n     */\n    function minimumRounds($tasks) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumRounds(_ tasks: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumRounds(tasks: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumRounds(List<int> tasks) {\n    \n  }\n}",
+    "golang": "func minimumRounds(tasks []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} tasks\n# @return {Integer}\ndef minimum_rounds(tasks)\n    \nend",
+    "scala": "object Solution {\n    def minimumRounds(tasks: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_rounds(tasks: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-rounds tasks)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_rounds(Tasks :: [integer()]) -> integer().\nminimum_rounds(Tasks) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_rounds(tasks :: [integer]) :: integer\n  def minimum_rounds(tasks) do\n    \n  end\nend"
+  }
+}

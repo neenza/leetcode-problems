@@ -1,0 +1,71 @@
+{
+  "title": "Minimum Time to Reach Destination in Directed Graph",
+  "problem_id": "3916",
+  "frontend_id": "3604",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-reach-destination-in-directed-graph",
+  "topics": [
+    "Graph",
+    "Heap (Priority Queue)",
+    "Shortest Path"
+  ],
+  "description": "You are given an integer n and a directed graph with n nodes labeled from 0 to n - 1. This is represented by a 2D array edges, where edges[i] = [ui, vi, starti, endi] indicates an edge from node ui to vi that can only be used at any integer time t such that starti <= t <= endi.\nYou start at node 0 at time 0.\nIn one unit of time, you can either:\nReturn the minimum time required to reach node n - 1. If it is impossible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1,0,1],[1,2,2,5]]\nOutput: 3\nExplanation:\n\nThe optimal path is:\nHence, the minimum time to reach node 2 is 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/05/screenshot-2025-06-06-at-004535.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, edges = [[0,1,0,3],[1,3,7,8],[0,2,1,5],[2,3,4,7]]\nOutput: 5\nExplanation:\n\nThe optimal path is:\nHence, the minimum time to reach node 3 is 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/05/screenshot-2025-06-06-at-004757.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, edges = [[1,0,1,3],[1,2,3,5]]\nOutput: -1\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/05/screenshot-2025-06-06-at-004914.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "0 <= edges.length <= 105",
+    "edges[i] == [ui, vi, starti, endi]",
+    "0 <= ui, vi <= n - 1",
+    "ui != vi",
+    "0 <= starti <= endi <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the <code>Dijkstra</code> algorithm over states (node, time).",
+    "At node <code>u</code> with current time <code>t</code>, you can only use an edge <code>[u, v, start, end]</code> if <code>t <= end</code>.",
+    "If <code>t < start</code>, wait until <code>start</code>, then traverse (arriving at <code>start + 1</code>)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minTime(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minTime(int n, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTime(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTime(self, n: int, edges: List[List[int]]) -> int:\n        ",
+    "c": "int minTime(int n, int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinTime(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number}\n */\nvar minTime = function(n, edges) {\n    \n};",
+    "typescript": "function minTime(n: number, edges: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @return Integer\n     */\n    function minTime($n, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTime(_ n: Int, _ edges: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTime(n: Int, edges: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTime(int n, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func minTime(n int, edges [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Integer}\ndef min_time(n, edges)\n    \nend",
+    "scala": "object Solution {\n    def minTime(n: Int, edges: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_time(n: i32, edges: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-time n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_time(N :: integer(), Edges :: [[integer()]]) -> integer().\nmin_time(N, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_time(n :: integer, edges :: [[integer]]) :: integer\n  def min_time(n, edges) do\n    \n  end\nend"
+  }
+}

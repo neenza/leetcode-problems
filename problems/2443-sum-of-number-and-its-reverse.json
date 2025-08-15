@@ -1,0 +1,58 @@
+{
+  "title": "Sum of Number and Its Reverse",
+  "problem_id": "2541",
+  "frontend_id": "2443",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-number-and-its-reverse",
+  "topics": [
+    "Math",
+    "Enumeration"
+  ],
+  "description": "Given a non-negative integer num, return true if num can be expressed as the sum of any non-negative integer and its reverse, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 443\nOutput: true\nExplanation: 172 + 271 = 443 so we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 63\nOutput: false\nExplanation: 63 cannot be expressed as the sum of a non-negative integer and its reverse so we return false.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = 181\nOutput: true\nExplanation: 140 + 041 = 181 so we return true. Note that when a number is reversed, there may be leading zeros.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= num <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small enough that we can check every number.",
+    "To reverse a number, first convert it to a string. Then, create a new string that is the reverse of the first one. Finally, convert the new string back into a number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool sumOfNumberAndReverse(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean sumOfNumberAndReverse(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfNumberAndReverse(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfNumberAndReverse(self, num: int) -> bool:\n        ",
+    "c": "bool sumOfNumberAndReverse(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool SumOfNumberAndReverse(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {boolean}\n */\nvar sumOfNumberAndReverse = function(num) {\n    \n};",
+    "typescript": "function sumOfNumberAndReverse(num: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Boolean\n     */\n    function sumOfNumberAndReverse($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfNumberAndReverse(_ num: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfNumberAndReverse(num: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool sumOfNumberAndReverse(int num) {\n    \n  }\n}",
+    "golang": "func sumOfNumberAndReverse(num int) bool {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Boolean}\ndef sum_of_number_and_reverse(num)\n    \nend",
+    "scala": "object Solution {\n    def sumOfNumberAndReverse(num: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_number_and_reverse(num: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-number-and-reverse num)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec sum_of_number_and_reverse(Num :: integer()) -> boolean().\nsum_of_number_and_reverse(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_number_and_reverse(num :: integer) :: boolean\n  def sum_of_number_and_reverse(num) do\n    \n  end\nend"
+  }
+}

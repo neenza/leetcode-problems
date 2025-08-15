@@ -1,0 +1,57 @@
+{
+  "title": "Average Waiting Time",
+  "problem_id": "1803",
+  "frontend_id": "1701",
+  "difficulty": "Medium",
+  "problem_slug": "average-waiting-time",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "There is a restaurant with a single chef. You are given an array customers, where customers[i] = [arrivali, timei]:\nWhen a customer arrives, he gives the chef his order, and the chef starts preparing it once he is idle. The customer waits till the chef finishes preparing his order. The chef does not prepare food for more than one customer at a time. The chef prepares food for customers in the order they were given in the input.\nReturn the average waiting time of all customers. Solutions within 10-5 from the actual answer are considered accepted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: customers = [[1,2],[2,5],[4,3]]\nOutput: 5.00000\nExplanation:\n1) The first customer arrives at time 1, the chef takes his order and starts preparing it immediately at time 1, and finishes at time 3, so the waiting time of the first customer is 3 - 1 = 2.\n2) The second customer arrives at time 2, the chef takes his order and starts preparing it at time 3, and finishes at time 8, so the waiting time of the second customer is 8 - 2 = 6.\n3) The third customer arrives at time 4, the chef takes his order and starts preparing it at time 8, and finishes at time 11, so the waiting time of the third customer is 11 - 4 = 7.\nSo the average waiting time = (2 + 6 + 7) / 3 = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: customers = [[5,2],[5,4],[10,3],[20,1]]\nOutput: 3.25000\nExplanation:\n1) The first customer arrives at time 5, the chef takes his order and starts preparing it immediately at time 5, and finishes at time 7, so the waiting time of the first customer is 7 - 5 = 2.\n2) The second customer arrives at time 5, the chef takes his order and starts preparing it at time 7, and finishes at time 11, so the waiting time of the second customer is 11 - 5 = 6.\n3) The third customer arrives at time 10, the chef takes his order and starts preparing it at time 11, and finishes at time 14, so the waiting time of the third customer is 14 - 10 = 4.\n4) The fourth customer arrives at time 20, the chef takes his order and starts preparing it immediately at time 20, and finishes at time 21, so the waiting time of the fourth customer is 21 - 20 = 1.\nSo the average waiting time = (2 + 6 + 4 + 1) / 4 = 3.25.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= customers.length <= 105",
+    "1 <= arrivali, timei <= 104",
+    "arrivali <= arrivali+1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate on the customers, maintaining the time the chef will finish the previous orders.",
+    "If that time is before the current arrival time, the chef starts immediately. Else, the current customer waits till the chef finishes, and then the chef starts.",
+    "Update the running time by the time when the chef starts preparing + preparation time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double averageWaitingTime(vector<vector<int>>& customers) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double averageWaitingTime(int[][] customers) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def averageWaitingTime(self, customers):\n        \"\"\"\n        :type customers: List[List[int]]\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def averageWaitingTime(self, customers: List[List[int]]) -> float:\n        ",
+    "c": "double averageWaitingTime(int** customers, int customersSize, int* customersColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public double AverageWaitingTime(int[][] customers) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} customers\n * @return {number}\n */\nvar averageWaitingTime = function(customers) {\n    \n};",
+    "typescript": "function averageWaitingTime(customers: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $customers\n     * @return Float\n     */\n    function averageWaitingTime($customers) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func averageWaitingTime(_ customers: [[Int]]) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun averageWaitingTime(customers: Array<IntArray>): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double averageWaitingTime(List<List<int>> customers) {\n    \n  }\n}",
+    "golang": "func averageWaitingTime(customers [][]int) float64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} customers\n# @return {Float}\ndef average_waiting_time(customers)\n    \nend",
+    "scala": "object Solution {\n    def averageWaitingTime(customers: Array[Array[Int]]): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn average_waiting_time(customers: Vec<Vec<i32>>) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (average-waiting-time customers)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
+    "erlang": "-spec average_waiting_time(Customers :: [[integer()]]) -> float().\naverage_waiting_time(Customers) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec average_waiting_time(customers :: [[integer]]) :: float\n  def average_waiting_time(customers) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThere is a restaurant with a single chef. We are given the arrival time and order preparation time for every customer. This data is already sorted in non-decreasing order of arrival time.\n\nThe chef prepares the orders strictly on a **first-come, first-serve** basis. If the chef is busy preparing another order, all the subsequent customers need to wait for their turn. We need to find the average waiting time of all customers. The food preparation time should be included in the waiting time.\n\nConstraints on the number of customers, denoted by `n`, are `1 <= n <= 100000`. Therefore, we need to consider an approach with linear or log-linear time complexity.\n\n---\n\n### Approach: Simulation\n\n#### Intuition\n\nThe chef prepares customer orders as soon as they arrive at the restaurant, provided he isn't already busy. He never takes a rest if there is a queue of pending orders. Therefore, the average waiting time will always be minimal. Also, we are not allowed to change the order of customers. So, we can simulate the process in the provided order, maintaining the time when each customer receives their order. Subtracting this time from the customer's arrival time gives us the waiting time for that customer.\n\nThere is no waiting time for the first customer apart from the preparation time. Let's say another customer arrives while the chef is preparing this order. How much does this customer need to wait to place their order? The waiting time is given by the time gap between their arrival time and when the first customer receives his order. \n\nIn other words, the chef can only start preparing a customer's order when he is idle or when the customer has arrived at the restaurant, whichever happens later. Adding this to the preparation time gives us the time when the customer receives their order. The waiting time for the customer is given by the difference between the order's delivery time and the customer's arrival time.\n\nUsing this approach, we can calculate the sum of the waiting time for all the customers. Dividing it by the total number of customers gives us the average waiting time per customer. Don't forget to calculate this average in a floating-point/double data type for precision.\n\n#### Algorithm\n\n1. Initialize integers `nextIdleTime` and `netWaitTime` with 0.\n2. Iterate through the `customers` array:\n    - Set `nextIdleTime` as the maximum of customer's arrival time and the current value of `nextIdleTime` plus the order preparation time.\n    - Increment `netWaitTime` by the difference of `nextIdleTime` and the customer's arrival time.\n3. Divide the `netWaitTime` by `customers.size` to get the `averageWaitTime`.\n4. Return the `averageWaitTime`.\n\n!?!../Documents/1701_republish/slideshow1_republish.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `customers` array.\n\n- Time complexity: $O(n)$\n\n   The time complexity remains linear, as the loop traverses the array only once.\n\n- Space complexity: $O(1)$\n\n   We do not use any additional space, so the space complexity is constant.\n\n---"
+}

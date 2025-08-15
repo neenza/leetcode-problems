@@ -1,0 +1,58 @@
+{
+  "title": "Eat Pizzas!",
+  "problem_id": "3779",
+  "frontend_id": "3457",
+  "difficulty": "Medium",
+  "problem_slug": "eat-pizzas",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer array pizzas of size n, where pizzas[i] represents the weight of the ith pizza. Every day, you eat exactly 4 pizzas. Due to your incredible metabolism, when you eat pizzas of weights W, X, Y, and Z, where W <= X <= Y <= Z, you gain the weight of only 1 pizza!\nFind the maximum total weight you can gain by eating all pizzas optimally.\nNote: It is guaranteed that n is a multiple of 4, and each pizza can be eaten only once.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pizzas = [1,2,3,4,5,6,7,8]\nOutput: 14\nExplanation:\nThe total weight gained after eating all the pizzas is 8 + 6 = 14 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pizzas = [2,1,1,1,1,1,1,1]\nOutput: 3\nExplanation:\nThe total weight gained after eating all the pizzas is 2 + 1 = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "4 <= n == pizzas.length <= 2 * 105",
+    "1 <= pizzas[i] <= 105",
+    "n is a multiple of 4."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "On odd-numbered days, it is optimal to pair the smallest three and the largest one.",
+    "On even-numbered days, it is optimal to pair the smallest two and the largest two.",
+    "There will be ceil((n / 4) / 2) odd-numbered days. Select pizzas for all odd-numbered days first.",
+    "Select the remaining pizzas for the even-numbered days."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxWeight(vector<int>& pizzas) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxWeight(int[] pizzas) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxWeight(self, pizzas):\n        \"\"\"\n        :type pizzas: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxWeight(self, pizzas: List[int]) -> int:\n        ",
+    "c": "long long maxWeight(int* pizzas, int pizzasSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxWeight(int[] pizzas) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} pizzas\n * @return {number}\n */\nvar maxWeight = function(pizzas) {\n    \n};",
+    "typescript": "function maxWeight(pizzas: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $pizzas\n     * @return Integer\n     */\n    function maxWeight($pizzas) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxWeight(_ pizzas: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxWeight(pizzas: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxWeight(List<int> pizzas) {\n    \n  }\n}",
+    "golang": "func maxWeight(pizzas []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} pizzas\n# @return {Integer}\ndef max_weight(pizzas)\n    \nend",
+    "scala": "object Solution {\n    def maxWeight(pizzas: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_weight(pizzas: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-weight pizzas)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_weight(Pizzas :: [integer()]) -> integer().\nmax_weight(Pizzas) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_weight(pizzas :: [integer]) :: integer\n  def max_weight(pizzas) do\n    \n  end\nend"
+  }
+}

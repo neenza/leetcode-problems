@@ -1,0 +1,61 @@
+{
+  "title": "Check If String Is Transformable With Substring Sort Operations",
+  "problem_id": "1707",
+  "frontend_id": "1585",
+  "difficulty": "Hard",
+  "problem_slug": "check-if-string-is-transformable-with-substring-sort-operations",
+  "topics": [
+    "String",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given two strings s and t, transform string s into string t using the following operation any number of times:\nReturn true if it is possible to transform s into t. Otherwise, return false.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"84532\", t = \"34852\"\nOutput: true\nExplanation: You can transform s into t using the following sort operations:\n\"84532\" (from index 2 to 3) -> \"84352\"\n\"84352\" (from index 0 to 2) -> \"34852\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"34521\", t = \"23415\"\nOutput: true\nExplanation: You can transform s into t using the following sort operations:\n\"34521\" -> \"23451\"\n\"23451\" -> \"23415\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"12345\", t = \"12435\"\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "s.length == t.length",
+    "1 <= s.length <= 105",
+    "s and t consist of only digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Suppose the first digit you need is 'd'. How can you determine if it's possible to get that digit there?",
+    "Consider swapping adjacent characters to maintain relative ordering."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isTransformable(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isTransformable(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isTransformable(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isTransformable(self, s: str, t: str) -> bool:\n        ",
+    "c": "bool isTransformable(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsTransformable(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar isTransformable = function(s, t) {\n    \n};",
+    "typescript": "function isTransformable(s: string, t: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Boolean\n     */\n    function isTransformable($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isTransformable(_ s: String, _ t: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isTransformable(s: String, t: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isTransformable(String s, String t) {\n    \n  }\n}",
+    "golang": "func isTransformable(s string, t string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Boolean}\ndef is_transformable(s, t)\n    \nend",
+    "scala": "object Solution {\n    def isTransformable(s: String, t: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_transformable(s: String, t: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-transformable s t)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec is_transformable(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nis_transformable(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_transformable(s :: String.t, t :: String.t) :: boolean\n  def is_transformable(s, t) do\n    \n  end\nend"
+  }
+}

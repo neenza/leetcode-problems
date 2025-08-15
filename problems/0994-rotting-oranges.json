@@ -1,0 +1,65 @@
+{
+  "title": "Rotting Oranges",
+  "problem_id": "1036",
+  "frontend_id": "994",
+  "difficulty": "Medium",
+  "problem_slug": "rotting-oranges",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given an m x n grid where each cell can have one of three values:\nEvery minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.\nReturn the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[2,1,1],[1,1,0],[0,1,1]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/02/16/oranges.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[2,1,1],[0,1,1],[1,0,1]]\nOutput: -1\nExplanation: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/02/16/oranges.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[0,2]]\nOutput: 0\nExplanation: Since there are already no fresh oranges at minute 0, the answer is just 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/02/16/oranges.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 10",
+    "grid[i][j] is 0, 1, or 2."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int orangesRotting(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int orangesRotting(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def orangesRotting(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def orangesRotting(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int orangesRotting(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int OrangesRotting(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar orangesRotting = function(grid) {\n    \n};",
+    "typescript": "function orangesRotting(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function orangesRotting($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func orangesRotting(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun orangesRotting(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int orangesRotting(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func orangesRotting(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef oranges_rotting(grid)\n    \nend",
+    "scala": "object Solution {\n    def orangesRotting(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn oranges_rotting(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (oranges-rotting grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec oranges_rotting(Grid :: [[integer()]]) -> integer().\noranges_rotting(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec oranges_rotting(grid :: [[integer]]) :: integer\n  def oranges_rotting(grid) do\n    \n  end\nend"
+  }
+}

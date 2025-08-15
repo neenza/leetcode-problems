@@ -1,0 +1,57 @@
+{
+  "title": "Find the Shortest Superstring",
+  "problem_id": "980",
+  "frontend_id": "943",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-shortest-superstring",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "Given an array of strings words, return the smallest string that contains each string in words as a substring. If there are multiple valid strings of the smallest length, return any of them.\nYou may assume that no string in words is a substring of another string in words.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"alex\",\"loves\",\"leetcode\"]\nOutput: \"alexlovesleetcode\"\nExplanation: All permutations of \"alex\",\"loves\",\"leetcode\" would also be accepted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"catg\",\"ctaagt\",\"gcta\",\"ttca\",\"atgcatc\"]\nOutput: \"gctaagttcatgcatc\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 12",
+    "1 <= words[i].length <= 20",
+    "words[i] consists of lowercase English letters.",
+    "All the strings of words are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string shortestSuperstring(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestSuperstring(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestSuperstring(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestSuperstring(self, words: List[str]) -> str:\n        ",
+    "c": "char* shortestSuperstring(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ShortestSuperstring(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string}\n */\nvar shortestSuperstring = function(words) {\n    \n};",
+    "typescript": "function shortestSuperstring(words: string[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return String\n     */\n    function shortestSuperstring($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestSuperstring(_ words: [String]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestSuperstring(words: Array<String>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String shortestSuperstring(List<String> words) {\n    \n  }\n}",
+    "golang": "func shortestSuperstring(words []string) string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {String}\ndef shortest_superstring(words)\n    \nend",
+    "scala": "object Solution {\n    def shortestSuperstring(words: Array[String]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_superstring(words: Vec<String>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-superstring words)\n  (-> (listof string?) string?)\n  )",
+    "erlang": "-spec shortest_superstring(Words :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nshortest_superstring(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_superstring(words :: [String.t]) :: String.t\n  def shortest_superstring(words) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition**\n\nWe have to put the words into a row, where each word may overlap the previous word.  This is because no word is contained in any word.\n\nAlso, it is sufficient to try to maximize the total overlap of the words.\n\nSay we have put some words down in our row, ending with word `A[i]`.  Now say we put down word `A[j]` as the next word, where word `j` hasn't been put down yet.  The overlap increases by `overlap(A[i], A[j])`.\n\nWe can use dynamic programming to leverage this recursion.  Let `dp(mask, i)` be the total overlap after putting some words down (represented by a bitmask `mask`), for which `A[i]` was the last word put down.  Then, the key recursion is `dp(mask ^ (1<**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2 (2^N + W))$$, where $$N$$ is the number of words, and $$W$$ is the maximum length of each word.\n\n* Space Complexity:  $$O(N (2^N + W))$$."
+}

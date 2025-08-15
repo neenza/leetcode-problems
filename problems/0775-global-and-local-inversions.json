@@ -1,0 +1,56 @@
+{
+  "title": "Global and Local Inversions",
+  "problem_id": "790",
+  "frontend_id": "775",
+  "difficulty": "Medium",
+  "problem_slug": "global-and-local-inversions",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are given an integer array nums of length n which represents a permutation of all the integers in the range [0, n - 1].\nThe number of global inversions is the number of the different pairs (i, j) where:\nThe number of local inversions is the number of indices i where:\nReturn true if the number of global inversions is equal to the number of local inversions.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,2]\nOutput: true\nExplanation: There is 1 global inversion and 1 local inversion.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,0]\nOutput: false\nExplanation: There are 2 global inversions and 1 local inversion.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "0 <= nums[i] < n",
+    "All the integers of nums are unique.",
+    "nums is a permutation of all the numbers in the range [0, n - 1]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Where can the 0 be placed in an ideal permutation?  What about the 1?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isIdealPermutation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isIdealPermutation(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isIdealPermutation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isIdealPermutation(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool isIdealPermutation(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsIdealPermutation(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar isIdealPermutation = function(nums) {\n    \n};",
+    "typescript": "function isIdealPermutation(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function isIdealPermutation($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isIdealPermutation(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isIdealPermutation(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isIdealPermutation(List<int> nums) {\n    \n  }\n}",
+    "golang": "func isIdealPermutation(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef is_ideal_permutation(nums)\n    \nend",
+    "scala": "object Solution {\n    def isIdealPermutation(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_ideal_permutation(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-ideal-permutation nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_ideal_permutation(Nums :: [integer()]) -> boolean().\nis_ideal_permutation(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_ideal_permutation(nums :: [integer]) :: boolean\n  def is_ideal_permutation(nums) do\n    \n  end\nend"
+  }
+}

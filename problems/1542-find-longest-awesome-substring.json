@@ -1,0 +1,61 @@
+{
+  "title": "Find Longest Awesome Substring",
+  "problem_id": "1668",
+  "frontend_id": "1542",
+  "difficulty": "Hard",
+  "problem_slug": "find-longest-awesome-substring",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a string s. An awesome substring is a non-empty substring of s such that we can make any number of swaps in order to make it a palindrome.\nReturn the length of the maximum length awesome substring of s.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"3242415\"\nOutput: 5\nExplanation: \"24241\" is the longest awesome substring, we can form the palindrome \"24142\" with some swaps.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"12345678\"\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"213123\"\nOutput: 6\nExplanation: \"213123\" is the longest awesome substring, we can form the palindrome \"231132\" with some swaps.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Given the character counts, under what conditions can a palindrome be formed ?",
+    "From left to right, use bitwise xor-operation to compute for any prefix the number of times modulo 2 of each digit.  (mask ^= (1<<(s[i]-'0')).",
+    "Expected complexity is O(n*A) where A is the alphabet (10)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestAwesome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestAwesome(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestAwesome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestAwesome(self, s: str) -> int:\n        ",
+    "c": "int longestAwesome(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestAwesome(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar longestAwesome = function(s) {\n    \n};",
+    "typescript": "function longestAwesome(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function longestAwesome($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestAwesome(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestAwesome(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestAwesome(String s) {\n    \n  }\n}",
+    "golang": "func longestAwesome(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef longest_awesome(s)\n    \nend",
+    "scala": "object Solution {\n    def longestAwesome(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_awesome(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-awesome s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec longest_awesome(S :: unicode:unicode_binary()) -> integer().\nlongest_awesome(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_awesome(s :: String.t) :: integer\n  def longest_awesome(s) do\n    \n  end\nend"
+  }
+}

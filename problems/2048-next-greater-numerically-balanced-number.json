@@ -1,0 +1,61 @@
+{
+  "title": "Next Greater Numerically Balanced Number",
+  "problem_id": "2174",
+  "frontend_id": "2048",
+  "difficulty": "Medium",
+  "problem_slug": "next-greater-numerically-balanced-number",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "Backtracking",
+    "Counting",
+    "Enumeration"
+  ],
+  "description": "An integer x is numerically balanced if for every digit d in the number x, there are exactly d occurrences of that digit in x.\nGiven an integer n, return the smallest numerically balanced number strictly greater than n.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 22\nExplanation: \n22 is numerically balanced since:\n- The digit 2 occurs 2 times. \nIt is also the smallest numerically balanced number strictly greater than 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1000\nOutput: 1333\nExplanation: \n1333 is numerically balanced since:\n- The digit 1 occurs 1 time.\n- The digit 3 occurs 3 times. \nIt is also the smallest numerically balanced number strictly greater than 1000.\nNote that 1022 cannot be the answer because 0 appeared more than 0 times.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3000\nOutput: 3133\nExplanation: \n3133 is numerically balanced since:\n- The digit 1 occurs 1 time.\n- The digit 3 occurs 3 times.\nIt is also the smallest numerically balanced number strictly greater than 3000.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How far away can the next greater numerically balanced number be from n?",
+    "With the given constraints, what is the largest numerically balanced number?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int nextBeautifulNumber(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nextBeautifulNumber(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nextBeautifulNumber(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nextBeautifulNumber(self, n: int) -> int:\n        ",
+    "c": "int nextBeautifulNumber(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NextBeautifulNumber(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar nextBeautifulNumber = function(n) {\n    \n};",
+    "typescript": "function nextBeautifulNumber(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function nextBeautifulNumber($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nextBeautifulNumber(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nextBeautifulNumber(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int nextBeautifulNumber(int n) {\n    \n  }\n}",
+    "golang": "func nextBeautifulNumber(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef next_beautiful_number(n)\n    \nend",
+    "scala": "object Solution {\n    def nextBeautifulNumber(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn next_beautiful_number(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (next-beautiful-number n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec next_beautiful_number(N :: integer()) -> integer().\nnext_beautiful_number(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec next_beautiful_number(n :: integer) :: integer\n  def next_beautiful_number(n) do\n    \n  end\nend"
+  }
+}

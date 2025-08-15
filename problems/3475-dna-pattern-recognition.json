@@ -1,0 +1,38 @@
+{
+  "title": "DNA Pattern Recognition ",
+  "problem_id": "3816",
+  "frontend_id": "3475",
+  "difficulty": "Medium",
+  "problem_slug": "dna-pattern-recognition",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Samples\nBiologists are studying basic patterns in DNA sequences. Write a solution to identify sample_id with the following patterns:\nReturn the result table ordered by sample_id in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+----------------+---------+\n| Column Name    | Type    | \n+----------------+---------+\n| sample_id      | int     |\n| dna_sequence   | varchar |\n| species        | varchar |\n+----------------+---------+\nsample_id is the unique key for this table.\nEach row contains a DNA sequence represented as a string of characters (A, T, G, C) and the species it was collected from.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-----------+------------------+-----------+\n| sample_id | dna_sequence     | species   |\n+-----------+------------------+-----------+\n| 1         | ATGCTAGCTAGCTAA  | Human     |\n| 2         | GGGTCAATCATC     | Human     |\n| 3         | ATATATCGTAGCTA   | Human     |\n| 4         | ATGGGGTCATCATAA  | Mouse     |\n| 5         | TCAGTCAGTCAG     | Mouse     |\n| 6         | ATATCGCGCTAG     | Zebrafish |\n| 7         | CGTATGCGTCGTA    | Zebrafish |\n+-----------+------------------+-----------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+-----------+------------------+-------------+-------------+------------+------------+------------+\n| sample_id | dna_sequence     | species     | has_start   | has_stop   | has_atat   | has_ggg    |\n+-----------+------------------+-------------+-------------+------------+------------+------------+\n| 1         | ATGCTAGCTAGCTAA  | Human       | 1           | 1          | 0          | 0          |\n| 2         | GGGTCAATCATC     | Human       | 0           | 0          | 0          | 1          |\n| 3         | ATATATCGTAGCTA   | Human       | 0           | 0          | 1          | 0          |\n| 4         | ATGGGGTCATCATAA  | Mouse       | 1           | 1          | 0          | 1          |\n| 5         | TCAGTCAGTCAG     | Mouse       | 0           | 0          | 0          | 0          |\n| 6         | ATATCGCGCTAG     | Zebrafish   | 0           | 1          | 1          | 0          |\n| 7         | CGTATGCGTCGTA    | Zebrafish   | 0           | 0          | 0          | 0          |\n+-----------+------------------+-------------+-------------+------------+------------+------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef analyze_dna_patterns(samples: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

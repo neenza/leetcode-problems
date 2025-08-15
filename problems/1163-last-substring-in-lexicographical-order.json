@@ -1,0 +1,56 @@
+{
+  "title": "Last Substring in Lexicographical Order",
+  "problem_id": "1133",
+  "frontend_id": "1163",
+  "difficulty": "Hard",
+  "problem_slug": "last-substring-in-lexicographical-order",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Given a string s, return the last substring of s in lexicographical order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abab\"\nOutput: \"bab\"\nExplanation: The substrings are [\"a\", \"ab\", \"aba\", \"abab\", \"b\", \"ba\", \"bab\"]. The lexicographically maximum substring is \"bab\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leetcode\"\nOutput: \"tcode\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 4 * 105",
+    "s contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Assume that the answer is a sub-string from index i to j. If you add the character at index j+1 you get a better answer.",
+    "The answer is always a suffix of the given string.",
+    "Since the limits are high, we need an efficient data structure.",
+    "Use suffix array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string lastSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String lastSubstring(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lastSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lastSubstring(self, s: str) -> str:\n        ",
+    "c": "char* lastSubstring(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LastSubstring(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar lastSubstring = function(s) {\n    \n};",
+    "typescript": "function lastSubstring(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function lastSubstring($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lastSubstring(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lastSubstring(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String lastSubstring(String s) {\n    \n  }\n}",
+    "golang": "func lastSubstring(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef last_substring(s)\n    \nend",
+    "scala": "object Solution {\n    def lastSubstring(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn last_substring(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (last-substring s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec last_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlast_substring(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec last_substring(s :: String.t) :: String.t\n  def last_substring(s) do\n    \n  end\nend"
+  }
+}

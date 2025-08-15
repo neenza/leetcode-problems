@@ -1,0 +1,65 @@
+{
+  "title": "Smallest Divisible Digit Product II",
+  "problem_id": "3635",
+  "frontend_id": "3348",
+  "difficulty": "Hard",
+  "problem_slug": "smallest-divisible-digit-product-ii",
+  "topics": [
+    "Math",
+    "String",
+    "Backtracking",
+    "Greedy",
+    "Number Theory"
+  ],
+  "description": "You are given a string num which represents a positive integer, and an integer t.\nA number is called zero-free if none of its digits are 0.\nReturn a string representing the smallest zero-free number greater than or equal to num such that the product of its digits is divisible by t. If no such number exists, return \"-1\".\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"1234\", t = 256\nOutput: \"1488\"\nExplanation:\nThe smallest zero-free number that is greater than 1234 and has the product of its digits divisible by 256 is 1488, with the product of its digits equal to 256.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"12355\", t = 50\nOutput: \"12355\"\nExplanation:\n12355 is already zero-free and has the product of its digits divisible by 50, with the product of its digits equal to 150.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"11111\", t = 26\nOutput: \"-1\"\nExplanation:\nNo number greater than 11111 has the product of its digits divisible by 26.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= num.length <= 2 * 105",
+    "num consists only of digits in the range ['0', '9'].",
+    "num does not contain leading zeros.",
+    "1 <= t <= 1014"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<code>t</code> should only have 2, 3, 5 and 7 as prime factors.",
+    "Find the shortest suffix that must be changed.",
+    "Try to form the string greedily."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestNumber(string num, long long t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestNumber(String num, long t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestNumber(self, num, t):\n        \"\"\"\n        :type num: str\n        :type t: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestNumber(self, num: str, t: int) -> str:\n        ",
+    "c": "char* smallestNumber(char* num, long long t) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestNumber(string num, long t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @param {number} t\n * @return {string}\n */\nvar smallestNumber = function(num, t) {\n    \n};",
+    "typescript": "function smallestNumber(num: string, t: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @param Integer $t\n     * @return String\n     */\n    function smallestNumber($num, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestNumber(_ num: String, _ t: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestNumber(num: String, t: Long): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestNumber(String num, int t) {\n    \n  }\n}",
+    "golang": "func smallestNumber(num string, t int64) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @param {Integer} t\n# @return {String}\ndef smallest_number(num, t)\n    \nend",
+    "scala": "object Solution {\n    def smallestNumber(num: String, t: Long): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_number(num: String, t: i64) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-number num t)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec smallest_number(Num :: unicode:unicode_binary(), T :: integer()) -> unicode:unicode_binary().\nsmallest_number(Num, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_number(num :: String.t, t :: integer) :: String.t\n  def smallest_number(num, t) do\n    \n  end\nend"
+  }
+}

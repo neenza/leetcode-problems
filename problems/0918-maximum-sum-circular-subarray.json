@@ -1,0 +1,65 @@
+{
+  "title": "Maximum Sum Circular Subarray",
+  "problem_id": "954",
+  "frontend_id": "918",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-sum-circular-subarray",
+  "topics": [
+    "Array",
+    "Divide and Conquer",
+    "Dynamic Programming",
+    "Queue",
+    "Monotonic Queue"
+  ],
+  "description": "Given a circular integer array nums of length n, return the maximum possible sum of a non-empty subarray of nums.\nA circular array means the end of the array connects to the beginning of the array. Formally, the next element of nums[i] is nums[(i + 1) % n] and the previous element of nums[i] is nums[(i - 1 + n) % n].\nA subarray may only include each element of the fixed buffer nums at most once. Formally, for a subarray nums[i], nums[i + 1], ..., nums[j], there does not exist i <= k1, k2 <= j with k1 % n == k2 % n.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,-2,3,-2]\nOutput: 3\nExplanation: Subarray [3] has maximum sum 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,-3,5]\nOutput: 10\nExplanation: Subarray [5,5] has maximum sum 5 + 5 = 10.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [-3,-2,-3]\nOutput: -2\nExplanation: Subarray [-2] has maximum sum -2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 3 * 104",
+    "-3 * 104 <= nums[i] <= 3 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For those of you who are familiar with the <b>Kadane's algorithm</b>, think in terms of that. For the newbies, Kadane's algorithm is used to finding the maximum sum subarray from a given array. This problem is a twist on that idea and it is advisable to read up on that algorithm first before starting this problem. Unless you already have a great algorithm brewing up in your mind in which case, go right ahead!",
+    "What is an alternate way of representing a circular array so that it appears to be a straight array?\r\nEssentially, there are two cases of this problem that we need to take care of. Let's look at the figure below to understand those two cases:\r\n\r\n<br>\r\n<img src=\"https://assets.leetcode.com/uploads/2019/10/20/circular_subarray_hint_1.png\" width=\"700\"/>",
+    "The first case can be handled by the good old Kadane's algorithm. However, is there a smarter way of going about handling the second case as well?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSubarraySumCircular(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSubarraySumCircular(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubarraySumCircular(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubarraySumCircular(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxSubarraySumCircular(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSubarraySumCircular(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSubarraySumCircular = function(nums) {\n    \n};",
+    "typescript": "function maxSubarraySumCircular(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxSubarraySumCircular($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubarraySumCircular(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubarraySumCircular(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSubarraySumCircular(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxSubarraySumCircular(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_subarray_sum_circular(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxSubarraySumCircular(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_subarray_sum_circular(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-subarray-sum-circular nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_subarray_sum_circular(Nums :: [integer()]) -> integer().\nmax_subarray_sum_circular(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_subarray_sum_circular(nums :: [integer]) :: integer\n  def max_subarray_sum_circular(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumerate prefix and suffix sums\n\n#### Intuition\n\nAs a circular array, the maximum subarray sum can be either the maximum \"normal sum\" which is the maximum sum of the ordinary array or a \"special sum\" which would involve elements that wrap around the array. The \"special sum\" would be the combination of a prefix sum and a suffix sum. A prefix is a subarray that starts at the first element of the array and a suffix is a subarray that ends at the final element of the array. The \"special sum\" would involve a prefix and suffix that do not overlap.\n\nThe normal sum is the [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) problem and can be solved with Kadane's algorithm. Please familiarize yourself with this solution if you haven't already. In this article, to save time, we will assume that users have already solved Maximum Subarray.We can calculate both the normal sum and the special sum and return the larger one.\n\nAssuming we already have the normal sum (it's just the solution to Maximum Subarray), let's focus on how to find the special sum.\n\nAssume the input array is called `nums` whose length is `n`. To calculate the special sum, we need to find the maximum sum of a prefix sum and a non-overlapping suffix sum of `nums`. Our idea is to enumerate a prefix with its sum and add the maximum suffix sum that starts after the prefix so that the prefix and suffix don't overlap. \n\nImagine an array `suffixSum` where `suffixSum[i]` represents the suffix sum starting from index `i`, namely `suffixSum[i]` = `nums[i]` + `nums[i + 1]` + ... + `nums[n - 1]` (it's like a prefix sum, but backward). We can construct an array `rightMax` where `rightMax[i] = max(suffixSum[i], suffixSum[i + 1], ...suffixSum[n - 1])`.\n\nNamely, `rightMax[i]` is the largest suffix sum of `nums` that comes on or after `i`.\n\nWith `rightMax`, we can then calculate the special sum by looking at all prefixes. We can easily accumulate the prefix while iterating over the input, and at each index `i`, we can check `rightMax[i + 1]` to find the maximum suffix that won't overlap with the current prefix.\n\n#### Algorithm\n\nThe algorithm works as follows:\n\n* Create an integer array `rightMax` of length `n`. \n* Set `rightMax[n - 1]` to `nums[n - 1]`, set `suffixSum` to `nums[n - 1]`.\n* Iterate over `i` from `n - 2` to `0`\n    * Increase `suffixSum` by `nums[i]`\n    * Update `rightMax[i]` to `max(rightMax[i + 1], suffixSum)`\n\n* Set `maxSum` and `prefixSum` to `nums[0]`.\n* Iterate over `i` from `0` to `n - 2`\n    * Increase `prefixSum` by `nums[i]`\n    * Update `specialSum` to `max(specialSum, prefixSum + rightMax[i + 1])`.\n\n* Calculate the normal sum `maxSum` using Kadane's algorithm.\n* Return `max(maxSum, specialSum)`\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the length of the input array.\n\n* Time complexity: $O(N)$.\n\nThe algorithm iterates over all elements in the array to calculate the `rightMax` array, and then to find the answer. These both take linear time.\n\n* Space complexity: $O(N)$.\n\nThis is the space to save the `rightMax` array.\n\n---\n\n### Approach 2: Calculate the \"Minimum Subarray\"\n\n#### Intuition\n\nAs mentioned before, we know that the maximum \"normal sum\" is the Maximum Subarray problem which can be found with Kadane's. As such, we can focus on finding the \"special sum\".\n\nInstead of thinking about the \"special sum\" as the sum of a prefix and a suffix, we can think about it as the sum of all elements, minus a subarray in the middle. In this case, we want to minimize this middle subarray's sum, which we can calculate using Kadane's algorithm as well.If we use Kadane's algorithm but use `min()` instead of `max()` to update the current subarray sum, it will give us the minimum subarray. Then, we can just subtract the minimum subarray from the total sum to find the \"special sum\".\n\nThere is one case we need to consider however; what if the minimum subarray contains all elements, such as in the case where every element is negative? In that case, our \"special sum\" would represent an empty array, which is invalid because the problem explicitly states that we need a non-empty subarray.\n\nIf we find that the minimum subarray is equal to the total sum, then we need to ignore the \"special sum\" and just return the \"normal sum\".\n\n#### Algorithm\n\n* Calculate the maximum subarray `maxSum` using Kadane's algorithm.\n* Calculate the minimum subarray `minSum` using Kadane's algorithm, by using `min()` instead of `max()`.\n* Calculate the sum of all the elements in `nums`, `totalSum`\n* If `minSum` == `totalSum` return `maxSum`, otherwise return `max(maxSum, totalSum - minSum)`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the length of the input array.\n\n* Time complexity: $O(N)$.\n\nThe algorithm iterates over all elements to calculate the `maxSum`, `minSum`, and `sum` which takes $O(N)$ time.\n\n* Space complexity: $O(1)$.\n\nThe algorithm doesn't use extra space other than several integer variables.\n\n---"
+}

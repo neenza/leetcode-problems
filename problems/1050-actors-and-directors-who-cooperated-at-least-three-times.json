@@ -1,0 +1,33 @@
+{
+  "title": "Actors and Directors Who Cooperated At Least Three Times",
+  "problem_id": "1136",
+  "frontend_id": "1050",
+  "difficulty": "Easy",
+  "problem_slug": "actors-and-directors-who-cooperated-at-least-three-times",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: ActorDirector\nWrite a solution to find all the pairs (actor_id, director_id) where the actor has cooperated with the director at least three times.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| actor_id    | int     |\n| director_id | int     |\n| timestamp   | int     |\n+-------------+---------+\ntimestamp is the primary key (column with unique values) for this table.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nActorDirector table:\n+-------------+-------------+-------------+\n| actor_id    | director_id | timestamp   |\n+-------------+-------------+-------------+\n| 1           | 1           | 0           |\n| 1           | 1           | 1           |\n| 1           | 1           | 2           |\n| 1           | 2           | 3           |\n| 1           | 2           | 4           |\n| 2           | 1           | 5           |\n| 2           | 1           | 6           |\n+-------------+-------------+-------------+\nOutput: \n+-------------+-------------+\n| actor_id    | director_id |\n+-------------+-------------+\n| 1           | 1           |\n+-------------+-------------+\nExplanation: The only pair is (1, 1) where they cooperated exactly 3 times.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

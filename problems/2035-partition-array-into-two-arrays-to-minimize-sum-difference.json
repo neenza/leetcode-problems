@@ -1,0 +1,73 @@
+{
+  "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+  "problem_id": "2162",
+  "frontend_id": "2035",
+  "difficulty": "Hard",
+  "problem_slug": "partition-array-into-two-arrays-to-minimize-sum-difference",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Ordered Set",
+    "Bitmask"
+  ],
+  "description": "You are given an integer array nums of 2 * n integers. You need to partition nums into two arrays of length n to minimize the absolute difference of the sums of the arrays. To partition nums, put each element of nums into one of the two arrays.\nReturn the minimum possible absolute difference.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,9,7,3]\nOutput: 2\nExplanation: One optimal partition is: [3,9] and [7,3].\nThe absolute difference between the sums of the arrays is abs((3 + 9) - (7 + 3)) = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/02/ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-36,36]\nOutput: 72\nExplanation: One optimal partition is: [-36] and [36].\nThe absolute difference between the sums of the arrays is abs((-36) - (36)) = 72.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/02/ex1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,-1,0,4,-2,-9]\nOutput: 0\nExplanation: One optimal partition is: [2,4,-9] and [-1,0,-2].\nThe absolute difference between the sums of the arrays is abs((2 + 4 + -9) - (-1 + 0 + -2)) = 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/02/ex3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 15",
+    "nums.length == 2 * n",
+    "-107 <= nums[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The target sum for the two partitions is sum(nums) / 2.",
+    "Could you reduce the time complexity if you arbitrarily divide nums into two halves (two arrays)? Meet-in-the-Middle?",
+    "For both halves, pre-calculate a 2D array where the kth index will store all possible sum values if only k elements from this half are added.",
+    "For each sum of k elements in the first half, find the best sum of n-k elements in the second half such that the two sums add up to a value closest to the target sum from hint 1. These two subsets will form one array of the partition."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDifference(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumDifference(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumDifference(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDifference = function(nums) {\n    \n};",
+    "typescript": "function minimumDifference(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumDifference($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumDifference(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDifference(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumDifference(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_difference(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumDifference(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_difference(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_difference(Nums :: [integer()]) -> integer().\nminimum_difference(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_difference(nums :: [integer]) :: integer\n  def minimum_difference(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Reconstruct Itinerary",
+  "problem_id": "332",
+  "frontend_id": "332",
+  "difficulty": "Hard",
+  "problem_slug": "reconstruct-itinerary",
+  "topics": [
+    "Depth-First Search",
+    "Graph",
+    "Eulerian Circuit"
+  ],
+  "description": "You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.\nAll of the tickets belong to a man who departs from \"JFK\", thus, the itinerary must begin with \"JFK\". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.\nYou may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tickets = [[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]\nOutput: [\"JFK\",\"MUC\",\"LHR\",\"SFO\",\"SJC\"]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/14/itinerary1-graph.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tickets = [[\"JFK\",\"SFO\"],[\"JFK\",\"ATL\"],[\"SFO\",\"ATL\"],[\"ATL\",\"JFK\"],[\"ATL\",\"SFO\"]]\nOutput: [\"JFK\",\"ATL\",\"JFK\",\"SFO\",\"ATL\",\"SFO\"]\nExplanation: Another possible reconstruction is [\"JFK\",\"SFO\",\"ATL\",\"JFK\",\"ATL\",\"SFO\"] but it is larger in lexical order.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/14/itinerary2-graph.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= tickets.length <= 300",
+    "tickets[i].length == 2",
+    "fromi.length == 3",
+    "toi.length == 3",
+    "fromi and toi consist of uppercase English letters.",
+    "fromi != toi"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> findItinerary(vector<vector<string>>& tickets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findItinerary(List<List<String>> tickets) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findItinerary(self, tickets):\n        \"\"\"\n        :type tickets: List[List[str]]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findItinerary(self, tickets: List[List[str]]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findItinerary(char*** tickets, int ticketsSize, int* ticketsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> FindItinerary(IList<IList<string>> tickets) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} tickets\n * @return {string[]}\n */\nvar findItinerary = function(tickets) {\n    \n};",
+    "typescript": "function findItinerary(tickets: string[][]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $tickets\n     * @return String[]\n     */\n    function findItinerary($tickets) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findItinerary(_ tickets: [[String]]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findItinerary(tickets: List<List<String>>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> findItinerary(List<List<String>> tickets) {\n    \n  }\n}",
+    "golang": "func findItinerary(tickets [][]string) []string {\n    \n}",
+    "ruby": "# @param {String[][]} tickets\n# @return {String[]}\ndef find_itinerary(tickets)\n    \nend",
+    "scala": "object Solution {\n    def findItinerary(tickets: List[List[String]]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (find-itinerary tickets)\n  (-> (listof (listof string?)) (listof string?))\n  )",
+    "erlang": "-spec find_itinerary(Tickets :: [[unicode:unicode_binary()]]) -> [unicode:unicode_binary()].\nfind_itinerary(Tickets) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_itinerary(tickets :: [[String.t]]) :: [String.t]\n  def find_itinerary(tickets) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Find Overbooked Employees",
+  "problem_id": "3943",
+  "frontend_id": "3611",
+  "difficulty": "Medium",
+  "problem_slug": "find-overbooked-employees",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: employees\nTable: meetings\nWrite a solution to find employees who are meeting-heavy - employees who spend more than 50% of their working time in meetings during any given week.\nReturn the result table ordered by the number of meeting-heavy weeks in descending order, then by employee name in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| employee_id   | int     |\n| employee_name | varchar |\n| department    | varchar |\n+---------------+---------+\nemployee_id is the unique identifier for this table.\nEach row contains information about an employee and their department.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| meeting_id    | int     |\n| employee_id   | int     |\n| meeting_date  | date    |\n| meeting_type  | varchar |\n| duration_hours| decimal |\n+---------------+---------+\nmeeting_id is the unique identifier for this table.\nEach row represents a meeting attended by an employee. meeting_type can be 'Team', 'Client', or 'Training'.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+-------------+----------------+-------------+\n| employee_id | employee_name  | department  |\n+-------------+----------------+-------------+\n| 1           | Alice Johnson  | Engineering |\n| 2           | Bob Smith      | Marketing   |\n| 3           | Carol Davis    | Sales       |\n| 4           | David Wilson   | Engineering |\n| 5           | Emma Brown     | HR          |\n+-------------+----------------+-------------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+------------+-------------+--------------+--------------+----------------+\n| meeting_id | employee_id | meeting_date | meeting_type | duration_hours |\n+------------+-------------+--------------+--------------+----------------+\n| 1          | 1           | 2023-06-05   | Team         | 8.0            |\n| 2          | 1           | 2023-06-06   | Client       | 6.0            |\n| 3          | 1           | 2023-06-07   | Training     | 7.0            |\n| 4          | 1           | 2023-06-12   | Team         | 12.0           |\n| 5          | 1           | 2023-06-13   | Client       | 9.0            |\n| 6          | 2           | 2023-06-05   | Team         | 15.0           |\n| 7          | 2           | 2023-06-06   | Client       | 8.0            |\n| 8          | 2           | 2023-06-12   | Training     | 10.0           |\n| 9          | 3           | 2023-06-05   | Team         | 4.0            |\n| 10         | 3           | 2023-06-06   | Client       | 3.0            |\n| 11         | 4           | 2023-06-05   | Team         | 25.0           |\n| 12         | 4           | 2023-06-19   | Client       | 22.0           |\n| 13         | 5           | 2023-06-05   | Training     | 2.0            |\n+------------+-------------+--------------+--------------+----------------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+-------------+----------------+-------------+---------------------+\n| employee_id | employee_name  | department  | meeting_heavy_weeks |\n+-------------+----------------+-------------+---------------------+\n| 1           | Alice Johnson  | Engineering | 2                   |\n| 4           | David Wilson   | Engineering | 2                   |\n+-------------+----------------+-------------+---------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_overbooked_employees(employees: pd.DataFrame, meetings: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

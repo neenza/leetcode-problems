@@ -1,0 +1,59 @@
+{
+  "title": "Maximum Ascending Subarray Sum",
+  "problem_id": "1927",
+  "frontend_id": "1800",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-ascending-subarray-sum",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an array of positive integers nums, return the maximum possible sum of an strictly increasing subarray in nums.\nA subarray is defined as a contiguous sequence of numbers in an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [10,20,30,5,10,50]\nOutput: 65\nExplanation: [5,10,50] is the ascending subarray with the maximum sum of 65.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,20,30,40,50]\nOutput: 150\nExplanation: [10,20,30,40,50] is the ascending subarray with the maximum sum of 150.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [12,17,15,13,10,11,12]\nOutput: 33\nExplanation: [10,11,12] is the ascending subarray with the maximum sum of 33.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is fast enough to check all possible subarrays",
+    "The end of each ascending subarray will be the start of the next"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxAscendingSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxAscendingSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxAscendingSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxAscendingSum(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxAscendingSum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxAscendingSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxAscendingSum = function(nums) {\n    \n};",
+    "typescript": "function maxAscendingSum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxAscendingSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxAscendingSum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxAscendingSum(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxAscendingSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxAscendingSum(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_ascending_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxAscendingSum(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_ascending_sum(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-ascending-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_ascending_sum(Nums :: [integer()]) -> integer().\nmax_ascending_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_ascending_sum(nums :: [integer]) :: integer\n  def max_ascending_sum(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nWe need to find the highest possible sum of an ascending subarray in a given array of positive integers. An ascending subarray is a contiguous sequence where each element is strictly smaller than the next (i.e., `nums[i] < nums[i+1]` for all valid indices). A subarray of size 1 is always considered ascending because there are no adjacent elements to compare.  \n\n> **Note:** There is a difference between \"ascending\" and \"non-decreasing.\" \"Ascending\" means strictly increasing, where each value is greater than the previous one. On the other hand, \"non-decreasing\" allows the values to stay the same or increase, so equality is permitted.  \n> For example:  \n> - `1 2 3 4 5` is **ascending** (strictly increasing).  \n> - `1 2 2 3 3 4 5` is **non-decreasing** (values can remain the same or increase).  \n\n---\n\n### Approach 1: Brute-Force\n\n#### Intuition   \n\nA simple logical approach to solving this problem is to check all possible ascending subarrays to find the largest sum. We can start by treating each element as the beginning of a new subarray and calculate its sum. If the element next to it is greater, we can extend the current subarray by adding it to the sum. If the next element is not greater, we stop extending and consider the next element as the start of a new subarray. We repeat this process for each element, keeping track of the largest sum found.\n\nWhile this is straightforward, it requires checking every possible subarray using nested loops. This can become inefficient because the number of subarrays increases with the size of the input, resulting in a time complexity of $O(n^2)$. Although this method works fine with small inputs due to relatively easy constraints, it is not ideal for larger arrays because it involves checking many possible subarrays.\n\n#### Algorithm\n\n- Initialize `maxSum` to `0`, which will store the maximum sum of an ascending subarray.\n\n- Use an outer loop to iterate over each element in the array (`nums[startIdx]`):\n  - Set `currentSubarraySum` to `nums[startIdx]` to start a new ascending subarray from this element.\n\n- Use an inner loop to check the next elements forming an ascending subarray:\n  - Continue adding to `currentSubarraySum` while the next element (`nums[endIdx]`) is greater than the previous element (`nums[endIdx - 1]`).\n  - Stop the inner loop when the subarray is no longer ascending or when the end of the array is reached.\n\n- After checking the subarray, update `maxSum` if `currentSubarraySum` is greater than the current `maxSum`.\n\n- After processing all possible subarrays, return `maxSum`, which contains the largest sum of an ascending subarray.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the input array `nums`.\n\n- Time complexity: $O(n^2)$\n\n    The algorithm uses a nested loop structure. The outer loop runs $n$ times, iterating over each element in the array. For each iteration of the outer loop, the inner loop starts from the current element and continues as long as the next element is greater than the previous one (forming an ascending subarray). In the worst case, the inner loop could run up to $n$ times (e.g., when the entire array is strictly increasing).\n\n    Therefore, the time complexity is $O(n^2)$.\n\n- Space complexity: $O(1)$\n\n    The algorithm uses a constant amount of extra space. The variables `maxSum`, `currentSubarraySum`, `startIdx`, and `endIdx` are the only additional space used, and they do not depend on the size of the input array. No additional data structures or recursive calls are used that would increase the space complexity.\n\n    Therefore, the space complexity is $O(1)$.\n\n---\n\n### Approach 2: Linear Scan \n\n#### Intuition   \n\nInstead of using the brute-force method of checking every possible subarray, which is inefficient, we can solve the problem in a single pass through the array. \n\nThe key idea is to keep extending the current subarray as long as it stays ascending. If we encounter an element that isn’t greater than the previous one, we stop and compare the current subarray’s sum with the largest sum we’ve found so far and update it if the current element is not greater than the previous one. Then, we reset the current sum to the current element and start a new subarray from there.\n\nThis strategy works because, with all numbers being positive, extending a subarray will always increase its sum. Thus, we should never start a new subarray when we can extend the current one. For an added challenge, try solving the similar problem [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/), where the numbers are not restricted to be positive.\n\nBy following this idea, we only need to go through the array once. At the end of the loop, we perform a final check to ensure we account for the last subarray, just in case it had the largest sum.\n\nThe algorithm is visualized below: \n\n!?!../Documents/1800/linear_scan.json:751,361!?!\n\n#### Algorithm\n\n- Initialize `maxSum` to `0`, which will store the maximum sum of an ascending subarray.\n- Initialize `currentSubarraySum` to the first element of the `nums` array, which tracks the sum of the current ascending subarray.\n\n- Loop through the array starting from the second element:\n  - Compare each element with the previous one:\n    - If the current element is less than or equal to the previous one:\n      - Update `maxSum` with the maximum value between the current `maxSum` and `currentSubarraySum`.\n      - Reset `currentSubarraySum` to `0`, as a new ascending subarray will start.\n  - Add the current element's value to `currentSubarraySum` to continue summing the ascending subarray.\n\n- After the loop ends, perform a final check to account for the last ascending subarray:\n  - Return the maximum value between `maxSum` and `currentSubarraySum`, which is the sum of the largest ascending subarray.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the input array `nums`.\n\n- Time complexity: $O(n)$\n\n    The algorithm iterates through the array `nums` exactly once. During each iteration, it performs a constant amount of work: comparing the current element with the previous one, updating `maxSum`, and resetting `currentSubarraySum` if necessary. The `max` function, which is a built-in function, also operates in constant time $O(1)$. \n    \n    Therefore, the overall time complexity is linear with respect to the size of the input array.\n\n- Space complexity: $O(1)$\n\n    The algorithm uses a constant amount of extra space regardless of the input size. The variables `maxSum` and `currentSubarraySum` are the only additional space used, and they do not depend on the size of the input array. \n    \n    Therefore, the space complexity is constant, $O(1)$.\n\n---"
+}

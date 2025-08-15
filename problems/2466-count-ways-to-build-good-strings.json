@@ -1,0 +1,54 @@
+{
+  "title": "Count Ways To Build Good Strings",
+  "problem_id": "2562",
+  "frontend_id": "2466",
+  "difficulty": "Medium",
+  "problem_slug": "count-ways-to-build-good-strings",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "description": "Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:\nThis can be performed any number of times.\nA good string is a string constructed by the above process having a length between low and high (inclusive).\nReturn the number of different good strings that can be constructed satisfying these properties. Since the answer can be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: low = 3, high = 3, zero = 1, one = 1\nOutput: 8\nExplanation: \nOne possible valid good string is \"011\". \nIt can be constructed as follows: \"\" -> \"0\" -> \"01\" -> \"011\". \nAll binary strings from \"000\" to \"111\" are good strings in this example.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: low = 2, high = 3, zero = 1, one = 2\nOutput: 5\nExplanation: The good strings are \"00\", \"11\", \"000\", \"110\", and \"011\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= low <= high <= 105",
+    "1 <= zero, one <= low"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Calculate the number of good strings with length less or equal to some constant x.",
+    "Apply dynamic programming using the group size of consecutive zeros and ones."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countGoodStrings(int low, int high, int zero, int one) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodStrings(int low, int high, int zero, int one) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGoodStrings(self, low, high, zero, one):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type zero: int\n        :type one: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:\n        ",
+    "c": "int countGoodStrings(int low, int high, int zero, int one) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountGoodStrings(int low, int high, int zero, int one) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @param {number} zero\n * @param {number} one\n * @return {number}\n */\nvar countGoodStrings = function(low, high, zero, one) {\n    \n};",
+    "typescript": "function countGoodStrings(low: number, high: number, zero: number, one: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $low\n     * @param Integer $high\n     * @param Integer $zero\n     * @param Integer $one\n     * @return Integer\n     */\n    function countGoodStrings($low, $high, $zero, $one) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGoodStrings(_ low: Int, _ high: Int, _ zero: Int, _ one: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGoodStrings(low: Int, high: Int, zero: Int, one: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countGoodStrings(int low, int high, int zero, int one) {\n    \n  }\n}",
+    "golang": "func countGoodStrings(low int, high int, zero int, one int) int {\n    \n}",
+    "ruby": "# @param {Integer} low\n# @param {Integer} high\n# @param {Integer} zero\n# @param {Integer} one\n# @return {Integer}\ndef count_good_strings(low, high, zero, one)\n    \nend",
+    "scala": "object Solution {\n    def countGoodStrings(low: Int, high: Int, zero: Int, one: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good_strings(low: i32, high: i32, zero: i32, one: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-good-strings low high zero one)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_good_strings(Low :: integer(), High :: integer(), Zero :: integer(), One :: integer()) -> integer().\ncount_good_strings(Low, High, Zero, One) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_good_strings(low :: integer, high :: integer, zero :: integer, one :: integer) :: integer\n  def count_good_strings(low, high, zero, one) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nAs shown in the picture, where `low = 2` and `high = 3`, all the 5 good strings are colored in green. Besides, three of the invalid strings are colored in red: \n- `1` is invalid as its length is smaller than `low`.\n- `111` is invalid as it can't be made by multiple of `11`.\n- `0011` is invalid as its length is larger than `high`.\n\n![img](../Figures/2466/1.png)\n\n\n\nHere our task is to find the number of good strings, given `low`, `high`, `zero` and `one`. \n\n---\n\n### Approach 1: Dynamic Programming (Iterative).\n\n#### Intuition   \n\nWe can build an array `dp` to record the number of good strings with each length. Let `dp[i]` be the number of good strings with length `i`. Set `dp[0] = 1` before filling the rest of `dp` as the empty string is the only good string with length `0`.\n\n![img](../Figures/2466/2.png)\n\nThen we try to find the relation between each problem `dp[i]` with smaller subproblems. For example, how do we get the number of good strings of length `5`?\n\n![img](../Figures/2466/3.png)\n\nNote that every good string either ends with `zero` of `0`s or `one` of `1`s, which in our case is `0` or `11`. \n\n![img](../Figures/2466/4.png)\n\nIf a good string of length `5` ends with `0`, it means that every good string of length `4` can be turned into a good string of length `5` by appending `0`. Thus we increment `dp[5]` by `dp[4]`, which in the general case is `dp[end] += dp[end - zero]`.\n\nNote that it is suggested to check if `end >= zero` before we increment `dp[end]`, and only apply the increase if `end >= zero`.  \n\n![img](../Figures/2466/5.png)\n\nSimilarly, if the string ends with `11`, it means that every good string of length `3` can be turned into a good string of length `5` by appending `11`. Thus we increment `dp[5]` by `dp[3]`. \n\n![img](../Figures/2466/6.png)\n\nNow we have found both the base case `dp[0] = 1` and the recurrence relations, it's time to fill the array and find the number of good strings of each length in the range `[low ~ high]`. Here we provide an iterative method.#### Algorithm\n\n1) Create an array `dp` of size `1 + high`. Initialize `dp[0] = 1`.\n\n2) Iterate over each length `end`:\n    - If `end >= zero`, increment `dp[end]` by `dp[end - zero]`.\n    - If `end >= one`, increment `dp[end]` by `dp[end - one]`.\n\n3) Once the iteration ends, add up the numbers in `dp[low ~ high]`.\n\n#### Implementation#### Complexity Analysis\n\n\n* Time complexity: $$O(\\text{high})$$\n\n    - We filled the array `dp` iteratively, each step includes at most two summation steps which takes constant time.\n\n\n* Space complexity: $$O(\\text{high})$$\n\n    - We build an array `dp` of length `high + 1`.---\n\n### Approach 2: Dynamic Programming (Recursive)\n\n#### Intuition   \n\nWe will implement the same algorithm in approach 1 using a recursive method. Let `dfs(end)` be the number of good strings of length `end`.\n\nThe trick is as described before, each time a recursive function calls itself, it reduces the given problem `dfs(end)` into subproblems `dfs(end - zero)` and `dfs(end - one)`. The recursion call continues until it reaches a point where the subproblem can be solved without further recursion, that is `dfs(0) = 1`.\n\nSimilarly, we will also build an auxiliary array `dp` to avoid repeated computation. Initially, we set every value `dp[i]` (except `dp[0]`) as `-1`, which also implies that `dp[i]` is not visited. During the recursion, if `dp[end] != -1`, it means we have already calculated `dfs(end)` previously, so just return `dp[end]`. \n\n![img](../Figures/2466/7.png)#### Algorithm\n\n1) Create an array `dp` of size `1 + high`. Initialize `dp[0] = 1` and the value of all the rest cells as `-1`.\n\n2) Define a recursive function `dfs(end)`, if `dp[end] != -1`, return `dp[end]`, otherwise:\n    - Set `answer = 0`.\n    - If `end >= zero`, increment `answer` by `dfs(end - zero)`.\n    - If `end >= one`, increment `answer` by `dfs(end - one)`.\n    - Update `dp[end]` as `answer`.  \n\n3) Once the iteration ends, add up the numbers in `dp[low ~ high]`.\n\n#### Implementation#### Complexity Analysis\n\n\n* Time complexity: $$O(\\text{high})$$\n\n    - Similarly, it takes $$O(\\text{high})$$ time to fill `dp` recursively.\n\n    \n\n* Space complexity: $$O(\\text{high})$$\n\n    - We build an array `dp` of length `high + 1` which takes $$O(\\text{high})$$ space.\n    - During the recursion steps, there are at most $$\\text{high}$$ self calls in the stack, this also takes $$O(\\text{high})$$ space."
+}

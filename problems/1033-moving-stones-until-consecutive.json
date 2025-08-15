@@ -1,0 +1,58 @@
+{
+  "title": "Moving Stones Until Consecutive",
+  "problem_id": "1103",
+  "frontend_id": "1033",
+  "difficulty": "Medium",
+  "problem_slug": "moving-stones-until-consecutive",
+  "topics": [
+    "Math",
+    "Brainteaser"
+  ],
+  "description": "There are three stones in different positions on the X-axis. You are given three integers a, b, and c, the positions of the stones.\nIn one move, you pick up a stone at an endpoint (i.e., either the lowest or highest position stone), and move it to an unoccupied position between those endpoints. Formally, let's say the stones are currently at positions x, y, and z with x < y < z. You pick up the stone at either position x or position z, and move that stone to an integer position k, with x < k < z and k != y.\nThe game ends when you cannot make any more moves (i.e., the stones are in three consecutive positions).\nReturn an integer array answer of length 2 where:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = 1, b = 2, c = 5\nOutput: [1,2]\nExplanation: Move the stone from 5 to 3, or move the stone from 5 to 4 to 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = 4, b = 3, c = 2\nOutput: [0,0]\nExplanation: We cannot make any moves.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: a = 3, b = 5, c = 1\nOutput: [1,2]\nExplanation: Move the stone from 1 to 4; or move the stone from 1 to 2 to 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= a, b, c <= 100",
+    "a, b, and c have different values."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For the minimum:  We can always do it in at most 2 moves, by moving one stone next to another, then the third stone next to the other two.  When can we do it in 1 move?  0 moves?\r\n\r\nFor the maximum:  Every move, the maximum position minus the minimum position must decrease by at least 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> numMovesStones(int a, int b, int c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numMovesStones(int a, int b, int c) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numMovesStones(self, a, b, c):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :type c: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numMovesStones(self, a: int, b: int, c: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numMovesStones(int a, int b, int c, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] NumMovesStones(int a, int b, int c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} a\n * @param {number} b\n * @param {number} c\n * @return {number[]}\n */\nvar numMovesStones = function(a, b, c) {\n    \n};",
+    "typescript": "function numMovesStones(a: number, b: number, c: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $a\n     * @param Integer $b\n     * @param Integer $c\n     * @return Integer[]\n     */\n    function numMovesStones($a, $b, $c) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numMovesStones(_ a: Int, _ b: Int, _ c: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numMovesStones(a: Int, b: Int, c: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> numMovesStones(int a, int b, int c) {\n    \n  }\n}",
+    "golang": "func numMovesStones(a int, b int, c int) []int {\n    \n}",
+    "ruby": "# @param {Integer} a\n# @param {Integer} b\n# @param {Integer} c\n# @return {Integer[]}\ndef num_moves_stones(a, b, c)\n    \nend",
+    "scala": "object Solution {\n    def numMovesStones(a: Int, b: Int, c: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_moves_stones(a: i32, b: i32, c: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (num-moves-stones a b c)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec num_moves_stones(A :: integer(), B :: integer(), C :: integer()) -> [integer()].\nnum_moves_stones(A, B, C) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_moves_stones(a :: integer, b :: integer, c :: integer) :: [integer]\n  def num_moves_stones(a, b, c) do\n    \n  end\nend"
+  }
+}

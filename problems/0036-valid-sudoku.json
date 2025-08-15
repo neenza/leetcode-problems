@@ -1,0 +1,57 @@
+{
+  "title": "Valid Sudoku",
+  "problem_id": "36",
+  "frontend_id": "36",
+  "difficulty": "Medium",
+  "problem_slug": "valid-sudoku",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ],
+  "description": "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = \n[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput: true",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = \n[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput: false\nExplanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "board.length == 9",
+    "board[i].length == 9",
+    "board[i][j] is a digit 1-9 or '.'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isValidSudoku(vector<vector<char>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValidSudoku(char[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isValidSudoku(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        ",
+    "c": "bool isValidSudoku(char** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsValidSudoku(char[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @return {boolean}\n */\nvar isValidSudoku = function(board) {\n    \n};",
+    "typescript": "function isValidSudoku(board: string[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @return Boolean\n     */\n    function isValidSudoku($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isValidSudoku(_ board: [[Character]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isValidSudoku(board: Array<CharArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isValidSudoku(List<List<String>> board) {\n    \n  }\n}",
+    "golang": "func isValidSudoku(board [][]byte) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @return {Boolean}\ndef is_valid_sudoku(board)\n    \nend",
+    "scala": "object Solution {\n    def isValidSudoku(board: Array[Array[Char]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-valid-sudoku board)\n  (-> (listof (listof char?)) boolean?)\n  )",
+    "erlang": "-spec is_valid_sudoku(Board :: [[char()]]) -> boolean().\nis_valid_sudoku(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_valid_sudoku(board :: [[char]]) :: boolean\n  def is_valid_sudoku(board) do\n    \n  end\nend"
+  }
+}

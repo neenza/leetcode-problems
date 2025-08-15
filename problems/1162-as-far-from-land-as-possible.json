@@ -1,0 +1,64 @@
+{
+  "title": "As Far from Land as Possible",
+  "problem_id": "1117",
+  "frontend_id": "1162",
+  "difficulty": "Medium",
+  "problem_slug": "as-far-from-land-as-possible",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "Given an n x n grid containing only values 0 and 1, where 0 represents water and 1 represents land, find a water cell such that its distance to the nearest land cell is maximized, and return the distance. If no land or water exists in the grid, return -1.\nThe distance used in this problem is the Manhattan distance: the distance between two cells (x0, y0) and (x1, y1) is |x0 - x1| + |y0 - y1|.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,1],[0,0,0],[1,0,1]]\nOutput: 2\nExplanation: The cell (1, 1) is as far as possible from all the land with distance 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/05/03/1336_ex1.JPG"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,0],[0,0,0],[0,0,0]]\nOutput: 4\nExplanation: The cell (2, 2) is as far as possible from all the land with distance 4.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/05/03/1336_ex2.JPG"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length",
+    "n == grid[i].length",
+    "1 <= n <= 100",
+    "grid[i][j] is 0 or 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you think of this problem in a backwards way ?",
+    "Imagine expanding outward from each land cell. What kind of search does that ?",
+    "Use BFS starting from all land cells in the same time.",
+    "When do you reach the furthest water cell?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maxDistance(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxDistance = function(grid) {\n    \n};",
+    "typescript": "function maxDistance(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxDistance($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maxDistance(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_distance(grid)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_distance(Grid :: [[integer()]]) -> integer().\nmax_distance(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(grid :: [[integer]]) :: integer\n  def max_distance(grid) do\n    \n  end\nend"
+  }
+}

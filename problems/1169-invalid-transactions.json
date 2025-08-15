@@ -1,0 +1,65 @@
+{
+  "title": "Invalid Transactions",
+  "problem_id": "1272",
+  "frontend_id": "1169",
+  "difficulty": "Medium",
+  "problem_slug": "invalid-transactions",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "A transaction is possibly invalid if:\nYou are given an array of strings transaction where transactions[i] consists of comma-separated values representing the name, time (in minutes), amount, and city of the transaction.\nReturn a list of transactions that are possibly invalid. You may return the answer in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: transactions = [\"alice,20,800,mtv\",\"alice,50,100,beijing\"]\nOutput: [\"alice,20,800,mtv\",\"alice,50,100,beijing\"]\nExplanation: The first transaction is invalid because the second transaction occurs within a difference of 60 minutes, have the same name and is in a different city. Similarly the second one is invalid too.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: transactions = [\"alice,20,800,mtv\",\"alice,50,1200,mtv\"]\nOutput: [\"alice,50,1200,mtv\"]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: transactions = [\"alice,20,800,mtv\",\"bob,50,1200,mtv\"]\nOutput: [\"bob,50,1200,mtv\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "transactions.length <= 1000",
+    "Each transactions[i] takes the form \"{name},{time},{amount},{city}\"",
+    "Each {name} and {city} consist of lowercase English letters, and have lengths between 1 and 10.",
+    "Each {time} consist of digits, and represent an integer between 0 and 1000.",
+    "Each {amount} consist of digits, and represent an integer between 0 and 2000."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Split each string into four arrays.",
+    "For each transaction check if it's invalid, you can do this with just a loop with help of the four arrays generated on step 1.",
+    "At the end you perform O(N ^ 2) operations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> invalidTransactions(vector<string>& transactions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> invalidTransactions(String[] transactions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def invalidTransactions(self, transactions):\n        \"\"\"\n        :type transactions: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def invalidTransactions(self, transactions: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** invalidTransactions(char** transactions, int transactionsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> InvalidTransactions(string[] transactions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} transactions\n * @return {string[]}\n */\nvar invalidTransactions = function(transactions) {\n    \n};",
+    "typescript": "function invalidTransactions(transactions: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $transactions\n     * @return String[]\n     */\n    function invalidTransactions($transactions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func invalidTransactions(_ transactions: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun invalidTransactions(transactions: Array<String>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> invalidTransactions(List<String> transactions) {\n    \n  }\n}",
+    "golang": "func invalidTransactions(transactions []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} transactions\n# @return {String[]}\ndef invalid_transactions(transactions)\n    \nend",
+    "scala": "object Solution {\n    def invalidTransactions(transactions: Array[String]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn invalid_transactions(transactions: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (invalid-transactions transactions)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec invalid_transactions(Transactions :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\ninvalid_transactions(Transactions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec invalid_transactions(transactions :: [String.t]) :: [String.t]\n  def invalid_transactions(transactions) do\n    \n  end\nend"
+  }
+}

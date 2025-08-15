@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+  "problem_id": "2559",
+  "frontend_id": "2472",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-non-overlapping-palindrome-substrings",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a string s and a positive integer k.\nSelect a set of non-overlapping substrings from the string s that satisfy the following conditions:\nReturn the maximum number of substrings in an optimal selection.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abaccdbbd\", k = 3\nOutput: 2\nExplanation: We can select the substrings underlined in s = \"abaccdbbd\". Both \"aba\" and \"dbbd\" are palindromes and have a length of at least k = 3.\nIt can be shown that we cannot find a selection with more than two valid substrings.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"adbcda\", k = 2\nOutput: 0\nExplanation: There is no palindrome substring of length at least 2 in the string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= s.length <= 2000",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to use dynamic programming to solve the problem.",
+    "let dp[i] be the answer for the prefix s[0…i].",
+    "The final answer to the problem will be dp[n-1]. How do you compute this dp?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPalindromes(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPalindromes(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPalindromes(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPalindromes(self, s: str, k: int) -> int:\n        ",
+    "c": "int maxPalindromes(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPalindromes(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxPalindromes = function(s, k) {\n    \n};",
+    "typescript": "function maxPalindromes(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxPalindromes($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPalindromes(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPalindromes(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPalindromes(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxPalindromes(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef max_palindromes(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxPalindromes(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_palindromes(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-palindromes s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_palindromes(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_palindromes(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_palindromes(s :: String.t, k :: integer) :: integer\n  def max_palindromes(s, k) do\n    \n  end\nend"
+  }
+}

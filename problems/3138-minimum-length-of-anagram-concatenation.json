@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Length of Anagram Concatenation",
+  "problem_id": "3395",
+  "frontend_id": "3138",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-length-of-anagram-concatenation",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s, which is known to be a concatenation of anagrams of some string t.\nReturn the minimum possible length of the string t.\nAn anagram is formed by rearranging the letters of a string. For example, \"aab\", \"aba\", and, \"baa\" are anagrams of \"aab\".\nExample 1:\nExample 2:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abba\"\nOutput: 2\nExplanation:\nOne possible string t could be \"ba\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cdef\"\nOutput: 4\nExplanation:\nOne possible string t could be \"cdef\" , notice that t can be equal to s .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcbcacabbaccba\"\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The answer should be a divisor of <code>s.length</code>.",
+    "Check each candidate naively."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minAnagramLength(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minAnagramLength(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minAnagramLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minAnagramLength(self, s: str) -> int:\n        ",
+    "c": "int minAnagramLength(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinAnagramLength(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minAnagramLength = function(s) {\n    \n};",
+    "typescript": "function minAnagramLength(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minAnagramLength($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minAnagramLength(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minAnagramLength(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minAnagramLength(String s) {\n    \n  }\n}",
+    "golang": "func minAnagramLength(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_anagram_length(s)\n    \nend",
+    "scala": "object Solution {\n    def minAnagramLength(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_anagram_length(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-anagram-length s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_anagram_length(S :: unicode:unicode_binary()) -> integer().\nmin_anagram_length(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_anagram_length(s :: String.t) :: integer\n  def min_anagram_length(s) do\n    \n  end\nend"
+  }
+}

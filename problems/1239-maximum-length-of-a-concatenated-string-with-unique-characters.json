@@ -1,0 +1,62 @@
+{
+  "title": "Maximum Length of a Concatenated String with Unique Characters",
+  "problem_id": "1360",
+  "frontend_id": "1239",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-length-of-a-concatenated-string-with-unique-characters",
+  "topics": [
+    "Array",
+    "String",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an array of strings arr. A string s is formed by the concatenation of a subsequence of arr that has unique characters.\nReturn the maximum possible length of s.\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [\"un\",\"iq\",\"ue\"]\nOutput: 4\nExplanation: All the valid concatenations are:\n- \"\"\n- \"un\"\n- \"iq\"\n- \"ue\"\n- \"uniq\" (\"un\" + \"iq\")\n- \"ique\" (\"iq\" + \"ue\")\nMaximum length is 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [\"cha\",\"r\",\"act\",\"ers\"]\nOutput: 6\nExplanation: Possible longest valid concatenations are \"chaers\" (\"cha\" + \"ers\") and \"acters\" (\"act\" + \"ers\").",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [\"abcdefghijklmnopqrstuvwxyz\"]\nOutput: 26\nExplanation: The only string in arr has all 26 characters.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 16",
+    "1 <= arr[i].length <= 26",
+    "arr[i] contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can try all combinations and keep mask of characters you have.",
+    "You can use DP."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxLength(vector<string>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxLength(List<String> arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxLength(self, arr):\n        \"\"\"\n        :type arr: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxLength(self, arr: List[str]) -> int:\n        ",
+    "c": "int maxLength(char** arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxLength(IList<string> arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} arr\n * @return {number}\n */\nvar maxLength = function(arr) {\n    \n};",
+    "typescript": "function maxLength(arr: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $arr\n     * @return Integer\n     */\n    function maxLength($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxLength(_ arr: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxLength(arr: List<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxLength(List<String> arr) {\n    \n  }\n}",
+    "golang": "func maxLength(arr []string) int {\n    \n}",
+    "ruby": "# @param {String[]} arr\n# @return {Integer}\ndef max_length(arr)\n    \nend",
+    "scala": "object Solution {\n    def maxLength(arr: List[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_length(arr: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-length arr)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec max_length(Arr :: [unicode:unicode_binary()]) -> integer().\nmax_length(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_length(arr :: [String.t]) :: integer\n  def max_length(arr) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Maximize Subarray Sum After Removing All Occurrences of One Element",
+  "problem_id": "3688",
+  "frontend_id": "3410",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Segment Tree"
+  ],
+  "description": "You are given an integer array nums.\nYou can do the following operation on the array at most once:\nReturn the maximum subarray sum across all possible resulting arrays.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-3,2,-2,-1,3,-2,3]\nOutput: 7\nExplanation:\nWe can have the following arrays after at most one operation:\nThe output is max(4, 4, 7, 4, 2) = 7 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 10\nExplanation:\nIt is optimal to not perform any operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-106 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a segment tree data structure to solve the problem.",
+    "Each node of the segment tree should store the subarray sum, the maximum subarray sum, the maximum prefix sum, and the maximum suffix sum within the subarray defined by that node."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxSubarraySum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxSubarraySum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubarraySum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubarraySum(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maxSubarraySum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxSubarraySum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSubarraySum = function(nums) {\n    \n};",
+    "typescript": "function maxSubarraySum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxSubarraySum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubarraySum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubarraySum(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSubarraySum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxSubarraySum(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_subarray_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxSubarraySum(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_subarray_sum(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-subarray-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_subarray_sum(Nums :: [integer()]) -> integer().\nmax_subarray_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_subarray_sum(nums :: [integer]) :: integer\n  def max_subarray_sum(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Match Substring After Replacement",
+  "problem_id": "2393",
+  "frontend_id": "2301",
+  "difficulty": "Hard",
+  "problem_slug": "match-substring-after-replacement",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "String Matching"
+  ],
+  "description": "You are given two strings s and sub. You are also given a 2D character array mappings where mappings[i] = [oldi, newi] indicates that you may perform the following operation any number of times:\nEach character in sub cannot be replaced more than once.\nReturn true if it is possible to make sub a substring of s by replacing zero or more characters according to mappings. Otherwise, return false.\nA substring is a contiguous non-empty sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"fool3e7bar\", sub = \"leet\", mappings = [[\"e\",\"3\"],[\"t\",\"7\"],[\"t\",\"8\"]]\nOutput: true\nExplanation: Replace the first 'e' in sub with '3' and 't' in sub with '7'.\nNow sub = \"l3e7\" is a substring of s, so we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"fooleetbar\", sub = \"f00l\", mappings = [[\"o\",\"0\"]]\nOutput: false\nExplanation: The string \"f00l\" is not a substring of s and no replacements can be made.\nNote that we cannot replace '0' with 'o'.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"Fool33tbaR\", sub = \"leetd\", mappings = [[\"e\",\"3\"],[\"t\",\"7\"],[\"t\",\"8\"],[\"d\",\"b\"],[\"p\",\"b\"]]\nOutput: true\nExplanation: Replace the first and second 'e' in sub with '3' and 'd' in sub with 'b'.\nNow sub = \"l33tb\" is a substring of s, so we return true.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= sub.length <= s.length <= 5000",
+    "0 <= mappings.length <= 1000",
+    "mappings[i].length == 2",
+    "oldi != newi",
+    "s and sub consist of uppercase and lowercase English letters and digits.",
+    "oldi and newi are either uppercase or lowercase English letters or digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Enumerate all substrings of s with the same length as sub, and compare each substring to sub for equality.",
+    "How can you quickly tell if a character of s can result from replacing the corresponding character in sub?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean matchReplacement(String s, String sub, char[][] mappings) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matchReplacement(self, s, sub, mappings):\n        \"\"\"\n        :type s: str\n        :type sub: str\n        :type mappings: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matchReplacement(self, s: str, sub: str, mappings: List[List[str]]) -> bool:\n        ",
+    "c": "bool matchReplacement(char* s, char* sub, char** mappings, int mappingsSize, int* mappingsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool MatchReplacement(string s, string sub, char[][] mappings) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} sub\n * @param {character[][]} mappings\n * @return {boolean}\n */\nvar matchReplacement = function(s, sub, mappings) {\n    \n};",
+    "typescript": "function matchReplacement(s: string, sub: string, mappings: string[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $sub\n     * @param String[][] $mappings\n     * @return Boolean\n     */\n    function matchReplacement($s, $sub, $mappings) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matchReplacement(_ s: String, _ sub: String, _ mappings: [[Character]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matchReplacement(s: String, sub: String, mappings: Array<CharArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool matchReplacement(String s, String sub, List<List<String>> mappings) {\n    \n  }\n}",
+    "golang": "func matchReplacement(s string, sub string, mappings [][]byte) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} sub\n# @param {Character[][]} mappings\n# @return {Boolean}\ndef match_replacement(s, sub, mappings)\n    \nend",
+    "scala": "object Solution {\n    def matchReplacement(s: String, sub: String, mappings: Array[Array[Char]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn match_replacement(s: String, sub: String, mappings: Vec<Vec<char>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (match-replacement s sub mappings)\n  (-> string? string? (listof (listof char?)) boolean?)\n  )",
+    "erlang": "-spec match_replacement(S :: unicode:unicode_binary(), Sub :: unicode:unicode_binary(), Mappings :: [[char()]]) -> boolean().\nmatch_replacement(S, Sub, Mappings) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec match_replacement(s :: String.t, sub :: String.t, mappings :: [[char]]) :: boolean\n  def match_replacement(s, sub, mappings) do\n    \n  end\nend"
+  }
+}

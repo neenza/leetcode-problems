@@ -1,0 +1,56 @@
+{
+  "title": "Stone Game",
+  "problem_id": "909",
+  "frontend_id": "877",
+  "difficulty": "Medium",
+  "problem_slug": "stone-game",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob play a game with piles of stones. There are an even number of piles arranged in a row, and each pile has a positive integer number of stones piles[i].\nThe objective of the game is to end with the most stones. The total number of stones across all the piles is odd, so there are no ties.\nAlice and Bob take turns, with Alice starting first. Each turn, a player takes the entire pile of stones either from the beginning or from the end of the row. This continues until there are no more piles left, at which point the person with the most stones wins.\nAssuming Alice and Bob play optimally, return true if Alice wins the game, or false if Bob wins.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: piles = [5,3,4,5]\nOutput: true\nExplanation: \nAlice starts first, and can only take the first 5 or the last 5.\nSay she takes the first 5, so that the row becomes [3, 4, 5].\nIf Bob takes 3, then the board is [4, 5], and Alice takes 5 to win with 10 points.\nIf Bob takes the last 5, then the board is [3, 4], and Alice takes 4 to win with 9 points.\nThis demonstrated that taking the first 5 was a winning move for Alice, so we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: piles = [3,7,2,3]\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= piles.length <= 500",
+    "piles.length is even.",
+    "1 <= piles[i] <= 500",
+    "sum(piles[i]) is odd."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool stoneGame(vector<int>& piles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean stoneGame(int[] piles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGame(self, piles):\n        \"\"\"\n        :type piles: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGame(self, piles: List[int]) -> bool:\n        ",
+    "c": "bool stoneGame(int* piles, int pilesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool StoneGame(int[] piles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} piles\n * @return {boolean}\n */\nvar stoneGame = function(piles) {\n    \n};",
+    "typescript": "function stoneGame(piles: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $piles\n     * @return Boolean\n     */\n    function stoneGame($piles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGame(_ piles: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGame(piles: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool stoneGame(List<int> piles) {\n    \n  }\n}",
+    "golang": "func stoneGame(piles []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} piles\n# @return {Boolean}\ndef stone_game(piles)\n    \nend",
+    "scala": "object Solution {\n    def stoneGame(piles: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game(piles: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (stone-game piles)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec stone_game(Piles :: [integer()]) -> boolean().\nstone_game(Piles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec stone_game(piles :: [integer]) :: boolean\n  def stone_game(piles) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition**\n\nLet's change the game so that whenever Bob scores points, it deducts from Alice's score instead.\n\nLet `dp(i, j)` be the largest score Alice can achieve where the piles remaining are `piles[i], piles[i+1], ..., piles[j]`.  This is natural in games with scoring: we want to know what the value of each position of the game is.\n\nWe can formulate a recursion for `dp(i, j)` in terms of `dp(i+1, j)` and `dp(i, j-1)`, and we can use dynamic programming to not repeat work in this recursion.  (This approach can output the correct answer, because the states form a DAG (directed acyclic graph).)\n\n**Algorithm**\n\nWhen the piles remaining are `piles[i], piles[i+1], ..., piles[j]`, the player who's turn it is has at most 2 moves.\n\nThe person who's turn it is can be found by comparing `j-i` to `N` modulo 2.\n\nIf the player is Alice, then she either takes `piles[i]` or `piles[j]`, increasing her score by that amount.  Afterwards, the total score is either `piles[i] + dp(i+1, j)`, or `piles[j] + dp(i, j-1)`; and we want the maximum possible score.\n\nIf the player is Bob, then he either takes `piles[i]` or `piles[j]`, decreasing Alice's score by that amount.  Afterwards, the total score is either `-piles[i] + dp(i+1, j)`, or `-piles[j] + dp(i, j-1)`; and we want the *minimum* possible score.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the number of piles.\n\n* Space Complexity:  $$O(N^2)$$, the space used storing the intermediate results of each subgame.---\n### Approach 2: Mathematical\n\n**Intuition and Algorithm**\n\nAlice clearly always wins the 2 pile game.  With some effort, we can see that she always wins the 4 pile game.\n\nIf Alice takes the first pile initially, she can always take the third pile.  If she takes the fourth pile initially, she can always take the second pile.  At least one of `first + third, second + fourth` is larger, so she can always win.\n\nWe can extend this idea to `N` piles.  Say the first, third, fifth, seventh, etc. piles are white, and the second, fourth, sixth, eighth, etc. piles are black.  Alice can always take either all white piles or all black piles, and one of the colors must have a sum number of stones larger than the other color.\n\nHence, Alice always wins the game.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(1)$$."
+}

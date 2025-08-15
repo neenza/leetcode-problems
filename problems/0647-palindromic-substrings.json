@@ -1,0 +1,56 @@
+{
+  "title": "Palindromic Substrings",
+  "problem_id": "647",
+  "frontend_id": "647",
+  "difficulty": "Medium",
+  "problem_slug": "palindromic-substrings",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string s, return the number of palindromic substrings in it.\nA string is a palindrome when it reads the same backward as forward.\nA substring is a contiguous sequence of characters within the string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\"\nOutput: 3\nExplanation: Three palindromic strings: \"a\", \"b\", \"c\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaa\"\nOutput: 6\nExplanation: Six palindromic strings: \"a\", \"a\", \"a\", \"aa\", \"aa\", \"aaa\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we reuse a previously computed palindrome to compute a larger palindrome?",
+    "If “aba” is a palindrome, is “xabax” a palindrome? Similarly is “xabay” a palindrome?",
+    "Complexity based hint:</br>\r\nIf we use brute force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubstrings(self, s: str) -> int:\n        ",
+    "c": "int countSubstrings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countSubstrings = function(s) {\n    \n};",
+    "typescript": "function countSubstrings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubstrings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubstrings(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func countSubstrings(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def countSubstrings(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_substrings(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-substrings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_substrings(S :: unicode:unicode_binary()) -> integer().\ncount_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_substrings(s :: String.t) :: integer\n  def count_substrings(s) do\n    \n  end\nend"
+  }
+}

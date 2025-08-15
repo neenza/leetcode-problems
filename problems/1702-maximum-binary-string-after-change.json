@@ -1,0 +1,53 @@
+{
+  "title": "Maximum Binary String After Change",
+  "problem_id": "1804",
+  "frontend_id": "1702",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-binary-string-after-change",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a binary string binary consisting of only 0's or 1's. You can apply each of the following operations any number of times:\nReturn the maximum binary string you can obtain after any number of operations. Binary string x is greater than binary string y if x's decimal representation is greater than y's decimal representation.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: binary = \"000110\"\nOutput: \"111011\"\nExplanation: A valid transformation sequence can be:\n\"000110\" -> \"000101\" \n\"000101\" -> \"100101\" \n\"100101\" -> \"110101\" \n\"110101\" -> \"110011\" \n\"110011\" -> \"111011\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: binary = \"01\"\nOutput: \"01\"\nExplanation: \"01\" cannot be transformed any further.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= binary.length <= 105",
+    "binary consist of '0' and '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that with the operations, you can always make the string only contain at most 1 zero."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string maximumBinaryString(string binary) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maximumBinaryString(String binary) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumBinaryString(self, binary):\n        \"\"\"\n        :type binary: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumBinaryString(self, binary: str) -> str:\n        ",
+    "c": "char* maximumBinaryString(char* binary) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MaximumBinaryString(string binary) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} binary\n * @return {string}\n */\nvar maximumBinaryString = function(binary) {\n    \n};",
+    "typescript": "function maximumBinaryString(binary: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $binary\n     * @return String\n     */\n    function maximumBinaryString($binary) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumBinaryString(_ binary: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumBinaryString(binary: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String maximumBinaryString(String binary) {\n    \n  }\n}",
+    "golang": "func maximumBinaryString(binary string) string {\n    \n}",
+    "ruby": "# @param {String} binary\n# @return {String}\ndef maximum_binary_string(binary)\n    \nend",
+    "scala": "object Solution {\n    def maximumBinaryString(binary: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_binary_string(binary: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-binary-string binary)\n  (-> string? string?)\n  )",
+    "erlang": "-spec maximum_binary_string(Binary :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmaximum_binary_string(Binary) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_binary_string(binary :: String.t) :: String.t\n  def maximum_binary_string(binary) do\n    \n  end\nend"
+  }
+}

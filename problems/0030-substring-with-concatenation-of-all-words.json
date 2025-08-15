@@ -1,0 +1,59 @@
+{
+  "title": "Substring with Concatenation of All Words",
+  "problem_id": "30",
+  "frontend_id": "30",
+  "difficulty": "Hard",
+  "problem_slug": "substring-with-concatenation-of-all-words",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a string s and an array of strings words. All the strings of words are of the same length.\nA concatenated string is a string that exactly contains all the strings of any permutation of words concatenated.\nReturn an array of the starting indices of all the concatenated substrings in s. You can return the answer in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]\nOutput: [0,9]\nExplanation:\nThe substring starting at 0 is \"barfoo\" . It is the concatenation of [\"bar\",\"foo\"] which is a permutation of words . The substring starting at 9 is \"foobar\" . It is the concatenation of [\"foo\",\"bar\"] which is a permutation of words .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"wordgoodgoodgoodbestword\", words = [\"word\",\"good\",\"best\",\"word\"]\nOutput: []\nExplanation:\nThere is no concatenated substring.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"barfoofoobarthefoobarman\", words = [\"bar\",\"foo\",\"the\"]\nOutput: [6,9,12]\nExplanation:\nThe substring starting at 6 is \"foobarthe\" . It is the concatenation of [\"foo\",\"bar\",\"the\"] . The substring starting at 9 is \"barthefoo\" . It is the concatenation of [\"bar\",\"the\",\"foo\"] . The substring starting at 12 is \"thefoobar\" . It is the concatenation of [\"the\",\"foo\",\"bar\"] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "1 <= words.length <= 5000",
+    "1 <= words[i].length <= 30",
+    "s and words[i] consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findSubstring(string s, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findSubstring(String s, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findSubstring(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findSubstring(self, s: str, words: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findSubstring(char* s, char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindSubstring(string s, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} words\n * @return {number[]}\n */\nvar findSubstring = function(s, words) {\n    \n};",
+    "typescript": "function findSubstring(s: string, words: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String[] $words\n     * @return Integer[]\n     */\n    function findSubstring($s, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findSubstring(_ s: String, _ words: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findSubstring(s: String, words: Array<String>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findSubstring(String s, List<String> words) {\n    \n  }\n}",
+    "golang": "func findSubstring(s string, words []string) []int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String[]} words\n# @return {Integer[]}\ndef find_substring(s, words)\n    \nend",
+    "scala": "object Solution {\n    def findSubstring(s: String, words: Array[String]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_substring(s: String, words: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-substring s words)\n  (-> string? (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_substring(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> [integer()].\nfind_substring(S, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_substring(s :: String.t, words :: [String.t]) :: [integer]\n  def find_substring(s, words) do\n    \n  end\nend"
+  }
+}

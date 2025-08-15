@@ -1,0 +1,61 @@
+{
+  "title": "Count Prime-Gap Balanced Subarrays",
+  "problem_id": "3907",
+  "frontend_id": "3589",
+  "difficulty": "Medium",
+  "problem_slug": "count-prime-gap-balanced-subarrays",
+  "topics": [
+    "Array",
+    "Math",
+    "Queue",
+    "Sliding Window",
+    "Number Theory",
+    "Monotonic Queue"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nA subarray is called prime-gap balanced if:\nReturn the count of prime-gap balanced subarrays in nums.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], k = 1\nOutput: 2\nExplanation:\nPrime-gap balanced subarrays are:\nThus, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,5,7], k = 3\nOutput: 4\nExplanation:\nPrime-gap balanced subarrays are:\nThus, the answer is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5 * 104",
+    "1 <= nums[i] <= 5 * 104",
+    "0 <= k <= 5 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sieve and extract primes.",
+    "Build a sparse-table for <code>O(1)</code> max–min queries.",
+    "For each prime, binary‐search the furthest valid partner.",
+    "Count subarrays via left/right gap multiplication."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int primeSubarray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int primeSubarray(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def primeSubarray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def primeSubarray(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int primeSubarray(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PrimeSubarray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar primeSubarray = function(nums, k) {\n    \n};",
+    "typescript": "function primeSubarray(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function primeSubarray($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func primeSubarray(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun primeSubarray(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int primeSubarray(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func primeSubarray(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef prime_subarray(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def primeSubarray(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn prime_subarray(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (prime-subarray nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec prime_subarray(Nums :: [integer()], K :: integer()) -> integer().\nprime_subarray(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec prime_subarray(nums :: [integer], k :: integer) :: integer\n  def prime_subarray(nums, k) do\n    \n  end\nend"
+  }
+}

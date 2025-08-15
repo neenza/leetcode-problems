@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Operations to Convert All Elements to Zero",
+  "problem_id": "3834",
+  "frontend_id": "3542",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-convert-all-elements-to-zero",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "You are given an array nums of size n, consisting of non-negative integers. Your task is to apply some (possibly zero) operations on the array so that all elements become 0.\nIn one operation, you can select a subarray [i, j] (where 0 <= i <= j < n) and set all occurrences of the minimum non-negative integer in that subarray to 0.\nReturn the minimum number of operations required to make all elements in the array 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,2]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,1,2,1]\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,1,2,1,2]\nOutput: 4\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "0 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Process the values in nums from smallest to largest (excluding 0).",
+    "For each target value v, identify its maximal contiguous segments (subarrays where nums[i] == v); each segment can be zeroed out in one operation.",
+    "After setting those segments to zero, dynamically update the remaining array and repeat with the next value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()]) -> integer().\nmin_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer]) :: integer\n  def min_operations(nums) do\n    \n  end\nend"
+  }
+}

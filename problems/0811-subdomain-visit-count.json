@@ -1,0 +1,57 @@
+{
+  "title": "Subdomain Visit Count",
+  "problem_id": "829",
+  "frontend_id": "811",
+  "difficulty": "Medium",
+  "problem_slug": "subdomain-visit-count",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "A website domain \"discuss.leetcode.com\" consists of various subdomains. At the top level, we have \"com\", at the next level, we have \"leetcode.com\" and at the lowest level, \"discuss.leetcode.com\". When we visit a domain like \"discuss.leetcode.com\", we will also visit the parent domains \"leetcode.com\" and \"com\" implicitly.\nA count-paired domain is a domain that has one of the two formats \"rep d1.d2.d3\" or \"rep d1.d2\" where rep is the number of visits to the domain and d1.d2.d3 is the domain itself.\nGiven an array of count-paired domains cpdomains, return an array of the count-paired domains of each subdomain in the input. You may return the answer in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cpdomains = [\"9001 discuss.leetcode.com\"]\nOutput: [\"9001 leetcode.com\",\"9001 discuss.leetcode.com\",\"9001 com\"]\nExplanation: We only have one website domain: \"discuss.leetcode.com\".\nAs discussed above, the subdomain \"leetcode.com\" and \"com\" will also be visited. So they will all be visited 9001 times.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cpdomains = [\"900 google.mail.com\", \"50 yahoo.com\", \"1 intel.mail.com\", \"5 wiki.org\"]\nOutput: [\"901 mail.com\",\"50 yahoo.com\",\"900 google.mail.com\",\"5 wiki.org\",\"5 org\",\"1 intel.mail.com\",\"951 com\"]\nExplanation: We will visit \"google.mail.com\" 900 times, \"yahoo.com\" 50 times, \"intel.mail.com\" once and \"wiki.org\" 5 times.\nFor the subdomains, we will visit \"mail.com\" 900 + 1 = 901 times, \"com\" 900 + 50 + 1 = 951 times, and \"org\" 5 times.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= cpdomain.length <= 100",
+    "1 <= cpdomain[i].length <= 100",
+    "cpdomain[i] follows either the \"repi d1i.d2i.d3i\" format or the \"repi d1i.d2i\" format.",
+    "repi is an integer in the range [1, 104].",
+    "d1i, d2i, and d3i consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> subdomainVisits(vector<string>& cpdomains) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> subdomainVisits(String[] cpdomains) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def subdomainVisits(self, cpdomains):\n        \"\"\"\n        :type cpdomains: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** subdomainVisits(char** cpdomains, int cpdomainsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> SubdomainVisits(string[] cpdomains) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} cpdomains\n * @return {string[]}\n */\nvar subdomainVisits = function(cpdomains) {\n    \n};",
+    "typescript": "function subdomainVisits(cpdomains: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $cpdomains\n     * @return String[]\n     */\n    function subdomainVisits($cpdomains) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func subdomainVisits(_ cpdomains: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun subdomainVisits(cpdomains: Array<String>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> subdomainVisits(List<String> cpdomains) {\n    \n  }\n}",
+    "golang": "func subdomainVisits(cpdomains []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} cpdomains\n# @return {String[]}\ndef subdomain_visits(cpdomains)\n    \nend",
+    "scala": "object Solution {\n    def subdomainVisits(cpdomains: Array[String]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn subdomain_visits(cpdomains: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (subdomain-visits cpdomains)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec subdomain_visits(Cpdomains :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nsubdomain_visits(Cpdomains) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec subdomain_visits(cpdomains :: [String.t]) :: [String.t]\n  def subdomain_visits(cpdomains) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach 1: Hash Map\n\nThe algorithm is straightforward: we just do what the problem statement tells us to do.\n\nFor an address like `a.b.c`, we will count `a.b.c`, `b.c`, and `c`.  For an address like `x.y`, we will count `x.y` and `y`.\n\nTo count these strings, we will use a hash map.  To split the strings into the required pieces, we will use library `split` functions.#### Complexity Analysis\n\nLet $n$ be the number of domain strings in the input array `cpdomains`, and $m$ be the maximum number of fragments in any domain.\n\n- Time complexity: $O(n \\cdot m)$\n\n    The outer loop iterates over each string in `cpdomains`, which takes $O(n)$ time. For each string, `split(\"\\\\s+\")` is used to separate the count from the domain name, which takes $O(1)$ time. Then, `split(\"\\\\.\")` is used to split the domain into fragments. The number of fragments is proportional to $m$ (e.g., \"mail.google.com\" splits into 3 parts). This splitting takes $O(m)$ time.\n    \n    The inner loop constructs subdomains by iterating over the fragments in reverse order. For each subdomain, it updates the count in the map, which also takes $O(m)$ time since updating and retrieving from the `HashMap` is $O(1)$.\n    \n    Therefore, the total time for each domain string is $O(m)$, and for all $n$ domain strings, the overall time complexity is $O(n \\cdot m)$.\n\n- Space complexity: $O(n \\cdot m)$\n\n    The `counts` map stores up to $O(n \\cdot m)$ subdomains because, for each domain in `cpdomains`, there can be up to $m$ subdomains.\n\n    The `ans` stores at most $O(n \\cdot m)$ results, as each subdomain and its associated count is stored as a string.\n\n    The temporary arrays `cpinfo` and `frags` each take $O(m)$ space for each iteration, but they are not cumulative since they are overwritten in each iteration.\n\n    Therefore, the total space complexity is $O(n \\cdot m)$."
+}

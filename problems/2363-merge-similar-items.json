@@ -1,0 +1,64 @@
+{
+  "title": "Merge Similar Items",
+  "problem_id": "2447",
+  "frontend_id": "2363",
+  "difficulty": "Easy",
+  "problem_slug": "merge-similar-items",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Ordered Set"
+  ],
+  "description": "You are given two 2D integer arrays, items1 and items2, representing two sets of items. Each array items has the following properties:\nReturn a 2D integer array ret where ret[i] = [valuei, weighti], with weighti being the sum of weights of all items with value valuei.\nNote: ret should be returned in ascending order by value.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: items1 = [[1,1],[4,5],[3,8]], items2 = [[3,1],[1,5]]\nOutput: [[1,6],[3,9],[4,5]]\nExplanation: \nThe item with value = 1 occurs in items1 with weight = 1 and in items2 with weight = 5, total weight = 1 + 5 = 6.\nThe item with value = 3 occurs in items1 with weight = 8 and in items2 with weight = 1, total weight = 8 + 1 = 9.\nThe item with value = 4 occurs in items1 with weight = 5, total weight = 5.  \nTherefore, we return [[1,6],[3,9],[4,5]].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: items1 = [[1,1],[3,2],[2,3]], items2 = [[2,1],[3,2],[1,3]]\nOutput: [[1,4],[2,4],[3,4]]\nExplanation: \nThe item with value = 1 occurs in items1 with weight = 1 and in items2 with weight = 3, total weight = 1 + 3 = 4.\nThe item with value = 2 occurs in items1 with weight = 3 and in items2 with weight = 1, total weight = 3 + 1 = 4.\nThe item with value = 3 occurs in items1 with weight = 2 and in items2 with weight = 2, total weight = 2 + 2 = 4.\nTherefore, we return [[1,4],[2,4],[3,4]].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: items1 = [[1,3],[2,2]], items2 = [[7,1],[2,2],[1,4]]\nOutput: [[1,7],[2,4],[7,1]]\nExplanation:\nThe item with value = 1 occurs in items1 with weight = 3 and in items2 with weight = 4, total weight = 3 + 4 = 7. \nThe item with value = 2 occurs in items1 with weight = 2 and in items2 with weight = 2, total weight = 2 + 2 = 4. \nThe item with value = 7 occurs in items2 with weight = 1, total weight = 1.\nTherefore, we return [[1,7],[2,4],[7,1]].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= items1.length, items2.length <= 1000",
+    "items1[i].length == items2[i].length == 2",
+    "1 <= valuei, weighti <= 1000",
+    "Each valuei in items1 is unique.",
+    "Each valuei in items2 is unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Map the weights using the corresponding values as keys.",
+    "Make sure your output is sorted in ascending order by value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> mergeSimilarItems(vector<vector<int>>& items1, vector<vector<int>>& items2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mergeSimilarItems(self, items1, items2):\n        \"\"\"\n        :type items1: List[List[int]]\n        :type items2: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mergeSimilarItems(self, items1: List[List[int]], items2: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** mergeSimilarItems(int** items1, int items1Size, int* items1ColSize, int** items2, int items2Size, int* items2ColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> MergeSimilarItems(int[][] items1, int[][] items2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} items1\n * @param {number[][]} items2\n * @return {number[][]}\n */\nvar mergeSimilarItems = function(items1, items2) {\n    \n};",
+    "typescript": "function mergeSimilarItems(items1: number[][], items2: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $items1\n     * @param Integer[][] $items2\n     * @return Integer[][]\n     */\n    function mergeSimilarItems($items1, $items2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mergeSimilarItems(items1: Array<IntArray>, items2: Array<IntArray>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> mergeSimilarItems(List<List<int>> items1, List<List<int>> items2) {\n    \n  }\n}",
+    "golang": "func mergeSimilarItems(items1 [][]int, items2 [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} items1\n# @param {Integer[][]} items2\n# @return {Integer[][]}\ndef merge_similar_items(items1, items2)\n    \nend",
+    "scala": "object Solution {\n    def mergeSimilarItems(items1: Array[Array[Int]], items2: Array[Array[Int]]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn merge_similar_items(items1: Vec<Vec<i32>>, items2: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (merge-similar-items items1 items2)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec merge_similar_items(Items1 :: [[integer()]], Items2 :: [[integer()]]) -> [[integer()]].\nmerge_similar_items(Items1, Items2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec merge_similar_items(items1 :: [[integer]], items2 :: [[integer]]) :: [[integer]]\n  def merge_similar_items(items1, items2) do\n    \n  end\nend"
+  }
+}

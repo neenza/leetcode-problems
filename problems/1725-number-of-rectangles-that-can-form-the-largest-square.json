@@ -1,0 +1,52 @@
+{
+  "title": "Number Of Rectangles That Can Form The Largest Square",
+  "problem_id": "1843",
+  "frontend_id": "1725",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-rectangles-that-can-form-the-largest-square",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given an array rectangles where rectangles[i] = [li, wi] represents the ith rectangle of length li and width wi.\nYou can cut the ith rectangle to form a square with a side length of k if both k <= li and k <= wi. For example, if you have a rectangle [4,6], you can cut it to get a square with a side length of at most 4.\nLet maxLen be the side length of the largest square you can obtain from any of the given rectangles.\nReturn the number of rectangles that can make a square with a side length of maxLen.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rectangles = [[5,8],[3,9],[5,12],[16,5]]\r\nOutput: 3\r\nExplanation: The largest squares you can get from each rectangle are of lengths [5,3,5,5].\r\nThe largest possible square is of length 5, and you can get it out of 3 rectangles.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rectangles = [[2,3],[3,7],[4,3],[3,7]]\r\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= rectangles.length <= 1000",
+    "rectangles[i].length == 2",
+    "1 <= li, wi <= 109",
+    "li != wi"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the length of the largest square the can be cut out of some rectangle? It'll be equal to min(rectangle.length, rectangle.width). Replace each rectangle with this value.",
+    "Calculate maxSize by iterating over the given rectangles and maximizing the answer with their values denoted in the first hint.",
+    "Then iterate again on the rectangles and calculate the number whose values = maxSize."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countGoodRectangles(vector<vector<int>>& rectangles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodRectangles(int[][] rectangles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGoodRectangles(self, rectangles):\n        \"\"\"\n        :type rectangles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGoodRectangles(self, rectangles: List[List[int]]) -> int:\n        ",
+    "c": "\n\nint countGoodRectangles(int** rectangles, int rectanglesSize, int* rectanglesColSize){\n\n}",
+    "csharp": "public class Solution {\n    public int CountGoodRectangles(int[][] rectangles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} rectangles\n * @return {number}\n */\nvar countGoodRectangles = function(rectangles) {\n    \n};",
+    "typescript": "function countGoodRectangles(rectangles: number[][]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $rectangles\n     * @return Integer\n     */\n    function countGoodRectangles($rectangles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGoodRectangles(_ rectangles: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGoodRectangles(rectangles: Array<IntArray>): Int {\n        \n    }\n}",
+    "golang": "func countGoodRectangles(rectangles [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} rectangles\n# @return {Integer}\ndef count_good_rectangles(rectangles)\n    \nend",
+    "scala": "object Solution {\n    def countGoodRectangles(rectangles: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good_rectangles(rectangles: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
+  }
+}

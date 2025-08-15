@@ -1,0 +1,54 @@
+{
+  "title": "  Count Symmetric Integers",
+  "problem_id": "2998",
+  "frontend_id": "2843",
+  "difficulty": "Easy",
+  "problem_slug": "count-symmetric-integers",
+  "topics": [
+    "Math",
+    "Enumeration"
+  ],
+  "description": "You are given two positive integers low and high.\nAn integer x consisting of 2 * n digits is symmetric if the sum of the first n digits of x is equal to the sum of the last n digits of x. Numbers with an odd number of digits are never symmetric.\nReturn the number of symmetric integers in the range [low, high].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: low = 1, high = 100\nOutput: 9\nExplanation: There are 9 symmetric integers between 1 and 100: 11, 22, 33, 44, 55, 66, 77, 88, and 99.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: low = 1200, high = 1230\nOutput: 4\nExplanation: There are 4 symmetric integers between 1200 and 1230: 1203, 1212, 1221, and 1230.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= low <= high <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">Iterate over all numbers from <code>low</code> to <code>high</code></div>",
+    "<div class=\"_1l1MA\">Convert each number to a string and compare the sum of the first half with that of the second.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSymmetricIntegers(int low, int high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSymmetricIntegers(int low, int high) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSymmetricIntegers(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSymmetricIntegers(self, low: int, high: int) -> int:\n        ",
+    "c": "int countSymmetricIntegers(int low, int high) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSymmetricIntegers(int low, int high) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @return {number}\n */\nvar countSymmetricIntegers = function(low, high) {\n    \n};",
+    "typescript": "function countSymmetricIntegers(low: number, high: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $low\n     * @param Integer $high\n     * @return Integer\n     */\n    function countSymmetricIntegers($low, $high) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSymmetricIntegers(_ low: Int, _ high: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSymmetricIntegers(low: Int, high: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSymmetricIntegers(int low, int high) {\n    \n  }\n}",
+    "golang": "func countSymmetricIntegers(low int, high int) int {\n    \n}",
+    "ruby": "# @param {Integer} low\n# @param {Integer} high\n# @return {Integer}\ndef count_symmetric_integers(low, high)\n    \nend",
+    "scala": "object Solution {\n    def countSymmetricIntegers(low: Int, high: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_symmetric_integers(low: i32, high: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-symmetric-integers low high)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_symmetric_integers(Low :: integer(), High :: integer()) -> integer().\ncount_symmetric_integers(Low, High) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_symmetric_integers(low :: integer, high :: integer) :: integer\n  def count_symmetric_integers(low, high) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Enumeration\n\n#### Intuition\n\nEnumerate all numbers from $\\textit{low}$ to $\\textit{high}$:\n\n- If it is a two-digit number and is a multiple of 11, then it is a symmetric integer.\n- If it is a four-digit number, calculate the sum of the thousands and hundreds digits, as well as the sum of the tens and ones digits. If they are equal, it is a symmetric (even) integer.\n\nFinally, it returns the number of symmetric integers in the range.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(high - low)$.\n\nWe enumerate all numbers from $\\textit{low}$ to $\\textit{high}$ and check whether they are symmetric integers in $O(1)$ each time.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed."
+}

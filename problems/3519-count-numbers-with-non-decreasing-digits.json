@@ -1,0 +1,57 @@
+{
+  "title": "Count Numbers with Non-Decreasing Digits ",
+  "problem_id": "3810",
+  "frontend_id": "3519",
+  "difficulty": "Hard",
+  "problem_slug": "count-numbers-with-non-decreasing-digits",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given two integers, l and r, represented as strings, and an integer b. Return the count of integers in the inclusive range [l, r] whose digits are in non-decreasing order when represented in base b.\nAn integer is considered to have non-decreasing digits if, when read from left to right (from the most significant digit to the least significant digit), each digit is greater than or equal to the previous one.\nSince the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: l = \"23\", r = \"28\", b = 8\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: l = \"2\", r = \"7\", b = 2\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= l.length <= r.length <= 100",
+    "2 <= b <= 10",
+    "l and r consist only of digits.",
+    "The value represented by l is less than or equal to the value represented by r.",
+    "l and r do not contain leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use digit dynamic programming."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countNumbers(string l, string r, int b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countNumbers(String l, String r, int b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countNumbers(self, l, r, b):\n        \"\"\"\n        :type l: str\n        :type r: str\n        :type b: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countNumbers(self, l: str, r: str, b: int) -> int:\n        ",
+    "c": "int countNumbers(char* l, char* r, int b) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountNumbers(string l, string r, int b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} l\n * @param {string} r\n * @param {number} b\n * @return {number}\n */\nvar countNumbers = function(l, r, b) {\n    \n};",
+    "typescript": "function countNumbers(l: string, r: string, b: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $l\n     * @param String $r\n     * @param Integer $b\n     * @return Integer\n     */\n    function countNumbers($l, $r, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countNumbers(_ l: String, _ r: String, _ b: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countNumbers(l: String, r: String, b: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countNumbers(String l, String r, int b) {\n    \n  }\n}",
+    "golang": "func countNumbers(l string, r string, b int) int {\n    \n}",
+    "ruby": "# @param {String} l\n# @param {String} r\n# @param {Integer} b\n# @return {Integer}\ndef count_numbers(l, r, b)\n    \nend",
+    "scala": "object Solution {\n    def countNumbers(l: String, r: String, b: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_numbers(l: String, r: String, b: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-numbers l r b)\n  (-> string? string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_numbers(L :: unicode:unicode_binary(), R :: unicode:unicode_binary(), B :: integer()) -> integer().\ncount_numbers(L, R, B) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_numbers(l :: String.t, r :: String.t, b :: integer) :: integer\n  def count_numbers(l, r, b) do\n    \n  end\nend"
+  }
+}

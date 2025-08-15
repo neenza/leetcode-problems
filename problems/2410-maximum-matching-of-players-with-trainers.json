@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Matching of Players With Trainers",
+  "problem_id": "2497",
+  "frontend_id": "2410",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-matching-of-players-with-trainers",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array players, where players[i] represents the ability of the ith player. You are also given a 0-indexed integer array trainers, where trainers[j] represents the training capacity of the jth trainer.\nThe ith player can match with the jth trainer if the player's ability is less than or equal to the trainer's training capacity. Additionally, the ith player can be matched with at most one trainer, and the jth trainer can be matched with at most one player.\nReturn the maximum number of matchings between players and trainers that satisfy these conditions.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as  445: Assign Cookies.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: players = [4,7,9], trainers = [8,2,5,8]\nOutput: 2\nExplanation:\nOne of the ways we can form two matchings is as follows:\n- players[0] can be matched with trainers[0] since 4 <= 8.\n- players[1] can be matched with trainers[3] since 7 <= 8.\nIt can be proven that 2 is the maximum number of matchings that can be formed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: players = [1,1,1], trainers = [10]\nOutput: 1\nExplanation:\nThe trainer can be matched with any of the 3 players.\nEach player can only be matched with one trainer, so the maximum answer is 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= players.length, trainers.length <= 105",
+    "1 <= players[i], trainers[j] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort both the arrays.",
+    "Construct the matching greedily."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int matchPlayersAndTrainers(vector<int>& players, vector<int>& trainers) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int matchPlayersAndTrainers(int[] players, int[] trainers) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matchPlayersAndTrainers(self, players, trainers):\n        \"\"\"\n        :type players: List[int]\n        :type trainers: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matchPlayersAndTrainers(self, players: List[int], trainers: List[int]) -> int:\n        ",
+    "c": "int matchPlayersAndTrainers(int* players, int playersSize, int* trainers, int trainersSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MatchPlayersAndTrainers(int[] players, int[] trainers) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} players\n * @param {number[]} trainers\n * @return {number}\n */\nvar matchPlayersAndTrainers = function(players, trainers) {\n    \n};",
+    "typescript": "function matchPlayersAndTrainers(players: number[], trainers: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $players\n     * @param Integer[] $trainers\n     * @return Integer\n     */\n    function matchPlayersAndTrainers($players, $trainers) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matchPlayersAndTrainers(_ players: [Int], _ trainers: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matchPlayersAndTrainers(players: IntArray, trainers: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int matchPlayersAndTrainers(List<int> players, List<int> trainers) {\n    \n  }\n}",
+    "golang": "func matchPlayersAndTrainers(players []int, trainers []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} players\n# @param {Integer[]} trainers\n# @return {Integer}\ndef match_players_and_trainers(players, trainers)\n    \nend",
+    "scala": "object Solution {\n    def matchPlayersAndTrainers(players: Array[Int], trainers: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn match_players_and_trainers(players: Vec<i32>, trainers: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (match-players-and-trainers players trainers)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec match_players_and_trainers(Players :: [integer()], Trainers :: [integer()]) -> integer().\nmatch_players_and_trainers(Players, Trainers) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec match_players_and_trainers(players :: [integer], trainers :: [integer]) :: integer\n  def match_players_and_trainers(players, trainers) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Sorting + Two Pointers + Greedy\n\n#### Intuition\n\nTo match the maximum number of athletes, we can follow a greedy strategy: sort both athletes and trainers in increasing order of ability, and for each athlete, assign the trainer with the smallest possible ability who can still match that athlete. This ensures that stronger trainers are preserved for athletes who need them.\n\nLet’s understand why this works.\n\nSuppose there are $m$ athletes, with their abilities stored in the array `players[0]` to `players[m - 1]`, and $n$ trainers, with abilities in `trainers[0]` to `trainers[n - 1]`. We assume both arrays are sorted in non-decreasing order.\n\nNow consider matching trainers to athletes one by one. Suppose we’ve already matched trainers to the first $i - 1$ athletes. For the $i$-th athlete, we want to match the trainer with the smallest ability who can still satisfy this athlete, i.e., the first trainer `trainers[j]` such that `trainers[j] ≥ players[i]`.\n\nWe argue that this is optimal:\n\n* **Case 1**: If `players[i + 1] ≤ trainers[j]`, then we could match `trainers[j]` to `players[i + 1]` and `trainers[j + 1]` to `players[i]`, but this would still result in the same number of total matches.\n\n* **Case 2**: If `trainers[j + 1]` is used for `players[i]` instead of `trainers[j]`, and if `players[i + 1] > trainers[j]`, then `trainers[j]` will not be able to match any athlete, reducing the total number of matches.\n\nHence, it's better to use the smallest suitable trainer for each athlete in order.\n\nBased on the above analysis, we can apply a greedy method to match the maximum number of athletes. First, sort both the `players` and `trainers` arrays in increasing order. Then, use two pointers: one for iterating through the `players` array and the other for the `trainers` array. For each player, we try to find the first available trainer whose ability is greater than or equal to that of the player.\n\nBecause both arrays are sorted, we can find matches using a single linear pass. If a trainer can match a player, we count it and move both pointers forward. If the current trainer is not strong enough, we move to the next trainer. This continues until we reach the end of either array. At that point, the number of successful matches recorded is the maximum number of athletes that can be matched with the available trainers.\n\n#### Implementation#### Complexity analysis\n\nLet $m$ be the length of the `players` array, and $n$ be the length of the `trainers` array.\n\n- Time complexity: $O(m \\log m + n \\log n)$. \n  \n  We sort both arrays, which takes $O(m \\log m)$ and $O(n \\log n)$ time respectively. After sorting, we traverse both arrays once using two pointers, which takes $O(m + n)$ time. So the overall time complexity is: $O(m \\log m + n \\log n)$.\n\n- Space complexity: $O(\\log m + \\log n)$\n  \n  The space complexity mainly refers to the additional space required for sorting."
+}

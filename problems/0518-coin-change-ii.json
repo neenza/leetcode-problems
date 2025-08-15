@@ -1,0 +1,58 @@
+{
+  "title": "Coin Change II",
+  "problem_id": "518",
+  "frontend_id": "518",
+  "difficulty": "Medium",
+  "problem_slug": "coin-change-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.\nReturn the number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return 0.\nYou may assume that you have an infinite number of each kind of coin.\nThe answer is guaranteed to fit into a signed 32-bit integer.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: amount = 5, coins = [1,2,5]\nOutput: 4\nExplanation: there are four ways to make up the amount:\n5=5\n5=2+2+1\n5=2+1+1+1\n5=1+1+1+1+1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: amount = 3, coins = [2]\nOutput: 0\nExplanation: the amount of 3 cannot be made up just with coins of 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: amount = 10, coins = [10]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= coins.length <= 300",
+    "1 <= coins[i] <= 5000",
+    "All the values of coins are unique.",
+    "0 <= amount <= 5000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int change(int amount, vector<int>& coins) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int change(int amount, int[] coins) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def change(self, amount, coins):\n        \"\"\"\n        :type amount: int\n        :type coins: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def change(self, amount: int, coins: List[int]) -> int:\n        ",
+    "c": "int change(int amount, int* coins, int coinsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int Change(int amount, int[] coins) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} amount\n * @param {number[]} coins\n * @return {number}\n */\nvar change = function(amount, coins) {\n    \n};",
+    "typescript": "function change(amount: number, coins: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $amount\n     * @param Integer[] $coins\n     * @return Integer\n     */\n    function change($amount, $coins) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func change(_ amount: Int, _ coins: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun change(amount: Int, coins: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int change(int amount, List<int> coins) {\n    \n  }\n}",
+    "golang": "func change(amount int, coins []int) int {\n    \n}",
+    "ruby": "# @param {Integer} amount\n# @param {Integer[]} coins\n# @return {Integer}\ndef change(amount, coins)\n    \nend",
+    "scala": "object Solution {\n    def change(amount: Int, coins: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn change(amount: i32, coins: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (change amount coins)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec change(Amount :: integer(), Coins :: [integer()]) -> integer().\nchange(Amount, Coins) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec change(amount :: integer, coins :: [integer]) :: integer\n  def change(amount, coins) do\n    \n  end\nend"
+  }
+}

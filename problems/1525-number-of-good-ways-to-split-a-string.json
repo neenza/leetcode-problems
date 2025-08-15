@@ -1,0 +1,55 @@
+{
+  "title": "Number of Good Ways to Split a String",
+  "problem_id": "1632",
+  "frontend_id": "1525",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-good-ways-to-split-a-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a string s.\nA split is called good if you can split s into two non-empty strings sleft and sright where their concatenation is equal to s (i.e., sleft + sright = s) and the number of distinct letters in sleft and sright is the same.\nReturn the number of good splits you can make in s.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aacaba\"\nOutput: 2\nExplanation: There are 5 ways to split \"aacaba\" and 2 of them are good. \n(\"a\", \"acaba\") Left string and right string contains 1 and 3 different letters respectively.\n(\"aa\", \"caba\") Left string and right string contains 1 and 3 different letters respectively.\n(\"aac\", \"aba\") Left string and right string contains 2 and 2 different letters respectively (good split).\n(\"aaca\", \"ba\") Left string and right string contains 2 and 2 different letters respectively (good split).\n(\"aacab\", \"a\") Left string and right string contains 3 and 1 different letters respectively.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcd\"\nOutput: 1\nExplanation: Split the string as follows (\"ab\", \"cd\").",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use two HashMap to store the counts of distinct letters in the left and right substring divided by the current index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSplits(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSplits(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSplits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSplits(self, s: str) -> int:\n        ",
+    "c": "int numSplits(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSplits(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numSplits = function(s) {\n    \n};",
+    "typescript": "function numSplits(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numSplits($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSplits(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSplits(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSplits(String s) {\n    \n  }\n}",
+    "golang": "func numSplits(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_splits(s)\n    \nend",
+    "scala": "object Solution {\n    def numSplits(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_splits(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-splits s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_splits(S :: unicode:unicode_binary()) -> integer().\nnum_splits(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_splits(s :: String.t) :: integer\n  def num_splits(s) do\n    \n  end\nend"
+  }
+}

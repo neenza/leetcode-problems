@@ -1,0 +1,60 @@
+{
+  "title": "Count Number of Texts",
+  "problem_id": "2348",
+  "frontend_id": "2266",
+  "difficulty": "Medium",
+  "problem_slug": "count-number-of-texts",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Alice is texting Bob using her phone. The mapping of digits to letters is shown in the figure below.\nIn order to add a letter, Alice has to press the key of the corresponding digit i times, where i is the position of the letter in the key.\nHowever, due to an error in transmission, Bob did not receive Alice's text message but received a string of pressed keys instead.\nGiven a string pressedKeys representing the string received by Bob, return the total number of possible text messages Alice could have sent.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pressedKeys = \"22233\"\nOutput: 8\nExplanation:\nThe possible text messages Alice could have sent are:\n\"aaadd\", \"abdd\", \"badd\", \"cdd\", \"aaae\", \"abe\", \"bae\", and \"ce\".\nSince there are 8 possible messages, we return 8.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pressedKeys = \"222222222222222222222222222222222222\"\nOutput: 82876089\nExplanation:\nThere are 2082876103 possible text messages Alice could have sent.\nSince we need to return the answer modulo 109 + 7, we return 2082876103 % (109 + 7) = 82876089.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= pressedKeys.length <= 105",
+    "pressedKeys only consists of digits from '2' - '9'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For a substring consisting of the same digit, how can we count the number of texts it could have originally represented?",
+    "How can dynamic programming help us calculate the required answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countTexts(string pressedKeys) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTexts(String pressedKeys) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countTexts(self, pressedKeys):\n        \"\"\"\n        :type pressedKeys: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countTexts(self, pressedKeys: str) -> int:\n        ",
+    "c": "int countTexts(char* pressedKeys) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountTexts(string pressedKeys) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} pressedKeys\n * @return {number}\n */\nvar countTexts = function(pressedKeys) {\n    \n};",
+    "typescript": "function countTexts(pressedKeys: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $pressedKeys\n     * @return Integer\n     */\n    function countTexts($pressedKeys) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countTexts(_ pressedKeys: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countTexts(pressedKeys: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countTexts(String pressedKeys) {\n    \n  }\n}",
+    "golang": "func countTexts(pressedKeys string) int {\n    \n}",
+    "ruby": "# @param {String} pressed_keys\n# @return {Integer}\ndef count_texts(pressed_keys)\n    \nend",
+    "scala": "object Solution {\n    def countTexts(pressedKeys: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_texts(pressed_keys: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-texts pressedKeys)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_texts(PressedKeys :: unicode:unicode_binary()) -> integer().\ncount_texts(PressedKeys) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_texts(pressed_keys :: String.t) :: integer\n  def count_texts(pressed_keys) do\n    \n  end\nend"
+  }
+}

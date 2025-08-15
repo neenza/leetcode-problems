@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Number of Flips to Make the Binary String Alternating",
+  "problem_id": "2017",
+  "frontend_id": "1888",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-flips-to-make-the-binary-string-alternating",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "description": "You are given a binary string s. You are allowed to perform two types of operations on the string in any sequence:\nReturn the minimum number of type-2 operations you need to perform such that s becomes alternating.\nThe string is called alternating if no two adjacent characters are equal.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"111000\"\nOutput: 2\nExplanation: Use the first operation two times to make s = \"100011\".\nThen, use the second operation on the third and sixth elements to make s = \"101010\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"010\"\nOutput: 0\nExplanation: The string is already alternating.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1110\"\nOutput: 1\nExplanation: Use the second operation on the second element to make s = \"1010\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note what actually matters is how many 0s and 1s are in odd and even positions",
+    "For every cyclic shift we need to count how many 0s and 1s are at each parity and convert the minimum between them for each parity"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minFlips(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minFlips(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minFlips(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minFlips(self, s: str) -> int:\n        ",
+    "c": "int minFlips(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinFlips(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minFlips = function(s) {\n    \n};",
+    "typescript": "function minFlips(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minFlips($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minFlips(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minFlips(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minFlips(String s) {\n    \n  }\n}",
+    "golang": "func minFlips(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_flips(s)\n    \nend",
+    "scala": "object Solution {\n    def minFlips(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_flips(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-flips s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_flips(S :: unicode:unicode_binary()) -> integer().\nmin_flips(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_flips(s :: String.t) :: integer\n  def min_flips(s) do\n    \n  end\nend"
+  }
+}

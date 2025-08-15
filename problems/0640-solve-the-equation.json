@@ -1,0 +1,60 @@
+{
+  "title": "Solve the Equation",
+  "problem_id": "640",
+  "frontend_id": "640",
+  "difficulty": "Medium",
+  "problem_slug": "solve-the-equation",
+  "topics": [
+    "Math",
+    "String",
+    "Simulation"
+  ],
+  "description": "Solve a given equation and return the value of 'x' in the form of a string \"x=#value\". The equation contains only '+', '-' operation, the variable 'x' and its coefficient. You should return \"No solution\" if there is no solution for the equation, or \"Infinite solutions\" if there are infinite solutions for the equation.\nIf there is exactly one solution for the equation, we ensure that the value of 'x' is an integer.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: equation = \"x+5-3+x=6+x-2\"\nOutput: \"x=2\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: equation = \"x=x\"\nOutput: \"Infinite solutions\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: equation = \"2x=x\"\nOutput: \"x=0\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= equation.length <= 1000",
+    "equation has exactly one '='.",
+    "equation consists of integers with an absolute value in the range [0, 100] without any leading zeros, and the variable 'x'.",
+    "The input is generated that if there is a single solution, it will be an integer."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string solveEquation(string equation) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String solveEquation(String equation) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def solveEquation(self, equation):\n        \"\"\"\n        :type equation: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def solveEquation(self, equation: str) -> str:\n        ",
+    "c": "char* solveEquation(char* equation) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SolveEquation(string equation) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} equation\n * @return {string}\n */\nvar solveEquation = function(equation) {\n    \n};",
+    "typescript": "function solveEquation(equation: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $equation\n     * @return String\n     */\n    function solveEquation($equation) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func solveEquation(_ equation: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun solveEquation(equation: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String solveEquation(String equation) {\n    \n  }\n}",
+    "golang": "func solveEquation(equation string) string {\n    \n}",
+    "ruby": "# @param {String} equation\n# @return {String}\ndef solve_equation(equation)\n    \nend",
+    "scala": "object Solution {\n    def solveEquation(equation: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn solve_equation(equation: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (solve-equation equation)\n  (-> string? string?)\n  )",
+    "erlang": "-spec solve_equation(Equation :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsolve_equation(Equation) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec solve_equation(equation :: String.t) :: String.t\n  def solve_equation(equation) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Partioning Coefficients [Accepted]\n\nIn the current approach, we start by splitting the given $$equation$$ based on `=` sign. This way, we've separated the left and right hand side of this equation. Once this is done, we need to extract the individual elements(i.e. `x`'s and the numbers) from both sides of the equation. To do so, we make use of `breakIt` function, in which we traverse over the given equation(either left hand side or right hand side), and put the separated parts into an array. \n\nNow, the idea is as follows. We treat the given equation as if we're bringing all the `x`'s on the left hand side and all the rest of the numbers on the right hand side as done below for an example.\n\n`x+5-3+x=6+x-2`\n\n`x+x-x=6-2-5+3`\n\nThus, every `x` in the left hand side of the given equation is treated as positive, while that on the right hand side is treated as negative, in the current implementation. \n\nLikewise, every number on the left hand side is treated as negative, while that on the right hand side is treated as positive. Thus, by doing so, we obtain all the `x`'s in the new $$lhs$$ and all the numbers in the new $$rhs$$ of the original equation. \n\nFurther, in case of an `x`, we also need to find its corresponding coefficients in order to evaluate the final effective coefficient of `x` on the left hand side. We also evaluate the final effective number on the right hand side as well.\n\nNow, in case of a unique solution, the ratio of the effective $$rhs$$ and $$lhs$$ gives the required result. In case of infinite solutions, both the effective $$lhs$$ and $$rhs$$ turns out to be zero e.g. `x+1=x+1`. In case of no solution, the coefficient of `x`($$lhs$$) turns out to be zero, but the effective number on the $$rhs$$ is non-zero.**Complexity Analysis**\n\n* Time complexity : $$O(n)$$. Generating coefficients and findinn $$lhs$$ and $$rhs$$ will take $$O(n)$$.\n\n* Space complexity : $$O(n)$$. ArrayList $$res$$ size can grow upto $$n$$.\n\n---\n### Approach #2 Using regex for spliting [Accepted]\n\n**Algorithm**\n\nIn the last approach, we made use of a new function `breakIt` to obtain the individual components of either the left hand side or the right hand side. Instead of doing so, we can also make use of splitting based on `+` or `-` sign, to obtain the individual elements. The rest of the process remains the same as in the last approach. \n\nIn order to do the splitting, we make use of an expression derived from regular expressions(regex). Simply speaking, regex is a functionality used to match a target string based on some given criteria. The ?=n quantifier, in regex, matches any string that is followed by a specific string $$n$$. What it's saying is that the captured match must be followed by $$n$$ but the $$n$$ itself isn't captured.\n\nBy making use of this kind of expression in the `split` functionality, we make sure that the partitions are obtained such that the `+` or `-` sign remains along with the parts(numbers or coefficients) even after the splitting.**Complexity Analysis**\n\n* Time complexity : $$O(n)$$. Generating coefficients and finding $$lhs$$ and $$rhs$$ will take $$O(n)$$.\n\n* Space complexity : $$O(n)$$. ArrayList $$res$$ size can grow upto $$n$$."
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Find the Largest Palindrome Divisible by K",
+  "problem_id": "3552",
+  "frontend_id": "3260",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-largest-palindrome-divisible-by-k",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Number Theory"
+  ],
+  "description": "You are given two positive integers n and k.\nAn integer x is called k-palindromic if:\nReturn the largest integer having n digits (as a string) that is k-palindromic.\nNote that the integer must not have leading zeros.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, k = 5\nOutput: \"595\"\nExplanation:\n595 is the largest k-palindromic integer with 3 digits.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, k = 4\nOutput: \"8\"\nExplanation:\n4 and 8 are the only k-palindromic integers with 1 digit.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, k = 6\nOutput: \"89898\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "1 <= k <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It must have a solution since we can have all digits equal to <code>k</code>.",
+    "Use string dp, store modulus along with length of number currently formed.",
+    "Is it possible to solve greedily using divisibility rules?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestPalindrome(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestPalindrome(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestPalindrome(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestPalindrome(self, n: int, k: int) -> str:\n        ",
+    "c": "char* largestPalindrome(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestPalindrome(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {string}\n */\nvar largestPalindrome = function(n, k) {\n    \n};",
+    "typescript": "function largestPalindrome(n: number, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return String\n     */\n    function largestPalindrome($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestPalindrome(_ n: Int, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestPalindrome(n: Int, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestPalindrome(int n, int k) {\n    \n  }\n}",
+    "golang": "func largestPalindrome(n int, k int) string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {String}\ndef largest_palindrome(n, k)\n    \nend",
+    "scala": "object Solution {\n    def largestPalindrome(n: Int, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_palindrome(n: i32, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-palindrome n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec largest_palindrome(N :: integer(), K :: integer()) -> unicode:unicode_binary().\nlargest_palindrome(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_palindrome(n :: integer, k :: integer) :: String.t\n  def largest_palindrome(n, k) do\n    \n  end\nend"
+  }
+}

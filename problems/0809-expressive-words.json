@@ -1,0 +1,53 @@
+{
+  "title": "Expressive Words",
+  "problem_id": "827",
+  "frontend_id": "809",
+  "difficulty": "Medium",
+  "problem_slug": "expressive-words",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Sometimes people repeat letters to represent extra feeling. For example:\nIn these strings like \"heeellooo\", we have groups of adjacent letters that are all the same: \"h\", \"eee\", \"ll\", \"ooo\".\nYou are given a string s and an array of query strings words. A query word is stretchy if it can be made to be equal to s by any number of applications of the following extension operation: choose a group consisting of characters c, and add some number of characters c to the group so that the size of the group is three or more.\nReturn the number of query strings that are stretchy.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"heeellooo\", words = [\"hello\", \"hi\", \"helo\"]\nOutput: 1\nExplanation: \nWe can extend \"e\" and \"o\" in the word \"hello\" to get \"heeellooo\".\nWe can't extend \"helo\" to get \"heeellooo\" because the group \"ll\" is not size 3 or more.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"zzzzzyyyyy\", words = [\"zzyy\",\"zy\",\"zyy\"]\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, words.length <= 100",
+    "1 <= words[i].length <= 100",
+    "s and words[i] consist of lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int expressiveWords(string s, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int expressiveWords(String s, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def expressiveWords(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def expressiveWords(self, s: str, words: List[str]) -> int:\n        ",
+    "c": "int expressiveWords(char* s, char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ExpressiveWords(string s, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} words\n * @return {number}\n */\nvar expressiveWords = function(s, words) {\n    \n};",
+    "typescript": "function expressiveWords(s: string, words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String[] $words\n     * @return Integer\n     */\n    function expressiveWords($s, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func expressiveWords(_ s: String, _ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun expressiveWords(s: String, words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int expressiveWords(String s, List<String> words) {\n    \n  }\n}",
+    "golang": "func expressiveWords(s string, words []string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String[]} words\n# @return {Integer}\ndef expressive_words(s, words)\n    \nend",
+    "scala": "object Solution {\n    def expressiveWords(s: String, words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn expressive_words(s: String, words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (expressive-words s words)\n  (-> string? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec expressive_words(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> integer().\nexpressive_words(S, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec expressive_words(s :: String.t, words :: [String.t]) :: integer\n  def expressive_words(s, words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Possible Bipartition",
+  "problem_id": "922",
+  "frontend_id": "886",
+  "difficulty": "Medium",
+  "problem_slug": "possible-bipartition",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph"
+  ],
+  "description": "We want to split a group of n people (labeled from 1 to n) into two groups of any size. Each person may dislike some other people, and they should not go into the same group.\nGiven the integer n and the array dislikes where dislikes[i] = [ai, bi] indicates that the person labeled ai does not like the person labeled bi, return true if it is possible to split everyone into two groups in this way.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, dislikes = [[1,2],[1,3],[2,4]]\nOutput: true\nExplanation: The first group has [1,4], and the second group has [2,3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, dislikes = [[1,2],[1,3],[2,3]]\nOutput: false\nExplanation: We need at least 3 groups to divide them. We cannot put them in two groups.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2000",
+    "0 <= dislikes.length <= 104",
+    "dislikes[i].length == 2",
+    "1 <= ai < bi <= n",
+    "All the pairs of dislikes are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool possibleBipartition(int n, vector<vector<int>>& dislikes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean possibleBipartition(int n, int[][] dislikes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def possibleBipartition(self, n, dislikes):\n        \"\"\"\n        :type n: int\n        :type dislikes: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def possibleBipartition(self, n: int, dislikes: List[List[int]]) -> bool:\n        ",
+    "c": "bool possibleBipartition(int n, int** dislikes, int dislikesSize, int* dislikesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool PossibleBipartition(int n, int[][] dislikes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} dislikes\n * @return {boolean}\n */\nvar possibleBipartition = function(n, dislikes) {\n    \n};",
+    "typescript": "function possibleBipartition(n: number, dislikes: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $dislikes\n     * @return Boolean\n     */\n    function possibleBipartition($n, $dislikes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func possibleBipartition(_ n: Int, _ dislikes: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun possibleBipartition(n: Int, dislikes: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool possibleBipartition(int n, List<List<int>> dislikes) {\n    \n  }\n}",
+    "golang": "func possibleBipartition(n int, dislikes [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} dislikes\n# @return {Boolean}\ndef possible_bipartition(n, dislikes)\n    \nend",
+    "scala": "object Solution {\n    def possibleBipartition(n: Int, dislikes: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn possible_bipartition(n: i32, dislikes: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (possible-bipartition n dislikes)\n  (-> exact-integer? (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec possible_bipartition(N :: integer(), Dislikes :: [[integer()]]) -> boolean().\npossible_bipartition(N, Dislikes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec possible_bipartition(n :: integer, dislikes :: [[integer]]) :: boolean\n  def possible_bipartition(n, dislikes) do\n    \n  end\nend"
+  }
+}

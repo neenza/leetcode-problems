@@ -1,0 +1,62 @@
+{
+  "title": "Find Missing Observations",
+  "problem_id": "2155",
+  "frontend_id": "2028",
+  "difficulty": "Medium",
+  "problem_slug": "find-missing-observations",
+  "topics": [
+    "Array",
+    "Math",
+    "Simulation"
+  ],
+  "description": "You have observations of n + m 6-sided dice rolls with each face numbered from 1 to 6. n of the observations went missing, and you only have the observations of m rolls. Fortunately, you have also calculated the average value of the n + m rolls.\nYou are given an integer array rolls of length m where rolls[i] is the value of the ith observation. You are also given the two integers mean and n.\nReturn an array of length n containing the missing observations such that the average value of the n + m rolls is exactly mean. If there are multiple valid answers, return any of them. If no such array exists, return an empty array.\nThe average value of a set of k numbers is the sum of the numbers divided by k.\nNote that mean is an integer, so the sum of the n + m rolls should be divisible by n + m.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rolls = [3,2,4,3], mean = 4, n = 2\nOutput: [6,6]\nExplanation: The mean of all n + m rolls is (3 + 2 + 4 + 3 + 6 + 6) / 6 = 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rolls = [1,5,6], mean = 3, n = 4\nOutput: [2,3,2,2]\nExplanation: The mean of all n + m rolls is (1 + 5 + 6 + 2 + 3 + 2 + 2) / 7 = 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: rolls = [1,2,3,4], mean = 6, n = 4\nOutput: []\nExplanation: It is impossible for the mean to be 6 no matter what the 4 missing rolls are.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == rolls.length",
+    "1 <= n, m <= 105",
+    "1 <= rolls[i], mean <= 6"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What should the sum of the n rolls be?",
+    "Could you generate an array of size n such that each element is between 1 and 6?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> missingRolls(vector<int>& rolls, int mean, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] missingRolls(int[] rolls, int mean, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def missingRolls(self, rolls, mean, n):\n        \"\"\"\n        :type rolls: List[int]\n        :type mean: int\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def missingRolls(self, rolls: List[int], mean: int, n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* missingRolls(int* rolls, int rollsSize, int mean, int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MissingRolls(int[] rolls, int mean, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} rolls\n * @param {number} mean\n * @param {number} n\n * @return {number[]}\n */\nvar missingRolls = function(rolls, mean, n) {\n    \n};",
+    "typescript": "function missingRolls(rolls: number[], mean: number, n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $rolls\n     * @param Integer $mean\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function missingRolls($rolls, $mean, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func missingRolls(_ rolls: [Int], _ mean: Int, _ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun missingRolls(rolls: IntArray, mean: Int, n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> missingRolls(List<int> rolls, int mean, int n) {\n    \n  }\n}",
+    "golang": "func missingRolls(rolls []int, mean int, n int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} rolls\n# @param {Integer} mean\n# @param {Integer} n\n# @return {Integer[]}\ndef missing_rolls(rolls, mean, n)\n    \nend",
+    "scala": "object Solution {\n    def missingRolls(rolls: Array[Int], mean: Int, n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn missing_rolls(rolls: Vec<i32>, mean: i32, n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (missing-rolls rolls mean n)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec missing_rolls(Rolls :: [integer()], Mean :: integer(), N :: integer()) -> [integer()].\nmissing_rolls(Rolls, Mean, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec missing_rolls(rolls :: [integer], mean :: integer, n :: integer) :: [integer]\n  def missing_rolls(rolls, mean, n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Math\n\n#### Intuition\n\nIn this problem, we have some dice throw results but lost `n` of them. We know the results of `m` throws and the average value of all `m + n` throws. Our goal is to determine if we can find the missing throws that fit these conditions.\n\nThe mean is the sum of observations divided by the number of observations. Therefore, we can find the total sum by multiplying the mean by `m + n`. Next, we subtract the sum of the `m` known throws from this total sum to get the sum of the missing `n` throws.\n\nFor example:\\\n$rolls = [3, 2, 4, 3], mean = 4, n = 2$\\\n$total\\; observations = m + n = 4 + 2 = 6$\\\n$sum\\; of\\; observations = 4 * 6 = 24$\\\n$sum\\; of\\; given\\; dice\\; rolls = 3 + 2 + 4 + 3 = 12$\\\n$sum\\; of\\; remaining\\; dice\\; rolls = 24 - 12 = 12$\n\nTo check if this sum is possible, we note that the minimum sum for `n` dice is `n` (if all dice show 1), and the maximum sum is `6n` (if all dice show 6). So, the sum of the missing throws must be between `n` and `6n`, inclusive.\n\nFinally, we need to distribute this sum among the `n` missing throws. Ideally, each missing throw would have a value close to the average. If the sum isn’t exactly divisible by `n`, we distribute the remainder among the throws, making sure each value stays between 1 and 6.\n\n#### Algorithm\n\n1. Create an integer variable `sum` and set it to `0`.\n2. Calculate the `sum` of `rolls`:\n3. Iterate through each element in `rolls`:\n    - Add the current element to `sum`.\n4. Compute `remainingSum` as `mean * (n + rolls.size()) - sum`.\n5. Check the validity of `remainingSum`:\n    - If `remainingSum > 6 * n` or `remainingSum < n`, return an empty list `[]`.\n6. Compute `distributeMean` as `remainingSum / n` and `mod` as `remainingSum % n`.\n7. Initialize an array `nElements` of size `n` with each element set to `distributeMean`.\n8. Iterate through the first `mod` elements of `nElements`:\n    - Increment each of these elements by 1.\n9. Return `nElements` as the final result.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the size of the `rolls` array.\n\n- Time complexity: $O(m + n)$\n\n    We iterate through the `rolls` array exactly once. Also, while filling the `mod` values, we iterate the array up to index `mod`. Since the value of `mod` in the worst case can go up to `n-1`, the total time complexity is given by $O(m + n)$.\n\n- Space complexity: $O(1)$\n\n   Apart from the `nElements` array, where we store the answer, no additional space is used to solve the problem. Therefore, the space complexity is given by $O(1)$.\n\n---"
+}

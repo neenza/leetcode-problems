@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Number of Occurrences of a Substring",
+  "problem_id": "1423",
+  "frontend_id": "1297",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-occurrences-of-a-substring",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "Given a string s, return the maximum number of occurrences of any substring under the following rules:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aababcaab\", maxLetters = 2, minSize = 3, maxSize = 4\nOutput: 2\nExplanation: Substring \"aab\" has 2 occurrences in the original string.\nIt satisfies the conditions, 2 unique letters and size 3 (between minSize and maxSize).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaaa\", maxLetters = 1, minSize = 3, maxSize = 3\nOutput: 2\nExplanation: Substring \"aaa\" occur 2 times in the string. It can overlap.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "1 <= maxLetters <= 26",
+    "1 <= minSize <= maxSize <= min(26, s.length)",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check out the constraints, (maxSize <=26).",
+    "This means you can explore all substrings in O(n * 26).",
+    "Find the Maximum Number of Occurrences of a Substring with bruteforce."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxFreq(string s, int maxLetters, int minSize, int maxSize) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxFreq(self, s, maxLetters, minSize, maxSize):\n        \"\"\"\n        :type s: str\n        :type maxLetters: int\n        :type minSize: int\n        :type maxSize: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:\n        ",
+    "c": "int maxFreq(char* s, int maxLetters, int minSize, int maxSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxFreq(string s, int maxLetters, int minSize, int maxSize) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} maxLetters\n * @param {number} minSize\n * @param {number} maxSize\n * @return {number}\n */\nvar maxFreq = function(s, maxLetters, minSize, maxSize) {\n    \n};",
+    "typescript": "function maxFreq(s: string, maxLetters: number, minSize: number, maxSize: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $maxLetters\n     * @param Integer $minSize\n     * @param Integer $maxSize\n     * @return Integer\n     */\n    function maxFreq($s, $maxLetters, $minSize, $maxSize) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxFreq(_ s: String, _ maxLetters: Int, _ minSize: Int, _ maxSize: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxFreq(s: String, maxLetters: Int, minSize: Int, maxSize: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxFreq(String s, int maxLetters, int minSize, int maxSize) {\n    \n  }\n}",
+    "golang": "func maxFreq(s string, maxLetters int, minSize int, maxSize int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} max_letters\n# @param {Integer} min_size\n# @param {Integer} max_size\n# @return {Integer}\ndef max_freq(s, max_letters, min_size, max_size)\n    \nend",
+    "scala": "object Solution {\n    def maxFreq(s: String, maxLetters: Int, minSize: Int, maxSize: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_freq(s: String, max_letters: i32, min_size: i32, max_size: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-freq s maxLetters minSize maxSize)\n  (-> string? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_freq(S :: unicode:unicode_binary(), MaxLetters :: integer(), MinSize :: integer(), MaxSize :: integer()) -> integer().\nmax_freq(S, MaxLetters, MinSize, MaxSize) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_freq(s :: String.t, max_letters :: integer, min_size :: integer, max_size :: integer) :: integer\n  def max_freq(s, max_letters, min_size, max_size) do\n    \n  end\nend"
+  }
+}

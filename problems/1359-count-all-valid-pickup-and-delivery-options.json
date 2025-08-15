@@ -1,0 +1,58 @@
+{
+  "title": "Count All Valid Pickup and Delivery Options",
+  "problem_id": "1461",
+  "frontend_id": "1359",
+  "difficulty": "Hard",
+  "problem_slug": "count-all-valid-pickup-and-delivery-options",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "Given n orders, each order consists of a pickup and a delivery service.\nCount all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i).\nSince the answer may be too large, return it modulo 10^9 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 1\nExplanation: Unique order (P1, D1), Delivery 1 always is after of Pickup 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 6\nExplanation: All possible orders: \n(P1,P2,D1,D2), (P1,P2,D2,D1), (P1,D1,P2,D2), (P2,P1,D1,D2), (P2,P1,D2,D1) and (P2,D2,P1,D1).\nThis is an invalid order (P1,D2,P2,D1) because Pickup 2 is after of Delivery 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3\nOutput: 90",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 500"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the permutation and combination theory to add one (P, D) pair each time until n pairs."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countOrders(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countOrders(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countOrders(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countOrders(self, n: int) -> int:\n        ",
+    "c": "int countOrders(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountOrders(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countOrders = function(n) {\n    \n};",
+    "typescript": "function countOrders(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countOrders($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countOrders(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countOrders(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countOrders(int n) {\n    \n  }\n}",
+    "golang": "func countOrders(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_orders(n)\n    \nend",
+    "scala": "object Solution {\n    def countOrders(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_orders(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-orders n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_orders(N :: integer()) -> integer().\ncount_orders(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_orders(n :: integer) :: integer\n  def count_orders(n) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Largest Multiple of Three",
+  "problem_id": "1277",
+  "frontend_id": "1363",
+  "difficulty": "Hard",
+  "problem_slug": "largest-multiple-of-three",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an array of digits digits, return the largest multiple of three that can be formed by concatenating some of the given digits in any order. If there is no answer return an empty string.\nSince the answer may not fit in an integer data type, return the answer as a string. Note that the returning answer must not contain unnecessary leading zeros.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: digits = [8,1,9]\nOutput: \"981\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: digits = [8,6,7,1,0]\nOutput: \"8760\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: digits = [1]\nOutput: \"\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= digits.length <= 104",
+    "0 <= digits[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A number is a multiple of three if and only if its sum of digits is a multiple of three.",
+    "Use dynamic programming.",
+    "To find the maximum number, try to maximize the number of digits of the number.",
+    "Sort the digits in descending order to find the maximum number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestMultipleOfThree(vector<int>& digits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestMultipleOfThree(int[] digits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestMultipleOfThree(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestMultipleOfThree(self, digits: List[int]) -> str:\n        ",
+    "c": "char* largestMultipleOfThree(int* digits, int digitsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestMultipleOfThree(int[] digits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} digits\n * @return {string}\n */\nvar largestMultipleOfThree = function(digits) {\n    \n};",
+    "typescript": "function largestMultipleOfThree(digits: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $digits\n     * @return String\n     */\n    function largestMultipleOfThree($digits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestMultipleOfThree(_ digits: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestMultipleOfThree(digits: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestMultipleOfThree(List<int> digits) {\n    \n  }\n}",
+    "golang": "func largestMultipleOfThree(digits []int) string {\n    \n}",
+    "ruby": "# @param {Integer[]} digits\n# @return {String}\ndef largest_multiple_of_three(digits)\n    \nend",
+    "scala": "object Solution {\n    def largestMultipleOfThree(digits: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_multiple_of_three(digits: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-multiple-of-three digits)\n  (-> (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec largest_multiple_of_three(Digits :: [integer()]) -> unicode:unicode_binary().\nlargest_multiple_of_three(Digits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_multiple_of_three(digits :: [integer]) :: String.t\n  def largest_multiple_of_three(digits) do\n    \n  end\nend"
+  }
+}

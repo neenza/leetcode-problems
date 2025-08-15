@@ -1,0 +1,58 @@
+{
+  "title": "Intersection of Multiple Arrays",
+  "problem_id": "2331",
+  "frontend_id": "2248",
+  "difficulty": "Easy",
+  "problem_slug": "intersection-of-multiple-arrays",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "Example 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]\nOutput: [3,4]\nExplanation: \nThe only integers present in each of nums[0] = [3,1,2,4,5], nums[1] = [1,2,3,4], and nums[2] = [3,4,5,6] are 3 and 4, so we return [3,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [[1,2,3],[4,5,6]]\nOutput: []\nExplanation: \nThere does not exist any integer present both in nums[0] and nums[1], so we return an empty list [].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= sum(nums[i].length) <= 1000",
+    "1 <= nums[i][j] <= 1000",
+    "All the values of nums[i] are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep a count of the number of times each integer occurs in nums.",
+    "Since all integers of nums[i] are distinct, if an integer is present in each array, its count will be equal to the total number of arrays."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> intersection(vector<vector<int>>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> intersection(int[][] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def intersection(self, nums):\n        \"\"\"\n        :type nums: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def intersection(self, nums: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* intersection(int** nums, int numsSize, int* numsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> Intersection(int[][] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} nums\n * @return {number[]}\n */\nvar intersection = function(nums) {\n    \n};",
+    "typescript": "function intersection(nums: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $nums\n     * @return Integer[]\n     */\n    function intersection($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func intersection(_ nums: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun intersection(nums: Array<IntArray>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> intersection(List<List<int>> nums) {\n    \n  }\n}",
+    "golang": "func intersection(nums [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} nums\n# @return {Integer[]}\ndef intersection(nums)\n    \nend",
+    "scala": "object Solution {\n    def intersection(nums: Array[Array[Int]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn intersection(nums: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (intersection nums)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec intersection(Nums :: [[integer()]]) -> [integer()].\nintersection(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec intersection(nums :: [[integer]]) :: [integer]\n  def intersection(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Find Students Who Improved",
+  "problem_id": "3767",
+  "frontend_id": "3421",
+  "difficulty": "Medium",
+  "problem_slug": "find-students-who-improved",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Scores\nWrite a solution to find the students who have shown improvement. A student is considered to have shown improvement if they meet both of these conditions:\nReturn the result table ordered by student_id, subject in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| student_id  | int     |\n| subject     | varchar |\n| score       | int     |\n| exam_date   | varchar |\n+-------------+---------+\n(student_id, subject, exam_date) is the primary key for this table.\nEach row contains information about a student's score in a specific subject on a particular exam date. score is between 0 and 100 (inclusive).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+------------+----------+-------+------------+\n| student_id | subject  | score | exam_date  |\n+------------+----------+-------+------------+\n| 101        | Math     | 70    | 2023-01-15 |\n| 101        | Math     | 85    | 2023-02-15 |\n| 101        | Physics  | 65    | 2023-01-15 |\n| 101        | Physics  | 60    | 2023-02-15 |\n| 102        | Math     | 80    | 2023-01-15 |\n| 102        | Math     | 85    | 2023-02-15 |\n| 103        | Math     | 90    | 2023-01-15 |\n| 104        | Physics  | 75    | 2023-01-15 |\n| 104        | Physics  | 85    | 2023-02-15 |\n+------------+----------+-------+------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+------------+----------+-------------+--------------+\n| student_id | subject  | first_score | latest_score |\n+------------+----------+-------------+--------------+\n| 101        | Math     | 70          | 85           |\n| 102        | Math     | 80          | 85           |\n| 104        | Physics  | 75          | 85           |\n+------------+----------+-------------+--------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_students_who_improved(scores: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

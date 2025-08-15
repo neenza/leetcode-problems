@@ -1,0 +1,60 @@
+{
+  "title": "Find Array Given Subset Sums",
+  "problem_id": "2109",
+  "frontend_id": "1982",
+  "difficulty": "Hard",
+  "problem_slug": "find-array-given-subset-sums",
+  "topics": [
+    "Array",
+    "Divide and Conquer"
+  ],
+  "description": "You are given an integer n representing the length of an unknown array that you are trying to recover. You are also given an array sums containing the values of all 2n subset sums of the unknown array (in no particular order).\nReturn the array ans of length n representing the unknown array. If multiple answers exist, return any of them.\nAn array sub is a subset of an array arr if sub can be obtained from arr by deleting some (possibly zero or all) elements of arr. The sum of the elements in sub is one possible subset sum of arr. The sum of an empty array is considered to be 0.\nNote: Test cases are generated such that there will always be at least one correct answer.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, sums = [-3,-2,-1,0,0,1,2,3]\nOutput: [1,2,-3]\nExplanation: [1,2,-3] is able to achieve the given subset sums:\n- []: sum is 0\n- [1]: sum is 1\n- [2]: sum is 2\n- [1,2]: sum is 3\n- [-3]: sum is -3\n- [1,-3]: sum is -2\n- [2,-3]: sum is -1\n- [1,2,-3]: sum is 0\nNote that any permutation of [1,2,-3] and also any permutation of [-1,-2,3] will also be accepted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, sums = [0,0,0,0]\nOutput: [0,0]\nExplanation: The only correct answer is [0,0].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, sums = [0,0,5,5,4,-1,4,9,9,-1,4,3,4,8,3,8]\nOutput: [0,-1,4,5]\nExplanation: [0,-1,4,5] is able to achieve the given subset sums.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 15",
+    "sums.length == 2n",
+    "-104 <= sums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What information do the two largest elements tell us?",
+    "Can we use recursion to check all possible states?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] recoverArray(int n, int[] sums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def recoverArray(self, n: int, sums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* recoverArray(int n, int* sums, int sumsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RecoverArray(int n, int[] sums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} sums\n * @return {number[]}\n */\nvar recoverArray = function(n, sums) {\n    \n};",
+    "typescript": "function recoverArray(n: number, sums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $sums\n     * @return Integer[]\n     */\n    function recoverArray($n, $sums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func recoverArray(_ n: Int, _ sums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun recoverArray(n: Int, sums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> recoverArray(int n, List<int> sums) {\n    \n  }\n}",
+    "golang": "func recoverArray(n int, sums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} sums\n# @return {Integer[]}\ndef recover_array(n, sums)\n    \nend",
+    "scala": "object Solution {\n    def recoverArray(n: Int, sums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn recover_array(n: i32, sums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (recover-array n sums)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec recover_array(N :: integer(), Sums :: [integer()]) -> [integer()].\nrecover_array(N, Sums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec recover_array(n :: integer, sums :: [integer]) :: [integer]\n  def recover_array(n, sums) do\n    \n  end\nend"
+  }
+}

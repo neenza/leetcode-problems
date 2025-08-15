@@ -1,0 +1,61 @@
+{
+  "title": "Count of Smaller Numbers After Self",
+  "problem_id": "315",
+  "frontend_id": "315",
+  "difficulty": "Hard",
+  "problem_slug": "count-of-smaller-numbers-after-self",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Merge Sort",
+    "Ordered Set"
+  ],
+  "description": "Given an integer array nums, return an integer array counts where counts[i] is the number of smaller elements to the right of nums[i].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,2,6,1]\nOutput: [2,1,1,0]\nExplanation:\nTo the right of 5 there are 2 smaller elements (2 and 1).\nTo the right of 2 there is only 1 smaller element (1).\nTo the right of 6 there is 1 smaller element (1).\nTo the right of 1 there is 0 smaller element.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1]\nOutput: [0]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [-1,-1]\nOutput: [0,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-104 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countSmaller(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> countSmaller(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSmaller(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSmaller(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countSmaller(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> CountSmaller(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar countSmaller = function(nums) {\n    \n};",
+    "typescript": "function countSmaller(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function countSmaller($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSmaller(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSmaller(nums: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countSmaller(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countSmaller(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef count_smaller(nums)\n    \nend",
+    "scala": "object Solution {\n    def countSmaller(nums: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_smaller(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-smaller nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec count_smaller(Nums :: [integer()]) -> [integer()].\ncount_smaller(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_smaller(nums :: [integer]) :: [integer]\n  def count_smaller(nums) do\n    \n  end\nend"
+  }
+}

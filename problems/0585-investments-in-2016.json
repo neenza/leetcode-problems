@@ -1,0 +1,35 @@
+{
+  "title": "Investments in 2016",
+  "problem_id": "585",
+  "frontend_id": "585",
+  "difficulty": "Medium",
+  "problem_slug": "investments-in-2016",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Insurance\nWrite a solution to report the sum of all total investment values in 2016 tiv_2016, for all policyholders who:\nRound tiv_2016 to two decimal places.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| pid         | int   |\n| tiv_2015    | float |\n| tiv_2016    | float |\n| lat         | float |\n| lon         | float |\n+-------------+-------+\npid is the primary key (column with unique values) for this table.\nEach row of this table contains information about one policy where:\npid is the policyholder's policy ID.\ntiv_2015 is the total investment value in 2015 and tiv_2016 is the total investment value in 2016.\nlat is the latitude of the policy holder's city. It's guaranteed that lat is not NULL.\nlon is the longitude of the policy holder's city. It's guaranteed that lon is not NULL.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nInsurance table:\n+-----+----------+----------+-----+-----+\n| pid | tiv_2015 | tiv_2016 | lat | lon |\n+-----+----------+----------+-----+-----+\n| 1   | 10       | 5        | 10  | 10  |\n| 2   | 20       | 20       | 20  | 20  |\n| 3   | 10       | 30       | 20  | 20  |\n| 4   | 10       | 40       | 40  | 40  |\n+-----+----------+----------+-----+-----+\nOutput: \n+----------+\n| tiv_2016 |\n+----------+\n| 45.00    |\n+----------+\nExplanation: \nThe first record in the table, like the last record, meets both of the two criteria.\nThe tiv_2015 value 10 is the same as the third and fourth records, and its location is unique.\n\nThe second record does not meet any of the two criteria. Its tiv_2015 is not like any other policyholders and its location is the same as the third record, which makes the third record fail, too.\nSo, the result is the sum of tiv_2016 of the first and last record, which is 45.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Make the (LAT, LON) a pair to represent the location information"
+  ],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_investments(insurance: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

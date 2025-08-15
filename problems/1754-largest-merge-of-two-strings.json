@@ -1,0 +1,57 @@
+{
+  "title": "Largest Merge Of Two Strings",
+  "problem_id": "1880",
+  "frontend_id": "1754",
+  "difficulty": "Medium",
+  "problem_slug": "largest-merge-of-two-strings",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given two strings word1 and word2. You want to construct a string merge in the following way: while either word1 or word2 are non-empty, choose one of the following options:\nReturn the lexicographically largest merge you can construct.\nA string a is lexicographically larger than a string b (of the same length) if in the first position where a and b differ, a has a character strictly larger than the corresponding character in b. For example, \"abcd\" is lexicographically larger than \"abcc\" because the first position they differ is at the fourth character, and d is greater than c.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word1 = \"cabaa\", word2 = \"bcaaa\"\nOutput: \"cbcabaaaaa\"\nExplanation: One way to get the lexicographically largest merge is:\n- Take from word1: merge = \"c\", word1 = \"abaa\", word2 = \"bcaaa\"\n- Take from word2: merge = \"cb\", word1 = \"abaa\", word2 = \"caaa\"\n- Take from word2: merge = \"cbc\", word1 = \"abaa\", word2 = \"aaa\"\n- Take from word1: merge = \"cbca\", word1 = \"baa\", word2 = \"aaa\"\n- Take from word1: merge = \"cbcab\", word1 = \"aa\", word2 = \"aaa\"\n- Append the remaining 5 a's from word1 and word2 at the end of merge.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word1 = \"abcabc\", word2 = \"abdcaba\"\nOutput: \"abdcabcabcaba\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word1.length, word2.length <= 3000",
+    "word1 and word2 consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Build the result character by character. At each step, you choose a character from one of the two strings.",
+    "If the next character of the first string is larger than that of the second string, or vice versa, it's optimal to use the larger one.",
+    "If both are equal, think of a criteria that lets you decide which string to consume the next character from.",
+    "You should choose the next character from the larger string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestMerge(string word1, string word2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestMerge(String word1, String word2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestMerge(self, word1, word2):\n        \"\"\"\n        :type word1: str\n        :type word2: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestMerge(self, word1: str, word2: str) -> str:\n        ",
+    "c": "char* largestMerge(char* word1, char* word2) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestMerge(string word1, string word2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word1\n * @param {string} word2\n * @return {string}\n */\nvar largestMerge = function(word1, word2) {\n    \n};",
+    "typescript": "function largestMerge(word1: string, word2: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word1\n     * @param String $word2\n     * @return String\n     */\n    function largestMerge($word1, $word2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestMerge(_ word1: String, _ word2: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestMerge(word1: String, word2: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestMerge(String word1, String word2) {\n    \n  }\n}",
+    "golang": "func largestMerge(word1 string, word2 string) string {\n    \n}",
+    "ruby": "# @param {String} word1\n# @param {String} word2\n# @return {String}\ndef largest_merge(word1, word2)\n    \nend",
+    "scala": "object Solution {\n    def largestMerge(word1: String, word2: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_merge(word1: String, word2: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-merge word1 word2)\n  (-> string? string? string?)\n  )",
+    "erlang": "-spec largest_merge(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_merge(Word1, Word2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_merge(word1 :: String.t, word2 :: String.t) :: String.t\n  def largest_merge(word1, word2) do\n    \n  end\nend"
+  }
+}

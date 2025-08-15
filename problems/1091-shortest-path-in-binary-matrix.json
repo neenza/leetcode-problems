@@ -1,0 +1,67 @@
+{
+  "title": "Shortest Path in Binary Matrix",
+  "problem_id": "1171",
+  "frontend_id": "1091",
+  "difficulty": "Medium",
+  "problem_slug": "shortest-path-in-binary-matrix",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "Given an n x n binary matrix grid, return the length of the shortest clear path in the matrix. If there is no clear path, return -1.\nA clear path in a binary matrix is a path from the top-left cell (i.e., (0, 0)) to the bottom-right cell (i.e., (n - 1, n - 1)) such that:\nThe length of a clear path is the number of visited cells of this path.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1],[1,0]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/18/example1_1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,0,0],[1,1,0],[1,1,0]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/18/example2_1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,0,0],[1,1,0],[1,1,0]]\nOutput: -1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/18/example2_1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length",
+    "n == grid[i].length",
+    "1 <= n <= 100",
+    "grid[i][j] is 0 or 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do a breadth first search to find the shortest path."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int shortestPathBinaryMatrix(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestPathBinaryMatrix(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestPathBinaryMatrix(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int shortestPathBinaryMatrix(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ShortestPathBinaryMatrix(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar shortestPathBinaryMatrix = function(grid) {\n    \n};",
+    "typescript": "function shortestPathBinaryMatrix(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function shortestPathBinaryMatrix($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestPathBinaryMatrix(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestPathBinaryMatrix(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int shortestPathBinaryMatrix(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func shortestPathBinaryMatrix(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef shortest_path_binary_matrix(grid)\n    \nend",
+    "scala": "object Solution {\n    def shortestPathBinaryMatrix(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_path_binary_matrix(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-path-binary-matrix grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec shortest_path_binary_matrix(Grid :: [[integer()]]) -> integer().\nshortest_path_binary_matrix(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_path_binary_matrix(grid :: [[integer]]) :: integer\n  def shortest_path_binary_matrix(grid) do\n    \n  end\nend"
+  }
+}

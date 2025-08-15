@@ -1,0 +1,53 @@
+{
+  "title": "Sum of Absolute Differences in a Sorted Array",
+  "problem_id": "1787",
+  "frontend_id": "1685",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-absolute-differences-in-a-sorted-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums sorted in non-decreasing order.\nBuild and return an integer array result with the same length as nums such that result[i] is equal to the summation of absolute differences between nums[i] and all the other elements in the array.\nIn other words, result[i] is equal to sum(|nums[i]-nums[j]|) where 0 <= j < nums.length and j != i (0-indexed).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,5]\nOutput: [4,3,5]\nExplanation: Assuming the arrays are 0-indexed, then\nresult[0] = |2-2| + |2-3| + |2-5| = 0 + 1 + 3 = 4,\nresult[1] = |3-2| + |3-3| + |3-5| = 1 + 0 + 2 = 3,\nresult[2] = |5-2| + |5-3| + |5-5| = 3 + 2 + 0 = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,4,6,8,10]\nOutput: [24,15,13,15,21]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] <= nums[i + 1] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Absolute difference is the same as max(a, b) - min(a, b). How can you use this fact with the fact that the array is sorted?",
+    "For nums[i], the answer is (nums[i] - nums[0]) + (nums[i] - nums[1]) + ... + (nums[i] - nums[i-1]) + (nums[i+1] - nums[i]) + (nums[i+2] - nums[i]) + ... + (nums[n-1] - nums[i]).",
+    "It can be simplified to (nums[i] * i - (nums[0] + nums[1] + ... + nums[i-1])) + ((nums[i+1] + nums[i+2] + ... + nums[n-1]) - nums[i] * (n-i-1)). One can build prefix and suffix sums to compute  this quickly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getSumAbsoluteDifferences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getSumAbsoluteDifferences(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getSumAbsoluteDifferences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "\n\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getSumAbsoluteDifferences(int* nums, int numsSize, int* returnSize){\n\n}",
+    "csharp": "public class Solution {\n    public int[] GetSumAbsoluteDifferences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar getSumAbsoluteDifferences = function(nums) {\n    \n};",
+    "typescript": "function getSumAbsoluteDifferences(nums: number[]): number[] {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function getSumAbsoluteDifferences($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getSumAbsoluteDifferences(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getSumAbsoluteDifferences(nums: IntArray): IntArray {\n        \n    }\n}",
+    "golang": "func getSumAbsoluteDifferences(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef get_sum_absolute_differences(nums)\n    \nend",
+    "scala": "object Solution {\n    def getSumAbsoluteDifferences(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_sum_absolute_differences(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Prefix Sum\n\n**Intuition**\n\nBecause the input is given sorted, let's try to split the problem into two parts. For a given `num` at index `i`, the answer for this index is the sum of:\n\n1. The sum of absolute differences between `num` and all numbers less than `num`.\n2. The sum of absolute differences between `num` and all numbers greater than `num`.\n\nAs `nums` is sorted, we can focus on all indices less than `i` for the first part and all indices greater than `i` for the second part. Let's start with the first part with the following example.\n\n![example](../Figures/1685/1.png)The sum of differences is equivalent to the sum we would have to add to the numbers to make them all equal to `8`.\n\n![example](../Figures/1685/2.png)If we made all the numbers equal to `8`, they would have a sum equal to `8` times the count of numbers `leftCount`. In this specific example, they would have a sum of `3 * 8 = 24`. In general, for an index `i`, there are `i` elements less than `nums[i]`, so we have `leftCount = i` and these numbers would have a sum of `leftCount * nums[i]`.\n\nTheir current sum is `leftSum = 1 + 4 + 6 = 11`. Thus, we can find the sum of absolute differences for these elements as `leftTotal = 24 - 11 = 13`. In general, we have `leftTotal = leftCount * nums[i] - leftSum`. This makes sense as it is the difference between what the elements would be if they were all equal to `nums[i]` minus what they currently are, which is precisely what the problem is asking for.\n\nWhat about the elements on the right?\n\n![example](../Figures/1685/3.png)We can make use of the same idea - how much would we need to **subtract** from the numbers on the right to make them all equal to `8`? Note we subtract here instead of adding because the numbers on the right are greater.\n\n![example](../Figures/1685/4.png)How many elements are on the right? In this example, there are `3`, so they would have a sum of `8 * 3 = 24`. In general, for an index `i`, there are `rightCount = n - 1 - i` elements on its right, and they would have a sum of `rightCount * nums[i]` if we reduced them all.\n\nIn our example, they currently have a sum of `rightSum = 12 + 18 + 21 = 51`. Thus, the sum of absolute differences is `51 - 24 = 27`. In general, we can find the sum of absolute differences as `rightTotal = rightSum - rightCount * nums[i]`.\n\nNow, we know how to find the answer for each index `i`. But how do we find `leftSum` and `rightSum`? We can make use of prefix sums to find the sum of any subarray in $$O(1)$$.\n\nWe start by building a prefix sum array `prefix`, where `prefix[i]` represents the sum of all elements up to and including index `i`. Then, we can calculate `leftSum = prefix[i] - nums[i]` and `rightSum = prefix[n - 1] - prefix[i]`. Note that this is simply how we are implementing the prefix sum in this article, and you may implement it in whatever way you are most comfortable. The important thing is that we can quickly calculate `leftSum` and `rightSum`.\n\nOnce we have `prefix`, we iterate over each index `i` and use the process we described above to find `leftTotal` and `rightTotal`. Then, the answer for index `i` is simply `leftTotal + rightTotal`.\n\n**Algorithm**\n\nLet `n` be the length of `nums`.\n\n1. Create a `prefix` sum of `nums`.\n2. Initialize the answer list `ans`.\n3. Iterate `i` over the indices of `nums`:\n    - Calculate `leftSum` using `prefix`.\n    - Calculate `rightSum` using `prefix`.\n    - Calculate `leftCount = i`.\n    - Calculate `rightCount = n - 1 - i`.\n    - Calculate `leftTotal = leftCount * nums[i] - leftSum`.\n    - Calculate `rightTotal = rightSum - rightCount * nums[i]`.\n    - Add `leftTotal + rightTotal` to `ans`.\n4. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `nums`,\n\n* Time complexity: $$O(n)$$\n\n    Creating `prefix` requires $$O(n)$$ time. Then, we iterate over `nums`, performing $$O(1)$$ work at each iteration. Thus, we require $$O(n)$$ time.\n\n* Space complexity: $$O(n)$$\n\n    `prefix` has a length of $$n$$.---\n\n### Approach 2: Calculating Prefix Sum on the Fly\n\n**Intuition**\n\nIn fact, we do not need the `prefix` array. As `leftSum` for any adjacent indices like `i` and `i + 1` only differ by one element, we can calculate `leftSum` on the fly by initializing it to `0` and simply adding each number we iterate over to it. If we know `leftSum`, then we can also deduce what `rightSum` is by taking the `totalSum` of the array and subtracting `leftSum` and `nums[i]` from it. This avoids the need to build a prefix sum array and achieves the same result.\n\nThus, we will start by finding the `totalSum`, and then use that to calculate `rightSum` while calculating `leftSum` on the fly. Everything else remains the same.\n\n**Algorithm**\n\nLet `n` be the length of `nums`.\n\n1. Initialize `totalSum` as the sum of `nums`, `leftSum = 0`, and the answer list `ans`.\n2. Iterate `i` over the indices of `nums`:\n    - Calculate `rightSum = totalSum - leftSum - nums[i]`.\n    - Calculate `leftCount = i`.\n    - Calculate `rightCount = n - 1 - i`.\n    - Calculate `leftTotal = leftCount * nums[i] - leftSum`.\n    - Calculate `rightTotal = rightSum - rightCount * nums[i]`.\n    - Add `leftTotal + rightTotal` to `ans`.\n    - Add `nums[i]` to `leftSum`.\n4. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `nums`,\n\n* Time complexity: $$O(n)$$\n\n    Creating `totalSum` requires $$O(n)$$ time. Then, we iterate over `nums`, performing $$O(1)$$ work at each iteration. Thus, we require $$O(n)$$ time.\n\n* Space complexity: $$O(1)$$\n\n    We don't count the answer toward the space complexity. Thus, we are only using a few integer variables.---"
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Decrease Elements To Make Array Zigzag",
+  "problem_id": "1247",
+  "frontend_id": "1144",
+  "difficulty": "Medium",
+  "problem_slug": "decrease-elements-to-make-array-zigzag",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "Given an array nums of integers, a move consists of choosing any element and decreasing it by 1.\nAn array A is a zigzag array if either:\nReturn the minimum number of moves to transform the given array nums into a zigzag array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 2\nExplanation: We can decrease 2 to 0 or 3 to 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [9,6,1,6,2]\nOutput: 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do each case (even indexed is greater, odd indexed is greater) separately. In say the even case, you should decrease each even-indexed element until it is lower than its immediate neighbors."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int movesToMakeZigzag(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int movesToMakeZigzag(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def movesToMakeZigzag(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def movesToMakeZigzag(self, nums: List[int]) -> int:\n        ",
+    "c": "int movesToMakeZigzag(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MovesToMakeZigzag(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar movesToMakeZigzag = function(nums) {\n    \n};",
+    "typescript": "function movesToMakeZigzag(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function movesToMakeZigzag($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func movesToMakeZigzag(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun movesToMakeZigzag(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int movesToMakeZigzag(List<int> nums) {\n    \n  }\n}",
+    "golang": "func movesToMakeZigzag(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef moves_to_make_zigzag(nums)\n    \nend",
+    "scala": "object Solution {\n    def movesToMakeZigzag(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn moves_to_make_zigzag(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (moves-to-make-zigzag nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec moves_to_make_zigzag(Nums :: [integer()]) -> integer().\nmoves_to_make_zigzag(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec moves_to_make_zigzag(nums :: [integer]) :: integer\n  def moves_to_make_zigzag(nums) do\n    \n  end\nend"
+  }
+}

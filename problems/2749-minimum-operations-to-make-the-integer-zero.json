@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Operations to Make the Integer Zero",
+  "problem_id": "2837",
+  "frontend_id": "2749",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-make-the-integer-zero",
+  "topics": [
+    "Bit Manipulation",
+    "Brainteaser",
+    "Enumeration"
+  ],
+  "description": "You are given two integers num1 and num2.\nIn one operation, you can choose integer i in the range [0, 60] and subtract 2i + num2 from num1.\nReturn the integer denoting the minimum number of operations needed to make num1 equal to 0.\nIf it is impossible to make num1 equal to 0, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num1 = 3, num2 = -2\nOutput: 3\nExplanation: We can make 3 equal to 0 with the following operations:\n- We choose i = 2 and subtract 22 + (-2) from 3, 3 - (4 + (-2)) = 1.\n- We choose i = 2 and subtract 22 + (-2) from 1, 1 - (4 + (-2)) = -1.\n- We choose i = 0 and subtract 20 + (-2) from -1, (-1) - (1 + (-2)) = 0.\nIt can be proven, that 3 is the minimum number of operations that we need to perform.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num1 = 5, num2 = 7\nOutput: -1\nExplanation: It can be proven, that it is impossible to make 5 equal to 0 with the given operation.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num1 <= 109",
+    "-109 <= num2 <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we want to make integer n equal to 0 by only subtracting powers of 2 from n, in how many operations can we achieve it?",
+    "We need at least - the number of bits in the binary representation of n, and at most - n.",
+    "Notice that, if it is possible to make num1 equal to 0, then we need at most 60 operations.",
+    "Iterate on the number of operations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int makeTheIntegerZero(int num1, int num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int makeTheIntegerZero(int num1, int num2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeTheIntegerZero(self, num1, num2):\n        \"\"\"\n        :type num1: int\n        :type num2: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeTheIntegerZero(self, num1: int, num2: int) -> int:\n        ",
+    "c": "int makeTheIntegerZero(int num1, int num2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MakeTheIntegerZero(int num1, int num2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num1\n * @param {number} num2\n * @return {number}\n */\nvar makeTheIntegerZero = function(num1, num2) {\n    \n};",
+    "typescript": "function makeTheIntegerZero(num1: number, num2: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num1\n     * @param Integer $num2\n     * @return Integer\n     */\n    function makeTheIntegerZero($num1, $num2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeTheIntegerZero(_ num1: Int, _ num2: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeTheIntegerZero(num1: Int, num2: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int makeTheIntegerZero(int num1, int num2) {\n    \n  }\n}",
+    "golang": "func makeTheIntegerZero(num1 int, num2 int) int {\n    \n}",
+    "ruby": "# @param {Integer} num1\n# @param {Integer} num2\n# @return {Integer}\ndef make_the_integer_zero(num1, num2)\n    \nend",
+    "scala": "object Solution {\n    def makeTheIntegerZero(num1: Int, num2: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_the_integer_zero(num1: i32, num2: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (make-the-integer-zero num1 num2)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec make_the_integer_zero(Num1 :: integer(), Num2 :: integer()) -> integer().\nmake_the_integer_zero(Num1, Num2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_the_integer_zero(num1 :: integer, num2 :: integer) :: integer\n  def make_the_integer_zero(num1, num2) do\n    \n  end\nend"
+  }
+}

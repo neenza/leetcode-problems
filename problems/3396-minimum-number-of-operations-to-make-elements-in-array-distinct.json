@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Number of Operations to Make Elements in Array Distinct",
+  "problem_id": "3656",
+  "frontend_id": "3396",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-number-of-operations-to-make-elements-in-array-distinct",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums. You need to ensure that the elements in the array are distinct. To achieve this, you can perform the following operation any number of times:\nNote that an empty array is considered to have distinct elements. Return the minimum number of operations needed to make the elements in the array distinct.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,2,3,3,5,7]\nOutput: 2\nExplanation:\nTherefore, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,5,6,4,4]\nOutput: 2\nExplanation:\nTherefore, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [6,7,8,9]\nOutput: 0\nExplanation:\nThe array already contains distinct elements. Therefore, the answer is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small. Try brute force."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumOperations = function(nums) {\n    \n};",
+    "typescript": "function minimumOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Nums :: [integer()]) -> integer().\nminimum_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(nums :: [integer]) :: integer\n  def minimum_operations(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Simulation\n\n#### Intuition\n\nThe question requires executing operations to ensure the remaining elements in the array are distinct. The most direct method is to skip $3$ elements from the beginning of the array each time and check for any remaining duplicate elements. We can use a hash map to detect if there are any duplicate elements in the array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n^2)$.\n\nEach time it is necessary to check for duplicate elements in the remaining array, the maximum time required is $O(n)$. A total of up to $n$ checks are needed, so the total time is $O(n^2)$.\n\n- Space complexity: $O(n)$.\n\nEach time we check whether an array contains duplicate elements, a hash table needs to be used to record the elements that have already appeared. At most, there can be $n$ elements to record, so the required space is $O(n)$.\n\n#### Approach 2: Reverse traversal\n\n#### Intuition\n\nIf the repeated element $x$ appears at indices $i$ and $j$ with $i < j$, then all elements before index $i$ must be removed. This reduces the problem to finding the longest suffix of the array in which all elements are distinct. Since each time it is necessary to remove $3$ elements, to remove all elements before index $i$, i.e., $\\textit{nums}[0\\cdots i]$, at least $\\lceil \\dfrac{i+1}{3} \\rceil = \\lfloor \\dfrac{i}{3} \\rfloor + 1$ removal operations are required.\n\nIf the array length is $n$, we traverse it in reverse order, using $\\textit{seen}$ to record the elements that have already appeared. When we reach the first duplicate element $\\textit{nums}[i]$, it indicates that the element already exists in the current suffix. We then return the minimum number of operations: $\\lfloor \\dfrac{i}{3} \\rfloor + 1$. If there are no duplicate elements in the array, we return $0$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe only need to traverse the array once.\n\n- Space complexity: $O(n)$.\n\nA hash map is used to store the traversed elements. Since up to $n$ elements may be stored, the required space is $O(n)$."
+}

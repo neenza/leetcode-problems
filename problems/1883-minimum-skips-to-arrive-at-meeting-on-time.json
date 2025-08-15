@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Skips to Arrive at Meeting On Time",
+  "problem_id": "2013",
+  "frontend_id": "1883",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-skips-to-arrive-at-meeting-on-time",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer hoursBefore, the number of hours you have to travel to your meeting. To arrive at your meeting, you have to travel through n roads. The road lengths are given as an integer array dist of length n, where dist[i] describes the length of the ith road in kilometers. In addition, you are given an integer speed, which is the speed (in km/h) you will travel at.\nAfter you travel road i, you must rest and wait for the next integer hour before you can begin traveling on the next road. Note that you do not have to rest after traveling the last road because you are already at the meeting.\nHowever, you are allowed to skip some rests to be able to arrive on time, meaning you do not need to wait for the next integer hour. Note that this means you may finish traveling future roads at different hour marks.\nReturn the minimum number of skips required to arrive at the meeting on time, or -1 if it is impossible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: dist = [1,3,2], speed = 4, hoursBefore = 2\nOutput: 1\nExplanation:\nWithout skipping any rests, you will arrive in (1/4 + 3/4) + (3/4 + 1/4) + (2/4) = 2.5 hours.\nYou can skip the first rest to arrive in ((1/4 + 0) + (3/4 + 0)) + (2/4) = 1.5 hours.\nNote that the second rest is shortened because you finish traveling the second road at an integer hour due to skipping the first rest.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: dist = [7,3,5,5], speed = 2, hoursBefore = 10\nOutput: 2\nExplanation:\nWithout skipping any rests, you will arrive in (7/2 + 1/2) + (3/2 + 1/2) + (5/2 + 1/2) + (5/2) = 11.5 hours.\nYou can skip the first and third rest to arrive in ((7/2 + 0) + (3/2 + 0)) + ((5/2 + 0) + (5/2)) = 10 hours.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: dist = [7,3,5,5], speed = 1, hoursBefore = 10\nOutput: -1\nExplanation: It is impossible to arrive at the meeting on time even if you skip all the rests.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == dist.length",
+    "1 <= n <= 1000",
+    "1 <= dist[i] <= 105",
+    "1 <= speed <= 106",
+    "1 <= hoursBefore <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is there something you can keep track of from one road to another?",
+    "How would knowing the start time for each state help us solve the problem?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSkips(vector<int>& dist, int speed, int hoursBefore) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSkips(int[] dist, int speed, int hoursBefore) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSkips(self, dist, speed, hoursBefore):\n        \"\"\"\n        :type dist: List[int]\n        :type speed: int\n        :type hoursBefore: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSkips(self, dist: List[int], speed: int, hoursBefore: int) -> int:\n        ",
+    "c": "int minSkips(int* dist, int distSize, int speed, int hoursBefore) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSkips(int[] dist, int speed, int hoursBefore) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} dist\n * @param {number} speed\n * @param {number} hoursBefore\n * @return {number}\n */\nvar minSkips = function(dist, speed, hoursBefore) {\n    \n};",
+    "typescript": "function minSkips(dist: number[], speed: number, hoursBefore: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $dist\n     * @param Integer $speed\n     * @param Integer $hoursBefore\n     * @return Integer\n     */\n    function minSkips($dist, $speed, $hoursBefore) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSkips(_ dist: [Int], _ speed: Int, _ hoursBefore: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSkips(dist: IntArray, speed: Int, hoursBefore: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSkips(List<int> dist, int speed, int hoursBefore) {\n    \n  }\n}",
+    "golang": "func minSkips(dist []int, speed int, hoursBefore int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} dist\n# @param {Integer} speed\n# @param {Integer} hours_before\n# @return {Integer}\ndef min_skips(dist, speed, hours_before)\n    \nend",
+    "scala": "object Solution {\n    def minSkips(dist: Array[Int], speed: Int, hoursBefore: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_skips(dist: Vec<i32>, speed: i32, hours_before: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-skips dist speed hoursBefore)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_skips(Dist :: [integer()], Speed :: integer(), HoursBefore :: integer()) -> integer().\nmin_skips(Dist, Speed, HoursBefore) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_skips(dist :: [integer], speed :: integer, hours_before :: integer) :: integer\n  def min_skips(dist, speed, hours_before) do\n    \n  end\nend"
+  }
+}

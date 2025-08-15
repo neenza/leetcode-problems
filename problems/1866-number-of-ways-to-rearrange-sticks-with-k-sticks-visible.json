@@ -1,0 +1,60 @@
+{
+  "title": "Number of Ways to Rearrange Sticks With K Sticks Visible",
+  "problem_id": "1996",
+  "frontend_id": "1866",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "There are n uniquely-sized sticks whose lengths are integers from 1 to n. You want to arrange the sticks such that exactly k sticks are visible from the left. A stick is visible from the left if there are no longer sticks to the left of it.\nGiven n and k, return the number of such arrangements. Since the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, k = 2\nOutput: 3\nExplanation: [1,3,2], [2,3,1], and [2,1,3] are the only arrangements such that exactly 2 sticks are visible.\nThe visible sticks are underlined.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, k = 5\nOutput: 1\nExplanation: [1,2,3,4,5] is the only arrangement such that all 5 sticks are visible.\nThe visible sticks are underlined.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 20, k = 11\nOutput: 647427950\nExplanation: There are 647427950 (mod 109 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000",
+    "1 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is there a way to build the solution from a base case?",
+    "How many ways are there if we fix the position of one stick?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int rearrangeSticks(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rearrangeSticks(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rearrangeSticks(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rearrangeSticks(self, n: int, k: int) -> int:\n        ",
+    "c": "int rearrangeSticks(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RearrangeSticks(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar rearrangeSticks = function(n, k) {\n    \n};",
+    "typescript": "function rearrangeSticks(n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function rearrangeSticks($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rearrangeSticks(_ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rearrangeSticks(n: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rearrangeSticks(int n, int k) {\n    \n  }\n}",
+    "golang": "func rearrangeSticks(n int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef rearrange_sticks(n, k)\n    \nend",
+    "scala": "object Solution {\n    def rearrangeSticks(n: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rearrange_sticks(n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (rearrange-sticks n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec rearrange_sticks(N :: integer(), K :: integer()) -> integer().\nrearrange_sticks(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rearrange_sticks(n :: integer, k :: integer) :: integer\n  def rearrange_sticks(n, k) do\n    \n  end\nend"
+  }
+}

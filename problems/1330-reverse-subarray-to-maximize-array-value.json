@@ -1,0 +1,59 @@
+{
+  "title": "Reverse Subarray To Maximize Array Value",
+  "problem_id": "1255",
+  "frontend_id": "1330",
+  "difficulty": "Hard",
+  "problem_slug": "reverse-subarray-to-maximize-array-value",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given an integer array nums. The value of this array is defined as the sum of |nums[i] - nums[i + 1]| for all 0 <= i < nums.length - 1.\nYou are allowed to select any subarray of the given array and reverse it. You can perform this operation only once.\nFind maximum possible value of the final array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,1,5,4]\nOutput: 10\nExplanation: By reversing the subarray [3,1,5] the array becomes [2,5,1,3,4] whose value is 10.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,9,24,2,1,10]\nOutput: 68",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 3 * 104",
+    "-105 <= nums[i] <= 105",
+    "The answer is guaranteed to fit in a 32-bit integer."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What's the score after reversing a sub-array [L, R] ?",
+    "It's the score without reversing it + abs(a[R] - a[L-1]) + abs(a[L] - a[R+1]) - abs(a[L] - a[L-1]) - abs(a[R] - a[R+1])",
+    "How to maximize that formula given that abs(x - y) = max(x - y, y - x) ?",
+    "This can be written as max(max(a[R] - a[L - 1], a[L - 1] - a[R]) + max(a[R + 1] - a[L], a[L] - a[R + 1]) - value(L) - value(R + 1)) over all L < R where value(i) = abs(a[i] - a[i-1])",
+    "This can be divided into 4 cases."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxValueAfterReverse(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxValueAfterReverse(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxValueAfterReverse(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxValueAfterReverse(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxValueAfterReverse(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxValueAfterReverse(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxValueAfterReverse = function(nums) {\n    \n};",
+    "typescript": "function maxValueAfterReverse(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxValueAfterReverse($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxValueAfterReverse(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxValueAfterReverse(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxValueAfterReverse(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxValueAfterReverse(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_value_after_reverse(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxValueAfterReverse(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_value_after_reverse(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-value-after-reverse nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_value_after_reverse(Nums :: [integer()]) -> integer().\nmax_value_after_reverse(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_value_after_reverse(nums :: [integer]) :: integer\n  def max_value_after_reverse(nums) do\n    \n  end\nend"
+  }
+}

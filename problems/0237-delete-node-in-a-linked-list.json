@@ -1,0 +1,52 @@
+{
+  "title": "Delete Node in a Linked List",
+  "problem_id": "237",
+  "frontend_id": "237",
+  "difficulty": "Medium",
+  "problem_slug": "delete-node-in-a-linked-list",
+  "topics": [
+    "Linked List"
+  ],
+  "description": "There is a singly-linked list head and we want to delete a node node in it.\nYou are given the node to be deleted node. You will not be given access to the first node of head.\nAll the values of the linked list are unique, and it is guaranteed that the given node node is not the last node in the linked list.\nDelete the given node. Note that by deleting the node, we do not mean removing it from memory. We mean:\nCustom testing:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: head = [4,5,1,9], node = 5\nOutput: [4,1,9]\nExplanation: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/01/node1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: head = [4,5,1,9], node = 1\nOutput: [4,5,9]\nExplanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/01/node2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "The number of the nodes in the given list is in the range [2, 1000].",
+    "-1000 <= Node.val <= 1000",
+    "The value of each node in the list is unique.",
+    "The node to be deleted is in the list and is not a tail node."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode(int x) : val(x), next(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    void deleteNode(ListNode* node) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode(int x) { val = x; }\n * }\n */\nclass Solution {\n    public void deleteNode(ListNode node) {\n        \n    }\n}",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, x):\n#         self.val = x\n#         self.next = None\n\nclass Solution(object):\n    def deleteNode(self, node):\n        \"\"\"\n        :type node: ListNode\n        :rtype: void Do not return anything, modify node in-place instead.\n        \"\"\"\n        ",
+    "python3": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, x):\n#         self.val = x\n#         self.next = None\n\nclass Solution:\n    def deleteNode(self, node):\n        \"\"\"\n        :type node: ListNode\n        :rtype: void Do not return anything, modify node in-place instead.\n        \"\"\"\n        ",
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nvoid deleteNode(struct ListNode* node) {\n    \n}",
+    "csharp": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public int val;\n *     public ListNode next;\n *     public ListNode(int x) { val = x; }\n * }\n */\npublic class Solution {\n    public void DeleteNode(ListNode node) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val) {\n *     this.val = val;\n *     this.next = null;\n * }\n */\n/**\n * @param {ListNode} node\n * @return {void} Do not return anything, modify node in-place instead.\n */\nvar deleteNode = function(node) {\n    \n};",
+    "typescript": "/**\n * Definition for singly-linked list.\n * class ListNode {\n *     val: number\n *     next: ListNode | null\n *     constructor(val?: number, next?: ListNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.next = (next===undefined ? null : next)\n *     }\n * }\n */\n\n/**\n Do not return anything, modify it in-place instead.\n */\nfunction deleteNode(node: ListNode | null): void {\n\n};",
+    "php": "/**\n * Definition for a singly-linked list.\n * class ListNode {\n *     public $val = 0;\n *     public $next = null;\n *     function __construct($val) { $this->val = $val; }\n * }\n */\n\nclass Solution {\n    /**\n     * @param ListNode $node\n     * @return \n     */\n    function deleteNode($node) {\n        \n    }\n}",
+    "swift": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     public var val: Int\n *     public var next: ListNode?\n *     public init(_ val: Int) {\n *         self.val = val\n *         self.next = nil\n *     }\n * }\n */\n\nclass Solution {\n    func deleteNode(_ node: ListNode?) {\n        \n    }\n}",
+    "kotlin": "/**\n * Example:\n * var li = ListNode(5)\n * var v = li.`val`\n * Definition for singly-linked list.\n * class ListNode(var `val`: Int) {\n *     var next: ListNode? = null\n * }\n */\n\nclass Solution {\n    fun deleteNode(node: ListNode?) {\n        \n    }\n}",
+    "golang": "/**\n * Definition for singly-linked list.\n * type ListNode struct {\n *     Val int\n *     Next *ListNode\n * }\n */\nfunc deleteNode(node *ListNode) {\n    \n}",
+    "ruby": "# Definition for singly-linked list.\n# class ListNode\n#     attr_accessor :val, :next\n#     def initialize(val)\n#         @val = val\n#         @next = nil\n#     end\n# end\n\n# @param {ListNode} node\n# @return {Void} Do not return anything, modify node in-place instead.\ndef delete_node(node)\n    \nend",
+    "scala": "/**\n * Definition for singly-linked list.\n * class ListNode(var _x: Int = 0) {\n *   var next: ListNode = null\n *   var x: Int = _x\n * }\n */\n\nobject Solution {\n    def deleteNode(node: ListNode): Unit = {\n        \n    }\n}"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nTo delete a node from a linked list, we typically redirect the previous node's `next` pointer to the subsequent node of the one being deleted. For example, to remove node 3 from a linked list, we would adjust node 2's `next` pointer to reference node 4 directly. This effectively excludes node 3 from the traversal path, rendering it inaccessible during iteration, and thus, it is considered deleted.\n\n![initial_linkedlist](../Documents/237/237-Page-1.svg)\n\n![changing_pointers](../Documents/237/237-Page-2.svg)However, a challenge arises when we cannot access the previous node, as is the case in this specific problem. Since we can only traverse forward from the node to be deleted, the conventional deletion method is not feasible.\n\n**Key Observations:** \n- We've been presented with a scenario where we can't access the entire linked list structure, forcing us to devise a strategy that works within those limitations.\n- This problem goes beyond rote memorization of DSA techniques. **It emphasizes the importance of creative thinking under limitations.** It highlights the assessment of the candidate's problem-solving approach.\n\n---\n\n### Approach: Data Overwriting\n\n#### Intuition\n\nTo circumvent this limitation, we can employ an alternative strategy. By comparing the original linked list with the desired outcome post-deletion, we notice that the nodes following the target node appear to shift one position to the left. \n\n![initial_linkedlist](../Documents/237/237-Page-3.svg)\n\n\n![after_deletion](../Documents/237/237-Page-4.svg)We can replicate this effect by copying the data from each subsequent node into its predecessor, starting from the node to be deleted, and then unlinking the last node.\n\n![overwrite_linkedlist](../Documents/237/237-Page-5.svg)\n\n\n![after_overwrite](../Documents/237/237-Page-6.svg)This approach can be further optimized. Instead of shifting the data of all subsequent nodes, we only need to overwrite the data of the node to be deleted with that of its immediate successor. Subsequently, we update the `next` pointer of the node to be deleted to point to the successor's next node. This effectively removes the successor node, achieving the desired result with minimal operations.\n\n![overwrite_linkedlist](../Documents/237/237-Page-7.svg)\n\n\n![after_overwrite_1_node](../Documents/237/237-Page-8.svg)\n\nLet's take a simpler example to understand this approach.    \nImagine the linked list as a train with connected cars (nodes). We want to remove a specific car (target node), but the conductor (you) can only access the current car and not the engine (head).\nBy shifting all passengers from current car (\"overwriting\" the data of the current node) with the data from the next car, and then connecting the current car to the car after the next (skipping the unwanted car), we achieve the deletion effect.\n\n**Note:** This method will not work if we need to delete the last node of the linked list since there is no immediate successor. However, the problem description explicitly states that the node to be deleted is not the tail node in the list.#### Algorithm\n\n1. Copy the data from the successor node into the current node to be deleted.\n2. Update the `next` pointer of the current node to reference the `next` pointer of the successor node.\n\n#### Implementation#### Complexity Analysis\n\n* Time Complexity: $O(1)$\n\n    - The method involves a constant number of operations: updating the data of the current node and altering its `next` pointer. Each of these operations requires a fixed amount of time, irrespective of the size of the linked list.\n    \n* Space Complexity: $O(1)$\n\n    - This deletion technique does not necessitate any extra memory allocation, as it operates directly on the existing nodes without creating additional data structures."
+}

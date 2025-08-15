@@ -1,0 +1,60 @@
+{
+  "title": "Shopping Offers",
+  "problem_id": "638",
+  "frontend_id": "638",
+  "difficulty": "Medium",
+  "problem_slug": "shopping-offers",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Memoization",
+    "Bitmask"
+  ],
+  "description": "In LeetCode Store, there are n items to sell. Each item has a price. However, there are some special offers, and a special offer consists of one or more different kinds of items with a sale price.\nYou are given an integer array price where price[i] is the price of the ith item, and an integer array needs where needs[i] is the number of pieces of the ith item you want to buy.\nYou are also given an array special where special[i] is of size n + 1 where special[i][j] is the number of pieces of the jth item in the ith offer and special[i][n] (i.e., the last integer in the array) is the price of the ith offer.\nReturn the lowest price you have to pay for exactly certain items as given, where you could make optimal use of the special offers. You are not allowed to buy more items than you want, even if that would lower the overall price. You could use any of the special offers as many times as you want.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: price = [2,5], special = [[3,0,5],[1,2,10]], needs = [3,2]\nOutput: 14\nExplanation: There are two kinds of items, A and B. Their prices are $2 and $5 respectively. \nIn special offer 1, you can pay $5 for 3A and 0B\nIn special offer 2, you can pay $10 for 1A and 2B. \nYou need to buy 3A and 2B, so you may pay $10 for 1A and 2B (special offer #2), and $4 for 2A.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: price = [2,3,4], special = [[1,1,0,4],[2,2,1,9]], needs = [1,2,1]\nOutput: 11\nExplanation: The price of A is $2, and $3 for B, $4 for C. \nYou may pay $4 for 1A and 1B, and $9 for 2A ,2B and 1C. \nYou need to buy 1A ,2B and 1C, so you may pay $4 for 1A and 1B (special offer #1), and $3 for 1B, $4 for 1C. \nYou cannot add more items, though only $9 for 2A ,2B and 1C.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == price.length == needs.length",
+    "1 <= n <= 6",
+    "0 <= price[i], needs[i] <= 10",
+    "1 <= special.length <= 100",
+    "special[i].length == n + 1",
+    "0 <= special[i][j] <= 50",
+    "The input is generated that at least one of special[i][j] is non-zero for 0 <= j <= n - 1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int shoppingOffers(vector<int>& price, vector<vector<int>>& special, vector<int>& needs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shoppingOffers(List<Integer> price, List<List<Integer>> special, List<Integer> needs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shoppingOffers(self, price, special, needs):\n        \"\"\"\n        :type price: List[int]\n        :type special: List[List[int]]\n        :type needs: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shoppingOffers(self, price: List[int], special: List[List[int]], needs: List[int]) -> int:\n        ",
+    "c": "int shoppingOffers(int* price, int priceSize, int** special, int specialSize, int* specialColSize, int* needs, int needsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ShoppingOffers(IList<int> price, IList<IList<int>> special, IList<int> needs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} price\n * @param {number[][]} special\n * @param {number[]} needs\n * @return {number}\n */\nvar shoppingOffers = function(price, special, needs) {\n    \n};",
+    "typescript": "function shoppingOffers(price: number[], special: number[][], needs: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $price\n     * @param Integer[][] $special\n     * @param Integer[] $needs\n     * @return Integer\n     */\n    function shoppingOffers($price, $special, $needs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shoppingOffers(_ price: [Int], _ special: [[Int]], _ needs: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shoppingOffers(price: List<Int>, special: List<List<Int>>, needs: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int shoppingOffers(List<int> price, List<List<int>> special, List<int> needs) {\n    \n  }\n}",
+    "golang": "func shoppingOffers(price []int, special [][]int, needs []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} price\n# @param {Integer[][]} special\n# @param {Integer[]} needs\n# @return {Integer}\ndef shopping_offers(price, special, needs)\n    \nend",
+    "scala": "object Solution {\n    def shoppingOffers(price: List[Int], special: List[List[Int]], needs: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shopping_offers(price: Vec<i32>, special: Vec<Vec<i32>>, needs: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (shopping-offers price special needs)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec shopping_offers(Price :: [integer()], Special :: [[integer()]], Needs :: [integer()]) -> integer().\nshopping_offers(Price, Special, Needs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shopping_offers(price :: [integer], special :: [[integer]], needs :: [integer]) :: integer\n  def shopping_offers(price, special, needs) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Number of Different Subsequences GCDs",
+  "problem_id": "1947",
+  "frontend_id": "1819",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-different-subsequences-gcds",
+  "topics": [
+    "Array",
+    "Math",
+    "Counting",
+    "Number Theory"
+  ],
+  "description": "You are given an array nums that consists of positive integers.\nThe GCD of a sequence of numbers is defined as the greatest integer that divides all the numbers in the sequence evenly.\nA subsequence of an array is a sequence that can be formed by removing some elements (possibly none) of the array.\nReturn the number of different GCDs among all non-empty subsequences of nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [6,10,3]\nOutput: 5\nExplanation: The figure shows all the non-empty subsequences and their GCDs.\nThe different GCDs are 6, 10, 3, 2, and 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/17/image-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,15,40,5,6]\nOutput: 7",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/17/image-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 2 * 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of how to check if a number x is a gcd of a subsequence.",
+    "If there is such subsequence, then all of it will be divisible by x. Moreover, if you divide each number in the subsequence by x , then the gcd of the resulting numbers will be 1.",
+    "Adding a number to a subsequence cannot increase its gcd. So, if there is a valid subsequence for x , then the subsequence that contains all multiples of x is a valid one too.",
+    "Iterate on all possiblex from 1 to 10^5, and check if there is a valid subsequence for x."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countDifferentSubsequenceGCDs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countDifferentSubsequenceGCDs(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countDifferentSubsequenceGCDs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countDifferentSubsequenceGCDs(self, nums: List[int]) -> int:\n        ",
+    "c": "int countDifferentSubsequenceGCDs(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountDifferentSubsequenceGCDs(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countDifferentSubsequenceGCDs = function(nums) {\n    \n};",
+    "typescript": "function countDifferentSubsequenceGCDs(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countDifferentSubsequenceGCDs($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countDifferentSubsequenceGCDs(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countDifferentSubsequenceGCDs(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countDifferentSubsequenceGCDs(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countDifferentSubsequenceGCDs(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_different_subsequence_gc_ds(nums)\n    \nend",
+    "scala": "object Solution {\n    def countDifferentSubsequenceGCDs(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_different_subsequence_gc_ds(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-different-subsequence-gc-ds nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_different_subsequence_gc_ds(Nums :: [integer()]) -> integer().\ncount_different_subsequence_gc_ds(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_different_subsequence_gc_ds(nums :: [integer]) :: integer\n  def count_different_subsequence_gc_ds(nums) do\n    \n  end\nend"
+  }
+}

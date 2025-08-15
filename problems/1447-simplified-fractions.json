@@ -1,0 +1,59 @@
+{
+  "title": "Simplified Fractions",
+  "problem_id": "1543",
+  "frontend_id": "1447",
+  "difficulty": "Medium",
+  "problem_slug": "simplified-fractions",
+  "topics": [
+    "Math",
+    "String",
+    "Number Theory"
+  ],
+  "description": "Given an integer n, return a list of all simplified fractions between 0 and 1 (exclusive) such that the denominator is less-than-or-equal-to n. You can return the answer in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: [\"1/2\"]\nExplanation: \"1/2\" is the only unique fraction with a denominator less-than-or-equal-to 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3\nOutput: [\"1/2\",\"1/3\",\"2/3\"]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4\nOutput: [\"1/2\",\"1/3\",\"1/4\",\"2/3\",\"3/4\"]\nExplanation: \"2/4\" is not a simplified fraction because it can be simplified to \"1/2\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A fraction is fully simplified if there is no integer that divides cleanly into the numerator and denominator.",
+    "In other words the greatest common divisor of the numerator and the denominator of a simplified fraction is 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> simplifiedFractions(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> simplifiedFractions(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def simplifiedFractions(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def simplifiedFractions(self, n: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** simplifiedFractions(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> SimplifiedFractions(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar simplifiedFractions = function(n) {\n    \n};",
+    "typescript": "function simplifiedFractions(n: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return String[]\n     */\n    function simplifiedFractions($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func simplifiedFractions(_ n: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun simplifiedFractions(n: Int): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> simplifiedFractions(int n) {\n    \n  }\n}",
+    "golang": "func simplifiedFractions(n int) []string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {String[]}\ndef simplified_fractions(n)\n    \nend",
+    "scala": "object Solution {\n    def simplifiedFractions(n: Int): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn simplified_fractions(n: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (simplified-fractions n)\n  (-> exact-integer? (listof string?))\n  )",
+    "erlang": "-spec simplified_fractions(N :: integer()) -> [unicode:unicode_binary()].\nsimplified_fractions(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec simplified_fractions(n :: integer) :: [String.t]\n  def simplified_fractions(n) do\n    \n  end\nend"
+  }
+}

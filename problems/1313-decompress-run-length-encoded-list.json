@@ -1,0 +1,53 @@
+{
+  "title": "Decompress Run-Length Encoded List",
+  "problem_id": "1241",
+  "frontend_id": "1313",
+  "difficulty": "Easy",
+  "problem_slug": "decompress-run-length-encoded-list",
+  "topics": [
+    "Array"
+  ],
+  "description": "We are given a list nums of integers representing a list compressed with run-length encoding.\nConsider each adjacent pair of elements [freq, val] = [nums[2*i], nums[2*i+1]] (with i >= 0).  For each such pair, there are freq elements with value val concatenated in a sublist. Concatenate all the sublists from left to right to generate the decompressed list.\nReturn the decompressed list.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: [2,4,4,4]\nExplanation: The first pair [1,2] means we have freq = 1 and val = 2 so we generate the array [2].\nThe second pair [3,4] means we have freq = 3 and val = 4 so we generate [4,4,4].\nAt the end the concatenation [2] + [4,4,4] is [2,4,4,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,2,3]\nOutput: [1,3,3]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "nums.length % 2 == 0",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Decompress the given array by repeating nums[2*i+1] a number of times equal to nums[2*i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> decompressRLElist(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] decompressRLElist(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decompressRLElist(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decompressRLElist(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* decompressRLElist(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] DecompressRLElist(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar decompressRLElist = function(nums) {\n    \n};",
+    "typescript": "function decompressRLElist(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function decompressRLElist($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decompressRLElist(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decompressRLElist(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> decompressRLElist(List<int> nums) {\n    \n  }\n}",
+    "golang": "func decompressRLElist(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef decompress_rl_elist(nums)\n    \nend",
+    "scala": "object Solution {\n    def decompressRLElist(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decompress_rl_elist(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (decompress-rl-elist nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec decompress_rl_elist(Nums :: [integer()]) -> [integer()].\ndecompress_rl_elist(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decompress_rl_elist(nums :: [integer]) :: [integer]\n  def decompress_rl_elist(nums) do\n    \n  end\nend"
+  }
+}

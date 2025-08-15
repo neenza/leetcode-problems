@@ -1,0 +1,56 @@
+{
+  "title": "Kth Smallest Number in Multiplication Table",
+  "problem_id": "668",
+  "frontend_id": "668",
+  "difficulty": "Hard",
+  "problem_slug": "kth-smallest-number-in-multiplication-table",
+  "topics": [
+    "Math",
+    "Binary Search"
+  ],
+  "description": "Nearly everyone has used the Multiplication Table. The multiplication table of size m x n is an integer matrix mat where mat[i][j] == i * j (1-indexed).\nGiven three integers m, n, and k, return the kth smallest element in the m x n multiplication table.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 3, n = 3, k = 5\nOutput: 3\nExplanation: The 5th smallest number is 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/02/multtable1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 2, n = 3, k = 6\nOutput: 6\nExplanation: The 6th smallest number is 6.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/02/multtable2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 3 * 104",
+    "1 <= k <= m * n"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findKthNumber(int m, int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findKthNumber(int m, int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findKthNumber(self, m, n, k):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findKthNumber(self, m: int, n: int, k: int) -> int:\n        ",
+    "c": "int findKthNumber(int m, int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindKthNumber(int m, int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar findKthNumber = function(m, n, k) {\n    \n};",
+    "typescript": "function findKthNumber(m: number, n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function findKthNumber($m, $n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findKthNumber(_ m: Int, _ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findKthNumber(m: Int, n: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findKthNumber(int m, int n, int k) {\n    \n  }\n}",
+    "golang": "func findKthNumber(m int, n int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef find_kth_number(m, n, k)\n    \nend",
+    "scala": "object Solution {\n    def findKthNumber(m: Int, n: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_kth_number(m: i32, n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-kth-number m n k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_kth_number(M :: integer(), N :: integer(), K :: integer()) -> integer().\nfind_kth_number(M, N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_kth_number(m :: integer, n :: integer, k :: integer) :: integer\n  def find_kth_number(m, n, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1: Brute Force [Memory Limit Exceeded]\n\n**Intuition and Algorithm**\n\nCreate the multiplication table and sort it, then take the $$k^{th}$$ element.**Complexity Analysis**\n\n* Time Complexity: $$O(m*n)$$ to create the table, and $$O(m*n\\log(m*n))$$ to sort it.\n\n* Space Complexity:  $$O(m*n)$$ to store the table.\n\n---\n### Approach #2: Next Heap [Time Limit Exceeded]\n\n**Intuition**\n\nMaintain a heap of the smallest unused element of each row. Then, finding the next element is a pop operation on the heap.\n\n**Algorithm**\n\nOur `heap` is going to consist of elements $$\\text{(val, root)}$$, where $$\\text{val}$$ is the next unused value of that row, and $$\\text{root}$$ was the starting value of that row.\n\nWe will repeatedly find the next lowest element in the table. To do this, we pop from the heap. Then, if there's a next lowest element in that row, we'll put that element back on the heap.**Complexity Analysis**\n\n* Time Complexity: $$O(k * m \\log m) = O(m^2 n \\log m)$$.  Our initial heapify operation is $$O(m)$$.  Afterwards, each pop and push is $$O(m \\log m)$$, and our outer loop is $$O(k) = O(m*n)$$\n\n* Space Complexity: $$O(m)$$. Our heap is implemented as an array with $$m$$ elements.\n\n---\n### Approach #3: Binary Search [Accepted]\n\n**Intuition**\n\nAs $$\\text{k}$$ and $$\\text{m*n}$$ are up to $$9 * 10^8$$, linear solutions will not work. This motivates solutions with $$\\log$$ complexity, such as binary search.\n\n**Algorithm**\n\nLet's do the binary search for the answer $$\\text{A}$$.\n\nSay `enough(x)` is true if and only if there are $$\\text{k}$$ or more values in the multiplication table that are less than or equal to $$\\text{x}$$.  Colloquially, `enough` describes whether $$\\text{x}$$ is large enough to be the $$k^{th}$$ value in the multiplication table.\n\nThen (for our answer $$\\text{A}$$), whenever $$\\text{x}$$ ≥ $$\\text{A}$$, `enough(x)` is `True`; and whenever $$\\text{x < A}$$, `enough(x)` is `False`.\n\nIn our binary search, our loop invariant is `enough(hi) = True`. In the beginning, `enough(m*n) = True`, and whenever `hi` is set, it is set to a value that is \"enough\" (`enough(mi) = True`). That means `hi` will be the lowest such value at the end of our binary search.\n\nThis leaves us with the task of counting how many values are less than or equal to $$\\text{x}$$. For each of $$\\text{m}$$ rows, the $$i^{th}$$ row looks like $$\\text{[i, 2*i, 3*i, ..., n*i]}$$. The largest possible $$\\text{k*i ≤ x}$$ that could appear is $$\\text{k = x // i}$$. However, if $$\\text{x}$$ is really big, then perhaps $$\\text{k > n}$$, so in total there are $$\\text{min(k, n) = min(x // i, n)}$$ values in that row that are less than or equal to $$\\text{x}$$.\n\nAfter we have the count of how many values in the table are less than or equal to $$\\text{x}$$, by the definition of `enough(x)`, we want to know if that count is greater than or equal to $$\\text{k}$$.**Complexity Analysis**\n\n* Time Complexity: $$O(m * \\log (m*n))$$. Our binary search divides the interval $$\\text{[lo, hi]}$$ into half at each step. At each step, we call `enough` which requires $$O(m)$$ time.\n\n* Space Complexity: $$O(1)$$. We only keep integers in memory during our intermediate calculations."
+}

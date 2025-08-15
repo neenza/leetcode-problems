@@ -1,0 +1,55 @@
+{
+  "title": "Find the Maximum Sequence Value of Array",
+  "problem_id": "3575",
+  "frontend_id": "3287",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-maximum-sequence-value-of-array",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer array nums and a positive integer k.\nThe value of a sequence seq of size 2 * x is defined as:\nReturn the maximum value of any subsequence of nums having size 2 * k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,6,7], k = 1\nOutput: 5\nExplanation:\nThe subsequence [2, 7] has the maximum value of 2 XOR 7 = 5 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,2,5,6,7], k = 2\nOutput: 2\nExplanation:\nThe subsequence [4, 5, 6, 7] has the maximum value of (4 OR 5) XOR (6 OR 7) = 2 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 400",
+    "1 <= nums[i] < 27",
+    "1 <= k <= nums.length / 2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find all the possible <code>OR</code> till each <code>i</code> with <code>k</code> elements backward and forward."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxValue(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxValue(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxValue(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxValue(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maxValue(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxValue(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxValue = function(nums, k) {\n    \n};",
+    "typescript": "function maxValue(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxValue($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxValue(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxValue(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxValue(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxValue(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_value(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxValue(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_value(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-value nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_value(Nums :: [integer()], K :: integer()) -> integer().\nmax_value(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_value(nums :: [integer], k :: integer) :: integer\n  def max_value(nums, k) do\n    \n  end\nend"
+  }
+}

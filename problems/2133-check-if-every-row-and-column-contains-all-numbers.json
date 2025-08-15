@@ -1,0 +1,60 @@
+{
+  "title": "Check if Every Row and Column Contains All Numbers",
+  "problem_id": "2254",
+  "frontend_id": "2133",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-every-row-and-column-contains-all-numbers",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ],
+  "description": "An n x n matrix is valid if every row and every column contains all the integers from 1 to n (inclusive).\nGiven an n x n integer matrix matrix, return true if the matrix is valid. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,2,3],[3,1,2],[2,3,1]]\nOutput: true\nExplanation: In this case, n = 3, and every row and column contains the numbers 1, 2, and 3.\nHence, we return true.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/21/example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,1,1],[1,2,3],[1,2,3]]\nOutput: false\nExplanation: In this case, n = 3, but the first row and the first column do not contain the numbers 2 or 3.\nHence, we return false.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/21/example2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == matrix.length == matrix[i].length",
+    "1 <= n <= 100",
+    "1 <= matrix[i][j] <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use for loops to check each row for every number from 1 to n. Similarly, do the same for each column.",
+    "For each check, you can keep a set of the unique elements in the checked row/col. By the end of the check, the size of the set should be n."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkValid(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkValid(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkValid(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkValid(self, matrix: List[List[int]]) -> bool:\n        ",
+    "c": "bool checkValid(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckValid(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {boolean}\n */\nvar checkValid = function(matrix) {\n    \n};",
+    "typescript": "function checkValid(matrix: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Boolean\n     */\n    function checkValid($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkValid(_ matrix: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkValid(matrix: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkValid(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func checkValid(matrix [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Boolean}\ndef check_valid(matrix)\n    \nend",
+    "scala": "object Solution {\n    def checkValid(matrix: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_valid(matrix: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-valid matrix)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec check_valid(Matrix :: [[integer()]]) -> boolean().\ncheck_valid(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_valid(matrix :: [[integer]]) :: boolean\n  def check_valid(matrix) do\n    \n  end\nend"
+  }
+}

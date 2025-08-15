@@ -1,0 +1,38 @@
+{
+  "title": "First Letter Capitalization II",
+  "problem_id": "3711",
+  "frontend_id": "3374",
+  "difficulty": "Hard",
+  "problem_slug": "first-letter-capitalization-ii",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: user_content\nWrite a solution to transform the text in the content_text column by applying the following rules:\nReturn the result table that includes both the original content_text and the modified text following the above rules.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| content_id  | int     |\n| content_text| varchar |\n+-------------+---------+\ncontent_id is the unique key for this table.\nEach row contains a unique ID and the corresponding text content.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+------------+---------------------------------+\n| content_id | content_text                    |\n+------------+---------------------------------+\n| 1          | hello world of SQL              |\n| 2          | the QUICK-brown fox             |\n| 3          | modern-day DATA science         |\n| 4          | web-based FRONT-end development |\n+------------+---------------------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+------------+---------------------------------+---------------------------------+\n| content_id | original_text                   | converted_text                  |\n+------------+---------------------------------+---------------------------------+\n| 1          | hello world of SQL              | Hello World Of Sql              |\n| 2          | the QUICK-brown fox             | The Quick-Brown Fox             |\n| 3          | modern-day DATA science         | Modern-Day Data Science         |\n| 4          | web-based FRONT-end development | Web-Based Front-End Development |\n+------------+---------------------------------+---------------------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef capitalize_content(user_content: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

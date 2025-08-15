@@ -1,0 +1,66 @@
+{
+  "title": "Frequencies of Shortest Supersequences",
+  "problem_id": "3713",
+  "frontend_id": "3435",
+  "difficulty": "Hard",
+  "problem_slug": "frequencies-of-shortest-supersequences",
+  "topics": [
+    "Array",
+    "String",
+    "Bit Manipulation",
+    "Graph",
+    "Topological Sort",
+    "Enumeration"
+  ],
+  "description": "You are given an array of strings words. Find all shortest common supersequences (SCS) of words that are not permutations of each other.\nA shortest common supersequence is a string of minimum length that contains each string in words as a subsequence.\nReturn a 2D array of integers freqs that represent all the SCSs. Each freqs[i] is an array of size 26, representing the frequency of each letter in the lowercase English alphabet for a single SCS. You may return the frequency arrays in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"ab\",\"ba\"]\nOutput: [[1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\nExplanation:\nThe two SCSs are \"aba\" and \"bab\" . The output is the letter frequencies for each one.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"aa\",\"ac\"]\nOutput: [[2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\nExplanation:\nThe two SCSs are \"aac\" and \"aca\" . Since they are permutations of each other, keep only \"aac\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"aa\",\"bb\",\"cc\"]\nOutput: [[2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\nExplanation:\n\"aabbcc\" and all its permutations are SCSs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 256",
+    "words[i].length == 2",
+    "All strings in words will altogether be composed of no more than 16 unique lowercase letters.",
+    "All strings in words are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Each SCS contains at most 2 occurrences of each character. Why?",
+    "Construct every subset of possible characters (1 or 2).",
+    "Check if a supersequence could be constructed using Topological Sort."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> supersequences(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> supersequences(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def supersequences(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def supersequences(self, words: List[str]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** supersequences(char** words, int wordsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> Supersequences(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[][]}\n */\nvar supersequences = function(words) {\n    \n};",
+    "typescript": "function supersequences(words: string[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer[][]\n     */\n    function supersequences($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func supersequences(_ words: [String]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun supersequences(words: Array<String>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> supersequences(List<String> words) {\n    \n  }\n}",
+    "golang": "func supersequences(words []string) [][]int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer[][]}\ndef supersequences(words)\n    \nend",
+    "scala": "object Solution {\n    def supersequences(words: Array[String]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn supersequences(words: Vec<String>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (supersequences words)\n  (-> (listof string?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec supersequences(Words :: [unicode:unicode_binary()]) -> [[integer()]].\nsupersequences(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec supersequences(words :: [String.t]) :: [[integer]]\n  def supersequences(words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Classes With at Least 5 Students",
+  "problem_id": "596",
+  "frontend_id": "596",
+  "difficulty": "Easy",
+  "problem_slug": "classes-with-at-least-5-students",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Courses\nWrite a solution to find all the classes that have at least five students.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| student     | varchar |\n| class       | varchar |\n+-------------+---------+\n(student, class) is the primary key (combination of columns with unique values) for this table.\nEach row of this table indicates the name of a student and the class in which they are enrolled.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nCourses table:\n+---------+----------+\n| student | class    |\n+---------+----------+\n| A       | Math     |\n| B       | English  |\n| C       | Math     |\n| D       | Biology  |\n| E       | Math     |\n| F       | Computer |\n| G       | Math     |\n| H       | Math     |\n| I       | Math     |\n+---------+----------+\nOutput: \n+---------+\n| class   |\n+---------+\n| Math    |\n+---------+\nExplanation: \n- Math has 6 students, so we include it.\n- English has 1 student, so we do not include it.\n- Biology has 1 student, so we do not include it.\n- Computer has 1 student, so we do not include it.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_classes(courses: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Number of Times Binary String Is Prefix-Aligned",
+  "problem_id": "1491",
+  "frontend_id": "1375",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-times-binary-string-is-prefix-aligned",
+  "topics": [
+    "Array"
+  ],
+  "description": "You have a 1-indexed binary string of length n where all the bits are 0 initially. We will flip all the bits of this binary string (i.e., change them from 0 to 1) one by one. You are given a 1-indexed integer array flips where flips[i] indicates that the bit at index flips[i] will be flipped in the ith step.\nA binary string is prefix-aligned if, after the ith step, all the bits in the inclusive range [1, i] are ones and all the other bits are zeros.\nReturn the number of times the binary string is prefix-aligned during the flipping process.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: flips = [3,2,4,1,5]\nOutput: 2\nExplanation: The binary string is initially \"00000\".\nAfter applying step 1: The string becomes \"00100\", which is not prefix-aligned.\nAfter applying step 2: The string becomes \"01100\", which is not prefix-aligned.\nAfter applying step 3: The string becomes \"01110\", which is not prefix-aligned.\nAfter applying step 4: The string becomes \"11110\", which is prefix-aligned.\nAfter applying step 5: The string becomes \"11111\", which is prefix-aligned.\nWe can see that the string was prefix-aligned 2 times, so we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: flips = [4,1,2,3]\nOutput: 1\nExplanation: The binary string is initially \"0000\".\nAfter applying step 1: The string becomes \"0001\", which is not prefix-aligned.\nAfter applying step 2: The string becomes \"1001\", which is not prefix-aligned.\nAfter applying step 3: The string becomes \"1101\", which is not prefix-aligned.\nAfter applying step 4: The string becomes \"1111\", which is prefix-aligned.\nWe can see that the string was prefix-aligned 1 time, so we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == flips.length",
+    "1 <= n <= 5 * 104",
+    "flips is a permutation of the integers in the range [1, n]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If in the step x all bulb shines then bulbs 1,2,3,..,x should shines too."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numTimesAllBlue(vector<int>& flips) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numTimesAllBlue(int[] flips) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numTimesAllBlue(self, flips):\n        \"\"\"\n        :type flips: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numTimesAllBlue(self, flips: List[int]) -> int:\n        ",
+    "c": "int numTimesAllBlue(int* flips, int flipsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumTimesAllBlue(int[] flips) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} flips\n * @return {number}\n */\nvar numTimesAllBlue = function(flips) {\n    \n};",
+    "typescript": "function numTimesAllBlue(flips: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $flips\n     * @return Integer\n     */\n    function numTimesAllBlue($flips) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numTimesAllBlue(_ flips: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numTimesAllBlue(flips: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numTimesAllBlue(List<int> flips) {\n    \n  }\n}",
+    "golang": "func numTimesAllBlue(flips []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} flips\n# @return {Integer}\ndef num_times_all_blue(flips)\n    \nend",
+    "scala": "object Solution {\n    def numTimesAllBlue(flips: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_times_all_blue(flips: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-times-all-blue flips)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_times_all_blue(Flips :: [integer()]) -> integer().\nnum_times_all_blue(Flips) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_times_all_blue(flips :: [integer]) :: integer\n  def num_times_all_blue(flips) do\n    \n  end\nend"
+  }
+}

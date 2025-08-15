@@ -1,0 +1,56 @@
+{
+  "title": "Increasing Decreasing String",
+  "problem_id": "1472",
+  "frontend_id": "1370",
+  "difficulty": "Easy",
+  "problem_slug": "increasing-decreasing-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s. Reorder the string using the following algorithm:\nIf the smallest or largest character appears more than once, you may choose any occurrence to append to the result.\nReturn the resulting string after reordering s using this algorithm.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aaaabbbbcccc\"\nOutput: \"abccbaabccba\"\nExplanation: After steps 1, 2 and 3 of the first iteration, result = \"abc\"\nAfter steps 4, 5 and 6 of the first iteration, result = \"abccba\"\nFirst iteration is done. Now s = \"aabbcc\" and we go back to step 1\nAfter steps 1, 2 and 3 of the second iteration, result = \"abccbaabc\"\nAfter steps 4, 5 and 6 of the second iteration, result = \"abccbaabccba\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"rat\"\nOutput: \"art\"\nExplanation: The word \"rat\" becomes \"art\" after re-ordering it with the mentioned algorithm.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of each character.",
+    "Loop over all character from 'a' to 'z' and append the character if it exists and decrease frequency by 1. Do the same from 'z' to 'a'.",
+    "Keep repeating until the frequency of all characters is zero."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string sortString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String sortString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortString(self, s: str) -> str:\n        ",
+    "c": "char* sortString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SortString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar sortString = function(s) {\n    \n};",
+    "typescript": "function sortString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function sortString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String sortString(String s) {\n    \n  }\n}",
+    "golang": "func sortString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef sort_string(s)\n    \nend",
+    "scala": "object Solution {\n    def sortString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (sort-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec sort_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsort_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_string(s :: String.t) :: String.t\n  def sort_string(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Shortest Path with Alternating Colors",
+  "problem_id": "1229",
+  "frontend_id": "1129",
+  "difficulty": "Medium",
+  "problem_slug": "shortest-path-with-alternating-colors",
+  "topics": [
+    "Breadth-First Search",
+    "Graph"
+  ],
+  "description": "You are given an integer n, the number of nodes in a directed graph where the nodes are labeled from 0 to n - 1. Each edge is red or blue in this graph, and there could be self-edges and parallel edges.\nYou are given two arrays redEdges and blueEdges where:\nReturn an array answer of length n, where each answer[x] is the length of the shortest path from node 0 to node x such that the edge colors alternate along the path, or -1 if such a path does not exist.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, redEdges = [[0,1],[1,2]], blueEdges = []\nOutput: [0,1,-1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, redEdges = [[0,1]], blueEdges = [[2,1]]\nOutput: [0,1,-1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100",
+    "0 <= redEdges.length, blueEdges.length <= 400",
+    "redEdges[i].length == blueEdges[j].length == 2",
+    "0 <= ai, bi, uj, vj < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do a breadth-first search, where the \"nodes\" are actually (Node, color of last edge taken)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& redEdges, vector<vector<int>>& blueEdges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] shortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestAlternatingPaths(self, n, redEdges, blueEdges):\n        \"\"\"\n        :type n: int\n        :type redEdges: List[List[int]]\n        :type blueEdges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestAlternatingPaths(self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* shortestAlternatingPaths(int n, int** redEdges, int redEdgesSize, int* redEdgesColSize, int** blueEdges, int blueEdgesSize, int* blueEdgesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ShortestAlternatingPaths(int n, int[][] redEdges, int[][] blueEdges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} redEdges\n * @param {number[][]} blueEdges\n * @return {number[]}\n */\nvar shortestAlternatingPaths = function(n, redEdges, blueEdges) {\n    \n};",
+    "typescript": "function shortestAlternatingPaths(n: number, redEdges: number[][], blueEdges: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $redEdges\n     * @param Integer[][] $blueEdges\n     * @return Integer[]\n     */\n    function shortestAlternatingPaths($n, $redEdges, $blueEdges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestAlternatingPaths(_ n: Int, _ redEdges: [[Int]], _ blueEdges: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestAlternatingPaths(n: Int, redEdges: Array<IntArray>, blueEdges: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> shortestAlternatingPaths(int n, List<List<int>> redEdges, List<List<int>> blueEdges) {\n    \n  }\n}",
+    "golang": "func shortestAlternatingPaths(n int, redEdges [][]int, blueEdges [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} red_edges\n# @param {Integer[][]} blue_edges\n# @return {Integer[]}\ndef shortest_alternating_paths(n, red_edges, blue_edges)\n    \nend",
+    "scala": "object Solution {\n    def shortestAlternatingPaths(n: Int, redEdges: Array[Array[Int]], blueEdges: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_alternating_paths(n: i32, red_edges: Vec<Vec<i32>>, blue_edges: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-alternating-paths n redEdges blueEdges)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec shortest_alternating_paths(N :: integer(), RedEdges :: [[integer()]], BlueEdges :: [[integer()]]) -> [integer()].\nshortest_alternating_paths(N, RedEdges, BlueEdges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_alternating_paths(n :: integer, red_edges :: [[integer]], blue_edges :: [[integer]]) :: [integer]\n  def shortest_alternating_paths(n, red_edges, blue_edges) do\n    \n  end\nend"
+  }
+}

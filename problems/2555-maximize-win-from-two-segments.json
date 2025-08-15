@@ -1,0 +1,57 @@
+{
+  "title": "Maximize Win From Two Segments",
+  "problem_id": "2673",
+  "frontend_id": "2555",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-win-from-two-segments",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sliding Window"
+  ],
+  "description": "There are some prizes on the X-axis. You are given an integer array prizePositions that is sorted in non-decreasing order, where prizePositions[i] is the position of the ith prize. There could be different prizes at the same position on the line. You are also given an integer k.\nYou are allowed to select two segments with integer endpoints. The length of each segment must be k. You will collect all prizes whose position falls within at least one of the two selected segments (including the endpoints of the segments). The two selected segments may intersect.\nReturn the maximum number of prizes you can win if you choose the two segments optimally.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: prizePositions = [1,1,2,2,3,3,5], k = 2\nOutput: 7\nExplanation: In this example, you can win all 7 prizes by selecting two segments [1, 3] and [3, 5].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: prizePositions = [1,2,3,4], k = 0\nOutput: 2\nExplanation: For this example, one choice for the segments is [3, 3] and [4, 4], and you will be able to get 2 prizes.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= prizePositions.length <= 105",
+    "1 <= prizePositions[i] <= 109",
+    "0 <= k <= 109",
+    "prizePositions is sorted in non-decreasing order."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try solving the problem for one interval.",
+    "Using the solution with one interval, how can you combine that with a second interval?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximizeWin(vector<int>& prizePositions, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximizeWin(int[] prizePositions, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximizeWin(self, prizePositions, k):\n        \"\"\"\n        :type prizePositions: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximizeWin(self, prizePositions: List[int], k: int) -> int:\n        ",
+    "c": "int maximizeWin(int* prizePositions, int prizePositionsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximizeWin(int[] prizePositions, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} prizePositions\n * @param {number} k\n * @return {number}\n */\nvar maximizeWin = function(prizePositions, k) {\n    \n};",
+    "typescript": "function maximizeWin(prizePositions: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $prizePositions\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximizeWin($prizePositions, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeWin(_ prizePositions: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximizeWin(prizePositions: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeWin(List<int> prizePositions, int k) {\n    \n  }\n}",
+    "golang": "func maximizeWin(prizePositions []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} prize_positions\n# @param {Integer} k\n# @return {Integer}\ndef maximize_win(prize_positions, k)\n    \nend",
+    "scala": "object Solution {\n    def maximizeWin(prizePositions: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_win(prize_positions: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximize-win prizePositions k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximize_win(PrizePositions :: [integer()], K :: integer()) -> integer().\nmaximize_win(PrizePositions, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximize_win(prize_positions :: [integer], k :: integer) :: integer\n  def maximize_win(prize_positions, k) do\n    \n  end\nend"
+  }
+}

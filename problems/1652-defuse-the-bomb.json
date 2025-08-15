@@ -1,0 +1,62 @@
+{
+  "title": "Defuse the Bomb",
+  "problem_id": "1755",
+  "frontend_id": "1652",
+  "difficulty": "Easy",
+  "problem_slug": "defuse-the-bomb",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array code of length of n and a key k.\nTo decrypt the code, you must replace every number. All the numbers are replaced simultaneously.\nAs code is circular, the next element of code[n-1] is code[0], and the previous element of code[0] is code[n-1].\nGiven the circular array code and an integer key k, return the decrypted code to defuse the bomb!\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: code = [5,7,1,4], k = 3\nOutput: [12,10,16,13]\nExplanation: Each number is replaced by the sum of the next 3 numbers. The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: code = [1,2,3,4], k = 0\nOutput: [0,0,0,0]\nExplanation: When k is zero, the numbers are replaced by 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: code = [2,4,9,3], k = -2\nOutput: [12,5,6,13]\nExplanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == code.length",
+    "1 <= n <= 100",
+    "1 <= code[i] <= 100",
+    "-(n - 1) <= k <= n - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "As the array is circular, use modulo to find the correct index.",
+    "The constraints are low enough for a brute-force solution."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> decrypt(vector<int>& code, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] decrypt(int[] code, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decrypt(self, code, k):\n        \"\"\"\n        :type code: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decrypt(self, code: List[int], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* decrypt(int* code, int codeSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] Decrypt(int[] code, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} code\n * @param {number} k\n * @return {number[]}\n */\nvar decrypt = function(code, k) {\n    \n};",
+    "typescript": "function decrypt(code: number[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $code\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function decrypt($code, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decrypt(_ code: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decrypt(code: IntArray, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> decrypt(List<int> code, int k) {\n    \n  }\n}",
+    "golang": "func decrypt(code []int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} code\n# @param {Integer} k\n# @return {Integer[]}\ndef decrypt(code, k)\n    \nend",
+    "scala": "object Solution {\n    def decrypt(code: Array[Int], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decrypt(code: Vec<i32>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (decrypt code k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec decrypt(Code :: [integer()], K :: integer()) -> [integer()].\ndecrypt(Code, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decrypt(code :: [integer], k :: integer) :: [integer]\n  def decrypt(code, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nWe are given a circular array `code` of length `n` and a key `k`, we need to update each element in `code` as follows:\n1. If `k > 0`, replace each element with the sum of the next `k` elements.\n2. If `k < 0`, replace each element with the sum of the previous `|k|` elements.\n3. If `k == 0`, replace all elements with `0`.\n\nSince the array is circular, when we go beyond the end, we wrap back to the start using the modulo operator `%`. For example, `i % n` keeps an index `i` within bounds of an array of length `n`, so if `i` exceeds `n`, it wraps back to `0`, `1`, etc. This lets us navigate the circular array without additional conditions to reset indices.\n\n---\n\n### Approach 1: Brute Force\n\n#### Intuition   \n\nGiven the low constraints on `n` and `k`, we can use a simple brute-force approach to simulate the required operation for each index based on `k`:\n\n- If `k` is 0, we return an array of size `n` filled with 0s.\n- If `k` is positive, we replace each element with the sum of the next `k` elements, using the modulo operator to handle circular bounds.\n- If `k` is negative, we replace each element with the sum of the previous `|k|` elements, again using the modulo operator for circular bounds.\n\n#### Algorithm\n\n1. Create an array `result` of the same length as `code` to store the decrypted values.\n2. If `k` is 0, return `result`, as it should contain only zeros.\n3. Loop through each element in `code` with index `i`:\n    - If `k` is positive:\n        - For each `j` from `i + 1` to `i + k`:\n            - Add `code[j % code.length]` to `result[i]`.\n    - If `k` is negative:\n        - For each `j` from `i - |k|` to `i - 1`:\n            - Add `code[(j + code.length) % code.length]` to `result[i]`.\n4. After processing all elements, return `result`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the given `code` array.\n\n- Time Complexity: $O(n \\cdot |k|)$\n\n    The outer loop iterates over each element in `code`, so it runs `n` times, where `n` is the length of `code`. For each element, the inner loop runs $|k|$ times (either forward or backward, depending on the value of `k`). Therefore, the overall time complexity is $O(n \\cdot ∣k∣)$.\n\n- Space complexity: $O(n)$\n\n    The algorithm creates a new array `result` of the same length as `code` to store decrypted values, resulting in a space complexity of $O(n)$.\n\n---\n\n### Approach 2: Sliding Window\n\n#### Intuition   \n\nIn the previous approach, we calculate the sum of `|k|` consecutive elements and store it in the `result` array for each index. But notice this: each time we move to the next window, most of the numbers (specifically, `|k|-1` of them) stay the same! Only one element is removed from the start, and a new one is added at the end. Therefore, instead of calculating the sum for every index, we can make changes to the initial sum for these two elements. Checkout the visual given below for a better understanding:\n\n![Figure 1](../Figures/1652/Slide1.png)\n\nFor positive `k`, we start by calculating the sum of the first `k` elements and store it in `result[0]`. Let’s call this initial sum `sum`. As we shift the window to each new index, we update `sum` by subtracting the element that's leaving the window and adding the new element entering it. We repeat this process until we cover all indices and store each updated `sum` in `result`.\n\nSimilarly, when `k` is negative, we calculate the sum of the `|k|` elements preceding each index, beginning with the last `|k|` elements for the first index. Then, for each subsequent index, we update the `sum` by adjusting for the outgoing and incoming elements as before. After visiting all indices, we return the `result` array.\n\n#### Algorithm\n\n1. Create an array `result` of the same length as `code` to store the decrypted values.\n2. If `k` is 0, return `result`, since all values should be zero.\n3. Set initial `start` and `end` indices based on `k`. \n    - If `k` > 0:\n        - Set `start` = 1 and `end` = `k`. \n    - If `k` < 0:\n        - Set `start` to `code.length - |k|` and `end` to `code.length - 1`.\n4. Calculate the initial sum of elements from `start` to `end`.\n5. Loop through each index `i` in `code`:\n    - Store the current `sum` in `result[i]`. \n    - Update `sum` by subtracting the element at `start` and adding the element at `end + 1`, using modulo to handle wrapping around the array. \n    - Increment `start` and `end` by 1 to slide the window right.\n6. Return the `result` array with the decrypted values.\n\n!?!../Documents/1652/slideshow1.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the given `code` array.\n\n- Time Complexity: $O(n)$\n\n    The first loop calculates the initial `sum` for the window, which takes $O(|k|)$ time. The second loop iterates through each element in the `code` array, which takes $O(n)$ time. Therefore, the overall time complexity is $O(|k|+n)$. In the worst case, `|k|` can be as large as `n`, and the time complexity simplifies to $O(n)$.\n\n- Space complexity: $O(n)$\n\n    The algorithm creates a new array `result` of the same length as `code` to store decrypted values, resulting in a space complexity of $O(n)$.\n\n---"
+}

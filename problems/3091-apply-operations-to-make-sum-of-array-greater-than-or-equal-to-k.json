@@ -1,0 +1,54 @@
+{
+  "title": "Apply Operations to Make Sum of Array Greater Than or Equal to k",
+  "problem_id": "3328",
+  "frontend_id": "3091",
+  "difficulty": "Medium",
+  "problem_slug": "apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k",
+  "topics": [
+    "Math",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "You are given a positive integer k. Initially, you have an array nums = [1].\nYou can perform any of the following operations on the array any number of times (possibly zero):\nReturn the minimum number of operations required to make the sum of elements of the final array greater than or equal to k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 11\nOutput: 5\nExplanation:\nWe can do the following operations on the array nums = [1] :\nThe sum of the final array is 4 + 4 + 4 = 12 which is greater than or equal to k = 11 . The total number of operations performed is 3 + 2 = 5 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 1\nOutput: 0\nExplanation:\nThe sum of the original array is already greater than or equal to 1 , so no operations are needed.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is optimal to make all the increase operations first and all the duplicate operations last.",
+    "Iterate over all possible number of increase operations that can be done and find the corresponding number of duplicate operations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, k):\n        \"\"\"\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, k: int) -> int:\n        ",
+    "c": "int minOperations(int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @return {number}\n */\nvar minOperations = function(k) {\n    \n};",
+    "typescript": "function minOperations(k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @return Integer\n     */\n    function minOperations($k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(int k) {\n    \n  }\n}",
+    "golang": "func minOperations(k int) int {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @return {Integer}\ndef min_operations(k)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations k)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(K :: integer()) -> integer().\nmin_operations(K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(k :: integer) :: integer\n  def min_operations(k) do\n    \n  end\nend"
+  }
+}

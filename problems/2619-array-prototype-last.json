@@ -1,0 +1,34 @@
+{
+  "title": "Array Prototype Last",
+  "problem_id": "2734",
+  "frontend_id": "2619",
+  "difficulty": "Easy",
+  "problem_slug": "array-prototype-last",
+  "topics": [],
+  "description": "Write code that enhances all arrays such that you can call the array.last() method on any array and it will return the last element. If there are no elements in the array, it should return -1.\nYou may assume the array is the output of JSON.parse.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [null, {}, 3]\nOutput: 3\nExplanation: Calling nums.last() should return the last element: 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = []\nOutput: -1\nExplanation: Because there are no elements, return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "arr is a valid JSON array",
+    "0 <= arr.length <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Inside the Array.prototype.last function body, you have access to the \"this\" keyword. \"this\" is equal to the contents of the array in this case.",
+    "You can access elements in the array via this[0], this[1], etc. You can also access properties and method like this.length, this.forEach, etc."
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @return {null|boolean|number|string|Array|Object}\n */\nArray.prototype.last = function() {\n    \n};\n\n/**\n * const arr = [1, 2, 3];\n * arr.last(); // 3\n */",
+    "typescript": "interface Array<T> {\n    last(): T | -1;\n}\n\nArray.prototype.last = function() {\n    \n};\n\n/**\n * const arr = [1, 2, 3];\n * arr.last(); // 3\n */\n"
+  }
+}

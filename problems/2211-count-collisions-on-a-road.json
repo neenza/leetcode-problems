@@ -1,0 +1,56 @@
+{
+  "title": "Count Collisions on a Road",
+  "problem_id": "2317",
+  "frontend_id": "2211",
+  "difficulty": "Medium",
+  "problem_slug": "count-collisions-on-a-road",
+  "topics": [
+    "String",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "There are n cars on an infinitely long road. The cars are numbered from 0 to n - 1 from left to right and each car is present at a unique point.\nYou are given a 0-indexed string directions of length n. directions[i] can be either 'L', 'R', or 'S' denoting whether the ith car is moving towards the left, towards the right, or staying at its current point respectively. Each moving car has the same speed.\nThe number of collisions can be calculated as follows:\nAfter a collision, the cars involved can no longer move and will stay at the point where they collided. Other than that, cars cannot change their state or direction of motion.\nReturn the total number of collisions that will happen on the road.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: directions = \"RLRSLL\"\nOutput: 5\nExplanation:\nThe collisions that will happen on the road are:\n- Cars 0 and 1 will collide with each other. Since they are moving in opposite directions, the number of collisions becomes 0 + 2 = 2.\n- Cars 2 and 3 will collide with each other. Since car 3 is stationary, the number of collisions becomes 2 + 1 = 3.\n- Cars 3 and 4 will collide with each other. Since car 3 is stationary, the number of collisions becomes 3 + 1 = 4.\n- Cars 4 and 5 will collide with each other. After car 4 collides with car 3, it will stay at the point of collision and get hit by car 5. The number of collisions becomes 4 + 1 = 5.\nThus, the total number of collisions that will happen on the road is 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: directions = \"LLRR\"\nOutput: 0\nExplanation:\nNo cars will collide with each other. Thus, the total number of collisions that will happen on the road is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= directions.length <= 105",
+    "directions[i] is either 'L', 'R', or 'S'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In what circumstances does a moving car not collide with another car?",
+    "If we disregard the moving cars that do not collide with another car, what does each moving car contribute to the answer?",
+    "Will stationary cars contribute towards the answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countCollisions(string directions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCollisions(String directions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCollisions(self, directions):\n        \"\"\"\n        :type directions: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCollisions(self, directions: str) -> int:\n        ",
+    "c": "int countCollisions(char* directions) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountCollisions(string directions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} directions\n * @return {number}\n */\nvar countCollisions = function(directions) {\n    \n};",
+    "typescript": "function countCollisions(directions: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $directions\n     * @return Integer\n     */\n    function countCollisions($directions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCollisions(_ directions: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCollisions(directions: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCollisions(String directions) {\n    \n  }\n}",
+    "golang": "func countCollisions(directions string) int {\n    \n}",
+    "ruby": "# @param {String} directions\n# @return {Integer}\ndef count_collisions(directions)\n    \nend",
+    "scala": "object Solution {\n    def countCollisions(directions: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_collisions(directions: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-collisions directions)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_collisions(Directions :: unicode:unicode_binary()) -> integer().\ncount_collisions(Directions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_collisions(directions :: String.t) :: integer\n  def count_collisions(directions) do\n    \n  end\nend"
+  }
+}

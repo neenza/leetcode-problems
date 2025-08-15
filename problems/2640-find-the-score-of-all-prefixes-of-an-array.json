@@ -1,0 +1,55 @@
+{
+  "title": "Find the Score of All Prefixes of an Array",
+  "problem_id": "2676",
+  "frontend_id": "2640",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-score-of-all-prefixes-of-an-array",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "We define the conversion array conver of an array arr as follows:\nWe also define the score of an array arr as the sum of the values of the conversion array of arr.\nGiven a 0-indexed integer array nums of length n, return an array ans of length n where ans[i] is the score of the prefix nums[0..i].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,7,5,10]\nOutput: [4,10,24,36,56]\nExplanation: \nFor the prefix [2], the conversion array is [4] hence the score is 4\nFor the prefix [2, 3], the conversion array is [4, 6] hence the score is 10\nFor the prefix [2, 3, 7], the conversion array is [4, 6, 14] hence the score is 24\nFor the prefix [2, 3, 7, 5], the conversion array is [4, 6, 14, 12] hence the score is 36\nFor the prefix [2, 3, 7, 5, 10], the conversion array is [4, 6, 14, 12, 20] hence the score is 56",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,2,4,8,16]\nOutput: [2,4,8,16,32,64]\nExplanation: \nFor the prefix [1], the conversion array is [2] hence the score is 2\nFor the prefix [1, 1], the conversion array is [2, 2] hence the score is 4\nFor the prefix [1, 1, 2], the conversion array is [2, 2, 4] hence the score is 8\nFor the prefix [1, 1, 2, 4], the conversion array is [2, 2, 4, 8] hence the score is 16\nFor the prefix [1, 1, 2, 4, 8], the conversion array is [2, 2, 4, 8, 16] hence the score is 32\nFor the prefix [1, 1, 2, 4, 8, 16], the conversion array is [2, 2, 4, 8, 16, 32] hence the score is 64",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of the prefix maximum of the array",
+    "Establish a relationship between ans[i] and ans[i-1]",
+    "for 0 < i < n, ans[i] = ans[i-1]+conver[i]. In other words, array ans is the prefix sum array of the conversion array"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> findPrefixScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] findPrefixScore(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPrefixScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPrefixScore(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* findPrefixScore(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] FindPrefixScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findPrefixScore = function(nums) {\n    \n};",
+    "typescript": "function findPrefixScore(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function findPrefixScore($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPrefixScore(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPrefixScore(nums: IntArray): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findPrefixScore(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findPrefixScore(nums []int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef find_prefix_score(nums)\n    \nend",
+    "scala": "object Solution {\n    def findPrefixScore(nums: Array[Int]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_prefix_score(nums: Vec<i32>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (find-prefix-score nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_prefix_score(Nums :: [integer()]) -> [integer()].\nfind_prefix_score(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_prefix_score(nums :: [integer]) :: [integer]\n  def find_prefix_score(nums) do\n    \n  end\nend"
+  }
+}

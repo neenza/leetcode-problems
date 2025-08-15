@@ -1,0 +1,60 @@
+{
+  "title": "Remove All Adjacent Duplicates in String II",
+  "problem_id": "1320",
+  "frontend_id": "1209",
+  "difficulty": "Medium",
+  "problem_slug": "remove-all-adjacent-duplicates-in-string-ii",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.\nWe repeatedly make k duplicate removals on s until we no longer can.\nReturn the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcd\", k = 2\nOutput: \"abcd\"\nExplanation: There's nothing to delete.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"deeedbbcccbdaa\", k = 3\nOutput: \"aa\"\nExplanation: \nFirst delete \"eee\" and \"ccc\", get \"ddbbbdaa\"\nThen delete \"bbb\", get \"dddaa\"\nFinally delete \"ddd\", get \"aa\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"pbbcggttciiippooaais\", k = 2\nOutput: \"ps\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "2 <= k <= 104",
+    "s only contains lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a stack to store the characters, when there are k same characters, delete them.",
+    "To make it more efficient, use a pair to store the value and the count of each character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string removeDuplicates(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String removeDuplicates(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeDuplicates(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeDuplicates(self, s: str, k: int) -> str:\n        ",
+    "c": "char* removeDuplicates(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RemoveDuplicates(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar removeDuplicates = function(s, k) {\n    \n};",
+    "typescript": "function removeDuplicates(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function removeDuplicates($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeDuplicates(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeDuplicates(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String removeDuplicates(String s, int k) {\n    \n  }\n}",
+    "golang": "func removeDuplicates(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef remove_duplicates(s, k)\n    \nend",
+    "scala": "object Solution {\n    def removeDuplicates(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_duplicates(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (remove-duplicates s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec remove_duplicates(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nremove_duplicates(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_duplicates(s :: String.t, k :: integer) :: String.t\n  def remove_duplicates(s, k) do\n    \n  end\nend"
+  }
+}

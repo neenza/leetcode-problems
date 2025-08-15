@@ -1,0 +1,53 @@
+{
+  "title": "Frog Jump",
+  "problem_id": "403",
+  "frontend_id": "403",
+  "difficulty": "Hard",
+  "problem_slug": "frog-jump",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "A frog is crossing a river. The river is divided into some number of units, and at each unit, there may or may not exist a stone. The frog can jump on a stone, but it must not jump into the water.\nGiven a list of stones positions (in units) in sorted ascending order, determine if the frog can cross the river by landing on the last stone. Initially, the frog is on the first stone and assumes the first jump must be 1 unit.\nIf the frog's last jump was k units, its next jump must be either k - 1, k, or k + 1 units. The frog can only jump in the forward direction.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [0,1,3,5,6,8,12,17]\nOutput: true\nExplanation: The frog can jump to the last stone by jumping 1 unit to the 2nd stone, then 2 units to the 3rd stone, then 2 units to the 4th stone, then 3 units to the 6th stone, 4 units to the 7th stone, and 5 units to the 8th stone.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [0,1,2,3,4,8,9,11]\nOutput: false\nExplanation: There is no way to jump to the last stone as the gap between the 5th and 6th stone is too large.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= stones.length <= 2000",
+    "0 <= stones[i] <= 231 - 1",
+    "stones[0] == 0",
+    "stones is sorted in a strictly increasing order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canCross(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canCross(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canCross(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canCross(self, stones: List[int]) -> bool:\n        ",
+    "c": "bool canCross(int* stones, int stonesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanCross(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {boolean}\n */\nvar canCross = function(stones) {\n    \n};",
+    "typescript": "function canCross(stones: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Boolean\n     */\n    function canCross($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canCross(_ stones: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canCross(stones: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canCross(List<int> stones) {\n    \n  }\n}",
+    "golang": "func canCross(stones []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Boolean}\ndef can_cross(stones)\n    \nend",
+    "scala": "object Solution {\n    def canCross(stones: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_cross(stones: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-cross stones)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_cross(Stones :: [integer()]) -> boolean().\ncan_cross(Stones) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_cross(stones :: [integer]) :: boolean\n  def can_cross(stones) do\n    \n  end\nend"
+  }
+}

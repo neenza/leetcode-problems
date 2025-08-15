@@ -1,0 +1,57 @@
+{
+  "title": "Count Unique Characters of All Substrings of a Given String",
+  "problem_id": "855",
+  "frontend_id": "828",
+  "difficulty": "Hard",
+  "problem_slug": "count-unique-characters-of-all-substrings-of-a-given-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Let's define a function countUniqueChars(s) that returns the number of unique characters in s.\nGiven a string s, return the sum of countUniqueChars(t) where t is a substring of s. The test cases are generated such that the answer fits in a 32-bit integer.\nNotice that some substrings can be repeated so in this case you have to count the repeated ones too.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ABC\"\nOutput: 10\nExplanation: All possible substrings are: \"A\",\"B\",\"C\",\"AB\",\"BC\" and \"ABC\".\nEvery substring is composed with only unique letters.\nSum of lengths of all substring is 1 + 1 + 1 + 2 + 2 + 3 = 10",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ABA\"\nOutput: 8\nExplanation: The same as example 1, except countUniqueChars(\"ABA\") = 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"LEETCODE\"\nOutput: 92",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of uppercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int uniqueLetterString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniqueLetterString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uniqueLetterString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uniqueLetterString(self, s: str) -> int:\n        ",
+    "c": "int uniqueLetterString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int UniqueLetterString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar uniqueLetterString = function(s) {\n    \n};",
+    "typescript": "function uniqueLetterString(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function uniqueLetterString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniqueLetterString(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uniqueLetterString(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniqueLetterString(String s) {\n    \n  }\n}",
+    "golang": "func uniqueLetterString(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef unique_letter_string(s)\n    \nend",
+    "scala": "object Solution {\n    def uniqueLetterString(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_letter_string(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (unique-letter-string s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec unique_letter_string(S :: unicode:unicode_binary()) -> integer().\nunique_letter_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unique_letter_string(s :: String.t) :: integer\n  def unique_letter_string(s) do\n    \n  end\nend"
+  }
+}

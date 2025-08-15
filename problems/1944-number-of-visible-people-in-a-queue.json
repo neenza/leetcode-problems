@@ -1,0 +1,64 @@
+{
+  "title": "Number of Visible People in a Queue",
+  "problem_id": "1305",
+  "frontend_id": "1944",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-visible-people-in-a-queue",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "There are n people standing in a queue, and they numbered from 0 to n - 1 in left to right order. You are given an array heights of distinct integers where heights[i] represents the height of the ith person.\nA person can see another person to their right in the queue if everybody in between is shorter than both of them. More formally, the ith person can see the jth person if i < j and min(heights[i], heights[j]) > max(heights[i+1], heights[i+2], ..., heights[j-1]).\nReturn an array answer of length n where answer[i] is the number of people the ith person can see to their right in the queue.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: heights = [10,6,8,5,11,9]\nOutput: [3,1,2,1,1,0]\nExplanation:\nPerson 0 can see person 1, 2, and 4.\nPerson 1 can see person 2.\nPerson 2 can see person 3 and 4.\nPerson 3 can see person 4.\nPerson 4 can see person 5.\nPerson 5 can see no one since nobody is to the right of them.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/29/queue-plane.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: heights = [5,1,2,3,10]\nOutput: [4,1,1,1,0]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/29/queue-plane.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == heights.length",
+    "1 <= n <= 105",
+    "1 <= heights[i] <= 105",
+    "All the values of heights are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How to solve this problem in quadratic complexity ?",
+    "For every subarray start at index i, keep finding new maximum values until a value larger than arr[i] is found.",
+    "Since the limits are high, you need a linear solution.",
+    "Use a stack to keep the values of the array sorted as you iterate the array from the end to the start.",
+    "Keep popping from the stack the elements in sorted order until a value larger than arr[i] is found, these are the ones that person i can see."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> canSeePersonsCount(vector<int>& heights) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] canSeePersonsCount(int[] heights) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canSeePersonsCount(self, heights):\n        \"\"\"\n        :type heights: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canSeePersonsCount(self, heights: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* canSeePersonsCount(int* heights, int heightsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CanSeePersonsCount(int[] heights) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} heights\n * @return {number[]}\n */\nvar canSeePersonsCount = function(heights) {\n    \n};",
+    "typescript": "function canSeePersonsCount(heights: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $heights\n     * @return Integer[]\n     */\n    function canSeePersonsCount($heights) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canSeePersonsCount(_ heights: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canSeePersonsCount(heights: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> canSeePersonsCount(List<int> heights) {\n    \n  }\n}",
+    "golang": "func canSeePersonsCount(heights []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} heights\n# @return {Integer[]}\ndef can_see_persons_count(heights)\n    \nend",
+    "scala": "object Solution {\n    def canSeePersonsCount(heights: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_see_persons_count(heights: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (can-see-persons-count heights)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec can_see_persons_count(Heights :: [integer()]) -> [integer()].\ncan_see_persons_count(Heights) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_see_persons_count(heights :: [integer]) :: [integer]\n  def can_see_persons_count(heights) do\n    \n  end\nend"
+  }
+}

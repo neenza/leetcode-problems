@@ -1,0 +1,60 @@
+{
+  "title": "Substring Matching Pattern",
+  "problem_id": "3684",
+  "frontend_id": "3407",
+  "difficulty": "Easy",
+  "problem_slug": "substring-matching-pattern",
+  "topics": [
+    "String",
+    "String Matching"
+  ],
+  "description": "You are given a string s and a pattern string p, where p contains exactly one '*' character.\nThe '*' in p can be replaced with any sequence of zero or more characters.\nReturn true if p can be made a substring of s, and false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcode\", p = \"ee*e\"\nOutput: true\nExplanation:\nBy replacing the '*' with \"tcod\" , the substring \"eetcode\" matches the pattern.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"car\", p = \"c*v\"\nOutput: false\nExplanation:\nThere is no substring matching the pattern.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"luck\", p = \"u*\"\nOutput: true\nExplanation:\nThe substrings \"u\" , \"uc\" , and \"uck\" match the pattern.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "1 <= p.length <= 50",
+    "s contains only lowercase English letters.",
+    "p contains only lowercase English letters and exactly one '*'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Divide the pattern in two strings and search in the string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasMatch(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasMatch(String s, String p) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasMatch(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasMatch(self, s: str, p: str) -> bool:\n        ",
+    "c": "bool hasMatch(char* s, char* p) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasMatch(string s, string p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {boolean}\n */\nvar hasMatch = function(s, p) {\n    \n};",
+    "typescript": "function hasMatch(s: string, p: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $p\n     * @return Boolean\n     */\n    function hasMatch($s, $p) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasMatch(_ s: String, _ p: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasMatch(s: String, p: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasMatch(String s, String p) {\n    \n  }\n}",
+    "golang": "func hasMatch(s string, p string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} p\n# @return {Boolean}\ndef has_match(s, p)\n    \nend",
+    "scala": "object Solution {\n    def hasMatch(s: String, p: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_match(s: String, p: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-match s p)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec has_match(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> boolean().\nhas_match(S, P) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_match(s :: String.t, p :: String.t) :: boolean\n  def has_match(s, p) do\n    \n  end\nend"
+  }
+}

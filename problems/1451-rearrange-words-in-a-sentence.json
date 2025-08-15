@@ -1,0 +1,58 @@
+{
+  "title": "Rearrange Words in a Sentence",
+  "problem_id": "1561",
+  "frontend_id": "1451",
+  "difficulty": "Medium",
+  "problem_slug": "rearrange-words-in-a-sentence",
+  "topics": [
+    "String",
+    "Sorting"
+  ],
+  "description": "Given a sentence text (A sentence is a string of space-separated words) in the following format:\nYour task is to rearrange the words in text such that all words are rearranged in an increasing order of their lengths. If two words have the same length, arrange them in their original order.\nReturn the new text following the format shown above.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"Leetcode is cool\"\nOutput: \"Is cool leetcode\"\nExplanation: There are 3 words, \"Leetcode\" of length 8, \"is\" of length 2 and \"cool\" of length 4.\nOutput is ordered by length and the new first word starts with capital letter.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"Keep calm and code on\"\nOutput: \"On and keep calm code\"\nExplanation: Output is ordered as follows:\n\"On\" 2 letters.\n\"and\" 3 letters.\n\"keep\" 4 letters in case of tie order by position in original text.\n\"calm\" 4 letters.\n\"code\" 4 letters.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: text = \"To be or not to be\"\nOutput: \"To be or to be not\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "text begins with a capital letter and then contains lowercase letters and single space between words.",
+    "1 <= text.length <= 10^5"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Store each word and their relative position. Then, sort them by length of words in case of tie by their original order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string arrangeWords(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String arrangeWords(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def arrangeWords(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def arrangeWords(self, text: str) -> str:\n        ",
+    "c": "char* arrangeWords(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ArrangeWords(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {string}\n */\nvar arrangeWords = function(text) {\n    \n};",
+    "typescript": "function arrangeWords(text: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return String\n     */\n    function arrangeWords($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func arrangeWords(_ text: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun arrangeWords(text: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String arrangeWords(String text) {\n    \n  }\n}",
+    "golang": "func arrangeWords(text string) string {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {String}\ndef arrange_words(text)\n    \nend",
+    "scala": "object Solution {\n    def arrangeWords(text: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn arrange_words(text: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (arrange-words text)\n  (-> string? string?)\n  )",
+    "erlang": "-spec arrange_words(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\narrange_words(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec arrange_words(text :: String.t) :: String.t\n  def arrange_words(text) do\n    \n  end\nend"
+  }
+}

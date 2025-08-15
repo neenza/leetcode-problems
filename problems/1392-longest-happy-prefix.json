@@ -1,0 +1,55 @@
+{
+  "title": "Longest Happy Prefix",
+  "problem_id": "1508",
+  "frontend_id": "1392",
+  "difficulty": "Hard",
+  "problem_slug": "longest-happy-prefix",
+  "topics": [
+    "String",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ],
+  "description": "A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).\nGiven a string s, return the longest happy prefix of s. Return an empty string \"\" if no such prefix exists.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"level\"\nOutput: \"l\"\nExplanation: s contains 4 prefix excluding itself (\"l\", \"le\", \"lev\", \"leve\"), and suffix (\"l\", \"el\", \"vel\", \"evel\"). The largest prefix which is also suffix is given by \"l\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ababab\"\nOutput: \"abab\"\nExplanation: \"abab\" is the largest prefix which is also suffix. They can overlap in the original string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Longest Prefix Suffix (KMP-table) or String Hashing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string longestPrefix(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestPrefix(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestPrefix(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestPrefix(self, s: str) -> str:\n        ",
+    "c": "char* longestPrefix(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LongestPrefix(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestPrefix = function(s) {\n    \n};",
+    "typescript": "function longestPrefix(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function longestPrefix($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestPrefix(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestPrefix(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String longestPrefix(String s) {\n    \n  }\n}",
+    "golang": "func longestPrefix(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef longest_prefix(s)\n    \nend",
+    "scala": "object Solution {\n    def longestPrefix(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_prefix(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (longest-prefix s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec longest_prefix(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_prefix(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_prefix(s :: String.t) :: String.t\n  def longest_prefix(s) do\n    \n  end\nend"
+  }
+}

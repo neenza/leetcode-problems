@@ -1,0 +1,57 @@
+{
+  "title": "Distinct Prime Factors of Product of Array",
+  "problem_id": "2609",
+  "frontend_id": "2521",
+  "difficulty": "Medium",
+  "problem_slug": "distinct-prime-factors-of-product-of-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "Given an array of positive integers nums, return the number of distinct prime factors in the product of the elements of nums.\nNote that:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,3,7,10,6]\nOutput: 4\nExplanation:\nThe product of all the elements in nums is: 2 * 4 * 3 * 7 * 10 * 6 = 10080 = 25 * 32 * 5 * 7.\nThere are 4 distinct prime factors so we return 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,8,16]\nOutput: 1\nExplanation:\nThe product of all the elements in nums is: 2 * 4 * 8 * 16 = 1024 = 210.\nThere is 1 distinct prime factor so we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "2 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do not multiply all the numbers together, as the product is too big to store.",
+    "Think about how each individual number's prime factors contribute to the prime factors of the product of the entire array.",
+    "Find the prime factors of each element in nums, and store all of them in a set to avoid duplicates."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distinctPrimeFactors(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctPrimeFactors(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctPrimeFactors(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctPrimeFactors(self, nums: List[int]) -> int:\n        ",
+    "c": "int distinctPrimeFactors(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistinctPrimeFactors(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar distinctPrimeFactors = function(nums) {\n    \n};",
+    "typescript": "function distinctPrimeFactors(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function distinctPrimeFactors($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctPrimeFactors(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctPrimeFactors(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctPrimeFactors(List<int> nums) {\n    \n  }\n}",
+    "golang": "func distinctPrimeFactors(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef distinct_prime_factors(nums)\n    \nend",
+    "scala": "object Solution {\n    def distinctPrimeFactors(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_prime_factors(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-prime-factors nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec distinct_prime_factors(Nums :: [integer()]) -> integer().\ndistinct_prime_factors(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_prime_factors(nums :: [integer]) :: integer\n  def distinct_prime_factors(nums) do\n    \n  end\nend"
+  }
+}

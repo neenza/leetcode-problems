@@ -1,0 +1,33 @@
+{
+  "title": "Article Views I",
+  "problem_id": "1258",
+  "frontend_id": "1148",
+  "difficulty": "Easy",
+  "problem_slug": "article-views-i",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Views\nWrite a solution to find all the authors that viewed at least one of their own articles.\nReturn the result table sorted by id in ascending order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\nOutput: \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef article_views(views: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

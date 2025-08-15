@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Array Changes to Make Differences Equal",
+  "problem_id": "3498",
+  "frontend_id": "3224",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-array-changes-to-make-differences-equal",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of size n where n is even, and an integer k.\nYou can perform some changes on the array, where in one change you can replace any element in the array with any integer in the range from 0 to k.\nYou need to perform some changes (possibly none) such that the final array satisfies the following condition:\nReturn the minimum number of changes required to satisfy the above condition.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,1,2,4,3], k = 4\nOutput: 2\nExplanation: We can perform the following changes:\nThe integer X will be 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1,2,3,3,6,5,4], k = 6\nOutput: 2\nExplanation: We can perform the following operations:\nThe integer X will be 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 105",
+    "n is even.",
+    "0 <= nums[i] <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are at most <code>k + 1</code> possible values of the integer <code>X</code>.",
+    "How do we calculate the minimum number of changes efficiently if we fix the value of <code>X</code> before applying any changes?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minChanges(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minChanges(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minChanges(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minChanges(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minChanges(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinChanges(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minChanges = function(nums, k) {\n    \n};",
+    "typescript": "function minChanges(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minChanges($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minChanges(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minChanges(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minChanges(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minChanges(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_changes(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minChanges(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_changes(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-changes nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_changes(Nums :: [integer()], K :: integer()) -> integer().\nmin_changes(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_changes(nums :: [integer], k :: integer) :: integer\n  def min_changes(nums, k) do\n    \n  end\nend"
+  }
+}

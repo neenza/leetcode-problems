@@ -1,0 +1,61 @@
+{
+  "title": "Longest Nice Substring",
+  "problem_id": "1873",
+  "frontend_id": "1763",
+  "difficulty": "Easy",
+  "problem_slug": "longest-nice-substring",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Divide and Conquer",
+    "Bit Manipulation",
+    "Sliding Window"
+  ],
+  "description": "A string s is nice if, for every letter of the alphabet that s contains, it appears both in uppercase and lowercase. For example, \"abABB\" is nice because 'A' and 'a' appear, and 'B' and 'b' appear. However, \"abA\" is not because 'b' appears, but 'B' does not.\nGiven a string s, return the longest substring of s that is nice. If there are multiple, return the substring of the earliest occurrence. If there are none, return an empty string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"YazaAay\"\nOutput: \"aAa\"\nExplanation: \"aAa\" is a nice string because 'A/a' is the only letter of the alphabet in s, and both 'A' and 'a' appear.\n\"aAa\" is the longest nice substring.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"Bb\"\nOutput: \"Bb\"\nExplanation: \"Bb\" is a nice string because both 'B' and 'b' appear. The whole string is a substring.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"c\"\nOutput: \"\"\nExplanation: There are no nice substrings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of uppercase and lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute force and check each substring to see if it is nice."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string longestNiceSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestNiceSubstring(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestNiceSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestNiceSubstring(self, s: str) -> str:\n        ",
+    "c": "char* longestNiceSubstring(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LongestNiceSubstring(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestNiceSubstring = function(s) {\n    \n};",
+    "typescript": "function longestNiceSubstring(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function longestNiceSubstring($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestNiceSubstring(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestNiceSubstring(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String longestNiceSubstring(String s) {\n    \n  }\n}",
+    "golang": "func longestNiceSubstring(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef longest_nice_substring(s)\n    \nend",
+    "scala": "object Solution {\n    def longestNiceSubstring(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_nice_substring(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (longest-nice-substring s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec longest_nice_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_nice_substring(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_nice_substring(s :: String.t) :: String.t\n  def longest_nice_substring(s) do\n    \n  end\nend"
+  }
+}

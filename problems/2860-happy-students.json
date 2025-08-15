@@ -1,0 +1,56 @@
+{
+  "title": "Happy Students",
+  "problem_id": "3104",
+  "frontend_id": "2860",
+  "difficulty": "Medium",
+  "problem_slug": "happy-students",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed integer array nums of length n where n is the total number of students in the class. The class teacher tries to select a group of students so that all the students remain happy.\nThe ith student will become happy if one of these two conditions is met:\nReturn the number of ways to select a group of students so that everyone remains happy.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1]\nOutput: 2\nExplanation: \nThe two possible ways are:\nThe class teacher selects no student.\nThe class teacher selects both students to form the group. \nIf the class teacher selects just one student to form a group then the both students will not be happy. Therefore, there are only two possible ways.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,0,3,3,6,7,2,7]\nOutput: 3\nExplanation: \nThe three possible ways are:\nThe class teacher selects the student with index = 1 to form the group.\nThe class teacher selects the students with index = 1, 2, 3, 6 to form the group.\nThe class teacher selects all the students to form the group.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] < nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If a student with <code>nums[i] = x</code> is selected, all the students with <code>nums[j] <= x</code> must be selected.",
+    "If a student with <code>nums[i] = x</code> is not selected, all the students with <code>nums[j] >= x</code> must not be selected.",
+    "Sort values in <code>nums</code> and try all possible values for <code>x</code> from <code>0</code> to <code>n</code> separately."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countWays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countWays(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countWays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countWays(self, nums: List[int]) -> int:\n        ",
+    "c": "int countWays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountWays(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countWays = function(nums) {\n    \n};",
+    "typescript": "function countWays(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countWays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countWays(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countWays(nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countWays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countWays(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_ways(nums)\n    \nend",
+    "scala": "object Solution {\n    def countWays(nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_ways(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-ways nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_ways(Nums :: [integer()]) -> integer().\ncount_ways(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_ways(nums :: [integer]) :: integer\n  def count_ways(nums) do\n    \n  end\nend"
+  }
+}

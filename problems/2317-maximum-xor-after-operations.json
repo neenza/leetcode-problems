@@ -1,0 +1,57 @@
+{
+  "title": "Maximum XOR After Operations ",
+  "problem_id": "2402",
+  "frontend_id": "2317",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-xor-after-operations",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums. In one operation, select any non-negative integer x and an index i, then update nums[i] to be equal to nums[i] AND (nums[i] XOR x).\nNote that AND is the bitwise AND operation and XOR is the bitwise XOR operation.\nReturn the maximum possible bitwise XOR of all elements of nums after applying the operation any number of times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,4,6]\nOutput: 7\nExplanation: Apply the operation with x = 4 and i = 3, num[3] = 6 AND (6 XOR 4) = 6 AND 2 = 2.\nNow, nums = [3, 2, 4, 2] and the bitwise XOR of all the elements = 3 XOR 2 XOR 4 XOR 2 = 7.\nIt can be shown that 7 is the maximum possible bitwise XOR.\nNote that other operations may be used to achieve a bitwise XOR of 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,9,2]\nOutput: 11\nExplanation: Apply the operation zero times.\nThe bitwise XOR of all the elements = 1 XOR 2 XOR 3 XOR 9 XOR 2 = 11.\nIt can be shown that 11 is the maximum possible bitwise XOR.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider what it means to be able to choose any x for the operation and which integers could be obtained from a given nums[i].",
+    "The given operation can unset any bit in nums[i].",
+    "The nth bit of the XOR of all the elements is 1 if the nth bit is 1 for an odd number of elements. When can we ensure it is odd?",
+    "Try to set every bit of the result to 1 if possible."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumXOR(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumXOR(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumXOR(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumXOR(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumXOR(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumXOR(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumXOR = function(nums) {\n    \n};",
+    "typescript": "function maximumXOR(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumXOR($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumXOR(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumXOR(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumXOR(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumXOR(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_xor(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumXOR(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_xor(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-xor nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_xor(Nums :: [integer()]) -> integer().\nmaximum_xor(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_xor(nums :: [integer]) :: integer\n  def maximum_xor(nums) do\n    \n  end\nend"
+  }
+}

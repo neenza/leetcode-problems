@@ -1,0 +1,61 @@
+{
+  "title": "Coupon Code Validator",
+  "problem_id": "3934",
+  "frontend_id": "3606",
+  "difficulty": "Easy",
+  "problem_slug": "coupon-code-validator",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "You are given three arrays of length n that describe the properties of n coupons: code, businessLine, and isActive. The ith coupon has:\nA coupon is considered valid if all of the following conditions hold:\nReturn an array of the codes of all valid coupons, sorted first by their businessLine in the order: \"electronics\", \"grocery\", \"pharmacy\", \"restaurant\", and then by code in lexicographical (ascending) order within each category.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: code = [\"SAVE20\",\"\",\"PHARMA5\",\"SAVE@20\"], businessLine = [\"restaurant\",\"grocery\",\"pharmacy\",\"restaurant\"], isActive = [true,true,true,true]\nOutput: [\"PHARMA5\",\"SAVE20\"]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: code = [\"GROCERY15\",\"ELECTRONICS_50\",\"DISCOUNT10\"], businessLine = [\"grocery\",\"electronics\",\"invalid\"], isActive = [false,true,true]\nOutput: [\"ELECTRONICS_50\"]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == code.length == businessLine.length == isActive.length",
+    "1 <= n <= 100",
+    "0 <= code[i].length, businessLine[i].length <= 100",
+    "code[i] and businessLine[i] consist of printable ASCII characters.",
+    "isActive[i] is either true or false."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Filter out any coupon where <code>isActive[i]</code> is false, <code>code[i]</code> is empty or contains non‑alphanumeric/underscore chars, or <code>businessLine[i]</code> is not in the allowed set",
+    "Store each remaining coupon as a pair <code>(businessLine[i], code[i])</code>",
+    "Define a priority map, e.g. <code>{\"electronics\":0, \"grocery\":1, \"pharmacy\":2, \"restaurant\":3}</code>",
+    "Sort the list of pairs by <code>(priority[businessLine], code)</code> and return the <code>code</code> values in order"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> validateCoupons(vector<string>& code, vector<string>& businessLine, vector<bool>& isActive) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> validateCoupons(String[] code, String[] businessLine, boolean[] isActive) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validateCoupons(self, code, businessLine, isActive):\n        \"\"\"\n        :type code: List[str]\n        :type businessLine: List[str]\n        :type isActive: List[bool]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validateCoupons(self, code: List[str], businessLine: List[str], isActive: List[bool]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** validateCoupons(char** code, int codeSize, char** businessLine, int businessLineSize, bool* isActive, int isActiveSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> ValidateCoupons(string[] code, string[] businessLine, bool[] isActive) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} code\n * @param {string[]} businessLine\n * @param {boolean[]} isActive\n * @return {string[]}\n */\nvar validateCoupons = function(code, businessLine, isActive) {\n    \n};",
+    "typescript": "function validateCoupons(code: string[], businessLine: string[], isActive: boolean[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $code\n     * @param String[] $businessLine\n     * @param Boolean[] $isActive\n     * @return String[]\n     */\n    function validateCoupons($code, $businessLine, $isActive) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validateCoupons(_ code: [String], _ businessLine: [String], _ isActive: [Bool]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validateCoupons(code: Array<String>, businessLine: Array<String>, isActive: BooleanArray): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> validateCoupons(List<String> code, List<String> businessLine, List<bool> isActive) {\n    \n  }\n}",
+    "golang": "func validateCoupons(code []string, businessLine []string, isActive []bool) []string {\n    \n}",
+    "ruby": "# @param {String[]} code\n# @param {String[]} business_line\n# @param {Boolean[]} is_active\n# @return {String[]}\ndef validate_coupons(code, business_line, is_active)\n    \nend",
+    "scala": "object Solution {\n    def validateCoupons(code: Array[String], businessLine: Array[String], isActive: Array[Boolean]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn validate_coupons(code: Vec<String>, business_line: Vec<String>, is_active: Vec<bool>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (validate-coupons code businessLine isActive)\n  (-> (listof string?) (listof string?) (listof boolean?) (listof string?))\n  )",
+    "erlang": "-spec validate_coupons(Code :: [unicode:unicode_binary()], BusinessLine :: [unicode:unicode_binary()], IsActive :: [boolean()]) -> [unicode:unicode_binary()].\nvalidate_coupons(Code, BusinessLine, IsActive) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec validate_coupons(code :: [String.t], business_line :: [String.t], is_active :: [boolean]) :: [String.t]\n  def validate_coupons(code, business_line, is_active) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Smallest Substring With Identical Characters II",
+  "problem_id": "3706",
+  "frontend_id": "3399",
+  "difficulty": "Hard",
+  "problem_slug": "smallest-substring-with-identical-characters-ii",
+  "topics": [
+    "String",
+    "Binary Search"
+  ],
+  "description": "You are given a binary string s of length n and an integer numOps.\nYou are allowed to perform the following operation on s at most numOps times:\nYou need to minimize the length of the longest substring of s such that all the characters in the substring are identical.\nReturn the minimum length after the operations.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"000001\", numOps = 1\nOutput: 2\nExplanation:\nBy changing s[2] to '1' , s becomes \"001001\" . The longest substrings with identical characters are s[0..1] and s[3..4] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0000\", numOps = 2\nOutput: 1\nExplanation:\nBy changing s[0] and s[2] to '1' , s becomes \"1010\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"0101\", numOps = 0\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == s.length <= 105",
+    "s consists only of '0' and '1'.",
+    "0 <= numOps <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary search for the answer.",
+    "Group the same digits by size of <code>(mid + 1)</code> and ignore any remainder. Flip one in each group (the last one).",
+    "For the last group, we can flip the 2nd last one.",
+    "What if the answer was 1?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minLength(string s, int numOps) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minLength(String s, int numOps) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minLength(self, s, numOps):\n        \"\"\"\n        :type s: str\n        :type numOps: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minLength(self, s: str, numOps: int) -> int:\n        ",
+    "c": "int minLength(char* s, int numOps) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinLength(string s, int numOps) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} numOps\n * @return {number}\n */\nvar minLength = function(s, numOps) {\n    \n};",
+    "typescript": "function minLength(s: string, numOps: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $numOps\n     * @return Integer\n     */\n    function minLength($s, $numOps) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minLength(_ s: String, _ numOps: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minLength(s: String, numOps: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minLength(String s, int numOps) {\n    \n  }\n}",
+    "golang": "func minLength(s string, numOps int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} num_ops\n# @return {Integer}\ndef min_length(s, num_ops)\n    \nend",
+    "scala": "object Solution {\n    def minLength(s: String, numOps: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_length(s: String, num_ops: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-length s numOps)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_length(S :: unicode:unicode_binary(), NumOps :: integer()) -> integer().\nmin_length(S, NumOps) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_length(s :: String.t, num_ops :: integer) :: integer\n  def min_length(s, num_ops) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Delete Columns to Make Sorted II",
+  "problem_id": "992",
+  "frontend_id": "955",
+  "difficulty": "Medium",
+  "problem_slug": "delete-columns-to-make-sorted-ii",
+  "topics": [
+    "Array",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given an array of n strings strs, all of the same length.\nWe may choose any deletion indices, and we delete all the characters in those indices for each string.\nFor example, if we have strs = [\"abcdef\",\"uvwxyz\"] and deletion indices {0, 2, 3}, then the final array after deletions is [\"bef\", \"vyz\"].\nSuppose we chose a set of deletion indices answer such that after deletions, the final array has its elements in lexicographic order (i.e., strs[0] <= strs[1] <= strs[2] <= ... <= strs[n - 1]). Return the minimum possible value of answer.length.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: strs = [\"ca\",\"bb\",\"ac\"]\nOutput: 1\nExplanation: \nAfter deleting the first column, strs = [\"a\", \"b\", \"c\"].\nNow strs is in lexicographic order (ie. strs[0] <= strs[1] <= strs[2]).\nWe require at least 1 deletion since initially strs was not in lexicographic order, so the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: strs = [\"xc\",\"yb\",\"za\"]\nOutput: 0\nExplanation: \nstrs is already in lexicographic order, so we do not need to delete anything.\nNote that the rows of strs are not necessarily in lexicographic order:\ni.e., it is NOT necessarily true that (strs[0][0] <= strs[0][1] <= ...)",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: strs = [\"zyx\",\"wvu\",\"tsr\"]\nOutput: 3\nExplanation: We have to delete every column.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == strs.length",
+    "1 <= n <= 100",
+    "1 <= strs[i].length <= 100",
+    "strs[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDeletionSize(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDeletionSize(String[] strs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDeletionSize(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDeletionSize(self, strs: List[str]) -> int:\n        ",
+    "c": "int minDeletionSize(char** strs, int strsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDeletionSize(string[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar minDeletionSize = function(strs) {\n    \n};",
+    "typescript": "function minDeletionSize(strs: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function minDeletionSize($strs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDeletionSize(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDeletionSize(strs: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDeletionSize(List<String> strs) {\n    \n  }\n}",
+    "golang": "func minDeletionSize(strs []string) int {\n    \n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef min_deletion_size(strs)\n    \nend",
+    "scala": "object Solution {\n    def minDeletionSize(strs: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_deletion_size(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-deletion-size strs)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec min_deletion_size(Strs :: [unicode:unicode_binary()]) -> integer().\nmin_deletion_size(Strs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_deletion_size(strs :: [String.t]) :: integer\n  def min_deletion_size(strs) do\n    \n  end\nend"
+  }
+}

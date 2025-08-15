@@ -1,0 +1,64 @@
+{
+  "title": "Destination City",
+  "problem_id": "1547",
+  "frontend_id": "1436",
+  "difficulty": "Easy",
+  "problem_slug": "destination-city",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "You are given the array paths, where paths[i] = [cityAi, cityBi] means there exists a direct path going from cityAi to cityBi. Return the destination city, that is, the city without any path outgoing to another city.\nIt is guaranteed that the graph of paths forms a line without any loop, therefore, there will be exactly one destination city.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: paths = [[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]]\nOutput: \"Sao Paulo\" \nExplanation: Starting at \"London\" city you will reach \"Sao Paulo\" city which is the destination city. Your trip consist of: \"London\" -> \"New York\" -> \"Lima\" -> \"Sao Paulo\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: paths = [[\"B\",\"C\"],[\"D\",\"B\"],[\"C\",\"A\"]]\nOutput: \"A\"\nExplanation: All possible trips are: \n\"D\" -> \"B\" -> \"C\" -> \"A\". \n\"B\" -> \"C\" -> \"A\". \n\"C\" -> \"A\". \n\"A\". \nClearly the destination city is \"A\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: paths = [[\"A\",\"Z\"]]\nOutput: \"Z\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= paths.length <= 100",
+    "paths[i].length == 2",
+    "1 <= cityAi.length, cityBi.length <= 10",
+    "cityAi != cityBi",
+    "All strings consist of lowercase and uppercase English letters and the space character."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start in any city and use the path to move to the next city.",
+    "Eventually, you will reach a city with no path outgoing, this is the destination city."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string destCity(vector<vector<string>>& paths) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String destCity(List<List<String>> paths) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def destCity(self, paths):\n        \"\"\"\n        :type paths: List[List[str]]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def destCity(self, paths: List[List[str]]) -> str:\n        ",
+    "c": "char* destCity(char*** paths, int pathsSize, int* pathsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string DestCity(IList<IList<string>> paths) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} paths\n * @return {string}\n */\nvar destCity = function(paths) {\n    \n};",
+    "typescript": "function destCity(paths: string[][]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $paths\n     * @return String\n     */\n    function destCity($paths) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func destCity(_ paths: [[String]]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun destCity(paths: List<List<String>>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String destCity(List<List<String>> paths) {\n    \n  }\n}",
+    "golang": "func destCity(paths [][]string) string {\n    \n}",
+    "ruby": "# @param {String[][]} paths\n# @return {String}\ndef dest_city(paths)\n    \nend",
+    "scala": "object Solution {\n    def destCity(paths: List[List[String]]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn dest_city(paths: Vec<Vec<String>>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (dest-city paths)\n  (-> (listof (listof string?)) string?)\n  )",
+    "erlang": "-spec dest_city(Paths :: [[unicode:unicode_binary()]]) -> unicode:unicode_binary().\ndest_city(Paths) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec dest_city(paths :: [[String.t]]) :: String.t\n  def dest_city(paths) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Brute Force\n\n**Intuition**\n\nEach element in `paths` can be represented as two cities `[a, b]`. It indicates that we leave `a` and go to `b`.\n\nThe destination city is the city that does not appear as `a` (the first element) in any of the `paths`. The destination city would appear as `b` for one path.\n\nWe will check every city individually. For each index `i`, we let `candidate = paths[i][1]`.\n\nFor this `candidate`, we then iterate over each `path` in `paths` with a nested loop and check if `path[0] = candidate`. If we find ANY `path` with `path[0] = candidate`, we know the current `candidate` cannot be the destination city since there is a path starting with `candidate`.\n\nWe continue for each index `i` until we eventually find the destination city, as it is guaranteed that a destination city exists. Essentially, we are searching for the city that does not appear as the first element in any `path`.\n\nTo implement this check, we will initialize a boolean flag `good = true` at the beginning of each iteration. If we find that `path[0] = candidate` for any `path`, we set `good = false` and break from the inner loop. At the end of the inner loop, we check if `good = true`. If it is, then `candidate` is the destination city.\n\n**Algorithm**\n\n1. Iterate `i` over the indices of `paths`:\n    - Set `candidate = paths[i][1]` and a boolean flag `good = true`.\n    - Iterate `j` over the indices of `paths`:\n        - If `paths[j][0] == candidate`, set `good = false` and break from the loop.\n    - If `good = true`, return `candidate`.\n2. The code should never reach this point. Return anything.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `paths`,\n\n* Time complexity: $$O(n^2)$$\n\n    We have a nested for loop, both iterating $$O(n)$$ times.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space except for a few variables like `candidate` and `good`.---\n\n### Approach 2: Hash Set\n\n**Intuition**\n\nIn the previous approach, we used an outer for loop to lock in a `candidate`. We then used an inner for loop to check if `candidate` had any outgoing path. This inner for loop is expensive, and we can check a given `candidate` in a much more efficient manner using a hash set.\n\nWe will create a hash set `hasOutgoing` that represents all the cities that have an outgoing path. We iterate over `paths` and for each index `i`, add `paths[i][0]` to `hasOutgoing`.\n\nNow, we can iterate over `paths` again and select a `candidate = paths[i][1]` as we did in the previous approach. However, now that we have `hasOutgoing`, we can simply check if `candidate` is in `hasOutgoing` instead of using a nested for loop. If `hasOutgoing` contains `candidate`, then `candidate` cannot be the destination city. We simply check all candidates until we eventually find the destination city.\n\n**Algorithm**\n\n1. Initialize a hash set `hasOutgoing`.\n2. Iterate `i` over the indices of `paths`:\n    - Add `paths[i][0]` to `hasOutgoing`.\n3. Iterate `i` over the indices of `paths`:\n    - Set `candidate = paths[i][1]`.\n    - If `candidate` is not in `hasOutgoing`, return `candidate`.\n4. The code should never reach this point. Return anything.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `paths`,\n\n* Time complexity: $$O(n)$$\n\n    We first iterate over `paths` to populate `hasOutgoing`, this costs $$O(n)$$.\n\n    Next, we iterate over `paths` again to find the answer, checking at each step whether `candidate` is in the hash set, which takes $$O(1)$$. Thus the iteration costs $$O(n)$$.\n\n* Space complexity: $$O(n)$$\n\n    `hasOutgoing` will grow to a size of $$O(n)$$.---"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Account Balance After Rounded Purchase",
+  "problem_id": "2955",
+  "frontend_id": "2806",
+  "difficulty": "Easy",
+  "problem_slug": "account-balance-after-rounded-purchase",
+  "topics": [
+    "Math"
+  ],
+  "description": "Initially, you have a bank account balance of 100 dollars.\nYou are given an integer purchaseAmount representing the amount you will spend on a purchase in dollars, in other words, its price.\nWhen making the purchase, first the purchaseAmount is rounded to the nearest multiple of 10. Let us call this value roundedAmount. Then, roundedAmount dollars are removed from your bank account.\nReturn an integer denoting your final bank account balance after this purchase.\nNotes:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: purchaseAmount = 9\nOutput: 90\nExplanation:\nThe nearest multiple of 10 to 9 is 10. So your account balance becomes 100 - 10 = 90.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: purchaseAmount = 15\nOutput: 80\nExplanation:\nThe nearest multiple of 10 to 15 is 20. So your account balance becomes 100 - 20 = 80.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: purchaseAmount = 10\nOutput: 90\nExplanation:\n10 is a multiple of 10 itself. So your account balance becomes 100 - 10 = 90.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= purchaseAmount <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To determine the nearest multiple of 10, we can brute force the rounded amount since there are at most 100 options. In case of multiple nearest multiples, choose the largest.",
+    "Another solution is observing that the rounded amount is floor((purchaseAmount + 5) / 10) * 10. Using this formula, we can calculate the account balance without having to brute force the rounded amount."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int accountBalanceAfterPurchase(int purchaseAmount) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int accountBalanceAfterPurchase(int purchaseAmount) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def accountBalanceAfterPurchase(self, purchaseAmount):\n        \"\"\"\n        :type purchaseAmount: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def accountBalanceAfterPurchase(self, purchaseAmount: int) -> int:\n        ",
+    "c": "int accountBalanceAfterPurchase(int purchaseAmount) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AccountBalanceAfterPurchase(int purchaseAmount) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} purchaseAmount\n * @return {number}\n */\nvar accountBalanceAfterPurchase = function(purchaseAmount) {\n    \n};",
+    "typescript": "function accountBalanceAfterPurchase(purchaseAmount: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $purchaseAmount\n     * @return Integer\n     */\n    function accountBalanceAfterPurchase($purchaseAmount) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func accountBalanceAfterPurchase(_ purchaseAmount: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun accountBalanceAfterPurchase(purchaseAmount: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int accountBalanceAfterPurchase(int purchaseAmount) {\n    \n  }\n}",
+    "golang": "func accountBalanceAfterPurchase(purchaseAmount int) int {\n    \n}",
+    "ruby": "# @param {Integer} purchase_amount\n# @return {Integer}\ndef account_balance_after_purchase(purchase_amount)\n    \nend",
+    "scala": "object Solution {\n    def accountBalanceAfterPurchase(purchaseAmount: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn account_balance_after_purchase(purchase_amount: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (account-balance-after-purchase purchaseAmount)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec account_balance_after_purchase(PurchaseAmount :: integer()) -> integer().\naccount_balance_after_purchase(PurchaseAmount) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec account_balance_after_purchase(purchase_amount :: integer) :: integer\n  def account_balance_after_purchase(purchase_amount) do\n    \n  end\nend"
+  }
+}

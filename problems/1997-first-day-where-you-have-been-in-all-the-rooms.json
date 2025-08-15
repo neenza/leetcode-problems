@@ -1,0 +1,61 @@
+{
+  "title": "First Day Where You Have Been in All the Rooms",
+  "problem_id": "2124",
+  "frontend_id": "1997",
+  "difficulty": "Medium",
+  "problem_slug": "first-day-where-you-have-been-in-all-the-rooms",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "There are n rooms you need to visit, labeled from 0 to n - 1. Each day is labeled, starting from 0. You will go in and visit one room a day.\nInitially on day 0, you visit room 0. The order you visit the rooms for the coming days is determined by the following rules and a given 0-indexed array nextVisit of length n:\nReturn the label of the first day where you have been in all the rooms. It can be shown that such a day exists. Since the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nextVisit = [0,0]\nOutput: 2\nExplanation:\n- On day 0, you visit room 0. The total times you have been in room 0 is 1, which is odd.\n  On the next day you will visit room nextVisit[0] = 0\n- On day 1, you visit room 0, The total times you have been in room 0 is 2, which is even.\n  On the next day you will visit room (0 + 1) mod 2 = 1\n- On day 2, you visit room 1. This is the first day where you have been in all the rooms.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nextVisit = [0,0,2]\nOutput: 6\nExplanation:\nYour room visiting order for each day is: [0,0,1,0,0,1,2,...].\nDay 6 is the first day where you have been in all the rooms.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nextVisit = [0,1,2,0]\nOutput: 6\nExplanation:\nYour room visiting order for each day is: [0,0,1,1,2,2,3,...].\nDay 6 is the first day where you have been in all the rooms.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nextVisit.length",
+    "2 <= n <= 105",
+    "0 <= nextVisit[i] <= i"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The only way to get to room i+1 is when you are visiting room i and room i has been visited an even number of times.",
+    "After visiting room i an odd number of times, you are required to visit room nextVisit[i] where nextVisit[i] <= i. It takes a fixed amount of days for you to come back from room nextVisit[i] to room i. Then, you have visited room i even number of times.nextVisit[i]",
+    "Can you use Dynamic Programming to avoid recomputing the number of days it takes to visit room i from room nextVisit[i]?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int firstDayBeenInAllRooms(vector<int>& nextVisit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int firstDayBeenInAllRooms(int[] nextVisit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def firstDayBeenInAllRooms(self, nextVisit):\n        \"\"\"\n        :type nextVisit: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def firstDayBeenInAllRooms(self, nextVisit: List[int]) -> int:\n        ",
+    "c": "int firstDayBeenInAllRooms(int* nextVisit, int nextVisitSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FirstDayBeenInAllRooms(int[] nextVisit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nextVisit\n * @return {number}\n */\nvar firstDayBeenInAllRooms = function(nextVisit) {\n    \n};",
+    "typescript": "function firstDayBeenInAllRooms(nextVisit: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nextVisit\n     * @return Integer\n     */\n    function firstDayBeenInAllRooms($nextVisit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func firstDayBeenInAllRooms(_ nextVisit: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun firstDayBeenInAllRooms(nextVisit: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int firstDayBeenInAllRooms(List<int> nextVisit) {\n    \n  }\n}",
+    "golang": "func firstDayBeenInAllRooms(nextVisit []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} next_visit\n# @return {Integer}\ndef first_day_been_in_all_rooms(next_visit)\n    \nend",
+    "scala": "object Solution {\n    def firstDayBeenInAllRooms(nextVisit: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn first_day_been_in_all_rooms(next_visit: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (first-day-been-in-all-rooms nextVisit)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec first_day_been_in_all_rooms(NextVisit :: [integer()]) -> integer().\nfirst_day_been_in_all_rooms(NextVisit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec first_day_been_in_all_rooms(next_visit :: [integer]) :: integer\n  def first_day_been_in_all_rooms(next_visit) do\n    \n  end\nend"
+  }
+}

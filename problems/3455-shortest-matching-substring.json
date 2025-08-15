@@ -1,0 +1,68 @@
+{
+  "title": "Shortest Matching Substring",
+  "problem_id": "3692",
+  "frontend_id": "3455",
+  "difficulty": "Hard",
+  "problem_slug": "shortest-matching-substring",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Binary Search",
+    "String Matching"
+  ],
+  "description": "You are given a string s and a pattern string p, where p contains exactly two '*' characters.\nThe '*' in p matches any sequence of zero or more characters.\nReturn the length of the shortest substring in s that matches p. If there is no such substring, return -1.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abaacbaecebce\", p = \"ba*c*ce\"\nOutput: 8\nExplanation:\nThe shortest matching substring of p in s is \" ba e c eb ce \" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"baccbaadbc\", p = \"cc*baa*adb\"\nOutput: -1\nExplanation:\nThere is no matching substring in s .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"a\", p = \"**\"\nOutput: 0\nExplanation:\nThe empty substring is the shortest matching substring.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"madlogic\", p = \"*adlogi*\"\nOutput: 6\nExplanation:\nThe shortest matching substring of p in s is \" adlogi \" .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "2 <= p.length <= 105",
+    "s contains only lowercase English letters.",
+    "p contains only lowercase English letters and exactly two '*'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The pattern string <code>p</code> can be divided into three segments.",
+    "Use the KMP algorithm to locate all occurrences of each segment in <code>s</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int shortestMatchingSubstring(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestMatchingSubstring(String s, String p) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestMatchingSubstring(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestMatchingSubstring(self, s: str, p: str) -> int:\n        ",
+    "c": "int shortestMatchingSubstring(char* s, char* p) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ShortestMatchingSubstring(string s, string p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {number}\n */\nvar shortestMatchingSubstring = function(s, p) {\n    \n};",
+    "typescript": "function shortestMatchingSubstring(s: string, p: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $p\n     * @return Integer\n     */\n    function shortestMatchingSubstring($s, $p) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestMatchingSubstring(_ s: String, _ p: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestMatchingSubstring(s: String, p: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int shortestMatchingSubstring(String s, String p) {\n    \n  }\n}",
+    "golang": "func shortestMatchingSubstring(s string, p string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} p\n# @return {Integer}\ndef shortest_matching_substring(s, p)\n    \nend",
+    "scala": "object Solution {\n    def shortestMatchingSubstring(s: String, p: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_matching_substring(s: String, p: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-matching-substring s p)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec shortest_matching_substring(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> integer().\nshortest_matching_substring(S, P) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_matching_substring(s :: String.t, p :: String.t) :: integer\n  def shortest_matching_substring(s, p) do\n    \n  end\nend"
+  }
+}

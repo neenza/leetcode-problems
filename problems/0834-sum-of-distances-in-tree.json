@@ -1,0 +1,68 @@
+{
+  "title": "Sum of Distances in Tree",
+  "problem_id": "863",
+  "frontend_id": "834",
+  "difficulty": "Hard",
+  "problem_slug": "sum-of-distances-in-tree",
+  "topics": [
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search",
+    "Graph"
+  ],
+  "description": "There is an undirected connected tree with n nodes labeled from 0 to n - 1 and n - 1 edges.\nYou are given the integer n and the array edges where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\nReturn an array answer of length n where answer[i] is the sum of the distances between the ith node in the tree and all other nodes.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]\nOutput: [8,12,6,10,10,10]\nExplanation: The tree is shown above.\nWe can see that dist(0,1) + dist(0,2) + dist(0,3) + dist(0,4) + dist(0,5)\nequals 1 + 1 + 2 + 2 + 2 = 8.\nHence, answer[0] = 8, and so on.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/23/lc-sumdist1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, edges = []\nOutput: [0]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/23/lc-sumdist2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, edges = [[1,0]]\nOutput: [1,1]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/23/lc-sumdist3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 3 * 104",
+    "edges.length == n - 1",
+    "edges[i].length == 2",
+    "0 <= ai, bi < n",
+    "ai != bi",
+    "The given input represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sumOfDistancesInTree(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] sumOfDistancesInTree(int n, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfDistancesInTree(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sumOfDistancesInTree(int n, int** edges, int edgesSize, int* edgesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SumOfDistancesInTree(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number[]}\n */\nvar sumOfDistancesInTree = function(n, edges) {\n    \n};",
+    "typescript": "function sumOfDistancesInTree(n: number, edges: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @return Integer[]\n     */\n    function sumOfDistancesInTree($n, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfDistancesInTree(_ n: Int, _ edges: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfDistancesInTree(n: Int, edges: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sumOfDistancesInTree(int n, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func sumOfDistancesInTree(n int, edges [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Integer[]}\ndef sum_of_distances_in_tree(n, edges)\n    \nend",
+    "scala": "object Solution {\n    def sumOfDistancesInTree(n: Int, edges: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_distances_in_tree(n: i32, edges: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-distances-in-tree n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec sum_of_distances_in_tree(N :: integer(), Edges :: [[integer()]]) -> [integer()].\nsum_of_distances_in_tree(N, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_distances_in_tree(n :: integer, edges :: [[integer]]) :: [integer]\n  def sum_of_distances_in_tree(n, edges) do\n    \n  end\nend"
+  }
+}

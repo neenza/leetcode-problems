@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Number of Operations to Make All Array Elements Equal to 1",
+  "problem_id": "2753",
+  "frontend_id": "2654",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "You are given a 0-indexed array nums consisiting of positive integers. You can do the following operation on the array any number of times:\nReturn the minimum number of operations to make all elements of nums equal to 1. If it is impossible, return -1.\nThe gcd of two integers is the greatest common divisor of the two integers.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,6,3,4]\nOutput: 4\nExplanation: We can do the following operations:\n- Choose index i = 2 and replace nums[2] with gcd(3,4) = 1. Now we have nums = [2,6,1,4].\n- Choose index i = 1 and replace nums[1] with gcd(6,1) = 1. Now we have nums = [2,1,1,4].\n- Choose index i = 0 and replace nums[0] with gcd(2,1) = 1. Now we have nums = [1,1,1,4].\n- Choose index i = 2 and replace nums[3] with gcd(1,4) = 1. Now we have nums = [1,1,1,1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,10,6,14]\nOutput: -1\nExplanation: It can be shown that it is impossible to make all the elements equal to 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 50",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that if you have at least one occurrence of 1 in the array, then you can make all the other elements equal to 1 with one operation each.",
+    "Try finding the shortest subarray with a gcd equal to 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()]) -> integer().\nmin_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer]) :: integer\n  def min_operations(nums) do\n    \n  end\nend"
+  }
+}

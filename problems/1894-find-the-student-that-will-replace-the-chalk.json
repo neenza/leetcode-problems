@@ -1,0 +1,59 @@
+{
+  "title": "Find the Student that Will Replace the Chalk",
+  "problem_id": "2006",
+  "frontend_id": "1894",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-student-that-will-replace-the-chalk",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Simulation",
+    "Prefix Sum"
+  ],
+  "description": "There are n students in a class numbered from 0 to n - 1. The teacher will give each student a problem starting with the student number 0, then the student number 1, and so on until the teacher reaches the student number n - 1. After that, the teacher will restart the process, starting with the student number 0 again.\nYou are given a 0-indexed integer array chalk and an integer k. There are initially k pieces of chalk. When the student number i is given a problem to solve, they will use chalk[i] pieces of chalk to solve that problem. However, if the current number of chalk pieces is strictly less than chalk[i], then the student number i will be asked to replace the chalk.\nReturn the index of the student that will replace the chalk pieces.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: chalk = [5,1,5], k = 22\nOutput: 0\nExplanation: The students go in turns as follows:\n- Student number 0 uses 5 chalk, so k = 17.\n- Student number 1 uses 1 chalk, so k = 16.\n- Student number 2 uses 5 chalk, so k = 11.\n- Student number 0 uses 5 chalk, so k = 6.\n- Student number 1 uses 1 chalk, so k = 5.\n- Student number 2 uses 5 chalk, so k = 0.\nStudent number 0 does not have enough chalk, so they will have to replace it.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: chalk = [3,4,1,2], k = 25\nOutput: 1\nExplanation: The students go in turns as follows:\n- Student number 0 uses 3 chalk so k = 22.\n- Student number 1 uses 4 chalk so k = 18.\n- Student number 2 uses 1 chalk so k = 17.\n- Student number 3 uses 2 chalk so k = 15.\n- Student number 0 uses 3 chalk so k = 12.\n- Student number 1 uses 4 chalk so k = 8.\n- Student number 2 uses 1 chalk so k = 7.\n- Student number 3 uses 2 chalk so k = 5.\n- Student number 0 uses 3 chalk so k = 2.\nStudent number 1 does not have enough chalk, so they will have to replace it.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "chalk.length == n",
+    "1 <= n <= 105",
+    "1 <= chalk[i] <= 105",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Subtract the sum of chalk from k until k is less than the sum of chalk.",
+    "Now iterate over the array. If chalk[i] is less than k, this is the answer. Otherwise, subtract chalk[i] from k and continue."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int chalkReplacer(vector<int>& chalk, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int chalkReplacer(int[] chalk, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def chalkReplacer(self, chalk, k):\n        \"\"\"\n        :type chalk: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def chalkReplacer(self, chalk: List[int], k: int) -> int:\n        ",
+    "c": "int chalkReplacer(int* chalk, int chalkSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ChalkReplacer(int[] chalk, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} chalk\n * @param {number} k\n * @return {number}\n */\nvar chalkReplacer = function(chalk, k) {\n    \n};",
+    "typescript": "function chalkReplacer(chalk: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $chalk\n     * @param Integer $k\n     * @return Integer\n     */\n    function chalkReplacer($chalk, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func chalkReplacer(_ chalk: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun chalkReplacer(chalk: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int chalkReplacer(List<int> chalk, int k) {\n    \n  }\n}",
+    "golang": "func chalkReplacer(chalk []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} chalk\n# @param {Integer} k\n# @return {Integer}\ndef chalk_replacer(chalk, k)\n    \nend",
+    "scala": "object Solution {\n    def chalkReplacer(chalk: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn chalk_replacer(chalk: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (chalk-replacer chalk k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec chalk_replacer(Chalk :: [integer()], K :: integer()) -> integer().\nchalk_replacer(Chalk, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec chalk_replacer(chalk :: [integer], k :: integer) :: integer\n  def chalk_replacer(chalk, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Prefix Sum\n\n#### Intuition\n\nIn this problem, we have an array `chalk` of `n` elements representing the number of chalks used by each student, and an integer `k` indicating the total number of chalks available. The brute force approach would involve repeatedly subtracting the number of chalks from `k` until it reaches zero, cycling through the array if necessary. Given that `k` can be as large as 1,000,000,000, this approach is impractical.\n\nTo optimize, observe that the total number of chalks used in one complete cycle through the array is given by `sum`, the sum of all elements in `chalk`. If `k` is less than `sum`, we will reach zero within the first cycle. If `k` is greater than `sum`, after the first cycle, `k` will be reduced to `k - sum`, and after subsequent cycles, it will be reduced further. This process continues until `k` becomes less than `sum`, which is equivalent to computing `k % sum`.\n> This is because `k` reduced by multiples of `sum` will eventually be less than `sum`, and this final value is equivalent to `k % sum`.\n\nWe then need to find the first index in the `chalk` array where the remaining `k % sum` becomes negative. We do this by maintaining a running prefix sum of `chalk` elements and iterating through the array to find the index where the prefix sum exceeds `k % sum`.\n\n#### Algorithm\n\n1. Initialize an integer variable `sum` to 0.\n2. Iterate over the chalk array from 0 to `chalk.size() - 1`:\n    - Add the value at the current index `i` to `sum`.\n    - If at any point `sum` exceeds `k`, exit the loop.\n3. Calculate `k` as `k % sum`, representing the remaining chalk after full rounds.\n4. Iterate over the chalk array again from `0` to `chalk.size() - 1`:\n    - If `k` is less than the value at the current index `i`, return `i` as the index of the student who will run out of chalk.\n    - Otherwise, subtract the value at `chalk[i]` from `k`.\n5. If no student is found within the loop, return `0` (though this should not be reached given the problem constraints).\n\n!?!../Documents/1894/slideshow.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `chalk` array.\n\n- Time complexity: $O(n)$\n\n    We iterate through the `chalk` array exactly twice. Apart from this, all operations are performed in constant time. Therefore, the total time complexity is given by $O(n)$.\n\n- Space complexity: $O(1)$\n\n    No additional space is used proportional to the array size `n`. Therefore, the space complexity is given by $O(1)$.\n\n---\n\n### Approach 2: Binary Search\n\n#### Intuition\n\nInstead of iterating through the array to find the first index, we can use binary search. Binary search is ideal here because it quickly narrows down the search space in a sorted array.\n\nWe start by defining a predicate function that checks if the prefix sum at a given index is greater than the `k modulo sum`. This function returns `true` for indices where the prefix sum exceeds the target and `false` otherwise. Since the array is sorted based on the prefix sums, `true` indicates indices with no chalk left, while `false` indicates indices with some chalk remaining.\n\nUsing binary search, we locate the smallest index where the predicate returns `true`.  \n- If the predicate returns `true`, it means there might be smaller indices with `true` values, so we adjust the upper bound of the search space to the current index.\n- If the predicate returns `false`, it means all `true` values are beyond the current index, so we adjust the lower bound of the search space to the current index.\n\n#### Algorithm\n\nMain Function - `chalkReplacer(chalk, k)`:\n\n1. Create an array `prefixSum` of length `n`to store prefix sums.\n2. Initialize `prefixSum[0]` with `chalk[0]`.\n3. Iterate through the chalk array from index `1` to `n-1` and update `prefixSum[i]` as the sum of `prefixSum[i-1]` and `chalk[i]`.\n4. Calculate `sum` as `prefixSum[n-1]`, representing the total chalk needed for one full round.\n5. Calculate `remainingChalk` as `k % sum`.\n6. Call the helper function `binarySearch(prefixSum, remainingChalk)` to find the student who will run out of chalk and return the result of binarySearch.\n\nHelper Function - `binarySearch(arr, remainingChalk)`\n\n1. Set `low` to 0 and `high` to arr.length - 1.\n2. While `low` is less than `high`:\n    - Calculate mid as the average of `low` and `high`.\n    - If `arr[mid]` is less than or equal to `remainingChalk`, update `low to mid + 1`.\n    - Otherwise, update `high` to `mid`.\n3. Return `high` as the index of the student who will run out of chalk.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `chalk` array.\n\n- Time complexity: $O(n)$\n\n    We iterate through the `chalk` array once. Apart from this, the binary search operation takes $O(log n)$ time. Therefore, the total time complexity is given by $O(n)$.\n\n- Space complexity: $O(n)$\n\n    We initialize an array `prefixSum` of size `n` to store the prefix sums of the `chalk` array. Apart from this, no additional space is used. Therefore, the space complexity is given by $O(n)$.\n\n---"
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Maximize the Number of Target Nodes After Connecting Trees I",
+  "problem_id": "3633",
+  "frontend_id": "3372",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-the-number-of-target-nodes-after-connecting-trees-i",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ],
+  "description": "There exist two undirected trees with n and m nodes, with distinct labels in ranges [0, n - 1] and [0, m - 1], respectively.\nYou are given two 2D integer arrays edges1 and edges2 of lengths n - 1 and m - 1, respectively, where edges1[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the first tree and edges2[i] = [ui, vi] indicates that there is an edge between nodes ui and vi in the second tree. You are also given an integer k.\nNode u is target to node v if the number of edges on the path from u to v is less than or equal to k. Note that a node is always target to itself.\nReturn an array of n integers answer, where answer[i] is the maximum possible number of nodes target to node i of the first tree if you have to connect one node from the first tree to another node in the second tree.\nNote that queries are independent from each other. That is, for every query you will remove the added edge before proceeding to the next query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges1 = [[0,1],[0,2],[2,3],[2,4]], edges2 = [[0,1],[0,2],[0,3],[2,7],[1,4],[4,5],[4,6]], k = 2\nOutput: [9,7,9,8,8]\nExplanation:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/09/24/3982-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges1 = [[0,1],[0,2],[0,3],[0,4]], edges2 = [[0,1],[1,2],[2,3]], k = 1\nOutput: [6,3,3,3,3]\nExplanation:\nFor every i , connect node i of the first tree with any node of the second tree.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/09/24/3928-2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n, m <= 1000",
+    "edges1.length == n - 1",
+    "edges2.length == m - 1",
+    "edges1[i].length == edges2[i].length == 2",
+    "edges1[i] = [ai, bi]",
+    "0 <= ai, bi < n",
+    "edges2[i] = [ui, vi]",
+    "0 <= ui, vi < m",
+    "The input is generated such that edges1 and edges2 represent valid trees.",
+    "0 <= k <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each node <code>u</code> in the first tree, find the number of nodes at a distance of at most <code>k</code> from node <code>u</code>.",
+    "For each node <code>v</code> in the second tree, find the number of nodes at a distance of at most <code>k - 1</code> from node <code>v</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> maxTargetNodes(vector<vector<int>>& edges1, vector<vector<int>>& edges2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maxTargetNodes(int[][] edges1, int[][] edges2, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxTargetNodes(self, edges1, edges2, k):\n        \"\"\"\n        :type edges1: List[List[int]]\n        :type edges2: List[List[int]]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxTargetNodes(self, edges1: List[List[int]], edges2: List[List[int]], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maxTargetNodes(int** edges1, int edges1Size, int* edges1ColSize, int** edges2, int edges2Size, int* edges2ColSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MaxTargetNodes(int[][] edges1, int[][] edges2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges1\n * @param {number[][]} edges2\n * @param {number} k\n * @return {number[]}\n */\nvar maxTargetNodes = function(edges1, edges2, k) {\n    \n};",
+    "typescript": "function maxTargetNodes(edges1: number[][], edges2: number[][], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges1\n     * @param Integer[][] $edges2\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function maxTargetNodes($edges1, $edges2, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxTargetNodes(_ edges1: [[Int]], _ edges2: [[Int]], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxTargetNodes(edges1: Array<IntArray>, edges2: Array<IntArray>, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maxTargetNodes(List<List<int>> edges1, List<List<int>> edges2, int k) {\n    \n  }\n}",
+    "golang": "func maxTargetNodes(edges1 [][]int, edges2 [][]int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges1\n# @param {Integer[][]} edges2\n# @param {Integer} k\n# @return {Integer[]}\ndef max_target_nodes(edges1, edges2, k)\n    \nend",
+    "scala": "object Solution {\n    def maxTargetNodes(edges1: Array[Array[Int]], edges2: Array[Array[Int]], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_target_nodes(edges1: Vec<Vec<i32>>, edges2: Vec<Vec<i32>>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (max-target-nodes edges1 edges2 k)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec max_target_nodes(Edges1 :: [[integer()]], Edges2 :: [[integer()]], K :: integer()) -> [integer()].\nmax_target_nodes(Edges1, Edges2, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_target_nodes(edges1 :: [[integer]], edges2 :: [[integer]], k :: integer) :: [integer]\n  def max_target_nodes(edges1, edges2, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Depth-First Search\n\n#### Intuition\n\nAccording to the problem statement, for the $i$-th query, when we connect the $i$-th node of the first tree to a node $j$ of the second tree, the distances from node $i$ to nodes in the second tree decrease, so more target nodes become reachable.\n\nWe must therefore compute:\n\n* $\\textit{count}_1[i]$: the number of nodes in the **first** tree within distance $\\le k$ of node $i$;\n* $\\textit{count}_2[j]$: the number of nodes in the **second** tree within distance $\\le k-1$ of node $j$.\n\nBecause $\\textit{count}_2[j]$ does not depend on the specific query, we can pre-compute it with a depth-first search (DFS) on the second tree. Afterward, we take the maximum value over all $j$, denoted $\\textit{maxCount}_2 = \\max_j \\textit{count}_2[j]$.\n\nFor each query $i$, we run a DFS on the first tree to obtain $\\textit{count}_1[i]$ and then return\n\n$$\n\\textit{count}_1[i] + \\textit{maxCount}_2\n$$\n\nas the answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the numbers of nodes in the undirected trees defined by $\\textit{edges}_1$ and $\\textit{edges}_2$, respectively.\n\n- Time complexity: $O(n^2 + m^2)$.\n  \n  We run a depth-first search (DFS) starting from every node in each tree, and each DFS visits all nodes of its tree.\n\n- Space complexity: $O(n + m)$.\n  \n  We use two auxiliary arrays - one for each tree."
+}

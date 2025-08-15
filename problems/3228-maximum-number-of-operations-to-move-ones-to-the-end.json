@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Number of Operations to Move Ones to the End",
+  "problem_id": "3493",
+  "frontend_id": "3228",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-operations-to-move-ones-to-the-end",
+  "topics": [
+    "String",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "You are given a binary string s.\nYou can perform the following operation on the string any number of times:\nReturn the maximum number of operations that you can perform.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1001101\"\nOutput: 4\nExplanation:\nWe can perform the following operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"00111\"\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is optimal to perform the operation on the lowest index possible each time.",
+    "Traverse the string from left to right and perform the operation every time it is possible."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxOperations(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxOperations(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxOperations(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxOperations(self, s: str) -> int:\n        ",
+    "c": "int maxOperations(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxOperations(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxOperations = function(s) {\n    \n};",
+    "typescript": "function maxOperations(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxOperations($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxOperations(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxOperations(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxOperations(String s) {\n    \n  }\n}",
+    "golang": "func maxOperations(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_operations(s)\n    \nend",
+    "scala": "object Solution {\n    def maxOperations(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_operations(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-operations s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_operations(S :: unicode:unicode_binary()) -> integer().\nmax_operations(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_operations(s :: String.t) :: integer\n  def max_operations(s) do\n    \n  end\nend"
+  }
+}

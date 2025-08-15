@@ -1,0 +1,72 @@
+{
+  "title": "Maximum Number of Visible Points",
+  "problem_id": "1733",
+  "frontend_id": "1610",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-visible-points",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Sliding Window",
+    "Sorting"
+  ],
+  "description": "You are given an array points, an integer angle, and your location, where location = [posx, posy] and points[i] = [xi, yi] both denote integral coordinates on the X-Y plane.\nInitially, you are facing directly east from your position. You cannot move from your position, but you can rotate. In other words, posx and posy cannot be changed. Your field of view in degrees is represented by angle, determining how wide you can see from any given view direction. Let d be the amount in degrees that you rotate counterclockwise. Then, your field of view is the inclusive range of angles [d - angle/2, d + angle/2].\nYour browser does not support the video tag or this video format.\nYou can see some set of points if, for each point, the angle formed by the point, your position, and the immediate east direction from your position is in your field of view.\nThere can be multiple points at one coordinate. There may be points at your location, and you can always see these points regardless of your rotation. Points do not obstruct your vision to other points.\nReturn the maximum number of points you can see.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[2,1],[2,2],[3,3]], angle = 90, location = [1,1]\nOutput: 3\nExplanation: The shaded region represents your field of view. All points can be made visible in your field of view, including [3,3] even though [2,2] is in front and in the same line of sight.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/30/89a07e9b-00ab-4967-976a-c723b2aa8656.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[2,1],[2,2],[3,4],[1,1]], angle = 90, location = [1,1]\nOutput: 4\nExplanation: All points can be made visible in your field of view, including the one at your location.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/30/89a07e9b-00ab-4967-976a-c723b2aa8656.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: points = [[1,0],[2,1]], angle = 13, location = [1,1]\nOutput: 1\nExplanation: You can only see one of the two points, as shown above.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/30/5010bfd3-86e6-465f-ac64-e9df941d2e49.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 105",
+    "points[i].length == 2",
+    "location.length == 2",
+    "0 <= angle < 360",
+    "0 <= posx, posy, xi, yi <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the points by polar angle with the original position. Now only a consecutive collection of points would be visible from any coordinate.",
+    "We can use two pointers to keep track of visible points for each start point",
+    "For handling the cyclic condition, it’d be helpful to append the point list to itself after sorting."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int visiblePoints(vector<vector<int>>& points, int angle, vector<int>& location) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int visiblePoints(List<List<Integer>> points, int angle, List<Integer> location) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def visiblePoints(self, points, angle, location):\n        \"\"\"\n        :type points: List[List[int]]\n        :type angle: int\n        :type location: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def visiblePoints(self, points: List[List[int]], angle: int, location: List[int]) -> int:\n        ",
+    "c": "int visiblePoints(int** points, int pointsSize, int* pointsColSize, int angle, int* location, int locationSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int VisiblePoints(IList<IList<int>> points, int angle, IList<int> location) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @param {number} angle\n * @param {number[]} location\n * @return {number}\n */\nvar visiblePoints = function(points, angle, location) {\n    \n};",
+    "typescript": "function visiblePoints(points: number[][], angle: number, location: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @param Integer $angle\n     * @param Integer[] $location\n     * @return Integer\n     */\n    function visiblePoints($points, $angle, $location) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func visiblePoints(_ points: [[Int]], _ angle: Int, _ location: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun visiblePoints(points: List<List<Int>>, angle: Int, location: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int visiblePoints(List<List<int>> points, int angle, List<int> location) {\n    \n  }\n}",
+    "golang": "func visiblePoints(points [][]int, angle int, location []int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @param {Integer} angle\n# @param {Integer[]} location\n# @return {Integer}\ndef visible_points(points, angle, location)\n    \nend",
+    "scala": "object Solution {\n    def visiblePoints(points: List[List[Int]], angle: Int, location: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn visible_points(points: Vec<Vec<i32>>, angle: i32, location: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (visible-points points angle location)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec visible_points(Points :: [[integer()]], Angle :: integer(), Location :: [integer()]) -> integer().\nvisible_points(Points, Angle, Location) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec visible_points(points :: [[integer]], angle :: integer, location :: [integer]) :: integer\n  def visible_points(points, angle, location) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Count the Number of Computer Unlocking Permutations",
+  "problem_id": "3864",
+  "frontend_id": "3577",
+  "difficulty": "Medium",
+  "problem_slug": "count-the-number-of-computer-unlocking-permutations",
+  "topics": [
+    "Array",
+    "Math",
+    "Brainteaser",
+    "Combinatorics"
+  ],
+  "description": "You are given an array complexity of length n.\nThere are n locked computers in a room with labels from 0 to n - 1, each with its own unique password. The password of the computer i has a complexity complexity[i].\nThe password for the computer labeled 0 is already decrypted and serves as the root. All other computers must be unlocked using it or another previously unlocked computer, following this information:\nFind the number of permutations of [0, 1, 2, ..., (n - 1)] that represent a valid order in which the computers can be unlocked, starting from computer 0 as the only initially unlocked one.\nSince the answer may be large, return it modulo 109 + 7.\nNote that the password for the computer with label 0 is decrypted, and not the computer with the first position in the permutation.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: complexity = [1,2,3]\nOutput: 2\nExplanation:\nThe valid permutations are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: complexity = [3,3,3,4,4,4]\nOutput: 0\nExplanation:\nThere are no possible permutations which can unlock all computers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= complexity.length <= 105",
+    "1 <= complexity[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Ensure that the element at index 0 has the unique minimum complexity (no other element can match its value).",
+    "Fix index 0 as the first in the unlocking order.",
+    "The remaining indices from <code>1</code> to <code>n - 1</code> can then be arranged arbitrarily, yielding <code>factorial(n - 1)</code> possible orders."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPermutations(vector<int>& complexity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPermutations(int[] complexity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPermutations(self, complexity):\n        \"\"\"\n        :type complexity: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPermutations(self, complexity: List[int]) -> int:\n        ",
+    "c": "int countPermutations(int* complexity, int complexitySize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPermutations(int[] complexity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} complexity\n * @return {number}\n */\nvar countPermutations = function(complexity) {\n    \n};",
+    "typescript": "function countPermutations(complexity: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $complexity\n     * @return Integer\n     */\n    function countPermutations($complexity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPermutations(_ complexity: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPermutations(complexity: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPermutations(List<int> complexity) {\n    \n  }\n}",
+    "golang": "func countPermutations(complexity []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} complexity\n# @return {Integer}\ndef count_permutations(complexity)\n    \nend",
+    "scala": "object Solution {\n    def countPermutations(complexity: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_permutations(complexity: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-permutations complexity)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_permutations(Complexity :: [integer()]) -> integer().\ncount_permutations(Complexity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_permutations(complexity :: [integer]) :: integer\n  def count_permutations(complexity) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Sell Diminishing-Valued Colored Balls",
+  "problem_id": "1771",
+  "frontend_id": "1648",
+  "difficulty": "Medium",
+  "problem_slug": "sell-diminishing-valued-colored-balls",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You have an inventory of different colored balls, and there is a customer that wants orders balls of any color.\nThe customer weirdly values the colored balls. Each colored ball's value is the number of balls of that color you currently have in your inventory. For example, if you own 6 yellow balls, the customer would pay 6 for the first yellow ball. After the transaction, there are only 5 yellow balls left, so the next yellow ball is then valued at 5 (i.e., the value of the balls decreases as you sell more to the customer).\nYou are given an integer array, inventory, where inventory[i] represents the number of balls of the ith color that you initially own. You are also given an integer orders, which represents the total number of balls that the customer wants. You can sell the balls in any order.\nReturn the maximum total value that you can attain after selling orders colored balls. As the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: inventory = [2,5], orders = 4\nOutput: 14\nExplanation: Sell the 1st color 1 time (2) and the 2nd color 3 times (5 + 4 + 3).\nThe maximum total value is 2 + 5 + 4 + 3 = 14.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/05/jj.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: inventory = [3,5], orders = 6\nOutput: 19\nExplanation: Sell the 1st color 2 times (3 + 2) and the 2nd color 4 times (5 + 4 + 3 + 2).\nThe maximum total value is 3 + 2 + 5 + 4 + 3 + 2 = 19.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/05/jj.gif"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= inventory.length <= 105",
+    "1 <= inventory[i] <= 109",
+    "1 <= orders <= min(sum(inventory[i]), 109)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Greedily sell the most expensive ball.",
+    "There is some value k where all balls of value > k are sold, and some, (maybe 0) of balls of value k are sold.",
+    "Use binary search to find this value k, and use maths to find the total sum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& inventory, int orders) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProfit(int[] inventory, int orders) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProfit(self, inventory, orders):\n        \"\"\"\n        :type inventory: List[int]\n        :type orders: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProfit(self, inventory: List[int], orders: int) -> int:\n        ",
+    "c": "int maxProfit(int* inventory, int inventorySize, int orders) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxProfit(int[] inventory, int orders) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} inventory\n * @param {number} orders\n * @return {number}\n */\nvar maxProfit = function(inventory, orders) {\n    \n};",
+    "typescript": "function maxProfit(inventory: number[], orders: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $inventory\n     * @param Integer $orders\n     * @return Integer\n     */\n    function maxProfit($inventory, $orders) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProfit(_ inventory: [Int], _ orders: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProfit(inventory: IntArray, orders: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProfit(List<int> inventory, int orders) {\n    \n  }\n}",
+    "golang": "func maxProfit(inventory []int, orders int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} inventory\n# @param {Integer} orders\n# @return {Integer}\ndef max_profit(inventory, orders)\n    \nend",
+    "scala": "object Solution {\n    def maxProfit(inventory: Array[Int], orders: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_profit(inventory: Vec<i32>, orders: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-profit inventory orders)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_profit(Inventory :: [integer()], Orders :: integer()) -> integer().\nmax_profit(Inventory, Orders) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_profit(inventory :: [integer], orders :: integer) :: integer\n  def max_profit(inventory, orders) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Valid Square",
+  "problem_id": "593",
+  "frontend_id": "593",
+  "difficulty": "Medium",
+  "problem_slug": "valid-square",
+  "topics": [
+    "Math",
+    "Geometry"
+  ],
+  "description": "Given the coordinates of four points in 2D space p1, p2, p3 and p4, return true if the four points construct a square.\nThe coordinate of a point pi is represented as [xi, yi]. The input is not given in any order.\nA valid square has four equal sides with positive length and four equal angles (90-degree angles).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,1]\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,12]\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: p1 = [1,0], p2 = [-1,0], p3 = [0,1], p4 = [0,-1]\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "p1.length == p2.length == p3.length == p4.length == 2",
+    "-104 <= xi, yi <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool validSquare(vector<int>& p1, vector<int>& p2, vector<int>& p3, vector<int>& p4) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validSquare(int[] p1, int[] p2, int[] p3, int[] p4) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validSquare(self, p1, p2, p3, p4):\n        \"\"\"\n        :type p1: List[int]\n        :type p2: List[int]\n        :type p3: List[int]\n        :type p4: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validSquare(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> bool:\n        ",
+    "c": "bool validSquare(int* p1, int p1Size, int* p2, int p2Size, int* p3, int p3Size, int* p4, int p4Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ValidSquare(int[] p1, int[] p2, int[] p3, int[] p4) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} p1\n * @param {number[]} p2\n * @param {number[]} p3\n * @param {number[]} p4\n * @return {boolean}\n */\nvar validSquare = function(p1, p2, p3, p4) {\n    \n};",
+    "typescript": "function validSquare(p1: number[], p2: number[], p3: number[], p4: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $p1\n     * @param Integer[] $p2\n     * @param Integer[] $p3\n     * @param Integer[] $p4\n     * @return Boolean\n     */\n    function validSquare($p1, $p2, $p3, $p4) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validSquare(_ p1: [Int], _ p2: [Int], _ p3: [Int], _ p4: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validSquare(p1: IntArray, p2: IntArray, p3: IntArray, p4: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool validSquare(List<int> p1, List<int> p2, List<int> p3, List<int> p4) {\n    \n  }\n}",
+    "golang": "func validSquare(p1 []int, p2 []int, p3 []int, p4 []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} p1\n# @param {Integer[]} p2\n# @param {Integer[]} p3\n# @param {Integer[]} p4\n# @return {Boolean}\ndef valid_square(p1, p2, p3, p4)\n    \nend",
+    "scala": "object Solution {\n    def validSquare(p1: Array[Int], p2: Array[Int], p3: Array[Int], p4: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_square(p1: Vec<i32>, p2: Vec<i32>, p3: Vec<i32>, p4: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (valid-square p1 p2 p3 p4)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec valid_square(P1 :: [integer()], P2 :: [integer()], P3 :: [integer()], P4 :: [integer()]) -> boolean().\nvalid_square(P1, P2, P3, P4) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_square(p1 :: [integer], p2 :: [integer], p3 :: [integer], p4 :: [integer]) :: boolean\n  def valid_square(p1, p2, p3, p4) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Brute Force [Accepted]\n\nThe idea behind determining whether 4 given set of points constitute a valid square or not is really simple. Firstly, we need to determine if the sides of the quadrilateral formed by these 4 points are equal. But checking only this won't suffice. Since, this condition will be satisfied even in the case of a rhombus, where all the four sides are equal but the adjacent sides aren't perpendicular to each other. Thus, we also need to check if the lengths of the diagonals formed between the corners of the quadrilateral are equal. If both the conditions are satisfied, then only the given set of points can be deemed appropriate for constituting a square.\n\nNow, the problem arises in determining which pairs of points act as the adjacent points on the square boundary. So, the simplest method is to consider every possible case. For the given 4 points, $$[p_0, p_1, p_2, p_3]$$, there are a total of 4! ways in which these points can be arranged to be considered as the square's boundaries. We can generate every possible permutation and check if any permutation leads to the valid square arrangement of points.**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. Constant number of permutations($$4!$$) are generated.\n\n* Space complexity : $$O(1)$$. Constant space is required.\n\n---\n### Approach #2 Using Sorting [Accepted]\n\nInstead of considering all the permutations of arrangements possible, we can make use of maths to simplify this problem a bit. If we sort the given set of points based on their x-coordinate values, and in the case of a tie, based on their y-coordinate value, we can obtain an arrangement, which directly reflects the arrangement of points on a valid square boundary possible.\n\nConsider the only possible cases as shown in the figure below:\n\n![Valid_Square](../Figures/593_Valid_Square_1.PNG)\n\nIn each case, after sorting, we obtain the following conclusion regarding the connections of the points:\n\n1. $$p_0p_1$$, $$p_1p_3$$, $$p_3p_2$$ and $$p_2p_0$$ form the four sides of any valid square.\n\n2. $$p_0p_3$$ and $$p_1p_2$$ form the diagonals of the square.\n\nThus, once the sorting of the points is done, based on the above knowledge, we can directly compare $$p_0p_1$$, $$p_1p_3$$, $$p_3p_2$$ and $$p_2p_0$$ for equality of lengths(corresponding to the sides); and $$p_0p_3$$ and $$p_1p_2$$ for equality of lengths(corresponding to the diagonals).**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. Sorting 4 points takes constant time.\n\n* Space complexity : $$O(1)$$. Constant space is required.\n\n---\n### Approach #3 Checking every case [Accepted]\n\n**Algorithm**\n\nIf we consider all the permutations descripting the arrangement of points as in the brute force approach, we can come up with the following set of 24 arrangements:\n\n![Valid_Square](../Figures/593_Valid_Square_2.PNG)\n\nIn this figure, the rows with the same shaded color indicate that the corresponding arrangements lead to the same set of edges and diagonals. Thus, we can see that only three unique cases exist. Thus, instead of generating all the 24 permutations, we check for the equality of edges and diagonals for only the three distinct cases.**Complexity Analysis**\n\n* Time complexity : $$O(1)$$. A fixed number of comparisons are done.\n\n* Space complexity : $$O(1)$$. No extra space required."
+}

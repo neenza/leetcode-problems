@@ -1,0 +1,56 @@
+{
+  "title": "Spiral Matrix II",
+  "problem_id": "59",
+  "frontend_id": "59",
+  "difficulty": "Medium",
+  "problem_slug": "spiral-matrix-ii",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3\nOutput: [[1,2,3],[8,9,4],[7,6,5]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/13/spiraln.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: [[1]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/13/spiraln.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 20"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> generateMatrix(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] generateMatrix(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def generateMatrix(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def generateMatrix(self, n: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** generateMatrix(int n, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] GenerateMatrix(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[][]}\n */\nvar generateMatrix = function(n) {\n    \n};",
+    "typescript": "function generateMatrix(n: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[][]\n     */\n    function generateMatrix($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func generateMatrix(_ n: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun generateMatrix(n: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> generateMatrix(int n) {\n    \n  }\n}",
+    "golang": "func generateMatrix(n int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[][]}\ndef generate_matrix(n)\n    \nend",
+    "scala": "object Solution {\n    def generateMatrix(n: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn generate_matrix(n: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (generate-matrix n)\n  (-> exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec generate_matrix(N :: integer()) -> [[integer()]].\ngenerate_matrix(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec generate_matrix(n :: integer) :: [[integer]]\n  def generate_matrix(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Overview\n\nThere are various problems in spiral matrix series with some variations like [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) and [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/).\n\nIn order to solve such questions, the core idea is to decode the underlying pattern. This can be done by simulating the pattern and finding a generic representation that would work for any given $$n$$.\nLet's discuss a few approaches.\n\n---\n### Approach 1: Traverse Layer by Layer in Spiral Form\n\n**Intuition**\n\nIf we try to build a pattern for a given $$n$$, we observe that the pattern repeats after completing one circular traversal around the matrix. Let's call this one circular traversal as  _layer_. We start traversing from the outer layer and move towards inner layers on every iteration.\n\n![img](../Figures/59/spiral_layers.png)\n\n**Algorithm**\n\nLet's devise an algorithm for the spiral traversal:\n\n-  We can observe that, for any given $$n$$, the total number of layers is given by :\n$$\\lfloor \\frac{n+1}{2} \\rfloor$$\nThis works for both even and odd $$n$$.\n\n_Example_\n\nFor $$n = 3$$, $$layers = 2$$\n\nFor $$n = 6$$, total $$layers = 3$$\n\n- Also, for each layer, we traverse in _at most_ 4 directions :\n\n\n![img](../Figures/59/spiral_traverse.png)\n\n\nIn every direction, either row or column remains constant and other parameter changes (increments/decrements).\n\n_Direction 1: From top left corner to top right corner._\n\nThe row remains constant as $$\\text{layer}$$ and column increments from $$\\text{layer}$$ to  $$n-\\text{layer}-1$$\n\n_Direction 2: From top right corner to the bottom right corner._\n\nThe column remains constant as $$n-layer-1$$ and row increments from\n$$\\text{layer}+1$$ to $$n-\\text{layer}$$.\n\n_Direction 3: From bottom right corner to bottom left corner._\n\nThe row remains constant as $$n-\\text{layer}-1$$ and column decrements from $$n-\\text{layer}-2$$ to $$\\text{layer}$$.\n\n_Direction 4: From bottom left corner to top left corner._\n\nThe column remains constant as $$\\text{layer}$$ and column decrements from $$n-\\text{layer}-2$$ to $$\\text{layer}+1$$.\n\nThis process repeats $$(n+1)/2$$ times until all layers are traversed.\n\n![img](../Figures/59/spiral_detailed_fix.png)**Complexity Analysis**\n\n* Time Complexity: $$\\mathcal{O}(n^2)$$. Here, $$n$$ is given input and we are iterating over $$n\\cdot n$$ matrix in spiral form.\n* Space Complexity: $$\\mathcal{O}(1)$$  We use constant extra space for storing $$cnt$$.\n\n---\n### Approach 2: Optimized spiral traversal\n\n**Intuition**\n\nOur main aim is to walk in a spiral form and fill the array in a particular pattern. In the previous approach, we used a separate loop for each direction. Here, we discuss another optimized to achieve the same result.\n\n**Algorithm**\n\n- We have to walk in 4 directions forming a layer. We use an array $$dir$$ that stores the changes in $$x$$ and $$y$$ co-ordinates in each direction.\n\n_Example_\n\nIn left to right walk ( _direction #1_ ), $$x$$ co-ordinates remains same and $$y$$ increments ($$x = 0$$, $$y = 1$$).\n\nIn right to left walk ( _direction #3_ ), $$x$$ remains same and $$y$$ decrements ($$x = 0$$, $$y = -1$$).\n\nUsing this intuition, we pre-define an array $$dir$$ having $$x$$ and $$y$$ co-ordinate changes for each direction. There are a total of 4 directions as discussed in the previous approach.\n\n- The $$\\text{row}$$ and $$col$$ variables represent the current $$x$$ and $$y$$ co-ordinates respectively. It updates based on the direction in which we are moving.\n\n_How do we know when we have to change the direction?_\n\nWhen we find the next row or column in a particular direction has a non-zero value, we are sure it is already traversed and we change the direction.\n\nLet $$d$$ be the current direction index. We go to next direction in array $$dir$$ using $$(d+ 1) \\% 4$$. Using this we could go back to direction 1 after completing one circular traversal from direction 1 to direction 4 .\n\n> It must be noted that we use `floorMod` in Java instead of modulo $$\\%$$ to handle mod of negative numbers. This is required because row and column values might go negative and using $$\\%$$ won't give desired results in such cases.**Complexity Analysis**\n\n* Time Complexity: $$\\mathcal{O}(n^2)$$. Here, $$n$$ is given input and we are iterating over $$n\\cdot n$$ matrix in spiral form.\n* Space Complexity: $$\\mathcal{O}(1)$$  We use constant extra space for storing $$cnt$$."
+}

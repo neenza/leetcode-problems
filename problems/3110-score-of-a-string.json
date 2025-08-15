@@ -1,0 +1,53 @@
+{
+  "title": "Score of a String",
+  "problem_id": "3379",
+  "frontend_id": "3110",
+  "difficulty": "Easy",
+  "problem_slug": "score-of-a-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string s. The score of a string is defined as the sum of the absolute difference between the ASCII values of adjacent characters.\nReturn the score of s.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"hello\"\nOutput: 13\nExplanation:\nThe ASCII values of the characters in s are: 'h' = 104 , 'e' = 101 , 'l' = 108 , 'o' = 111 . So, the score of s would be |104 - 101| + |101 - 108| + |108 - 108| + |108 - 111| = 3 + 7 + 0 + 3 = 13 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"zaz\"\nOutput: 50\nExplanation:\nThe ASCII values of the characters in s are: 'z' = 122 , 'a' = 97 . So, the score of s would be |122 - 97| + |97 - 122| = 25 + 25 = 50 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 100",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sum the difference between all the adjacent characters by just taking the absolute difference of their ASCII values."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int scoreOfString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int scoreOfString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def scoreOfString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def scoreOfString(self, s: str) -> int:\n        ",
+    "c": "int scoreOfString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ScoreOfString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar scoreOfString = function(s) {\n    \n};",
+    "typescript": "function scoreOfString(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function scoreOfString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func scoreOfString(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun scoreOfString(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int scoreOfString(String s) {\n    \n  }\n}",
+    "golang": "func scoreOfString(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef score_of_string(s)\n    \nend",
+    "scala": "object Solution {\n    def scoreOfString(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn score_of_string(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (score-of-string s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec score_of_string(S :: unicode:unicode_binary()) -> integer().\nscore_of_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec score_of_string(s :: String.t) :: integer\n  def score_of_string(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Linear Iteration\n\n#### Intuition\n\nTo solve the problem, we must calculate the sum of the absolute differences between the ASCII values of all adjacent characters in the input string `s`. \n\nThe absolute difference between two numbers is the positive value of the difference between those numbers, regardless of which one is larger. For example, the absolute difference between $3$ and $8$ is $ | 3 - 8 | = | -5 | = 5 $.If you are new to programming we recommend reading the following section to better understand what ASCII means in programming languages: (click to expand)> ASCII stands for \"American Standard Code for Information Interchange.\" It's a way to represent characters (like letters, numbers, and symbols) using numbers.\n> \n> In simpler terms, think of it like this: imagine each character on your keyboard has a number assigned to it. For example, the letter `'A'` is represented by the number `65`, `'B'` by `66`, and so on. You can see more ASCII codes [here](https://www.ascii-code.com/) represented in an ASCII table.\n> \n>> \n> **Why is there a need to represent characters using numbers?**\n> \n> - ASCII provides a standard way to represent characters, ensuring that computers from different manufacturers can communicate with each other properly.\n> - Numbers require less space than characters. Instead of storing `'A'`, `'B'`, `'C'`, etc., which would take up more memory, computers can store the ASCII numbers (`65`, `66`, `67`) efficiently. \n> - Computers handle numbers efficiently, so ASCII allows computers to process text efficiently.To solve the given problem, we'll iterate through the string `s` from the beginning. For each character at index `i`, we compute the difference between the ASCII values of the character at index `i` and the character at index `i + 1`. We then add the absolute value of this difference to a cumulative sum.   \nThis iteration stops at the second-last character because each comparison involves the next character in the string.\n\n\n![diagram](../Documents/3110/3110.svg)\n\n\nHandling character data in different programming languages:\n\n  - In C++ and Java, characters are treated as integer values based on their ASCII or Unicode representations. This allows for direct arithmetic operations such as subtraction between characters.\n\n  - In Python, characters are represented as strings of length one rather than as integers. As a result, Python does not support direct arithmetic operations on characters. To perform such operations, we must first convert each character to its ASCII value using the `ord()` function, which returns the integer representation of the character. This conversion enables arithmetic operations between characters in Python.\n\n\n#### Algorithm\n\n1. Initialize a variable `score` to `0` to store the cumulative sum. \n2. Iterate over all indices from `0` to `length - 1` of the input string. For each index, calculate the absolute difference between the ASCII values of the character at the current index and the character at the next index. Add this difference to the `score`. \n3. Return the `score` after the loop completes. \n\n#### Implementation#### Complexity Analysis\n\nHere, $n$ is the length of the input string.\n\n* Time Complexity: $O(n)$\n\n    - The process involves iterating through the string once, from the first character to the second-last character, making it a linear iteration over $n-1$ indices \n    - At each index, calculating the absolute difference between the ASCII values of two adjacent characters requires constant time. \n    - Hence, the total time complexity for this operation is $O(n-1) = O(n)$.\n    \n* Space Complexity: $O(1)$\n\n    - We only used a single additional variable, `score`, to accumulate the result. Therefore, the space complexity is $O(1)$, indicating that no additional space proportional to the input size is required."
+}

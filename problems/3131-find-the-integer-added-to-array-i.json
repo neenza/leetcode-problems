@@ -1,0 +1,59 @@
+{
+  "title": "Find the Integer Added to Array I",
+  "problem_id": "3397",
+  "frontend_id": "3131",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-integer-added-to-array-i",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given two arrays of equal length, nums1 and nums2.\nEach element in nums1 has been increased (or decreased in the case of negative) by an integer, represented by the variable x.\nAs a result, nums1 becomes equal to nums2. Two arrays are considered equal when they contain the same integers with the same frequencies.\nReturn the integer x.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [2,6,4], nums2 = [9,7,5]\nOutput: 3\nExplanation:\nThe integer added to each element of nums1 is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [10], nums2 = [5]\nOutput: -5\nExplanation:\nThe integer added to each element of nums1 is -5.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [1,1,1,1], nums2 = [1,1,1,1]\nOutput: 0\nExplanation:\nThe integer added to each element of nums1 is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums1.length == nums2.length <= 100",
+    "0 <= nums1[i], nums2[i] <= 1000",
+    "The test cases are generated in a way that there is an integer x such that nums1 can become equal to nums2 by adding x to each element of nums1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that, after sorting both arrays, there should be a one-to-one correspondence between every element.",
+    "Thus <code>x = min(nums2) - min(nums1)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int addedInteger(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int addedInteger(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def addedInteger(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def addedInteger(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int addedInteger(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AddedInteger(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar addedInteger = function(nums1, nums2) {\n    \n};",
+    "typescript": "function addedInteger(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function addedInteger($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func addedInteger(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun addedInteger(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int addedInteger(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func addedInteger(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef added_integer(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def addedInteger(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn added_integer(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (added-integer nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec added_integer(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nadded_integer(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec added_integer(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def added_integer(nums1, nums2) do\n    \n  end\nend"
+  }
+}

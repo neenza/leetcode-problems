@@ -1,0 +1,56 @@
+{
+  "title": "Longest Palindromic Subsequence After at Most K Operations",
+  "problem_id": "3786",
+  "frontend_id": "3472",
+  "difficulty": "Medium",
+  "problem_slug": "longest-palindromic-subsequence-after-at-most-k-operations",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string s and an integer k.\nIn one operation, you can replace the character at any position with the next or previous letter in the alphabet (wrapping around so that 'a' is after 'z'). For example, replacing 'a' with the next letter results in 'b', and replacing 'a' with the previous letter results in 'z'. Similarly, replacing 'z' with the next letter results in 'a', and replacing 'z' with the previous letter results in 'y'.\nReturn the length of the longest palindromic subsequence of s that can be obtained after performing at most k operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abced\", k = 2\nOutput: 3\nExplanation:\nThe subsequence \"ccc\" forms a palindrome of length 3, which is the maximum.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \" aaazzz \", k = 4\nOutput: 6\nExplanation:\nThe entire string forms a palindrome of length 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 200",
+    "1 <= k <= 200",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "<code>dp[i][j][k]</code> is the length of the longest palindromic subsequence in substring <code>[i..j]</code> with cost at most <code>k</code>.",
+    "<code>dp[i][j][k] = max(dp[i + 1][j][k], dp[i][j - 1][k], dp[i + 1][j - 1][k - dist(s[i], s[j])] + 2)</code>, where <code>dist(x, y)</code> is the minimum cyclic distance between <code>x</code> and <code>y</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestPalindromicSubsequence(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestPalindromicSubsequence(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestPalindromicSubsequence(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestPalindromicSubsequence(self, s: str, k: int) -> int:\n        ",
+    "c": "int longestPalindromicSubsequence(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestPalindromicSubsequence(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar longestPalindromicSubsequence = function(s, k) {\n    \n};",
+    "typescript": "function longestPalindromicSubsequence(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function longestPalindromicSubsequence($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestPalindromicSubsequence(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestPalindromicSubsequence(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestPalindromicSubsequence(String s, int k) {\n    \n  }\n}",
+    "golang": "func longestPalindromicSubsequence(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef longest_palindromic_subsequence(s, k)\n    \nend",
+    "scala": "object Solution {\n    def longestPalindromicSubsequence(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_palindromic_subsequence(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-palindromic-subsequence s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec longest_palindromic_subsequence(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nlongest_palindromic_subsequence(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_palindromic_subsequence(s :: String.t, k :: integer) :: integer\n  def longest_palindromic_subsequence(s, k) do\n    \n  end\nend"
+  }
+}

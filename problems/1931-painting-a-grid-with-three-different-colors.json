@@ -1,0 +1,65 @@
+{
+  "title": "Painting a Grid With Three Different Colors",
+  "problem_id": "2061",
+  "frontend_id": "1931",
+  "difficulty": "Hard",
+  "problem_slug": "painting-a-grid-with-three-different-colors",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "description": "You are given two integers m and n. Consider an m x n grid where each cell is initially white. You can paint each cell red, green, or blue. All cells must be painted.\nReturn the number of ways to color the grid with no two adjacent cells having the same color. Since the answer can be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 1, n = 1\nOutput: 3\nExplanation: The three possible colorings are shown in the image above.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/22/colorthegrid.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 1, n = 2\nOutput: 6\nExplanation: The six possible colorings are shown in the image above.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/22/copy-of-colorthegrid.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: m = 5, n = 5\nOutput: 580986",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/22/copy-of-colorthegrid.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m <= 5",
+    "1 <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Represent each colored column by a bitmask based on each cell color.",
+    "Use bitmasks DP with state (currentCell, prevColumn)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int colorTheGrid(int m, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int colorTheGrid(int m, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def colorTheGrid(self, m, n):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def colorTheGrid(self, m: int, n: int) -> int:\n        ",
+    "c": "int colorTheGrid(int m, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ColorTheGrid(int m, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar colorTheGrid = function(m, n) {\n    \n};",
+    "typescript": "function colorTheGrid(m: number, n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $n\n     * @return Integer\n     */\n    function colorTheGrid($m, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func colorTheGrid(_ m: Int, _ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun colorTheGrid(m: Int, n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int colorTheGrid(int m, int n) {\n    \n  }\n}",
+    "golang": "func colorTheGrid(m int, n int) int {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} n\n# @return {Integer}\ndef color_the_grid(m, n)\n    \nend",
+    "scala": "object Solution {\n    def colorTheGrid(m: Int, n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn color_the_grid(m: i32, n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (color-the-grid m n)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec color_the_grid(M :: integer(), N :: integer()) -> integer().\ncolor_the_grid(M, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec color_the_grid(m :: integer, n :: integer) :: integer\n  def color_the_grid(m, n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: State Compression Dynamic Programming\n\n#### Hint\n\nTo ensure that the colors of any two adjacent cells are different, we need to guarantee the following:\n\n- Any two adjacent cells in the same row have different colors.\n\n- For adjacent rows, the colors of the cells in the same column are different.\n\nTherefore, we can proceed as follows:\n\n- First, use enumeration to find all valid coloring schemes for a single row.\n\n- Then, use dynamic programming to calculate the number of ways to color the entire $m \\times n$ grid.\n\nIn this problem, the maximum values of $m$ and $n$ are $5$ and $1000$, respectively. Since $m$ is smaller, we treat it as the row length and $n$ as the column length to make row enumeration feasible.\n\n#### Intuition\n\nWe begin by enumerating the number of ways to color a row.\n\nGiven the three available colors, red, green, and blue, we can represent them as $0$, $1$, and $2$. In this way, a coloring scheme corresponds to a ternary number of length $m$, with a decimal range of $[0, 3^m)$.\n\nThus, we can enumerate all integers in the range $[0, 3^m)$, convert them into ternary strings of length $m$, and check whether any two adjacent digits are different.\n\nNext, we use dynamic programming to compute the total number of coloring schemes. Let $f[i][\\textit{mask}]$ represent the number of ways to color rows $0$ through $i$, where the $i$-th row's coloring scheme corresponds to the ternary value $\\textit{mask}$. For the state transition, we consider all valid coloring schemes $\\textit{mask}'$ for the $(i - 1)$-th row:\n\n$$\nf[i][\\textit{mask}] = \\sum_{\\text{\\textit{mask} and \\textit{mask}' have different numbers on the same digit}} f[i-1][\\textit{mask}']\n$$\n\nAs long as the digits at corresponding positions in $\\textit{mask}$ and $\\textit{mask}'$ are different, the two rows can be adjacent, and we can perform the state transition.\n\nThe final answer is the sum of all $f[n - 1][\\textit{mask}]$ for $\\textit{mask} \\in [0, 3^m)$.\n\nThe base case shown above for the dynamic programming is based on the first row. When $i = 0$, the state $f[i - 1][..]$ is undefined, so we must handle it separately: if all adjacent digits in a given $\\textit{mask}$ differ, then we set $f[0][\\textit{mask}] = 1$; otherwise, $f[0][\\textit{mask}] = 0$.\n\nFor all other transitions, given a current $\\textit{mask}$, we need to find all $\\textit{mask}'$ from the previous row that satisfy the condition (i.e., no overlapping digits at the same positions). Since this can be expensive to compute repeatedly, we can preprocess all valid transitions ahead of time. The implementation code below reflects this optimization.\n\nIt’s also worth noting that since $f[i][..]$ only depends on $f[i - 1][..]$, we can use two one-dimensional arrays of length $3^m$ and alternate between them to save space.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(3^{2m} \\cdot n)$.\n\n    The time complexity of preprocessing $\\textit{mask}$ is $O(m \\cdot 3^m)$.\n    \n    The time complexity of preprocessing all valid $(\\textit{mask}, \\textit{mask}')$ pairs is $O(3^{2m})$.\n    \n    The time complexity of the dynamic programming step is $O(3^{2m} \\cdot n)$, which dominates the previous two in terms of asymptotic growth.\n\n- Space complexity: $O(3^{2m})$.\n\n    The space required to store all valid $\\textit{mask}$ values is $O(m \\cdot 3^m)$.\n    \n    The space required to store all valid $(\\textit{mask}, \\textit{mask}')$ pairs is $O(3^{2m})$, which is asymptotically larger than the others.\n    \n    The space required to store the dynamic programming states is $O(3^m)$.\n\n    However, it should be noted that in actual situations, when $m=5$, there are only 48 $\\textit{mask}$ that meet the requirements, which is much less than $3^m=324$; there are only 486 pairs of $(\\textit{mask}, \\textit{mask}')$ that meet the requirements, which is much less than $3^{2m}=59049$. Therefore, the actual running time of the algorithm will be faster."
+}

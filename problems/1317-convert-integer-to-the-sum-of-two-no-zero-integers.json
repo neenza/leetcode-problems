@@ -1,0 +1,52 @@
+{
+  "title": "Convert Integer to the Sum of Two No-Zero Integers",
+  "problem_id": "1440",
+  "frontend_id": "1317",
+  "difficulty": "Easy",
+  "problem_slug": "convert-integer-to-the-sum-of-two-no-zero-integers",
+  "topics": [
+    "Math"
+  ],
+  "description": "No-Zero integer is a positive integer that does not contain any 0 in its decimal representation.\nGiven an integer n, return a list of two integers [a, b] where:\nThe test cases are generated so that there is at least one valid solution. If there are many valid solutions, you can return any of them.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: [1,1]\nExplanation: Let a = 1 and b = 1.\nBoth a and b are no-zero integers, and a + b = 2 = n.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 11\nOutput: [2,9]\nExplanation: Let a = 2 and b = 9.\nBoth a and b are no-zero integers, and a + b = 11 = n.\nNote that there are other valid answers as [8, 3] that can be accepted.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Loop through all elements from 1 to n.",
+    "Choose A = i and B = n - i then check if A and B are both No-Zero integers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getNoZeroIntegers(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getNoZeroIntegers(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getNoZeroIntegers(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getNoZeroIntegers(self, n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getNoZeroIntegers(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GetNoZeroIntegers(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar getNoZeroIntegers = function(n) {\n    \n};",
+    "typescript": "function getNoZeroIntegers(n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function getNoZeroIntegers($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getNoZeroIntegers(_ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getNoZeroIntegers(n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getNoZeroIntegers(int n) {\n    \n  }\n}",
+    "golang": "func getNoZeroIntegers(n int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[]}\ndef get_no_zero_integers(n)\n    \nend",
+    "scala": "object Solution {\n    def getNoZeroIntegers(n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_no_zero_integers(n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (get-no-zero-integers n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec get_no_zero_integers(N :: integer()) -> [integer()].\nget_no_zero_integers(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_no_zero_integers(n :: integer) :: [integer]\n  def get_no_zero_integers(n) do\n    \n  end\nend"
+  }
+}

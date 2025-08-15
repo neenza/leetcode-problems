@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Bags With Full Capacity of Rocks",
+  "problem_id": "2366",
+  "frontend_id": "2279",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-bags-with-full-capacity-of-rocks",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You have n bags numbered from 0 to n - 1. You are given two 0-indexed integer arrays capacity and rocks. The ith bag can hold a maximum of capacity[i] rocks and currently contains rocks[i] rocks. You are also given an integer additionalRocks, the number of additional rocks you can place in any of the bags.\nReturn the maximum number of bags that could have full capacity after placing the additional rocks in some bags.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: capacity = [2,3,4,5], rocks = [1,2,4,4], additionalRocks = 2\nOutput: 3\nExplanation:\nPlace 1 rock in bag 0 and 1 rock in bag 1.\nThe number of rocks in each bag are now [2,3,4,4].\nBags 0, 1, and 2 have full capacity.\nThere are 3 bags at full capacity, so we return 3.\nIt can be shown that it is not possible to have more than 3 bags at full capacity.\nNote that there may be other ways of placing the rocks that result in an answer of 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: capacity = [10,2,2], rocks = [2,2,0], additionalRocks = 100\nOutput: 3\nExplanation:\nPlace 8 rocks in bag 0 and 2 rocks in bag 2.\nThe number of rocks in each bag are now [10,2,2].\nBags 0, 1, and 2 have full capacity.\nThere are 3 bags at full capacity, so we return 3.\nIt can be shown that it is not possible to have more than 3 bags at full capacity.\nNote that we did not use all of the additional rocks.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == capacity.length == rocks.length",
+    "1 <= n <= 5 * 104",
+    "1 <= capacity[i] <= 109",
+    "0 <= rocks[i] <= capacity[i]",
+    "1 <= additionalRocks <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Which bag should you fill completely first?",
+    "Can you think of a greedy solution?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumBags(vector<int>& capacity, vector<int>& rocks, int additionalRocks) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumBags(int[] capacity, int[] rocks, int additionalRocks) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumBags(self, capacity, rocks, additionalRocks):\n        \"\"\"\n        :type capacity: List[int]\n        :type rocks: List[int]\n        :type additionalRocks: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumBags(self, capacity: List[int], rocks: List[int], additionalRocks: int) -> int:\n        ",
+    "c": "int maximumBags(int* capacity, int capacitySize, int* rocks, int rocksSize, int additionalRocks) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumBags(int[] capacity, int[] rocks, int additionalRocks) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} capacity\n * @param {number[]} rocks\n * @param {number} additionalRocks\n * @return {number}\n */\nvar maximumBags = function(capacity, rocks, additionalRocks) {\n    \n};",
+    "typescript": "function maximumBags(capacity: number[], rocks: number[], additionalRocks: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $capacity\n     * @param Integer[] $rocks\n     * @param Integer $additionalRocks\n     * @return Integer\n     */\n    function maximumBags($capacity, $rocks, $additionalRocks) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumBags(_ capacity: [Int], _ rocks: [Int], _ additionalRocks: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumBags(capacity: IntArray, rocks: IntArray, additionalRocks: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumBags(List<int> capacity, List<int> rocks, int additionalRocks) {\n    \n  }\n}",
+    "golang": "func maximumBags(capacity []int, rocks []int, additionalRocks int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} capacity\n# @param {Integer[]} rocks\n# @param {Integer} additional_rocks\n# @return {Integer}\ndef maximum_bags(capacity, rocks, additional_rocks)\n    \nend",
+    "scala": "object Solution {\n    def maximumBags(capacity: Array[Int], rocks: Array[Int], additionalRocks: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_bags(capacity: Vec<i32>, rocks: Vec<i32>, additional_rocks: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-bags capacity rocks additionalRocks)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_bags(Capacity :: [integer()], Rocks :: [integer()], AdditionalRocks :: integer()) -> integer().\nmaximum_bags(Capacity, Rocks, AdditionalRocks) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_bags(capacity :: [integer], rocks :: [integer], additional_rocks :: integer) :: integer\n  def maximum_bags(capacity, rocks, additional_rocks) do\n    \n  end\nend"
+  }
+}

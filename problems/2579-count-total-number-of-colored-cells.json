@@ -1,0 +1,56 @@
+{
+  "title": "Count Total Number of Colored Cells",
+  "problem_id": "2649",
+  "frontend_id": "2579",
+  "difficulty": "Medium",
+  "problem_slug": "count-total-number-of-colored-cells",
+  "topics": [
+    "Math"
+  ],
+  "description": "There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer n, indicating that you must do the following routine for n minutes:\nBelow is a pictorial representation of the state of the grid after minutes 1, 2, and 3.\nReturn the number of colored cells at the end of n minutes.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 1\nExplanation: After 1 minute, there is only 1 blue cell, so we return 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/10/example-copy-2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 5\nExplanation: After 2 minutes, there are 4 colored cells on the boundary and 1 in the center, so we return 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/10/example-copy-2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Derive a mathematical relation between total number of colored cells and the time elapsed in minutes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long coloredCells(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long coloredCells(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def coloredCells(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def coloredCells(self, n: int) -> int:\n        ",
+    "c": "long long coloredCells(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public long ColoredCells(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar coloredCells = function(n) {\n    \n};",
+    "typescript": "function coloredCells(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function coloredCells($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func coloredCells(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun coloredCells(n: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int coloredCells(int n) {\n    \n  }\n}",
+    "golang": "func coloredCells(n int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef colored_cells(n)\n    \nend",
+    "scala": "object Solution {\n    def coloredCells(n: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn colored_cells(n: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (colored-cells n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec colored_cells(N :: integer()) -> integer().\ncolored_cells(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec colored_cells(n :: integer) :: integer\n  def colored_cells(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a positive integer `n`, representing the number of minutes. At each minute, the following is performed in a grid:\n\n1. **Minute One**: Color a unit cell blue.\n2. **Every Minute Thereafter**: Color every uncolored cell that touches a blue cell.\n\nOur task is to determine how many cells are colored after `n` minutes.\n\n---\n\n### Approach 1: Iterative Addition\n\n#### Intuition\n\nWe want to find how many cells are colored blue after `n` iterations, so let's visualize some early iterations of `n`:\n\n!?!../Documents/2579/slideshow.json:960,560!?!\n\nFrom the first case, we see that when `n = 1`, there is only a single blue cell. At `n = 2`, we add four new cells around it, forming a cross-like structure. At `n = 3`, we add eight more cells around the previous structure, expanding outward. Observing this, we notice a clear pattern: each iteration adds a multiple of 4 new cells to the existing structure. Specifically, the number of cells added at each step follows the sequence: 4, 8, 12, 16, ..., increasing by 4 every time.\n\nNow that we’ve identified this pattern, we can use it directly to compute the total number of blue cells for any given `n`. We start with `numBlueCells = 1`, representing the initial cell. Alongside this, we maintain a variable `addend`, which starts at 4 and increases by 4 after every iteration. In each step, we update `numBlueCells` by adding `addend`, then increment `addend` for the next step. Since we already accounted for `n = 1` in the initialization, we repeat this process for `n - 1` iterations.\n\n#### Algorithm\n\n- Initialize `numBlueCells` to `1` to track the number of colored cells.\n- Initialize `addend` to `4` to represent how many colored cells are added in each iteration.\n- Iterate `n - 1` times:\n    - Increase `numBlueCells` by `addend`.\n    - Increase `addend` by `4`.\n- Return `numBlueCells`.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the integer value of `n`.\n\n* Time Complexity: $O(N)$\n\n    We iterate through `n - 1` integers only once. In each iteration, all arithmetic operations are performed in constant time. This leads to an overall time complexity of $O(N - 1)$, which can be simplified to $O(N)$.\n    \n* Space Complexity: $O(1)$\n\n    The space required does not depend on the size of the input value or any data structures that require additional space, so only constant $O(1)$ space is used.\n\n---\n\n### Approach 2: Mathematical Formula\n\n#### Intuition\n\nIn the previous approach, we iterated `n - 1` times and added an increasing multiple of 4 in each step. This resulted in a linear time complexity, which is efficient for moderate values of `n` but can be avoided with a direct formula. Instead of looping, we want to express the total count of blue cells as a mathematical equation.  \n\nFrom our earlier observations, we know that we start with a single blue cell and then successively add multiples of 4: first `4 × 1`, then `4 × 2`, then `4 × 3`, and so on, continuing for `n - 1` steps. This means the total count follows the sum:  \n\n$1 + (4 \\times 1) + (4 \\times 2) + ... + (4 \\times (n - 1))$  \n\nRecognizing that the sum inside the parentheses is simply the arithmetic series $1 + 2 + ... + (n - 1)$, we use the formula for the sum of the first $m$ natural numbers:  \n\n$1 + 4 \\times \\frac{(n - 1) \\times n}{2}$  \n\nExpanding and simplifying, we get:  \n\n$1 + 2 \\times (n - 1) \\times n$\n\nThis formula allows us to immediately compute the answer, eliminating the need for iteration. We can now directly return the result in constant time using this equation.\n\n#### Algorithm\n\n- Return the number of colored cells using the formula `1 + n * (n - 1) * 2` to determine the total number of cells in an expanding diamond pattern.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the integer value of `n`.\n\n* Time Complexity: $O(1)$\n\n    All arithmetic operations are performed in constant time, independent of the input value. This leads to an overall time complexity of $O(1)$.\n\n* Space Complexity: $O(1)$\n\n    The space required does not depend on the size of the input value or any data structures that require additional space, so only constant $O(1)$ space is used.\n\n---"
+}

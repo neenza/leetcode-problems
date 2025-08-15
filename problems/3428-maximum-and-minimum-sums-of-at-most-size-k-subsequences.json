@@ -1,0 +1,62 @@
+{
+  "title": "Maximum and Minimum Sums of at Most Size K Subsequences",
+  "problem_id": "3714",
+  "frontend_id": "3428",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-and-minimum-sums-of-at-most-size-k-subsequences",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Sorting",
+    "Combinatorics"
+  ],
+  "description": "You are given an integer array nums and a positive integer k. Return the sum of the maximum and minimum elements of all subsequences of nums with at most k elements.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], k = 2\nOutput: 24\nExplanation:\nThe subsequences of nums with at most 2 elements are:\nThe output would be 24.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,0,6], k = 1\nOutput: 2 2\nExplanation:\nFor subsequences with exactly 1 element, the minimum and maximum values are the element itself. Therefore, the total is 5 + 5 + 0 + 0 + 6 + 6 = 22 .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1], k = 2\nOutput: 12\nExplanation:\nThe subsequences [1, 1] and [1] each appear 3 times. For all of them, the minimum and maximum are both 1. Thus, the total is 12.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109",
+    "1 <= k <= min(70, nums.length)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMaxSums(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMaxSums(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMaxSums(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMaxSums(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minMaxSums(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMaxSums(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minMaxSums = function(nums, k) {\n    \n};",
+    "typescript": "function minMaxSums(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minMaxSums($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMaxSums(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMaxSums(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMaxSums(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minMaxSums(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_max_sums(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minMaxSums(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_max_sums(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-max-sums nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_max_sums(Nums :: [integer()], K :: integer()) -> integer().\nmin_max_sums(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_max_sums(nums :: [integer], k :: integer) :: integer\n  def min_max_sums(nums, k) do\n    \n  end\nend"
+  }
+}

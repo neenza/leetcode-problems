@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Levels to Gain More Points",
+  "problem_id": "3355",
+  "frontend_id": "3096",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-levels-to-gain-more-points",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given a binary array possible of length n.\nAlice and Bob are playing a game that consists of n levels. Some of the levels in the game are impossible to clear while others can always be cleared. In particular, if possible[i] == 0, then the ith level is impossible to clear for both the players. A player gains 1 point on clearing a level and loses 1 point if the player fails to clear it.\nAt the start of the game, Alice will play some levels in the given order starting from the 0th level, after which Bob will play for the rest of the levels.\nAlice wants to know the minimum number of levels she should play to gain more points than Bob, if both players play optimally to maximize their points.\nReturn the minimum number of levels Alice should play to gain more points. If this is not possible, return -1.\nNote that each player must play at least 1 level.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: possible = [1,0,1,0]\nOutput: 1\nExplanation:\nLet's look at all the levels that Alice can play up to:\nAlice must play a minimum of 1 level to gain more points.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: possible = [1,1,1,1,1]\nOutput: 3\nExplanation:\nLet's look at all the levels that Alice can play up to:\nAlice must play a minimum of 3 levels to gain more points.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: possible = [0,0]\nOutput: -1\nExplanation:\nThe only possible way is for both players to play 1 level each. Alice plays level 0 and loses 1 point. Bob plays level 1 and loses 1 point. As both players have equal points, Alice can't gain more points than Bob.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == possible.length <= 105",
+    "possible[i] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Change all <code>0</code> in possible array into <code>-1</code>.",
+    "We need to find the shortest non-empty prefix of the new possible array such that the sum of elements in it is strictly larger than the remaining part."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumLevels(vector<int>& possible) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumLevels(int[] possible) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumLevels(self, possible):\n        \"\"\"\n        :type possible: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumLevels(self, possible: List[int]) -> int:\n        ",
+    "c": "int minimumLevels(int* possible, int possibleSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumLevels(int[] possible) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} possible\n * @return {number}\n */\nvar minimumLevels = function(possible) {\n    \n};",
+    "typescript": "function minimumLevels(possible: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $possible\n     * @return Integer\n     */\n    function minimumLevels($possible) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumLevels(_ possible: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumLevels(possible: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumLevels(List<int> possible) {\n    \n  }\n}",
+    "golang": "func minimumLevels(possible []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} possible\n# @return {Integer}\ndef minimum_levels(possible)\n    \nend",
+    "scala": "object Solution {\n    def minimumLevels(possible: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_levels(possible: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-levels possible)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_levels(Possible :: [integer()]) -> integer().\nminimum_levels(Possible) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_levels(possible :: [integer]) :: integer\n  def minimum_levels(possible) do\n    \n  end\nend"
+  }
+}

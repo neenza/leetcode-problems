@@ -1,0 +1,56 @@
+{
+  "title": "Subsequence With the Minimum Score",
+  "problem_id": "2701",
+  "frontend_id": "2565",
+  "difficulty": "Hard",
+  "problem_slug": "subsequence-with-the-minimum-score",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Binary Search"
+  ],
+  "description": "You are given two strings s and t.\nYou are allowed to remove any number of characters from the string t.\nThe score of the string is 0 if no characters are removed from the string t, otherwise:\nThen the score of the string is right - left + 1.\nReturn the minimum possible score to make t a subsequence of s.\nA subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., \"ace\" is a subsequence of \"abcde\" while \"aec\" is not).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abacaba\", t = \"bzaa\"\nOutput: 1\nExplanation: In this example, we remove the character \"z\" at index 1 (0-indexed).\nThe string t becomes \"baa\" which is a subsequence of the string \"abacaba\" and the score is 1 - 1 + 1 = 1.\nIt can be proven that 1 is the minimum score that we can achieve.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cde\", t = \"xyz\"\nOutput: 3\nExplanation: In this example, we remove characters \"x\", \"y\" and \"z\" at indices 0, 1, and 2 (0-indexed).\nThe string t becomes \"\" which is a subsequence of the string \"cde\" and the score is 2 - 0 + 1 = 3.\nIt can be proven that 3 is the minimum score that we can achieve.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 105",
+    "s and t consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain two pointers: i and j. We need to perform a similar operation: while t[0:i] + t[j:n] is not a subsequence of the string s, increase j.",
+    "We can check the condition greedily. Create the array leftmost[i] which denotes minimum index k, such that in prefix s[0:k] exists subsequence t[0:i]. Similarly, we define rightmost[i].",
+    "If leftmost[i] < rightmost[j] then t[0:i] + t[j:n] is the subsequence of s."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumScore(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumScore(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumScore(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumScore(self, s: str, t: str) -> int:\n        ",
+    "c": "int minimumScore(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumScore(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar minimumScore = function(s, t) {\n    \n};",
+    "typescript": "function minimumScore(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function minimumScore($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumScore(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumScore(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumScore(String s, String t) {\n    \n  }\n}",
+    "golang": "func minimumScore(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef minimum_score(s, t)\n    \nend",
+    "scala": "object Solution {\n    def minimumScore(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_score(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-score s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_score(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nminimum_score(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_score(s :: String.t, t :: String.t) :: integer\n  def minimum_score(s, t) do\n    \n  end\nend"
+  }
+}

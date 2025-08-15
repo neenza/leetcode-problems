@@ -1,0 +1,59 @@
+{
+  "title": "Count Submatrices with Top-Left Element and Sum Less Than k",
+  "problem_id": "3338",
+  "frontend_id": "3070",
+  "difficulty": "Medium",
+  "problem_slug": "count-submatrices-with-top-left-element-and-sum-less-than-k",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer matrix grid and an integer k.\nReturn the number of submatrices that contain the top-left element of the grid, and have a sum less than or equal to k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[7,6,3],[6,6,1]], k = 18\nOutput: 4\nExplanation: There are only 4 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 18.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/01/example1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[7,2,9],[1,5,0],[2,6,6]], k = 20\nOutput: 6\nExplanation: There are only 6 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 20.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/01/example21.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= n, m <= 1000",
+    "0 <= grid[i][j] <= 1000",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSubmatrices(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubmatrices(int[][] grid, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubmatrices(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubmatrices(self, grid: List[List[int]], k: int) -> int:\n        ",
+    "c": "int countSubmatrices(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSubmatrices(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar countSubmatrices = function(grid, k) {\n    \n};",
+    "typescript": "function countSubmatrices(grid: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $k\n     * @return Integer\n     */\n    function countSubmatrices($grid, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubmatrices(_ grid: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubmatrices(grid: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubmatrices(List<List<int>> grid, int k) {\n    \n  }\n}",
+    "golang": "func countSubmatrices(grid [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} k\n# @return {Integer}\ndef count_submatrices(grid, k)\n    \nend",
+    "scala": "object Solution {\n    def countSubmatrices(grid: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_submatrices(grid: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-submatrices grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_submatrices(Grid :: [[integer()]], K :: integer()) -> integer().\ncount_submatrices(Grid, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_submatrices(grid :: [[integer]], k :: integer) :: integer\n  def count_submatrices(grid, k) do\n    \n  end\nend"
+  }
+}

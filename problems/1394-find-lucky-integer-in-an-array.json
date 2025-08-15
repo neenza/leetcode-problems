@@ -1,0 +1,60 @@
+{
+  "title": "Find Lucky Integer in an Array",
+  "problem_id": "1510",
+  "frontend_id": "1394",
+  "difficulty": "Easy",
+  "problem_slug": "find-lucky-integer-in-an-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "Given an array of integers arr, a lucky integer is an integer that has a frequency in the array equal to its value.\nReturn the largest lucky integer in the array. If there is no lucky integer return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [2,2,3,4]\nOutput: 2\nExplanation: The only lucky number in the array is 2 because frequency[2] == 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,2,2,3,3,3]\nOutput: 3\nExplanation: 1, 2 and 3 are all lucky numbers, return the largest of them.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [2,2,2,3,3]\nOutput: -1\nExplanation: There are no lucky numbers in the array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 500",
+    "1 <= arr[i] <= 500"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of each integer in the array.",
+    "Get all lucky numbers and return the largest of them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findLucky(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLucky(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLucky(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLucky(self, arr: List[int]) -> int:\n        ",
+    "c": "int findLucky(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindLucky(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar findLucky = function(arr) {\n    \n};",
+    "typescript": "function findLucky(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function findLucky($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLucky(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLucky(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLucky(List<int> arr) {\n    \n  }\n}",
+    "golang": "func findLucky(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef find_lucky(arr)\n    \nend",
+    "scala": "object Solution {\n    def findLucky(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_lucky(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-lucky arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_lucky(Arr :: [integer()]) -> integer().\nfind_lucky(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_lucky(arr :: [integer]) :: integer\n  def find_lucky(arr) do\n    \n  end\nend"
+  }
+}

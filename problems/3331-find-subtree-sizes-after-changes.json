@@ -1,0 +1,65 @@
+{
+  "title": "Find Subtree Sizes After Changes",
+  "problem_id": "3576",
+  "frontend_id": "3331",
+  "difficulty": "Medium",
+  "problem_slug": "find-subtree-sizes-after-changes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "You are given a tree rooted at node 0 that consists of n nodes numbered from 0 to n - 1. The tree is represented by an array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\nYou are also given a string s of length n, where s[i] is the character assigned to node i.\nWe make the following changes on the tree one time simultaneously for all nodes x from 1 to n - 1:\nReturn an array answer of size n where answer[i] is the size of the subtree rooted at node i in the final tree.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: parent = [-1,0,0,1,1,1], s = \"abaabc\"\nOutput: [6,3,1,1,1,1]\nExplanation:\nThe parent of node 3 will change from node 1 to node 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/08/15/graphex1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: parent = [-1,0,4,0,1], s = \"abbba\"\nOutput: [5,2,1,1,1]\nExplanation:\nThe following changes will happen at the same time:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/08/20/exgraph2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == parent.length == s.length",
+    "1 <= n <= 105",
+    "0 <= parent[i] <= n - 1 for all i >= 1.",
+    "parent[0] == -1",
+    "parent represents a valid tree.",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Perform a depth-first search on the tree, starting from the root.",
+    "During the DFS, keep track of the most recent node where each character from 'a' to 'z' has been seen."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findSubtreeSizes(vector<int>& parent, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findSubtreeSizes(int[] parent, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findSubtreeSizes(self, parent, s):\n        \"\"\"\n        :type parent: List[int]\n        :type s: str\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findSubtreeSizes(self, parent: List[int], s: str) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findSubtreeSizes(int* parent, int parentSize, char* s, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindSubtreeSizes(int[] parent, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parent\n * @param {string} s\n * @return {number[]}\n */\nvar findSubtreeSizes = function(parent, s) {\n    \n};",
+    "typescript": "function findSubtreeSizes(parent: number[], s: string): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $parent\n     * @param String $s\n     * @return Integer[]\n     */\n    function findSubtreeSizes($parent, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findSubtreeSizes(_ parent: [Int], _ s: String) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findSubtreeSizes(parent: IntArray, s: String): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findSubtreeSizes(List<int> parent, String s) {\n    \n  }\n}",
+    "golang": "func findSubtreeSizes(parent []int, s string) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} parent\n# @param {String} s\n# @return {Integer[]}\ndef find_subtree_sizes(parent, s)\n    \nend",
+    "scala": "object Solution {\n    def findSubtreeSizes(parent: Array[Int], s: String): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_subtree_sizes(parent: Vec<i32>, s: String) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-subtree-sizes parent s)\n  (-> (listof exact-integer?) string? (listof exact-integer?))\n  )",
+    "erlang": "-spec find_subtree_sizes(Parent :: [integer()], S :: unicode:unicode_binary()) -> [integer()].\nfind_subtree_sizes(Parent, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_subtree_sizes(parent :: [integer], s :: String.t) :: [integer]\n  def find_subtree_sizes(parent, s) do\n    \n  end\nend"
+  }
+}

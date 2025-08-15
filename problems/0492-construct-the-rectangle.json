@@ -1,0 +1,56 @@
+{
+  "title": "Construct the Rectangle",
+  "problem_id": "492",
+  "frontend_id": "492",
+  "difficulty": "Easy",
+  "problem_slug": "construct-the-rectangle",
+  "topics": [
+    "Math"
+  ],
+  "description": "A web developer needs to know how to design a web page's size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:\nReturn an array [L, W] where L and W are the length and width of the web page you designed in sequence.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: area = 4\nOutput: [2,2]\nExplanation: The target area is 4, and all the possible ways to construct it are [1,4], [2,2], [4,1]. \nBut according to requirement 2, [1,4] is illegal; according to requirement 3,  [4,1] is not optimal compared to [2,2]. So the length L is 2, and the width W is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: area = 37\nOutput: [37,1]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: area = 122122\nOutput: [427,286]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= area <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The W is always less than or equal to the square root of the area, so we start searching at sqrt(area) till we find the result."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> constructRectangle(int area) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] constructRectangle(int area) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def constructRectangle(self, area):\n        \"\"\"\n        :type area: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def constructRectangle(self, area: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* constructRectangle(int area, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ConstructRectangle(int area) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} area\n * @return {number[]}\n */\nvar constructRectangle = function(area) {\n    \n};",
+    "typescript": "function constructRectangle(area: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $area\n     * @return Integer[]\n     */\n    function constructRectangle($area) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func constructRectangle(_ area: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun constructRectangle(area: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> constructRectangle(int area) {\n    \n  }\n}",
+    "golang": "func constructRectangle(area int) []int {\n    \n}",
+    "ruby": "# @param {Integer} area\n# @return {Integer[]}\ndef construct_rectangle(area)\n    \nend",
+    "scala": "object Solution {\n    def constructRectangle(area: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn construct_rectangle(area: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (construct-rectangle area)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec construct_rectangle(Area :: integer()) -> [integer()].\nconstruct_rectangle(Area) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec construct_rectangle(area :: integer) :: [integer]\n  def construct_rectangle(area) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Check if Object Instance of Class",
+  "problem_id": "2758",
+  "frontend_id": "2618",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-object-instance-of-class",
+  "topics": [],
+  "description": "Write a function that checks if a given value is an instance of a given class or superclass. For this problem, an object is considered an instance of a given class if that object has access to that class's methods.\nThere are no constraints on the data types that can be passed to the function. For example, the value or the class could be undefined.\nExample 1:\nExample 2:\nExample 3:\nExample 4:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: func = () => checkIfInstanceOf(new Date(), Date)\nOutput: true\nExplanation: The object returned by the Date constructor is, by definition, an instance of Date.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: func = () => { class Animal {}; class Dog extends Animal {}; return checkIfInstanceOf(new Dog(), Animal); }\nOutput: true\nExplanation:\nclass Animal {};\nclass Dog extends Animal {};\ncheckIfInstanceOf(new Dog(), Animal); // true\n\nDog is a subclass of Animal. Therefore, a Dog object is an instance of both Dog and Animal.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: func = () => checkIfInstanceOf(Date, Date)\nOutput: false\nExplanation: A date constructor cannot logically be an instance of itself.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: func = () => checkIfInstanceOf(5, Number)\nOutput: true\nExplanation: 5 is a Number. Note that the \"instanceof\" keyword would return false. However, it is still considered an instance of Number because it accesses the Number methods. For example \"toFixed()\".",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "In Javascript, inheritance is achieved with the prototype chain.",
+    "You can get the prototype of an object with the Object.getPrototypeOf(obj) function. Alternatively, you can code obj['__proto__'].",
+    "You can compare an object's __proto__ with classFunction.prototype.",
+    "Traverse the entire prototype chain until you find a match."
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @param {*} obj\n * @param {*} classFunction\n * @return {boolean}\n */\nvar checkIfInstanceOf = function(obj, classFunction) {\n    \n};\n\n/**\n * checkIfInstanceOf(new Date(), Date); // true\n */",
+    "typescript": "function checkIfInstanceOf(obj: any, classFunction: any): boolean {\n    \n};\n\n/**\n * checkIfInstanceOf(new Date(), Date); // true\n */"
+  }
+}

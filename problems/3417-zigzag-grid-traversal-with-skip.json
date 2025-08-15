@@ -1,0 +1,64 @@
+{
+  "title": "Zigzag Grid Traversal With Skip",
+  "problem_id": "3708",
+  "frontend_id": "3417",
+  "difficulty": "Easy",
+  "problem_slug": "zigzag-grid-traversal-with-skip",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given an m x n 2D array grid of positive integers.\nYour task is to traverse grid in a zigzag pattern while skipping every alternate cell.\nZigzag pattern traversal is defined as following the below actions:\nNote that you must skip every alternate cell during the traversal.\nReturn an array of integers result containing, in order, the value of the cells visited during the zigzag traversal with skips.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2],[3,4]]\nOutput: [1,4]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/23/4012_example0.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[2,1],[2,1],[2,1]]\nOutput: [2,1,2]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/23/4012_example1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,3,5,7,9]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/23/4012_example2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n == grid.length <= 50",
+    "2 <= m == grid[i].length <= 50",
+    "1 <= grid[i][j] <= 2500"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> zigzagTraversal(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> zigzagTraversal(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def zigzagTraversal(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def zigzagTraversal(self, grid: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* zigzagTraversal(int** grid, int gridSize, int* gridColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> ZigzagTraversal(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number[]}\n */\nvar zigzagTraversal = function(grid) {\n    \n};",
+    "typescript": "function zigzagTraversal(grid: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer[]\n     */\n    function zigzagTraversal($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func zigzagTraversal(_ grid: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun zigzagTraversal(grid: Array<IntArray>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> zigzagTraversal(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func zigzagTraversal(grid [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer[]}\ndef zigzag_traversal(grid)\n    \nend",
+    "scala": "object Solution {\n    def zigzagTraversal(grid: Array[Array[Int]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn zigzag_traversal(grid: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (zigzag-traversal grid)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec zigzag_traversal(Grid :: [[integer()]]) -> [integer()].\nzigzag_traversal(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec zigzag_traversal(grid :: [[integer]]) :: [integer]\n  def zigzag_traversal(grid) do\n    \n  end\nend"
+  }
+}

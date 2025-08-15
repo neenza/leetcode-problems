@@ -1,0 +1,63 @@
+{
+  "title": "Parse Lisp Expression",
+  "problem_id": "736",
+  "frontend_id": "736",
+  "difficulty": "Hard",
+  "problem_slug": "parse-lisp-expression",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Stack",
+    "Recursion"
+  ],
+  "description": "You are given a string expression representing a Lisp-like expression to return the integer value of.\nThe syntax for these expressions is given as follows.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: expression = \"(let x 2 (mult x (let x 3 y 4 (add x y))))\"\nOutput: 14\nExplanation: In the expression (add x y), when checking for the value of the variable x,\nwe check from the innermost scope to the outermost in the context of the variable we are trying to evaluate.\nSince x = 3 is found first, the value of x is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: expression = \"(let x 3 x 2 x)\"\nOutput: 2\nExplanation: Assignment in let statements is processed sequentially.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: expression = \"(let x 1 y 2 x (add x y) (add x y))\"\nOutput: 5\nExplanation: The first (add x y) evaluates as 3, and is assigned to x.\nThe second (add x y) evaluates as 3+2 = 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= expression.length <= 2000",
+    "There are no leading or trailing spaces in expression.",
+    "All tokens are separated by a single space in expression.",
+    "The answer and all intermediate calculations of that answer are guaranteed to fit in a 32-bit integer.",
+    "The expression is guaranteed to be legal and evaluate to an integer."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "* If the expression starts with a digit or '-', it's an integer: return it.\r\n\r\n* If the expression starts with a letter, it's a variable.  Recall it by checking the current scope in reverse order.\r\n\r\n* Otherwise, group the tokens (variables or expressions) within this expression by counting the \"balance\" `bal` of the occurrences of `'('` minus the number of occurrences of `')'`.  When the balance is zero, we have ended a token.  For example, `(add 1 (add 2 3))` should have tokens `'1'` and `'(add 2 3)'`.\r\n\r\n* For add and mult expressions, evaluate each token and return the addition or multiplication of them.\r\n\r\n* For let expressions, evaluate each expression sequentially and assign it to the variable in the current scope, then return the evaluation of the final expression."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int evaluate(string expression) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int evaluate(String expression) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def evaluate(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def evaluate(self, expression: str) -> int:\n        ",
+    "c": "int evaluate(char* expression) {\n    \n}",
+    "csharp": "public class Solution {\n    public int Evaluate(string expression) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @return {number}\n */\nvar evaluate = function(expression) {\n    \n};",
+    "typescript": "function evaluate(expression: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $expression\n     * @return Integer\n     */\n    function evaluate($expression) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func evaluate(_ expression: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun evaluate(expression: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int evaluate(String expression) {\n    \n  }\n}",
+    "golang": "func evaluate(expression string) int {\n    \n}",
+    "ruby": "# @param {String} expression\n# @return {Integer}\ndef evaluate(expression)\n    \nend",
+    "scala": "object Solution {\n    def evaluate(expression: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn evaluate(expression: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (evaluate expression)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec evaluate(Expression :: unicode:unicode_binary()) -> integer().\nevaluate(Expression) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec evaluate(expression :: String.t) :: integer\n  def evaluate(expression) do\n    \n  end\nend"
+  }
+}

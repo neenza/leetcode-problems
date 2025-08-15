@@ -1,0 +1,59 @@
+{
+  "title": "The K Weakest Rows in a Matrix",
+  "problem_id": "1463",
+  "frontend_id": "1337",
+  "difficulty": "Easy",
+  "problem_slug": "the-k-weakest-rows-in-a-matrix",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ],
+  "description": "You are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of the civilians. That is, all the 1's will appear to the left of all the 0's in each row.\nA row i is weaker than a row j if one of the following is true:\nReturn the indices of the k weakest rows in the matrix ordered from weakest to strongest.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = \n[[1,1,0,0,0],\n [1,1,1,1,0],\n [1,0,0,0,0],\n [1,1,0,0,0],\n [1,1,1,1,1]], \nk = 3\nOutput: [2,0,3]\nExplanation: \nThe number of soldiers in each row is: \n- Row 0: 2 \n- Row 1: 4 \n- Row 2: 1 \n- Row 3: 2 \n- Row 4: 5 \nThe rows ordered from weakest to strongest are [2,0,3,1,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = \n[[1,0,0,0],\n [1,1,1,1],\n [1,0,0,0],\n [1,0,0,0]], \nk = 2\nOutput: [0,2]\nExplanation: \nThe number of soldiers in each row is: \n- Row 0: 1 \n- Row 1: 4 \n- Row 2: 1 \n- Row 3: 1 \nThe rows ordered from weakest to strongest are [0,2,3,1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "2 <= n, m <= 100",
+    "1 <= k <= m",
+    "matrix[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the matrix row indexes by the number of soldiers and then row indexes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] kWeakestRows(int[][] mat, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kWeakestRows(self, mat, k):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* kWeakestRows(int** mat, int matSize, int* matColSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] KWeakestRows(int[][] mat, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} k\n * @return {number[]}\n */\nvar kWeakestRows = function(mat, k) {\n    \n};",
+    "typescript": "function kWeakestRows(mat: number[][], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function kWeakestRows($mat, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kWeakestRows(_ mat: [[Int]], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kWeakestRows(mat: Array<IntArray>, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> kWeakestRows(List<List<int>> mat, int k) {\n    \n  }\n}",
+    "golang": "func kWeakestRows(mat [][]int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @param {Integer} k\n# @return {Integer[]}\ndef k_weakest_rows(mat, k)\n    \nend",
+    "scala": "object Solution {\n    def kWeakestRows(mat: Array[Array[Int]], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn k_weakest_rows(mat: Vec<Vec<i32>>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (k-weakest-rows mat k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec k_weakest_rows(Mat :: [[integer()]], K :: integer()) -> [integer()].\nk_weakest_rows(Mat, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec k_weakest_rows(mat :: [[integer]], k :: integer) :: [integer]\n  def k_weakest_rows(mat, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Verify Preorder Serialization of a Binary Tree",
+  "problem_id": "331",
+  "frontend_id": "331",
+  "difficulty": "Medium",
+  "problem_slug": "verify-preorder-serialization-of-a-binary-tree",
+  "topics": [
+    "String",
+    "Stack",
+    "Tree",
+    "Binary Tree"
+  ],
+  "description": "One way to serialize a binary tree is to use preorder traversal. When we encounter a non-null node, we record the node's value. If it is a null node, we record using a sentinel value such as '#'.\nFor example, the above binary tree can be serialized to the string \"9,3,4,#,#,1,#,#,2,#,6,#,#\", where '#' represents a null node.\nGiven a string of comma-separated values preorder, return true if it is a correct preorder traversal serialization of a binary tree.\nIt is guaranteed that each comma-separated value in the string must be either an integer or a character '#' representing null pointer.\nYou may assume that the input format is always valid.\nNote: You are not allowed to reconstruct the tree.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: preorder = \"9,3,4,#,#,1,#,#,2,#,6,#,#\"\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/12/pre-tree.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: preorder = \"1,#\"\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/12/pre-tree.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: preorder = \"9,#,#,1\"\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/12/pre-tree.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= preorder.length <= 104",
+    "preorder consist of integers in the range [0, 100] and '#' separated by commas ','."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isValidSerialization(string preorder) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValidSerialization(String preorder) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isValidSerialization(self, preorder):\n        \"\"\"\n        :type preorder: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isValidSerialization(self, preorder: str) -> bool:\n        ",
+    "c": "bool isValidSerialization(char* preorder) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsValidSerialization(string preorder) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} preorder\n * @return {boolean}\n */\nvar isValidSerialization = function(preorder) {\n    \n};",
+    "typescript": "function isValidSerialization(preorder: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $preorder\n     * @return Boolean\n     */\n    function isValidSerialization($preorder) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isValidSerialization(_ preorder: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isValidSerialization(preorder: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isValidSerialization(String preorder) {\n    \n  }\n}",
+    "golang": "func isValidSerialization(preorder string) bool {\n    \n}",
+    "ruby": "# @param {String} preorder\n# @return {Boolean}\ndef is_valid_serialization(preorder)\n    \nend",
+    "scala": "object Solution {\n    def isValidSerialization(preorder: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_valid_serialization(preorder: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-valid-serialization preorder)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_valid_serialization(Preorder :: unicode:unicode_binary()) -> boolean().\nis_valid_serialization(Preorder) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_valid_serialization(preorder :: String.t) :: boolean\n  def is_valid_serialization(preorder) do\n    \n  end\nend"
+  }
+}

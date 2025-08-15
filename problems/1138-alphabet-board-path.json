@@ -1,0 +1,54 @@
+{
+  "title": "Alphabet Board Path",
+  "problem_id": "1238",
+  "frontend_id": "1138",
+  "difficulty": "Medium",
+  "problem_slug": "alphabet-board-path",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "On an alphabet board, we start at position (0, 0), corresponding to character board[0][0].\nHere, board = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"], as shown in the diagram below.\nWe may make the following moves:\n(Here, the only positions that exist on the board are positions with letters on them.)\nReturn a sequence of moves that makes our answer equal to target in the minimum number of moves.  You may return any path that does so.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: target = \"leet\"\r\nOutput: \"DDR!UURRR!!DDD!\"",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/07/28/azboard.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: target = \"code\"\r\nOutput: \"RR!DDRR!UUL!R!\"",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/07/28/azboard.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= target.length <= 100",
+    "target consists only of English lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create a hashmap from letter to position on the board.",
+    "Now for each letter, try moving there in steps, where at each step you check if it is inside the boundaries of the board."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string alphabetBoardPath(string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String alphabetBoardPath(String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def alphabetBoardPath(self, target):\n        \"\"\"\n        :type target: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def alphabetBoardPath(self, target: str) -> str:\n        ",
+    "c": "\n\nchar * alphabetBoardPath(char * target){\n\n}",
+    "csharp": "public class Solution {\n    public string AlphabetBoardPath(string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} target\n * @return {string}\n */\nvar alphabetBoardPath = function(target) {\n    \n};",
+    "typescript": "function alphabetBoardPath(target: string): string {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $target\n     * @return String\n     */\n    function alphabetBoardPath($target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func alphabetBoardPath(_ target: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun alphabetBoardPath(target: String): String {\n        \n    }\n}",
+    "golang": "func alphabetBoardPath(target string) string {\n    \n}",
+    "ruby": "# @param {String} target\n# @return {String}\ndef alphabet_board_path(target)\n    \nend",
+    "scala": "object Solution {\n    def alphabetBoardPath(target: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn alphabet_board_path(target: String) -> String {\n        \n    }\n}"
+  }
+}

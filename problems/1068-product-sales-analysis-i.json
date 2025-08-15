@@ -1,0 +1,39 @@
+{
+  "title": "Product Sales Analysis I",
+  "problem_id": "1153",
+  "frontend_id": "1068",
+  "difficulty": "Easy",
+  "problem_slug": "product-sales-analysis-i",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Sales\nTable: Product\nWrite a solution to report the product_name, year, and price for each sale_id in the Sales table.\nReturn the resulting table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nproduct_id is a foreign key (reference column) to Product table.\nEach row of this table shows a sale on the product product_id in a certain year.\nNote that the price is per unit.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| product_id   | int     |\n| product_name | varchar |\n+--------------+---------+\nproduct_id is the primary key (column with unique values) of this table.\nEach row of this table indicates the product name of each product.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nSales table:\n+---------+------------+------+----------+-------+\n| sale_id | product_id | year | quantity | price |\n+---------+------------+------+----------+-------+ \n| 1       | 100        | 2008 | 10       | 5000  |\n| 2       | 100        | 2009 | 12       | 5000  |\n| 7       | 200        | 2011 | 15       | 9000  |\n+---------+------------+------+----------+-------+\nProduct table:\n+------------+--------------+\n| product_id | product_name |\n+------------+--------------+\n| 100        | Nokia        |\n| 200        | Apple        |\n| 300        | Samsung      |\n+------------+--------------+\nOutput: \n+--------------+-------+-------+\n| product_name | year  | price |\n+--------------+-------+-------+\n| Nokia        | 2008  | 5000  |\n| Nokia        | 2009  | 5000  |\n| Apple        | 2011  | 9000  |\n+--------------+-------+-------+\nExplanation: \nFrom sale_id = 1, we can conclude that Nokia was sold for 5000 in the year 2008.\nFrom sale_id = 2, we can conclude that Nokia was sold for 5000 in the year 2009.\nFrom sale_id = 7, we can conclude that Apple was sold for 9000 in the year 2011.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef sales_analysis(sales: pd.DataFrame, product: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "​[TOC]\n​\n# Solution\n​\n---\n​\n## pandas\n\n### Approach: Inner Join#### AlgorithmThe information we want to display belongs to two separate DataFrames. It's important to note that these two DataFrames are related through the `product_id` column. Therefore, we will merge these two DataFrames using this column. This way, we will be able to present information from both DataFrames simultaneously. The `merge()` method defaults to an `INNER JOIN`, so there is no need to provide any argument to the `how` parameter, as we want to retrieve only the matching records from both DataFrames.\n\n```python\nsales_and_product = sales.merge(\n    product,\n    on=[\"product_id\"]\n    )\n```\nBelow is how the new dataframe, sales_and_product, looks like after the merge:\n\n| sale_id | product_id | year | quantity | price | product_name |\n| ------- | ---------- | ---- | -------- | ----- | ------------ |\n| 1       | 100        | 2008 | 10       | 5000  | Nokia        |\n| 2       | 100        | 2009 | 12       | 5000  | Nokia        |\n| 7       | 200        | 2011 | 15       | 9000  | Apple        |Since we only need to report the columns `product_name`, `year`, and `price`, we create another DataFrame containing only these required columns. Double brackets are used to extract a subset of data and yield a new DataFrame.\n\n```python\ndf = sales_and_product[['product_name', 'year', 'price']]\n```#### Implementation​---\n​\n## Database\n\n### Approach: Inner Join#### AlgorithmThe information we want to display belongs to two separate tables. It's important to note that these two tables are related through the `product_id` column. Therefore, we will join these two tables using this column. This way, we will be able to present information from both tables simultaneously. We `JOIN` the two tables `ON` the `product_id` column and `SELECT` the columns needed for the final output.\n​#### Implementation\n\n```sql\nSELECT \n    p.product_name, s.year, s.price\nFROM \n    Sales s\nJOIN \n    Product p\nON\n    s.product_id = p.product_id\n```\n​"
+}

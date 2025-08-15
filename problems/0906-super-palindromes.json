@@ -1,0 +1,56 @@
+{
+  "title": "Super Palindromes",
+  "problem_id": "942",
+  "frontend_id": "906",
+  "difficulty": "Hard",
+  "problem_slug": "super-palindromes",
+  "topics": [
+    "Math",
+    "String",
+    "Enumeration"
+  ],
+  "description": "Let's say a positive integer is a super-palindrome if it is a palindrome, and it is also the square of a palindrome.\nGiven two positive integers left and right represented as strings, return the number of super-palindromes integers in the inclusive range [left, right].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: left = \"4\", right = \"1000\"\nOutput: 4\nExplanation: 4, 9, 121, and 484 are superpalindromes.\nNote that 676 is not a superpalindrome: 26 * 26 = 676, but 26 is not a palindrome.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: left = \"1\", right = \"2\"\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= left.length, right.length <= 18",
+    "left and right consist of only digits.",
+    "left and right cannot have leading zeros.",
+    "left and right represent integers in the range [1, 1018 - 1].",
+    "left is less than or equal to right."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int superpalindromesInRange(string left, string right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int superpalindromesInRange(String left, String right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def superpalindromesInRange(self, left, right):\n        \"\"\"\n        :type left: str\n        :type right: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def superpalindromesInRange(self, left: str, right: str) -> int:\n        ",
+    "c": "int superpalindromesInRange(char* left, char* right) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SuperpalindromesInRange(string left, string right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} left\n * @param {string} right\n * @return {number}\n */\nvar superpalindromesInRange = function(left, right) {\n    \n};",
+    "typescript": "function superpalindromesInRange(left: string, right: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $left\n     * @param String $right\n     * @return Integer\n     */\n    function superpalindromesInRange($left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func superpalindromesInRange(_ left: String, _ right: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun superpalindromesInRange(left: String, right: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int superpalindromesInRange(String left, String right) {\n    \n  }\n}",
+    "golang": "func superpalindromesInRange(left string, right string) int {\n    \n}",
+    "ruby": "# @param {String} left\n# @param {String} right\n# @return {Integer}\ndef superpalindromes_in_range(left, right)\n    \nend",
+    "scala": "object Solution {\n    def superpalindromesInRange(left: String, right: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn superpalindromes_in_range(left: String, right: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (superpalindromes-in-range left right)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec superpalindromes_in_range(Left :: unicode:unicode_binary(), Right :: unicode:unicode_binary()) -> integer().\nsuperpalindromes_in_range(Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec superpalindromes_in_range(left :: String.t, right :: String.t) :: integer\n  def superpalindromes_in_range(left, right) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Mathematical\n\n**Intuition**\n\nSay $$P = R^2$$ is a superpalindrome.\n\nBecause $$R$$ is a palindrome, the first half of the digits in $$R$$ determine $$R$$ up to two possibilities.  We can iterate through these digits: let $$k$$ be the first half of the digits in $$R$$.  For example, if $$k = 1234$$, then $$R = 1234321$$ or $$R = 12344321$$.  Each possibility has either an odd or an even number of digits in $$R$$.\n\nNotice because $$P < 10^{18}$$, $$R < (10^{18})^{\\frac{1}{2}} = 10^9$$, and $$R = k \\| k'$$ (concatenation), where $$k'$$ is $$k$$ reversed (and also possibly truncated by one digit); so that $$k < 10^5 = \\small\\text{MAGIC}$$, our magic constant.\n\n**Algorithm**\n\nFor each $$1 \\leq k < \\small\\text{MAGIC}$$, let's create the associated palindrome $$R$$, and check whether $$R^2$$ is a palindrome.\n\nWe should handle the odd and even possibilities separately, as we would like to break early so as not to do extra work.\n\nTo check whether an integer is a palindrome, we could check whether it is equal to its reverse.  To create the reverse of an integer, we can do it digit by digit.**Complexity Analysis**\n\n* Time Complexity:  $$O(W^{\\frac{1}{4}} * \\log W)$$, where $$W = 10^{18}$$ is our upper limit for $$R$$.  The $$\\log W$$ term comes from checking whether each candidate is the root of a palindrome.\n\n* Space Complexity:  $$O(\\log W)$$, the space used to create the candidate palindrome."
+}

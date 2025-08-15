@@ -1,0 +1,54 @@
+{
+  "title": "Optimal Division",
+  "problem_id": "553",
+  "frontend_id": "553",
+  "difficulty": "Medium",
+  "problem_slug": "optimal-division",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums. The adjacent integers in nums will perform the float division.\nHowever, you can add any number of parenthesis at any position to change the priority of operations. You want to add these parentheses such the value of the expression after the evaluation is maximum.\nReturn the corresponding expression that has the maximum value in string format.\nNote: your expression should not contain redundant parenthesis.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1000,100,10,2]\nOutput: \"1000/(100/10/2)\"\nExplanation: 1000/(100/10/2) = 1000/((100/10)/2) = 200\nHowever, the bold parenthesis in \"1000/((100/10)/2)\" are redundant since they do not influence the operation priority.\nSo you should return \"1000/(100/10/2)\".\nOther cases:\n1000/(100/10)/2 = 50\n1000/(100/(10/2)) = 50\n1000/100/10/2 = 0.5\n1000/100/(10/2) = 2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,4]\nOutput: \"2/(3/4)\"\nExplanation: (2/(3/4)) = 8/3 = 2.667\nIt can be shown that after trying all possibilities, we cannot get an expression with evaluation greater than 2.667",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10",
+    "2 <= nums[i] <= 1000",
+    "There is only one optimal division for the given input."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string optimalDivision(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String optimalDivision(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def optimalDivision(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def optimalDivision(self, nums: List[int]) -> str:\n        ",
+    "c": "char* optimalDivision(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string OptimalDivision(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {string}\n */\nvar optimalDivision = function(nums) {\n    \n};",
+    "typescript": "function optimalDivision(nums: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return String\n     */\n    function optimalDivision($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func optimalDivision(_ nums: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun optimalDivision(nums: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String optimalDivision(List<int> nums) {\n    \n  }\n}",
+    "golang": "func optimalDivision(nums []int) string {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {String}\ndef optimal_division(nums)\n    \nend",
+    "scala": "object Solution {\n    def optimalDivision(nums: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn optimal_division(nums: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (optimal-division nums)\n  (-> (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec optimal_division(Nums :: [integer()]) -> unicode:unicode_binary().\noptimal_division(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec optimal_division(nums :: [integer]) :: String.t\n  def optimal_division(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Brute Force [Accepted]\n\n**Algorithm**\n\nBrute force of this problem is to divide the list into two parts $$left$$ and $$right$$ and call function for these two parts. We will iterate $$i$$ from $$start$$ to $$end$$ so that $$left=(start,i)$$ and $$right=(i+1,end)$$.\n\n$$left$$ and $$right$$ parts return their maximum and minimum value and corresponding strings.\n\nMinimum value can be found by dividing minimum of left by maximum of right i.e. $$minVal=left.min/right.max$$.\n\nSimilarly,Maximum value can be found by dividing maximum of left value by minimum of right value. i.e. $$maxVal=left.max/right.min$$.\n\nNow, how to add parenthesis? As associativity of division operator is from left to right i.e. by default left most divide should be done first, we need not have to add paranthesis to the left part, but we must add parenthesis to the right part.\n\neg- \"2/(3/4)\" will be formed as leftPart+\"/\"+\"(\"+rightPart+\")\", assuming leftPart is \"2\" and rightPart is\"3/4\".\n\nOne more point, we also don't require parenthesis to right part when it contains single digit.\n\neg- \"2/3\", here left part is \"2\" and right part is \"3\" (contains single digit) . 2/(3) is not valid.**Complexity Analysis**\n\n* Time complexity : $$O(n!)$$. Number of permutations of expression after applying brackets will be in $$O(n!)$$ where $$n$$ is the number of items in the list.\n\n* Space complexity: $$O(n^2)$$. Depth of recursion tree will be $$O(n)$$ and each node contains string of maximum length $$O(n)$$.\n\n---\n### Approach #2 Using Memorization [Accepted]\n\n**Algorithm**\n\nIn the above approach we called optimal function recursively for ever $$start$$ and $$end$$. We can notice that there are many redundant calls in the above approach, we can reduce these calls by using memorization to store the result of different function calls. Here, $$memo$$ array is used for this purpose.**Complexity Analysis**\n\n* Time complexity : $$O(n^3)$$. $$memo$$ array of size $$n^2$$ is filled and filling of each cell of the $$memo$$ array takes $$O(n)$$ time.\n\n* Space complexity : $$O(n^3)$$. $$memo$$ array of size $$n^2$$ where each cell of array contains string of length $$O(n)$$.\n\n---\n### Approach #3 Using some Math [Accepted]\n\n**Algorithm**\n\nUsing some simple math we can find the easy solution of this problem. Consider the input in the form of [a,b,c,d], now we have to set priority of\noperations to maximize a/b/c/d. We know that to maximize fraction $$p/q$$, $$q$$(denominator) should be minimized. So, to maximize $$a/b/c/d$$  we have to first minimize b/c/d. Now our objective turns to minimize the expression b/c/d.\n\nThere are two possible combinations of this expression, b/(c/d) and (b/c)/d.\n```\nb/(c/d)        (b/c)/d = b/c/d\n(b*d)/c        b/(d*c)\nd/c            1/(d*c)\n```\n\nObviously, $$d/c > 1/(d*c)$$ for $$d>1$$.\n\nYou can see that second combination will always be less than first one for numbers greater than $$1$$. So, the answer will be a/(b/c/d).\nSimilarly for expression like a/b/c/d/e/f... answer will be a/(b/c/d/e/f...).**Complexity Analysis**\n\n* Time complexity : $$O(n)$$. Single loop to traverse $$nums$$ array.\n\n* Space complexity : $$O(n)$$. $$res$$ variable is used to store the result."
+}

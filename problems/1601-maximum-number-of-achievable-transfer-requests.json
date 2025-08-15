@@ -1,0 +1,70 @@
+{
+  "title": "Maximum Number of Achievable Transfer Requests",
+  "problem_id": "1723",
+  "frontend_id": "1601",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-achievable-transfer-requests",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "description": "We have n buildings numbered from 0 to n - 1. Each building has a number of employees. It's transfer season, and some employees want to change the building they reside in.\nYou are given an array requests where requests[i] = [fromi, toi] represents an employee's request to transfer from building fromi to building toi.\nAll buildings are full, so a list of requests is achievable only if for each building, the net change in employee transfers is zero. This means the number of employees leaving is equal to the number of employees moving in. For example if n = 3 and two employees are leaving building 0, one is leaving building 1, and one is leaving building 2, there should be two employees moving to building 0, one employee moving to building 1, and one employee moving to building 2.\nReturn the maximum number of achievable requests.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, requests = [[0,1],[1,0],[0,1],[1,2],[2,0],[3,4]]\nOutput: 5\nExplantion: Let's see the requests:\nFrom building 0 we have employees x and y and both want to move to building 1.\nFrom building 1 we have employees a and b and they want to move to buildings 2 and 0 respectively.\nFrom building 2 we have employee z and they want to move to building 0.\nFrom building 3 we have employee c and they want to move to building 4.\nFrom building 4 we don't have any requests.\nWe can achieve the requests of users x and b by swapping their places.\nWe can achieve the requests of users y, a and z by swapping the places in the 3 buildings.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/10/move1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, requests = [[0,0],[1,2],[2,1]]\nOutput: 3\nExplantion: Let's see the requests:\nFrom building 0 we have employee x and they want to stay in the same building 0.\nFrom building 1 we have employee y and they want to move to building 2.\nFrom building 2 we have employee z and they want to move to building 1.\nWe can achieve all the requests.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/10/move2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, requests = [[0,3],[3,1],[1,2],[2,0]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/10/move2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 20",
+    "1 <= requests.length <= 16",
+    "requests[i].length == 2",
+    "0 <= fromi, toi < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think brute force",
+    "When is a subset of requests okay?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumRequests(int n, vector<vector<int>>& requests) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumRequests(int n, int[][] requests) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumRequests(self, n, requests):\n        \"\"\"\n        :type n: int\n        :type requests: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumRequests(self, n: int, requests: List[List[int]]) -> int:\n        ",
+    "c": "int maximumRequests(int n, int** requests, int requestsSize, int* requestsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumRequests(int n, int[][] requests) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} requests\n * @return {number}\n */\nvar maximumRequests = function(n, requests) {\n    \n};",
+    "typescript": "function maximumRequests(n: number, requests: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $requests\n     * @return Integer\n     */\n    function maximumRequests($n, $requests) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumRequests(_ n: Int, _ requests: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumRequests(n: Int, requests: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumRequests(int n, List<List<int>> requests) {\n    \n  }\n}",
+    "golang": "func maximumRequests(n int, requests [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} requests\n# @return {Integer}\ndef maximum_requests(n, requests)\n    \nend",
+    "scala": "object Solution {\n    def maximumRequests(n: Int, requests: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_requests(n: i32, requests: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-requests n requests)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_requests(N :: integer(), Requests :: [[integer()]]) -> integer().\nmaximum_requests(N, Requests) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_requests(n :: integer, requests :: [[integer]]) :: integer\n  def maximum_requests(n, requests) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n### Overview\n\nWe have $N$ buildings, each having some number of employees; there are some requests by the employees to get transferred from one building to another. We need to return the maximum number of requests that we can accommodate, considering the employee change count in each building should be zero, i.e. if one employee leaves a building, then some other employee should enter it too.\n\nThe most important observation is that the total requests could be at a max of $16$. Hence, trying out all the $2^{16}$ possibilities could be a possible solution. We have $16$ requests, and for each one, we can have two options either to consider this request and move the employees or don't consider it and move to the next request. This is similar to the classic 0/1 knapsack problem, as for each request, we can either take it (1) or not (0). We will discuss two approaches, one the recursive and other iterative.\n\n---\n\n\n### Approach 1: Backtracking\n\n**Intuition**\n\nAs we discussed, each request has two options; the first is to accept this and move the employee in request `[x, y]` from building `x` to `y` and the second is to ignore it. Since, in the end, we need to check if the change in each building is zero, we need to have an array where the indices for each building will store the current employee count that has entered or left it.\n\nFor every request `[x, y]` that we consider, we will decrement the count for the index `x` in the array and increment the count for `y` denoting that the number of employees in the building `x` has increased by one and similarly for `y` it got decreased by one. When we ignore a request, we don't need to do anything except move on to the next request and repeat the same process until we have reached the end of requests.\n\nOnce we iterate over all the requests, we will then check the count for each building, and if it's zero for all, we will count the number of requests we considered in this request and update the maximum requests we have considered so far without violating the constraint. In the end, we can just return the maximum number of requests we considered in a combination.\n\n**Algorithm**\n\n1. Initialize `answer` to `0`; this will store the maximum requests we can consider.\n2. Initialize an array `indegree` of size $N$ with all values as `0`. This array will store the employee change count for each building.\n3. Start the recursion with `index` and `count` as `0`. The `count` here is the number of requests we have considered in the current combination, for each index:\n\n   i. If we have iterated over all the requests, check if all values in `indegree` are zero. If yes, update the variable `answer` by comparing it to `count`. If all values aren't zero, return.\n\n   ii. For the first option, when we consider this request, update the `indegree` for both the buildings the current request involves. And move on to the next request with count as `count + 1`.\n\n   iii Revert the changes in `indegree` for the  request at `index`; this is the backtracking step.\n\n   iv. For the second option, where we ignore the request, make the recursion call with the following index without changing the `count`.\n4. Return `answer`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of buildings, and $M$ is the number of requests.\n\n* Time complexity: $O(2^M * N)$.\n\n  We iterate over every two possibilities for each of the $M$ requests; this is equal to $2^M$ possibilities. For the leaf nodes, which are $$O(2^{M-1})$$, we will iterate over $N$ buildings to check if the employee change is zero. Therefore the total time complexity would be $O(2^M * N)$.\n\n* Space complexity: $O(N + M)$.\n\n  The array `indegree` is of size $N$, and there would be some stack space as well for the recursion. The maximum number of active stack calls would equal $M$, i.e. when all the requests call would be active. Hence the total space complexity would be $O(N + M)$.---\n### Approach 2: Bitmasking\n\n**Intuition**\n\nWe can solve the problem iteratively as well; all we need is a way to iterate over every possible combination of requests that we can consider. We know the number of requests can only go up to $16$, so we can use $N$ bits to represent the state of $N$ requests. The $i^{th}$ bit will be set in the combinations when we consider it; otherwise, it will be zero. Since the number $2^{16}$ is well within the integer limit, we will use an integer to denote the state of a combination.\n\nAll the integers from $0$ to $2^{16} - 1$ represent all the possible combinations of requests that we can consider. Each number is a possible combination that we can check if it violates the constraints, i.e. the employee change count should be `0` after considering the requests in this number. Therefore, in this approach, we will iterate over these numbers, considering them as the possible combinations of requests we will consider. For all those combinations that don't violate the constraints, we will update the variable `answer` with the number of `1s` (the number of requests we considered) in the bitwise representation.\n\n![fig](../Figures/1601/1601A.png)\n\n**Algorithm**\n\n1. Initialize `answer` to `0`; this will store the maximum request we can consider.\n2. Iterate over the numbers from `0` to `requests.size() - 1`, for each number `mask`:\n\n   i. Initialize the array `indegree` of size $N$ with all values as `0`.\n\n   ii. Store the count of set bits in `mask`  in the variable `bitCount`.\n\n   iii. If `bitCount < answer`, return immediately as this couldn't be a better answer.\n\n   iv. Iterate over the bits in `mask`, and for each set bit, update the array `indegree` for the building it involves.\n\n   v. Iterate over each building and check if the value in the array `indegree` is zero; if it is, then update the variable `answer` to `bitCount`.\n3. Return `bitCount`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of buildings, and $M$ is the number of requests.\n\n* Time complexity: $O(2^(M * (M + N))$.\n\n  We iterate over every two possibilities for each of the $M$ requests; this is equal to $2^M$ possibilities. For each bitmask, we may iterate over $N$ buildings and $M$ requests. Therefore the total time complexity would be $O(2^(M * (M + N))$.\n\n* Space complexity: $O(N)$.\n\n  The array `indegree` is of size $N$. Hence the total space complexity would be $O(N)$.---"
+}

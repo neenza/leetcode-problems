@@ -1,0 +1,60 @@
+{
+  "title": "Movement of Robots",
+  "problem_id": "2787",
+  "frontend_id": "2731",
+  "difficulty": "Medium",
+  "problem_slug": "movement-of-robots",
+  "topics": [
+    "Array",
+    "Brainteaser",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "Some robots are standing on an infinite number line with their initial coordinates given by a 0-indexed integer array nums and will start moving once given the command to move. The robots will move a unit distance each second.\nYou are given a string s denoting the direction in which robots will move on command. 'L' means the robot will move towards the left side or negative side of the number line, whereas 'R' means the robot will move towards the right side or positive side of the number line.\nIf two robots collide, they will start moving in opposite directions.\nReturn the sum of distances between all the pairs of robots d seconds after the command. Since the sum can be very large, return it modulo 109 + 7.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-2,0,2], s = \"RLL\", d = 3\nOutput: 8\nExplanation: \nAfter 1 second, the positions are [-1,-1,1]. Now, the robot at index 0 will move left, and the robot at index 1 will move right.\nAfter 2 seconds, the positions are [-2,0,0]. Now, the robot at index 1 will move left, and the robot at index 2 will move right.\nAfter 3 seconds, the positions are [-3,-1,1].\nThe distance between the robot at index 0 and 1 is abs(-3 - (-1)) = 2.\nThe distance between the robot at index 0 and 2 is abs(-3 - 1) = 4.\nThe distance between the robot at index 1 and 2 is abs(-1 - 1) = 2.\nThe sum of the pairs of all distances = 2 + 4 + 2 = 8.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,0], s = \"RL\", d = 2\nOutput: 5\nExplanation: \nAfter 1 second, the positions are [2,-1].\nAfter 2 seconds, the positions are [3,-2].\nThe distance between the two robots is abs(-2 - 3) = 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "-2 * 109 <= nums[i] <= 2 * 109",
+    "0 <= d <= 109",
+    "nums.length == s.length",
+    "s consists of 'L' and 'R' only",
+    "nums[i] will be unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Observe that if you ignore collisions, the resultant positions of robots after d seconds would be the same.",
+    "After d seconds, sort the ending positions and use prefix sum to calculate the distance sum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumDistance(vector<int>& nums, string s, int d) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumDistance(int[] nums, String s, int d) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumDistance(self, nums, s, d):\n        \"\"\"\n        :type nums: List[int]\n        :type s: str\n        :type d: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumDistance(self, nums: List[int], s: str, d: int) -> int:\n        ",
+    "c": "int sumDistance(int* nums, int numsSize, char* s, int d) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumDistance(int[] nums, string s, int d) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {string} s\n * @param {number} d\n * @return {number}\n */\nvar sumDistance = function(nums, s, d) {\n    \n};",
+    "typescript": "function sumDistance(nums: number[], s: string, d: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param String $s\n     * @param Integer $d\n     * @return Integer\n     */\n    function sumDistance($nums, $s, $d) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumDistance(_ nums: [Int], _ s: String, _ d: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumDistance(nums: IntArray, s: String, d: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumDistance(List<int> nums, String s, int d) {\n    \n  }\n}",
+    "golang": "func sumDistance(nums []int, s string, d int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {String} s\n# @param {Integer} d\n# @return {Integer}\ndef sum_distance(nums, s, d)\n    \nend",
+    "scala": "object Solution {\n    def sumDistance(nums: Array[Int], s: String, d: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_distance(nums: Vec<i32>, s: String, d: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-distance nums s d)\n  (-> (listof exact-integer?) string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec sum_distance(Nums :: [integer()], S :: unicode:unicode_binary(), D :: integer()) -> integer().\nsum_distance(Nums, S, D) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_distance(nums :: [integer], s :: String.t, d :: integer) :: integer\n  def sum_distance(nums, s, d) do\n    \n  end\nend"
+  }
+}

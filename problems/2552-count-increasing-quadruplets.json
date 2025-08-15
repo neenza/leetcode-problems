@@ -1,0 +1,59 @@
+{
+  "title": "Count Increasing Quadruplets",
+  "problem_id": "2682",
+  "frontend_id": "2552",
+  "difficulty": "Hard",
+  "problem_slug": "count-increasing-quadruplets",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Binary Indexed Tree",
+    "Enumeration",
+    "Prefix Sum"
+  ],
+  "description": "Given a 0-indexed integer array nums of size n containing all numbers from 1 to n, return the number of increasing quadruplets.\nA quadruplet (i, j, k, l) is increasing if:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,2,4,5]\nOutput: 2\nExplanation: \n- When i = 0, j = 1, k = 2, and l = 3, nums[i] < nums[k] < nums[j] < nums[l].\n- When i = 0, j = 1, k = 2, and l = 4, nums[i] < nums[k] < nums[j] < nums[l]. \nThere are no other quadruplets, so we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 0\nExplanation: There exists only one quadruplet with i = 0, j = 1, k = 2, l = 3, but since nums[j] < nums[k], we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "4 <= nums.length <= 4000",
+    "1 <= nums[i] <= nums.length",
+    "All the integers of nums are unique. nums is a permutation."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you loop over all possible (j, k) and find the answer?",
+    "We can pre-compute all possible (i, j) and (k, l) and store them in 2 matrices.",
+    "The answer will the sum of prefix[j][k] * suffix[k][j]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countQuadruplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countQuadruplets(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countQuadruplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countQuadruplets(self, nums: List[int]) -> int:\n        ",
+    "c": "long long countQuadruplets(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountQuadruplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countQuadruplets = function(nums) {\n    \n};",
+    "typescript": "function countQuadruplets(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countQuadruplets($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countQuadruplets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countQuadruplets(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countQuadruplets(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countQuadruplets(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_quadruplets(nums)\n    \nend",
+    "scala": "object Solution {\n    def countQuadruplets(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_quadruplets(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-quadruplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_quadruplets(Nums :: [integer()]) -> integer().\ncount_quadruplets(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_quadruplets(nums :: [integer]) :: integer\n  def count_quadruplets(nums) do\n    \n  end\nend"
+  }
+}

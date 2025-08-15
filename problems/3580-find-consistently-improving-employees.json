@@ -1,0 +1,48 @@
+{
+  "title": "Find Consistently Improving Employees",
+  "problem_id": "3921",
+  "frontend_id": "3580",
+  "difficulty": "Medium",
+  "problem_slug": "find-consistently-improving-employees",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: employees\nTable: performance_reviews\nWrite a solution to find employees who have consistently improved their performance over their last three reviews.\nReturn the result table ordered by improvement score in descending order, then by name in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| employee_id | int     |\n| name        | varchar |\n+-------------+---------+\nemployee_id is the unique identifier for this table.\nEach row contains information about an employee.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| review_id   | int  |\n| employee_id | int  |\n| review_date | date |\n| rating      | int  |\n+-------------+------+\nreview_id is the unique identifier for this table.\nEach row represents a performance review for an employee. The rating is on a scale of 1-5 where 5 is excellent and 1 is poor.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+-------------+----------------+\n| employee_id | name           |\n+-------------+----------------+\n| 1           | Alice Johnson  |\n| 2           | Bob Smith      |\n| 3           | Carol Davis    |\n| 4           | David Wilson   |\n| 5           | Emma Brown     |\n+-------------+----------------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+-----------+-------------+-------------+--------+\n| review_id | employee_id | review_date | rating |\n+-----------+-------------+-------------+--------+\n| 1         | 1           | 2023-01-15  | 2      |\n| 2         | 1           | 2023-04-15  | 3      |\n| 3         | 1           | 2023-07-15  | 4      |\n| 4         | 1           | 2023-10-15  | 5      |\n| 5         | 2           | 2023-02-01  | 3      |\n| 6         | 2           | 2023-05-01  | 2      |\n| 7         | 2           | 2023-08-01  | 4      |\n| 8         | 2           | 2023-11-01  | 5      |\n| 9         | 3           | 2023-03-10  | 1      |\n| 10        | 3           | 2023-06-10  | 2      |\n| 11        | 3           | 2023-09-10  | 3      |\n| 12        | 3           | 2023-12-10  | 4      |\n| 13        | 4           | 2023-01-20  | 4      |\n| 14        | 4           | 2023-04-20  | 4      |\n| 15        | 4           | 2023-07-20  | 4      |\n| 16        | 5           | 2023-02-15  | 3      |\n| 17        | 5           | 2023-05-15  | 2      |\n+-----------+-------------+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+-------------+----------------+-------------------+\n| employee_id | name           | improvement_score |\n+-------------+----------------+-------------------+\n| 2           | Bob Smith      | 3                 |\n| 1           | Alice Johnson  | 2                 |\n| 3           | Carol Davis    | 2                 |\n+-------------+----------------+-------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_consistently_improving_employees(employees: pd.DataFrame, performance_reviews: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Find Maximum Removals From Source String",
+  "problem_id": "3487",
+  "frontend_id": "3316",
+  "difficulty": "Medium",
+  "problem_slug": "find-maximum-removals-from-source-string",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string source of size n, a string pattern that is a subsequence of source, and a sorted integer array targetIndices that contains distinct numbers in the range [0, n - 1].\nWe define an operation as removing a character at an index idx from source such that:\nPerforming an operation does not change the indices of the other characters in source. For example, if you remove 'c' from \"acb\", the character at index 2 would still be 'b'.\nReturn the maximum number of operations that can be performed.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: source = \"abbaa\", pattern = \"aba\", targetIndices = [0,1,2]\nOutput: 1\nExplanation:\nWe can't remove source[0] but we can do either of these two operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: source = \"bcda\", pattern = \"d\", targetIndices = [0,3]\nOutput: 2\nExplanation:\nWe can remove source[0] and source[3] in two operations.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: source = \"dda\", pattern = \"dda\", targetIndices = [0,1,2]\nOutput: 0\nExplanation:\nWe can't remove any character from source .",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: source = \"yeyeykyded\" , pattern = \"yeyyd\" , targetIndices = [0,2,3,4]\nOutput: 2\nExplanation:\nWe can remove source[2] and source[3] in two operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == source.length <= 3 * 103",
+    "1 <= pattern.length <= n",
+    "1 <= targetIndices.length <= n",
+    "targetIndices is sorted in ascending order.",
+    "The input is generated such that targetIndices contains distinct elements in the range [0, n - 1].",
+    "source and pattern consist only of lowercase English letters.",
+    "The input is generated such that pattern appears as a subsequence in source."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "At each index in <code>targetIndices</code>, make the choice to remove or not remove the character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxRemovals(string source, string pattern, vector<int>& targetIndices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRemovals(String source, String pattern, int[] targetIndices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRemovals(self, source, pattern, targetIndices):\n        \"\"\"\n        :type source: str\n        :type pattern: str\n        :type targetIndices: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRemovals(self, source: str, pattern: str, targetIndices: List[int]) -> int:\n        ",
+    "c": "int maxRemovals(char* source, char* pattern, int* targetIndices, int targetIndicesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxRemovals(string source, string pattern, int[] targetIndices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} source\n * @param {string} pattern\n * @param {number[]} targetIndices\n * @return {number}\n */\nvar maxRemovals = function(source, pattern, targetIndices) {\n    \n};",
+    "typescript": "function maxRemovals(source: string, pattern: string, targetIndices: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $source\n     * @param String $pattern\n     * @param Integer[] $targetIndices\n     * @return Integer\n     */\n    function maxRemovals($source, $pattern, $targetIndices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRemovals(_ source: String, _ pattern: String, _ targetIndices: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRemovals(source: String, pattern: String, targetIndices: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRemovals(String source, String pattern, List<int> targetIndices) {\n    \n  }\n}",
+    "golang": "func maxRemovals(source string, pattern string, targetIndices []int) int {\n    \n}",
+    "ruby": "# @param {String} source\n# @param {String} pattern\n# @param {Integer[]} target_indices\n# @return {Integer}\ndef max_removals(source, pattern, target_indices)\n    \nend",
+    "scala": "object Solution {\n    def maxRemovals(source: String, pattern: String, targetIndices: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_removals(source: String, pattern: String, target_indices: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-removals source pattern targetIndices)\n  (-> string? string? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_removals(Source :: unicode:unicode_binary(), Pattern :: unicode:unicode_binary(), TargetIndices :: [integer()]) -> integer().\nmax_removals(Source, Pattern, TargetIndices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_removals(source :: String.t, pattern :: String.t, target_indices :: [integer]) :: integer\n  def max_removals(source, pattern, target_indices) do\n    \n  end\nend"
+  }
+}

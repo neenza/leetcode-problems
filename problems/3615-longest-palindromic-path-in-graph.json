@@ -1,0 +1,76 @@
+{
+  "title": "Longest Palindromic Path in Graph",
+  "problem_id": "3930",
+  "frontend_id": "3615",
+  "difficulty": "Hard",
+  "problem_slug": "longest-palindromic-path-in-graph",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Graph",
+    "Bitmask"
+  ],
+  "description": "You are given an integer n and an undirected graph with n nodes labeled from 0 to n - 1 and a 2D array edges, where edges[i] = [ui, vi] indicates an edge between nodes ui and vi.\nYou are also given a string label of length n, where label[i] is the character associated with node i.\nYou may start at any node and move to any adjacent node, visiting each node at most once.\nReturn the maximum possible length of a palindrome that can be formed by visiting a set of unique nodes along a valid path.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1],[1,2]], label = \"aba\"\nOutput: 3\nExp lanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/13/screenshot-2025-06-13-at-230714.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1],[0,2]], label = \"abc\"\nOutput: 1\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/13/screenshot-2025-06-13-at-230017.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, edges = [[0,2],[0,3],[3,1]], label = \"bbac\"\nOutput: 3\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/06/13/screenshot-2025-06-13-at-230508.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 14",
+    "n - 1 <= edges.length <= n * (n - 1) / 2",
+    "edges[i] == [ui, vi]",
+    "0 <= ui, vi <= n - 1",
+    "ui != vi",
+    "label.length == n",
+    "label consists of lowercase English letters.",
+    "There are no duplicate edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use bitmask dynamic programming.",
+    "Build the palindrome by expanding from both endpoints: you can include a new pair of nodes as endpoints if neither is already in the current bitmask <code>mask</code>.",
+    "Before adding new endpoints to the current palindrome, ensure their labels match the labels at the previous endpoints <code>prev_l</code> and <code>prev_r</code>.",
+    "Memoize each state as <code>dp[mask][prev_l][prev_r]</code>, representing the maximum palindrome length achievable using the set of visited nodes in <code>mask</code> with current endpoints at <code>prev_l</code> and <code>prev_r</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxLen(int n, vector<vector<int>>& edges, string label) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxLen(int n, int[][] edges, String label) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxLen(self, n, edges, label):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type label: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxLen(self, n: int, edges: List[List[int]], label: str) -> int:\n        ",
+    "c": "int maxLen(int n, int** edges, int edgesSize, int* edgesColSize, char* label) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxLen(int n, int[][] edges, string label) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {string} label\n * @return {number}\n */\nvar maxLen = function(n, edges, label) {\n    \n};",
+    "typescript": "function maxLen(n: number, edges: number[][], label: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param String $label\n     * @return Integer\n     */\n    function maxLen($n, $edges, $label) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxLen(_ n: Int, _ edges: [[Int]], _ label: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxLen(n: Int, edges: Array<IntArray>, label: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxLen(int n, List<List<int>> edges, String label) {\n    \n  }\n}",
+    "golang": "func maxLen(n int, edges [][]int, label string) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {String} label\n# @return {Integer}\ndef max_len(n, edges, label)\n    \nend",
+    "scala": "object Solution {\n    def maxLen(n: Int, edges: Array[Array[Int]], label: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_len(n: i32, edges: Vec<Vec<i32>>, label: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-len n edges label)\n  (-> exact-integer? (listof (listof exact-integer?)) string? exact-integer?)\n  )",
+    "erlang": "-spec max_len(N :: integer(), Edges :: [[integer()]], Label :: unicode:unicode_binary()) -> integer().\nmax_len(N, Edges, Label) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_len(n :: integer, edges :: [[integer]], label :: String.t) :: integer\n  def max_len(n, edges, label) do\n    \n  end\nend"
+  }
+}

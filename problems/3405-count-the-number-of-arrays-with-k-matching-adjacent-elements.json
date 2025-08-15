@@ -1,0 +1,62 @@
+{
+  "title": "Count the Number of Arrays with K Matching Adjacent Elements",
+  "problem_id": "3682",
+  "frontend_id": "3405",
+  "difficulty": "Hard",
+  "problem_slug": "count-the-number-of-arrays-with-k-matching-adjacent-elements",
+  "topics": [
+    "Math",
+    "Combinatorics"
+  ],
+  "description": "You are given three integers n, m, k. A good array arr of size n is defined as follows:\nReturn the number of good arrays that can be formed.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, m = 2, k = 1\nOutput: 4\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, m = 2, k = 2\nOutput: 6\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, m = 2, k = 0\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "1 <= m <= 105",
+    "0 <= k <= n - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The first position <code>arr[0]</code> has <code>m</code> choices.",
+    "For each of the remaining <code>n - 1</code> indices, <code>0 < i < n</code>, select <code>k</code> positions from left to right and set <code>arr[i] = arr[i - 1]</code>.",
+    "For all other indices, <code>set arr[i] != arr[i - 1]</code> with (<code>m - 1</code>) choices for each of the <code>n - 1 - k</code> positions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countGoodArrays(int n, int m, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodArrays(int n, int m, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGoodArrays(self, n, m, k):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGoodArrays(self, n: int, m: int, k: int) -> int:\n        ",
+    "c": "int countGoodArrays(int n, int m, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountGoodArrays(int n, int m, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @param {number} k\n * @return {number}\n */\nvar countGoodArrays = function(n, m, k) {\n    \n};",
+    "typescript": "function countGoodArrays(n: number, m: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @param Integer $k\n     * @return Integer\n     */\n    function countGoodArrays($n, $m, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGoodArrays(_ n: Int, _ m: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGoodArrays(n: Int, m: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countGoodArrays(int n, int m, int k) {\n    \n  }\n}",
+    "golang": "func countGoodArrays(n int, m int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @param {Integer} k\n# @return {Integer}\ndef count_good_arrays(n, m, k)\n    \nend",
+    "scala": "object Solution {\n    def countGoodArrays(n: Int, m: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good_arrays(n: i32, m: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-good-arrays n m k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_good_arrays(N :: integer(), M :: integer(), K :: integer()) -> integer().\ncount_good_arrays(N, M, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_good_arrays(n :: integer, m :: integer, k :: integer) :: integer\n  def count_good_arrays(n, m, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Combinatorial Mathematics\n\n#### Intuition\n\nThe problem requires us to construct an array of length $n$, where each number is in the range $[1, m]$, and exactly $k$ pairs of adjacent elements are the same. We need to find how many such arrays can be constructed.\n\nIn an array of length $n$, there are $n - 1$ pairs of adjacent elements. Among these, $k$ pairs must consist of equal adjacent elements, and the remaining $n - 1 - k$ pairs must consist of different adjacent elements. We can treat these $n - 1 - k$ differing adjacent positions as partitions, which divide the array into $n - k$ contiguous segments, where each segment contains identical values.\n\nWe can first choose the positions to insert these partitions and then assign values to each segment. Let's calculate the total number of such combinations step-by-step:\n\n1. Among the $n - 1$ positions between array elements, we choose $n - 1 - k$ to place the partitions. This can be done in $\\binom{n - 1}{k}$ ways (since $\\binom{n - 1}{n - 1 - k} = \\binom{n - 1}{k}$).\n2. The first segment can take any of the $m$ values, since there are no restrictions on it.\n3. Every subsequent segment (there are $n - k - 1$ such segments) must differ from the previous segment's value. So, each of them has $m - 1$ possible choices, giving a total of $(m - 1)^{n - k - 1}$ options.\n\nBy the multiplication principle, the total number of valid arrays is:\n\n$$\nm \\times \\binom{n - 1}{k} \\times (m - 1)^{n - k - 1}\n$$\n\nTo compute this efficiently, we use:\n- the factorial-based formula for combinations: $\\binom{a}{b} = \\frac{a!}{b!(a - b)!}$,\n- modular inverses for division under a modulus,\n- and binary exponentiation for powers.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the maximum value up to which factorials are precomputed.\n\n- Time complexity: $O(n)$.\n  \n  The overall time complexity is dominated by the preprocessing step, which computes factorials and inverse factorials up to size $n$ using iterative multiplication and modular inverses. This takes $O(n)$ time.\n\n  In addition:\n  - Computing the binomial coefficient $\\binom{n - 1}{k}$ is done in constant time using the precomputed arrays: $O(1)$\n  - Modular exponentiation $(m - 1)^{n - k - 1}$ is performed using binary exponentiation, which takes $O(\\log(n - k))$ time.\n\n  However, since the preprocessing step is $O(n)$, and $\\log(n - k) \\leq n$, the total time complexity remains $O(n)$.\n\n- Space complexity: $O(n)$.\n    \n    Two arrays `fact` and `inv_fact` of size $n$ are maintained globally for factorials and their modular inverses."
+}

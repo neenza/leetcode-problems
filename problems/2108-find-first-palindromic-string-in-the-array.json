@@ -1,0 +1,62 @@
+{
+  "title": "Find First Palindromic String in the Array",
+  "problem_id": "2231",
+  "frontend_id": "2108",
+  "difficulty": "Easy",
+  "problem_slug": "find-first-palindromic-string-in-the-array",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string \"\".\nA string is palindromic if it reads the same forward and backward.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abc\",\"car\",\"ada\",\"racecar\",\"cool\"]\nOutput: \"ada\"\nExplanation: The first string that is palindromic is \"ada\".\nNote that \"racecar\" is also palindromic, but it is not the first.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"notapalindrome\",\"racecar\"]\nOutput: \"racecar\"\nExplanation: The first and only string that is palindromic is \"racecar\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"def\",\"ghi\"]\nOutput: \"\"\nExplanation: There are no palindromic strings, so the empty string is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 100",
+    "words[i] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate through the elements in order. As soon as the current element is a palindrome, return it.",
+    "To check if an element is a palindrome, can you reverse the string?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string firstPalindrome(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String firstPalindrome(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def firstPalindrome(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def firstPalindrome(self, words: List[str]) -> str:\n        ",
+    "c": "char* firstPalindrome(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FirstPalindrome(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string}\n */\nvar firstPalindrome = function(words) {\n    \n};",
+    "typescript": "function firstPalindrome(words: string[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return String\n     */\n    function firstPalindrome($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func firstPalindrome(_ words: [String]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun firstPalindrome(words: Array<String>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String firstPalindrome(List<String> words) {\n    \n  }\n}",
+    "golang": "func firstPalindrome(words []string) string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {String}\ndef first_palindrome(words)\n    \nend",
+    "scala": "object Solution {\n    def firstPalindrome(words: Array[String]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn first_palindrome(words: Vec<String>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (first-palindrome words)\n  (-> (listof string?) string?)\n  )",
+    "erlang": "-spec first_palindrome(Words :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nfirst_palindrome(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec first_palindrome(words :: [String.t]) :: String.t\n  def first_palindrome(words) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Reverse String\n\n#### Intuition\n\nA string is said to be a palindrome if it remains the same, reading forward and backward. An intuitive way to check if the string is a palindrome is to create a new string by reversing the characters and then comparing the original with it. If the reversed and original string are the same then the string is palindrome. In this approach, we will iterate over the list `words,` and then for each string `s` in it, we will reverse it and check if this is equal to the original string, and if true, then we will return this string.\n\n#### Algorithm\n\n1. Iterate over the list `words` and for each string `s`:\n2. Create a new string `reversed` which is the reverse of the original string `s`.\n3. If `s` and `reversed` are the same, then return the string; it is a valid palindrome.\n4. Return the empty string after iterating over all the strings.  If the loop terminates without finding and returning a palindrome, it means `words` has no palindromes.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the number of strings in `words` and $M$ be the maximum length of a string in it.\n\n* Time complexity: $O(N \\cdot M)$\n\n  We iterate over the strings in the list words which takes $O(N)$, and for each string, we reverse the string which takes $O(M)$ and compare it with the original. Hence, the time complexity is equal to $O(N \\cdot M)$.\n\n* Space complexity: $O(M)$\n\n  We create a new string for each string in the list `words` and therefore the space complexity is equal to the maximum length of a string that is created which is $O(M)$.---\n\n### Approach 2: Two Pointers\n\n#### Intuition\n\nThe above approach requires the creation of making new string by reversing it. Can we somehow avoid this space requirement?\n\nOne way to think of palindromes is that they read the same from both ends. So, if we compare the characters from the two ends of the string, they should be the same in a valid palindrome. If the string is of even length, then there would be a pair for each index; otherwise, if the string is odd, there would be one character in the middle that doesn't need to be compared with any counterpart.\n\n![Even Length](../Figures/2108/2108A.png)\n\n![Odd Length](../Figures/2108/2108B.png)\n\n$c_n$ represents a character\n\n#### Algorithm\n\n1. Define the method `isPalindrome()` which returns `true` if the provided string `s` is a palindrome and `false` otherwise:\n\n    1. Keep one pointer of left `start = 0` and one on the right end `end = s.size() - 1`.\n    2. Keep iterating over the string until `start > end`.\n    3. If the characters at `start` and `end` are not the same then return `false`.\n    4. Increment `start` and decrement `end`.\n    5. Return `true` after iterating over all the characters.\n2. Iterate over each string in `words` from left to right and call `isPalindrome()` for each string and return the first one for which the method returns `true`.\n3. After the loop terminates, return an empty string. If the loop terminates without finding and returning a palindrome, it means `words` has no palindromes.\n\n#### Implementation#### Complexity Analysis\n\nLet $N$ be the number of strings in `words` and $M$ be the maximum length of a string in it.\n\n* Time complexity: $O(N \\cdot M)$\n\n  For each of the $N$ strings in the list `words`, we iterate over each character once, and hence the time complexity is equal to $O(N \\cdot M)$.\n\n* Space complexity: $O(1)$\n\n  No extra space is required while checking for palindromes, and hence, the space complexity is constant.---"
+}

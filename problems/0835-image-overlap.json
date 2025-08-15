@@ -1,0 +1,65 @@
+{
+  "title": "Image Overlap",
+  "problem_id": "864",
+  "frontend_id": "835",
+  "difficulty": "Medium",
+  "problem_slug": "image-overlap",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "You are given two images, img1 and img2, represented as binary, square matrices of size n x n. A binary matrix has only 0s and 1s as values.\nWe translate one image however we choose by sliding all the 1 bits left, right, up, and/or down any number of units. We then place it on top of the other image. We can then calculate the overlap by counting the number of positions that have a 1 in both images.\nNote also that a translation does not include any kind of rotation. Any 1 bits that are translated outside of the matrix borders are erased.\nReturn the largest possible overlap.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: img1 = [[1,1,0],[0,1,0],[0,1,0]], img2 = [[0,0,0],[0,1,1],[0,0,1]]\nOutput: 3\nExplanation: We translate img1 to right by 1 unit and down by 1 unit.\n\nThe number of positions that have a 1 in both images is 3 (shown in red).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/09/overlap1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: img1 = [[1]], img2 = [[1]]\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/09/overlap_step2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: img1 = [[0]], img2 = [[0]]\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/09/overlap_step2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == img1.length == img1[i].length",
+    "n == img2.length == img2[i].length",
+    "1 <= n <= 30",
+    "img1[i][j] is either 0 or 1.",
+    "img2[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestOverlap(vector<vector<int>>& img1, vector<vector<int>>& img2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestOverlap(int[][] img1, int[][] img2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestOverlap(self, img1, img2):\n        \"\"\"\n        :type img1: List[List[int]]\n        :type img2: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestOverlap(self, img1: List[List[int]], img2: List[List[int]]) -> int:\n        ",
+    "c": "int largestOverlap(int** img1, int img1Size, int* img1ColSize, int** img2, int img2Size, int* img2ColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestOverlap(int[][] img1, int[][] img2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} img1\n * @param {number[][]} img2\n * @return {number}\n */\nvar largestOverlap = function(img1, img2) {\n    \n};",
+    "typescript": "function largestOverlap(img1: number[][], img2: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $img1\n     * @param Integer[][] $img2\n     * @return Integer\n     */\n    function largestOverlap($img1, $img2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestOverlap(_ img1: [[Int]], _ img2: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestOverlap(img1: Array<IntArray>, img2: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestOverlap(List<List<int>> img1, List<List<int>> img2) {\n    \n  }\n}",
+    "golang": "func largestOverlap(img1 [][]int, img2 [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} img1\n# @param {Integer[][]} img2\n# @return {Integer}\ndef largest_overlap(img1, img2)\n    \nend",
+    "scala": "object Solution {\n    def largestOverlap(img1: Array[Array[Int]], img2: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_overlap(img1: Vec<Vec<i32>>, img2: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-overlap img1 img2)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec largest_overlap(Img1 :: [[integer()]], Img2 :: [[integer()]]) -> integer().\nlargest_overlap(Img1, Img2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_overlap(img1 :: [[integer]], img2 :: [[integer]]) :: integer\n  def largest_overlap(img1, img2) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Insertions to Balance a Parentheses String",
+  "problem_id": "1648",
+  "frontend_id": "1541",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-insertions-to-balance-a-parentheses-string",
+  "topics": [
+    "String",
+    "Stack",
+    "Greedy"
+  ],
+  "description": "Given a parentheses string s containing only the characters '(' and ')'. A parentheses string is balanced if:\nIn other words, we treat '(' as an opening parenthesis and '))' as a closing parenthesis.\nYou can insert the characters '(' and ')' at any position of the string to balance it if needed.\nReturn the minimum number of insertions needed to make s balanced.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"(()))\"\nOutput: 1\nExplanation: The second '(' has two matching '))', but the first '(' has only ')' matching. We need to add one more ')' at the end of the string to be \"(())))\" which is balanced.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"())\"\nOutput: 0\nExplanation: The string is already balanced.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"))())(\"\nOutput: 3\nExplanation: Add '(' to match the first '))', Add '))' to match the last '('.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of '(' and ')' only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a stack to keep opening brackets. If you face single closing ')' add 1 to the answer and consider it as '))'.",
+    "If you have '))' with empty stack, add 1 to the answer, If after finishing you have x opening remaining in the stack, add 2x to the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minInsertions(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minInsertions(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minInsertions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minInsertions(self, s: str) -> int:\n        ",
+    "c": "int minInsertions(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinInsertions(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minInsertions = function(s) {\n    \n};",
+    "typescript": "function minInsertions(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minInsertions($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minInsertions(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minInsertions(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minInsertions(String s) {\n    \n  }\n}",
+    "golang": "func minInsertions(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_insertions(s)\n    \nend",
+    "scala": "object Solution {\n    def minInsertions(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_insertions(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-insertions s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_insertions(S :: unicode:unicode_binary()) -> integer().\nmin_insertions(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_insertions(s :: String.t) :: integer\n  def min_insertions(s) do\n    \n  end\nend"
+  }
+}

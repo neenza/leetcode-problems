@@ -1,0 +1,71 @@
+{
+  "title": "Count Fertile Pyramids in a Land",
+  "problem_id": "2193",
+  "frontend_id": "2088",
+  "difficulty": "Hard",
+  "problem_slug": "count-fertile-pyramids-in-a-land",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "A farmer has a rectangular grid of land with m rows and n columns that can be divided into unit cells. Each cell is either fertile (represented by a 1) or barren (represented by a 0). All cells outside the grid are considered barren.\nA pyramidal plot of land can be defined as a set of cells with the following criteria:\nAn inverse pyramidal plot of land can be defined as a set of cells with similar criteria:\nSome examples of valid and invalid pyramidal (and inverse pyramidal) plots are shown below. Black cells indicate fertile cells.\nGiven a 0-indexed m x n binary matrix grid representing the farmland, return the total number of pyramidal and inverse pyramidal plots that can be found in grid.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,1,0],[1,1,1,1]]\nOutput: 2\nExplanation: The 2 possible pyramidal plots are shown in blue and red respectively.\nThere are no inverse pyramidal plots in this grid. \nHence total number of pyramidal and inverse pyramidal plots is 2 + 0 = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/22/1.JPG"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[1,1,1]]\nOutput: 2\nExplanation: The pyramidal plot is shown in blue, and the inverse pyramidal plot is shown in red. \nHence the total number of plots is 1 + 1 = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/22/2.JPG"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,1,1,1,0],[1,1,1,1,1],[1,1,1,1,1],[0,1,0,0,1]]\nOutput: 13\nExplanation: There are 7 pyramidal plots, 3 of which are shown in the 2nd and 3rd figures.\nThere are 6 inverse pyramidal plots, 2 of which are shown in the last figure.\nThe total number of plots is 7 + 6 = 13.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/22/3.JPG"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 1000",
+    "1 <= m * n <= 105",
+    "grid[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about how dynamic programming can help solve the problem.",
+    "For any fixed cell (r, c), can you calculate the maximum height of the pyramid for which it is the apex? Let us denote this value as dp[r][c].",
+    "How will the values at dp[r+1][c-1] and dp[r+1][c+1] help in determining the value at dp[r][c]?",
+    "For the cell (r, c), is there a relation between the number of pyramids for which it serves as the apex and dp[r][c]? How does it help in calculating the answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPyramids(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPyramids(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPyramids(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPyramids(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int countPyramids(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPyramids(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar countPyramids = function(grid) {\n    \n};",
+    "typescript": "function countPyramids(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function countPyramids($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPyramids(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPyramids(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPyramids(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func countPyramids(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef count_pyramids(grid)\n    \nend",
+    "scala": "object Solution {\n    def countPyramids(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pyramids(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-pyramids grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec count_pyramids(Grid :: [[integer()]]) -> integer().\ncount_pyramids(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pyramids(grid :: [[integer]]) :: integer\n  def count_pyramids(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Managers with at Least 5 Direct Reports",
+  "problem_id": "570",
+  "frontend_id": "570",
+  "difficulty": "Medium",
+  "problem_slug": "managers-with-at-least-5-direct-reports",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employee\nWrite a solution to find managers with at least five direct reports.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Try to get all the mangerIDs that have count bigger than 5",
+    "Use the last hint's result as a table and do join with origin table at id equals to managerId",
+    "This is a very good example to show the performance of SQL code. Try to work out other solutions and you may be surprised by running time difference.",
+    "If your solution uses 'IN' function and runs more than 5 seconds, try to optimize it by using 'JOIN' instead."
+  ],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_managers(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

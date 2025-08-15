@@ -1,0 +1,33 @@
+{
+  "title": "Employees Whose Manager Left the Company",
+  "problem_id": "2127",
+  "frontend_id": "1978",
+  "difficulty": "Easy",
+  "problem_slug": "employees-whose-manager-left-the-company",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employees\nFind the IDs of the employees whose salary is strictly less than $30000 and whose manager left the company. When a manager leaves the company, their information is deleted from the Employees table, but the reports still have their manager_id set to the manager that left.\nReturn the result table ordered by employee_id.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+----------+\n| Column Name | Type     |\n+-------------+----------+\n| employee_id | int      |\n| name        | varchar  |\n| manager_id  | int      |\n| salary      | int      |\n+-------------+----------+\nIn SQL, employee_id is the primary key for this table.\nThis table contains information about the employees, their salary, and the ID of their manager. Some employees do not have a manager (manager_id is null).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:  \nEmployees table:\n+-------------+-----------+------------+--------+\n| employee_id | name      | manager_id | salary |\n+-------------+-----------+------------+--------+\n| 3           | Mila      | 9          | 60301  |\n| 12          | Antonella | null       | 31000  |\n| 13          | Emery     | null       | 67084  |\n| 1           | Kalel     | 11         | 21241  |\n| 9           | Mikaela   | null       | 50937  |\n| 11          | Joziah    | 6          | 28485  |\n+-------------+-----------+------------+--------+\nOutput: \n+-------------+\n| employee_id |\n+-------------+\n| 11          |\n+-------------+\n\nExplanation: \nThe employees with a salary less than $30000 are 1 (Kalel) and 11 (Joziah).\nKalel's manager is employee 11, who is still in the company (Joziah).\nJoziah's manager is employee 6, who left the company because there is no row for employee 6 as it was deleted.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_employees(employees: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

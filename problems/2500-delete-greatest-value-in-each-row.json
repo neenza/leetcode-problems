@@ -1,0 +1,63 @@
+{
+  "title": "Delete Greatest Value in Each Row",
+  "problem_id": "2585",
+  "frontend_id": "2500",
+  "difficulty": "Easy",
+  "problem_slug": "delete-greatest-value-in-each-row",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given an m x n matrix grid consisting of positive integers.\nPerform the following operation until grid becomes empty:\nNote that the number of columns decreases by one after each operation.\nReturn the answer after performing the operations described above.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2,4],[3,3,1]]\nOutput: 8\nExplanation: The diagram above shows the removed values in each step.\n- In the first operation, we remove 4 from the first row and 3 from the second row (notice that, there are two cells with value 3 and we can remove any of them). We add 4 to the answer.\n- In the second operation, we remove 2 from the first row and 3 from the second row. We add 3 to the answer.\n- In the third operation, we remove 1 from the first row and 1 from the second row. We add 1 to the answer.\nThe final answer = 4 + 3 + 1 = 8.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/19/q1ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[10]]\nOutput: 10\nExplanation: The diagram above shows the removed values in each step.\n- In the first operation, we remove 10 from the first row. We add 10 to the answer.\nThe final answer = 10.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/19/q1ex2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 50",
+    "1 <= grid[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate from the first to the last row and if there exist some unmarked cells, take a maximum from them and mark that cell as visited.",
+    "Add a maximum of newly marked cells to answer and repeat that operation until the whole matrix becomes marked."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int deleteGreatestValue(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int deleteGreatestValue(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def deleteGreatestValue(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def deleteGreatestValue(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int deleteGreatestValue(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DeleteGreatestValue(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar deleteGreatestValue = function(grid) {\n    \n};",
+    "typescript": "function deleteGreatestValue(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function deleteGreatestValue($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func deleteGreatestValue(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun deleteGreatestValue(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int deleteGreatestValue(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func deleteGreatestValue(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef delete_greatest_value(grid)\n    \nend",
+    "scala": "object Solution {\n    def deleteGreatestValue(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn delete_greatest_value(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (delete-greatest-value grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec delete_greatest_value(Grid :: [[integer()]]) -> integer().\ndelete_greatest_value(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec delete_greatest_value(grid :: [[integer]]) :: integer\n  def delete_greatest_value(grid) do\n    \n  end\nend"
+  }
+}

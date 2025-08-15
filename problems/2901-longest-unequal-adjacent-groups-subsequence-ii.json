@@ -1,0 +1,61 @@
+{
+  "title": "Longest Unequal Adjacent Groups Subsequence II",
+  "problem_id": "3142",
+  "frontend_id": "2901",
+  "difficulty": "Medium",
+  "problem_slug": "longest-unequal-adjacent-groups-subsequence-ii",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string array words, and an array groups, both arrays having length n.\nThe hamming distance between two strings of equal length is the number of positions at which the corresponding characters are different.\nYou need to select the longest subsequence from an array of indices [0, 1, ..., n - 1], such that for the subsequence denoted as [i0, i1, ..., ik-1] having length k, the following holds:\nReturn a string array containing the words corresponding to the indices (in order) in the selected subsequence. If there are multiple answers, return any of them.\nNote: strings in words may be unequal in length.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"bab\",\"dab\",\"cab\"], groups = [1,2,2]\nOutput: [\"bab\",\"cab\"]\nExplanation: A subsequence that can be selected is [0,2] .\nSo, a valid answer is [words[0],words[2]] = [\"bab\",\"cab\"] .\nAnother subsequence that can be selected is [0,1] .\nSo, another valid answer is [words[0],words[1]] = [\"bab\",\"dab\"] .\nIt can be shown that the length of the longest subsequence of indices that satisfies the conditions is 2 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"b\",\"c\",\"d\"], groups = [1,2,3,4]\nOutput: [\"a\",\"b\",\"c\",\"d\"]\nExplanation: We can select the subsequence [0,1,2,3] .\nIt satisfies both conditions.\nHence, the answer is [words[0],words[1],words[2],words[3]] = [\"a\",\"b\",\"c\",\"d\"] .\nIt has the longest length among all subsequences of indices that satisfy the conditions.\nHence, it is the only answer.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == words.length == groups.length <= 1000",
+    "1 <= words[i].length <= 10",
+    "1 <= groups[i] <= n",
+    "words consists of distinct strings.",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i]</code> represent the length of the longest subsequence ending with <code>words[i]</code> that satisfies the conditions.",
+    "<code>dp[i] =</code> (maximum value of <code>dp[j]</code>) <code>+ 1</code> for indices <code>j < i</code>, where <code>groups[i] != groups[j]</code>, <code>words[i]</code> and <code>words[j]</code> are equal in length, and the hamming distance between <code>words[i]</code> and <code>words[j]</code> is exactly <code>1</code>.",
+    "Keep track of the <code>j</code> values used to achieve the maximum <code>dp[i]</code> for each index <code>i</code>.",
+    "The expected array's length is <code>max(dp[0:n])</code>, and starting from the index having the maximum value in <code>dp</code>, we can trace backward to get the words."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> getWordsInLongestSubsequence(vector<string>& words, vector<int>& groups) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> getWordsInLongestSubsequence(String[] words, int[] groups) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getWordsInLongestSubsequence(self, words, groups):\n        \"\"\"\n        :type words: List[str]\n        :type groups: List[int]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getWordsInLongestSubsequence(self, words: List[str], groups: List[int]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** getWordsInLongestSubsequence(char** words, int wordsSize, int* groups, int groupsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> GetWordsInLongestSubsequence(string[] words, int[] groups) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number[]} groups\n * @return {string[]}\n */\nvar getWordsInLongestSubsequence = function(words, groups) {\n    \n};",
+    "typescript": "function getWordsInLongestSubsequence(words: string[], groups: number[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer[] $groups\n     * @return String[]\n     */\n    function getWordsInLongestSubsequence($words, $groups) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getWordsInLongestSubsequence(_ words: [String], _ groups: [Int]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getWordsInLongestSubsequence(words: Array<String>, groups: IntArray): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> getWordsInLongestSubsequence(List<String> words, List<int> groups) {\n    \n  }\n}",
+    "golang": "func getWordsInLongestSubsequence(words []string, groups []int) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer[]} groups\n# @return {String[]}\ndef get_words_in_longest_subsequence(words, groups)\n    \nend",
+    "scala": "object Solution {\n    def getWordsInLongestSubsequence(words: Array[String], groups: Array[Int]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_words_in_longest_subsequence(words: Vec<String>, groups: Vec<i32>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (get-words-in-longest-subsequence words groups)\n  (-> (listof string?) (listof exact-integer?) (listof string?))\n  )",
+    "erlang": "-spec get_words_in_longest_subsequence(Words :: [unicode:unicode_binary()], Groups :: [integer()]) -> [unicode:unicode_binary()].\nget_words_in_longest_subsequence(Words, Groups) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_words_in_longest_subsequence(words :: [String.t], groups :: [integer]) :: [String.t]\n  def get_words_in_longest_subsequence(words, groups) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Dynamic Programming\n\n#### Intuition\n\nThe task is to find the **longest subsequence** in ${0, 1, ..., n - 1}$, where the subsequence satisfies two conditions: the values of the $\\textit{groups}$ corresponding to adjacent indices are different, and the Hamming distance between the $\\textit{words}$ corresponding to adjacent indices is 1. This is similar to \"[Longest Unequal Adjacent Groups Subsequence I](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/),\" where we can still use dynamic programming to solve the problem.\n\nLet $\\textit{dp}[i]$ represent the length of the **longest subsequence** ending at index $i$, and let $\\text{HammingDistance}(s,t)$ represent the Hamming distance between two strings $s$ and $t$. If index $i$ can be added after index $j$ in the subsequence, then it must satisfy $\\textit{groups}[i] \\neq \\textit{groups}[j]$ for $j < i$, and $\\text{HammingDistance}(\\textit{words}[i], \\textit{words}[j]) = 1$. When these conditions hold, the length of the **longest subsequence** ending at index $i$ is updated as $\\textit{dp}[i] = \\max(\\textit{dp}[i], \\textit{dp}[j] + 1)$.\n\nWe can obtain the dynamic programming recurrence formula as follows:\n\n$$\n\\textit{dp}[i] = \\max(\\textit{dp}[i], \\textit{dp}[j] + 1) \\quad \\text{if} \\quad \\textit{groups}[i] \\neq \\textit{groups}[j], \\text{HammingDistance}(\\textit{words}[i], \\textit{words}[j]) = 1\n$$\n\nFor each index $i$, we enumerate the indices before $i$ to find the length of the **longest subsequence** ending at $i$. By performing this for each index, we can find the length of the **longest subsequence** in $[0, 1, ..., n - 1]$. To facilitate the calculation, we use $\\textit{prev}[i]$ to record the index of the previous index in the **longest subsequence** ending at $i$. Once we identify the ending index $i$ of the **longest subsequence**, we can trace back through the indices to recover the entire subsequence and add the corresponding strings to an array. Reversing this array gives us the final answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the given array and $L$ be the length of each string in the string array $\\textit{word}$.\n\n- Time complexity: $O(n^2L)$.\n  \n  The time required to calculate the Hamming distance between two strings is $L$. To determine the **longest subsequence** ending at index $i$, we must traverse all indices before $i$, which takes $O(nL)$ time. Therefore, to compute the length of the **longest subsequence** ending at each index, the total time required is $O(n^2 L)$.\n\n- Space complexity: $O(n)$.\n  \n  The space required is $O(n)$ to store the length of the **longest subsequence** ending at each index."
+}

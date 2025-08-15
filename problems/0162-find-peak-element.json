@@ -1,0 +1,52 @@
+{
+  "title": "Find Peak Element",
+  "problem_id": "162",
+  "frontend_id": "162",
+  "difficulty": "Medium",
+  "problem_slug": "find-peak-element",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "A peak element is an element that is strictly greater than its neighbors.\nGiven a 0-indexed integer array nums, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.\nYou may imagine that nums[-1] = nums[n] = -∞. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.\nYou must write an algorithm that runs in O(log n) time.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,1]\nOutput: 2\nExplanation: 3 is a peak element and your function should return the index number 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,1,3,5,6,4]\nOutput: 5\nExplanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "-231 <= nums[i] <= 231 - 1",
+    "nums[i] != nums[i + 1] for all valid i."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findPeakElement(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findPeakElement(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPeakElement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPeakElement(self, nums: List[int]) -> int:\n        ",
+    "c": "int findPeakElement(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindPeakElement(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findPeakElement = function(nums) {\n    \n};",
+    "typescript": "function findPeakElement(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findPeakElement($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPeakElement(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPeakElement(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findPeakElement(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findPeakElement(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_peak_element(nums)\n    \nend",
+    "scala": "object Solution {\n    def findPeakElement(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_peak_element(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-peak-element nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_peak_element(Nums :: [integer()]) -> integer().\nfind_peak_element(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_peak_element(nums :: [integer]) :: integer\n  def find_peak_element(nums) do\n    \n  end\nend"
+  }
+}

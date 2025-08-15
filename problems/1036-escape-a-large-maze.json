@@ -1,0 +1,61 @@
+{
+  "title": "Escape a Large Maze",
+  "problem_id": "1106",
+  "frontend_id": "1036",
+  "difficulty": "Hard",
+  "problem_slug": "escape-a-large-maze",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ],
+  "description": "There is a 1 million by 1 million grid on an XY-plane, and the coordinates of each grid square are (x, y).\nWe start at the source = [sx, sy] square and want to reach the target = [tx, ty] square. There is also an array of blocked squares, where each blocked[i] = [xi, yi] represents a blocked square with coordinates (xi, yi).\nEach move, we can walk one square north, east, south, or west if the square is not in the array of blocked squares. We are also not allowed to walk outside of the grid.\nReturn true if and only if it is possible to reach the target square from the source square through a sequence of valid moves.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: blocked = [[0,1],[1,0]], source = [0,0], target = [0,2]\nOutput: false\nExplanation: The target square is inaccessible starting from the source square because we cannot move.\nWe cannot move north or east because those squares are blocked.\nWe cannot move south or west because we cannot go outside of the grid.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: blocked = [], source = [0,0], target = [999999,999999]\nOutput: true\nExplanation: Because there are no blocked cells, it is possible to reach the target square.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= blocked.length <= 200",
+    "blocked[i].length == 2",
+    "0 <= xi, yi < 106",
+    "source.length == target.length == 2",
+    "0 <= sx, sy, tx, ty < 106",
+    "source != target",
+    "It is guaranteed that source and target are not blocked."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we become stuck, there's either a loop around the source or around the target.",
+    "If there is a loop around say, the source, what is the maximum number of squares it can have?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isEscapePossible(vector<vector<int>>& blocked, vector<int>& source, vector<int>& target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isEscapePossible(int[][] blocked, int[] source, int[] target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isEscapePossible(self, blocked, source, target):\n        \"\"\"\n        :type blocked: List[List[int]]\n        :type source: List[int]\n        :type target: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:\n        ",
+    "c": "bool isEscapePossible(int** blocked, int blockedSize, int* blockedColSize, int* source, int sourceSize, int* target, int targetSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsEscapePossible(int[][] blocked, int[] source, int[] target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} blocked\n * @param {number[]} source\n * @param {number[]} target\n * @return {boolean}\n */\nvar isEscapePossible = function(blocked, source, target) {\n    \n};",
+    "typescript": "function isEscapePossible(blocked: number[][], source: number[], target: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $blocked\n     * @param Integer[] $source\n     * @param Integer[] $target\n     * @return Boolean\n     */\n    function isEscapePossible($blocked, $source, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isEscapePossible(_ blocked: [[Int]], _ source: [Int], _ target: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isEscapePossible(blocked: Array<IntArray>, source: IntArray, target: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isEscapePossible(List<List<int>> blocked, List<int> source, List<int> target) {\n    \n  }\n}",
+    "golang": "func isEscapePossible(blocked [][]int, source []int, target []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} blocked\n# @param {Integer[]} source\n# @param {Integer[]} target\n# @return {Boolean}\ndef is_escape_possible(blocked, source, target)\n    \nend",
+    "scala": "object Solution {\n    def isEscapePossible(blocked: Array[Array[Int]], source: Array[Int], target: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_escape_possible(blocked: Vec<Vec<i32>>, source: Vec<i32>, target: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-escape-possible blocked source target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_escape_possible(Blocked :: [[integer()]], Source :: [integer()], Target :: [integer()]) -> boolean().\nis_escape_possible(Blocked, Source, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_escape_possible(blocked :: [[integer]], source :: [integer], target :: [integer]) :: boolean\n  def is_escape_possible(blocked, source, target) do\n    \n  end\nend"
+  }
+}

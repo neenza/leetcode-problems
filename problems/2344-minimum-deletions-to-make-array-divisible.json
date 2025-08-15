@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Deletions to Make Array Divisible",
+  "problem_id": "2423",
+  "frontend_id": "2344",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-deletions-to-make-array-divisible",
+  "topics": [
+    "Array",
+    "Math",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Number Theory"
+  ],
+  "description": "You are given two positive integer arrays nums and numsDivide. You can delete any number of elements from nums.\nReturn the minimum number of deletions such that the smallest element in nums divides all the elements of numsDivide. If this is not possible, return -1.\nNote that an integer x divides y if y % x == 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,2,4,3], numsDivide = [9,6,9,3,15]\nOutput: 2\nExplanation: \nThe smallest element in [2,3,2,4,3] is 2, which does not divide all the elements of numsDivide.\nWe use 2 deletions to delete the elements in nums that are equal to 2 which makes nums = [3,4,3].\nThe smallest element in [3,4,3] is 3, which divides all the elements of numsDivide.\nIt can be shown that 2 is the minimum number of deletions needed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,3,6], numsDivide = [8,2,6,10]\nOutput: -1\nExplanation: \nWe want the smallest element in nums to divide all the elements of numsDivide.\nThere is no way to delete elements from nums to allow this.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length, numsDivide.length <= 105",
+    "1 <= nums[i], numsDivide[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we find an integer x that divides all the elements of numsDivide?",
+    "Will finding GCD (Greatest Common Divisor) help here?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, vector<int>& numsDivide) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int[] numsDivide) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums, numsDivide):\n        \"\"\"\n        :type nums: List[int]\n        :type numsDivide: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize, int* numsDivide, int numsDivideSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums, int[] numsDivide) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} numsDivide\n * @return {number}\n */\nvar minOperations = function(nums, numsDivide) {\n    \n};",
+    "typescript": "function minOperations(nums: number[], numsDivide: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $numsDivide\n     * @return Integer\n     */\n    function minOperations($nums, $numsDivide) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int], _ numsDivide: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray, numsDivide: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums, List<int> numsDivide) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int, numsDivide []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} nums_divide\n# @return {Integer}\ndef min_operations(nums, nums_divide)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int], numsDivide: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>, nums_divide: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums numsDivide)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()], NumsDivide :: [integer()]) -> integer().\nmin_operations(Nums, NumsDivide) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], nums_divide :: [integer]) :: integer\n  def min_operations(nums, nums_divide) do\n    \n  end\nend"
+  }
+}

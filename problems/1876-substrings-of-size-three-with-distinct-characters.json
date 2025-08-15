@@ -1,0 +1,55 @@
+{
+  "title": "Substrings of Size Three with Distinct Characters",
+  "problem_id": "1987",
+  "frontend_id": "1876",
+  "difficulty": "Easy",
+  "problem_slug": "substrings-of-size-three-with-distinct-characters",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window",
+    "Counting"
+  ],
+  "description": "A string is good if there are no repeated characters.\nGiven a string s​​​​​, return the number of good substrings of length three in s​​​​​​.\nNote that if there are multiple occurrences of the same substring, every occurrence should be counted.\nA substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"xyzzaz\"\nOutput: 1\nExplanation: There are 4 substrings of size 3: \"xyz\", \"yzz\", \"zza\", and \"zaz\". \nThe only good substring of length 3 is \"xyz\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aababcabc\"\nOutput: 4\nExplanation: There are 7 substrings of size 3: \"aab\", \"aba\", \"bab\", \"abc\", \"bca\", \"cab\", and \"abc\".\nThe good substrings are \"abc\", \"bca\", \"cab\", and \"abc\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s​​​​​​ consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try using a set to find out the number of distinct characters in a substring."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countGoodSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGoodSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGoodSubstrings(self, s: str) -> int:\n        ",
+    "c": "int countGoodSubstrings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountGoodSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countGoodSubstrings = function(s) {\n    \n};",
+    "typescript": "function countGoodSubstrings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countGoodSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGoodSubstrings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGoodSubstrings(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countGoodSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func countGoodSubstrings(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_good_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def countGoodSubstrings(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good_substrings(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-good-substrings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_good_substrings(S :: unicode:unicode_binary()) -> integer().\ncount_good_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_good_substrings(s :: String.t) :: integer\n  def count_good_substrings(s) do\n    \n  end\nend"
+  }
+}

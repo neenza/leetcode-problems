@@ -1,0 +1,63 @@
+{
+  "title": "Self Crossing",
+  "problem_id": "335",
+  "frontend_id": "335",
+  "difficulty": "Hard",
+  "problem_slug": "self-crossing",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given an array of integers distance.\nYou start at the point (0, 0) on an X-Y plane, and you move distance[0] meters to the north, then distance[1] meters to the west, distance[2] meters to the south, distance[3] meters to the east, and so on. In other words, after each move, your direction changes counter-clockwise.\nReturn true if your path crosses itself or false if it does not.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: distance = [2,1,1,2]\nOutput: true\nExplanation: The path crosses itself at the point (0, 1).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/21/11.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: distance = [1,2,3,4]\nOutput: false\nExplanation: The path does not cross itself at any point.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/21/22.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: distance = [1,1,1,2,1]\nOutput: true\nExplanation: The path crosses itself at the point (0, 0).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/21/33.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= distance.length <= 105",
+    "1 <= distance[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isSelfCrossing(vector<int>& distance) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isSelfCrossing(int[] distance) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isSelfCrossing(self, distance):\n        \"\"\"\n        :type distance: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isSelfCrossing(self, distance: List[int]) -> bool:\n        ",
+    "c": "bool isSelfCrossing(int* distance, int distanceSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsSelfCrossing(int[] distance) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} distance\n * @return {boolean}\n */\nvar isSelfCrossing = function(distance) {\n    \n};",
+    "typescript": "function isSelfCrossing(distance: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $distance\n     * @return Boolean\n     */\n    function isSelfCrossing($distance) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isSelfCrossing(_ distance: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isSelfCrossing(distance: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isSelfCrossing(List<int> distance) {\n    \n  }\n}",
+    "golang": "func isSelfCrossing(distance []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} distance\n# @return {Boolean}\ndef is_self_crossing(distance)\n    \nend",
+    "scala": "object Solution {\n    def isSelfCrossing(distance: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_self_crossing(distance: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-self-crossing distance)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_self_crossing(Distance :: [integer()]) -> boolean().\nis_self_crossing(Distance) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_self_crossing(distance :: [integer]) :: boolean\n  def is_self_crossing(distance) do\n    \n  end\nend"
+  }
+}

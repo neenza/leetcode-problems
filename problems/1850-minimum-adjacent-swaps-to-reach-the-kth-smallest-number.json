@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Adjacent Swaps to Reach the Kth Smallest Number",
+  "problem_id": "1978",
+  "frontend_id": "1850",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-adjacent-swaps-to-reach-the-kth-smallest-number",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string num, representing a large integer, and an integer k.\nWe call some integer wonderful if it is a permutation of the digits in num and is greater in value than num. There can be many wonderful integers. However, we only care about the smallest-valued ones.\nReturn the minimum number of adjacent digit swaps that needs to be applied to num to reach the kth smallest wonderful integer.\nThe tests are generated in such a way that kth smallest wonderful integer exists.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"5489355142\", k = 4\nOutput: 2\nExplanation: The 4th smallest wonderful number is \"5489355421\". To get this number:\n- Swap index 7 with index 8: \"5489355142\" -> \"5489355412\"\n- Swap index 8 with index 9: \"5489355412\" -> \"5489355421\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"11112\", k = 4\nOutput: 4\nExplanation: The 4th smallest wonderful number is \"21111\". To get this number:\n- Swap index 3 with index 4: \"11112\" -> \"11121\"\n- Swap index 2 with index 3: \"11121\" -> \"11211\"\n- Swap index 1 with index 2: \"11211\" -> \"12111\"\n- Swap index 0 with index 1: \"12111\" -> \"21111\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"00123\", k = 1\nOutput: 1\nExplanation: The 1st smallest wonderful number is \"00132\". To get this number:\n- Swap index 3 with index 4: \"00123\" -> \"00132\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= num.length <= 1000",
+    "1 <= k <= 1000",
+    "num only consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the next permutation of the given string k times.",
+    "Try to move each element to its correct position and calculate the number of steps."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int getMinSwaps(string num, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getMinSwaps(String num, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getMinSwaps(self, num, k):\n        \"\"\"\n        :type num: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getMinSwaps(self, num: str, k: int) -> int:\n        ",
+    "c": "int getMinSwaps(char* num, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GetMinSwaps(string num, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @param {number} k\n * @return {number}\n */\nvar getMinSwaps = function(num, k) {\n    \n};",
+    "typescript": "function getMinSwaps(num: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @param Integer $k\n     * @return Integer\n     */\n    function getMinSwaps($num, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getMinSwaps(_ num: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getMinSwaps(num: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getMinSwaps(String num, int k) {\n    \n  }\n}",
+    "golang": "func getMinSwaps(num string, k int) int {\n    \n}",
+    "ruby": "# @param {String} num\n# @param {Integer} k\n# @return {Integer}\ndef get_min_swaps(num, k)\n    \nend",
+    "scala": "object Solution {\n    def getMinSwaps(num: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_min_swaps(num: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (get-min-swaps num k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec get_min_swaps(Num :: unicode:unicode_binary(), K :: integer()) -> integer().\nget_min_swaps(Num, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_min_swaps(num :: String.t, k :: integer) :: integer\n  def get_min_swaps(num, k) do\n    \n  end\nend"
+  }
+}

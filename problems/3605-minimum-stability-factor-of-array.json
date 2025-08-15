@@ -1,0 +1,65 @@
+{
+  "title": "Minimum Stability Factor of Array",
+  "problem_id": "3920",
+  "frontend_id": "3605",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-stability-factor-of-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Greedy",
+    "Segment Tree",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums and an integer maxC.\nA subarray is called stable if the highest common factor (HCF) of all its elements is greater than or equal to 2.\nThe stability factor of an array is defined as the length of its longest stable subarray.\nYou may modify at most maxC elements of the array to any integer.\nReturn the minimum possible stability factor of the array after at most maxC modifications. If no stable subarray remains, return 0.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,5,10], maxC = 1\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,6,8], maxC = 2\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,4,9,6], maxC = 1\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "0 <= maxC <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary‐search the target length <code>k</code>",
+    "For each <code>k</code>, use fast range‐GCD queries",
+    "Greedily \"hit\" every window of size <code>k+1</code> with an edit if its <code>GCD > 1</code>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minStable(vector<int>& nums, int maxC) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minStable(int[] nums, int maxC) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minStable(self, nums, maxC):\n        \"\"\"\n        :type nums: List[int]\n        :type maxC: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minStable(self, nums: List[int], maxC: int) -> int:\n        ",
+    "c": "int minStable(int* nums, int numsSize, int maxC) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinStable(int[] nums, int maxC) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} maxC\n * @return {number}\n */\nvar minStable = function(nums, maxC) {\n    \n};",
+    "typescript": "function minStable(nums: number[], maxC: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $maxC\n     * @return Integer\n     */\n    function minStable($nums, $maxC) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minStable(_ nums: [Int], _ maxC: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minStable(nums: IntArray, maxC: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minStable(List<int> nums, int maxC) {\n    \n  }\n}",
+    "golang": "func minStable(nums []int, maxC int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} max_c\n# @return {Integer}\ndef min_stable(nums, max_c)\n    \nend",
+    "scala": "object Solution {\n    def minStable(nums: Array[Int], maxC: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_stable(nums: Vec<i32>, max_c: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-stable nums maxC)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_stable(Nums :: [integer()], MaxC :: integer()) -> integer().\nmin_stable(Nums, MaxC) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_stable(nums :: [integer], max_c :: integer) :: integer\n  def min_stable(nums, max_c) do\n    \n  end\nend"
+  }
+}

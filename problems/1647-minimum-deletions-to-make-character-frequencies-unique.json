@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Deletions to Make Character Frequencies Unique",
+  "problem_id": "1770",
+  "frontend_id": "1647",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-deletions-to-make-character-frequencies-unique",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "A string s is called good if there are no two different characters in s that have the same frequency.\nGiven a string s, return the minimum number of characters you need to delete to make s good.\nThe frequency of a character in a string is the number of times it appears in the string. For example, in the string \"aab\", the frequency of 'a' is 2, while the frequency of 'b' is 1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aab\"\nOutput: 0\nExplanation: s is already good.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaabbbcc\"\nOutput: 2\nExplanation: You can delete two 'b's resulting in the good string \"aaabcc\".\nAnother way it to delete one 'b' and one 'c' resulting in the good string \"aaabbc\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"ceabaacb\"\nOutput: 2\nExplanation: You can delete both 'c's resulting in the good string \"eabaab\".\nNote that we only care about characters that are still in the string at the end (i.e. frequency of 0 is ignored).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "As we can only delete characters, if we have multiple characters having the same frequency, we must decrease all the frequencies of them, except one.",
+    "Sort the alphabet characters by their frequencies non-increasingly.",
+    "Iterate on the alphabet characters, keep decreasing the frequency of the current character until it reaches a value that has not appeared before."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDeletions(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDeletions(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDeletions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDeletions(self, s: str) -> int:\n        ",
+    "c": "int minDeletions(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDeletions(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minDeletions = function(s) {\n    \n};",
+    "typescript": "function minDeletions(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minDeletions($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDeletions(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDeletions(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDeletions(String s) {\n    \n  }\n}",
+    "golang": "func minDeletions(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_deletions(s)\n    \nend",
+    "scala": "object Solution {\n    def minDeletions(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_deletions(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-deletions s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_deletions(S :: unicode:unicode_binary()) -> integer().\nmin_deletions(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_deletions(s :: String.t) :: integer\n  def min_deletions(s) do\n    \n  end\nend"
+  }
+}

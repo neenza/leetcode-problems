@@ -1,0 +1,59 @@
+{
+  "title": "Count Number of Special Subsequences",
+  "problem_id": "2086",
+  "frontend_id": "1955",
+  "difficulty": "Hard",
+  "problem_slug": "count-number-of-special-subsequences",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "A sequence is special if it consists of a positive number of 0s, followed by a positive number of 1s, then a positive number of 2s.\nGiven an array nums (consisting of only integers 0, 1, and 2), return the number of different subsequences that are special. Since the answer may be very large, return it modulo 109 + 7.\nA subsequence of an array is a sequence that can be derived from the array by deleting some or no elements without changing the order of the remaining elements. Two subsequences are different if the set of indices chosen are different.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,2,2]\nOutput: 3\nExplanation: The special subsequences are bolded [0,1,2,2], [0,1,2,2], and [0,1,2,2].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,2,0,0]\nOutput: 0\nExplanation: There are no special subsequences in [2,2,0,0].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [0,1,2,0,1,2]\nOutput: 7\nExplanation: The special subsequences are bolded:\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we first solve a simpler problem? Counting the number of subsequences with 1s followed by 0s.",
+    "How can we keep track of the partially matched subsequences to help us find the answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSpecialSubsequences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSpecialSubsequences(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSpecialSubsequences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSpecialSubsequences(self, nums: List[int]) -> int:\n        ",
+    "c": "int countSpecialSubsequences(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSpecialSubsequences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countSpecialSubsequences = function(nums) {\n    \n};",
+    "typescript": "function countSpecialSubsequences(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countSpecialSubsequences($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSpecialSubsequences(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSpecialSubsequences(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSpecialSubsequences(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countSpecialSubsequences(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_special_subsequences(nums)\n    \nend",
+    "scala": "object Solution {\n    def countSpecialSubsequences(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_special_subsequences(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-special-subsequences nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_special_subsequences(Nums :: [integer()]) -> integer().\ncount_special_subsequences(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_special_subsequences(nums :: [integer]) :: integer\n  def count_special_subsequences(nums) do\n    \n  end\nend"
+  }
+}

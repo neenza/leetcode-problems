@@ -1,0 +1,69 @@
+{
+  "title": "Reschedule Meetings for Maximum Free Time I",
+  "problem_id": "3743",
+  "frontend_id": "3439",
+  "difficulty": "Medium",
+  "problem_slug": "reschedule-meetings-for-maximum-free-time-i",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sliding Window"
+  ],
+  "description": "You are given an integer eventTime denoting the duration of an event, where the event occurs from time t = 0 to time t = eventTime.\nYou are also given two integer arrays startTime and endTime, each of length n. These represent the start and end time of n non-overlapping meetings, where the ith meeting occurs during the time [startTime[i], endTime[i]].\nYou can reschedule at most k meetings by moving their start time while maintaining the same duration, to maximize the longest continuous period of free time during the event.\nThe relative order of all the meetings should stay the same and they should remain non-overlapping.\nReturn the maximum amount of free time possible after rearranging the meetings.\nNote that the meetings can not be rescheduled to a time outside the event.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: eventTime = 5, k = 1, startTime = [1,3], endTime = [2,5]\nOutput: 2\nExplanation:\n\nReschedule the meeting at [1, 2] to [2, 3] , leaving no meetings during the time [0, 2] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/21/example0_rescheduled.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: eventTime = 10, k = 1, startTime = [0,2,9], endTime = [1,4,10]\nOutput: 6\nExplanation:\n\nReschedule the meeting at [2, 4] to [1, 3] , leaving no meetings during the time [3, 9] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/21/example1_rescheduled.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: eventTime = 5, k = 2, startTime = [0,1,2,3,4], endTime = [1,2,3,4,5]\nOutput: 0\nExplanation:\nThere is no time during the event not occupied by meetings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= eventTime <= 109",
+    "n == startTime.length == endTime.length",
+    "2 <= n <= 105",
+    "1 <= k <= n",
+    "0 <= startTime[i] < endTime[i] <= eventTime",
+    "endTime[i] <= startTime[i + 1] where i lies in the range [0, n - 2]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In a sequence of <code>K</code> meetings and <code>K + 1</code> gaps, you could move all meetings to the start of the sequence to get the max free time.",
+    "Use a sliding window of <code>K + 1</code> size to store sum of gaps and take the maximum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxFreeTime(int eventTime, int k, vector<int>& startTime, vector<int>& endTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxFreeTime(int eventTime, int k, int[] startTime, int[] endTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxFreeTime(self, eventTime, k, startTime, endTime):\n        \"\"\"\n        :type eventTime: int\n        :type k: int\n        :type startTime: List[int]\n        :type endTime: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxFreeTime(self, eventTime: int, k: int, startTime: List[int], endTime: List[int]) -> int:\n        ",
+    "c": "int maxFreeTime(int eventTime, int k, int* startTime, int startTimeSize, int* endTime, int endTimeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxFreeTime(int eventTime, int k, int[] startTime, int[] endTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} eventTime\n * @param {number} k\n * @param {number[]} startTime\n * @param {number[]} endTime\n * @return {number}\n */\nvar maxFreeTime = function(eventTime, k, startTime, endTime) {\n    \n};",
+    "typescript": "function maxFreeTime(eventTime: number, k: number, startTime: number[], endTime: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $eventTime\n     * @param Integer $k\n     * @param Integer[] $startTime\n     * @param Integer[] $endTime\n     * @return Integer\n     */\n    function maxFreeTime($eventTime, $k, $startTime, $endTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxFreeTime(_ eventTime: Int, _ k: Int, _ startTime: [Int], _ endTime: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxFreeTime(eventTime: Int, k: Int, startTime: IntArray, endTime: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxFreeTime(int eventTime, int k, List<int> startTime, List<int> endTime) {\n    \n  }\n}",
+    "golang": "func maxFreeTime(eventTime int, k int, startTime []int, endTime []int) int {\n    \n}",
+    "ruby": "# @param {Integer} event_time\n# @param {Integer} k\n# @param {Integer[]} start_time\n# @param {Integer[]} end_time\n# @return {Integer}\ndef max_free_time(event_time, k, start_time, end_time)\n    \nend",
+    "scala": "object Solution {\n    def maxFreeTime(eventTime: Int, k: Int, startTime: Array[Int], endTime: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_free_time(event_time: i32, k: i32, start_time: Vec<i32>, end_time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-free-time eventTime k startTime endTime)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_free_time(EventTime :: integer(), K :: integer(), StartTime :: [integer()], EndTime :: [integer()]) -> integer().\nmax_free_time(EventTime, K, StartTime, EndTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_free_time(event_time :: integer, k :: integer, start_time :: [integer], end_time :: [integer]) :: integer\n  def max_free_time(event_time, k, start_time, end_time) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Greedy + Prefix Sum\n\n#### Intuition\n\nAccording to the problem description, shifting a meeting can merge the adjacent free time periods on both sides of that meeting. Therefore, when we shift $k$ meetings, the maximum number of free time periods that can be merged is $k + 1$, this happens only when the $k$ meetings are adjacent.\n\nOnce the $k$ adjacent meetings to be shifted are fixed, let the start time of the first free time interval to be merged be $\\textit{left}$, and the end time of the last free time interval be $\\textit{right}$. Then, the total length of the merged $k + 1$ free intervals is equal to the overall time interval $\\textit{right} - \\textit{left}$ minus the total duration of the $k$ meetings.\n\nWe precompute the prefix sums $\\textit{sum}$ of the $n$ meeting durations to make it easier to compute the total duration of any $k$ adjacent meetings later. We then enumerate the rightmost meeting among the $k$ adjacent ones, denoted as $i$ (with $i \\ge k - 1$), so the $k$ meetings span the interval $[i - k + 1, i]$. For each such $i$, we compute:\n\n- The total duration of the $k$ meetings: $\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1]$\n\n- The start time of the first available time slot before the $k$ meetings:\n\n$$\n\\textit{left}_i =\n\\begin{cases}\n0 & \\text{if } i \\le k - 1 \\\\\n\\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n\\end{cases}\n$$\n\n- The end time of the last available time slot after the $k$ meetings:\n\n$$\n\\textit{right}_i =\n\\begin{cases}\n\\textit{eventTime} & \\text{if } i = n - 1 \\\\\n\\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n\\end{cases}\n$$\n\nSo the total length of the merged $k + 1$ free time intervals is:\n\n$$\n\\textit{right}_i - \\textit{left}_i - (\\textit{sum}[i + 1] - \\textit{sum}[i - k + 1])\n$$\n\nFinally, we return the maximum value over all such computations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to save the prefix sums.\n\n### Approach 2: Greedy + Sliding Window\n\n#### Intuition\n\nIn Approach 1, we used prefix sums to efficiently calculate the total duration of $k$ consecutive meetings. Similarly, in this approach, we can use a sliding window to maintain the total duration of $k$ consecutive meetings. Specifically, we use a variable $t$ to track the total duration of meetings within the current window. For each meeting $i$, we do the following:\n\n- Add meeting $i$ to the current window by updating: $t = t + \\textit{endTime}[i] - \\textit{startTime}[i]$\n\n- As in Approach 1, compute the start and end of the merged free interval:\n  - Left boundary:\n      $$\n    \\textit{left}_i = \n    \\begin{cases}\n    0 & \\text{if } i \\le k - 1 \\\\\n    \\textit{endTime}[i - k] & \\text{if } i > k - 1 \\\\\n    \\end{cases}\n    $$\n   \n  - Right boundary:\n    $$\n    \\textit{right}_i =\n    \\begin{cases}\n    \\textit{eventTime} & \\text{if } i = n - 1 \\\\\n    \\textit{startTime}[i + 1] & \\text{otherwise} \\\\\n    \\end{cases}\n    $$\n    \n- When the window reaches size $k$ (i.e., $i \\ge k - 1$), we compute the total length of the merged $k + 1$ free intervals:\n  $$\n  \\textit{right}_i - \\textit{left}_i - t\n  $$\n  \n- After that, we remove the earliest meeting in the window (meeting $i - k + 1$) to maintain the window size at most $k$: $t = t - (\\textit{endTime}[i - k + 1] - \\textit{startTime}[i - k + 1])$\n\nWe return the maximum total length of the merged free time intervals across all valid windows.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$."
+}

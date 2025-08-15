@@ -1,0 +1,58 @@
+{
+  "title": "Unique Email Addresses",
+  "problem_id": "965",
+  "frontend_id": "929",
+  "difficulty": "Easy",
+  "problem_slug": "unique-email-addresses",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, the email may contain one or more '.' or '+'.\nIf you add periods '.' between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name. Note that this rule does not apply to domain names.\nIf you add a plus '+' in the local name, everything after the first plus sign will be ignored. This allows certain emails to be filtered. Note that this rule does not apply to domain names.\nIt is possible to use both of these rules at the same time.\nGiven an array of strings emails where we send one email to each emails[i], return the number of different addresses that actually receive mails.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: emails = [\"test.email+alex@leetcode.com\",\"test.e.mail+bob.cathy@leetcode.com\",\"testemail+david@lee.tcode.com\"]\nOutput: 2\nExplanation: \"testemail@leetcode.com\" and \"testemail@lee.tcode.com\" actually receive mails.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: emails = [\"a@leetcode.com\",\"b@leetcode.com\",\"c@leetcode.com\"]\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= emails.length <= 100",
+    "1 <= emails[i].length <= 100",
+    "emails[i] consist of lowercase English letters, '+', '.' and '@'.",
+    "Each emails[i] contains exactly one '@' character.",
+    "All local and domain names are non-empty.",
+    "Local names do not start with a '+' character.",
+    "Domain names end with the \".com\" suffix.",
+    "Domain names must contain at least one character before \".com\" suffix."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numUniqueEmails(vector<string>& emails) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numUniqueEmails(String[] emails) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numUniqueEmails(self, emails):\n        \"\"\"\n        :type emails: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numUniqueEmails(self, emails: List[str]) -> int:\n        ",
+    "c": "int numUniqueEmails(char** emails, int emailsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumUniqueEmails(string[] emails) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} emails\n * @return {number}\n */\nvar numUniqueEmails = function(emails) {\n    \n};",
+    "typescript": "function numUniqueEmails(emails: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $emails\n     * @return Integer\n     */\n    function numUniqueEmails($emails) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numUniqueEmails(_ emails: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numUniqueEmails(emails: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numUniqueEmails(List<String> emails) {\n    \n  }\n}",
+    "golang": "func numUniqueEmails(emails []string) int {\n    \n}",
+    "ruby": "# @param {String[]} emails\n# @return {Integer}\ndef num_unique_emails(emails)\n    \nend",
+    "scala": "object Solution {\n    def numUniqueEmails(emails: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_unique_emails(emails: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-unique-emails emails)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec num_unique_emails(Emails :: [unicode:unicode_binary()]) -> integer().\nnum_unique_emails(Emails) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_unique_emails(emails :: [String.t]) :: integer\n  def num_unique_emails(emails) do\n    \n  end\nend"
+  }
+}

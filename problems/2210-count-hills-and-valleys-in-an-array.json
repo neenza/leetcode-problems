@@ -1,0 +1,54 @@
+{
+  "title": "Count Hills and Valleys in an Array",
+  "problem_id": "2316",
+  "frontend_id": "2210",
+  "difficulty": "Easy",
+  "problem_slug": "count-hills-and-valleys-in-an-array",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a 0-indexed integer array nums. An index i is part of a hill in nums if the closest non-equal neighbors of i are smaller than nums[i]. Similarly, an index i is part of a valley in nums if the closest non-equal neighbors of i are larger than nums[i]. Adjacent indices i and j are part of the same hill or valley if nums[i] == nums[j].\nNote that for an index to be part of a hill or valley, it must have a non-equal neighbor on both the left and right of the index.\nReturn the number of hills and valleys in nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,1,1,6,5]\nOutput: 3\nExplanation:\nAt index 0: There is no non-equal neighbor of 2 on the left, so index 0 is neither a hill nor a valley.\nAt index 1: The closest non-equal neighbors of 4 are 2 and 1. Since 4 > 2 and 4 > 1, index 1 is a hill. \nAt index 2: The closest non-equal neighbors of 1 are 4 and 6. Since 1 < 4 and 1 < 6, index 2 is a valley.\nAt index 3: The closest non-equal neighbors of 1 are 4 and 6. Since 1 < 4 and 1 < 6, index 3 is a valley, but note that it is part of the same valley as index 2.\nAt index 4: The closest non-equal neighbors of 6 are 1 and 5. Since 6 > 1 and 6 > 5, index 4 is a hill.\nAt index 5: There is no non-equal neighbor of 5 on the right, so index 5 is neither a hill nor a valley. \nThere are 3 hills and valleys so we return 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,6,5,5,4,1]\nOutput: 0\nExplanation:\nAt index 0: There is no non-equal neighbor of 6 on the left, so index 0 is neither a hill nor a valley.\nAt index 1: There is no non-equal neighbor of 6 on the left, so index 1 is neither a hill nor a valley.\nAt index 2: The closest non-equal neighbors of 5 are 6 and 4. Since 5 < 6 and 5 > 4, index 2 is neither a hill nor a valley.\nAt index 3: The closest non-equal neighbors of 5 are 6 and 4. Since 5 < 6 and 5 > 4, index 3 is neither a hill nor a valley.\nAt index 4: The closest non-equal neighbors of 4 are 5 and 1. Since 4 < 5 and 4 > 1, index 4 is neither a hill nor a valley.\nAt index 5: There is no non-equal neighbor of 1 on the right, so index 5 is neither a hill nor a valley.\nThere are 0 hills and valleys so we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each index, could you find the closest non-equal neighbors?",
+    "Ensure that adjacent indices that are part of the same hill or valley are not double-counted."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countHillValley(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countHillValley(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countHillValley(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countHillValley(self, nums: List[int]) -> int:\n        ",
+    "c": "int countHillValley(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountHillValley(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countHillValley = function(nums) {\n    \n};",
+    "typescript": "function countHillValley(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countHillValley($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countHillValley(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countHillValley(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countHillValley(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countHillValley(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_hill_valley(nums)\n    \nend",
+    "scala": "object Solution {\n    def countHillValley(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_hill_valley(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-hill-valley nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_hill_valley(Nums :: [integer()]) -> integer().\ncount_hill_valley(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_hill_valley(nums :: [integer]) :: integer\n  def count_hill_valley(nums) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Count the Number of Peaks and Valleys in the Array\n\n#### Intuition\n\nWe can traverse the array $\\textit{nums}$ to identify and count the number of peaks and valleys. Specifically, we examine each index $i$ (excluding the first and last elements, which cannot be peaks or valleys) to determine whether it is part of a peak or a valley. We use a variable $\\textit{res}$ to keep track of this count. To avoid redundant checks, we only evaluate the first index of each potential peak or valley, so if $\\textit{nums}[i] = \\textit{nums}[i - 1]$, we skip index $i$.\n\nFor each index $i$ that needs evaluation, we use integers $\\textit{left}$ and $\\textit{right}$ to represent the relationship between $\\textit{nums}[i]$ and its nearest unequal neighbors on the left and right. The value $1$ indicates that the neighbor is greater than $\\textit{nums}[i]$, $-1$ indicates it is smaller, and $0$ means either no unequal neighbor was found or such a neighbor doesn't exist in that direction. Both $\\textit{left}$ and $\\textit{right}$ are initialized to $0$.\n\nTo compute the value of $\\textit{left}$, we scan leftward from index $i - 1$ until we find the first element not equal to $\\textit{nums}[i]$, at which point we assign an appropriate state to $\\textit{left}$ or stop if we reach the beginning of the array. Similarly, we scan rightward from index $i + 1$ to determine the value of $\\textit{right}$.\n\nAn index $i$ is part of a peak or a valley if and only if $\\textit{left} = \\textit{right}$ and $\\textit{left} \\ne 0$. If both conditions are satisfied, we increment $\\textit{res}$ by 1. After traversing the array, $\\textit{res}$ contains the number of peaks and valleys, which we return as the answer.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n^2)$.\n  \n  For each element, we may traverse up to $O(n)$ elements to the left and right in the worst case.\n\n- Space complexity: $O(1)$.\n\n---"
+}

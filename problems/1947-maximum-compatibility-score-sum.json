@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Compatibility Score Sum",
+  "problem_id": "2078",
+  "frontend_id": "1947",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-compatibility-score-sum",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "There is a survey that consists of n questions where each question's answer is either 0 (no) or 1 (yes).\nThe survey was given to m students numbered from 0 to m - 1 and m mentors numbered from 0 to m - 1. The answers of the students are represented by a 2D integer array students where students[i] is an integer array that contains the answers of the ith student (0-indexed). The answers of the mentors are represented by a 2D integer array mentors where mentors[j] is an integer array that contains the answers of the jth mentor (0-indexed).\nEach student will be assigned to one mentor, and each mentor will have one student assigned to them. The compatibility score of a student-mentor pair is the number of answers that are the same for both the student and the mentor.\nYou are tasked with finding the optimal student-mentor pairings to maximize the sum of the compatibility scores.\nGiven students and mentors, return the maximum compatibility score sum that can be achieved.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: students = [[1,1,0],[1,0,1],[0,0,1]], mentors = [[1,0,0],[0,0,1],[1,1,0]]\nOutput: 8\nExplanation: We assign students to mentors in the following way:\n- student 0 to mentor 2 with a compatibility score of 3.\n- student 1 to mentor 0 with a compatibility score of 2.\n- student 2 to mentor 1 with a compatibility score of 3.\nThe compatibility score sum is 3 + 2 + 3 = 8.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: students = [[0,0],[0,0],[0,0]], mentors = [[1,1],[1,1],[1,1]]\nOutput: 0\nExplanation: The compatibility score of any student-mentor pair is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == students.length == mentors.length",
+    "n == students[i].length == mentors[j].length",
+    "1 <= m, n <= 8",
+    "students[i][k] is either 0 or 1.",
+    "mentors[j][k] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Calculate the compatibility score for each student-mentor pair.",
+    "Try every permutation of students with the original mentors array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxCompatibilitySum(vector<vector<int>>& students, vector<vector<int>>& mentors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxCompatibilitySum(int[][] students, int[][] mentors) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxCompatibilitySum(self, students, mentors):\n        \"\"\"\n        :type students: List[List[int]]\n        :type mentors: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxCompatibilitySum(self, students: List[List[int]], mentors: List[List[int]]) -> int:\n        ",
+    "c": "int maxCompatibilitySum(int** students, int studentsSize, int* studentsColSize, int** mentors, int mentorsSize, int* mentorsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxCompatibilitySum(int[][] students, int[][] mentors) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} students\n * @param {number[][]} mentors\n * @return {number}\n */\nvar maxCompatibilitySum = function(students, mentors) {\n    \n};",
+    "typescript": "function maxCompatibilitySum(students: number[][], mentors: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $students\n     * @param Integer[][] $mentors\n     * @return Integer\n     */\n    function maxCompatibilitySum($students, $mentors) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxCompatibilitySum(_ students: [[Int]], _ mentors: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxCompatibilitySum(students: Array<IntArray>, mentors: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxCompatibilitySum(List<List<int>> students, List<List<int>> mentors) {\n    \n  }\n}",
+    "golang": "func maxCompatibilitySum(students [][]int, mentors [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} students\n# @param {Integer[][]} mentors\n# @return {Integer}\ndef max_compatibility_sum(students, mentors)\n    \nend",
+    "scala": "object Solution {\n    def maxCompatibilitySum(students: Array[Array[Int]], mentors: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_compatibility_sum(students: Vec<Vec<i32>>, mentors: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-compatibility-sum students mentors)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_compatibility_sum(Students :: [[integer()]], Mentors :: [[integer()]]) -> integer().\nmax_compatibility_sum(Students, Mentors) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_compatibility_sum(students :: [[integer]], mentors :: [[integer]]) :: integer\n  def max_compatibility_sum(students, mentors) do\n    \n  end\nend"
+  }
+}

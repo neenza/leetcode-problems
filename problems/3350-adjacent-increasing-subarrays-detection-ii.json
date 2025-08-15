@@ -1,0 +1,54 @@
+{
+  "title": "Adjacent Increasing Subarrays Detection II",
+  "problem_id": "3619",
+  "frontend_id": "3350",
+  "difficulty": "Medium",
+  "problem_slug": "adjacent-increasing-subarrays-detection-ii",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Given an array nums of n integers, your task is to find the maximum value of k for which there exist two adjacent subarrays of length k each, such that both subarrays are strictly increasing. Specifically, check if there are two subarrays of length k starting at indices a and b (a < b), where:\nReturn the maximum possible value of k.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,7,8,9,2,3,4,3,1]\nOutput: 3\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,4,4,4,5,6,7]\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 2 * 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the boundaries between strictly increasing subarrays.",
+    "Can we use binary search?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxIncreasingSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxIncreasingSubarrays(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxIncreasingSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxIncreasingSubarrays(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxIncreasingSubarrays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxIncreasingSubarrays(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxIncreasingSubarrays = function(nums) {\n    \n};",
+    "typescript": "function maxIncreasingSubarrays(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxIncreasingSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxIncreasingSubarrays(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxIncreasingSubarrays(nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxIncreasingSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxIncreasingSubarrays(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_increasing_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxIncreasingSubarrays(nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_increasing_subarrays(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-increasing-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_increasing_subarrays(Nums :: [integer()]) -> integer().\nmax_increasing_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_increasing_subarrays(nums :: [integer]) :: integer\n  def max_increasing_subarrays(nums) do\n    \n  end\nend"
+  }
+}

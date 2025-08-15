@@ -1,0 +1,55 @@
+{
+  "title": "Check if All Characters Have Equal Number of Occurrences",
+  "problem_id": "2053",
+  "frontend_id": "1941",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-all-characters-have-equal-number-of-occurrences",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "Given a string s, return true if s is a good string, or false otherwise.\nA string s is good if all the characters that appear in s have the same number of occurrences (i.e., the same frequency).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abacbc\"\nOutput: true\nExplanation: The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaabb\"\nOutput: false\nExplanation: The characters that appear in s are 'a' and 'b'.\n'a' occurs 3 times while 'b' occurs 2 times, which is not the same number of times.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Build a dictionary containing the frequency of each character appearing in s",
+    "Check if all values in the dictionary are the same."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool areOccurrencesEqual(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean areOccurrencesEqual(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def areOccurrencesEqual(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def areOccurrencesEqual(self, s: str) -> bool:\n        ",
+    "c": "bool areOccurrencesEqual(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool AreOccurrencesEqual(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar areOccurrencesEqual = function(s) {\n    \n};",
+    "typescript": "function areOccurrencesEqual(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function areOccurrencesEqual($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func areOccurrencesEqual(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun areOccurrencesEqual(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool areOccurrencesEqual(String s) {\n    \n  }\n}",
+    "golang": "func areOccurrencesEqual(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef are_occurrences_equal(s)\n    \nend",
+    "scala": "object Solution {\n    def areOccurrencesEqual(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn are_occurrences_equal(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (are-occurrences-equal s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec are_occurrences_equal(S :: unicode:unicode_binary()) -> boolean().\nare_occurrences_equal(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec are_occurrences_equal(s :: String.t) :: boolean\n  def are_occurrences_equal(s) do\n    \n  end\nend"
+  }
+}

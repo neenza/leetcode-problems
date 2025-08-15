@@ -1,0 +1,62 @@
+{
+  "title": "Number of Valid Words for Each Puzzle",
+  "problem_id": "1282",
+  "frontend_id": "1178",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-valid-words-for-each-puzzle",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Trie"
+  ],
+  "description": "Example 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"aaaa\",\"asas\",\"able\",\"ability\",\"actt\",\"actor\",\"access\"], puzzles = [\"aboveyz\",\"abrodyz\",\"abslute\",\"absoryz\",\"actresz\",\"gaswxyz\"]\nOutput: [1,1,3,2,4,0]\nExplanation: \n1 valid word for \"aboveyz\" : \"aaaa\" \n1 valid word for \"abrodyz\" : \"aaaa\"\n3 valid words for \"abslute\" : \"aaaa\", \"asas\", \"able\"\n2 valid words for \"absoryz\" : \"aaaa\", \"asas\"\n4 valid words for \"actresz\" : \"aaaa\", \"asas\", \"actt\", \"access\"\nThere are no valid words for \"gaswxyz\" cause none of the words in the list contains letter 'g'.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"apple\",\"pleas\",\"please\"], puzzles = [\"aelwxyz\",\"aelpxyz\",\"aelpsxy\",\"saelpxy\",\"xaelpsy\"]\nOutput: [0,1,3,2,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 105",
+    "4 <= words[i].length <= 50",
+    "1 <= puzzles.length <= 104",
+    "puzzles[i].length == 7",
+    "words[i] and puzzles[i] consist of lowercase English letters.",
+    "Each puzzles[i] does not contain repeated characters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Exploit the fact that the length of the puzzle is only 7.",
+    "Use bit-masks to represent the word and puzzle strings.",
+    "For each puzzle, count the number of words whose bit-mask is a sub-mask of the puzzle's bit-mask."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findNumOfValidWords(vector<string>& words, vector<string>& puzzles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findNumOfValidWords(String[] words, String[] puzzles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findNumOfValidWords(self, words, puzzles):\n        \"\"\"\n        :type words: List[str]\n        :type puzzles: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findNumOfValidWords(char** words, int wordsSize, char** puzzles, int puzzlesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindNumOfValidWords(string[] words, string[] puzzles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string[]} puzzles\n * @return {number[]}\n */\nvar findNumOfValidWords = function(words, puzzles) {\n    \n};",
+    "typescript": "function findNumOfValidWords(words: string[], puzzles: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String[] $puzzles\n     * @return Integer[]\n     */\n    function findNumOfValidWords($words, $puzzles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findNumOfValidWords(_ words: [String], _ puzzles: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findNumOfValidWords(words: Array<String>, puzzles: Array<String>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findNumOfValidWords(List<String> words, List<String> puzzles) {\n    \n  }\n}",
+    "golang": "func findNumOfValidWords(words []string, puzzles []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String[]} puzzles\n# @return {Integer[]}\ndef find_num_of_valid_words(words, puzzles)\n    \nend",
+    "scala": "object Solution {\n    def findNumOfValidWords(words: Array[String], puzzles: Array[String]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_num_of_valid_words(words: Vec<String>, puzzles: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-num-of-valid-words words puzzles)\n  (-> (listof string?) (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_num_of_valid_words(Words :: [unicode:unicode_binary()], Puzzles :: [unicode:unicode_binary()]) -> [integer()].\nfind_num_of_valid_words(Words, Puzzles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_num_of_valid_words(words :: [String.t], puzzles :: [String.t]) :: [integer]\n  def find_num_of_valid_words(words, puzzles) do\n    \n  end\nend"
+  }
+}

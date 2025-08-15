@@ -1,0 +1,55 @@
+{
+  "title": "Uncommon Words from Two Sentences",
+  "problem_id": "920",
+  "frontend_id": "884",
+  "difficulty": "Easy",
+  "problem_slug": "uncommon-words-from-two-sentences",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "A sentence is a string of single-space separated words where each word consists only of lowercase letters.\nA word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.\nGiven two sentences s1 and s2, return a list of all the uncommon words. You may return the answer in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s1 = \"this apple is sweet\", s2 = \"this apple is sour\"\nOutput: [\"sweet\",\"sour\"]\nExplanation:\nThe word \"sweet\" appears only in s1 , while the word \"sour\" appears only in s2 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s1 = \"apple apple\", s2 = \"banana\"\nOutput: [\"banana\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s1.length, s2.length <= 200",
+    "s1 and s2 consist of lowercase English letters and spaces.",
+    "s1 and s2 do not have leading or trailing spaces.",
+    "All the words in s1 and s2 are separated by a single space."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> uncommonFromSentences(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] uncommonFromSentences(String s1, String s2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uncommonFromSentences(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** uncommonFromSentences(char* s1, char* s2, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] UncommonFromSentences(string s1, string s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {string[]}\n */\nvar uncommonFromSentences = function(s1, s2) {\n    \n};",
+    "typescript": "function uncommonFromSentences(s1: string, s2: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s1\n     * @param String $s2\n     * @return String[]\n     */\n    function uncommonFromSentences($s1, $s2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uncommonFromSentences(_ s1: String, _ s2: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uncommonFromSentences(s1: String, s2: String): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> uncommonFromSentences(String s1, String s2) {\n    \n  }\n}",
+    "golang": "func uncommonFromSentences(s1 string, s2 string) []string {\n    \n}",
+    "ruby": "# @param {String} s1\n# @param {String} s2\n# @return {String[]}\ndef uncommon_from_sentences(s1, s2)\n    \nend",
+    "scala": "object Solution {\n    def uncommonFromSentences(s1: String, s2: String): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn uncommon_from_sentences(s1: String, s2: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (uncommon-from-sentences s1 s2)\n  (-> string? string? (listof string?))\n  )",
+    "erlang": "-spec uncommon_from_sentences(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nuncommon_from_sentences(S1, S2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec uncommon_from_sentences(s1 :: String.t, s2 :: String.t) :: [String.t]\n  def uncommon_from_sentences(s1, s2) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Counting \n\n**Intuition and Algorithm**\n\nEvery uncommon word occurs exactly once in total.  We can count the number of occurrences of every word, then return ones that occur exactly once.**Complexity Analysis**\n\n* Time Complexity:  $$O(M + N)$$, where $$M, N$$ are the lengths of `A` and `B` respectively.\n\n* Space Complexity:  $$O(M + N)$$, the space used by `count`."
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Find Maximum Number of String Pairs",
+  "problem_id": "2847",
+  "frontend_id": "2744",
+  "difficulty": "Easy",
+  "problem_slug": "find-maximum-number-of-string-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed array words consisting of distinct strings.\nThe string words[i] can be paired with the string words[j] if:\nReturn the maximum number of pairs that can be formed from the array words.\nNote that each string can belong in at most one pair.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"cd\",\"ac\",\"dc\",\"ca\",\"zz\"]\nOutput: 2\nExplanation: In this example, we can form 2 pair of strings in the following way:\n- We pair the 0th string with the 2nd string, as the reversed string of word[0] is \"dc\" and is equal to words[2].\n- We pair the 1st string with the 3rd string, as the reversed string of word[1] is \"ca\" and is equal to words[3].\nIt can be proven that 2 is the maximum number of pairs that can be formed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"ab\",\"ba\",\"cc\"]\nOutput: 1\nExplanation: In this example, we can form 1 pair of strings in the following way:\n- We pair the 0th string with the 1st string, as the reversed string of words[1] is \"ab\" and is equal to words[0].\nIt can be proven that 1 is the maximum number of pairs that can be formed.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"aa\",\"ab\"]\nOutput: 0\nExplanation: In this example, we are unable to form any pair of strings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 50",
+    "words[i].length == 2",
+    "words consists of distinct strings.",
+    "words[i] contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that array words consist of distinct strings.",
+    "Iterate over all indices (i, j) and check if they can be paired."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumNumberOfStringPairs(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumNumberOfStringPairs(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumNumberOfStringPairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumNumberOfStringPairs(self, words: List[str]) -> int:\n        ",
+    "c": "int maximumNumberOfStringPairs(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumNumberOfStringPairs(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar maximumNumberOfStringPairs = function(words) {\n    \n};",
+    "typescript": "function maximumNumberOfStringPairs(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function maximumNumberOfStringPairs($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumNumberOfStringPairs(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumNumberOfStringPairs(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumNumberOfStringPairs(List<String> words) {\n    \n  }\n}",
+    "golang": "func maximumNumberOfStringPairs(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef maximum_number_of_string_pairs(words)\n    \nend",
+    "scala": "object Solution {\n    def maximumNumberOfStringPairs(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_number_of_string_pairs(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-number-of-string-pairs words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_number_of_string_pairs(Words :: [unicode:unicode_binary()]) -> integer().\nmaximum_number_of_string_pairs(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_number_of_string_pairs(words :: [String.t]) :: integer\n  def maximum_number_of_string_pairs(words) do\n    \n  end\nend"
+  }
+}

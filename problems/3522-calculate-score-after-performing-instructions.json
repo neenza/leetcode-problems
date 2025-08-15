@@ -1,0 +1,63 @@
+{
+  "title": "Calculate Score After Performing Instructions",
+  "problem_id": "3732",
+  "frontend_id": "3522",
+  "difficulty": "Medium",
+  "problem_slug": "calculate-score-after-performing-instructions",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given two arrays, instructions and values, both of size n.\nYou need to simulate a process based on the following rules:\nThe process ends when you either:\nReturn your score at the end of the process.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: instructions = [\"jump\",\"add\",\"add\",\"jump\",\"add\",\"jump\"], values = [2,1,3,1,-2,-3]\nOutput: 1\nExplanation:\nSimulate the process starting at instruction 0:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: instructions = [\"jump\",\"add\",\"add\"], values = [3,1,1]\nOutput: 0\nExplanation:\nSimulate the process starting at instruction 0:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: instructions = [\"jump\"], values = [0]\nOutput: 0\nExplanation:\nSimulate the process starting at instruction 0:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == instructions.length == values.length",
+    "1 <= n <= 105",
+    "instructions[i] is either \"add\" or \"jump\".",
+    "-105 <= values[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process step by step, following the rules for each instruction.",
+    "Use a data structure to track which instructions have already been executed to detect revisits."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long calculateScore(vector<string>& instructions, vector<int>& values) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long calculateScore(String[] instructions, int[] values) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def calculateScore(self, instructions, values):\n        \"\"\"\n        :type instructions: List[str]\n        :type values: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def calculateScore(self, instructions: List[str], values: List[int]) -> int:\n        ",
+    "c": "long long calculateScore(char** instructions, int instructionsSize, int* values, int valuesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CalculateScore(string[] instructions, int[] values) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} instructions\n * @param {number[]} values\n * @return {number}\n */\nvar calculateScore = function(instructions, values) {\n    \n};",
+    "typescript": "function calculateScore(instructions: string[], values: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $instructions\n     * @param Integer[] $values\n     * @return Integer\n     */\n    function calculateScore($instructions, $values) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func calculateScore(_ instructions: [String], _ values: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun calculateScore(instructions: Array<String>, values: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int calculateScore(List<String> instructions, List<int> values) {\n    \n  }\n}",
+    "golang": "func calculateScore(instructions []string, values []int) int64 {\n    \n}",
+    "ruby": "# @param {String[]} instructions\n# @param {Integer[]} values\n# @return {Integer}\ndef calculate_score(instructions, values)\n    \nend",
+    "scala": "object Solution {\n    def calculateScore(instructions: Array[String], values: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn calculate_score(instructions: Vec<String>, values: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (calculate-score instructions values)\n  (-> (listof string?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec calculate_score(Instructions :: [unicode:unicode_binary()], Values :: [integer()]) -> integer().\ncalculate_score(Instructions, Values) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec calculate_score(instructions :: [String.t], values :: [integer]) :: integer\n  def calculate_score(instructions, values) do\n    \n  end\nend"
+  }
+}

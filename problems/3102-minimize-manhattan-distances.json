@@ -1,0 +1,59 @@
+{
+  "title": "Minimize Manhattan Distances",
+  "problem_id": "3344",
+  "frontend_id": "3102",
+  "difficulty": "Hard",
+  "problem_slug": "minimize-manhattan-distances",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Sorting",
+    "Ordered Set"
+  ],
+  "description": "You are given an array points representing integer coordinates of some points on a 2D plane, where points[i] = [xi, yi].\nThe distance between two points is defined as their Manhattan distance.\nReturn the minimum possible value for maximum distance between any two points by removing exactly one point.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[3,10],[5,15],[10,2],[4,4]]\nOutput: 12\nExplanation:\nThe maximum distance after removing each point is the following:\n12 is the minimum possible maximum distance between any two points after removing exactly one point.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,1],[1,1],[1,1]]\nOutput: 0\nExplanation:\nRemoving any of the points results in the maximum distance between any two points of 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= points.length <= 105",
+    "points[i].length == 2",
+    "1 <= points[i][0], points[i][1] <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that the Manhattan distance between two points <code>[x<sub>i</sub>, y<sub>i</sub>]</code> and <code>[x<sub>j</sub>, y<sub>j</sub>] is <code> max({x<sub>i</sub> - x<sub>j</sub> + y<sub>i</sub> - y<sub>j</sub>, x<sub>i</sub> - x<sub>j</sub> - y<sub>i</sub> + y<sub>j</sub>, - x<sub>i</sub> + x<sub>j</sub> + y<sub>i</sub> - y<sub>j</sub>, - x<sub>i</sub> + x<sub>j</sub> - y<sub>i</sub> + y<sub>j</sub>})</code></code>.",
+    "If you replace points as <code>[x<sub>i</sub> - y<sub>i</sub>, x<sub>i</sub> + y<sub>i</sub>]</code> then the Manhattan distance is <code>max(max(x<sub>i</sub>) - min(x<sub>i</sub>), max(y<sub>i</sub>) - min(y<sub>i</sub>))</code> over all <code>i</code>.",
+    "After those observations, the problem just becomes a simulation. Create multiset of points <code>[x<sub>i</sub> - y<sub>i</sub>, x<sub>i</sub> + y<sub>i</sub>]</code>, you can iterate on a point you might remove and get the maximum Manhattan distance over all other points."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumDistance(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDistance(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumDistance(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumDistance(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int minimumDistance(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumDistance(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar minimumDistance = function(points) {\n    \n};",
+    "typescript": "function minimumDistance(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function minimumDistance($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDistance(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumDistance(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDistance(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func minimumDistance(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef minimum_distance(points)\n    \nend",
+    "scala": "object Solution {\n    def minimumDistance(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_distance(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-distance points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_distance(Points :: [[integer()]]) -> integer().\nminimum_distance(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_distance(points :: [[integer]]) :: integer\n  def minimum_distance(points) do\n    \n  end\nend"
+  }
+}

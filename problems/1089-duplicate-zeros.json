@@ -1,0 +1,54 @@
+{
+  "title": "Duplicate Zeros",
+  "problem_id": "1168",
+  "frontend_id": "1089",
+  "difficulty": "Easy",
+  "problem_slug": "duplicate-zeros",
+  "topics": [
+    "Array",
+    "Two Pointers"
+  ],
+  "description": "Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.\nNote that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [1,0,2,3,0,4,5,0]\nOutput: [1,0,0,2,3,0,0,4]\nExplanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,2,3]\nOutput: [1,2,3]\nExplanation: After calling your function, the input array is modified to: [1,2,3]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 104",
+    "0 <= arr[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "This is a great introductory problem for understanding and working with the concept of in-place operations. The problem statement clearly states that we are to modify the array in-place. That does not mean we cannot use another array. We just don't have to return anything.",
+    "A better way to solve this would be without using additional space. The only reason the problem statement allows you to make modifications in place is that it hints at avoiding any additional memory.",
+    "The main problem with not using additional memory is that we might override elements due to the zero duplication requirement of the problem statement. How do we get around that?",
+    "If we had enough space available, we would be able to accommodate all the elements properly. The new length would be the original length of the array plus the number of zeros. Can we use this information somehow to solve the problem?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    void duplicateZeros(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void duplicateZeros(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def duplicateZeros(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: None Do not return anything, modify arr in-place instead.\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def duplicateZeros(self, arr: List[int]) -> None:\n        \"\"\"\n        Do not return anything, modify arr in-place instead.\n        \"\"\"\n        ",
+    "c": "void duplicateZeros(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public void DuplicateZeros(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {void} Do not return anything, modify arr in-place instead.\n */\nvar duplicateZeros = function(arr) {\n    \n};",
+    "typescript": "/**\n Do not return anything, modify arr in-place instead.\n */\nfunction duplicateZeros(arr: number[]): void {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return NULL\n     */\n    function duplicateZeros(&$arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func duplicateZeros(_ arr: inout [Int]) {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun duplicateZeros(arr: IntArray): Unit {\n        \n    }\n}",
+    "dart": "class Solution {\n  void duplicateZeros(List<int> arr) {\n    \n  }\n}",
+    "golang": "func duplicateZeros(arr []int)  {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Void} Do not return anything, modify arr in-place instead.\ndef duplicate_zeros(arr)\n    \nend",
+    "scala": "object Solution {\n    def duplicateZeros(arr: Array[Int]): Unit = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn duplicate_zeros(arr: &mut Vec<i32>) {\n        \n    }\n}"
+  },
+  "solution": "[TOC]\n\n## Solution\n\nThe problem demands the array to be modified in-place. If `in-place` was not a constraint we might have just copied the elements from a source array to a destination array.Notice, how we copied zero twice.\n\n```\n  s = 0\n  d = 0\n\n  # Copy is performed until the destination array is full.\n  for s in range(N):\n    if source[s] == 0:\n      # Copy zero twice.\n      destination[d] = 0\n      d += 1\n      destination[d] = 0\n    else:\n      destination[d] = source[s]\n\n    d += 1\n```\n\nThe problem statement also mentions that we do not grow the new array, rather we just trim it to its original array length. This means we have to discard some elements from the end of the array. These are the elements whose new indices are beyond the length of the original array.Let's remind ourselves about the problem constraint that we are given. Since we can't use extra space, our source and destination array is essentially the same. We just can't go about copying the source into destination array the same way. If we do that we would lose some elements. Since, we would be overwriting the array.Keeping this in mind, in the approach below we start copying to the end of the array.\n\n### Approach 1: Two pass, O(1) space\n\n**Intuition**\n\nIf we know the number of elements which would be discarded from the end of the array, we can copy the rest. How do we find out how many elements would be discarded in the end? The number would be equal to the number of extra zeros which would be added to the array. The extra zero would create space for itself by pushing out an element from the end of the array.\n\nOnce we know how many elements from the original array would be part of the final array, we can just start copying from the end. Copying from the end ensures we don't lose any element since, the last few extraneous elements can be overwritten.\n\n**Algorithm**\n\n1. Find the number of zeros which would be duplicated. Let's call it `possible_dups`. We do need to make sure we are not counting the zeros which would be trimmed off. Since, the discarded zeros won't be part of the final array. The count of `possible_dups` would give us the number of elements to be trimmed off the original array. Hence at any point, `length_ - possible_dups` is the number of elements which would be included in the final array.Note: In the diagram above we just show source and destination array for understanding purpose. We will be doing these operations only on one array.\n\n2. Handle the edge case for a zero present on the boundary of the leftover elements.\n\n    Let's talk about the edge case of this problem. We need to be extra careful when we are duplicating the zeros in the leftover array. This care should be taken for the `zero` which is lying on the boundary. Since, this zero might be counted as with possible duplicates, or may be just got included in the left over when there was no space left to accommodate its duplicate. If it is part of the `possible_dups` we would want to duplicate it otherwise we don't.\n\n    > An example of the edge case is - [8,4,5,0,0,0,0,7].\n    In this array there is space to accommodate the duplicates of first and second occurrences of zero. But we don't have enough space for the duplicate of the third occurrence of zero.\n    Hence when we are copying we need to make sure for the third occurrence we don't copy twice. Result = [8,4,5,0,`0`,0,`0`,0]\n\n3. Iterate the array from the end and copy a non-zero element once and zero element twice.\nWhen we say we discard the extraneous elements, it simply means we start from the left of the extraneous elements and start overwriting them with new values, eventually right shifting the left over elements and creating space for all the duplicated elements in the array.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of elements in the array. We do two passes through the array, one to find the number of `possible_dups` and the other to copy the elements. In the worst case we might be iterating the entire array, when there are less or no zeros in the array.\n\n* Space Complexity: $$O(1)$$. We do not use any extra space."
+}

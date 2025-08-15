@@ -1,0 +1,63 @@
+{
+  "title": "Maximize the Confusion of an Exam",
+  "problem_id": "2134",
+  "frontend_id": "2024",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-the-confusion-of-an-exam",
+  "topics": [
+    "String",
+    "Binary Search",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "A teacher is writing a test with n true/false questions, with 'T' denoting true and 'F' denoting false. He wants to confuse the students by maximizing the number of consecutive questions with the same answer (multiple trues or multiple falses in a row).\nYou are given a string answerKey, where answerKey[i] is the original answer to the ith question. In addition, you are given an integer k, the maximum number of times you may perform the following operation:\nReturn the maximum number of consecutive 'T's or 'F's in the answer key after performing the operation at most k times.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: answerKey = \"TTFF\", k = 2\nOutput: 4\nExplanation: We can replace both the 'F's with 'T's to make answerKey = \"TTTT\".\nThere are four consecutive 'T's.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: answerKey = \"TFFT\", k = 1\nOutput: 3\nExplanation: We can replace the first 'T' with an 'F' to make answerKey = \"FFFT\".\nAlternatively, we can replace the second 'T' with an 'F' to make answerKey = \"TFFF\".\nIn both cases, there are three consecutive 'F's.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: answerKey = \"TTFTTFTT\", k = 1\nOutput: 5\nExplanation: We can replace the first 'F' to make answerKey = \"TTTTTFTT\"\nAlternatively, we can replace the second 'F' to make answerKey = \"TTFTTTTT\". \nIn both cases, there are five consecutive 'T's.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == answerKey.length",
+    "1 <= n <= 5 * 104",
+    "answerKey[i] is either 'T' or 'F'",
+    "1 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use the maximum length at the previous position to help us find the answer for the current position?",
+    "Can we use binary search to find the maximum consecutive same answer at every position?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxConsecutiveAnswers(string answerKey, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxConsecutiveAnswers(String answerKey, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxConsecutiveAnswers(self, answerKey, k):\n        \"\"\"\n        :type answerKey: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxConsecutiveAnswers(self, answerKey: str, k: int) -> int:\n        ",
+    "c": "int maxConsecutiveAnswers(char* answerKey, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxConsecutiveAnswers(string answerKey, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} answerKey\n * @param {number} k\n * @return {number}\n */\nvar maxConsecutiveAnswers = function(answerKey, k) {\n    \n};",
+    "typescript": "function maxConsecutiveAnswers(answerKey: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $answerKey\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxConsecutiveAnswers($answerKey, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxConsecutiveAnswers(_ answerKey: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxConsecutiveAnswers(answerKey: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxConsecutiveAnswers(String answerKey, int k) {\n    \n  }\n}",
+    "golang": "func maxConsecutiveAnswers(answerKey string, k int) int {\n    \n}",
+    "ruby": "# @param {String} answer_key\n# @param {Integer} k\n# @return {Integer}\ndef max_consecutive_answers(answer_key, k)\n    \nend",
+    "scala": "object Solution {\n    def maxConsecutiveAnswers(answerKey: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_consecutive_answers(answer_key: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-consecutive-answers answerKey k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_consecutive_answers(AnswerKey :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_consecutive_answers(AnswerKey, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_consecutive_answers(answer_key :: String.t, k :: integer) :: integer\n  def max_consecutive_answers(answer_key, k) do\n    \n  end\nend"
+  }
+}

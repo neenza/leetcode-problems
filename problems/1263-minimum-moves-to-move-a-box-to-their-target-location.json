@@ -1,0 +1,70 @@
+{
+  "title": "Minimum Moves to Move a Box to Their Target Location",
+  "problem_id": "1389",
+  "frontend_id": "1263",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-moves-to-move-a-box-to-their-target-location",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ],
+  "description": "A storekeeper is a game in which the player pushes boxes around in a warehouse trying to get them to target locations.\nThe game is represented by an m x n grid of characters grid where each element is a wall, floor, or box.\nYour task is to move the box 'B' to the target position 'T' under the following rules:\nReturn the minimum number of pushes to move the box to the target. If there is no way to reach the target, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\".\",\".\",\"B\",\".\",\"#\"],\n               [\"#\",\".\",\"#\",\"#\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: 3\nExplanation: We return only the number of times the box is pushed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/06/sample_1_1620.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\".\",\".\",\"B\",\".\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: -1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/06/sample_1_1620.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\".\",\".\",\"#\",\"#\"],\n               [\"#\",\".\",\"#\",\"B\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: 5\nExplanation: push the box down, left, left, up and up.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/06/sample_1_1620.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 20",
+    "grid contains only characters '.', '#', 'S', 'T', or 'B'.",
+    "There is only one character 'S', 'B', and 'T' in the grid."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We represent the search state as (player_row, player_col, box_row, box_col).",
+    "You need to count only the number of pushes. Then inside of your BFS check if the box could be pushed (in any direction) given the current position of the player."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minPushBox(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minPushBox(char[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minPushBox(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minPushBox(self, grid: List[List[str]]) -> int:\n        ",
+    "c": "int minPushBox(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinPushBox(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {number}\n */\nvar minPushBox = function(grid) {\n    \n};",
+    "typescript": "function minPushBox(grid: string[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @return Integer\n     */\n    function minPushBox($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minPushBox(_ grid: [[Character]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minPushBox(grid: Array<CharArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minPushBox(List<List<String>> grid) {\n    \n  }\n}",
+    "golang": "func minPushBox(grid [][]byte) int {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @return {Integer}\ndef min_push_box(grid)\n    \nend",
+    "scala": "object Solution {\n    def minPushBox(grid: Array[Array[Char]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_push_box(grid: Vec<Vec<char>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-push-box grid)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
+    "erlang": "-spec min_push_box(Grid :: [[char()]]) -> integer().\nmin_push_box(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_push_box(grid :: [[char]]) :: integer\n  def min_push_box(grid) do\n    \n  end\nend"
+  }
+}

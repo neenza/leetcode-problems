@@ -1,0 +1,33 @@
+{
+  "title": "Patients With a Condition",
+  "problem_id": "1670",
+  "frontend_id": "1527",
+  "difficulty": "Easy",
+  "problem_slug": "patients-with-a-condition",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Patients\nWrite a solution to find the patient_id, patient_name, and conditions of the patients who have Type I Diabetes. Type I Diabetes always starts with DIAB1 prefix.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| patient_id   | int     |\n| patient_name | varchar |\n| conditions   | varchar |\n+--------------+---------+\npatient_id is the primary key (column with unique values) for this table.\n'conditions' contains 0 or more code separated by spaces. \nThis table contains information of the patients in the hospital.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nPatients table:\n+------------+--------------+--------------+\n| patient_id | patient_name | conditions   |\n+------------+--------------+--------------+\n| 1          | Daniel       | YFEV COUGH   |\n| 2          | Alice        |              |\n| 3          | Bob          | DIAB100 MYOP |\n| 4          | George       | ACNE DIAB100 |\n| 5          | Alain        | DIAB201      |\n+------------+--------------+--------------+\nOutput: \n+------------+--------------+--------------+\n| patient_id | patient_name | conditions   |\n+------------+--------------+--------------+\n| 3          | Bob          | DIAB100 MYOP |\n| 4          | George       | ACNE DIAB100 | \n+------------+--------------+--------------+\nExplanation: Bob and George both have a condition that starts with DIAB1.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_patients(patients: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

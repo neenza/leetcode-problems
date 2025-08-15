@@ -1,0 +1,71 @@
+{
+  "title": "Sliding Puzzle",
+  "problem_id": "787",
+  "frontend_id": "773",
+  "difficulty": "Hard",
+  "problem_slug": "sliding-puzzle",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Breadth-First Search",
+    "Memoization",
+    "Matrix"
+  ],
+  "description": "On an 2 x 3 board, there are five tiles labeled from 1 to 5, and an empty square represented by 0. A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.\nThe state of the board is solved if and only if the board is [[1,2,3],[4,5,0]].\nGiven the puzzle board board, return the least number of moves required so that the state of the board is solved. If it is impossible for the state of the board to be solved, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[1,2,3],[4,0,5]]\nOutput: 1\nExplanation: Swap the 0 and the 5 in one move.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/slide1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[1,2,3],[5,4,0]]\nOutput: -1\nExplanation: No number of moves will make the board solved.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/slide2-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [[4,1,2],[5,0,3]]\nOutput: 5\nExplanation: 5 is the smallest number of moves that solves the board.\nAn example path:\nAfter move 0: [[4,1,2],[5,0,3]]\nAfter move 1: [[4,1,2],[0,5,3]]\nAfter move 2: [[0,1,2],[4,5,3]]\nAfter move 3: [[1,0,2],[4,5,3]]\nAfter move 4: [[1,2,0],[4,5,3]]\nAfter move 5: [[1,2,3],[4,5,0]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/slide3-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "board.length == 2",
+    "board[i].length == 3",
+    "0 <= board[i][j] <= 5",
+    "Each value board[i][j] is unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Perform a breadth-first-search, where the nodes are the puzzle boards and edges are if two puzzle boards can be transformed into one another with one move."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int slidingPuzzle(vector<vector<int>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int slidingPuzzle(int[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def slidingPuzzle(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def slidingPuzzle(self, board: List[List[int]]) -> int:\n        ",
+    "c": "int slidingPuzzle(int** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SlidingPuzzle(int[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} board\n * @return {number}\n */\nvar slidingPuzzle = function(board) {\n    \n};",
+    "typescript": "function slidingPuzzle(board: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $board\n     * @return Integer\n     */\n    function slidingPuzzle($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func slidingPuzzle(_ board: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun slidingPuzzle(board: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int slidingPuzzle(List<List<int>> board) {\n    \n  }\n}",
+    "golang": "func slidingPuzzle(board [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} board\n# @return {Integer}\ndef sliding_puzzle(board)\n    \nend",
+    "scala": "object Solution {\n    def slidingPuzzle(board: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sliding_puzzle(board: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sliding-puzzle board)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec sliding_puzzle(Board :: [[integer()]]) -> integer().\nsliding_puzzle(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sliding_puzzle(board :: [[integer]]) :: integer\n  def sliding_puzzle(board) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Depth-First Search (DFS)\n\n#### Intuition \n\nA brute-force approach is feasible due to the problem's small constraints. We can explore all possible board states and track the number of moves taken to reach each one. Once we reach the solved state, we return the move count.\n\nThe first step is to identify the possible moves from each board position. Each move shifts the '0' (blank square) in one of the four cardinal directions. To simplify, we’ll flatten the 2-D board to a 1-D string by appending the first row to the second. The moves at each square are now converted as given below, where each index represents the position of the zero, and lists the indices in the 1-D string it can go to:\n\n![](../Figures/773/2dto1d.png)\n\nThe above figure demonstrates how each tile position is mapped to an index in the 1-D string, and how the tile movements are simulated in the string.\n\nWe'll use depth-first search (DFS) to explore all board states. DFS is well-suited here because it allows us to explore each possible path to the solution one by one, fully exploring each path before backtracking. Starting from the initial board state as a flattened string, we maintain a `visited` map, where each board state is a key, and the value is the number of moves taken to reach it. In our DFS, if the current state already exists in the map with fewer moves, we return early. Otherwise, we update the map with the current move count and explore all possible moves.\n\nNext, we can put the current state in the map with the current move count and start exploring all possible moves from this position. We modify the board based on the next move and recursively call the DFS function to explore further.\n\nAfter exploring all moves, if the solved state appears in the map, we return its move count; if not, we return -1, as solving the board is impossible.\n\n#### Algorithm\n\n- Define a 2-D array `directions` which represents the possible moves for the empty tile (`0`) at each position on a flattened 1D representation of the $2 \\times 3$ board.\n\nMain method `slidingPuzzle`:\n\n- Initialize a string `startState` to represent the initial state of the board in a 1-D string format. \n- Iterate over each cell in the 2-D board and append each element to `startState`.\n- Initialize a map `visited` to store each unique state of the board encountered during the search.\n- Call a helper function `dfs` on `startState`, passing `visited`, the index of `0` in `startState`, and a move count initialized to `0`.\n- Return the minimum moves required to reach the solved state (`\"123450\"`), or -1 if the state was not found in `visited`.\n\nHelper method `dfs`:\n\n- Check if the `state` has already been visited with fewer or equal moves than the current count (`moves`).\n  - If so, skip further exploration of this path.\n- Update `visited` with the current state and move count.\n- For each adjacent position `nextPos` in `directions`:      \n  - Swap the characters at `zeroPos` and `nextPos` in `state`. \n  - Recursively call `dfs` on the newly generated state with `moves` incremented by 1.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the number of rows and $n$ be the number of columns of the board.\n\n> Note: The values of m and n are fixed by the problem constraints, so their complexities can be considered constant. However, we have kept them as variables for clarity and better understanding.\n\n- Time complexity: $O((m \\cdot n)! \\times (m \\cdot n)^2)$\n\n    In DFS, each of the $(m \\cdot n)!$ possible board states can be revisited multiple times due to different move sequences, as DFS doesn’t prioritize the shortest path and may explore all possible paths, reaching the same state repeatedly. Since each state has up to four possible moves on a 2D board, DFS could re-explore each configuration from different directions, leading to up to $O((m \\cdot n)! \\times (m \\cdot n))$ recursive calls. Generating each new configuration requires $O(m \\cdot n)$ operations. \n    \n    Thus, the time complexity is $O((m \\cdot n)! \\times (m \\cdot n)^2)$.\n\n- Space complexity: $O((m \\cdot n)!)$\n\n    The DFS approach requires storing each of the $(m \\cdot n)!$ unique states in a `visited` map to avoid recalculations when a state is reached with the same or fewer moves. In the worst case, the DFS call stack can reach a maximum depth of $O((m \\cdot n)!)$, giving a space complexity of $O((m \\cdot n)!)$.\n\n---\n\n### Approach 2: Breadth-First Search (BFS)\n\n#### Intuition\n\nThe DFS approach explores all possible board states before reaching the final state, which can be inefficient. Although we might find the solution early, DFS will still continue to explore all paths, potentially with non-optimal move counts. To address this, we switch to Breadth-First Search (BFS). BFS is better suited in scenarios like this because it explores all states at the current move level before going deeper, ensuring that the first time it reaches the goal, it has found the shortest path.\n\nOur setup remains similar: we convert the board to a 1-D string and use a set to track visited states. A queue will handle the BFS traversal, starting from the initial state. The queue’s structure works well to support BFS’s layered exploration, since each level is processed sequentially and we stop as soon as we reach the goal.\n\nWe then loop while the queue is not empty, processing all states at the current move count. If we encounter the final state, we return the current move count as the answer. Otherwise, we explore all possible moves from the current state, modify the board accordingly, and, if unvisited, add the new state to the queue for further exploration.\n\n#### Algorithm\n\n- Define an array `directions` to map the possible moves for the empty tile (`0`) at each position. \n- Initialize a string:\n  -  `target` to \"123450\", representing the goal state of the board.\n  -  `startState` to store the initial configuration of the board in string form.\n- Iterate through each row and column of `board`:\n   - Append each tile value to `startState` to create a single string representing the initial board state.\n- Initialize:\n  -  a set `visited` to store all the board states already processed to prevent redundant calculations.\n  - a `queue` for the Breadth-First Search (BFS) traversal.\n  - an integer `moves` to 0, which will track the number of moves taken to reach the goal state.\n- Add `startState` to `visited` to mark it as processed.\n- Start a while loop that continues as long as `queue` is not empty:\n  - Store the current size of `queue` in `size`. For each item in the current level:\n    - Remove the front element of `queue` and assign it to `currentState`.\n    - Check if `currentState` matches `target`. If it does, return `moves` as the minimum moves required to reach the solved state.\n    - Set `zeroPos` to the position of zero in `currentState`.\n    - For each valid new position `newPos` in `directions[zeroPos]`:\n      - Generate `nextState` by swapping `zeroPos` and `newPos`.\n      - If `nextState` is already in `visited`, skip it to avoid redundant processing.\n      - Otherwise, add `nextState` to both `visited` and `queue`.\n  - Increment `moves` to continue to the next level of BFS.\n- If `queue` becomes empty without reaching the target, return -1, indicating the puzzle is unsolvable.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the number of rows and $n$ be the number of columns of the board. \n\n* Time complexity: $O((m \\cdot n)! \\times (m \\cdot n))$\n\n    The algorithm uses Breadth-First Search (BFS) to explore all possible board configurations. With $(m \\cdot n)!$ unique configurations, BFS may process each configuration once. Each configuration requires checking moves and generating new ones, taking $O(m \\cdot n)$ operations.\n    \n    Therefore, the overall time complexity is $O((m \\cdot n)! \\times (m \\cdot n))$. \n\n* Space complexity: $O((m \\cdot n)!)$\n\n    The space complexity is determined by the `visited` set and the BFS queue, each of which can hold up to $(m \\cdot n)!$ unique configurations in the worst case. Therefore, the space complexity is $O((m \\cdot n)!)$.\n\n---"
+}

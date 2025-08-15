@@ -1,0 +1,59 @@
+{
+  "title": "Count Good Numbers",
+  "problem_id": "2050",
+  "frontend_id": "1922",
+  "difficulty": "Medium",
+  "problem_slug": "count-good-numbers",
+  "topics": [
+    "Math",
+    "Recursion"
+  ],
+  "description": "A digit string is good if the digits (0-indexed) at even indices are even and the digits at odd indices are prime (2, 3, 5, or 7).\nGiven an integer n, return the total number of good digit strings of length n. Since the answer may be large, return it modulo 109 + 7.\nA digit string is a string consisting of digits 0 through 9 that may contain leading zeros.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 5\nExplanation: The good numbers of length 1 are \"0\", \"2\", \"4\", \"6\", \"8\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4\nOutput: 400",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 50\nOutput: 564908303",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1015"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is there a formula we can use to find the count of all the good numbers?",
+    "Exponentiation can be done very fast if we looked at the binary bits of n."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countGoodNumbers(long long n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodNumbers(long n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGoodNumbers(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGoodNumbers(self, n: int) -> int:\n        ",
+    "c": "int countGoodNumbers(long long n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountGoodNumbers(long n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countGoodNumbers = function(n) {\n    \n};",
+    "typescript": "function countGoodNumbers(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countGoodNumbers($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGoodNumbers(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGoodNumbers(n: Long): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countGoodNumbers(int n) {\n    \n  }\n}",
+    "golang": "func countGoodNumbers(n int64) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_good_numbers(n)\n    \nend",
+    "scala": "object Solution {\n    def countGoodNumbers(n: Long): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good_numbers(n: i64) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-good-numbers n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_good_numbers(N :: integer()) -> integer().\ncount_good_numbers(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_good_numbers(n :: integer) :: integer\n  def count_good_numbers(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Fast Exponentiation\n\n**Intuition**\n\nFor the numbers at even indices, they can be $0, 2, 4, 6, 8$, a total of $5$ types. A digit string of length $n$ has $\\lfloor \\dfrac{n+1}{2} \\rfloor$ even indices, where $\\lfloor x \\rfloor$ denotes the floor function of $x$.\n\nFor the numbers at odd indices, they can be $2, 3, 5, 7$, a total of $4$ types. A digit string of length $n$ has $\\lfloor \\dfrac{n}{2} \\rfloor$ odd indices.\n\nTherefore, the total number of good numbers in a digit string of length $n$ is:\n\n$$\n5^{\\lfloor \\frac{n+1}{2} \\rfloor} \\cdot 4^{\\lfloor \\frac{n}{2} \\rfloor}\n$$\n\nIn this question, since the maximum value of $n$ can reach $10^{15}$, directly calculating the power in the formula using ordinary multiplication would exceed the time limit. Therefore, we need to use the fast exponentiation algorithm to optimize the calculation of the power.\n\nFor reference, see [50. Pow(x, n) editorial](https://leetcode.com/problems/powx-n/editorial/).\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $O(\\log n)$\n\nSince the fast exponentiation algorithm halves the power times each time, it only takes $\\log n$ time to find the power of $n$ of a number.\n\n* Space complexity: $O(1)$\n\nOnly a few additional variables are needed."
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Sum of Digit Differences of All Pairs",
+  "problem_id": "3416",
+  "frontend_id": "3153",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-digit-differences-of-all-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting"
+  ],
+  "description": "You are given an array nums consisting of positive integers where all integers have the same number of digits.\nThe digit difference between two integers is the count of different digits that are in the same position in the two integers.\nReturn the sum of the digit differences between all pairs of integers in nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [13,23,12]\nOutput: 4\nExplanation: We have the following: - The digit difference between 1 3 and 2 3 is 1. - The digit difference between 1 3 and 1 2 is 1. - The digit difference between 23 and 12 is 2. So the total sum of digit differences between all pairs of integers is 1 + 1 + 2 = 4 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,10,10,10]\nOutput: 0\nExplanation: All the integers in the array are the same. So the total sum of digit differences between all pairs of integers will be 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] < 109",
+    "All integers in nums have the same number of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can solve the problem for digits that are on the same position separately, and then sum up all the answers.",
+    "For each position, count the number of occurences of each digit from 0 to 9 that appear on that position.",
+    "Let <code>c</code> be the number of occurences of a digit on a position, that will contribute with <code>c * (n - c)</code> to the final answer, where <code>n</code> is the number of integers in <code>nums</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long sumDigitDifferences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long sumDigitDifferences(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumDigitDifferences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumDigitDifferences(self, nums: List[int]) -> int:\n        ",
+    "c": "long long sumDigitDifferences(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long SumDigitDifferences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumDigitDifferences = function(nums) {\n    \n};",
+    "typescript": "function sumDigitDifferences(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function sumDigitDifferences($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumDigitDifferences(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumDigitDifferences(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumDigitDifferences(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sumDigitDifferences(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef sum_digit_differences(nums)\n    \nend",
+    "scala": "object Solution {\n    def sumDigitDifferences(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_digit_differences(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-digit-differences nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec sum_digit_differences(Nums :: [integer()]) -> integer().\nsum_digit_differences(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_digit_differences(nums :: [integer]) :: integer\n  def sum_digit_differences(nums) do\n    \n  end\nend"
+  }
+}

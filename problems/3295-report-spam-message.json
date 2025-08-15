@@ -1,0 +1,55 @@
+{
+  "title": "Report Spam Message",
+  "problem_id": "3541",
+  "frontend_id": "3295",
+  "difficulty": "Medium",
+  "problem_slug": "report-spam-message",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "You are given an array of strings message and an array of strings bannedWords.\nAn array of words is considered spam if there are at least two words in it that exactly match any word in bannedWords.\nReturn true if the array message is spam, and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: message = [\"hello\",\"world\",\"leetcode\"], bannedWords = [\"world\",\"hello\"]\nOutput: true\nExplanation:\nThe words \"hello\" and \"world\" from the message array both appear in the bannedWords array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: message = [\"hello\",\"programming\",\"fun\"], bannedWords = [\"world\",\"programming\",\"leetcode\"]\nOutput: false\nExplanation:\nOnly one word from the message array ( \"programming\" ) appears in the bannedWords array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= message.length, bannedWords.length <= 105",
+    "1 <= message[i].length, bannedWords[i].length <= 15",
+    "message[i] and bannedWords[i] consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use hash set."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool reportSpam(vector<string>& message, vector<string>& bannedWords) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean reportSpam(String[] message, String[] bannedWords) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reportSpam(self, message, bannedWords):\n        \"\"\"\n        :type message: List[str]\n        :type bannedWords: List[str]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reportSpam(self, message: List[str], bannedWords: List[str]) -> bool:\n        ",
+    "c": "bool reportSpam(char** message, int messageSize, char** bannedWords, int bannedWordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ReportSpam(string[] message, string[] bannedWords) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} message\n * @param {string[]} bannedWords\n * @return {boolean}\n */\nvar reportSpam = function(message, bannedWords) {\n    \n};",
+    "typescript": "function reportSpam(message: string[], bannedWords: string[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $message\n     * @param String[] $bannedWords\n     * @return Boolean\n     */\n    function reportSpam($message, $bannedWords) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reportSpam(_ message: [String], _ bannedWords: [String]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reportSpam(message: Array<String>, bannedWords: Array<String>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool reportSpam(List<String> message, List<String> bannedWords) {\n    \n  }\n}",
+    "golang": "func reportSpam(message []string, bannedWords []string) bool {\n    \n}",
+    "ruby": "# @param {String[]} message\n# @param {String[]} banned_words\n# @return {Boolean}\ndef report_spam(message, banned_words)\n    \nend",
+    "scala": "object Solution {\n    def reportSpam(message: Array[String], bannedWords: Array[String]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn report_spam(message: Vec<String>, banned_words: Vec<String>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (report-spam message bannedWords)\n  (-> (listof string?) (listof string?) boolean?)\n  )",
+    "erlang": "-spec report_spam(Message :: [unicode:unicode_binary()], BannedWords :: [unicode:unicode_binary()]) -> boolean().\nreport_spam(Message, BannedWords) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec report_spam(message :: [String.t], banned_words :: [String.t]) :: boolean\n  def report_spam(message, banned_words) do\n    \n  end\nend"
+  }
+}

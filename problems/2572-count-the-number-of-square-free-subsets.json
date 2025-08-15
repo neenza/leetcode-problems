@@ -1,0 +1,58 @@
+{
+  "title": "Count the Number of Square-Free Subsets",
+  "problem_id": "2709",
+  "frontend_id": "2572",
+  "difficulty": "Medium",
+  "problem_slug": "count-the-number-of-square-free-subsets",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given a positive integer 0-indexed array nums.\nA subset of the array nums is square-free if the product of its elements is a square-free integer.\nA square-free integer is an integer that is divisible by no square number other than 1.\nReturn the number of square-free non-empty subsets of the array nums. Since the answer may be too large, return it modulo 109 + 7.\nA non-empty subset of nums is an array that can be obtained by deleting some (possibly none but not all) elements from nums. Two subsets are different if and only if the chosen indices to delete are different.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,4,4,5]\nOutput: 3\nExplanation: There are 3 square-free subsets in this example:\n- The subset consisting of the 0th element [3]. The product of its elements is 3, which is a square-free integer.\n- The subset consisting of the 3rd element [5]. The product of its elements is 5, which is a square-free integer.\n- The subset consisting of 0th and 3rd elements [3,5]. The product of its elements is 15, which is a square-free integer.\nIt can be proven that there are no more than 3 square-free subsets in the given array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1]\nOutput: 1\nExplanation: There is 1 square-free subset in this example:\n- The subset consisting of the 0th element [1]. The product of its elements is 1, which is a square-free integer.\nIt can be proven that there is no more than 1 square-free subset in the given array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 30"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are 10 primes before number 30.",
+    "Label primes from {2, 3, … 29} with {0,1, … 9} and let DP(i, mask) denote the number of subsets before index: i with the subset of taken primes: mask.",
+    "If the mask and prime factorization of nums[i] have a common prime, then it is impossible to add to the current subset, otherwise, it is possible."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int squareFreeSubsets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int squareFreeSubsets(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def squareFreeSubsets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def squareFreeSubsets(self, nums: List[int]) -> int:\n        ",
+    "c": "int squareFreeSubsets(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SquareFreeSubsets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar squareFreeSubsets = function(nums) {\n    \n};",
+    "typescript": "function squareFreeSubsets(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function squareFreeSubsets($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func squareFreeSubsets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun squareFreeSubsets(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int squareFreeSubsets(List<int> nums) {\n    \n  }\n}",
+    "golang": "func squareFreeSubsets(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef square_free_subsets(nums)\n    \nend",
+    "scala": "object Solution {\n    def squareFreeSubsets(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn square_free_subsets(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (square-free-subsets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec square_free_subsets(Nums :: [integer()]) -> integer().\nsquare_free_subsets(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec square_free_subsets(nums :: [integer]) :: integer\n  def square_free_subsets(nums) do\n    \n  end\nend"
+  }
+}

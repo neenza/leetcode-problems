@@ -1,0 +1,70 @@
+{
+  "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+  "problem_id": "1409",
+  "frontend_id": "1284",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "Given a m x n binary matrix mat. In one step, you can choose one cell and flip it and all the four neighbors of it if they exist (Flip is changing 1 to 0 and 0 to 1). A pair of cells are called neighbors if they share one edge.\nReturn the minimum number of steps required to convert mat to a zero matrix or -1 if you cannot.\nA binary matrix is a matrix with all cells equal to 0 or 1 only.\nA zero matrix is a matrix with all cells equal to 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[0,0],[0,1]]\nOutput: 3\nExplanation: One possible solution is to flip (1, 0) then (0, 1) and finally (1, 1) as shown.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/28/matrix.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[0]]\nOutput: 0\nExplanation: Given matrix is a zero matrix. We do not need to change it.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/28/matrix.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: mat = [[1,0,0],[1,0,0]]\nOutput: -1\nExplanation: Given matrix cannot be a zero matrix.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/28/matrix.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 3",
+    "mat[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Flipping same index two times is like not flipping it at all. Each index can be flipped one time. Try all possible combinations. O(2^(n*m))."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minFlips(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minFlips(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minFlips(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minFlips(self, mat: List[List[int]]) -> int:\n        ",
+    "c": "int minFlips(int** mat, int matSize, int* matColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinFlips(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number}\n */\nvar minFlips = function(mat) {\n    \n};",
+    "typescript": "function minFlips(mat: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer\n     */\n    function minFlips($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minFlips(_ mat: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minFlips(mat: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minFlips(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func minFlips(mat [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer}\ndef min_flips(mat)\n    \nend",
+    "scala": "object Solution {\n    def minFlips(mat: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_flips(mat: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-flips mat)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_flips(Mat :: [[integer()]]) -> integer().\nmin_flips(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_flips(mat :: [[integer]]) :: integer\n  def min_flips(mat) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Smart Enumeration\n\n#### Intuition\n\nThe question asks us to transform a 0-1 matrix into all 0s using the minimum number of flips, and when an element is flipped, all of its 4 neighbors (if they exist) will be flipped too. The problem is also known as the **Lights Out Puzzle**.\n\nYou might already realize that for each element, we only need to flip it at most once since flipping the same element twice cancels the previous flip. Because the size of the matrix is not large (at most 3 x 3 according to the constraints), we can just try all combinations of the decisions on each element (whether to flip it or not).\n\nHowever, there is a better way to do the enumeration. Suppose we make each decision from the top row to the bottom row. When we're making decisions for the $i^{th}$ row, all the rows above the $(i - 1)^{th}$ row should be already be 0s, because flipping the elements in the $i^{th}$ row and below cannot change the elements above the $(i - 1)^{th}$ row. This means when we're working on the $i^{th}$ row, if there are still 1s in the $(i - 1)^{th}$ row, they can only be changed into 0 by flips on the current row. Furthermore, if there's a 0 in the $(i - 1)^{th}$ row, we shouldn't flip its neighbors in the current row. **In other words, when we're working on the $i^{th}$ row, the decisions are uniquely determined by the state of the $(i - 1)^{th}$ row.** The $i^{th}$ row's decisions needs to make the values in the $(i - 1)^{th}$ row into all 0s.\n\nHere is an example:After applying the decisions for the $i^{th}$ row, it changes into:So we only need to try all the decisions for the first row (index = 0), for each such decision, the decisions for all the following rows are already determined. For each set of first-row decisions, if after applying all the decisions the values in the last row are all 0s, then it's a feasible solution. We're required to find the minimum number of flips of all feasible solutions.\n\n\n#### Algorithm\n\nAssume the input matrix is called mat[][] and it has $n$ columns. The algorithm works as follows:\n\n1. Enumerate all the possible decisions for the first row.\n2. Suppose List`operations` is a decision for the first row. Each element is either 0 or 1, indicating whether the corresponding element in `mat[0]` is flipped or not. We also need to maintain two binary arrays of size $n$ for each row. `lastState[]` which has values of the previous row and `changed[]` which represents whether the values in the current row are flipped when working on the previous row.\n3. Initialize `lastState` = `operations` (need to transform from Listto int[]). Initialize `changed` into all 0s since the $0^{th}$ row doesn't have a previous row.\n4. For each row in mat, use the next step to calculate the `state` which is initialized to `changed`.\n5. For each position `j` in the range [0, n - 1] of the current row, the determined decision is `lastState[j]`, so change the value of `state[j]` accordingly, i.e if `lastState[j]` is 1, flip `state[j]`, `state[j - 1]` and `state[j + 1]` if they exist. Also, increase the counter of flips by 1.\n6. Because of the current row's decision, the values that are flipped in the next row is exactly `lastState` and the decision for the next row is exactly the `state` array. So set `changed` = `lastState` and `lastState` = `state`, then move onto the next row\n7. Once we complete all rows, check whether `lastState` contains all 0s to determine whether it's a feasible solution. \n8. Return the minimum number of flips for all the feasible solutions that are proposed by step 1.\n\n\n#### Implementation#### Complexity Analysis\n\nHere, $M$ and $N$ are the number of rows and columns of the input matrix.\n\n* Time complexity: $O(M \\cdot N \\cdot 2 ^ N)$.\n\nIt takes $O(2 ^ N)$ time to list all the possible decisions for the first row (index = 0). And for each such decision, it takes $O(M \\cdot N)$ to further apply the uniquely determined decision for each element in the matrix. So the total time complexity is $O(M \\cdot N \\cdot 2 ^ N)$.\n\n* Space complexity: $O(N)$.\nWe only save/reuse one Integer List of length $N$ to enumerate all possible decisions for the first row (index = 0). And only save 2 int arrays of length $N$ to further apply the uniquely determined decision for each element. So the space complexity is $O(N)$.\n\n\n> It's possible to transpose the input matrix if M < N to lower the time and space complexities.\n\n---"
+}

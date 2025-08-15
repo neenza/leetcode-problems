@@ -1,0 +1,61 @@
+{
+  "title": "Find Smallest Letter Greater Than Target",
+  "problem_id": "745",
+  "frontend_id": "744",
+  "difficulty": "Easy",
+  "problem_slug": "find-smallest-letter-greater-than-target",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters.\nReturn the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: letters = [\"c\",\"f\",\"j\"], target = \"a\"\nOutput: \"c\"\nExplanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: letters = [\"c\",\"f\",\"j\"], target = \"c\"\nOutput: \"f\"\nExplanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: letters = [\"x\",\"x\",\"y\",\"y\"], target = \"z\"\nOutput: \"x\"\nExplanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= letters.length <= 104",
+    "letters[i] is a lowercase English letter.",
+    "letters is sorted in non-decreasing order.",
+    "letters contains at least two different characters.",
+    "target is a lowercase English letter."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to find whether each of 26 next letters are in the given string array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    char nextGreatestLetter(vector<char>& letters, char target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char nextGreatestLetter(char[] letters, char target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nextGreatestLetter(self, letters, target):\n        \"\"\"\n        :type letters: List[str]\n        :type target: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nextGreatestLetter(self, letters: List[str], target: str) -> str:\n        ",
+    "c": "char nextGreatestLetter(char* letters, int lettersSize, char target) {\n    \n}",
+    "csharp": "public class Solution {\n    public char NextGreatestLetter(char[] letters, char target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[]} letters\n * @param {character} target\n * @return {character}\n */\nvar nextGreatestLetter = function(letters, target) {\n    \n};",
+    "typescript": "function nextGreatestLetter(letters: string[], target: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $letters\n     * @param String $target\n     * @return String\n     */\n    function nextGreatestLetter($letters, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nextGreatestLetter(letters: CharArray, target: Char): Char {\n        \n    }\n}",
+    "dart": "class Solution {\n  String nextGreatestLetter(List<String> letters, String target) {\n    \n  }\n}",
+    "golang": "func nextGreatestLetter(letters []byte, target byte) byte {\n    \n}",
+    "ruby": "# @param {Character[]} letters\n# @param {Character} target\n# @return {Character}\ndef next_greatest_letter(letters, target)\n    \nend",
+    "scala": "object Solution {\n    def nextGreatestLetter(letters: Array[Char], target: Char): Char = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn next_greatest_letter(letters: Vec<char>, target: char) -> char {\n        \n    }\n}",
+    "racket": "(define/contract (next-greatest-letter letters target)\n  (-> (listof char?) char? char?)\n  )",
+    "erlang": "-spec next_greatest_letter(Letters :: [char()], Target :: char()) -> char().\nnext_greatest_letter(Letters, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec next_greatest_letter(letters :: [char], target :: char) :: char\n  def next_greatest_letter(letters, target) do\n    \n  end\nend"
+  }
+}

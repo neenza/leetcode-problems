@@ -1,0 +1,73 @@
+{
+  "title": "Maximum Area Rectangle With Point Constraints II",
+  "problem_id": "3689",
+  "frontend_id": "3382",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-area-rectangle-with-point-constraints-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Geometry",
+    "Sorting"
+  ],
+  "description": "There are n points on an infinite plane. You are given two integer arrays xCoord and yCoord where (xCoord[i], yCoord[i]) represents the coordinates of the ith point.\nYour task is to find the maximum area of a rectangle that:\nReturn the maximum area that you can obtain or -1 if no such rectangle is possible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: xCoord = [1,1,3,3], yCoord = [1,3,1,3]\nOutput: 4\nExplanation:\n\nWe can make a rectangle with these 4 points as corners and there is no other point that lies inside or on the border. Hence, the maximum possible area would be 4.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/02/example1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: xCoord = [1,1,3,3,2], yCoord = [1,3,1,3,2]\nOutput: -1\nExplanation:\n\nThere is only one rectangle possible is with points [1,1], [1,3], [3,1] and [3,3] but [2,2] will always lie inside it. Hence, returning -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/02/example2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: xCoord = [1,1,3,3,1,3], yCoord = [1,3,1,3,2,2]\nOutput: 2\nExplanation:\n\nThe maximum area rectangle is formed by the points [1,3], [1,2], [3,2], [3,3] , which has an area of 2. Additionally, the points [1,1], [1,2], [3,1], [3,2] also form a valid rectangle with the same area.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/02/example3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= xCoord.length == yCoord.length <= 2 * 105",
+    "0 <= xCoord[i], yCoord[i] <= 8 * 107",
+    "All the given points are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Process the points by sorting them based on their x-coordinates.",
+    "For each x-coordinate, sort the corresponding points by y and select two consecutive points y1 and y2 (y1 < y2).",
+    "Identify the closest x-coordinate (greater than the current x) where some y-coordinates lie in [y1, y2].",
+    "Use a segment tree to efficiently locate the nearest x-coordinate.",
+    "Check if the points form a valid rectangle. How?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxRectangleArea(vector<int>& xCoord, vector<int>& yCoord) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxRectangleArea(int[] xCoord, int[] yCoord) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRectangleArea(self, xCoord, yCoord):\n        \"\"\"\n        :type xCoord: List[int]\n        :type yCoord: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRectangleArea(self, xCoord: List[int], yCoord: List[int]) -> int:\n        ",
+    "c": "long long maxRectangleArea(int* xCoord, int xCoordSize, int* yCoord, int yCoordSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxRectangleArea(int[] xCoord, int[] yCoord) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} xCoord\n * @param {number[]} yCoord\n * @return {number}\n */\nvar maxRectangleArea = function(xCoord, yCoord) {\n    \n};",
+    "typescript": "function maxRectangleArea(xCoord: number[], yCoord: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $xCoord\n     * @param Integer[] $yCoord\n     * @return Integer\n     */\n    function maxRectangleArea($xCoord, $yCoord) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRectangleArea(_ xCoord: [Int], _ yCoord: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRectangleArea(xCoord: IntArray, yCoord: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRectangleArea(List<int> xCoord, List<int> yCoord) {\n    \n  }\n}",
+    "golang": "func maxRectangleArea(xCoord []int, yCoord []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} x_coord\n# @param {Integer[]} y_coord\n# @return {Integer}\ndef max_rectangle_area(x_coord, y_coord)\n    \nend",
+    "scala": "object Solution {\n    def maxRectangleArea(xCoord: Array[Int], yCoord: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_rectangle_area(x_coord: Vec<i32>, y_coord: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-rectangle-area xCoord yCoord)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_rectangle_area(XCoord :: [integer()], YCoord :: [integer()]) -> integer().\nmax_rectangle_area(XCoord, YCoord) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_rectangle_area(x_coord :: [integer], y_coord :: [integer]) :: integer\n  def max_rectangle_area(x_coord, y_coord) do\n    \n  end\nend"
+  }
+}

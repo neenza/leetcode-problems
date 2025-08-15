@@ -1,0 +1,53 @@
+{
+  "title": "Stone Game VII",
+  "problem_id": "1808",
+  "frontend_id": "1690",
+  "difficulty": "Medium",
+  "problem_slug": "stone-game-vii",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob take turns playing a game, with Alice starting first.\nThere are n stones arranged in a row. On each player's turn, they can remove either the leftmost stone or the rightmost stone from the row and receive points equal to the sum of the remaining stones' values in the row. The winner is the one with the higher score when there are no stones left to remove.\nBob found that he will always lose this game (poor Bob, he always loses), so he decided to minimize the score's difference. Alice's goal is to maximize the difference in the score.\nGiven an array of integers stones where stones[i] represents the value of the ith stone from the left, return the difference in Alice and Bob's score if they both play optimally.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [5,3,1,4,2]\nOutput: 6\nExplanation: \n- Alice removes 2 and gets 5 + 3 + 1 + 4 = 13 points. Alice = 13, Bob = 0, stones = [5,3,1,4].\n- Bob removes 5 and gets 3 + 1 + 4 = 8 points. Alice = 13, Bob = 8, stones = [3,1,4].\n- Alice removes 3 and gets 1 + 4 = 5 points. Alice = 18, Bob = 8, stones = [1,4].\n- Bob removes 1 and gets 4 points. Alice = 18, Bob = 12, stones = [4].\n- Alice removes 4 and gets 0 points. Alice = 18, Bob = 12, stones = [].\nThe score difference is 18 - 12 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [7,90,5,1,100,10,10,2]\nOutput: 122",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == stones.length",
+    "2 <= n <= 1000",
+    "1 <= stones[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small enough for an N^2 solution.",
+    "Try using dynamic programming."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int stoneGameVII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int stoneGameVII(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGameVII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGameVII(self, stones: List[int]) -> int:\n        ",
+    "c": "\n\nint stoneGameVII(int* stones, int stonesSize){\n\n}",
+    "csharp": "public class Solution {\n    public int StoneGameVII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number}\n */\nvar stoneGameVII = function(stones) {\n    \n};",
+    "typescript": "function stoneGameVII(stones: number[]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Integer\n     */\n    function stoneGameVII($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGameVII(_ stones: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGameVII(stones: IntArray): Int {\n        \n    }\n}",
+    "golang": "func stoneGameVII(stones []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Integer}\ndef stone_game_vii(stones)\n    \nend",
+    "scala": "object Solution {\n    def stoneGameVII(stones: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game_vii(stones: Vec<i32>) -> i32 {\n        \n    }\n}"
+  }
+}

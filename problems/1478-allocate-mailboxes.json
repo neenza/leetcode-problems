@@ -1,0 +1,61 @@
+{
+  "title": "Allocate Mailboxes",
+  "problem_id": "1571",
+  "frontend_id": "1478",
+  "difficulty": "Hard",
+  "problem_slug": "allocate-mailboxes",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "description": "Given the array houses where houses[i] is the location of the ith house along a street and an integer k, allocate k mailboxes in the street.\nReturn the minimum total distance between each house and its nearest mailbox.\nThe test cases are generated so that the answer fits in a 32-bit integer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: houses = [1,4,8,10,20], k = 3\nOutput: 5\nExplanation: Allocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/05/07/sample_11_1816.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: houses = [2,3,5,12,18], k = 2\nOutput: 9\nExplanation: Allocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/05/07/sample_2_1816.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= k <= houses.length <= 100",
+    "1 <= houses[i] <= 104",
+    "All the integers of houses are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If k =1, the minimum distance is obtained allocating the mailbox in the median of the array houses.",
+    "Generalize this idea, using dynamic programming allocating k mailboxes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDistance(vector<int>& houses, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDistance(int[] houses, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDistance(self, houses, k):\n        \"\"\"\n        :type houses: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDistance(self, houses: List[int], k: int) -> int:\n        ",
+    "c": "int minDistance(int* houses, int housesSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDistance(int[] houses, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} houses\n * @param {number} k\n * @return {number}\n */\nvar minDistance = function(houses, k) {\n    \n};",
+    "typescript": "function minDistance(houses: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $houses\n     * @param Integer $k\n     * @return Integer\n     */\n    function minDistance($houses, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDistance(_ houses: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDistance(houses: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDistance(List<int> houses, int k) {\n    \n  }\n}",
+    "golang": "func minDistance(houses []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} houses\n# @param {Integer} k\n# @return {Integer}\ndef min_distance(houses, k)\n    \nend",
+    "scala": "object Solution {\n    def minDistance(houses: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_distance(houses: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-distance houses k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_distance(Houses :: [integer()], K :: integer()) -> integer().\nmin_distance(Houses, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_distance(houses :: [integer], k :: integer) :: integer\n  def min_distance(houses, k) do\n    \n  end\nend"
+  }
+}

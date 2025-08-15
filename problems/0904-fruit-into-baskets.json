@@ -1,0 +1,57 @@
+{
+  "title": "Fruit Into Baskets",
+  "problem_id": "940",
+  "frontend_id": "904",
+  "difficulty": "Medium",
+  "problem_slug": "fruit-into-baskets",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ],
+  "description": "You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.\nYou want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:\nGiven the integer array fruits, return the maximum number of fruits you can pick.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: fruits = [1,2,1]\nOutput: 3\nExplanation: We can pick from all 3 trees.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: fruits = [0,1,2,2]\nOutput: 3\nExplanation: We can pick from trees [1,2,2].\nIf we had started at the first tree, we would only pick from trees [0,1].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: fruits = [1,2,3,2,2]\nOutput: 4\nExplanation: We can pick from trees [2,3,2,2].\nIf we had started at the first tree, we would only pick from trees [1,2].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= fruits.length <= 105",
+    "0 <= fruits[i] < fruits.length"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int totalFruit(vector<int>& fruits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalFruit(int[] fruits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def totalFruit(self, fruits):\n        \"\"\"\n        :type fruits: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def totalFruit(self, fruits: List[int]) -> int:\n        ",
+    "c": "int totalFruit(int* fruits, int fruitsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int TotalFruit(int[] fruits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} fruits\n * @return {number}\n */\nvar totalFruit = function(fruits) {\n    \n};",
+    "typescript": "function totalFruit(fruits: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $fruits\n     * @return Integer\n     */\n    function totalFruit($fruits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func totalFruit(_ fruits: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun totalFruit(fruits: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int totalFruit(List<int> fruits) {\n    \n  }\n}",
+    "golang": "func totalFruit(fruits []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} fruits\n# @return {Integer}\ndef total_fruit(fruits)\n    \nend",
+    "scala": "object Solution {\n    def totalFruit(fruits: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn total_fruit(fruits: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (total-fruit fruits)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec total_fruit(Fruits :: [integer()]) -> integer().\ntotal_fruit(Fruits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec total_fruit(fruits :: [integer]) :: integer\n  def total_fruit(fruits) do\n    \n  end\nend"
+  }
+}

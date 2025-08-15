@@ -1,0 +1,54 @@
+{
+  "title": "Counting Bits",
+  "problem_id": "338",
+  "frontend_id": "338",
+  "difficulty": "Easy",
+  "problem_slug": "counting-bits",
+  "topics": [
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "description": "Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: [0,1,1]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5\nOutput: [0,1,1,2,1,2]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10\n3 --> 11\n4 --> 100\n5 --> 101",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You should make use of what you have produced already.",
+    "Divide the numbers in ranges like [2-3], [4-7], [8-15] and so on. And try to generate new range from previous.",
+    "Or does the odd/even status of the number help you in calculating the number of 1s?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countBits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countBits(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countBits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countBits(self, n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countBits(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountBits(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar countBits = function(n) {\n    \n};",
+    "typescript": "function countBits(n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function countBits($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countBits(_ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countBits(n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countBits(int n) {\n    \n  }\n}",
+    "golang": "func countBits(n int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[]}\ndef count_bits(n)\n    \nend",
+    "scala": "object Solution {\n    def countBits(n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_bits(n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-bits n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec count_bits(N :: integer()) -> [integer()].\ncount_bits(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_bits(n :: integer) :: [integer]\n  def count_bits(n) do\n    \n  end\nend"
+  }
+}

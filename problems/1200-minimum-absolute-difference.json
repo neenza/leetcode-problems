@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Absolute Difference",
+  "problem_id": "1306",
+  "frontend_id": "1200",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-absolute-difference",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.\nReturn a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [4,2,1,3]\nOutput: [[1,2],[2,3],[3,4]]\nExplanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,3,6,10,15]\nOutput: [[1,3]]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [3,8,-10,23,19,-4,-14,27]\nOutput: [[-14,-10],[19,23],[23,27]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= arr.length <= 105",
+    "-106 <= arr[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the minimum absolute difference between two elements in the array.",
+    "The minimum absolute difference must be a difference between two consecutive elements in the sorted array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> minimumAbsDifference(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> minimumAbsDifference(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumAbsDifference(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** minimumAbsDifference(int* arr, int arrSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> MinimumAbsDifference(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number[][]}\n */\nvar minimumAbsDifference = function(arr) {\n    \n};",
+    "typescript": "function minimumAbsDifference(arr: number[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer[][]\n     */\n    function minimumAbsDifference($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumAbsDifference(_ arr: [Int]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumAbsDifference(arr: IntArray): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> minimumAbsDifference(List<int> arr) {\n    \n  }\n}",
+    "golang": "func minimumAbsDifference(arr []int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer[][]}\ndef minimum_abs_difference(arr)\n    \nend",
+    "scala": "object Solution {\n    def minimumAbsDifference(arr: Array[Int]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_abs_difference(arr: Vec<i32>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-abs-difference arr)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec minimum_abs_difference(Arr :: [integer()]) -> [[integer()]].\nminimum_abs_difference(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_abs_difference(arr :: [integer]) :: [[integer]]\n  def minimum_abs_difference(arr) do\n    \n  end\nend"
+  }
+}

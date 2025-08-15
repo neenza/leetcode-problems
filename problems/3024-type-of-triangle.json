@@ -1,0 +1,56 @@
+{
+  "title": "Type of Triangle",
+  "problem_id": "3321",
+  "frontend_id": "3024",
+  "difficulty": "Easy",
+  "problem_slug": "type-of-triangle",
+  "topics": [
+    "Array",
+    "Math",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array nums of size 3 which can form the sides of a triangle.\nReturn a string representing the type of triangle that can be formed or \"none\" if it cannot form a triangle.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,3,3]\nOutput: \"equilateral\"\nExplanation: Since all the sides are of equal length, therefore, it will form an equilateral triangle.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,4,5]\nOutput: \"scalene\"\nExplanation: \nnums[0] + nums[1] = 3 + 4 = 7, which is greater than nums[2] = 5.\nnums[0] + nums[2] = 3 + 5 = 8, which is greater than nums[1] = 4.\nnums[1] + nums[2] = 4 + 5 = 9, which is greater than nums[0] = 3. \nSince the sum of the two sides is greater than the third side for all three cases, therefore, it can form a triangle.\nAs all the sides are of different lengths, it will form a scalene triangle.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "nums.length == 3",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The condition for a valid triangle is that for any two sides, the sum of their lengths must be greater than the third side.",
+    "Simply count the number of unique edge lengths after checking it’s a valid triangle."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string triangleType(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String triangleType(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def triangleType(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def triangleType(self, nums: List[int]) -> str:\n        ",
+    "c": "char* triangleType(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string TriangleType(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {string}\n */\nvar triangleType = function(nums) {\n    \n};",
+    "typescript": "function triangleType(nums: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return String\n     */\n    function triangleType($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func triangleType(_ nums: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun triangleType(nums: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String triangleType(List<int> nums) {\n    \n  }\n}",
+    "golang": "func triangleType(nums []int) string {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {String}\ndef triangle_type(nums)\n    \nend",
+    "scala": "object Solution {\n    def triangleType(nums: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn triangle_type(nums: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (triangle-type nums)\n  (-> (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec triangle_type(Nums :: [integer()]) -> unicode:unicode_binary().\ntriangle_type(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec triangle_type(nums :: [integer]) :: String.t\n  def triangle_type(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Mathematics\n\n#### Intuition\n\nFirst, sort $\\textit{nums}$ in ascending order, then make the following checks in sequence:\n\n- If $\\textit{nums}[0] + \\textit{nums}[1] \\le \\textit{nums}[2]$, return `\"none\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[2]$, return `\"equilateral\"`.\n\n- If $\\textit{nums}[0] = \\textit{nums}[1]$ or $\\textit{nums}[1] = \\textit{nums}[2]$, return `\"isosceles\"`.\n\n- If none of the above conditions are met, return `\"scalene\"`.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n  Since the length of $nums$ is only 3, the time required for sorting can be ignored.\n\n- Space complexity: $O(1)$.\n  \n  No additional variables are needed."
+}

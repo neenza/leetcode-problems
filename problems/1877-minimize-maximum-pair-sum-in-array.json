@@ -1,0 +1,56 @@
+{
+  "title": "Minimize Maximum Pair Sum in Array",
+  "problem_id": "1988",
+  "frontend_id": "1877",
+  "difficulty": "Medium",
+  "problem_slug": "minimize-maximum-pair-sum-in-array",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "The pair sum of a pair (a,b) is equal to a + b. The maximum pair sum is the largest pair sum in a list of pairs.\nGiven an array nums of even length n, pair up the elements of nums into n / 2 pairs such that:\nReturn the minimized maximum pair sum after optimally pairing up the elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,5,2,3]\r\nOutput: 7\r\nExplanation: The elements can be paired up into pairs (3,3) and (5,2).\r\nThe maximum pair sum is max(3+3, 5+2) = max(6, 7) = 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,5,4,2,4,6]\r\nOutput: 8\r\nExplanation: The elements can be paired up into pairs (3,5), (4,4), and (6,2).\r\nThe maximum pair sum is max(3+5, 4+4, 6+2) = max(8, 8, 8) = 8.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "2 <= n <= 105",
+    "n is even.",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Would sorting help find the optimal order?",
+    "Given a specific element, how would you minimize its specific pairwise sum?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minPairSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minPairSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minPairSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minPairSum(self, nums: List[int]) -> int:\n        ",
+    "c": "\n\nint minPairSum(int* nums, int numsSize){\n\n}",
+    "csharp": "public class Solution {\n    public int MinPairSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minPairSum = function(nums) {\n    \n};",
+    "typescript": "function minPairSum(nums: number[]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minPairSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minPairSum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minPairSum(nums: IntArray): Int {\n        \n    }\n}",
+    "golang": "func minPairSum(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_pair_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def minPairSum(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_pair_sum(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-pair-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Sorting\n\n**Intuition**\n\nWe are given an array of $N$ integers (where $N$ is even), and we need to pair up all these integers in such a way that the maximum sum of a pair is minimized. We need to return the minimized maximum pair sum in the array.\n\nOne might think of pairing up the smaller integers together so that the pair sum is minimized at the beginning. However, in this way, we will end up pairing the bigger integers together and hence will increase the maximum pair sum. For example, we can pair up the array `[1, 1, 2, 3]` as `(1, 1), (2, 3)` with maximum sum as `5`. However, the optimal way would be to make a pair like `(1, 3), (1, 2)` with a maximum sum of `4`. This suggests that pairing adjacent numbers by value may not be the optimal approach.\n\nObserving the above example we can think about another potential strategy to pair up the smallest integer with the greatest integer and then second-smallest with the second-greatest and so on. This method ensures we don't end up pairing the two greatest integers as we did in the previous method. But how can we know this is optimal and would always produce the minimum pair sum?\n\nSuppose we have the array $[a_{1}, a_1, a_2, ......, a_{n}]$, where these integers are sorted in ascending order and so $a_{1}$ is the minimum integer and $a_{n}$ is the greatest one in the array. As per the above potential solution, we will pair up $a_{1}$ and $a_{n}$ together, we can try to prove this method wrong by contradiction. Let's say we assume there exist two integers in the array $a_{i}$ and $a_{j}$ and satisfy this:\n\n- $a_{1} \\le a_{i} \\le a_{n}$\n-  $a_{1} \\le a_{j} \\le a_{n}$\n\nLet's assume an opposite method, and prove that it leads to contradiction. Suppose the pair $[(a_{1}, a_{i}), (a_{n}, a_{j}) ]$ is optimal than pair $[(a_{1}, a_{n}), (a_{i}, a_{j}) ]$. This is however not true, because $a_{j} + a_{n}$ is always bigger than or equal to $a_{i} + a_{1}$, hence the max of $[(a_{1}, a_{i}), (a_{n}, a_{j}) ]$ will always be $a_{j} + a_{n}$. And no matter what the max of $[(a_{1}, a_{n}), (a_{i}, a_{j}) ]$ it will always be smaller than or equal to $a_{j} + a_{n}$. Therefore, our potential solution strategy is optimal.\n\nThe image below demonstrates the pairing:\n\n![fig](../Figures/1877/1877A.png)\n\nTherefore, we will sort the integers in the array and then pair the integers at the left end with the integers at the right end. The minimum value is paired with the maximum value, the next smallest value is paired with the next largest value, and so on. We need to iterate over only the first half of the array because the corresponding second element in the pair can be found by using the length of the array.\n\n**Algorithm**\n\n1. Sort the array `nums`.\n2. Initialize the variable `maxSum` to `0`.\n3. Iterate over the array `nums` from index `0` to `nums.length() / 2 - 1`.\n4. Get the sum of the current element and its corresponding pair `nums[i] + nums[nums.length() - 1 - i]`, and update `maxSum` if the sum is larger.\n5. Return `maxSum`.\n\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of elements in the array `nums`.\n\n* Time complexity $O(N \\log N)$\n\n  Sorting the array `nums` will take $O(N \\log N)$ time, and then we iterate over the array `nums` which will take $O(N)$ time. Hence, the total time complexity is equal to $O(N \\log N)$.\n\n* Space complexity $O(\\log N)$\n\n  We don't need any extra space apart from the one required for sorting. The space complexity of the sorting algorithm depends on the implementation of each programming language. For instance, in Java, the Arrays.sort() for primitives is implemented as a variant of the quicksort algorithm whose space complexity is $O(\\log N)$. In C++ std::sort() function provided by STL is a hybrid of Quick Sort, Heap Sort, and Insertion Sort and has a worst-case space complexity of $O(\\log N)$. Thus, the use of the inbuilt sort() function might add up to $O(\\log N)$ to space complexity.---"
+}

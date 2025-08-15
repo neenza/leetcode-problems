@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Domino Rotations For Equal Row",
+  "problem_id": "1049",
+  "frontend_id": "1007",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-domino-rotations-for-equal-row",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)\nWe may rotate the ith domino, so that tops[i] and bottoms[i] swap values.\nReturn the minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same.\nIf it cannot be done, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tops = [2,1,2,4,2,2], bottoms = [5,2,6,2,3,2]\nOutput: 2\nExplanation: \nThe first figure represents the dominoes as given by tops and bottoms: before we do any rotations.\nIf we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated by the second figure.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/14/domino.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tops = [3,5,1,2,3], bottoms = [3,6,3,3,4]\nOutput: -1\nExplanation: \nIn this case, it is not possible to rotate the dominoes to make one row of values equal.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/14/domino.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= tops.length <= 2 * 104",
+    "bottoms.length == tops.length",
+    "1 <= tops[i], bottoms[i] <= 6"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDominoRotations(int[] tops, int[] bottoms) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDominoRotations(self, tops, bottoms):\n        \"\"\"\n        :type tops: List[int]\n        :type bottoms: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDominoRotations(self, tops: List[int], bottoms: List[int]) -> int:\n        ",
+    "c": "int minDominoRotations(int* tops, int topsSize, int* bottoms, int bottomsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDominoRotations(int[] tops, int[] bottoms) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} tops\n * @param {number[]} bottoms\n * @return {number}\n */\nvar minDominoRotations = function(tops, bottoms) {\n    \n};",
+    "typescript": "function minDominoRotations(tops: number[], bottoms: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $tops\n     * @param Integer[] $bottoms\n     * @return Integer\n     */\n    function minDominoRotations($tops, $bottoms) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDominoRotations(_ tops: [Int], _ bottoms: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDominoRotations(tops: IntArray, bottoms: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDominoRotations(List<int> tops, List<int> bottoms) {\n    \n  }\n}",
+    "golang": "func minDominoRotations(tops []int, bottoms []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} tops\n# @param {Integer[]} bottoms\n# @return {Integer}\ndef min_domino_rotations(tops, bottoms)\n    \nend",
+    "scala": "object Solution {\n    def minDominoRotations(tops: Array[Int], bottoms: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_domino_rotations(tops: Vec<i32>, bottoms: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-domino-rotations tops bottoms)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_domino_rotations(Tops :: [integer()], Bottoms :: [integer()]) -> integer().\nmin_domino_rotations(Tops, Bottoms) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_domino_rotations(tops :: [integer], bottoms :: [integer]) :: integer\n  def min_domino_rotations(tops, bottoms) do\n    \n  end\nend"
+  }
+}

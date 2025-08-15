@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Positive Sum Subarray ",
+  "problem_id": "3644",
+  "frontend_id": "3364",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-positive-sum-subarray",
+  "topics": [
+    "Array",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums and two integers l and r. Your task is to find the minimum sum of a subarray whose size is between l and r (inclusive) and whose sum is greater than 0.\nReturn the minimum sum of such a subarray. If no such subarray exists, return -1.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3, -2, 1, 4], l = 2, r = 3\nOutput: 1\nExplanation:\nThe subarrays of length between l = 2 and r = 3 where the sum is greater than 0 are:\nOut of these, the subarray [3, -2] has a sum of 1, which is the smallest positive sum. Hence, the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-2, 2, -3, 1], l = 2, r = 3\nOutput: -1\nExplanation:\nThere is no subarray of length between l and r that has a sum greater than 0. So, the answer is -1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1, 2, 3, 4], l = 2, r = 4\nOutput: 3\nExplanation:\nThe subarray [1, 2] has a length of 2 and the minimum sum greater than 0. So, the answer is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= l <= r <= nums.length",
+    "-1000 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check every subarray, since constraints are small."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumSumSubarray(vector<int>& nums, int l, int r) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSumSubarray(List<Integer> nums, int l, int r) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumSumSubarray(self, nums, l, r):\n        \"\"\"\n        :type nums: List[int]\n        :type l: int\n        :type r: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:\n        ",
+    "c": "int minimumSumSubarray(int* nums, int numsSize, int l, int r) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumSumSubarray(IList<int> nums, int l, int r) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} l\n * @param {number} r\n * @return {number}\n */\nvar minimumSumSubarray = function(nums, l, r) {\n    \n};",
+    "typescript": "function minimumSumSubarray(nums: number[], l: number, r: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $l\n     * @param Integer $r\n     * @return Integer\n     */\n    function minimumSumSubarray($nums, $l, $r) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSumSubarray(_ nums: [Int], _ l: Int, _ r: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumSumSubarray(nums: List<Int>, l: Int, r: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSumSubarray(List<int> nums, int l, int r) {\n    \n  }\n}",
+    "golang": "func minimumSumSubarray(nums []int, l int, r int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} l\n# @param {Integer} r\n# @return {Integer}\ndef minimum_sum_subarray(nums, l, r)\n    \nend",
+    "scala": "object Solution {\n    def minimumSumSubarray(nums: List[Int], l: Int, r: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_sum_subarray(nums: Vec<i32>, l: i32, r: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-sum-subarray nums l r)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_sum_subarray(Nums :: [integer()], L :: integer(), R :: integer()) -> integer().\nminimum_sum_subarray(Nums, L, R) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_sum_subarray(nums :: [integer], l :: integer, r :: integer) :: integer\n  def minimum_sum_subarray(nums, l, r) do\n    \n  end\nend"
+  }
+}

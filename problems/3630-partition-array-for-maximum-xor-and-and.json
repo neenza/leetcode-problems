@@ -1,0 +1,65 @@
+{
+  "title": "Partition Array for Maximum XOR and AND",
+  "problem_id": "3882",
+  "frontend_id": "3630",
+  "difficulty": "Hard",
+  "problem_slug": "partition-array-for-maximum-xor-and-and",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "You are given an integer array nums.\nPartition the array into three (possibly empty) subsequences A, B, and C such that every element of nums belongs to exactly one subsequence.\nYour goal is to maximize the value of: XOR(A) + AND(B) + XOR(C)\nwhere:\nReturn the maximum value achievable.\nNote: If multiple partitions result in the same maximum sum, you can consider any one of them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3]\nOutput: 5\nExplanation:\nOne optimal partition is:\nThe maximum value of: XOR(A) + AND(B) + XOR(C) = 3 + 2 + 0 = 5 . Thus, the answer is 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,2]\nOutput: 6\nExplanation:\nOne optimal partition is:\nThe maximum value of: XOR(A) + AND(B) + XOR(C) = 1 + 2 + 3 = 6 . Thus, the answer is 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,3,6,7]\nOutput: 15\nExplanation:\nOne optimal partition is:\nThe maximum value of: XOR(A) + AND(B) + XOR(C) = 7 + 2 + 6 = 15 . Thus, the answer is 15.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 19",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute-force all subsets for <code>B</code>.",
+    "Let <code>s</code> = XOR of all elements not in <code>B</code>.",
+    "We want to choose a value <code>x</code> (a subset‐XOR of the \"remaining\" elements) to maximize <code>x + (s XOR x)</code>.",
+    "Observe that <code>x + (s XOR x) = s + 2 * (x AND ~s)</code>.",
+    "To do this efficiently, build a linear XOR basis over the values <code>nums[j] & ~s</code> for each index <code>j</code> not in <code>B</code>.",
+    "Finally, greedily extract the maximum <code>x</code> from that basis."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximizeXorAndXor(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximizeXorAndXor(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximizeXorAndXor(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximizeXorAndXor(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maximizeXorAndXor(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximizeXorAndXor(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximizeXorAndXor = function(nums) {\n    \n};",
+    "typescript": "function maximizeXorAndXor(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximizeXorAndXor($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeXorAndXor(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximizeXorAndXor(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeXorAndXor(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximizeXorAndXor(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximize_xor_and_xor(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximizeXorAndXor(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_xor_and_xor(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximize-xor-and-xor nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximize_xor_and_xor(Nums :: [integer()]) -> integer().\nmaximize_xor_and_xor(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximize_xor_and_xor(nums :: [integer]) :: integer\n  def maximize_xor_and_xor(nums) do\n    \n  end\nend"
+  }
+}

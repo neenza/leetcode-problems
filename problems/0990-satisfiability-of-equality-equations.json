@@ -1,0 +1,57 @@
+{
+  "title": "Satisfiability of Equality Equations",
+  "problem_id": "1032",
+  "frontend_id": "990",
+  "difficulty": "Medium",
+  "problem_slug": "satisfiability-of-equality-equations",
+  "topics": [
+    "Array",
+    "String",
+    "Union Find",
+    "Graph"
+  ],
+  "description": "You are given an array of strings equations that represent relationships between variables where each string equations[i] is of length 4 and takes one of two different forms: \"xi==yi\" or \"xi!=yi\".Here, xi and yi are lowercase letters (not necessarily different) that represent one-letter variable names.\nReturn true if it is possible to assign integers to variable names so as to satisfy all the given equations, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: equations = [\"a==b\",\"b!=a\"]\nOutput: false\nExplanation: If we assign say, a = 1 and b = 1, then the first equation is satisfied, but not the second.\nThere is no way to assign the variables to satisfy both equations.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: equations = [\"b==a\",\"a==b\"]\nOutput: true\nExplanation: We could assign a = 1 and b = 1 to satisfy both equations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= equations.length <= 500",
+    "equations[i].length == 4",
+    "equations[i][0] is a lowercase letter.",
+    "equations[i][1] is either '=' or '!'.",
+    "equations[i][2] is '='.",
+    "equations[i][3] is a lowercase letter."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool equationsPossible(vector<string>& equations) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean equationsPossible(String[] equations) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def equationsPossible(self, equations):\n        \"\"\"\n        :type equations: List[str]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def equationsPossible(self, equations: List[str]) -> bool:\n        ",
+    "c": "bool equationsPossible(char** equations, int equationsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool EquationsPossible(string[] equations) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} equations\n * @return {boolean}\n */\nvar equationsPossible = function(equations) {\n    \n};",
+    "typescript": "function equationsPossible(equations: string[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $equations\n     * @return Boolean\n     */\n    function equationsPossible($equations) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func equationsPossible(_ equations: [String]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun equationsPossible(equations: Array<String>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool equationsPossible(List<String> equations) {\n    \n  }\n}",
+    "golang": "func equationsPossible(equations []string) bool {\n    \n}",
+    "ruby": "# @param {String[]} equations\n# @return {Boolean}\ndef equations_possible(equations)\n    \nend",
+    "scala": "object Solution {\n    def equationsPossible(equations: Array[String]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn equations_possible(equations: Vec<String>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (equations-possible equations)\n  (-> (listof string?) boolean?)\n  )",
+    "erlang": "-spec equations_possible(Equations :: [unicode:unicode_binary()]) -> boolean().\nequations_possible(Equations) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec equations_possible(equations :: [String.t]) :: boolean\n  def equations_possible(equations) do\n    \n  end\nend"
+  }
+}

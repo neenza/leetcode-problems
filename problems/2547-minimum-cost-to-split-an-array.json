@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Cost to Split an Array",
+  "problem_id": "2633",
+  "frontend_id": "2547",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-cost-to-split-an-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Counting"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nSplit the array into some number of non-empty subarrays. The cost of a split is the sum of the importance value of each subarray in the split.\nLet trimmed(subarray) be the version of the subarray where all numbers which appear only once are removed.\nThe importance value of a subarray is k + trimmed(subarray).length.\nReturn the minimum possible cost of a split of nums.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,1,2,1,3,3], k = 2\nOutput: 8\nExplanation: We split nums to have two subarrays: [1,2], [1,2,1,3,3].\nThe importance value of [1,2] is 2 + (0) = 2.\nThe importance value of [1,2,1,3,3] is 2 + (2 + 2) = 6.\nThe cost of the split is 2 + 6 = 8. It can be shown that this is the minimum possible cost among all the possible splits.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,1,2,1], k = 2\nOutput: 6\nExplanation: We split nums to have two subarrays: [1,2], [1,2,1].\nThe importance value of [1,2] is 2 + (0) = 2.\nThe importance value of [1,2,1] is 2 + (2) = 4.\nThe cost of the split is 2 + 4 = 6. It can be shown that this is the minimum possible cost among all the possible splits.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,1,2,1], k = 5\nOutput: 10\nExplanation: We split nums to have one subarray: [1,2,1,2,1].\nThe importance value of [1,2,1,2,1] is 5 + (3 + 2) = 10.\nThe cost of the split is 10. It can be shown that this is the minimum possible cost among all the possible splits.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "0 <= nums[i] < nums.length",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let's denote dp[r] = minimum cost to partition the first r elements of nums. What would be the transitions of such dynamic programming?",
+    "dp[r] = min(dp[l] + importance(nums[l..r])) over all 0 <= l < r. This already gives us an O(n^3) approach, as importance can be calculated in linear time, and there are a total of O(n^2) transitions.",
+    "Can you think of a way to compute multiple importance values of related subarrays faster?",
+    "importance(nums[l-1..r]) is either importance(nums[l..r]) if a new unique element is added, importance(nums[l..r]) + 1 if an old element that appeared at least twice is added, or importance(nums[l..r]) + 2, if a previously unique element is duplicated. This allows us to compute importance(nums[l..r]) for all 0 <= l < r in O(n) by keeping a frequency table and decreasing l from r-1 down to 0."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCost(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minCost(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCost(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minCost = function(nums, k) {\n    \n};",
+    "typescript": "function minCost(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minCost($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minCost(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_cost(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minCost(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Nums :: [integer()], K :: integer()) -> integer().\nmin_cost(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(nums :: [integer], k :: integer) :: integer\n  def min_cost(nums, k) do\n    \n  end\nend"
+  }
+}

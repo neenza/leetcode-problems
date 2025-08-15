@@ -1,0 +1,57 @@
+{
+  "title": "Smallest Missing Non-negative Integer After Operations",
+  "problem_id": "2661",
+  "frontend_id": "2598",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-missing-non-negative-integer-after-operations",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed integer array nums and an integer value.\nIn one operation, you can add or subtract value from any element of nums.\nThe MEX (minimum excluded) of an array is the smallest missing non-negative integer in it.\nReturn the maximum MEX of nums after applying the mentioned operation any number of times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,-10,7,13,6,8], value = 5\nOutput: 4\nExplanation: One can achieve this result by applying the following operations:\n- Add value to nums[1] twice to make nums = [1,0,7,13,6,8]\n- Subtract value from nums[2] once to make nums = [1,0,2,13,6,8]\n- Subtract value from nums[3] twice to make nums = [1,0,2,3,6,8]\nThe MEX of nums is 4. It can be shown that 4 is the maximum MEX we can achieve.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,-10,7,13,6,8], value = 7\nOutput: 2\nExplanation: One can achieve this result by applying the following operation:\n- subtract value from nums[2] once to make nums = [1,-10,0,13,6,8]\nThe MEX of nums is 2. It can be shown that 2 is the maximum MEX we can achieve.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length, value <= 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about using modular arithmetic.",
+    "if x = nums[i] (mod value), then we can make nums[i] equal to x  after some number of operations",
+    "How does finding the frequency of (nums[i] mod value) help?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findSmallestInteger(vector<int>& nums, int value) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findSmallestInteger(int[] nums, int value) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findSmallestInteger(self, nums, value):\n        \"\"\"\n        :type nums: List[int]\n        :type value: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findSmallestInteger(self, nums: List[int], value: int) -> int:\n        ",
+    "c": "int findSmallestInteger(int* nums, int numsSize, int value) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindSmallestInteger(int[] nums, int value) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} value\n * @return {number}\n */\nvar findSmallestInteger = function(nums, value) {\n    \n};",
+    "typescript": "function findSmallestInteger(nums: number[], value: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $value\n     * @return Integer\n     */\n    function findSmallestInteger($nums, $value) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findSmallestInteger(_ nums: [Int], _ value: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findSmallestInteger(nums: IntArray, value: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findSmallestInteger(List<int> nums, int value) {\n    \n  }\n}",
+    "golang": "func findSmallestInteger(nums []int, value int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} value\n# @return {Integer}\ndef find_smallest_integer(nums, value)\n    \nend",
+    "scala": "object Solution {\n    def findSmallestInteger(nums: Array[Int], value: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_smallest_integer(nums: Vec<i32>, value: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-smallest-integer nums value)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_smallest_integer(Nums :: [integer()], Value :: integer()) -> integer().\nfind_smallest_integer(Nums, Value) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_smallest_integer(nums :: [integer], value :: integer) :: integer\n  def find_smallest_integer(nums, value) do\n    \n  end\nend"
+  }
+}

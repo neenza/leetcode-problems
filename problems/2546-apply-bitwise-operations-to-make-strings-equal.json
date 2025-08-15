@@ -1,0 +1,55 @@
+{
+  "title": "Apply Bitwise Operations to Make Strings Equal",
+  "problem_id": "2632",
+  "frontend_id": "2546",
+  "difficulty": "Medium",
+  "problem_slug": "apply-bitwise-operations-to-make-strings-equal",
+  "topics": [
+    "String",
+    "Bit Manipulation"
+  ],
+  "description": "You are given two 0-indexed binary strings s and target of the same length n. You can do the following operation on s any number of times:\nFor example, if s = \"0110\", you can choose i = 0 and j = 2, then simultaneously replace s[0] with (s[0] OR s[2] = 0 OR 1 = 1), and s[2] with (s[0] XOR s[2] = 0 XOR 1 = 1), so we will have s = \"1110\".\nReturn true if you can make the string s equal to target, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1010\", target = \"0110\"\nOutput: true\nExplanation: We can do the following operations:\n- Choose i = 2 and j = 0. We have now s = \"0010\".\n- Choose i = 2 and j = 1. We have now s = \"0110\".\nSince we can make s equal to target, we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"11\", target = \"00\"\nOutput: false\nExplanation: It is not possible to make s equal to target with any number of operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == s.length == target.length",
+    "2 <= n <= 105",
+    "s and target consist of only the digits 0 and 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of when it is impossible to convert the string to the target.",
+    "If exactly one of the strings is having all 0’s, then it is impossible. And it is possible in all other cases. Why is that true?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool makeStringsEqual(string s, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean makeStringsEqual(String s, String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeStringsEqual(self, s, target):\n        \"\"\"\n        :type s: str\n        :type target: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeStringsEqual(self, s: str, target: str) -> bool:\n        ",
+    "c": "bool makeStringsEqual(char* s, char* target) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool MakeStringsEqual(string s, string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} target\n * @return {boolean}\n */\nvar makeStringsEqual = function(s, target) {\n    \n};",
+    "typescript": "function makeStringsEqual(s: string, target: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $target\n     * @return Boolean\n     */\n    function makeStringsEqual($s, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeStringsEqual(_ s: String, _ target: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeStringsEqual(s: String, target: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool makeStringsEqual(String s, String target) {\n    \n  }\n}",
+    "golang": "func makeStringsEqual(s string, target string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} target\n# @return {Boolean}\ndef make_strings_equal(s, target)\n    \nend",
+    "scala": "object Solution {\n    def makeStringsEqual(s: String, target: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_strings_equal(s: String, target: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (make-strings-equal s target)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec make_strings_equal(S :: unicode:unicode_binary(), Target :: unicode:unicode_binary()) -> boolean().\nmake_strings_equal(S, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_strings_equal(s :: String.t, target :: String.t) :: boolean\n  def make_strings_equal(s, target) do\n    \n  end\nend"
+  }
+}

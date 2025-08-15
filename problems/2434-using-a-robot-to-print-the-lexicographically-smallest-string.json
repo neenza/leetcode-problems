@@ -1,0 +1,63 @@
+{
+  "title": "Using a Robot to Print the Lexicographically Smallest String",
+  "problem_id": "2520",
+  "frontend_id": "2434",
+  "difficulty": "Medium",
+  "problem_slug": "using-a-robot-to-print-the-lexicographically-smallest-string",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Stack",
+    "Greedy"
+  ],
+  "description": "You are given a string s and a robot that currently holds an empty string t. Apply one of the following operations until s and t are both empty:\nReturn the lexicographically smallest string that can be written on the paper.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"zza\"\nOutput: \"azz\"\nExplanation: Let p denote the written string.\nInitially p=\"\", s=\"zza\", t=\"\".\nPerform first operation three times p=\"\", s=\"\", t=\"zza\".\nPerform second operation three times p=\"azz\", s=\"\", t=\"\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"bac\"\nOutput: \"abc\"\nExplanation: Let p denote the written string.\nPerform first operation twice p=\"\", s=\"c\", t=\"ba\". \nPerform second operation twice p=\"ab\", s=\"c\", t=\"\". \nPerform first operation p=\"ab\", s=\"\", t=\"c\". \nPerform second operation p=\"abc\", s=\"\", t=\"\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bdda\"\nOutput: \"addb\"\nExplanation: Let p denote the written string.\nInitially p=\"\", s=\"bdda\", t=\"\".\nPerform first operation four times p=\"\", s=\"\", t=\"bdda\".\nPerform second operation four times p=\"addb\", s=\"\", t=\"\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of only English lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there are some character “a” ’ s in the string, they can be written on paper before anything else.",
+    "Every character in the string before the last “a” should be written in reversed order.",
+    "After the robot writes every “a” on paper, the same holds for other characters “b”, ”c”, …etc."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string robotWithString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String robotWithString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def robotWithString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def robotWithString(self, s: str) -> str:\n        ",
+    "c": "char* robotWithString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RobotWithString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar robotWithString = function(s) {\n    \n};",
+    "typescript": "function robotWithString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function robotWithString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func robotWithString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun robotWithString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String robotWithString(String s) {\n    \n  }\n}",
+    "golang": "func robotWithString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef robot_with_string(s)\n    \nend",
+    "scala": "object Solution {\n    def robotWithString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn robot_with_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (robot-with-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec robot_with_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nrobot_with_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec robot_with_string(s :: String.t) :: String.t\n  def robot_with_string(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Greedy + Stack\n\n#### Intuition\n\nWe are provided a push sequence of a stack and we need to find the smallest lexicographical pop sequence. Consider the top element $c$ of the stack and the smallest character $\\textit{minCharacter}$ remaining in the string $s$:\n\n- If $c < \\textit{minCharacter}$, then the top element of the stack must be popped to ensure the smallest possible pop sequence.\n- If $c > \\textit{minCharacter}$, then the top element should be retained, and we should continue pushing characters until we encounter $\\textit{minCharacter}$, ensuring the minimum lexicographical sequence.\n- If $c = \\textit{minCharacter}$, then the top element must also be popped to achieve the smallest sequence. This is because we can pop $c$ now, and later push and pop $\\textit{minCharacter}$, resulting in two consecutive minimal characters in the output. Otherwise, if we wait and only pop $\\textit{minCharacter}$ later, we’ll end up with just one occurrence, and subsequent characters will be greater than or equal to it.\n\nFollowing this greedy approach, we push characters onto the stack one by one. After each push, we update $\\textit{minCharacter}$ to be the smallest character remaining in the string and compare it with the stack’s top. If the condition allows, we pop from the stack; otherwise, we continue the loop. Finally, we return the resulting string.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ denote the size of the character set.\n\n- Time complexity: $O(n + |\\Sigma|)$.\n  \n  We first count the frequency of each character in the string, which takes $O(n)$ time. Then, we iterate through the string once, performing constant-time stack operations and updating the minimum character tracker, which involves at most $|\\Sigma|$ steps across the entire process. Therefore, the total time complexity is $O(n + |\\Sigma|)$.\n  \n- Space complexity: $O(n)$.\n  \n  We use a hash map to store character frequencies and a stack to simulate the operations. Both the hash map and the stack require at most $O(n)$ space."
+}

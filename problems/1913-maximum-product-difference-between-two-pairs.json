@@ -1,0 +1,52 @@
+{
+  "title": "Maximum Product Difference Between Two Pairs",
+  "problem_id": "2042",
+  "frontend_id": "1913",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-product-difference-between-two-pairs",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "The product difference between two pairs (a, b) and (c, d) is defined as (a * b) - (c * d).\nGiven an integer array nums, choose four distinct indices w, x, y, and z such that the product difference between pairs (nums[w], nums[x]) and (nums[y], nums[z]) is maximized.\nReturn the maximum such product difference.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,6,2,7,4]\r\nOutput: 34\r\nExplanation: We can choose indices 1 and 3 for the first pair (6, 7) and indices 2 and 4 for the second pair (2, 4).\r\nThe product difference is (6 * 7) - (2 * 4) = 34.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,2,5,9,7,4,8]\r\nOutput: 64\r\nExplanation: We can choose indices 3 and 6 for the first pair (9, 8) and indices 1 and 5 for the second pair (2, 4).\r\nThe product difference is (9 * 8) - (2 * 4) = 64.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "4 <= nums.length <= 104",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If you only had to find the maximum product of 2 numbers in an array, which 2 numbers should you choose?",
+    "We only need to worry about 4 numbers in the array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\r\npublic:\r\n    int maxProductDifference(vector<int>& nums) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public int maxProductDifference(int[] nums) {\r\n        \r\n    }\r\n}",
+    "python": "class Solution(object):\r\n    def maxProductDifference(self, nums):\r\n        \"\"\"\r\n        :type nums: List[int]\r\n        :rtype: int\r\n        \"\"\"",
+    "python3": "class Solution:\r\n    def maxProductDifference(self, nums: List[int]) -> int:",
+    "c": "int maxProductDifference(int* nums, int numsSize){\r\n\r\n}",
+    "csharp": "public class Solution {\r\n    public int MaxProductDifference(int[] nums) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[]} nums\r\n * @return {number}\r\n */\r\nvar maxProductDifference = function(nums) {\r\n    \r\n};",
+    "typescript": "function maxProductDifference(nums: number[]): number {\r\n\r\n};",
+    "php": "class Solution {\r\n\r\n    /**\r\n     * @param Integer[] $nums\r\n     * @return Integer\r\n     */\r\n    function maxProductDifference($nums) {\r\n        \r\n    }\r\n}",
+    "swift": "class Solution {\r\n    func maxProductDifference(_ nums: [Int]) -> Int {\r\n        \r\n    }\r\n}",
+    "kotlin": "class Solution {\r\n    fun maxProductDifference(nums: IntArray): Int {\r\n        \r\n    }\r\n}",
+    "golang": "func maxProductDifference(nums []int) int {\r\n    \r\n}",
+    "ruby": "# @param {Integer[]} nums\r\n# @return {Integer}\r\ndef max_product_difference(nums)\r\n    \r\nend",
+    "scala": "object Solution {\r\n    def maxProductDifference(nums: Array[Int]): Int = {\r\n        \r\n    }\r\n}",
+    "rust": "impl Solution {\r\n    pub fn max_product_difference(nums: Vec<i32>) -> i32 {\r\n        \r\n    }\r\n}",
+    "racket": "(define/contract (max-product-difference nums)\r\n  (-> (listof exact-integer?) exact-integer?)\r\n\r\n  )"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Sort\n\n**Intuition**\n\nIn this problem, we need to determine the maximum value of:\n\n`a * b - c * d`\n\nWhere `a, b, c, d` are all elements in `nums`. Note that while it is possible for the same value to be used multiple times, we are not allowed to use the same index of `nums` multiple times.\n\nFor example, let's say `a = b = 4`. This is only possible if `4` shows up at least twice in `nums`. If `4` only appears once in `nums`, we can't use it twice.\n\nLet's separate the equation into two parts:\n\n1. `a * b`\n2. `c * d`\n\nAs we are subtracting the 2nd part from the 1st part, we want to maximize the 1st part while minimizing the 2nd part.\n\nBecause the values of `nums` are non-negative, we can maximize a product by choosing the two largest elements in `nums`. Similarly, we can minimize a product by choosing the two smallest elements in `nums`. Thus, we will choose the following elements:\n\n- `a` as the largest value in `nums`.\n- `b` as the second-largest value in `nums`.\n- `c` as the smallest value in `nums`.\n- `d` as the second smallest value in `nums`.\n\nTo find `a, b, c, d`, we will sort `nums`. Then, we can simply return `a * b - c * d`. Note that we do not need to actually allocate variables for `a, b, c, d`, rather we can just access the array elements directly.\n\n**Algorithm**\n\n1. Sort `nums` in ascending order.\n2. Return `nums[nums.length - 1] * nums[nums.length - 2] - nums[0] * nums[1]`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `nums`,\n\n* Time complexity: $$O(n \\cdot \\log{}n)$$\n\n    We sort `nums`, which costs $$O(n \\cdot \\log{}n)$$.\n\n* Space Complexity: $$O(\\log n)$$ or $$O(n)$$\n\n    The space complexity of the sorting algorithm depends on the implementation of each programming language:\n    * In Java, Arrays.sort() for primitives is implemented using a variant of the Quick Sort algorithm, which has a space complexity of $$O(\\log n)$$\n    * In C++, the sort() function provided by STL uses a hybrid of Quick Sort, Heap Sort and Insertion Sort, with a worst case space complexity of $$O(\\log n)$$\n    * In Python, the sort() function is implemented using the Timsort algorithm, which has a worst-case space complexity of $$O(n)$$\n\n---\n\n### Approach 2: Track the Two Biggest and the Two Smallest Elements\n\n**Intuition**\n\nWithout sorting, we can easily find the maximum element in `nums` by iterating over `nums` and continuously updating a variable with the largest value we see. However, we need the second-largest value as well. Can we accomplish this without sorting?\n\nImagine having two variables: `biggest` to represent the biggest element we have seen so far, and `secondBiggest` to represent the second biggest element we have seen so far.\n\nWe then iterate over each `num` in `nums`. For each `num`, there are two possibilities:\n\n1. `num > biggest`. We have found a new biggest element and should update `biggest = num`. However, before we do this, we update `secondBiggest = biggest` since the old biggest element we saw will become the new second biggest element.\n2. `num <= biggest`. We should not update `biggest`. However, `num` may be larger than `secondBiggest`, in which case it would be the new second biggest element. We update `secondBiggest` with `num` if it is larger.\n\nThis process allows us to find the two maximum elements without needing to sort the array. We can use the exact same process to also find the two minimum elements, we just need to swap the directions of the inequality operators as follows:\n\n1. `num < smallest`. We have found a new smallest element and should update `smallest = num`. However, before we do this, we update `secondSmallest = smallest` since the old smallest element we saw will become the new second smallest element.\n2. `num >= smallest`. We should not update `smallest`. However, `num` may be smaller than `secondSmallest`, in which case it would be the new second smallest element. We update `secondSmallest` with `num` if it is smaller.\n\n\nOnce we have the two biggest and the two smallest elements, we can simply return the product of the two biggest elements minus the product of the two smallest elements.\n\n**Algorithm**\n\n1. Initialize the following variables:\n    - `biggest` and `secondBiggest` to `0`.\n    - `smallest` and `secondSmallest` to large values like infinity.\n2. Iterate over each `num` in `nums`:\n    - If `num > biggest`:\n        - Update `secondBiggest = biggest`.\n        - Update `biggest = num`.\n    - Else:\n        - Update `secondBiggest` with `num` if it is larger.\n    - If `num < smallest`:\n        - Update `secondSmallest = smallest`.\n        - Update `smallest = num`.\n    - Else:\n        - Update `secondSmallest` with `num` if it is smaller.\n3. Return `biggest * secondBiggest - smallest * secondSmallest`.\nYou may notice that during the iteration, there might be a case where a number becomes one of the two smallest elements AND one of the two largest elements at the same time. Does this invalid case affect our answer? The answer is NO! This is because the problem limits the array length to be greater than or equal to 4. Therefore, the final selection of the two biggest elements and the two smallest elements are guaranteed not to be the same elements. The special situation we mentioned during the iteration is not the optimal solution, so its product difference won't be larger than our final answer.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `nums`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate over `nums` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---"
+}

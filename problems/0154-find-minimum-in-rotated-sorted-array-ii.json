@@ -1,0 +1,55 @@
+{
+  "title": "Find Minimum in Rotated Sorted Array II",
+  "problem_id": "154",
+  "frontend_id": "154",
+  "difficulty": "Hard",
+  "problem_slug": "find-minimum-in-rotated-sorted-array-ii",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,4,4,5,6,7] might become:\nNotice that rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].\nGiven the sorted rotated array nums that may contain duplicates, return the minimum element of this array.\nYou must decrease the overall operation steps as much as possible.\nExample 1:\nExample 2:\nConstraints:\nFollow up: This problem is similar to Find Minimum in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,5]\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,2,2,0,1]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 5000",
+    "-5000 <= nums[i] <= 5000",
+    "nums is sorted and rotated between 1 and n times."
+  ],
+  "follow_ups": [
+    "This problem is similar to Find Minimum in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMin(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMin(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMin(self, nums: List[int]) -> int:\n        ",
+    "c": "int findMin(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMin(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findMin = function(nums) {\n    \n};",
+    "typescript": "function findMin(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findMin($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMin(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMin(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMin(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findMin(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_min(nums)\n    \nend",
+    "scala": "object Solution {\n    def findMin(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_min(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-min nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_min(Nums :: [integer()]) -> integer().\nfind_min(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_min(nums :: [integer]) :: integer\n  def find_min(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Valid Parentheses",
+  "problem_id": "20",
+  "frontend_id": "20",
+  "difficulty": "Easy",
+  "problem_slug": "valid-parentheses",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\nAn input string is valid if:\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nExample 5:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"()\"\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"()[]{}\"\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"(]\"\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"([])\"\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "Input: s = \"([)]\"\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of parentheses only '()[]{}'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a stack of characters.",
+    "When you encounter an opening bracket, push it to the top of the stack.",
+    "When you encounter a closing bracket, check if the top of the stack was the opening for it. If yes, pop it from the stack. Otherwise, return false."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isValid(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValid(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isValid(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isValid(self, s: str) -> bool:\n        ",
+    "c": "bool isValid(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsValid(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function(s) {\n    \n};",
+    "typescript": "function isValid(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function isValid($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isValid(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isValid(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isValid(String s) {\n    \n  }\n}",
+    "golang": "func isValid(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef is_valid(s)\n    \nend",
+    "scala": "object Solution {\n    def isValid(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_valid(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-valid s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_valid(S :: unicode:unicode_binary()) -> boolean().\nis_valid(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_valid(s :: String.t) :: boolean\n  def is_valid(s) do\n    \n  end\nend"
+  }
+}

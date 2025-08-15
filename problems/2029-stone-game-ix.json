@@ -1,0 +1,62 @@
+{
+  "title": "Stone Game IX",
+  "problem_id": "2156",
+  "frontend_id": "2029",
+  "difficulty": "Medium",
+  "problem_slug": "stone-game-ix",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Counting",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob continue their games with stones. There is a row of n stones, and each stone has an associated value. You are given an integer array stones, where stones[i] is the value of the ith stone.\nAlice and Bob take turns, with Alice starting first. On each turn, the player may remove any stone from stones. The player who removes a stone loses if the sum of the values of all removed stones is divisible by 3. Bob will win automatically if there are no remaining stones (even if it is Alice's turn).\nAssuming both players play optimally, return true if Alice wins and false if Bob wins.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [2,1]\nOutput: true\nExplanation: The game will be played as follows:\n- Turn 1: Alice can remove either stone.\n- Turn 2: Bob removes the remaining stone. \nThe sum of the removed stones is 1 + 2 = 3 and is divisible by 3. Therefore, Bob loses and Alice wins the game.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [2]\nOutput: false\nExplanation: Alice will remove the only stone, and the sum of the values on the removed stones is 2. \nSince all the stones are removed and the sum of values is not divisible by 3, Bob wins the game.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: stones = [5,1,2,4,3]\nOutput: false\nExplanation: Bob will always win. One possible way for Bob to win is shown below:\n- Turn 1: Alice can remove the second stone with value 1. Sum of removed stones = 1.\n- Turn 2: Bob removes the fifth stone with value 3. Sum of removed stones = 1 + 3 = 4.\n- Turn 3: Alices removes the fourth stone with value 4. Sum of removed stones = 1 + 3 + 4 = 8.\n- Turn 4: Bob removes the third stone with value 2. Sum of removed stones = 1 + 3 + 4 + 2 = 10.\n- Turn 5: Alice removes the first stone with value 5. Sum of removed stones = 1 + 3 + 4 + 2 + 5 = 15.\nAlice loses the game because the sum of the removed stones (15) is divisible by 3. Bob wins the game.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= stones.length <= 105",
+    "1 <= stones[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are limited outcomes given the current sum and the stones remaining.",
+    "Can we greedily simulate starting with taking a stone with remainder 1 or 2 divided by 3?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool stoneGameIX(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean stoneGameIX(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGameIX(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGameIX(self, stones: List[int]) -> bool:\n        ",
+    "c": "bool stoneGameIX(int* stones, int stonesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool StoneGameIX(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {boolean}\n */\nvar stoneGameIX = function(stones) {\n    \n};",
+    "typescript": "function stoneGameIX(stones: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Boolean\n     */\n    function stoneGameIX($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGameIX(_ stones: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGameIX(stones: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool stoneGameIX(List<int> stones) {\n    \n  }\n}",
+    "golang": "func stoneGameIX(stones []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Boolean}\ndef stone_game_ix(stones)\n    \nend",
+    "scala": "object Solution {\n    def stoneGameIX(stones: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game_ix(stones: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (stone-game-ix stones)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec stone_game_ix(Stones :: [integer()]) -> boolean().\nstone_game_ix(Stones) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec stone_game_ix(stones :: [integer]) :: boolean\n  def stone_game_ix(stones) do\n    \n  end\nend"
+  }
+}

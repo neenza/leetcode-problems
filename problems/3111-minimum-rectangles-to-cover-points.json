@@ -1,0 +1,65 @@
+{
+  "title": "Minimum Rectangles to Cover Points",
+  "problem_id": "3390",
+  "frontend_id": "3111",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-rectangles-to-cover-points",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 2D integer array points, where points[i] = [xi, yi]. You are also given an integer w. Your task is to cover all the given points with rectangles.\nEach rectangle has its lower end at some point (x1, 0) and its upper end at some point (x2, y2), where x1 <= x2, y2 >= 0, and the condition x2 - x1 <= w must be satisfied for each rectangle.\nA point is considered covered by a rectangle if it lies within or on the boundary of the rectangle.\nReturn an integer denoting the minimum number of rectangles needed so that each point is covered by at least one rectangle.\nNote: A point may be covered by more than one rectangle.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[2,1],[1,0],[1,4],[1,8],[3,5],[4,6]], w = 1\nOutput: 2\nExplanation:\nThe image above shows one possible placement of rectangles to cover the points:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6]], w = 2\nOutput: 3\nExplanation:\nThe image above shows one possible placement of rectangles to cover the points:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: points = [[2,3],[1,2]], w = 0\nOutput: 2\nExplanation:\nThe image above shows one possible placement of rectangles to cover the points:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 105",
+    "points[i].length == 2",
+    "0 <= xi == points[i][0] <= 109",
+    "0 <= yi == points[i][1] <= 109",
+    "0 <= w <= 109",
+    "All pairs (xi, yi) are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The <code>y</code> values don't matter; only the <code>x</code> values matter.",
+    "Sort all the points by <code>x<sub>i</sub></code>.",
+    "Each time, select the smallest <code>x</code> value, <code>x<sub>0</sub></code>, from the unselected points, and then select all the points with <code>x</code> values not larger than <code>x<sub>0</sub> + w</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minRectanglesToCoverPoints(vector<vector<int>>& points, int w) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minRectanglesToCoverPoints(int[][] points, int w) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minRectanglesToCoverPoints(self, points, w):\n        \"\"\"\n        :type points: List[List[int]]\n        :type w: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minRectanglesToCoverPoints(self, points: List[List[int]], w: int) -> int:\n        ",
+    "c": "int minRectanglesToCoverPoints(int** points, int pointsSize, int* pointsColSize, int w) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinRectanglesToCoverPoints(int[][] points, int w) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @param {number} w\n * @return {number}\n */\nvar minRectanglesToCoverPoints = function(points, w) {\n    \n};",
+    "typescript": "function minRectanglesToCoverPoints(points: number[][], w: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @param Integer $w\n     * @return Integer\n     */\n    function minRectanglesToCoverPoints($points, $w) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minRectanglesToCoverPoints(_ points: [[Int]], _ w: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minRectanglesToCoverPoints(points: Array<IntArray>, w: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minRectanglesToCoverPoints(List<List<int>> points, int w) {\n    \n  }\n}",
+    "golang": "func minRectanglesToCoverPoints(points [][]int, w int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @param {Integer} w\n# @return {Integer}\ndef min_rectangles_to_cover_points(points, w)\n    \nend",
+    "scala": "object Solution {\n    def minRectanglesToCoverPoints(points: Array[Array[Int]], w: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_rectangles_to_cover_points(points: Vec<Vec<i32>>, w: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-rectangles-to-cover-points points w)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_rectangles_to_cover_points(Points :: [[integer()]], W :: integer()) -> integer().\nmin_rectangles_to_cover_points(Points, W) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_rectangles_to_cover_points(points :: [[integer]], w :: integer) :: integer\n  def min_rectangles_to_cover_points(points, w) do\n    \n  end\nend"
+  }
+}

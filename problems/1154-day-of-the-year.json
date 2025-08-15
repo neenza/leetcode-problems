@@ -1,0 +1,54 @@
+{
+  "title": "Day of the Year",
+  "problem_id": "1260",
+  "frontend_id": "1154",
+  "difficulty": "Easy",
+  "problem_slug": "day-of-the-year",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: date = \"2019-01-09\"\nOutput: 9\nExplanation: Given date is the 9th day of the year in 2019.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: date = \"2019-02-10\"\nOutput: 41",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "date.length == 10",
+    "date[4] == date[7] == '-', and all other date[i]'s are digits",
+    "date represents a calendar date between Jan 1st, 1900 and Dec 31st, 2019."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Have a integer array of how many days there are per month.  February gets one extra day if its a leap year.  Then, we can manually count the ordinal as day + (number of days in months before this one)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int dayOfYear(string date) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int dayOfYear(String date) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def dayOfYear(self, date):\n        \"\"\"\n        :type date: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def dayOfYear(self, date: str) -> int:\n        ",
+    "c": "int dayOfYear(char* date) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DayOfYear(string date) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} date\n * @return {number}\n */\nvar dayOfYear = function(date) {\n    \n};",
+    "typescript": "function dayOfYear(date: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $date\n     * @return Integer\n     */\n    function dayOfYear($date) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func dayOfYear(_ date: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun dayOfYear(date: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int dayOfYear(String date) {\n    \n  }\n}",
+    "golang": "func dayOfYear(date string) int {\n    \n}",
+    "ruby": "# @param {String} date\n# @return {Integer}\ndef day_of_year(date)\n    \nend",
+    "scala": "object Solution {\n    def dayOfYear(date: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn day_of_year(date: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (day-of-year date)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec day_of_year(Date :: unicode:unicode_binary()) -> integer().\nday_of_year(Date) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec day_of_year(date :: String.t) :: integer\n  def day_of_year(date) do\n    \n  end\nend"
+  }
+}

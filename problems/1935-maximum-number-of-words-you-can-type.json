@@ -1,0 +1,62 @@
+{
+  "title": "Maximum Number of Words You Can Type",
+  "problem_id": "1264",
+  "frontend_id": "1935",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-number-of-words-you-can-type",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "There is a malfunctioning keyboard where some letter keys do not work. All other keys on the keyboard work properly.\nGiven a string text of words separated by a single space (no leading or trailing spaces) and a string brokenLetters of all distinct letter keys that are broken, return the number of words in text you can fully type using this keyboard.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"hello world\", brokenLetters = \"ad\"\nOutput: 1\nExplanation: We cannot type \"world\" because the 'd' key is broken.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"leet code\", brokenLetters = \"lt\"\nOutput: 1\nExplanation: We cannot type \"leet\" because the 'l' and 't' keys are broken.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: text = \"leet code\", brokenLetters = \"e\"\nOutput: 0\nExplanation: We cannot type either word because the 'e' key is broken.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 104",
+    "0 <= brokenLetters.length <= 26",
+    "text consists of words separated by a single space without any leading or trailing spaces.",
+    "Each word only consists of lowercase English letters.",
+    "brokenLetters consists of distinct lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check each word separately if it can be typed.",
+    "A word can be typed if all its letters are not broken."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int canBeTypedWords(string text, string brokenLetters) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int canBeTypedWords(String text, String brokenLetters) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canBeTypedWords(self, text, brokenLetters):\n        \"\"\"\n        :type text: str\n        :type brokenLetters: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:\n        ",
+    "c": "int canBeTypedWords(char* text, char* brokenLetters) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CanBeTypedWords(string text, string brokenLetters) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @param {string} brokenLetters\n * @return {number}\n */\nvar canBeTypedWords = function(text, brokenLetters) {\n    \n};",
+    "typescript": "function canBeTypedWords(text: string, brokenLetters: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @param String $brokenLetters\n     * @return Integer\n     */\n    function canBeTypedWords($text, $brokenLetters) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canBeTypedWords(_ text: String, _ brokenLetters: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canBeTypedWords(text: String, brokenLetters: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int canBeTypedWords(String text, String brokenLetters) {\n    \n  }\n}",
+    "golang": "func canBeTypedWords(text string, brokenLetters string) int {\n    \n}",
+    "ruby": "# @param {String} text\n# @param {String} broken_letters\n# @return {Integer}\ndef can_be_typed_words(text, broken_letters)\n    \nend",
+    "scala": "object Solution {\n    def canBeTypedWords(text: String, brokenLetters: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_be_typed_words(text: String, broken_letters: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (can-be-typed-words text brokenLetters)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec can_be_typed_words(Text :: unicode:unicode_binary(), BrokenLetters :: unicode:unicode_binary()) -> integer().\ncan_be_typed_words(Text, BrokenLetters) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_be_typed_words(text :: String.t, broken_letters :: String.t) :: integer\n  def can_be_typed_words(text, broken_letters) do\n    \n  end\nend"
+  }
+}

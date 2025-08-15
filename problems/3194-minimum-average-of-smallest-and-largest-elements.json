@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Average of Smallest and Largest Elements",
+  "problem_id": "3471",
+  "frontend_id": "3194",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-average-of-smallest-and-largest-elements",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "description": "You have an array of floating point numbers averages which is initially empty. You are given an array nums of n integers where n is even.\nYou repeat the following procedure n / 2 times:\nReturn the minimum element in averages.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,8,3,4,15,13,4,1]\nOutput: 5.5\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,9,8,3,10,5]\nOutput: 5.5\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,7,8,9]\nOutput: 5.0\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 50",
+    "n is even.",
+    "1 <= nums[i] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If <code>nums</code> is sorted, then the elements of <code>averages</code> are <code>(nums[i] + nums[n - i - 1]) / 2</code>  for all <code>i < n / 2</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double minimumAverage(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double minimumAverage(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumAverage(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumAverage(self, nums: List[int]) -> float:\n        ",
+    "c": "double minimumAverage(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public double MinimumAverage(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumAverage = function(nums) {\n    \n};",
+    "typescript": "function minimumAverage(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Float\n     */\n    function minimumAverage($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumAverage(_ nums: [Int]) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumAverage(nums: IntArray): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double minimumAverage(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumAverage(nums []int) float64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Float}\ndef minimum_average(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumAverage(nums: Array[Int]): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_average(nums: Vec<i32>) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-average nums)\n  (-> (listof exact-integer?) flonum?)\n  )",
+    "erlang": "-spec minimum_average(Nums :: [integer()]) -> float().\nminimum_average(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_average(nums :: [integer]) :: float\n  def minimum_average(nums) do\n    \n  end\nend"
+  }
+}

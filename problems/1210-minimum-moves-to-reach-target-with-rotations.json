@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Moves to Reach Target with Rotations",
+  "problem_id": "1322",
+  "frontend_id": "1210",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-moves-to-reach-target-with-rotations",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "In an n*n grid, there is a snake that spans 2 cells and starts moving from the top left corner at (0, 0) and (0, 1). The grid has empty cells represented by zeros and blocked cells represented by ones. The snake wants to reach the lower right corner at (n-1, n-2) and (n-1, n-1).\nIn one move the snake can:\nReturn the minimum number of moves to reach the target.\nIf there is no way to reach the target, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,0,0,0,0,1],\n               [1,1,0,0,1,0],\n               [0,0,0,0,1,1],\n               [0,0,1,0,1,0],\n               [0,1,1,0,0,0],\n               [0,1,1,0,0,0]]\nOutput: 11\nExplanation:\nOne possible solution is [right, right, rotate clockwise, right, down, down, down, down, rotate counterclockwise, right, down].",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/24/image.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,0,1,1,1,1],\n               [0,0,0,0,1,1],\n               [1,1,0,0,0,1],\n               [1,1,1,0,0,1],\n               [1,1,1,0,0,1],\n               [1,1,1,0,0,0]]\nOutput: 9",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/24/image.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 100",
+    "0 <= grid[i][j] <= 1",
+    "It is guaranteed that the snake starts at empty cells."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use BFS to find the answer.",
+    "The state of the BFS is the position (x, y) along with a binary value that specifies if the position is horizontal or vertical."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumMoves(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumMoves(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumMoves(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumMoves(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "\n\nint minimumMoves(int** grid, int gridSize, int* gridColSize){\n\n}",
+    "csharp": "public class Solution {\n    public int MinimumMoves(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumMoves = function(grid) {\n    \n};",
+    "typescript": "function minimumMoves(grid: number[][]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumMoves($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumMoves(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumMoves(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "golang": "func minimumMoves(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_moves(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumMoves(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_moves(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
+  }
+}

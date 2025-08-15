@@ -1,0 +1,62 @@
+{
+  "title": "Ugly Number III",
+  "problem_id": "1307",
+  "frontend_id": "1201",
+  "difficulty": "Medium",
+  "problem_slug": "ugly-number-iii",
+  "topics": [
+    "Math",
+    "Binary Search",
+    "Combinatorics",
+    "Number Theory"
+  ],
+  "description": "An ugly number is a positive integer that is divisible by a, b, or c.\nGiven four integers n, a, b, and c, return the nth ugly number.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, a = 2, b = 3, c = 5\nOutput: 4\nExplanation: The ugly numbers are 2, 3, 4, 5, 6, 8, 9, 10... The 3rd is 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, a = 2, b = 3, c = 4\nOutput: 6\nExplanation: The ugly numbers are 2, 3, 4, 6, 8, 9, 10, 12... The 4th is 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, a = 2, b = 11, c = 13\nOutput: 10\nExplanation: The ugly numbers are 2, 4, 6, 8, 10, 11, 12, 13... The 5th is 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, a, b, c <= 109",
+    "1 <= a * b * c <= 1018",
+    "It is guaranteed that the result will be in range [1, 2 * 109]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Write a function f(k) to determine how many ugly numbers smaller than k. As f(k) is non-decreasing, try binary search.",
+    "Find all ugly numbers in [1, LCM(a, b, c)] (LCM is Least Common Multiple). Use inclusion-exclusion principle to expand the result."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int nthUglyNumber(int n, int a, int b, int c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nthUglyNumber(int n, int a, int b, int c) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nthUglyNumber(self, n, a, b, c):\n        \"\"\"\n        :type n: int\n        :type a: int\n        :type b: int\n        :type c: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nthUglyNumber(self, n: int, a: int, b: int, c: int) -> int:\n        ",
+    "c": "int nthUglyNumber(int n, int a, int b, int c) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NthUglyNumber(int n, int a, int b, int c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} a\n * @param {number} b\n * @param {number} c\n * @return {number}\n */\nvar nthUglyNumber = function(n, a, b, c) {\n    \n};",
+    "typescript": "function nthUglyNumber(n: number, a: number, b: number, c: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $a\n     * @param Integer $b\n     * @param Integer $c\n     * @return Integer\n     */\n    function nthUglyNumber($n, $a, $b, $c) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nthUglyNumber(_ n: Int, _ a: Int, _ b: Int, _ c: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nthUglyNumber(n: Int, a: Int, b: Int, c: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int nthUglyNumber(int n, int a, int b, int c) {\n    \n  }\n}",
+    "golang": "func nthUglyNumber(n int, a int, b int, c int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} a\n# @param {Integer} b\n# @param {Integer} c\n# @return {Integer}\ndef nth_ugly_number(n, a, b, c)\n    \nend",
+    "scala": "object Solution {\n    def nthUglyNumber(n: Int, a: Int, b: Int, c: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn nth_ugly_number(n: i32, a: i32, b: i32, c: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (nth-ugly-number n a b c)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec nth_ugly_number(N :: integer(), A :: integer(), B :: integer(), C :: integer()) -> integer().\nnth_ugly_number(N, A, B, C) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec nth_ugly_number(n :: integer, a :: integer, b :: integer, c :: integer) :: integer\n  def nth_ugly_number(n, a, b, c) do\n    \n  end\nend"
+  }
+}

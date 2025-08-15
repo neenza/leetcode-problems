@@ -1,0 +1,57 @@
+{
+  "title": "Rectangle Area",
+  "problem_id": "223",
+  "frontend_id": "223",
+  "difficulty": "Medium",
+  "problem_slug": "rectangle-area",
+  "topics": [
+    "Math",
+    "Geometry"
+  ],
+  "description": "Given the coordinates of two rectilinear rectangles in a 2D plane, return the total area covered by the two rectangles.\nThe first rectangle is defined by its bottom-left corner (ax1, ay1) and its top-right corner (ax2, ay2).\nThe second rectangle is defined by its bottom-left corner (bx1, by1) and its top-right corner (bx2, by2).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ax1 = -3, ay1 = 0, ax2 = 3, ay2 = 4, bx1 = 0, by1 = -1, bx2 = 9, by2 = 2\nOutput: 45",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/08/rectangle-plane.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ax1 = -2, ay1 = -2, ax2 = 2, ay2 = 2, bx1 = -2, by1 = -2, bx2 = 2, by2 = 2\nOutput: 16",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/08/rectangle-plane.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "-104 <= ax1 <= ax2 <= 104",
+    "-104 <= ay1 <= ay2 <= 104",
+    "-104 <= bx1 <= bx2 <= 104",
+    "-104 <= by1 <= by2 <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def computeArea(self, ax1, ay1, ax2, ay2, bx1, by1, bx2, by2):\n        \"\"\"\n        :type ax1: int\n        :type ay1: int\n        :type ax2: int\n        :type ay2: int\n        :type bx1: int\n        :type by1: int\n        :type bx2: int\n        :type by2: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def computeArea(self, ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int) -> int:\n        ",
+    "c": "int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ComputeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} ax1\n * @param {number} ay1\n * @param {number} ax2\n * @param {number} ay2\n * @param {number} bx1\n * @param {number} by1\n * @param {number} bx2\n * @param {number} by2\n * @return {number}\n */\nvar computeArea = function(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) {\n    \n};",
+    "typescript": "function computeArea(ax1: number, ay1: number, ax2: number, ay2: number, bx1: number, by1: number, bx2: number, by2: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $ax1\n     * @param Integer $ay1\n     * @param Integer $ax2\n     * @param Integer $ay2\n     * @param Integer $bx1\n     * @param Integer $by1\n     * @param Integer $bx2\n     * @param Integer $by2\n     * @return Integer\n     */\n    function computeArea($ax1, $ay1, $ax2, $ay2, $bx1, $by1, $bx2, $by2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func computeArea(_ ax1: Int, _ ay1: Int, _ ax2: Int, _ ay2: Int, _ bx1: Int, _ by1: Int, _ bx2: Int, _ by2: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun computeArea(ax1: Int, ay1: Int, ax2: Int, ay2: Int, bx1: Int, by1: Int, bx2: Int, by2: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {\n    \n  }\n}",
+    "golang": "func computeArea(ax1 int, ay1 int, ax2 int, ay2 int, bx1 int, by1 int, bx2 int, by2 int) int {\n    \n}",
+    "ruby": "# @param {Integer} ax1\n# @param {Integer} ay1\n# @param {Integer} ax2\n# @param {Integer} ay2\n# @param {Integer} bx1\n# @param {Integer} by1\n# @param {Integer} bx2\n# @param {Integer} by2\n# @return {Integer}\ndef compute_area(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2)\n    \nend",
+    "scala": "object Solution {\n    def computeArea(ax1: Int, ay1: Int, ax2: Int, ay2: Int, bx1: Int, by1: Int, bx2: Int, by2: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn compute_area(ax1: i32, ay1: i32, ax2: i32, ay2: i32, bx1: i32, by1: i32, bx2: i32, by2: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (compute-area ax1 ay1 ax2 ay2 bx1 by1 bx2 by2)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec compute_area(Ax1 :: integer(), Ay1 :: integer(), Ax2 :: integer(), Ay2 :: integer(), Bx1 :: integer(), By1 :: integer(), Bx2 :: integer(), By2 :: integer()) -> integer().\ncompute_area(Ax1, Ay1, Ax2, Ay2, Bx1, By1, Bx2, By2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec compute_area(ax1 :: integer, ay1 :: integer, ax2 :: integer, ay2 :: integer, bx1 :: integer, by1 :: integer, bx2 :: integer, by2 :: integer) :: integer\n  def compute_area(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) do\n    \n  end\nend"
+  }
+}

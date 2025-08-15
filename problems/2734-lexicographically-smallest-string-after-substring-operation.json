@@ -1,0 +1,64 @@
+{
+  "title": "Lexicographically Smallest String After Substring Operation",
+  "problem_id": "2828",
+  "frontend_id": "2734",
+  "difficulty": "Medium",
+  "problem_slug": "lexicographically-smallest-string-after-substring-operation",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "Given a string s consisting of lowercase English letters. Perform the following operation:\nReturn the lexicographically smallest string after performing the operation.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"cbabc\"\nOutput: \"baabc\"\nExplanation:\nPerform the operation on the substring starting at index 0, and ending at index 1 inclusive.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aa\"\nOutput: \"az\"\nExplanation:\nPerform the operation on the last letter.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"acbbc\"\nOutput: \"abaab\"\nExplanation:\nPerform the operation on the substring starting at index 1, and ending at index 4 inclusive.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"leetcode\"\nOutput: \"kddsbncd\"\nExplanation:\nPerform the operation on the entire string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 3 * 105",
+    "s consists of lowercase English letters"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "When a character is replaced by the one that comes before it on the alphabet, it makes the string lexicographically smaller, except for ‘a'.",
+    "Find the leftmost substring that doesn’t contain the character 'a' and change all characters in it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestString(self, s: str) -> str:\n        ",
+    "c": "char* smallestString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar smallestString = function(s) {\n    \n};",
+    "typescript": "function smallestString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function smallestString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestString(String s) {\n    \n  }\n}",
+    "golang": "func smallestString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef smallest_string(s)\n    \nend",
+    "scala": "object Solution {\n    def smallestString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec smallest_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_string(s :: String.t) :: String.t\n  def smallest_string(s) do\n    \n  end\nend"
+  }
+}

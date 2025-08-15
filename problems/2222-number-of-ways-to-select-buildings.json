@@ -1,0 +1,57 @@
+{
+  "title": "Number of Ways to Select Buildings",
+  "problem_id": "2325",
+  "frontend_id": "2222",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-ways-to-select-buildings",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed binary string s which represents the types of buildings along a street where:\nAs a city official, you would like to select 3 buildings for random inspection. However, to ensure variety, no two consecutive buildings out of the selected buildings can be of the same type.\nReturn the number of valid ways to select 3 buildings.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"001101\"\nOutput: 6\nExplanation: \nThe following sets of indices selected are valid:\n- [0,2,4] from \"001101\" forms \"010\"\n- [0,3,4] from \"001101\" forms \"010\"\n- [1,2,4] from \"001101\" forms \"010\"\n- [1,3,4] from \"001101\" forms \"010\"\n- [2,4,5] from \"001101\" forms \"101\"\n- [3,4,5] from \"001101\" forms \"101\"\nNo other selection is valid. Thus, there are 6 total ways.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"11100\"\nOutput: 0\nExplanation: It can be shown that there are no valid selections.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are only 2 valid patterns: ‘101’ and ‘010’. Think about how we can construct these 2 patterns from smaller patterns.",
+    "Count the number of subsequences of the form ‘01’ or ‘10’ first. Let n01[i] be the number of ‘01’ subsequences that exist in the prefix of s up to the ith building. How can you compute n01[i]?",
+    "Let n0[i] and n1[i] be the number of ‘0’s and ‘1’s that exists in the prefix of s up to i respectively. Then n01[i] = n01[i – 1] if s[i] == ‘0’, otherwise n01[i] = n01[i – 1] + n0[i – 1].",
+    "The same logic applies to building the n10 array and subsequently the n101 and n010 arrays for the number of ‘101’ and ‘010‘ subsequences."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numberOfWays(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfWays(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWays(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWays(self, s: str) -> int:\n        ",
+    "c": "long long numberOfWays(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumberOfWays(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numberOfWays = function(s) {\n    \n};",
+    "typescript": "function numberOfWays(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numberOfWays($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWays(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWays(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWays(String s) {\n    \n  }\n}",
+    "golang": "func numberOfWays(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef number_of_ways(s)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWays(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_ways(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-ways s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec number_of_ways(S :: unicode:unicode_binary()) -> integer().\nnumber_of_ways(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_ways(s :: String.t) :: integer\n  def number_of_ways(s) do\n    \n  end\nend"
+  }
+}

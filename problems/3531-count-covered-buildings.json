@@ -1,0 +1,63 @@
+{
+  "title": "Count Covered Buildings",
+  "problem_id": "3819",
+  "frontend_id": "3531",
+  "difficulty": "Medium",
+  "problem_slug": "count-covered-buildings",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
+  "description": "You are given a positive integer n, representing an n x n city. You are also given a 2D grid buildings, where buildings[i] = [x, y] denotes a unique building located at coordinates [x, y].\nA building is covered if there is at least one building in all four directions: left, right, above, and below.\nReturn the number of covered buildings.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, buildings = [[1,2],[2,2],[3,2],[2,1],[2,3]]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, buildings = [[1,1],[1,2],[2,1],[2,2]]\nOutput: 0\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, buildings = [[1,3],[3,2],[3,3],[3,5],[5,3]]\nOutput: 1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= buildings.length <= 105",
+    "buildings[i] = [x, y]",
+    "1 <= x, y <= n",
+    "All coordinates of buildings are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Group buildings with the same x or y value together, and sort each group.",
+    "In each sorted list, the buildings that are not at the first or last positions are covered in that direction."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countCoveredBuildings(int n, vector<vector<int>>& buildings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCoveredBuildings(int n, int[][] buildings) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCoveredBuildings(self, n, buildings):\n        \"\"\"\n        :type n: int\n        :type buildings: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCoveredBuildings(self, n: int, buildings: List[List[int]]) -> int:\n        ",
+    "c": "int countCoveredBuildings(int n, int** buildings, int buildingsSize, int* buildingsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountCoveredBuildings(int n, int[][] buildings) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} buildings\n * @return {number}\n */\nvar countCoveredBuildings = function(n, buildings) {\n    \n};",
+    "typescript": "function countCoveredBuildings(n: number, buildings: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $buildings\n     * @return Integer\n     */\n    function countCoveredBuildings($n, $buildings) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCoveredBuildings(_ n: Int, _ buildings: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCoveredBuildings(n: Int, buildings: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCoveredBuildings(int n, List<List<int>> buildings) {\n    \n  }\n}",
+    "golang": "func countCoveredBuildings(n int, buildings [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} buildings\n# @return {Integer}\ndef count_covered_buildings(n, buildings)\n    \nend",
+    "scala": "object Solution {\n    def countCoveredBuildings(n: Int, buildings: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_covered_buildings(n: i32, buildings: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-covered-buildings n buildings)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec count_covered_buildings(N :: integer(), Buildings :: [[integer()]]) -> integer().\ncount_covered_buildings(N, Buildings) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_covered_buildings(n :: integer, buildings :: [[integer]]) :: integer\n  def count_covered_buildings(n, buildings) do\n    \n  end\nend"
+  }
+}

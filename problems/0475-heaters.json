@@ -1,0 +1,58 @@
+{
+  "title": "Heaters",
+  "problem_id": "475",
+  "frontend_id": "475",
+  "difficulty": "Medium",
+  "problem_slug": "heaters",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "Winter is coming! During the contest, your first job is to design a standard heater with a fixed warm radius to warm all the houses.\nEvery house can be warmed, as long as the house is within the heater's warm radius range.\nGiven the positions of houses and heaters on a horizontal line, return the minimum radius standard of heaters so that those heaters could cover all houses.\nNotice that all the heaters follow your radius standard, and the warm radius will the same.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: houses = [1,2,3], heaters = [2]\nOutput: 1\nExplanation: The only heater was placed in the position 2, and if we use the radius 1 standard, then all the houses can be warmed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: houses = [1,2,3,4], heaters = [1,4]\nOutput: 1\nExplanation: The two heaters were placed at positions 1 and 4. We need to use a radius 1 standard, then all the houses can be warmed.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: houses = [1,5], heaters = [2]\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= houses.length, heaters.length <= 3 * 104",
+    "1 <= houses[i], heaters[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findRadius(vector<int>& houses, vector<int>& heaters) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findRadius(int[] houses, int[] heaters) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findRadius(self, houses, heaters):\n        \"\"\"\n        :type houses: List[int]\n        :type heaters: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findRadius(self, houses: List[int], heaters: List[int]) -> int:\n        ",
+    "c": "int findRadius(int* houses, int housesSize, int* heaters, int heatersSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindRadius(int[] houses, int[] heaters) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} houses\n * @param {number[]} heaters\n * @return {number}\n */\nvar findRadius = function(houses, heaters) {\n    \n};",
+    "typescript": "function findRadius(houses: number[], heaters: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $houses\n     * @param Integer[] $heaters\n     * @return Integer\n     */\n    function findRadius($houses, $heaters) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findRadius(_ houses: [Int], _ heaters: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findRadius(houses: IntArray, heaters: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findRadius(List<int> houses, List<int> heaters) {\n    \n  }\n}",
+    "golang": "func findRadius(houses []int, heaters []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} houses\n# @param {Integer[]} heaters\n# @return {Integer}\ndef find_radius(houses, heaters)\n    \nend",
+    "scala": "object Solution {\n    def findRadius(houses: Array[Int], heaters: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_radius(houses: Vec<i32>, heaters: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-radius houses heaters)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_radius(Houses :: [integer()], Heaters :: [integer()]) -> integer().\nfind_radius(Houses, Heaters) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_radius(houses :: [integer], heaters :: [integer]) :: integer\n  def find_radius(houses, heaters) do\n    \n  end\nend"
+  }
+}

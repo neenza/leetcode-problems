@@ -1,0 +1,66 @@
+{
+  "title": "Process Restricted Friend Requests",
+  "problem_id": "2198",
+  "frontend_id": "2076",
+  "difficulty": "Hard",
+  "problem_slug": "process-restricted-friend-requests",
+  "topics": [
+    "Union Find",
+    "Graph"
+  ],
+  "description": "You are given an integer n indicating the number of people in a network. Each person is labeled from 0 to n - 1.\nYou are also given a 0-indexed 2D integer array restrictions, where restrictions[i] = [xi, yi] means that person xi and person yi cannot become friends, either directly or indirectly through other people.\nInitially, no one is friends with each other. You are given a list of friend requests as a 0-indexed 2D integer array requests, where requests[j] = [uj, vj] is a friend request between person uj and person vj.\nA friend request is successful if uj and vj can be friends. Each friend request is processed in the given order (i.e., requests[j] occurs before requests[j + 1]), and upon a successful request, uj and vj become direct friends for all future friend requests.\nReturn a boolean array result, where each result[j] is true if the jth friend request is successful or false if it is not.\nNote: If uj and vj are already direct friends, the request is still successful.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, restrictions = [[0,1]], requests = [[0,2],[2,1]]\nOutput: [true,false]\nExplanation:\nRequest 0: Person 0 and person 2 can be friends, so they become direct friends. \nRequest 1: Person 2 and person 1 cannot be friends since person 0 and person 1 would be indirect friends (1--2--0).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, restrictions = [[0,1]], requests = [[1,2],[0,2]]\nOutput: [true,false]\nExplanation:\nRequest 0: Person 1 and person 2 can be friends, so they become direct friends.\nRequest 1: Person 0 and person 2 cannot be friends since person 0 and person 1 would be indirect friends (0--2--1).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, restrictions = [[0,1],[1,2],[2,3]], requests = [[0,4],[1,2],[3,1],[3,4]]\nOutput: [true,false,true,false]\nExplanation:\nRequest 0: Person 0 and person 4 can be friends, so they become direct friends.\nRequest 1: Person 1 and person 2 cannot be friends since they are directly restricted.\nRequest 2: Person 3 and person 1 can be friends, so they become direct friends.\nRequest 3: Person 3 and person 4 cannot be friends since person 0 and person 1 would be indirect friends (0--4--3--1).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "0 <= restrictions.length <= 1000",
+    "restrictions[i].length == 2",
+    "0 <= xi, yi <= n - 1",
+    "xi != yi",
+    "1 <= requests.length <= 1000",
+    "requests[j].length == 2",
+    "0 <= uj, vj <= n - 1",
+    "uj != vj"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each request, we could loop through all restrictions. Can you think of doing a check-in close to O(1)?",
+    "Could you use Union Find?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> friendRequests(int n, vector<vector<int>>& restrictions, vector<vector<int>>& requests) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean[] friendRequests(int n, int[][] restrictions, int[][] requests) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def friendRequests(self, n, restrictions, requests):\n        \"\"\"\n        :type n: int\n        :type restrictions: List[List[int]]\n        :type requests: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def friendRequests(self, n: int, restrictions: List[List[int]], requests: List[List[int]]) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* friendRequests(int n, int** restrictions, int restrictionsSize, int* restrictionsColSize, int** requests, int requestsSize, int* requestsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool[] FriendRequests(int n, int[][] restrictions, int[][] requests) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} restrictions\n * @param {number[][]} requests\n * @return {boolean[]}\n */\nvar friendRequests = function(n, restrictions, requests) {\n    \n};",
+    "typescript": "function friendRequests(n: number, restrictions: number[][], requests: number[][]): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $restrictions\n     * @param Integer[][] $requests\n     * @return Boolean[]\n     */\n    function friendRequests($n, $restrictions, $requests) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func friendRequests(_ n: Int, _ restrictions: [[Int]], _ requests: [[Int]]) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun friendRequests(n: Int, restrictions: Array<IntArray>, requests: Array<IntArray>): BooleanArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> friendRequests(int n, List<List<int>> restrictions, List<List<int>> requests) {\n    \n  }\n}",
+    "golang": "func friendRequests(n int, restrictions [][]int, requests [][]int) []bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} restrictions\n# @param {Integer[][]} requests\n# @return {Boolean[]}\ndef friend_requests(n, restrictions, requests)\n    \nend",
+    "scala": "object Solution {\n    def friendRequests(n: Int, restrictions: Array[Array[Int]], requests: Array[Array[Int]]): Array[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn friend_requests(n: i32, restrictions: Vec<Vec<i32>>, requests: Vec<Vec<i32>>) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (friend-requests n restrictions requests)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof boolean?))\n  )",
+    "erlang": "-spec friend_requests(N :: integer(), Restrictions :: [[integer()]], Requests :: [[integer()]]) -> [boolean()].\nfriend_requests(N, Restrictions, Requests) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec friend_requests(n :: integer, restrictions :: [[integer]], requests :: [[integer]]) :: [boolean]\n  def friend_requests(n, restrictions, requests) do\n    \n  end\nend"
+  }
+}

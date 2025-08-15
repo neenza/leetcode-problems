@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Number of Coins to be Added",
+  "problem_id": "3231",
+  "frontend_id": "2952",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-coins-to-be-added",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array coins, representing the values of the coins available, and an integer target.\nAn integer x is obtainable if there exists a subsequence of coins that sums to x.\nReturn the minimum number of coins of any value that need to be added to the array so that every integer in the range [1, target] is obtainable.\nA subsequence of an array is a new non-empty array that is formed from the original array by deleting some (possibly none) of the elements without disturbing the relative positions of the remaining elements.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coins = [1,4,10], target = 19\nOutput: 2\nExplanation: We need to add coins 2 and 8. The resulting array will be [1,2,4,8,10].\nIt can be shown that all integers from 1 to 19 are obtainable from the resulting array, and that 2 is the minimum number of coins that need to be added to the array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coins = [1,4,10,5,7,19], target = 19\nOutput: 1\nExplanation: We only need to add the coin 2. The resulting array will be [1,2,4,5,7,10,19].\nIt can be shown that all integers from 1 to 19 are obtainable from the resulting array, and that 1 is the minimum number of coins that need to be added to the array.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: coins = [1,1,1], target = 20\nOutput: 3\nExplanation: We need to add coins 4, 8, and 16. The resulting array will be [1,1,1,4,8,16].\nIt can be shown that all integers from 1 to 20 are obtainable from the resulting array, and that 3 is the minimum number of coins that need to be added to the array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= target <= 105",
+    "1 <= coins.length <= 105",
+    "1 <= coins[i] <= target"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the coins array and maintain the smallest sum that is unobtainable by induction.",
+    "If we don’t use any coins, the smallest integer that we cannot obtain by sum is <code>1</code>. Suppose currently, for a fixed set of the first several coins the smallest integer that we cannot obtain is <code>x + 1</code>, namely we can form all integers in the range <code>[1, x]</code> but not <code>x + 1</code>.",
+    "If the next unused coin’s value is NOT <code>x + 1</code> (note the array is sorted), we have to add <code>x + 1</code> to the array. After this addition, we can form all values from <code>x + 1</code> to <code>2 * x + 1</code> by adding <code>x + 1</code> in <code>[1, x]</code>'s formations. So now we can form all the numbers of <code>[1, 2 * x + 1]</code>. After this iteration the new value of <code>x</code> becomes <code>2 * x + 1</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumAddedCoins(vector<int>& coins, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumAddedCoins(int[] coins, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumAddedCoins(self, coins, target):\n        \"\"\"\n        :type coins: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumAddedCoins(self, coins: List[int], target: int) -> int:\n        ",
+    "c": "int minimumAddedCoins(int* coins, int coinsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumAddedCoins(int[] coins, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} coins\n * @param {number} target\n * @return {number}\n */\nvar minimumAddedCoins = function(coins, target) {\n    \n};",
+    "typescript": "function minimumAddedCoins(coins: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $coins\n     * @param Integer $target\n     * @return Integer\n     */\n    function minimumAddedCoins($coins, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumAddedCoins(_ coins: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumAddedCoins(coins: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumAddedCoins(List<int> coins, int target) {\n    \n  }\n}",
+    "golang": "func minimumAddedCoins(coins []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} coins\n# @param {Integer} target\n# @return {Integer}\ndef minimum_added_coins(coins, target)\n    \nend",
+    "scala": "object Solution {\n    def minimumAddedCoins(coins: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_added_coins(coins: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-added-coins coins target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_added_coins(Coins :: [integer()], Target :: integer()) -> integer().\nminimum_added_coins(Coins, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_added_coins(coins :: [integer], target :: integer) :: integer\n  def minimum_added_coins(coins, target) do\n    \n  end\nend"
+  }
+}

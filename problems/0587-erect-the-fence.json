@@ -1,0 +1,58 @@
+{
+  "title": "Erect the Fence",
+  "problem_id": "587",
+  "frontend_id": "587",
+  "difficulty": "Hard",
+  "problem_slug": "erect-the-fence",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given an array trees where trees[i] = [xi, yi] represents the location of a tree in the garden.\nFence the entire garden using the minimum length of rope, as it is expensive. The garden is well-fenced only if all the trees are enclosed.\nReturn the coordinates of trees that are exactly located on the fence perimeter. You may return the answer in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: trees = [[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]\nOutput: [[1,1],[2,0],[4,2],[3,3],[2,4]]\nExplanation: All the trees will be on the perimeter of the fence except the tree at [2, 2], which will be inside the fence.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/erect2-plane.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: trees = [[1,2],[2,2],[4,2]]\nOutput: [[4,2],[2,2],[1,2]]\nExplanation: The fence forms a line that passes through all the trees.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/erect1-plane.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= trees.length <= 3000",
+    "trees[i].length == 2",
+    "0 <= xi, yi <= 100",
+    "All the given positions are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> outerTrees(vector<vector<int>>& trees) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] outerTrees(int[][] trees) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def outerTrees(self, trees):\n        \"\"\"\n        :type trees: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def outerTrees(self, trees: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** outerTrees(int** trees, int treesSize, int* treesColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] OuterTrees(int[][] trees) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} trees\n * @return {number[][]}\n */\nvar outerTrees = function(trees) {\n    \n};",
+    "typescript": "function outerTrees(trees: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $trees\n     * @return Integer[][]\n     */\n    function outerTrees($trees) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func outerTrees(_ trees: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun outerTrees(trees: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> outerTrees(List<List<int>> trees) {\n    \n  }\n}",
+    "golang": "func outerTrees(trees [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} trees\n# @return {Integer[][]}\ndef outer_trees(trees)\n    \nend",
+    "scala": "object Solution {\n    def outerTrees(trees: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn outer_trees(trees: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (outer-trees trees)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec outer_trees(Trees :: [[integer()]]) -> [[integer()]].\nouter_trees(Trees) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec outer_trees(trees :: [[integer]]) :: [[integer]]\n  def outer_trees(trees) do\n    \n  end\nend"
+  }
+}

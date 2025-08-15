@@ -1,0 +1,54 @@
+{
+  "title": "Ones and Zeroes",
+  "problem_id": "474",
+  "frontend_id": "474",
+  "difficulty": "Medium",
+  "problem_slug": "ones-and-zeroes",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array of binary strings strs and two integers m and n.\nReturn the size of the largest subset of strs such that there are at most m 0's and n 1's in the subset.\nA set x is a subset of a set y if all elements of x are also elements of y.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: strs = [\"10\",\"0001\",\"111001\",\"1\",\"0\"], m = 5, n = 3\nOutput: 4\nExplanation: The largest subset with at most 5 0's and 3 1's is {\"10\", \"0001\", \"1\", \"0\"}, so the answer is 4.\nOther valid but smaller subsets include {\"0001\", \"1\"} and {\"10\", \"1\", \"0\"}.\n{\"111001\"} is an invalid subset because it contains 4 1's, greater than the maximum of 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: strs = [\"10\",\"0\",\"1\"], m = 1, n = 1\nOutput: 2\nExplanation: The largest subset is {\"0\", \"1\"}, so the answer is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= strs.length <= 600",
+    "1 <= strs[i].length <= 100",
+    "strs[i] consists only of digits '0' and '1'.",
+    "1 <= m, n <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMaxForm(vector<string>& strs, int m, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMaxForm(String[] strs, int m, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMaxForm(self, strs, m, n):\n        \"\"\"\n        :type strs: List[str]\n        :type m: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:\n        ",
+    "c": "int findMaxForm(char** strs, int strsSize, int m, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMaxForm(string[] strs, int m, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar findMaxForm = function(strs, m, n) {\n    \n};",
+    "typescript": "function findMaxForm(strs: string[], m: number, n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @param Integer $m\n     * @param Integer $n\n     * @return Integer\n     */\n    function findMaxForm($strs, $m, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMaxForm(_ strs: [String], _ m: Int, _ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMaxForm(strs: Array<String>, m: Int, n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMaxForm(List<String> strs, int m, int n) {\n    \n  }\n}",
+    "golang": "func findMaxForm(strs []string, m int, n int) int {\n    \n}",
+    "ruby": "# @param {String[]} strs\n# @param {Integer} m\n# @param {Integer} n\n# @return {Integer}\ndef find_max_form(strs, m, n)\n    \nend",
+    "scala": "object Solution {\n    def findMaxForm(strs: Array[String], m: Int, n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_max_form(strs: Vec<String>, m: i32, n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-max-form strs m n)\n  (-> (listof string?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_max_form(Strs :: [unicode:unicode_binary()], M :: integer(), N :: integer()) -> integer().\nfind_max_form(Strs, M, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_max_form(strs :: [String.t], m :: integer, n :: integer) :: integer\n  def find_max_form(strs, m, n) do\n    \n  end\nend"
+  }
+}

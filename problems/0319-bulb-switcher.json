@@ -1,0 +1,62 @@
+{
+  "title": "Bulb Switcher",
+  "problem_id": "319",
+  "frontend_id": "319",
+  "difficulty": "Medium",
+  "problem_slug": "bulb-switcher",
+  "topics": [
+    "Math",
+    "Brainteaser"
+  ],
+  "description": "There are n bulbs that are initially off. You first turn on all the bulbs, then you turn off every second bulb.\nOn the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb.\nReturn the number of bulbs that are on after n rounds.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3\nOutput: 1\nExplanation: At first, the three bulbs are [off, off, off].\nAfter the first round, the three bulbs are [on, on, on].\nAfter the second round, the three bulbs are [on, off, on].\nAfter the third round, the three bulbs are [on, off, off]. \nSo you should return 1 because there is only one bulb is on.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/05/bulb.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 0\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/05/bulb.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 1\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/05/bulb.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int bulbSwitch(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bulbSwitch(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def bulbSwitch(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def bulbSwitch(self, n: int) -> int:\n        ",
+    "c": "int bulbSwitch(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BulbSwitch(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar bulbSwitch = function(n) {\n    \n};",
+    "typescript": "function bulbSwitch(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function bulbSwitch($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func bulbSwitch(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun bulbSwitch(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int bulbSwitch(int n) {\n    \n  }\n}",
+    "golang": "func bulbSwitch(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef bulb_switch(n)\n    \nend",
+    "scala": "object Solution {\n    def bulbSwitch(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn bulb_switch(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (bulb-switch n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec bulb_switch(N :: integer()) -> integer().\nbulb_switch(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec bulb_switch(n :: integer) :: integer\n  def bulb_switch(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n\n### Approach 1: Math\n\n#### Intuition\n\nThe idea behind this problem is to find the number of bulbs that are on after `n` rounds. In each round, we toggle some of the bulbs.  \n\nAs all the bulbs are initially off, at the end **only bulbs that are toggled an odd number of times will remain on**.    \nNow, whenever we are at a round `i` we know we toggle all bulbs having a factor `i`. Thus, we need to find the bulbs which have an odd number of factors, as those bulbs will be toggled an odd number of times (once by each factor).   \n\nIt might be unintuitive, but with a few examples, we can easily see that a perfect square number has an odd number of factors, since any number's factors come in pairs of two different numbers, but the square root of the number will be paired with itself.\n\n\nLet's take an example to make it more clear. Suppose `n = 10`.   \nSo, the number of rounds is `10`. In each round, we will toggle some of the bulbs.\n\n![slide1](../Figures/319/Slide.PNG)\n\nTrack of rounds in which each bulb is toggled:    \n- **Bulb 1:**   Round 1 **(odd number of toggles)**   \n- **Bulb 2:**   Round 1, Round 2   \n- **Bulb 3:**   Round 1, Round 3   \n- **Bulb 4:**   Round 1, Round 2, Round 4 **(odd number of toggles)**   \n- **Bulb 5:**   Round 1, Round 5   \n- **Bulb 6:**   Round 1, Round 2, Round 3, Round 6   \n- **Bulb 7:**   Round 1, Round 7   \n- **Bulb 8:**   Round 1, Round 2, Round 4, Round 8   \n- **Bulb 9:**   Round 1, Round 3, Round 9 **(odd number of toggles)**   \n- **Bulb 10:** Round 1, Round 2, Round 5, Round10   \n\nSo, the number of bulbs that are on after 10 rounds is 3: Bulb 1, Bulb 4, and Bulb 9.Now let's discuss, **why do perfect squares have odd and non-perfect squares have an even number of factors?**  \n\nA factor is a number that can be multiplied by another number to produce a given result. Say for `12`, `1, 2, 3, 4, 6, 12` all are its factors as any factor `x` can be paired with another factor `12 / x` and when multiplied together it will result in `12`.    \n  \nWhen we factorize a number `y`, say we have one factor `x`, then the other factor whose multiplication will result in the original number will be `y / x`.   \nNow comparing `x` and `y / x`, if `y` is a perfect square it means `y = a * a`, thus, here it is a possibility that `x` and `y / x` are same numbers, i.e. `a`.    \nBut if `y` is not a perfect square then for each `x` we will have a unique `y / x`, thus, it's factor pairs will always exist as two different numbers (e.g: for `12` -> `1 x 12`, `2 x 6`, `3 x 4`, (it has three factor pairs, so total `6` factors)), thus the total count of number of factors for non-perfect squares will be even,    \nand for perfect square, all other `x` and `y / x` factor pairs will be two different numbers except for one case, i.e. `a` and `a` (e.g: for `16` -> `1 x 16`, `2 x 8`, `4 x 4` (`4` is paired with itself, it has three factor pairs, but one pair has both numbers same, so total `5` factors)). Thus, it will have odd number of total factors.Thus we just need to find how many numbers from `1` to `n` are perfect squares.   \nWe can iterate on each number and check if it's a perfect square or not, (i.e. `floor(sqrt(i)) * floor(sqrt(i)) == i`)\n\nOr, we can directly find the square root of `n` and its floor value will be equal to the count of numbers whose squares exist in this range `1` to `n`. \n\nThe floor of the square root of `n` gives us the largest number whose square is less than or equal to `n`. For example, if `n = 26`, then the floor of square root of `n` is `5`, which means the largest number whose square is less than or equal to `26` is `5` thus for each number from `1` to `5`, its respective square will be present in the original range. So, there are `5` perfect squares in the range `1` to `25` `(1, 4, 9, 16, and 25)`. \n\nSo, taking the floor value of the square root of `n` will give us the number of perfect squares in the range `1` to `n`.     \nHence, `sqrt(n)` is our answer to this problem.\n\n> **Note:** You can also implement a function to find the square root of a number on your own, but here will use the in-built STL methods provided by each language.\n\n#### Algorithm\n\n1. Return the square root of `n`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $n$ is the number of bulbs and rounds.\n\n* Time complexity: $O(1)$          \n  - In general, the [fast inverse square root algorithm](https://en.wikipedia.org/wiki/Fast_inverse_square_root) is used to compute the square root of a number (which is typically represented using 32 bits) in most programming languages. The algorithm performs a series of bitwise and floating-point operations on the input value to compute an approximation of the inverse square root. The number of operations performed by the algorithm is fixed and does not depend on the input size. Thus, it makes each call to this method an $O(1)$ time operation.> Note: If we want to compute the square root of large numbers (e.g: 10^10000), it would be impractical to use the fast inverse square root algorithm. The fast inverse square root algorithm is designed to compute an approximation of the inverse square root of a 32-bit floating-point number, and it may not be accurate enough for very large numbers.\n  > \n  > Instead, the languages would need to use a different algorithm that is capable of handling very large numbers with high precision. The Newton-Raphson and Babylonina methods are such algorithms that can be used to compute the square root of large numbers with high precision in nearly log-linear time (also called linearithmic time) $O(d \\log d)$, where $d$ is the number of digits of the input number. \n\n* Space complexity: $O(1)$    \n  - The implementation of the `sqrt` method doesn't use any additional space."
+}

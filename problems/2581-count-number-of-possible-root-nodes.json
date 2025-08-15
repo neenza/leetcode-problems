@@ -1,0 +1,70 @@
+{
+  "title": "Count Number of Possible Root Nodes",
+  "problem_id": "2652",
+  "frontend_id": "2581",
+  "difficulty": "Hard",
+  "problem_slug": "count-number-of-possible-root-nodes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "Alice has an undirected tree with n nodes labeled from 0 to n - 1. The tree is represented as a 2D integer array edges of length n - 1 where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\nAlice wants Bob to find the root of the tree. She allows Bob to make several guesses about her tree. In one guess, he does the following:\nBob's guesses are represented by a 2D integer array guesses where guesses[j] = [uj, vj] indicates Bob guessed uj to be the parent of vj.\nAlice being lazy, does not reply to each of Bob's guesses, but just says that at least k of his guesses are true.\nGiven the 2D integer arrays edges, guesses and the integer k, return the number of possible nodes that can be the root of Alice's tree. If there is no such tree, return 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1],[1,2],[1,3],[4,2]], guesses = [[1,3],[0,1],[1,0],[2,4]], k = 3\nOutput: 3\nExplanation: \nRoot = 0, correct guesses = [1,3], [0,1], [2,4]\nRoot = 1, correct guesses = [1,3], [1,0], [2,4]\nRoot = 2, correct guesses = [1,3], [1,0], [2,4]\nRoot = 3, correct guesses = [1,0], [2,4]\nRoot = 4, correct guesses = [1,3], [1,0]\nConsidering 0, 1, or 2 as root node leads to 3 correct guesses.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/19/ex-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[0,1],[1,2],[2,3],[3,4]], guesses = [[1,0],[3,4],[2,1],[3,2]], k = 1\nOutput: 5\nExplanation: \nRoot = 0, correct guesses = [3,4]\nRoot = 1, correct guesses = [1,0], [3,4]\nRoot = 2, correct guesses = [1,0], [2,1], [3,4]\nRoot = 3, correct guesses = [1,0], [2,1], [3,2], [3,4]\nRoot = 4, correct guesses = [1,0], [2,1], [3,2]\nConsidering any node as root will give at least 1 correct guess.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/19/ex-2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "edges.length == n - 1",
+    "2 <= n <= 105",
+    "1 <= guesses.length <= 105",
+    "0 <= ai, bi, uj, vj <= n - 1",
+    "ai != bi",
+    "uj != vj",
+    "edges represents a valid tree.",
+    "guesses[j] is an edge of the tree.",
+    "guesses is unique.",
+    "0 <= k <= guesses.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can we check if any node can be the root?",
+    "Can we use this information to check its neighboring nodes?",
+    "When we traverse from current node to a neighboring node, how will we update our answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int rootCount(vector<vector<int>>& edges, vector<vector<int>>& guesses, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rootCount(int[][] edges, int[][] guesses, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rootCount(self, edges, guesses, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type guesses: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rootCount(self, edges: List[List[int]], guesses: List[List[int]], k: int) -> int:\n        ",
+    "c": "int rootCount(int** edges, int edgesSize, int* edgesColSize, int** guesses, int guessesSize, int* guessesColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RootCount(int[][] edges, int[][] guesses, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[][]} guesses\n * @param {number} k\n * @return {number}\n */\nvar rootCount = function(edges, guesses, k) {\n    \n};",
+    "typescript": "function rootCount(edges: number[][], guesses: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer[][] $guesses\n     * @param Integer $k\n     * @return Integer\n     */\n    function rootCount($edges, $guesses, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rootCount(_ edges: [[Int]], _ guesses: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rootCount(edges: Array<IntArray>, guesses: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int rootCount(List<List<int>> edges, List<List<int>> guesses, int k) {\n    \n  }\n}",
+    "golang": "func rootCount(edges [][]int, guesses [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer[][]} guesses\n# @param {Integer} k\n# @return {Integer}\ndef root_count(edges, guesses, k)\n    \nend",
+    "scala": "object Solution {\n    def rootCount(edges: Array[Array[Int]], guesses: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn root_count(edges: Vec<Vec<i32>>, guesses: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (root-count edges guesses k)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec root_count(Edges :: [[integer()]], Guesses :: [[integer()]], K :: integer()) -> integer().\nroot_count(Edges, Guesses, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec root_count(edges :: [[integer]], guesses :: [[integer]], k :: integer) :: integer\n  def root_count(edges, guesses, k) do\n    \n  end\nend"
+  }
+}

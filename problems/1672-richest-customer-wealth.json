@@ -1,0 +1,61 @@
+{
+  "title": "Richest Customer Wealth",
+  "problem_id": "1791",
+  "frontend_id": "1672",
+  "difficulty": "Easy",
+  "problem_slug": "richest-customer-wealth",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.\nA customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: accounts = [[1,2,3],[3,2,1]]\nOutput: 6\nExplanation:\n1st customer has wealth = 1 + 2 + 3 = 6\n2nd customer has wealth = 3 + 2 + 1 = 6\nBoth customers are considered the richest with a wealth of 6 each, so return 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: accounts = [[1,5],[7,3],[3,5]]\nOutput: 10\nExplanation: \n1st customer has wealth = 6\n2nd customer has wealth = 10 \n3rd customer has wealth = 8\nThe 2nd customer is the richest with a wealth of 10.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]\nOutput: 17",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == accounts.length",
+    "n == accounts[i].length",
+    "1 <= m, n <= 50",
+    "1 <= accounts[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Calculate the wealth of each customer",
+    "Find the maximum element in array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumWealth(vector<vector<int>>& accounts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumWealth(int[][] accounts) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumWealth(self, accounts):\n        \"\"\"\n        :type accounts: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumWealth(self, accounts: List[List[int]]) -> int:\n        ",
+    "c": "int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumWealth(int[][] accounts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} accounts\n * @return {number}\n */\nvar maximumWealth = function(accounts) {\n    \n};",
+    "typescript": "function maximumWealth(accounts: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $accounts\n     * @return Integer\n     */\n    function maximumWealth($accounts) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumWealth(_ accounts: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumWealth(accounts: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumWealth(List<List<int>> accounts) {\n    \n  }\n}",
+    "golang": "func maximumWealth(accounts [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} accounts\n# @return {Integer}\ndef maximum_wealth(accounts)\n    \nend",
+    "scala": "object Solution {\n    def maximumWealth(accounts: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-wealth accounts)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_wealth(Accounts :: [[integer()]]) -> integer().\nmaximum_wealth(Accounts) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_wealth(accounts :: [[integer]]) :: integer\n  def maximum_wealth(accounts) do\n    \n  end\nend"
+  }
+}

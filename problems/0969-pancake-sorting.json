@@ -1,0 +1,55 @@
+{
+  "title": "Pancake Sorting",
+  "problem_id": "1009",
+  "frontend_id": "969",
+  "difficulty": "Medium",
+  "problem_slug": "pancake-sorting",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an array of integers arr, sort the array by performing a series of pancake flips.\nIn one pancake flip we do the following steps:\nFor example, if arr = [3,2,1,4] and we performed a pancake flip choosing k = 3, we reverse the sub-array [3,2,1], so arr = [1,2,3,4] after the pancake flip at k = 3.\nReturn an array of the k-values corresponding to a sequence of pancake flips that sort arr. Any valid answer that sorts the array within 10 * arr.length flips will be judged as correct.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,2,4,1]\nOutput: [4,2,4,3]\nExplanation: \nWe perform 4 pancake flips, with k values 4, 2, 4, and 3.\nStarting state: arr = [3, 2, 4, 1]\nAfter 1st flip (k = 4): arr = [1, 4, 2, 3]\nAfter 2nd flip (k = 2): arr = [4, 1, 2, 3]\nAfter 3rd flip (k = 4): arr = [3, 2, 1, 4]\nAfter 4th flip (k = 3): arr = [1, 2, 3, 4], which is sorted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,2,3]\nOutput: []\nExplanation: The input is already sorted, so there is no need to flip anything.\nNote that other answers, such as [3, 3], would also be accepted.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 100",
+    "1 <= arr[i] <= arr.length",
+    "All integers in arr are unique (i.e. arr is a permutation of the integers from 1 to arr.length)."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> pancakeSort(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> pancakeSort(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def pancakeSort(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def pancakeSort(self, arr: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* pancakeSort(int* arr, int arrSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> PancakeSort(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number[]}\n */\nvar pancakeSort = function(arr) {\n    \n};",
+    "typescript": "function pancakeSort(arr: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer[]\n     */\n    function pancakeSort($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func pancakeSort(_ arr: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun pancakeSort(arr: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> pancakeSort(List<int> arr) {\n    \n  }\n}",
+    "golang": "func pancakeSort(arr []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer[]}\ndef pancake_sort(arr)\n    \nend",
+    "scala": "object Solution {\n    def pancakeSort(arr: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn pancake_sort(arr: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (pancake-sort arr)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec pancake_sort(Arr :: [integer()]) -> [integer()].\npancake_sort(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec pancake_sort(arr :: [integer]) :: [integer]\n  def pancake_sort(arr) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach 1: Sort like Bubble-Sort\n\n**Intuition**\n\nOne might argue that this is an awkward question to do things.\nIndeed, it is not the most practical operation that one can have with the _pancake flipping_, in order to sort a list.\n\nHowever awkward the problem might be, it is the game that we play with. And in order to win the game, we have to play by the rules.\nActually, from this perspective, this problem does share some similarity with the **_[Rubik's cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube)_**, _i.e._ one cannot move one tile without moving other tiles along with.\nLet us get on with it, by playing a few rounds ourselves to get the hang of the problem.\n\nGiven the input of `[3, 2, 4, 1]`, the desired sorted output would be `[1, 2, 3, 4]`. \n\nAs a reminder, the only operation that we could perform in order to move the elements in the list, is the so-called _pancake flip_, which is to reverse a _prefix_ of the list.\n\nStarting from the largest value in the list, _i.e._ `4` in the example, its desired position would be the tail of the list.\nWhile in the input, it is located at the third of the list, if we look at the list from left to right.\n\nIn order to move the value of `4` to its desired position, we could perform the following two steps:\n\n- Firstly, we do the pancake flip on the prefix of `[3, 2, 4]`. With this operation, we then move the value `4` to the _**head**_ of the updated list as `[4, 2, 3, 1]`.\n\n![flip to head](../Figures/969/969_flip_head.png)\n\n- Now that, the value `4` is located at the head of the list, we could now perform another pancake flip on the entire list, which would get us the list of `[1, 3, 2, 4]`.\n\n![flip to tail](../Figures/969/969_flip_tail.png)\n\nVoila. With the obtained list of `[1, 3, 2, 4]`, we are now one step closer to our final goal, with the value `4` now at its proper place.\nFor the following steps, we only need to focus on the sublist of `[1, 3, 2]`.\n\n>If one looks over the above steps again, it might ring a bell to a well-known algorithm called _**[bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)**_.Indeed, we share the same strategy as the bubble sort, by _sinking_ the numbers to the bottom one by one.\n\n>Here we can make a statement that for any given number, in order to move it to any desired position, it takes **_at most_** two pancake flips to do so.\n\nThe idea is simple. First we move the number to the head of the list, then we can switch it with any other element by performing another pancake flip.\n\n\n**Algorithm**\n\nOne can inspire from the bubble sort to implement the algorithm.\n\n- First of all, we implement a function called `flip(list, k)`, which performs the pancake flip on the prefix of `list[0:k]` (in Python).\n\n- The main algorithm runs a loop over the values of the list, starting from the largest one.\n\n    - At each round, we identify the value to sort (named as `value_to_sort`), which is the number we would put in place at this round.\n\n    - We then locate the index of the `value_to_sort`.\n\n    - If the `value_to_sort` is not at its place already, we can then perform _at most_ two pancake flips as we explained in the intuition.\n\n    - At the end of the round, the `value_to_sort` would be put in place.**Complexity Analysis**\n\nLet $$N$$ be the length of the input list.\n\n- Time Complexity: $$\\mathcal{O}(N^2)$$\n\n    - In the algorithm, we run a loop with $$N$$ iterations.\n\n    - Within each iteration, we are dealing with the corresponding prefix of the list.\n    Here we denote the length of the prefix as $$k$$, _e.g._ in the first iteration, the length of the prefix is $$N$$. While in the second iteration, the length of the prefix is $$N-1$$. \n\n    - Within each iteration, we have operations whose time complexity is linear to the length of the prefix, such as iterating through the prefix to find the index, or flipping the entire prefix _etc._ Hence, for each iteration, its time complexity would be $$\\mathcal{O}(k)$$\n\n    - To sum up all iterations, we have the overall time complexity of the algorithm as $$\\sum_{k=1}^{N} \\mathcal{O}(k) = \\mathcal{O}(N^2)$$.\n\n\n- Space Complexity: $$\\mathcal{O}(N)$$\n\n    - Within the algorithm, we use a list to maintain the final results, which is proportional to the number of pancake flips.\n\n    - For each round of iteration, at most we would add two pancake flips. Therefore, the maximal number of pancake flips needed would be $$2\\cdot N$$.\n\n    - As a result, the space complexity of the algorithm is $$\\mathcal{O}(N)$$. If one does not take into account the space required to hold the result of the function, then one could consider the above algorithm as a constant space solution.\n\n\n---"
+}

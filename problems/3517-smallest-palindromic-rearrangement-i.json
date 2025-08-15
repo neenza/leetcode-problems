@@ -1,0 +1,61 @@
+{
+  "title": "Smallest Palindromic Rearrangement I",
+  "problem_id": "3812",
+  "frontend_id": "3517",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-palindromic-rearrangement-i",
+  "topics": [
+    "String",
+    "Sorting",
+    "Counting Sort"
+  ],
+  "description": "You are given a palindromic string s.\nReturn the lexicographically smallest palindromic permutation of s.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"z\"\nOutput: \"z\"\nExplanation:\nA string of only one character is already the lexicographically smallest palindrome.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"babab\"\nOutput: \"abbba\"\nExplanation:\nRearranging \"babab\" → \"abbba\" gives the smallest lexicographic palindrome.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"daccad\"\nOutput: \"acddca\"\nExplanation:\nRearranging \"daccad\" → \"acddca\" gives the smallest lexicographic palindrome.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters.",
+    "s is guaranteed to be palindromic."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider a palindrome as composed of two mirror-image halves.",
+    "Construct one half (using <code>s</code>), and then the other half is its reverse to obtain the lexicographically smallest permutation."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestPalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestPalindrome(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestPalindrome(self, s: str) -> str:\n        ",
+    "c": "char* smallestPalindrome(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestPalindrome(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar smallestPalindrome = function(s) {\n    \n};",
+    "typescript": "function smallestPalindrome(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function smallestPalindrome($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestPalindrome(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestPalindrome(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestPalindrome(String s) {\n    \n  }\n}",
+    "golang": "func smallestPalindrome(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef smallest_palindrome(s)\n    \nend",
+    "scala": "object Solution {\n    def smallestPalindrome(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_palindrome(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-palindrome s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec smallest_palindrome(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_palindrome(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_palindrome(s :: String.t) :: String.t\n  def smallest_palindrome(s) do\n    \n  end\nend"
+  }
+}

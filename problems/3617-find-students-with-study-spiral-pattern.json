@@ -1,0 +1,46 @@
+{
+  "title": "Find Students with Study Spiral Pattern",
+  "problem_id": "3961",
+  "frontend_id": "3617",
+  "difficulty": "Hard",
+  "problem_slug": "find-students-with-study-spiral-pattern",
+  "topics": [],
+  "description": "Table: students\nTable: study_sessions\nWrite a solution to find students who follow the Study Spiral Pattern - students who consistently study multiple subjects in a rotating cycle.\nReturn the result table ordered by cycle length in descending order, then by total study hours in descending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| student_id   | int     |\n| student_name | varchar |\n| major        | varchar |\n+--------------+---------+\nstudent_id is the unique identifier for this table.\nEach row contains information about a student and their academic major.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| session_id    | int     |\n| student_id    | int     |\n| subject       | varchar |\n| session_date  | date    |\n| hours_studied | decimal |\n+---------------+---------+\nsession_id is the unique identifier for this table.\nEach row represents a study session by a student for a specific subject.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+------------+--------------+------------------+\n| student_id | student_name | major            |\n+------------+--------------+------------------+\n| 1          | Alice Chen   | Computer Science |\n| 2          | Bob Johnson  | Mathematics      |\n| 3          | Carol Davis  | Physics          |\n| 4          | David Wilson | Chemistry        |\n| 5          | Emma Brown   | Biology          |\n+------------+--------------+------------------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+------------+------------+------------+--------------+---------------+\n| session_id | student_id | subject    | session_date | hours_studied |\n+------------+------------+------------+--------------+---------------+\n| 1          | 1          | Math       | 2023-10-01   | 2.5           |\n| 2          | 1          | Physics    | 2023-10-02   | 3.0           |\n| 3          | 1          | Chemistry  | 2023-10-03   | 2.0           |\n| 4          | 1          | Math       | 2023-10-04   | 2.5           |\n| 5          | 1          | Physics    | 2023-10-05   | 3.0           |\n| 6          | 1          | Chemistry  | 2023-10-06   | 2.0           |\n| 7          | 2          | Algebra    | 2023-10-01   | 4.0           |\n| 8          | 2          | Calculus   | 2023-10-02   | 3.5           |\n| 9          | 2          | Statistics | 2023-10-03   | 2.5           |\n| 10         | 2          | Geometry   | 2023-10-04   | 3.0           |\n| 11         | 2          | Algebra    | 2023-10-05   | 4.0           |\n| 12         | 2          | Calculus   | 2023-10-06   | 3.5           |\n| 13         | 2          | Statistics | 2023-10-07   | 2.5           |\n| 14         | 2          | Geometry   | 2023-10-08   | 3.0           |\n| 15         | 3          | Biology    | 2023-10-01   | 2.0           |\n| 16         | 3          | Chemistry  | 2023-10-02   | 2.5           |\n| 17         | 3          | Biology    | 2023-10-03   | 2.0           |\n| 18         | 3          | Chemistry  | 2023-10-04   | 2.5           |\n| 19         | 4          | Organic    | 2023-10-01   | 3.0           |\n| 20         | 4          | Physical   | 2023-10-05   | 2.5           |\n+------------+------------+------------+--------------+---------------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+------------+--------------+------------------+--------------+-------------------+\n| student_id | student_name | major            | cycle_length | total_study_hours |\n+------------+--------------+------------------+--------------+-------------------+\n| 2          | Bob Johnson  | Mathematics      | 4            | 26.0              |\n| 1          | Alice Chen   | Computer Science | 3            | 15.0              |\n+------------+--------------+------------------+--------------+-------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_study_spiral_pattern(students: pd.DataFrame, study_sessions: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

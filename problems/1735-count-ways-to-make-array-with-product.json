@@ -1,0 +1,57 @@
+{
+  "title": "Count Ways to Make Array With Product",
+  "problem_id": "1836",
+  "frontend_id": "1735",
+  "difficulty": "Hard",
+  "problem_slug": "count-ways-to-make-array-with-product",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics",
+    "Number Theory"
+  ],
+  "description": "You are given a 2D integer array, queries. For each queries[i], where queries[i] = [ni, ki], find the number of different ways you can place positive integers into an array of size ni such that the product of the integers is ki. As the number of ways may be too large, the answer to the ith query is the number of ways modulo 109 + 7.\nReturn an integer array answer where answer.length == queries.length, and answer[i] is the answer to the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [[2,6],[5,1],[73,660]]\nOutput: [4,1,50734910]\nExplanation: Each query is independent.\n[2,6]: There are 4 ways to fill an array of size 2 that multiply to 6: [1,6], [2,3], [3,2], [6,1].\n[5,1]: There is 1 way to fill an array of size 5 that multiply to 1: [1,1,1,1,1].\n[73,660]: There are 1050734917 ways to fill an array of size 73 that multiply to 660. 1050734917 modulo 109 + 7 = 50734910.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [[1,1],[2,2],[3,3],[4,4],[5,5]]\nOutput: [1,2,3,10,5]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= queries.length <= 104",
+    "1 <= ni, ki <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Prime-factorize ki and count how many ways you can distribute the primes among the ni positions.",
+    "After prime factorizing ki, suppose there are x amount of prime factor. There are (x + n - 1) choose (n - 1) ways to distribute the x prime factors into n positions, allowing repetitions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> waysToFillArray(vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] waysToFillArray(int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def waysToFillArray(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def waysToFillArray(self, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* waysToFillArray(int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] WaysToFillArray(int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar waysToFillArray = function(queries) {\n    \n};",
+    "typescript": "function waysToFillArray(queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function waysToFillArray($queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func waysToFillArray(_ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun waysToFillArray(queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> waysToFillArray(List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func waysToFillArray(queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} queries\n# @return {Integer[]}\ndef ways_to_fill_array(queries)\n    \nend",
+    "scala": "object Solution {\n    def waysToFillArray(queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn ways_to_fill_array(queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (ways-to-fill-array queries)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec ways_to_fill_array(Queries :: [[integer()]]) -> [integer()].\nways_to_fill_array(Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec ways_to_fill_array(queries :: [[integer]]) :: [integer]\n  def ways_to_fill_array(queries) do\n    \n  end\nend"
+  }
+}

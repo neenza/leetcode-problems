@@ -1,0 +1,57 @@
+{
+  "title": "Remove Boxes",
+  "problem_id": "546",
+  "frontend_id": "546",
+  "difficulty": "Hard",
+  "problem_slug": "remove-boxes",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "description": "You are given several boxes with different colors represented by different positive numbers.\nYou may experience several rounds to remove boxes until there is no box left. Each time you can choose some continuous boxes with the same color (i.e., composed of k boxes, k >= 1), remove them and get k * k points.\nReturn the maximum points you can get.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: boxes = [1,3,2,2,2,3,4,3,1]\nOutput: 23\nExplanation:\n[1, 3, 2, 2, 2, 3, 4, 3, 1] \n----> [1, 3, 3, 4, 3, 1] (3*3=9 points) \n----> [1, 3, 3, 3, 1] (1*1=1 points) \n----> [1, 1] (3*3=9 points) \n----> [] (2*2=4 points)",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: boxes = [1,1,1]\nOutput: 9",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: boxes = [1]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= boxes.length <= 100",
+    "1 <= boxes[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int removeBoxes(vector<int>& boxes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeBoxes(int[] boxes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeBoxes(self, boxes):\n        \"\"\"\n        :type boxes: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeBoxes(self, boxes: List[int]) -> int:\n        ",
+    "c": "int removeBoxes(int* boxes, int boxesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RemoveBoxes(int[] boxes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} boxes\n * @return {number}\n */\nvar removeBoxes = function(boxes) {\n    \n};",
+    "typescript": "function removeBoxes(boxes: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $boxes\n     * @return Integer\n     */\n    function removeBoxes($boxes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeBoxes(_ boxes: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeBoxes(boxes: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int removeBoxes(List<int> boxes) {\n    \n  }\n}",
+    "golang": "func removeBoxes(boxes []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} boxes\n# @return {Integer}\ndef remove_boxes(boxes)\n    \nend",
+    "scala": "object Solution {\n    def removeBoxes(boxes: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_boxes(boxes: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (remove-boxes boxes)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec remove_boxes(Boxes :: [integer()]) -> integer().\nremove_boxes(Boxes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_boxes(boxes :: [integer]) :: integer\n  def remove_boxes(boxes) do\n    \n  end\nend"
+  }
+}

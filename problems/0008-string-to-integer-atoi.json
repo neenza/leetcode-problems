@@ -1,0 +1,60 @@
+{
+  "title": "String to Integer (atoi)",
+  "problem_id": "8",
+  "frontend_id": "8",
+  "difficulty": "Medium",
+  "problem_slug": "string-to-integer-atoi",
+  "topics": [
+    "String"
+  ],
+  "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.\nThe algorithm for myAtoi(string s) is as follows:\nReturn the integer as the final result.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nExample 5:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "The underlined characters are what is read in and the caret is the current reader position.\nStep 1: \"42\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"42\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"42\" (\"42\" is read in)\n           ^",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Step 1: \"   -042\" (leading whitespace is read and ignored)\n            ^\nStep 2: \"   -042\" ('-' is read, so the result should be negative)\n             ^\nStep 3: \"   -042\" (\"042\" is read in, leading zeros ignored in the result)\n               ^",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Step 1: \"1337c0d3\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"1337c0d3\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"1337c0d3\" (\"1337\" is read in; reading stops because the next character is a non-digit)\n             ^",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Step 1: \"0-1\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"0-1\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"0-1\" (\"0\" is read in; reading stops because the next character is a non-digit)\n          ^",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= s.length <= 200",
+    "s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int myAtoi(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int myAtoi(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def myAtoi(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def myAtoi(self, s: str) -> int:\n        ",
+    "c": "int myAtoi(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MyAtoi(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar myAtoi = function(s) {\n    \n};",
+    "typescript": "function myAtoi(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function myAtoi($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func myAtoi(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun myAtoi(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int myAtoi(String s) {\n    \n  }\n}",
+    "golang": "func myAtoi(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef my_atoi(s)\n    \nend",
+    "scala": "object Solution {\n    def myAtoi(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn my_atoi(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (my-atoi s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec my_atoi(S :: unicode:unicode_binary()) -> integer().\nmy_atoi(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec my_atoi(s :: String.t) :: integer\n  def my_atoi(s) do\n    \n  end\nend"
+  }
+}

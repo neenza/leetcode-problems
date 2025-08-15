@@ -1,0 +1,54 @@
+{
+  "title": "Check if There is a Valid Partition For The Array",
+  "problem_id": "2443",
+  "frontend_id": "2369",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-there-is-a-valid-partition-for-the-array",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a 0-indexed integer array nums. You have to partition the array into one or more contiguous subarrays.\nWe call a partition of the array valid if each of the obtained subarrays satisfies one of the following conditions:\nReturn true if the array has at least one valid partition. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,4,4,5,6]\nOutput: true\nExplanation: The array can be partitioned into the subarrays [4,4] and [4,5,6].\nThis partition is valid, so we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,2]\nOutput: false\nExplanation: There is no valid partition for this array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can you reduce the problem to checking if there is a valid partition for a smaller array?",
+    "Use dynamic programming to reduce the problem until you have an empty array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool validPartition(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validPartition(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validPartition(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validPartition(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool validPartition(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ValidPartition(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar validPartition = function(nums) {\n    \n};",
+    "typescript": "function validPartition(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function validPartition($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validPartition(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validPartition(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool validPartition(List<int> nums) {\n    \n  }\n}",
+    "golang": "func validPartition(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef valid_partition(nums)\n    \nend",
+    "scala": "object Solution {\n    def validPartition(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_partition(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (valid-partition nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec valid_partition(Nums :: [integer()]) -> boolean().\nvalid_partition(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_partition(nums :: [integer]) :: boolean\n  def valid_partition(nums) do\n    \n  end\nend"
+  }
+}

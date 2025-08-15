@@ -1,0 +1,64 @@
+{
+  "title": "Reshape the Matrix",
+  "problem_id": "566",
+  "frontend_id": "566",
+  "difficulty": "Easy",
+  "problem_slug": "reshape-the-matrix",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "In MATLAB, there is a handy function called reshape which can reshape an m x n matrix into a new one with a different size r x c keeping its original data.\nYou are given an m x n matrix mat and two integers r and c representing the number of rows and the number of columns of the wanted reshaped matrix.\nThe reshaped matrix should be filled with all the elements of the original matrix in the same row-traversing order as they were.\nIf the reshape operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,2],[3,4]], r = 1, c = 4\nOutput: [[1,2,3,4]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/reshape1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[1,2],[3,4]], r = 2, c = 4\nOutput: [[1,2],[3,4]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/reshape2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 100",
+    "-1000 <= mat[i][j] <= 1000",
+    "1 <= r, c <= 300"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do you know how 2d matrix is stored in 1d memory? Try to map 2-dimensions into one.",
+    "M[i][j]=M[n*i+j] , where n is the number of cols. \r\nThis is the one way of converting 2-d indices into one 1-d index.  \r\nNow, how will you convert 1-d index into 2-d indices?",
+    "Try to use division and modulus to convert 1-d index into 2-d indices.",
+    "M[i] =>  M[i/n][i%n] Will it result in right mapping? Take some example and check this formula."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] matrixReshape(int[][] mat, int r, int c) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matrixReshape(self, mat, r, c):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type r: int\n        :type c: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** matrixReshape(int** mat, int matSize, int* matColSize, int r, int c, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] MatrixReshape(int[][] mat, int r, int c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} r\n * @param {number} c\n * @return {number[][]}\n */\nvar matrixReshape = function(mat, r, c) {\n    \n};",
+    "typescript": "function matrixReshape(mat: number[][], r: number, c: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @param Integer $r\n     * @param Integer $c\n     * @return Integer[][]\n     */\n    function matrixReshape($mat, $r, $c) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matrixReshape(_ mat: [[Int]], _ r: Int, _ c: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matrixReshape(mat: Array<IntArray>, r: Int, c: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> matrixReshape(List<List<int>> mat, int r, int c) {\n    \n  }\n}",
+    "golang": "func matrixReshape(mat [][]int, r int, c int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @param {Integer} r\n# @param {Integer} c\n# @return {Integer[][]}\ndef matrix_reshape(mat, r, c)\n    \nend",
+    "scala": "object Solution {\n    def matrixReshape(mat: Array[Array[Int]], r: Int, c: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn matrix_reshape(mat: Vec<Vec<i32>>, r: i32, c: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (matrix-reshape mat r c)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec matrix_reshape(Mat :: [[integer()]], R :: integer(), C :: integer()) -> [[integer()]].\nmatrix_reshape(Mat, R, C) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec matrix_reshape(mat :: [[integer]], r :: integer, c :: integer) :: [[integer]]\n  def matrix_reshape(mat, r, c) do\n    \n  end\nend"
+  }
+}

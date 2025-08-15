@@ -1,0 +1,54 @@
+{
+  "title": "Largest Sum of Averages",
+  "problem_id": "831",
+  "frontend_id": "813",
+  "difficulty": "Medium",
+  "problem_slug": "largest-sum-of-averages",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums and an integer k. You can partition the array into at most k non-empty adjacent subarrays. The score of a partition is the sum of the averages of each subarray.\nNote that the partition must use every integer in nums, and that the score is not necessarily an integer.\nReturn the maximum score you can achieve of all the possible partitions. Answers within 10-6 of the actual answer will be accepted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [9,1,2,3,9], k = 3\nOutput: 20.00000\nExplanation: \nThe best choice is to partition nums into [9], [1, 2, 3], [9]. The answer is 9 + (1 + 2 + 3) / 3 + 9 = 20.\nWe could have also partitioned nums into [9, 1], [2], [3, 9], for example.\nThat partition would lead to a score of 5 + 2 + 6 = 13, which is worse.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5,6,7], k = 4\nOutput: 20.50000",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 104",
+    "1 <= k <= nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double largestSumOfAverages(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double largestSumOfAverages(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestSumOfAverages(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestSumOfAverages(self, nums: List[int], k: int) -> float:\n        ",
+    "c": "double largestSumOfAverages(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public double LargestSumOfAverages(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar largestSumOfAverages = function(nums, k) {\n    \n};",
+    "typescript": "function largestSumOfAverages(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Float\n     */\n    function largestSumOfAverages($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestSumOfAverages(_ nums: [Int], _ k: Int) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestSumOfAverages(nums: IntArray, k: Int): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double largestSumOfAverages(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func largestSumOfAverages(nums []int, k int) float64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Float}\ndef largest_sum_of_averages(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def largestSumOfAverages(nums: Array[Int], k: Int): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_sum_of_averages(nums: Vec<i32>, k: i32) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-sum-of-averages nums k)\n  (-> (listof exact-integer?) exact-integer? flonum?)\n  )",
+    "erlang": "-spec largest_sum_of_averages(Nums :: [integer()], K :: integer()) -> float().\nlargest_sum_of_averages(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_sum_of_averages(nums :: [integer], k :: integer) :: float\n  def largest_sum_of_averages(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Dynamic Programming [Accepted]\n\n**Intuition**\n\nThe best score partitioning `A[i:]` into at most `K` parts depends on answers to paritioning `A[j:]` (`j > i`) into less parts.  We can use dynamic programming as the states form a directed acyclic graph.\n\n**Algorithm**\n\nLet `dp(i, k)` be the best score partioning `A[i:]` into at most `K` parts.\n\nIf the first group we partition `A[i:]` into ends before `j`, then our candidate partition has score `average(i, j) + dp(j, k-1))`, where `average(i, j) = (A[i] + A[i+1] + ... + A[j-1]) / (j - i)` (floating point division).  We take the highest score of these, keeping in mind we don't necessarily need to partition - `dp(i, k)` can also be just `average(i, N)`.\n\nIn total, our recursion in the general case is `dp(i, k) = max(average(i, N), max_{j > i}(average(i, j) + dp(j, k-1)))`.\n\nWe can calculate `average` a little bit faster by remembering prefix sums.  If `P[x+1] = A[0] + A[1] + ... + A[x]`, then `average(i, j) = (P[j] - P[i]) / (j - i)`.\n\nOur implementation showcases a \"bottom-up\" style of dp.  Here at loop number `k` in our outer-most loop, `dp[i]` represents `dp(i, k)` from the discussion above, and we are calculating the next layer `dp(i, k+1)`.  The end of our second loop `for i = 0..N-1` represents finishing the calculation of the correct value for `dp(i, t)`, and the inner-most loop performs the calculation `max_{j > i}(average(i, j) + dp(j, k))`.**Complexity Analysis**\n\n* Time Complexity:  $$O(K * N^2)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity: $$O(N)$$, the size of `dp`."
+}

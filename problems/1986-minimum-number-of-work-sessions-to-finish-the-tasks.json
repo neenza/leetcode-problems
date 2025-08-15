@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Number of Work Sessions to Finish the Tasks",
+  "problem_id": "2114",
+  "frontend_id": "1986",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-work-sessions-to-finish-the-tasks",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "There are n tasks assigned to you. The task times are represented as an integer array tasks of length n, where the ith task takes tasks[i] hours to finish. A work session is when you work for at most sessionTime consecutive hours and then take a break.\nYou should finish the given tasks in a way that satisfies the following conditions:\nGiven tasks and sessionTime, return the minimum number of work sessions needed to finish all the tasks following the conditions above.\nThe tests are generated such that sessionTime is greater than or equal to the maximum element in tasks[i].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: tasks = [1,2,3], sessionTime = 3\nOutput: 2\nExplanation: You can finish the tasks in two work sessions.\n- First work session: finish the first and the second tasks in 1 + 2 = 3 hours.\n- Second work session: finish the third task in 3 hours.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: tasks = [3,1,3,1,1], sessionTime = 8\nOutput: 2\nExplanation: You can finish the tasks in two work sessions.\n- First work session: finish all the tasks except the last one in 3 + 1 + 3 + 1 = 8 hours.\n- Second work session: finish the last task in 1 hour.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: tasks = [1,2,3,4,5], sessionTime = 15\nOutput: 1\nExplanation: You can finish all the tasks in one work session.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == tasks.length",
+    "1 <= n <= 14",
+    "1 <= tasks[i] <= 10",
+    "max(tasks[i]) <= sessionTime <= 15"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try all possible ways of assignment.",
+    "If we can store the assignments in form of a state then we can reuse that state and solve the problem in a faster way."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSessions(vector<int>& tasks, int sessionTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSessions(int[] tasks, int sessionTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSessions(self, tasks, sessionTime):\n        \"\"\"\n        :type tasks: List[int]\n        :type sessionTime: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSessions(self, tasks: List[int], sessionTime: int) -> int:\n        ",
+    "c": "int minSessions(int* tasks, int tasksSize, int sessionTime) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSessions(int[] tasks, int sessionTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} tasks\n * @param {number} sessionTime\n * @return {number}\n */\nvar minSessions = function(tasks, sessionTime) {\n    \n};",
+    "typescript": "function minSessions(tasks: number[], sessionTime: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $tasks\n     * @param Integer $sessionTime\n     * @return Integer\n     */\n    function minSessions($tasks, $sessionTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSessions(_ tasks: [Int], _ sessionTime: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSessions(tasks: IntArray, sessionTime: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSessions(List<int> tasks, int sessionTime) {\n    \n  }\n}",
+    "golang": "func minSessions(tasks []int, sessionTime int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} tasks\n# @param {Integer} session_time\n# @return {Integer}\ndef min_sessions(tasks, session_time)\n    \nend",
+    "scala": "object Solution {\n    def minSessions(tasks: Array[Int], sessionTime: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_sessions(tasks: Vec<i32>, session_time: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-sessions tasks sessionTime)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_sessions(Tasks :: [integer()], SessionTime :: integer()) -> integer().\nmin_sessions(Tasks, SessionTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_sessions(tasks :: [integer], session_time :: integer) :: integer\n  def min_sessions(tasks, session_time) do\n    \n  end\nend"
+  }
+}

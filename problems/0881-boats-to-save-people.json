@@ -1,0 +1,58 @@
+{
+  "title": "Boats to Save People",
+  "problem_id": "917",
+  "frontend_id": "881",
+  "difficulty": "Medium",
+  "problem_slug": "boats-to-save-people",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.\nReturn the minimum number of boats to carry every given person.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: people = [1,2], limit = 3\nOutput: 1\nExplanation: 1 boat (1, 2)",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: people = [3,2,2,1], limit = 3\nOutput: 3\nExplanation: 3 boats (1, 2), (2) and (3)",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: people = [3,5,3,4], limit = 5\nOutput: 4\nExplanation: 4 boats (3), (3), (4), (5)",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= people.length <= 5 * 104",
+    "1 <= people[i] <= limit <= 3 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numRescueBoats(vector<int>& people, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numRescueBoats(int[] people, int limit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numRescueBoats(self, people, limit):\n        \"\"\"\n        :type people: List[int]\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numRescueBoats(self, people: List[int], limit: int) -> int:\n        ",
+    "c": "int numRescueBoats(int* people, int peopleSize, int limit) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumRescueBoats(int[] people, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} people\n * @param {number} limit\n * @return {number}\n */\nvar numRescueBoats = function(people, limit) {\n    \n};",
+    "typescript": "function numRescueBoats(people: number[], limit: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $people\n     * @param Integer $limit\n     * @return Integer\n     */\n    function numRescueBoats($people, $limit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numRescueBoats(_ people: [Int], _ limit: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numRescueBoats(people: IntArray, limit: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numRescueBoats(List<int> people, int limit) {\n    \n  }\n}",
+    "golang": "func numRescueBoats(people []int, limit int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} people\n# @param {Integer} limit\n# @return {Integer}\ndef num_rescue_boats(people, limit)\n    \nend",
+    "scala": "object Solution {\n    def numRescueBoats(people: Array[Int], limit: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_rescue_boats(people: Vec<i32>, limit: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-rescue-boats people limit)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_rescue_boats(People :: [integer()], Limit :: integer()) -> integer().\nnum_rescue_boats(People, Limit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_rescue_boats(people :: [integer], limit :: integer) :: integer\n  def num_rescue_boats(people, limit) do\n    \n  end\nend"
+  }
+}

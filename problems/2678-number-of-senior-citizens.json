@@ -1,0 +1,58 @@
+{
+  "title": "Number of Senior Citizens",
+  "problem_id": "2727",
+  "frontend_id": "2678",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-senior-citizens",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:\nReturn the number of passengers who are strictly more than 60 years old.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: details = [\"7868190130M7522\",\"5303914400F9211\",\"9273338290F4010\"]\nOutput: 2\nExplanation: The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: details = [\"1313579440F2036\",\"2921522980M5644\"]\nOutput: 0\nExplanation: None of the passengers are older than 60.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= details.length <= 100",
+    "details[i].length == 15",
+    "details[i] consists of digits from '0' to '9'.",
+    "details[i][10] is either 'M' or 'F' or 'O'.",
+    "The phone numbers and seat numbers of the passengers are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Convert the value at index 11 and 12 to a numerical value.",
+    "The age of the person at index i is equal to details[i][11]*10+details[i][12]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSeniors(vector<string>& details) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSeniors(String[] details) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSeniors(self, details):\n        \"\"\"\n        :type details: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSeniors(self, details: List[str]) -> int:\n        ",
+    "c": "int countSeniors(char** details, int detailsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSeniors(string[] details) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} details\n * @return {number}\n */\nvar countSeniors = function(details) {\n    \n};",
+    "typescript": "function countSeniors(details: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $details\n     * @return Integer\n     */\n    function countSeniors($details) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSeniors(_ details: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSeniors(details: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSeniors(List<String> details) {\n    \n  }\n}",
+    "golang": "func countSeniors(details []string) int {\n    \n}",
+    "ruby": "# @param {String[]} details\n# @return {Integer}\ndef count_seniors(details)\n    \nend",
+    "scala": "object Solution {\n    def countSeniors(details: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_seniors(details: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-seniors details)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec count_seniors(Details :: [unicode:unicode_binary()]) -> integer().\ncount_seniors(Details) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_seniors(details :: [String.t]) :: integer\n  def count_seniors(details) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given an array of strings called `details`. Each string in this array contains compressed information about a passenger, structured as follows:\n\n![image showing how information is compressed](../Figures/2678/image1.png)\n\nOur task is to extract the age of each passenger from the provided information and count the total number of passengers who are strictly over 60 years old.\n    \n---\n\n### Approach 1: String Parsing\n\n#### Intuition\n\nTo determine whether each passenger is a senior citizen, we need to find the age of every passenger. As illustrated above, the age is embedded as a two-digit number in the string at indices `11` and `12`. To extract these digits, we can use the `substring` method to isolate the two-digit age as a separate string.\n\nSince we can't directly compare a string with an integer, we need to convert the extracted string into an integer. Fortunately, most modern programming languages provide built-in methods for parsing strings into integers.\n\nWe then increment a counter each time we find an age over 60. After processing all passengers, this counter will give us the final count of passengers over 60 years old.\n\n#### Algorithm\n\n- Initialize a variable `seniorCount` to `0`.\n- Iterate through each string `passengerInfo` in the `details` array:\n  - Extract the substring from index `11` to `13` (exclusive) from `passengerInfo`.\n  - Convert this substring to an integer `age`.\n  - Check if `age` is greater than `60`.\n    - If true, increment `seniorCount` by `1`.\n- Return `seniorCount`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the `details` array.\n\n- Time complexity: $O(n)$\n\n    The algorithm loops over each element of `details`, taking linear time. In each iteration, it creates a substring of the current element and parses it to an integer, each operation taking $O(15) = O(1)$ time. Finding a substring of a string and parsing a string are both linear time operations, which work well when each string has a fixed length of $15$. However, this solution becomes inefficient if the string lengths are much larger.\n    \n    Thus, the overall time complexity of the algorithm is $O(n)$.\n\n- Space complexity: $O(1)$\n\n    The algorithm only uses a few variables which take constant space. The space complexity remains constant. \n\n---\n\n### Approach 2: Character-Based Extraction\n\n#### Intuition\n\nIn Approach 1, we create a new substring and then convert that string into an integer. In Approach 2, we'll explore a way to eliminate the need for creating a substring by directly accessing the age-related characters at indices 11 and 12 using ASCII values. \n\nEvery character value in the given string also represents a numeric value corresponding to the character’s ASCII code. If you are unfamiliar with ASCII, [this](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/editorial/) solution article covers it in depth. You can reference the second table on [this](https://www.ascii-code.com/) page for the ASCII codes representing ‘0’ to ‘9’.\n\nWe can directly access the integer values of the passenger’s ages without extracting them as substrings by performing some simple calculations using the character's ASCII value. For example, the ASCII character code for ‘7’ is 55. You’ll see that if we subtract the ASCII code for ‘0’, which is 48, we get the character’s numerical value of 7!\n\nKeeping in mind that the character at the 11th index represents the tens place of the age and the character at the 12th represents the ones, we can reconstruct the age and check if it exceeds 60. If it does, we increment a counter. After the loop completes, the counter reflects the total number of senior citizens.\n\n#### Algorithm\n \n- Initialize a variable `seniorCount` to `0`.\n- Iterate through each string `passengerInfo` in `details`:\n  - Set `ageTens` as the difference between the ASCII values of the character at index `11` and `0`.\n  - Set `ageOnes` as the difference between the ASCII values of the character at index `12` and `0`.\n  - Calculate `age` by multiplying `ageTens` by 10 and adding `ageOnes`.\n  - Check if `age` is greater than 60.\n    - If it is, increment `seniorCount` by 1.\n- Return `seniorCount` as the answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the `details` array. \n\n* Time complexity: $O(n)$\n\n    The algorithm iterates over `details`, which takes linear time. All operations done on each element in `details` are $O(1)$. Thus, the overall time complexity of the algorithm is $O(n)$.\n\n* Space complexity: $O(1)$\n\n    The algorithm does not use any data structures which scale with input size. So, it's space complexity remains constant. \n\n---"
+}

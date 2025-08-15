@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Ice Cream Bars",
+  "problem_id": "1961",
+  "frontend_id": "1833",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-ice-cream-bars",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Counting Sort"
+  ],
+  "description": "It is a sweltering summer day, and a boy wants to buy some ice cream bars.\nAt the store, there are n ice cream bars. You are given an array costs of length n, where costs[i] is the price of the ith ice cream bar in coins. The boy initially has coins coins to spend, and he wants to buy as many ice cream bars as possible.\nNote: The boy can buy the ice cream bars in any order.\nReturn the maximum number of ice cream bars the boy can buy with coins coins.\nYou must solve the problem by counting sort.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: costs = [1,3,2,4,1], coins = 7\nOutput: 4\nExplanation: The boy can buy ice cream bars at indices 0,1,2,4 for a total price of 1 + 3 + 2 + 1 = 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: costs = [10,6,8,7,7,8], coins = 5\nOutput: 0\nExplanation: The boy cannot afford any of the ice cream bars.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: costs = [1,6,3,1,2,5], coins = 20\nOutput: 6\nExplanation: The boy can buy all the ice cream bars for a total price of 1 + 6 + 3 + 1 + 2 + 5 = 18.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "costs.length == n",
+    "1 <= n <= 105",
+    "1 <= costs[i] <= 105",
+    "1 <= coins <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is always optimal to buy the least expensive ice cream bar first.",
+    "Sort the prices so that the cheapest ice cream bar comes first."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxIceCream(vector<int>& costs, int coins) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxIceCream(int[] costs, int coins) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxIceCream(self, costs, coins):\n        \"\"\"\n        :type costs: List[int]\n        :type coins: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxIceCream(self, costs: List[int], coins: int) -> int:\n        ",
+    "c": "int maxIceCream(int* costs, int costsSize, int coins) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxIceCream(int[] costs, int coins) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} costs\n * @param {number} coins\n * @return {number}\n */\nvar maxIceCream = function(costs, coins) {\n    \n};",
+    "typescript": "function maxIceCream(costs: number[], coins: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $costs\n     * @param Integer $coins\n     * @return Integer\n     */\n    function maxIceCream($costs, $coins) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxIceCream(_ costs: [Int], _ coins: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxIceCream(costs: IntArray, coins: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxIceCream(List<int> costs, int coins) {\n    \n  }\n}",
+    "golang": "func maxIceCream(costs []int, coins int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} costs\n# @param {Integer} coins\n# @return {Integer}\ndef max_ice_cream(costs, coins)\n    \nend",
+    "scala": "object Solution {\n    def maxIceCream(costs: Array[Int], coins: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_ice_cream(costs: Vec<i32>, coins: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-ice-cream costs coins)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_ice_cream(Costs :: [integer()], Coins :: integer()) -> integer().\nmax_ice_cream(Costs, Coins) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_ice_cream(costs :: [integer], coins :: integer) :: integer\n  def max_ice_cream(costs, coins) do\n    \n  end\nend"
+  }
+}

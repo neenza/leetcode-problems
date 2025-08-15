@@ -1,0 +1,53 @@
+{
+  "title": "Remove All Adjacent Duplicates In String",
+  "problem_id": "1128",
+  "frontend_id": "1047",
+  "difficulty": "Easy",
+  "problem_slug": "remove-all-adjacent-duplicates-in-string",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.\nWe repeatedly make duplicate removals on s until we no longer can.\nReturn the final string after all such duplicate removals have been made. It can be proven that the answer is unique.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abbaca\"\nOutput: \"ca\"\nExplanation: \nFor example, in \"abbaca\" we could remove \"bb\" since the letters are adjacent and equal, and this is the only possible move.  The result of this move is that the string is \"aaca\", of which only \"aa\" is possible, so the final string is \"ca\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"azxxzy\"\nOutput: \"ay\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a stack to process everything greedily."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string removeDuplicates(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String removeDuplicates(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeDuplicates(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeDuplicates(self, s: str) -> str:\n        ",
+    "c": "char* removeDuplicates(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RemoveDuplicates(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar removeDuplicates = function(s) {\n    \n};",
+    "typescript": "function removeDuplicates(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function removeDuplicates($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeDuplicates(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeDuplicates(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String removeDuplicates(String s) {\n    \n  }\n}",
+    "golang": "func removeDuplicates(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef remove_duplicates(s)\n    \nend",
+    "scala": "object Solution {\n    def removeDuplicates(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_duplicates(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (remove-duplicates s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec remove_duplicates(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_duplicates(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_duplicates(s :: String.t) :: String.t\n  def remove_duplicates(s) do\n    \n  end\nend"
+  }
+}

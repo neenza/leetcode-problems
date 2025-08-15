@@ -1,0 +1,53 @@
+{
+  "title": "Rotate Function",
+  "problem_id": "396",
+  "frontend_id": "396",
+  "difficulty": "Medium",
+  "problem_slug": "rotate-function",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums of length n.\nAssume arrk to be an array obtained by rotating nums by k positions clock-wise. We define the rotation function F on nums as follow:\nReturn the maximum value of F(0), F(1), ..., F(n-1).\nThe test cases are generated so that the answer fits in a 32-bit integer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,3,2,6]\nOutput: 26\nExplanation:\nF(0) = (0 * 4) + (1 * 3) + (2 * 2) + (3 * 6) = 0 + 3 + 4 + 18 = 25\nF(1) = (0 * 6) + (1 * 4) + (2 * 3) + (3 * 2) = 0 + 4 + 6 + 6 = 16\nF(2) = (0 * 2) + (1 * 6) + (2 * 4) + (3 * 3) = 0 + 6 + 8 + 9 = 23\nF(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26\nSo the maximum value of F(0), F(1), F(2), F(3) is F(3) = 26.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [100]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxRotateFunction(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRotateFunction(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRotateFunction(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRotateFunction(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxRotateFunction(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxRotateFunction(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxRotateFunction = function(nums) {\n    \n};",
+    "typescript": "function maxRotateFunction(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxRotateFunction($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRotateFunction(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRotateFunction(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRotateFunction(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxRotateFunction(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_rotate_function(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxRotateFunction(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_rotate_function(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-rotate-function nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_rotate_function(Nums :: [integer()]) -> integer().\nmax_rotate_function(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_rotate_function(nums :: [integer]) :: integer\n  def max_rotate_function(nums) do\n    \n  end\nend"
+  }
+}

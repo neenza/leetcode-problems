@@ -1,0 +1,59 @@
+{
+  "title": "Count the Digits That Divide a Number",
+  "problem_id": "2608",
+  "frontend_id": "2520",
+  "difficulty": "Easy",
+  "problem_slug": "count-the-digits-that-divide-a-number",
+  "topics": [
+    "Math"
+  ],
+  "description": "Given an integer num, return the number of digits in num that divide num.\nAn integer val divides nums if nums % val == 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 7\nOutput: 1\nExplanation: 7 divides itself, hence the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 121\nOutput: 2\nExplanation: 121 is divisible by 1, but not 2. Since 1 occurs twice as a digit, we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = 1248\nOutput: 4\nExplanation: 1248 is divisible by all of its digits, hence the answer is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num <= 109",
+    "num does not contain 0 as one of its digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use mod by 10 to retrieve the least significant digit of the number",
+    "Divide the number by 10, then round it down so that the second least significant digit becomes the least significant digit of the number",
+    "Use your language’s mod operator to see if a number is a divisor of another."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countDigits(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countDigits(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countDigits(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countDigits(self, num: int) -> int:\n        ",
+    "c": "int countDigits(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountDigits(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar countDigits = function(num) {\n    \n};",
+    "typescript": "function countDigits(num: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer\n     */\n    function countDigits($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countDigits(_ num: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countDigits(num: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countDigits(int num) {\n    \n  }\n}",
+    "golang": "func countDigits(num int) int {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer}\ndef count_digits(num)\n    \nend",
+    "scala": "object Solution {\n    def countDigits(num: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_digits(num: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-digits num)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_digits(Num :: integer()) -> integer().\ncount_digits(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_digits(num :: integer) :: integer\n  def count_digits(num) do\n    \n  end\nend"
+  }
+}

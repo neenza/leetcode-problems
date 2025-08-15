@@ -1,0 +1,72 @@
+{
+  "title": "Rank Transform of a Matrix",
+  "problem_id": "1257",
+  "frontend_id": "1632",
+  "difficulty": "Hard",
+  "problem_slug": "rank-transform-of-a-matrix",
+  "topics": [
+    "Array",
+    "Union Find",
+    "Graph",
+    "Topological Sort",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "Given an m x n matrix, return a new matrix answer where answer[row][col] is the rank of matrix[row][col].\nThe rank is an integer that represents how large an element is compared to other elements. It is calculated using the following rules:\nThe test cases are generated so that answer is unique under the given rules.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,2],[3,4]]\nOutput: [[1,2],[2,3]]\nExplanation:\nThe rank of matrix[0][0] is 1 because it is the smallest integer in its row and column.\nThe rank of matrix[0][1] is 2 because matrix[0][1] > matrix[0][0] and matrix[0][0] is rank 1.\nThe rank of matrix[1][0] is 2 because matrix[1][0] > matrix[0][0] and matrix[0][0] is rank 1.\nThe rank of matrix[1][1] is 3 because matrix[1][1] > matrix[0][1], matrix[1][1] > matrix[1][0], and both matrix[0][1] and matrix[1][0] are rank 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/18/rank1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[7,7],[7,7]]\nOutput: [[1,1],[1,1]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/18/rank2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: matrix = [[20,-21,14],[-19,4,19],[22,-47,24],[-19,4,19]]\nOutput: [[4,2,3],[1,3,4],[5,1,6],[1,3,4]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/18/rank3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 500",
+    "-109 <= matrix[row][col] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the cells by value and process them in increasing order.",
+    "The rank of a cell is the maximum rank in its row and column plus one.",
+    "Handle the equal cells by treating them as components using a union-find data structure."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> matrixRankTransform(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] matrixRankTransform(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matrixRankTransform(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matrixRankTransform(self, matrix: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** matrixRankTransform(int** matrix, int matrixSize, int* matrixColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] MatrixRankTransform(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number[][]}\n */\nvar matrixRankTransform = function(matrix) {\n    \n};",
+    "typescript": "function matrixRankTransform(matrix: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer[][]\n     */\n    function matrixRankTransform($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matrixRankTransform(_ matrix: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matrixRankTransform(matrix: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> matrixRankTransform(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func matrixRankTransform(matrix [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer[][]}\ndef matrix_rank_transform(matrix)\n    \nend",
+    "scala": "object Solution {\n    def matrixRankTransform(matrix: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn matrix_rank_transform(matrix: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (matrix-rank-transform matrix)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec matrix_rank_transform(Matrix :: [[integer()]]) -> [[integer()]].\nmatrix_rank_transform(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec matrix_rank_transform(matrix :: [[integer]]) :: [[integer]]\n  def matrix_rank_transform(matrix) do\n    \n  end\nend"
+  }
+}

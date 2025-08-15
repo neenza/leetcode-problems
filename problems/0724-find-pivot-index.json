@@ -1,0 +1,60 @@
+{
+  "title": "Find Pivot Index",
+  "problem_id": "724",
+  "frontend_id": "724",
+  "difficulty": "Easy",
+  "problem_slug": "find-pivot-index",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "Given an array of integers nums, calculate the pivot index of this array.\nThe pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right.\nIf the index is on the left edge of the array, then the left sum is 0 because there are no elements to the left. This also applies to the right edge of the array.\nReturn the leftmost pivot index. If no such index exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nNote: This question is the same as 1991: https://leetcode.com/problems/find-the-middle-index-in-array/",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,7,3,6,5,6]\nOutput: 3\nExplanation:\nThe pivot index is 3.\nLeft sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11\nRight sum = nums[4] + nums[5] = 5 + 6 = 11",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3]\nOutput: -1\nExplanation:\nThere is no index that satisfies the conditions in the problem statement.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,1,-1]\nOutput: 0\nExplanation:\nThe pivot index is 0.\nLeft sum = 0 (no elements to the left of index 0)\nRight sum = nums[1] + nums[2] = 1 + -1 = 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "-1000 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create an array sumLeft where sumLeft[i] is the sum of all the numbers to the left of index i.",
+    "Create an array sumRight where sumRight[i] is the sum of all the numbers to the right of index i.",
+    "For each index i, check if sumLeft[i] equals sumRight[i]. If so, return i. If no such i is found, return -1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int pivotIndex(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int pivotIndex(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def pivotIndex(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def pivotIndex(self, nums: List[int]) -> int:\n        ",
+    "c": "int pivotIndex(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PivotIndex(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar pivotIndex = function(nums) {\n    \n};",
+    "typescript": "function pivotIndex(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function pivotIndex($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func pivotIndex(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun pivotIndex(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int pivotIndex(List<int> nums) {\n    \n  }\n}",
+    "golang": "func pivotIndex(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef pivot_index(nums)\n    \nend",
+    "scala": "object Solution {\n    def pivotIndex(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn pivot_index(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (pivot-index nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec pivot_index(Nums :: [integer()]) -> integer().\npivot_index(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec pivot_index(nums :: [integer]) :: integer\n  def pivot_index(nums) do\n    \n  end\nend"
+  }
+}

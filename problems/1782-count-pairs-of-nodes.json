@@ -1,0 +1,70 @@
+{
+  "title": "Count Pairs Of Nodes",
+  "problem_id": "1891",
+  "frontend_id": "1782",
+  "difficulty": "Hard",
+  "problem_slug": "count-pairs-of-nodes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Binary Search",
+    "Graph",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given an undirected graph defined by an integer n, the number of nodes, and a 2D integer array edges, the edges in the graph, where edges[i] = [ui, vi] indicates that there is an undirected edge between ui and vi. You are also given an integer array queries.\nLet incident(a, b) be defined as the number of edges that are connected to either node a or b.\nThe answer to the jth query is the number of pairs of nodes (a, b) that satisfy both of the following conditions:\nReturn an array answers such that answers.length == queries.length and answers[j] is the answer of the jth query.\nNote that there can be multiple edges between the same two nodes.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, edges = [[1,2],[2,4],[1,3],[2,3],[2,1]], queries = [2,3]\nOutput: [6,5]\nExplanation: The calculations for incident(a, b) are shown in the table above.\nThe answers for each of the queries are as follows:\n- answers[0] = 6. All the pairs have an incident(a, b) value greater than 2.\n- answers[1] = 5. All the pairs except (3, 4) have an incident(a, b) value greater than 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/08/winword_2021-06-08_00-58-39.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, edges = [[1,5],[1,5],[3,4],[2,5],[1,3],[5,1],[2,3],[2,5]], queries = [1,2,3,4,5]\nOutput: [10,10,9,8,6]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/08/winword_2021-06-08_00-58-39.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 2 * 104",
+    "1 <= edges.length <= 105",
+    "1 <= ui, vi <= n",
+    "ui != vi",
+    "1 <= queries.length <= 20",
+    "0 <= queries[j] < edges.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We want to count pairs (x,y) such that degree[x] + degree[y] - occurrences(x,y) > k",
+    "Think about iterating on x, and counting the number of valid y to pair with x.",
+    "You can consider at first that the (- occurrences(x,y)) isn't there, or it is 0 at first for all y. Count the valid y this way.",
+    "Then you can iterate on the neighbors of x, let that neighbor be y, and update occurrences(x,y).",
+    "When you update occurrences(x,y), the left-hand side decreases. Once it reaches k, then y is not valid for x anymore, so you should decrease the answer by 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countPairs(int n, vector<vector<int>>& edges, vector<int>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countPairs(int n, int[][] edges, int[] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairs(self, n, edges, queries):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairs(self, n: int, edges: List[List[int]], queries: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countPairs(int n, int** edges, int edgesSize, int* edgesColSize, int* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountPairs(int n, int[][] edges, int[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[]} queries\n * @return {number[]}\n */\nvar countPairs = function(n, edges, queries) {\n    \n};",
+    "typescript": "function countPairs(n: number, edges: number[][], queries: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[] $queries\n     * @return Integer[]\n     */\n    function countPairs($n, $edges, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairs(_ n: Int, _ edges: [[Int]], _ queries: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairs(n: Int, edges: Array<IntArray>, queries: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countPairs(int n, List<List<int>> edges, List<int> queries) {\n    \n  }\n}",
+    "golang": "func countPairs(n int, edges [][]int, queries []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[]} queries\n# @return {Integer[]}\ndef count_pairs(n, edges, queries)\n    \nend",
+    "scala": "object Solution {\n    def countPairs(n: Int, edges: Array[Array[Int]], queries: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs(n: i32, edges: Vec<Vec<i32>>, queries: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec count_pairs(N :: integer(), Edges :: [[integer()]], Queries :: [integer()]) -> [integer()].\ncount_pairs(N, Edges, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pairs(n :: integer, edges :: [[integer]], queries :: [integer]) :: [integer]\n  def count_pairs(n, edges, queries) do\n    \n  end\nend"
+  }
+}

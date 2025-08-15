@@ -1,0 +1,66 @@
+{
+  "title": "Maximum Number of Balloons",
+  "problem_id": "1297",
+  "frontend_id": "1189",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-number-of-balloons",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "Given a string text, you want to use the characters of text to form as many instances of the word \"balloon\" as possible.\nYou can use each character in text at most once. Return the maximum number of instances that can be formed.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nNote: This question is the same as  2287: Rearrange Characters to Make Target String.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"nlaebolko\"\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/05/1536_ex1_upd.JPG"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"loonbalxballpoon\"\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/05/1536_ex2_upd.JPG"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: text = \"leetcode\"\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/05/1536_ex2_upd.JPG"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 104",
+    "text consists of lower case English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of letters in the given string.",
+    "Find the letter than can make the minimum number of instances of the word \"balloon\"."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxNumberOfBalloons(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxNumberOfBalloons(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxNumberOfBalloons(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxNumberOfBalloons(self, text: str) -> int:\n        ",
+    "c": "int maxNumberOfBalloons(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxNumberOfBalloons(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar maxNumberOfBalloons = function(text) {\n    \n};",
+    "typescript": "function maxNumberOfBalloons(text: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return Integer\n     */\n    function maxNumberOfBalloons($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxNumberOfBalloons(_ text: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxNumberOfBalloons(text: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxNumberOfBalloons(String text) {\n    \n  }\n}",
+    "golang": "func maxNumberOfBalloons(text string) int {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {Integer}\ndef max_number_of_balloons(text)\n    \nend",
+    "scala": "object Solution {\n    def maxNumberOfBalloons(text: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_number_of_balloons(text: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-number-of-balloons text)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_number_of_balloons(Text :: unicode:unicode_binary()) -> integer().\nmax_number_of_balloons(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_number_of_balloons(text :: String.t) :: integer\n  def max_number_of_balloons(text) do\n    \n  end\nend"
+  }
+}

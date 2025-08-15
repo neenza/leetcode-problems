@@ -1,0 +1,62 @@
+{
+  "title": "Fraction to Recurring Decimal",
+  "problem_id": "166",
+  "frontend_id": "166",
+  "difficulty": "Medium",
+  "problem_slug": "fraction-to-recurring-decimal",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String"
+  ],
+  "description": "Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.\nIf the fractional part is repeating, enclose the repeating part in parentheses.\nIf multiple answers are possible, return any of them.\nIt is guaranteed that the length of the answer string is less than 104 for all the given inputs.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numerator = 1, denominator = 2\nOutput: \"0.5\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numerator = 2, denominator = 1\nOutput: \"2\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: numerator = 4, denominator = 333\nOutput: \"0.(012)\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "-231 <= numerator, denominator <= 231 - 1",
+    "denominator != 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "No scary math, just apply elementary math knowledge. Still remember how to perform a <i>long division</i>?",
+    "Try a long division on 4/9, the repeating part is obvious. Now try 4/333. Do you see a pattern?",
+    "Notice that once the remainder starts repeating, so does the divided result.",
+    "Be wary of edge cases! List out as many test cases as you can think of and test your code thoroughly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string fractionToDecimal(int numerator, int denominator) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String fractionToDecimal(int numerator, int denominator) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def fractionToDecimal(self, numerator, denominator):\n        \"\"\"\n        :type numerator: int\n        :type denominator: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def fractionToDecimal(self, numerator: int, denominator: int) -> str:\n        ",
+    "c": "char* fractionToDecimal(int numerator, int denominator) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FractionToDecimal(int numerator, int denominator) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} numerator\n * @param {number} denominator\n * @return {string}\n */\nvar fractionToDecimal = function(numerator, denominator) {\n    \n};",
+    "typescript": "function fractionToDecimal(numerator: number, denominator: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $numerator\n     * @param Integer $denominator\n     * @return String\n     */\n    function fractionToDecimal($numerator, $denominator) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func fractionToDecimal(_ numerator: Int, _ denominator: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun fractionToDecimal(numerator: Int, denominator: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String fractionToDecimal(int numerator, int denominator) {\n    \n  }\n}",
+    "golang": "func fractionToDecimal(numerator int, denominator int) string {\n    \n}",
+    "ruby": "# @param {Integer} numerator\n# @param {Integer} denominator\n# @return {String}\ndef fraction_to_decimal(numerator, denominator)\n    \nend",
+    "scala": "object Solution {\n    def fractionToDecimal(numerator: Int, denominator: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn fraction_to_decimal(numerator: i32, denominator: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (fraction-to-decimal numerator denominator)\n  (-> exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec fraction_to_decimal(Numerator :: integer(), Denominator :: integer()) -> unicode:unicode_binary().\nfraction_to_decimal(Numerator, Denominator) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec fraction_to_decimal(numerator :: integer, denominator :: integer) :: String.t\n  def fraction_to_decimal(numerator, denominator) do\n    \n  end\nend"
+  }
+}

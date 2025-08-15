@@ -1,0 +1,54 @@
+{
+  "title": "Find the Sequence of Strings Appeared on the Screen",
+  "problem_id": "3566",
+  "frontend_id": "3324",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-sequence-of-strings-appeared-on-the-screen",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a string target.\nAlice is going to type target on her computer using a special keyboard that has only two keys:\nNote that initially there is an empty string \"\" on the screen, so she can only press key 1.\nReturn a list of all strings that appear on the screen as Alice types target, in the order they appear, using the minimum key presses.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: target = \"abc\"\nOutput: [\"a\",\"aa\",\"ab\",\"aba\",\"abb\",\"abc\"]\nExplanation:\nThe sequence of key presses done by Alice are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: target = \"he\"\nOutput: [\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"ha\",\"hb\",\"hc\",\"hd\",\"he\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= target.length <= 400",
+    "target consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Append the character <code>'a'</code> using key 1.",
+    "Convert it to the required character using key 2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> stringSequence(string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> stringSequence(String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stringSequence(self, target):\n        \"\"\"\n        :type target: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stringSequence(self, target: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** stringSequence(char* target, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> StringSequence(string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} target\n * @return {string[]}\n */\nvar stringSequence = function(target) {\n    \n};",
+    "typescript": "function stringSequence(target: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $target\n     * @return String[]\n     */\n    function stringSequence($target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stringSequence(_ target: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stringSequence(target: String): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> stringSequence(String target) {\n    \n  }\n}",
+    "golang": "func stringSequence(target string) []string {\n    \n}",
+    "ruby": "# @param {String} target\n# @return {String[]}\ndef string_sequence(target)\n    \nend",
+    "scala": "object Solution {\n    def stringSequence(target: String): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn string_sequence(target: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (string-sequence target)\n  (-> string? (listof string?))\n  )",
+    "erlang": "-spec string_sequence(Target :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nstring_sequence(Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec string_sequence(target :: String.t) :: [String.t]\n  def string_sequence(target) do\n    \n  end\nend"
+  }
+}

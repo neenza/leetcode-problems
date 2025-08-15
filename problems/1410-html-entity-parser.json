@@ -1,0 +1,54 @@
+{
+  "title": "HTML Entity Parser",
+  "problem_id": "1526",
+  "frontend_id": "1410",
+  "difficulty": "Medium",
+  "problem_slug": "html-entity-parser",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "HTML entity parser is the parser that takes HTML code as input and replace all the entities of the special characters by the characters itself.\nThe special characters and their entities for HTML are:\nGiven the input text string to the HTML parser, you have to implement the entity parser.\nReturn the text after replacing the entities by the special characters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"&amp; is an HTML entity but &ambassador; is not.\"\nOutput: \"& is an HTML entity but &ambassador; is not.\"\nExplanation: The parser will replace the &amp; entity by &",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"and I quote: &quot;...&quot;\"\nOutput: \"and I quote: \\\"...\\\"\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 105",
+    "The string may contain any possible characters out of all the 256 ASCII characters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Search the string for all the occurrences of the character '&'.",
+    "For every '&' check if it matches an HTML entity by checking the ';' character and if entity found replace it in the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string entityParser(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String entityParser(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def entityParser(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def entityParser(self, text: str) -> str:\n        ",
+    "c": "char* entityParser(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public string EntityParser(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {string}\n */\nvar entityParser = function(text) {\n    \n};",
+    "typescript": "function entityParser(text: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return String\n     */\n    function entityParser($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func entityParser(_ text: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun entityParser(text: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String entityParser(String text) {\n    \n  }\n}",
+    "golang": "func entityParser(text string) string {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {String}\ndef entity_parser(text)\n    \nend",
+    "scala": "object Solution {\n    def entityParser(text: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn entity_parser(text: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (entity-parser text)\n  (-> string? string?)\n  )",
+    "erlang": "-spec entity_parser(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\nentity_parser(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec entity_parser(text :: String.t) :: String.t\n  def entity_parser(text) do\n    \n  end\nend"
+  }
+}

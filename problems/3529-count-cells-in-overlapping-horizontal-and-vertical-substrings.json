@@ -1,0 +1,67 @@
+{
+  "title": "Count Cells in Overlapping Horizontal and Vertical Substrings",
+  "problem_id": "3821",
+  "frontend_id": "3529",
+  "difficulty": "Medium",
+  "problem_slug": "count-cells-in-overlapping-horizontal-and-vertical-substrings",
+  "topics": [
+    "Array",
+    "String",
+    "Rolling Hash",
+    "String Matching",
+    "Matrix",
+    "Hash Function"
+  ],
+  "description": "You are given an m x n matrix grid consisting of characters and a string pattern.\nA horizontal substring is a contiguous sequence of characters read from left to right. If the end of a row is reached before the substring is complete, it wraps to the first column of the next row and continues as needed. You do not wrap from the bottom row back to the top.\nA vertical substring is a contiguous sequence of characters read from top to bottom. If the bottom of a column is reached before the substring is complete, it wraps to the first row of the next column and continues as needed. You do not wrap from the last column back to the first.\nCount the number of cells in the matrix that satisfy the following condition:\nReturn the count of these cells.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"a\",\"a\",\"c\",\"c\"],[\"b\",\"b\",\"b\",\"c\"],[\"a\",\"a\",\"b\",\"a\"],[\"c\",\"a\",\"a\",\"c\"],[\"a\",\"a\",\"b\",\"a\"]], pattern = \"abaca\"\nOutput: 1\nExplanation:\nThe pattern \"abaca\" appears once as a horizontal substring (colored blue) and once as a vertical substring (colored red), intersecting at one cell (colored purple).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\"c\",\"a\",\"a\",\"a\"],[\"a\",\"a\",\"b\",\"a\"],[\"b\",\"b\",\"a\",\"a\"],[\"a\",\"a\",\"b\",\"a\"]], pattern = \"aba\"\nOutput: 4\nExplanation:\nThe cells colored above are all part of at least one horizontal and one vertical substring matching the pattern \"aba\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[\"a\"]], pattern = \"a\"\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 1000",
+    "1 <= m * n <= 105",
+    "1 <= pattern.length <= m * n",
+    "grid and pattern consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a string hashing or pattern matching algorithm to efficiently find all horizontal and vertical occurrences of the pattern in the grid.",
+    "Track the positions of each match and count only the cells that appear in both horizontal and vertical matches."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countCells(vector<vector<char>>& grid, string pattern) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCells(char[][] grid, String pattern) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCells(self, grid, pattern):\n        \"\"\"\n        :type grid: List[List[str]]\n        :type pattern: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCells(self, grid: List[List[str]], pattern: str) -> int:\n        ",
+    "c": "int countCells(char** grid, int gridSize, int* gridColSize, char* pattern) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountCells(char[][] grid, string pattern) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @param {string} pattern\n * @return {number}\n */\nvar countCells = function(grid, pattern) {\n    \n};",
+    "typescript": "function countCells(grid: string[][], pattern: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @param String $pattern\n     * @return Integer\n     */\n    function countCells($grid, $pattern) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCells(_ grid: [[Character]], _ pattern: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCells(grid: Array<CharArray>, pattern: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCells(List<List<String>> grid, String pattern) {\n    \n  }\n}",
+    "golang": "func countCells(grid [][]byte, pattern string) int {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @param {String} pattern\n# @return {Integer}\ndef count_cells(grid, pattern)\n    \nend",
+    "scala": "object Solution {\n    def countCells(grid: Array[Array[Char]], pattern: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_cells(grid: Vec<Vec<char>>, pattern: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-cells grid pattern)\n  (-> (listof (listof char?)) string? exact-integer?)\n  )",
+    "erlang": "-spec count_cells(Grid :: [[char()]], Pattern :: unicode:unicode_binary()) -> integer().\ncount_cells(Grid, Pattern) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_cells(grid :: [[char]], pattern :: String.t) :: integer\n  def count_cells(grid, pattern) do\n    \n  end\nend"
+  }
+}

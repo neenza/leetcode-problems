@@ -1,0 +1,58 @@
+{
+  "title": "Longest Duplicate Substring",
+  "problem_id": "1122",
+  "frontend_id": "1044",
+  "difficulty": "Hard",
+  "problem_slug": "longest-duplicate-substring",
+  "topics": [
+    "String",
+    "Binary Search",
+    "Sliding Window",
+    "Rolling Hash",
+    "Suffix Array",
+    "Hash Function"
+  ],
+  "description": "Given a string s, consider all duplicated substrings: (contiguous) substrings of s that occur 2 or more times. The occurrences may overlap.\nReturn any duplicated substring that has the longest possible length. If s does not have a duplicated substring, the answer is \"\".\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"banana\"\nOutput: \"ana\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcd\"\nOutput: \"\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 3 * 104",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary search for the length of the answer.  (If there's an answer of length 10, then there are answers of length 9, 8, 7, ...)",
+    "To check whether an answer of length K exists, we can use Rabin-Karp 's algorithm."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string longestDupSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestDupSubstring(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestDupSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestDupSubstring(self, s: str) -> str:\n        ",
+    "c": "char* longestDupSubstring(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LongestDupSubstring(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestDupSubstring = function(s) {\n    \n};",
+    "typescript": "function longestDupSubstring(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function longestDupSubstring($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestDupSubstring(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestDupSubstring(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String longestDupSubstring(String s) {\n    \n  }\n}",
+    "golang": "func longestDupSubstring(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef longest_dup_substring(s)\n    \nend",
+    "scala": "object Solution {\n    def longestDupSubstring(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_dup_substring(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (longest-dup-substring s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec longest_dup_substring(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlongest_dup_substring(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_dup_substring(s :: String.t) :: String.t\n  def longest_dup_substring(s) do\n    \n  end\nend"
+  }
+}

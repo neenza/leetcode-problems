@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Value of a String in an Array",
+  "problem_id": "2589",
+  "frontend_id": "2496",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-value-of-a-string-in-an-array",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "The value of an alphanumeric string can be defined as:\nGiven an array strs of alphanumeric strings, return the maximum value of any string in strs.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: strs = [\"alic3\",\"bob\",\"3\",\"4\",\"00000\"]\nOutput: 5\nExplanation: \n- \"alic3\" consists of both letters and digits, so its value is its length, i.e. 5.\n- \"bob\" consists only of letters, so its value is also its length, i.e. 3.\n- \"3\" consists only of digits, so its value is its numeric equivalent, i.e. 3.\n- \"4\" also consists only of digits, so its value is 4.\n- \"00000\" consists only of digits, so its value is 0.\nHence, the maximum value is 5, of \"alic3\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: strs = [\"1\",\"01\",\"001\",\"0001\"]\nOutput: 1\nExplanation: \nEach string in the array has value 1. Hence, we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= strs.length <= 100",
+    "1 <= strs[i].length <= 9",
+    "strs[i] consists of only lowercase English letters and digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For strings comprising only of digits, convert them into integers.",
+    "For all other strings, calculate their length."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumValue(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumValue(String[] strs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumValue(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumValue(self, strs: List[str]) -> int:\n        ",
+    "c": "int maximumValue(char** strs, int strsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumValue(string[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar maximumValue = function(strs) {\n    \n};",
+    "typescript": "function maximumValue(strs: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function maximumValue($strs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumValue(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumValue(strs: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumValue(List<String> strs) {\n    \n  }\n}",
+    "golang": "func maximumValue(strs []string) int {\n    \n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef maximum_value(strs)\n    \nend",
+    "scala": "object Solution {\n    def maximumValue(strs: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_value(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-value strs)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_value(Strs :: [unicode:unicode_binary()]) -> integer().\nmaximum_value(Strs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_value(strs :: [String.t]) :: integer\n  def maximum_value(strs) do\n    \n  end\nend"
+  }
+}

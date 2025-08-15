@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Difference Score in a Grid",
+  "problem_id": "3391",
+  "frontend_id": "3148",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-difference-score-in-a-grid",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given an m x n matrix grid consisting of positive integers. You can move from a cell in the matrix to any other cell that is either to the bottom or to the right (not necessarily adjacent). The score of a move from a cell with the value c1 to a cell with the value c2 is c2 - c1.\nYou can start at any cell, and you have to make at least one move.\nReturn the maximum total score you can achieve.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[9,5,7,3],[8,9,6,1],[6,7,14,3],[2,5,3,1]]\nOutput: 9\nExplanation: We start at the cell (0, 1) , and we perform the following moves: - Move from the cell (0, 1) to (2, 1) with a score of 7 - 5 = 2 . - Move from the cell (2, 1) to (2, 2) with a score of 14 - 7 = 7 . The total score is 2 + 7 = 9 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[4,3,2],[3,2,1]]\nOutput: -1\nExplanation: We start at the cell (0, 0) , and we perform one move: (0, 0) to (0, 1) . The score is 3 - 4 = -1 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "2 <= m, n <= 1000",
+    "4 <= m * n <= 105",
+    "1 <= grid[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Any path from a cell <code>(x1, y1)</code> to another cell <code>(x2, y2)</code> will always have a score of <code>grid[x2][y2] - grid[x1][y1]</code>.",
+    "Let’s say we fix the starting cell <code>(x1, y1)</code>, how to the find a cell <code>(x2, y2)</code> such that the value <code>grid[x2][y2] - grid[x1][y1]</code> is the maximum possible?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(List<List<Integer>> grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maxScore(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxScore(IList<IList<int>> grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxScore = function(grid) {\n    \n};",
+    "typescript": "function maxScore(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxScore($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(grid: List<List<Int>>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maxScore(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_score(grid)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(grid: List[List[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_score(Grid :: [[integer()]]) -> integer().\nmax_score(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(grid :: [[integer]]) :: integer\n  def max_score(grid) do\n    \n  end\nend"
+  }
+}

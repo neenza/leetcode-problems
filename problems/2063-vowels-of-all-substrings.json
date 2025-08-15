@@ -1,0 +1,61 @@
+{
+  "title": "Vowels of All Substrings",
+  "problem_id": "2187",
+  "frontend_id": "2063",
+  "difficulty": "Medium",
+  "problem_slug": "vowels-of-all-substrings",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "Given a string word, return the sum of the number of vowels ('a', 'e', 'i', 'o', and 'u') in every substring of word.\nA substring is a contiguous (non-empty) sequence of characters within a string.\nNote: Due to the large constraints, the answer may not fit in a signed 32-bit integer. Please be careful during the calculations.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"aba\"\nOutput: 6\nExplanation: \nAll possible substrings are: \"a\", \"ab\", \"aba\", \"b\", \"ba\", and \"a\".\n- \"b\" has 0 vowels in it\n- \"a\", \"ab\", \"ba\", and \"a\" have 1 vowel each\n- \"aba\" has 2 vowels in it\nHence, the total sum of vowels = 0 + 1 + 1 + 1 + 1 + 2 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"abc\"\nOutput: 3\nExplanation: \nAll possible substrings are: \"a\", \"ab\", \"abc\", \"b\", \"bc\", and \"c\".\n- \"a\", \"ab\", and \"abc\" have 1 vowel each\n- \"b\", \"bc\", and \"c\" have 0 vowels each\nHence, the total sum of vowels = 1 + 1 + 1 + 0 + 0 + 0 = 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"ltcd\"\nOutput: 0\nExplanation: There are no vowels in any substring of \"ltcd\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 105",
+    "word consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since generating substrings is not an option, can we count the number of substrings a vowel appears in?",
+    "How much does each vowel contribute to the total sum?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countVowels(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countVowels(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countVowels(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countVowels(self, word: str) -> int:\n        ",
+    "c": "long long countVowels(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountVowels(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar countVowels = function(word) {\n    \n};",
+    "typescript": "function countVowels(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function countVowels($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countVowels(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countVowels(word: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countVowels(String word) {\n    \n  }\n}",
+    "golang": "func countVowels(word string) int64 {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef count_vowels(word)\n    \nend",
+    "scala": "object Solution {\n    def countVowels(word: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_vowels(word: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-vowels word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_vowels(Word :: unicode:unicode_binary()) -> integer().\ncount_vowels(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_vowels(word :: String.t) :: integer\n  def count_vowels(word) do\n    \n  end\nend"
+  }
+}

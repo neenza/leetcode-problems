@@ -1,0 +1,54 @@
+{
+  "title": "Find the Value of the Partition",
+  "problem_id": "2845",
+  "frontend_id": "2740",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-value-of-the-partition",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "You are given a positive integer array nums.\nPartition nums into two arrays, nums1 and nums2, such that:\nThe value of the partition is |max(nums1) - min(nums2)|.\nHere, max(nums1) denotes the maximum element of the array nums1, and min(nums2) denotes the minimum element of the array nums2.\nReturn the integer denoting the value of such partition.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,2,4]\nOutput: 1\nExplanation: We can partition the array nums into nums1 = [1,2] and nums2 = [3,4].\n- The maximum element of the array nums1 is equal to 2.\n- The minimum element of the array nums2 is equal to 3.\nThe value of the partition is |2 - 3| = 1. \nIt can be proven that 1 is the minimum value out of all partitions.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [100,1,10]\nOutput: 9\nExplanation: We can partition the array nums into nums1 = [10] and nums2 = [100,1].\n- The maximum element of the array nums1 is equal to 10.\n- The minimum element of the array nums2 is equal to 1.\nThe value of the partition is |10 - 1| = 9.\nIt can be proven that 9 is the minimum value out of all partitions.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array.",
+    "The answer is min(nums[i+1] - nums[i]) for all i in the range [0, n-2]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findValueOfPartition(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findValueOfPartition(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findValueOfPartition(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findValueOfPartition(self, nums: List[int]) -> int:\n        ",
+    "c": "int findValueOfPartition(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindValueOfPartition(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findValueOfPartition = function(nums) {\n    \n};",
+    "typescript": "function findValueOfPartition(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findValueOfPartition($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findValueOfPartition(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findValueOfPartition(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findValueOfPartition(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findValueOfPartition(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_value_of_partition(nums)\n    \nend",
+    "scala": "object Solution {\n    def findValueOfPartition(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_value_of_partition(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-value-of-partition nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_value_of_partition(Nums :: [integer()]) -> integer().\nfind_value_of_partition(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_value_of_partition(nums :: [integer]) :: integer\n  def find_value_of_partition(nums) do\n    \n  end\nend"
+  }
+}

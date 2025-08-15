@@ -1,0 +1,38 @@
+{
+  "title": "Analyze Organization Hierarchy",
+  "problem_id": "3828",
+  "frontend_id": "3482",
+  "difficulty": "Hard",
+  "problem_slug": "analyze-organization-hierarchy",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employees\nWrite a solution to analyze the organizational hierarchy and answer the following:\nReturn the result table ordered by the result ordered by level in ascending order, then by budget in descending order, and finally by employee_name in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+----------------+---------+\n| Column Name    | Type    | \n+----------------+---------+\n| employee_id    | int     |\n| employee_name  | varchar |\n| manager_id     | int     |\n| salary         | int     |\n| department     | varchar |\n+----------------+----------+\nemployee_id is the unique key for this table.\nEach row contains information about an employee, including their ID, name, their manager's ID, salary, and department.\nmanager_id is null for the top-level manager (CEO).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------------+------------+--------+-------------+\n| employee_id | employee_name | manager_id | salary | department  |\n+-------------+---------------+------------+--------+-------------+\n| 1           | Alice         | null       | 12000  | Executive   |\n| 2           | Bob           | 1          | 10000  | Sales       |\n| 3           | Charlie       | 1          | 10000  | Engineering |\n| 4           | David         | 2          | 7500   | Sales       |\n| 5           | Eva           | 2          | 7500   | Sales       |\n| 6           | Frank         | 3          | 9000   | Engineering |\n| 7           | Grace         | 3          | 8500   | Engineering |\n| 8           | Hank          | 4          | 6000   | Sales       |\n| 9           | Ivy           | 6          | 7000   | Engineering |\n| 10          | Judy          | 6          | 7000   | Engineering |\n+-------------+---------------+------------+--------+-------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+-------------+---------------+-------+-----------+--------+\n| employee_id | employee_name | level | team_size | budget |\n+-------------+---------------+-------+-----------+--------+\n| 1           | Alice         | 1     | 9         | 84500  |\n| 3           | Charlie       | 2     | 4         | 41500  |\n| 2           | Bob           | 2     | 3         | 31000  |\n| 6           | Frank         | 3     | 2         | 23000  |\n| 4           | David         | 3     | 1         | 13500  |\n| 7           | Grace         | 3     | 0         | 8500   |\n| 5           | Eva           | 3     | 0         | 7500   |\n| 9           | Ivy           | 4     | 0         | 7000   |\n| 10          | Judy          | 4     | 0         | 7000   |\n| 8           | Hank          | 4     | 0         | 6000   |\n+-------------+---------------+-------+-----------+--------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef analyze_organization_hierarchy(employees: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

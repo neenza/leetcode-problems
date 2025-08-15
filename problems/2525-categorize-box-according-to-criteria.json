@@ -1,0 +1,52 @@
+{
+  "title": "Categorize Box According to Criteria",
+  "problem_id": "2619",
+  "frontend_id": "2525",
+  "difficulty": "Easy",
+  "problem_slug": "categorize-box-according-to-criteria",
+  "topics": [
+    "Math"
+  ],
+  "description": "Given four integers length, width, height, and mass, representing the dimensions and mass of a box, respectively, return a string representing the category of the box.\nNote that the volume of the box is the product of its length, width and height.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: length = 1000, width = 35, height = 700, mass = 300\nOutput: \"Heavy\"\nExplanation: \nNone of the dimensions of the box is greater or equal to 104. \nIts volume = 24500000 <= 109. So it cannot be categorized as \"Bulky\".\nHowever mass >= 100, so the box is \"Heavy\".\nSince the box is not \"Bulky\" but \"Heavy\", we return \"Heavy\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: length = 200, width = 50, height = 800, mass = 50\nOutput: \"Neither\"\nExplanation: \nNone of the dimensions of the box is greater or equal to 104.\nIts volume = 8 * 106 <= 109. So it cannot be categorized as \"Bulky\".\nIts mass is also less than 100, so it cannot be categorized as \"Heavy\" either. \nSince its neither of the two above categories, we return \"Neither\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= length, width, height <= 105",
+    "1 <= mass <= 103"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use conditional statements to find the right category of the box."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string categorizeBox(int length, int width, int height, int mass) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String categorizeBox(int length, int width, int height, int mass) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def categorizeBox(self, length, width, height, mass):\n        \"\"\"\n        :type length: int\n        :type width: int\n        :type height: int\n        :type mass: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def categorizeBox(self, length: int, width: int, height: int, mass: int) -> str:\n        ",
+    "c": "char* categorizeBox(int length, int width, int height, int mass) {\n    \n}",
+    "csharp": "public class Solution {\n    public string CategorizeBox(int length, int width, int height, int mass) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} length\n * @param {number} width\n * @param {number} height\n * @param {number} mass\n * @return {string}\n */\nvar categorizeBox = function(length, width, height, mass) {\n    \n};",
+    "typescript": "function categorizeBox(length: number, width: number, height: number, mass: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $length\n     * @param Integer $width\n     * @param Integer $height\n     * @param Integer $mass\n     * @return String\n     */\n    function categorizeBox($length, $width, $height, $mass) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func categorizeBox(_ length: Int, _ width: Int, _ height: Int, _ mass: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun categorizeBox(length: Int, width: Int, height: Int, mass: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String categorizeBox(int length, int width, int height, int mass) {\n    \n  }\n}",
+    "golang": "func categorizeBox(length int, width int, height int, mass int) string {\n    \n}",
+    "ruby": "# @param {Integer} length\n# @param {Integer} width\n# @param {Integer} height\n# @param {Integer} mass\n# @return {String}\ndef categorize_box(length, width, height, mass)\n    \nend",
+    "scala": "object Solution {\n    def categorizeBox(length: Int, width: Int, height: Int, mass: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn categorize_box(length: i32, width: i32, height: i32, mass: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (categorize-box length width height mass)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec categorize_box(Length :: integer(), Width :: integer(), Height :: integer(), Mass :: integer()) -> unicode:unicode_binary().\ncategorize_box(Length, Width, Height, Mass) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec categorize_box(length :: integer, width :: integer, height :: integer, mass :: integer) :: String.t\n  def categorize_box(length, width, height, mass) do\n    \n  end\nend"
+  }
+}

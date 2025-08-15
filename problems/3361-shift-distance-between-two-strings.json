@@ -1,0 +1,57 @@
+{
+  "title": "Shift Distance Between Two Strings",
+  "problem_id": "3591",
+  "frontend_id": "3361",
+  "difficulty": "Medium",
+  "problem_slug": "shift-distance-between-two-strings",
+  "topics": [
+    "Array",
+    "String",
+    "Prefix Sum"
+  ],
+  "description": "You are given two strings s and t of the same length, and two integer arrays nextCost and previousCost.\nIn one operation, you can pick any index i of s, and perform either one of the following actions:\nThe shift distance is the minimum total cost of operations required to transform s into t.\nReturn the shift distance from s to t.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abab\", t = \"baba\", nextCost = [100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], previousCost = [1,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leet\", t = \"code\", nextCost = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], previousCost = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]\nOutput: 31\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length == t.length <= 105",
+    "s and t consist only of lowercase English letters.",
+    "nextCost.length == previousCost.length == 26",
+    "0 <= nextCost[i], previousCost[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "- For every unordered pair of characters <code>(a, b)</code>, the cost of turning <code>a</code> into <code>b</code> is equal to the minimum between: \r\n<ul>\r\n<li>If <code>i < j</code>, <code>nextCost[i] + nextCost[i + 1] + … + nextCost[j - 1]</code>, and <code>nextCost[i] + nextCost[i + 1] + … + nextCost[25] + nextCost[0] + … + nextCost[j - 1]</code> otherwise.</li>\r\n    \r\n    <li>If <code>i < j</code>, <code>prevCost[i] + prevCost[i - 1] + … + prevCost[0] + prevCost[25] + … + prevCost[j + 1]</code>, and <code>prevCost[i] + prevCost[i - 1] + … + prevCost[j + 1]</code> otherwise.</li>\r\n    </ul>\r\n    Where <code>i</code> and <code>j</code> are the indices of <code>a</code> and <code>b</code> in the alphabet.",
+    "The shift distance is the sum of costs of turning <code>s[i]</code> into <code>t[i]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long shiftDistance(string s, string t, vector<int>& nextCost, vector<int>& previousCost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long shiftDistance(String s, String t, int[] nextCost, int[] previousCost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shiftDistance(self, s, t, nextCost, previousCost):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type nextCost: List[int]\n        :type previousCost: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shiftDistance(self, s: str, t: str, nextCost: List[int], previousCost: List[int]) -> int:\n        ",
+    "c": "long long shiftDistance(char* s, char* t, int* nextCost, int nextCostSize, int* previousCost, int previousCostSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long ShiftDistance(string s, string t, int[] nextCost, int[] previousCost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number[]} nextCost\n * @param {number[]} previousCost\n * @return {number}\n */\nvar shiftDistance = function(s, t, nextCost, previousCost) {\n    \n};",
+    "typescript": "function shiftDistance(s: string, t: string, nextCost: number[], previousCost: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @param Integer[] $nextCost\n     * @param Integer[] $previousCost\n     * @return Integer\n     */\n    function shiftDistance($s, $t, $nextCost, $previousCost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shiftDistance(_ s: String, _ t: String, _ nextCost: [Int], _ previousCost: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shiftDistance(s: String, t: String, nextCost: IntArray, previousCost: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int shiftDistance(String s, String t, List<int> nextCost, List<int> previousCost) {\n    \n  }\n}",
+    "golang": "func shiftDistance(s string, t string, nextCost []int, previousCost []int) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @param {Integer[]} next_cost\n# @param {Integer[]} previous_cost\n# @return {Integer}\ndef shift_distance(s, t, next_cost, previous_cost)\n    \nend",
+    "scala": "object Solution {\n    def shiftDistance(s: String, t: String, nextCost: Array[Int], previousCost: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shift_distance(s: String, t: String, next_cost: Vec<i32>, previous_cost: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (shift-distance s t nextCost previousCost)\n  (-> string? string? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec shift_distance(S :: unicode:unicode_binary(), T :: unicode:unicode_binary(), NextCost :: [integer()], PreviousCost :: [integer()]) -> integer().\nshift_distance(S, T, NextCost, PreviousCost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shift_distance(s :: String.t, t :: String.t, next_cost :: [integer], previous_cost :: [integer]) :: integer\n  def shift_distance(s, t, next_cost, previous_cost) do\n    \n  end\nend"
+  }
+}

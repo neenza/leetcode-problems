@@ -1,0 +1,60 @@
+{
+  "title": "Verifying an Alien Dictionary",
+  "problem_id": "990",
+  "frontend_id": "953",
+  "difficulty": "Easy",
+  "problem_slug": "verifying-an-alien-dictionary",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.\nGiven a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographically in this alien language.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"\nOutput: true\nExplanation: As 'h' comes before 'l' in this language, then the sequence is sorted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"\nOutput: false\nExplanation: As 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\"\nOutput: false\nExplanation: The first three characters \"app\" match, and the second string is shorter (in size.) According to lexicographical rules \"apple\" > \"app\", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (More info).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 20",
+    "order.length == 26",
+    "All characters in words[i] and order are English lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isAlienSorted(vector<string>& words, string order) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isAlienSorted(String[] words, String order) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isAlienSorted(self, words, order):\n        \"\"\"\n        :type words: List[str]\n        :type order: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isAlienSorted(self, words: List[str], order: str) -> bool:\n        ",
+    "c": "bool isAlienSorted(char** words, int wordsSize, char* order) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsAlienSorted(string[] words, string order) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} order\n * @return {boolean}\n */\nvar isAlienSorted = function(words, order) {\n    \n};",
+    "typescript": "function isAlienSorted(words: string[], order: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $order\n     * @return Boolean\n     */\n    function isAlienSorted($words, $order) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isAlienSorted(_ words: [String], _ order: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isAlienSorted(words: Array<String>, order: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isAlienSorted(List<String> words, String order) {\n    \n  }\n}",
+    "golang": "func isAlienSorted(words []string, order string) bool {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} order\n# @return {Boolean}\ndef is_alien_sorted(words, order)\n    \nend",
+    "scala": "object Solution {\n    def isAlienSorted(words: Array[String], order: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_alien_sorted(words: Vec<String>, order: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-alien-sorted words order)\n  (-> (listof string?) string? boolean?)\n  )",
+    "erlang": "-spec is_alien_sorted(Words :: [unicode:unicode_binary()], Order :: unicode:unicode_binary()) -> boolean().\nis_alien_sorted(Words, Order) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_alien_sorted(words :: [String.t], order :: String.t) :: boolean\n  def is_alien_sorted(words, order) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Overview\n\nTo check if the given `words` are sorted, for each word we need to check if every word on its right is lexicographically larger.  Likewise, for each word we could check if every word on its left is lexicographically smaller. That said, we don't need to compare every word to all of the words to its right. Instead, we can just compare each pair of adjacent words. If all pairs of adjacent words are sorted, then we can safely conclude that `words` is sorted.  Furthermore, if any pair of adjacent words is not sorted, then we know that `words` is not sorted.\n\n\n\n\n\n![Compare adjacent words.](../Figures/953/953.png)\n\n\n*Figure 1. Compare adjacent words.*---\n\n### Approach 1: Compare adjacent words\n\n**Intuition**\n\nFollowing the above overview, we want to compare each pair of adjacent words to see if they are sorted lexicographically. This can be achieved by a naive for-loop iterating over the input array. We can store the `letter-order` relation of each letter with its ranking in `order`, so that we can easily access the order of letters when we compare them.\n\nThe remaining piece of the puzzle is how to compare two words lexicographically. This is not difficult, but there are a few edge cases that we must consider. To compare two adjacent words `words[i]` and `words[i+1]`, we want to find the first letter that is different: if `words[i]` has the lexicographically smaller letter, then we can exit from the iteration because we know `words[i]` and `words[i+1]` are in the right order; however, if `words[i]` has the lexicographically larger letter, then we immediately return `false`, because we found one pair of words that are in the wrong order.\n\nWe also need to consider the boundaries. While we loop from the beginning to the end of one word, we need to check if the other word has ended. Take the words `apple` and `app` as an example, we cannot iterate over all of the letters in `apple` because the word `app` is shorter. In this case, we reach the end of one word before finding the first different letter.  When this happens, we must examine the length of each word: if the words are the same length or the former word is shorter, then `words` is sorted.  However, if the latter word is shorter, then `words` is not sorted.\n\n\n\n\n**Algorithm**\n\n- Initialize a hashmap/array to record the relations between each letter and its ranking in `order`.\n- Iterate over `words` and compare each pair of adjacent words.\n  - Iterate over each letter to find the first different letter between `words[i]` and `words[i + 1]`.\n    - If `words[i + 1]` ends before `words[i]` and no different letters are found, then we need to return false because `words[i + 1]` should come before `words[i]` (for example, `apple` and `app`).\n    - If we find the first different letter and the two words are in the correct order, then we can exit from the current iteration and proceed to the next pair of words.\n    - If we find the first different letter and the two words are in the wrong order, then we can safely return false.\n- If we reach this point, it means that we have examined all pairs of adjacent words and that they are all sorted. Therefore we can return true.**Complexity analysis**\n\nLet $$N$$ be the length of `order`, and $$M$$ be the total number of characters in `words`.\n\n* Time complexity : $$O(M)$$.\n\n  Storing the `letter-order` relation of each letter takes $$O(N)$$ time. For the nested for-loops, we examine each pair of words in the outer-loop and for the inner loop, we check each letter in the current word. Therefore, we will iterate over all of letters in `words`.\n\n  Taking both into consideration, the time complexity is $$O(M + N)$$. However, we know that $$N$$ is fixed as $$26$$. Therefore, the time complexity is $$O(M)$$.\n\n* Space complexity : $$O(1)$$.\n  The only extra data structure we use is the hashmap/array that serves to store the `letter-order` relations for each word in `order`. Because the length of `order` is fixed as $$26$$, this approach achieves constant space complexity.\n\n\n---"
+}

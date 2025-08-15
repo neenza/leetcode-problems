@@ -1,0 +1,55 @@
+{
+  "title": "Rotate Array",
+  "problem_id": "189",
+  "frontend_id": "189",
+  "difficulty": "Medium",
+  "problem_slug": "rotate-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Two Pointers"
+  ],
+  "description": "Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5,6,7], k = 3\nOutput: [5,6,7,1,2,3,4]\nExplanation:\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,-100,3,99], k = 2\nOutput: [3,99,-1,-100]\nExplanation: \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-231 <= nums[i] <= 231 - 1",
+    "0 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The easiest solution would use additional memory and that is perfectly fine.",
+    "The actual trick comes when trying to solve this problem without using any additional memory. This means you need to use the original array somehow to move the elements around. Now, we can place each element in its original location and shift all the elements around it to adjust as that would be too costly and most likely will time out on larger input arrays.",
+    "One line of thought is based on reversing the array (or parts of it) to obtain the desired result. Think about how reversal might potentially help us out by using an example.",
+    "The other line of thought is a tad bit complicated but essentially it builds on the idea of placing each element in its original position while keeping track of the element originally in that position. Basically, at every step, we place an element in its rightful position and keep track of the element already there or the one being overwritten in an additional variable. We can't do this in one linear pass and the idea here is based on <b>cyclic-dependencies</b> between elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    void rotate(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void rotate(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rotate(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: None Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rotate(self, nums: List[int], k: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "c": "void rotate(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public void Rotate(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar rotate = function(nums, k) {\n    \n};",
+    "typescript": "/**\n Do not return anything, modify nums in-place instead.\n */\nfunction rotate(nums: number[], k: number): void {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return NULL\n     */\n    function rotate(&$nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rotate(_ nums: inout [Int], _ k: Int) {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rotate(nums: IntArray, k: Int): Unit {\n        \n    }\n}",
+    "dart": "class Solution {\n  void rotate(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func rotate(nums []int, k int)  {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef rotate(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def rotate(nums: Array[Int], k: Int): Unit = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rotate(nums: &mut Vec<i32>, k: i32) {\n        \n    }\n}"
+  }
+}

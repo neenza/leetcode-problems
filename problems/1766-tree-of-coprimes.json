@@ -1,0 +1,66 @@
+{
+  "title": "Tree of Coprimes",
+  "problem_id": "1875",
+  "frontend_id": "1766",
+  "difficulty": "Hard",
+  "problem_slug": "tree-of-coprimes",
+  "topics": [
+    "Array",
+    "Math",
+    "Tree",
+    "Depth-First Search",
+    "Number Theory"
+  ],
+  "description": "There is a tree (i.e., a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. Each node has a value associated with it, and the root of the tree is node 0.\nTo represent this tree, you are given an integer array nums and a 2D array edges. Each nums[i] represents the ith node's value, and each edges[j] = [uj, vj] represents an edge between nodes uj and vj in the tree.\nTwo values x and y are coprime if gcd(x, y) == 1 where gcd(x, y) is the greatest common divisor of x and y.\nAn ancestor of a node i is any other node on the shortest path from node i to the root. A node is not considered an ancestor of itself.\nReturn an array ans of size n, where ans[i] is the closest ancestor to node i such that nums[i] and nums[ans[i]] are coprime, or -1 if there is no such ancestor.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,3,2], edges = [[0,1],[1,2],[1,3]]\nOutput: [-1,0,0,1]\nExplanation: In the above figure, each node's value is in parentheses.\n- Node 0 has no coprime ancestors.\n- Node 1 has only one ancestor, node 0. Their values are coprime (gcd(2,3) == 1).\n- Node 2 has two ancestors, nodes 1 and 0. Node 1's value is not coprime (gcd(3,3) == 3), but node 0's\n  value is (gcd(2,3) == 1), so node 0 is the closest valid ancestor.\n- Node 3 has two ancestors, nodes 1 and 0. It is coprime with node 1 (gcd(3,2) == 1), so node 1 is its\n  closest valid ancestor.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/06/untitled-diagram.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,6,10,2,3,6,15], edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]\nOutput: [-1,0,-1,0,0,0,-1]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/06/untitled-diagram1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "nums.length == n",
+    "1 <= nums[i] <= 50",
+    "1 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[j].length == 2",
+    "0 <= uj, vj < n",
+    "uj != vj"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that for a node, it's not optimal to consider two nodes with the same value.",
+    "Note that the values are small enough for you to iterate over them instead of iterating over the parent nodes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getCoprimes(vector<int>& nums, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getCoprimes(int[] nums, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getCoprimes(self, nums, edges):\n        \"\"\"\n        :type nums: List[int]\n        :type edges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getCoprimes(self, nums: List[int], edges: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getCoprimes(int* nums, int numsSize, int** edges, int edgesSize, int* edgesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GetCoprimes(int[] nums, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} edges\n * @return {number[]}\n */\nvar getCoprimes = function(nums, edges) {\n    \n};",
+    "typescript": "function getCoprimes(nums: number[], edges: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $edges\n     * @return Integer[]\n     */\n    function getCoprimes($nums, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getCoprimes(_ nums: [Int], _ edges: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getCoprimes(nums: IntArray, edges: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getCoprimes(List<int> nums, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func getCoprimes(nums []int, edges [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} edges\n# @return {Integer[]}\ndef get_coprimes(nums, edges)\n    \nend",
+    "scala": "object Solution {\n    def getCoprimes(nums: Array[Int], edges: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_coprimes(nums: Vec<i32>, edges: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (get-coprimes nums edges)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec get_coprimes(Nums :: [integer()], Edges :: [[integer()]]) -> [integer()].\nget_coprimes(Nums, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_coprimes(nums :: [integer], edges :: [[integer]]) :: [integer]\n  def get_coprimes(nums, edges) do\n    \n  end\nend"
+  }
+}

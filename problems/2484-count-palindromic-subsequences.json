@@ -1,0 +1,59 @@
+{
+  "title": "Count Palindromic Subsequences",
+  "problem_id": "2577",
+  "frontend_id": "2484",
+  "difficulty": "Hard",
+  "problem_slug": "count-palindromic-subsequences",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string of digits s, return the number of palindromic subsequences of s having length 5. Since the answer may be very large, return it modulo 109 + 7.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"103301\"\nOutput: 2\nExplanation: \nThere are 6 possible subsequences of length 5: \"10330\",\"10331\",\"10301\",\"10301\",\"13301\",\"03301\". \nTwo of them (both equal to \"10301\") are palindromic.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0000000\"\nOutput: 21\nExplanation: All 21 subsequences are \"00000\", which is palindromic.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"9999900000\"\nOutput: 2\nExplanation: The only two palindromic subsequences are \"99999\" and \"00000\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are 100 possibilities for the first two characters of the palindrome.",
+    "Iterate over all characters, letting the current character be the center of the palindrome."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPalindromes(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPalindromes(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPalindromes(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPalindromes(self, s: str) -> int:\n        ",
+    "c": "int countPalindromes(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPalindromes(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countPalindromes = function(s) {\n    \n};",
+    "typescript": "function countPalindromes(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countPalindromes($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPalindromes(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPalindromes(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPalindromes(String s) {\n    \n  }\n}",
+    "golang": "func countPalindromes(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_palindromes(s)\n    \nend",
+    "scala": "object Solution {\n    def countPalindromes(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_palindromes(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-palindromes s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_palindromes(S :: unicode:unicode_binary()) -> integer().\ncount_palindromes(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_palindromes(s :: String.t) :: integer\n  def count_palindromes(s) do\n    \n  end\nend"
+  }
+}

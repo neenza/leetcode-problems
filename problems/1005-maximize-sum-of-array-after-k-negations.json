@@ -1,0 +1,58 @@
+{
+  "title": "Maximize Sum Of Array After K Negations",
+  "problem_id": "1047",
+  "frontend_id": "1005",
+  "difficulty": "Easy",
+  "problem_slug": "maximize-sum-of-array-after-k-negations",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an integer array nums and an integer k, modify the array in the following way:\nYou should apply this process exactly k times. You may choose the same index i multiple times.\nReturn the largest possible sum of the array after modifying it in this way.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,2,3], k = 1\nOutput: 5\nExplanation: Choose index 1 and nums becomes [4,-2,3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,-1,0,2], k = 3\nOutput: 6\nExplanation: Choose indices (1, 2, 2) and nums becomes [3,1,0,2].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,-3,-1,5,-4], k = 2\nOutput: 13\nExplanation: Choose indices (1, 4) and nums becomes [2,3,-1,5,4].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "-100 <= nums[i] <= 100",
+    "1 <= k <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestSumAfterKNegations(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestSumAfterKNegations(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestSumAfterKNegations(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestSumAfterKNegations(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int largestSumAfterKNegations(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestSumAfterKNegations(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar largestSumAfterKNegations = function(nums, k) {\n    \n};",
+    "typescript": "function largestSumAfterKNegations(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function largestSumAfterKNegations($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestSumAfterKNegations(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestSumAfterKNegations(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestSumAfterKNegations(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func largestSumAfterKNegations(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef largest_sum_after_k_negations(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def largestSumAfterKNegations(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_sum_after_k_negations(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-sum-after-k-negations nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec largest_sum_after_k_negations(Nums :: [integer()], K :: integer()) -> integer().\nlargest_sum_after_k_negations(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_sum_after_k_negations(nums :: [integer], k :: integer) :: integer\n  def largest_sum_after_k_negations(nums, k) do\n    \n  end\nend"
+  }
+}

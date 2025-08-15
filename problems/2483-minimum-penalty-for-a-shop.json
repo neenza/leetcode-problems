@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Penalty for a Shop",
+  "problem_id": "2576",
+  "frontend_id": "2483",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-penalty-for-a-shop",
+  "topics": [
+    "String",
+    "Prefix Sum"
+  ],
+  "description": "You are given the customer visit log of a shop represented by a 0-indexed string customers consisting only of characters 'N' and 'Y':\nIf the shop closes at the jth hour (0 <= j <= n), the penalty is calculated as follows:\nReturn the earliest hour at which the shop must be closed to incur a minimum penalty.\nNote that if a shop closes at the jth hour, it means the shop is closed at the hour j.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: customers = \"YYNY\"\nOutput: 2\nExplanation: \n- Closing the shop at the 0th hour incurs in 1+1+0+1 = 3 penalty.\n- Closing the shop at the 1st hour incurs in 0+1+0+1 = 2 penalty.\n- Closing the shop at the 2nd hour incurs in 0+0+0+1 = 1 penalty.\n- Closing the shop at the 3rd hour incurs in 0+0+1+1 = 2 penalty.\n- Closing the shop at the 4th hour incurs in 0+0+1+0 = 1 penalty.\nClosing the shop at 2nd or 4th hour gives a minimum penalty. Since 2 is earlier, the optimal closing time is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: customers = \"NNNNN\"\nOutput: 0\nExplanation: It is best to close the shop at the 0th hour as no customers arrive.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: customers = \"YYYY\"\nOutput: 4\nExplanation: It is best to close the shop at the 4th hour as customers arrive at each hour.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= customers.length <= 105",
+    "customers consists only of characters 'Y' and 'N'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "At any index, the penalty is the sum of prefix count of ‘N’ and suffix count of ‘Y’.",
+    "Enumerate all indices and find the minimum such value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int bestClosingTime(string customers) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bestClosingTime(String customers) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def bestClosingTime(self, customers):\n        \"\"\"\n        :type customers: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def bestClosingTime(self, customers: str) -> int:\n        ",
+    "c": "int bestClosingTime(char* customers) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BestClosingTime(string customers) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} customers\n * @return {number}\n */\nvar bestClosingTime = function(customers) {\n    \n};",
+    "typescript": "function bestClosingTime(customers: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $customers\n     * @return Integer\n     */\n    function bestClosingTime($customers) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func bestClosingTime(_ customers: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun bestClosingTime(customers: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int bestClosingTime(String customers) {\n    \n  }\n}",
+    "golang": "func bestClosingTime(customers string) int {\n    \n}",
+    "ruby": "# @param {String} customers\n# @return {Integer}\ndef best_closing_time(customers)\n    \nend",
+    "scala": "object Solution {\n    def bestClosingTime(customers: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn best_closing_time(customers: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (best-closing-time customers)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec best_closing_time(Customers :: unicode:unicode_binary()) -> integer().\nbest_closing_time(Customers) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec best_closing_time(customers :: String.t) :: integer\n  def best_closing_time(customers) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Video Solution\n\n---## Solution Article\n\n--- \n\n### Overview\n\nWe can start by considering the brute force approach, attempting to close the shop at every possible hour.\n\n![img](../Figures/2483/1.png)\n\nThe calculation of the penalty (closed after a certain number of hours) is divided into two parts: \n\n- During open hours, every 'N' character contributes to 1 penalty. \n- During closed hours, every 'Y' character also contributes to 1 penalty.\n\nWe can calculate the total penalty by traversing `customers`.\n\n![img](../Figures/2483/2.png)\n\nHowever, considering the size of `customers`, this quadratic time complexity approach may exceed the time limit. Therefore, we need to consider a more efficient traversal method. \n\n---\n\n### Approach 1: Two Passes\n\n#### Intuition   \n\nNotice that in two adjacent cases (i.e. closing after the ${i-1}^{th}$ hour and closing after the $i^{th}$ hour, which differ by 1 hour), only the status of one hour has changed, where the status has been changed from a closing hour to an open hour. Hence, we can record the overall penalty change by calculating the difference in penalty between two adjacent cases.\n\n![img](../Figures/2483/3.png)\n\nTherefore, let's first calculate the total penalty if we close instantly (after hour 0). Hence, the penalty of closing the shop after $0^{th}$ hour is based on the status of `customers[0]`:\n\n- If it is 'Y', it means one penalty from the closed hours is removed, resulting in a decrease of the total penalty by 1.\n- If it is 'N', it means an additional penalty is added from the open hours, resulting in an increase of the total penalty by 1.\n\nEach time we iterate over a new `i`, we are finding the new penalty if we were to close after `i` instead of after `i - 1`.\n\nPlease refer to the slides below for a visual representation. The \"OPEN\" and \"CLOSE\" in the slides represent the contribution toward the current penalty. \"OPEN\" means that there are no customers when the store is open, and \"CLOSE\" means that there are customers when the store is closed.\n\n\n!?!../Documents/2483/s1.json:601,301!?!#### Algorithm\n\n1) Iterate over `customers`, set `cur_penalty` and `min_penalty` as the total count of the character `Y`, which is the penalty if the shop closes at hour 0. Set `earliest_hour` as 0.\n\n2) Iterate over `customers`, for the $i^{th}$ character:\n    - If `customers[i] = 'Y'`, decrement `cur_penalty` by 1. Otherwise, increment `cur_penalty` by 1.\n    - If `cur_penalty < min_penalty`, set `earliest_hour` as `i + 1`, and set `min_penalty` as `cur_penalty`.\n\n3) Return `earliest_hour` once the iteration is complete.\n\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of `customers`.\n\n* Time complexity: $O(n)$\n\n    - The first traversal is used to calculate the total count of 'Y' in `customers`, which takes $O(n)$ time.\n    - In each step of the second traversal, we update `cur_penalty`, `min_penalty`, and `earliest_hour` based on the character `customers[i]`, which can be done in constant time. Therefore, the second traversal also takes $O(n)$ time.\n\n\n* Space complexity: $O(1)$\n\n    - We only need to update several parameters, `cur_penalty`, `min_penalty` and `earliest_hour`, which takes $O(1)$ space.---\n\n### Approach 2: One Pass \n\n#### Intuition   \n\nIn the previous solution, we used the first traversal to calculate the count of 'Y', ensuring that each penalty obtained is accurate. However, we don't need the actual penalty values. It is important to note that the problem only requires the **earliest hour** with the lowest penalty. Thus, the only thing that matters is the penalty of the hours relative to each other, and our initial reference point is not significant.\n\n![img](../Figures/2483/4.png)\n\nFor convenience, we can directly set `cur_penalty` to 0, which is equivalent to shifting the curve of the actual penalty vertically. This will not affect the calculation result. Note that we could initialize `cur_penalty` to any value and the algorithm would still work since the initial reference point is insignificant.#### Algorithm\n\n1) Set `cur_penalty`, `min_penalty` and `earliest_hour` as 0.\n\n2) Iterate over `customers`, for the $i^{th}$ character:\n    - If `customers[i] = 'Y'`, decrement `cur_penalty` by 1. Otherwise, increment `cur_penalty` by 1.\n    - If `cur_penalty < min_penalty`, set `earliest_hour` as `i + 1`, and set `min_penalty` as `cur_penalty`.\n\n3) Return `earliest_hour` once the iteration is complete.\n\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of `customers`.\n\n* Time complexity: $O(n)$\n\n    - In each step of the traversal, we update `cur_penalty`, `min_penalty`, and `earliest_hour` based on the character `customers[i]`, which can be done in constant time. Therefore, the traversal takes $O(n)$ time.\n\n\n* Space complexity: $O(1)$\n\n    - We only need to update several parameters, `cur_penalty`, `min_penalty` and `earliest_hour`, which takes $O(1)$ space."
+}

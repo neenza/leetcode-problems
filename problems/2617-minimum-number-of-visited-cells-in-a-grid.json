@@ -1,0 +1,76 @@
+{
+  "title": "Minimum Number of Visited Cells in a Grid",
+  "problem_id": "2697",
+  "frontend_id": "2617",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-number-of-visited-cells-in-a-grid",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Breadth-First Search",
+    "Union Find",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Monotonic Stack"
+  ],
+  "description": "You are given a 0-indexed m x n integer matrix grid. Your initial position is at the top-left cell (0, 0).\nStarting from the cell (i, j), you can move to one of the following cells:\nReturn the minimum number of cells you need to visit to reach the bottom-right cell (m - 1, n - 1). If there is no valid path, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[3,4,2,1],[4,2,3,1],[2,1,0,0],[2,4,0,0]]\nOutput: 4\nExplanation: The image above shows one of the paths that visits exactly 4 cells.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/25/ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[3,4,2,1],[4,2,1,1],[2,1,1,0],[3,4,1,0]]\nOutput: 3\nExplanation: The image above shows one of the paths that visits exactly 3 cells.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/25/ex2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[2,1,0],[1,0,0]]\nOutput: -1\nExplanation: It can be proven that no path exists.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/01/26/ex3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 105",
+    "1 <= m * n <= 105",
+    "0 <= grid[i][j] < m * n",
+    "grid[m - 1][n - 1] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each cell (i,j), it is critical to find out the minimum number of steps to reach (i,j), denoted dis[i][j], quickly, given the tight constraint.",
+    "Calculate dis[i][j] going left to right, top to bottom.",
+    "Suppose we want to calculate dis[i][j], keep track of a priority queue that stores (dis[i][k], i, k) for all k ≤ j, and another priority queue that stores (dis[k][j], k, j) for all k ≤ i."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumVisitedCells(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumVisitedCells(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumVisitedCells(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumVisitedCells(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumVisitedCells(int** grid, int gridSize, int* gridColSize){\n\n}",
+    "csharp": "public class Solution {\n    public int MinimumVisitedCells(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumVisitedCells = function(grid) {\n    \n};",
+    "typescript": "function minimumVisitedCells(grid: number[][]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumVisitedCells($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumVisitedCells(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumVisitedCells(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumVisitedCells(List<List<int>> grid) {\n\n  }\n}",
+    "golang": "func minimumVisitedCells(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_visited_cells(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumVisitedCells(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_visited_cells(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-visited-cells grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n\n  )",
+    "erlang": "-spec minimum_visited_cells(Grid :: [[integer()]]) -> integer().\nminimum_visited_cells(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_visited_cells(grid :: [[integer]]) :: integer\n  def minimum_visited_cells(grid) do\n    \n  end\nend"
+  }
+}

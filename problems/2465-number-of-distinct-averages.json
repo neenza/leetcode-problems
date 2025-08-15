@@ -1,0 +1,57 @@
+{
+  "title": "Number of Distinct Averages",
+  "problem_id": "2561",
+  "frontend_id": "2465",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-distinct-averages",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array nums of even length.\nAs long as nums is not empty, you must repetitively:\nThe average of two numbers a and b is (a + b) / 2.\nReturn the number of distinct averages calculated using the above process.\nNote that when there is a tie for a minimum or maximum number, any can be removed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,1,4,0,3,5]\nOutput: 2\nExplanation:\n1. Remove 0 and 5, and the average is (0 + 5) / 2 = 2.5. Now, nums = [4,1,4,3].\n2. Remove 1 and 4. The average is (1 + 4) / 2 = 2.5, and nums = [4,3].\n3. Remove 3 and 4, and the average is (3 + 4) / 2 = 3.5.\nSince there are 2 distinct numbers among 2.5, 2.5, and 3.5, we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,100]\nOutput: 1\nExplanation:\nThere is only one average to be calculated after removing 1 and 100, so we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "nums.length is even.",
+    "0 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try sorting the array.",
+    "Store the averages being calculated, and find the distinct ones."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distinctAverages(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctAverages(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctAverages(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctAverages(self, nums: List[int]) -> int:\n        ",
+    "c": "int distinctAverages(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistinctAverages(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar distinctAverages = function(nums) {\n    \n};",
+    "typescript": "function distinctAverages(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function distinctAverages($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctAverages(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctAverages(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctAverages(List<int> nums) {\n    \n  }\n}",
+    "golang": "func distinctAverages(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef distinct_averages(nums)\n    \nend",
+    "scala": "object Solution {\n    def distinctAverages(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_averages(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-averages nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec distinct_averages(Nums :: [integer()]) -> integer().\ndistinct_averages(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_averages(nums :: [integer]) :: integer\n  def distinct_averages(nums) do\n    \n  end\nend"
+  }
+}

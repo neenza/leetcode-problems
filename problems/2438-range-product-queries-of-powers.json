@@ -1,0 +1,57 @@
+{
+  "title": "Range Product Queries of Powers",
+  "problem_id": "2529",
+  "frontend_id": "2438",
+  "difficulty": "Medium",
+  "problem_slug": "range-product-queries-of-powers",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "Given a positive integer n, there exists a 0-indexed array called powers, composed of the minimum number of powers of 2 that sum to n. The array is sorted in non-decreasing order, and there is only one way to form the array.\nYou are also given a 0-indexed 2D integer array queries, where queries[i] = [lefti, righti]. Each queries[i] represents a query where you have to find the product of all powers[j] with lefti <= j <= righti.\nReturn an array answers, equal in length to queries, where answers[i] is the answer to the ith query. Since the answer to the ith query may be too large, each answers[i] should be returned modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 15, queries = [[0,1],[2,2],[0,3]]\nOutput: [2,4,64]\nExplanation:\nFor n = 15, powers = [1,2,4,8]. It can be shown that powers cannot be a smaller size.\nAnswer to 1st query: powers[0] * powers[1] = 1 * 2 = 2.\nAnswer to 2nd query: powers[2] = 4.\nAnswer to 3rd query: powers[0] * powers[1] * powers[2] * powers[3] = 1 * 2 * 4 * 8 = 64.\nEach answer modulo 109 + 7 yields the same answer, so [2,4,64] is returned.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, queries = [[0,0]]\nOutput: [2]\nExplanation:\nFor n = 2, powers = [2].\nThe answer to the only query is powers[0] = 2. The answer modulo 109 + 7 is the same, so [2] is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 109",
+    "1 <= queries.length <= 105",
+    "0 <= starti <= endi < powers.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The <code>powers</code> array can be created using the binary representation of <code>n</code>.",
+    "Once <code>powers</code> is formed, the products can be taken using brute force."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> productQueries(int n, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] productQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def productQueries(self, n, queries):\n        \"\"\"\n        :type n: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def productQueries(self, n: int, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* productQueries(int n, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ProductQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar productQueries = function(n, queries) {\n    \n};",
+    "typescript": "function productQueries(n: number, queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function productQueries($n, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func productQueries(_ n: Int, _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun productQueries(n: Int, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> productQueries(int n, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func productQueries(n int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef product_queries(n, queries)\n    \nend",
+    "scala": "object Solution {\n    def productQueries(n: Int, queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn product_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (product-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec product_queries(N :: integer(), Queries :: [[integer()]]) -> [integer()].\nproduct_queries(N, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec product_queries(n :: integer, queries :: [[integer]]) :: [integer]\n  def product_queries(n, queries) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Binary Decomposition + Direct Calculation\n\n#### Intuition\n\nAccording to the problem description, we need to decompose $n$ into the smallest number of powers of $2$, which suggests writing $n$ in binary form. If the $k$-th binary digit from low to high (where $k \\geq 0$) is $1$, then $2^k$ is included in the decomposition.\n\n> For example, when $n = 11$, its binary representation is $(1011)_2$, and the $0$th, $1$st, and $3$rd binary digits from low to high are $1$. So, it is decomposed as $[2^0, 2^1, 2^3] = [1, 2, 8]$.\n\nAfter obtaining the decomposition of $n$, and since the problem guarantees that $n \\geq 10^9 < 2^{30} - 1$, the decomposition array will contain at most $29$ elements. For each query $[\\textit{left}, \\textit{right}]$, we can directly traverse the corresponding elements in the decomposition array and compute the answer, with the time complexity of a single query being $O(\\log n)$.\n\nFurthermore, since the total number of different queries is at most $\\dfrac{29 \\times 28}{2} + 29 = 435$, we can also precompute the answer to each query in advance. This results in a preprocessing time complexity of $O(\\log^2 n)$, reducing the time complexity of each query to $O(1)$ thereafter.\n\n#### Implementation#### Complexity Analysis\n\nLet $q$ be the length of the array $\\textit{queries}$.\n\n- Time complexity: $O(q \\times \\log n)$\n  \n  For each query, we need to traverse the binary bits of $n$.\n\n- Space complexity: $O(\\log n)$\n  \n  This is the space required for the binary decomposition of $n$.\n  \n---\n\n### Approach 2: Binary Decomposition + Prefix Product Preprocessing\n\n#### Intuition\n\nAs in the previous approach, the key idea is to decompose the integer $n$ into a list of powers of $2$ based on its binary representation. If the $k$-th binary digit (starting from the least significant bit) is $1$, then the power $2^k$ contributes to the decomposition of $n$.\n> For example, for $n = 11$, we have the binary representation $(1011)_2$. The $0$th, $1$st, and $3$rd bits are $1$, so $n$ can be represented as $[2^0, 2^1, 2^3] = [1, 2, 8]$.\n\nNow, instead of calculating the product of elements in each query range on-the-fly like in Approach 1, we can optimize this using precomputation. Since the number of binary digits set to $1$ in $n$ is at most $29$, we can precompute the product of all subarrays of the decomposition array in advance.\n\nWe create a 2D array `results`, where `results[i][j]` stores the product of all powers of 2 from index $i$ to $j$ in the `bins` array. This way, once the precomputation is done, we can answer each query in constant time by directly reading from this table.\n\nThis gives us a trade-off:\n- Preprocessing takes $O(\\log^2 n)$ time, since for at most 29 elements we compute all $O(\\log^2 n)$ subarray products.\n- Each query takes $O(1)$ time afterward, since we just do a single lookup.\n\nThis is very efficient when the number of queries is large or the same queries are asked repeatedly.\n\n#### Implementation#### Complexity Analysis\n\nLet $q$ be the length of the array $\\textit{queries}$.\n\n- Time complexity: $O(\\log^2 n + q)$\n  \n  After preprocessing, we don't need to traverse every time when querying.\n\n- Space complexity: $O(\\log^2 n)$\n  \n  This is the space required to store the preprocessed results.\n  \n---"
+}

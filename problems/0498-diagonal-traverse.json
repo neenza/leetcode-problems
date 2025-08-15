@@ -1,0 +1,60 @@
+{
+  "title": "Diagonal Traverse",
+  "problem_id": "498",
+  "frontend_id": "498",
+  "difficulty": "Medium",
+  "problem_slug": "diagonal-traverse",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given an m x n matrix mat, return an array of all the elements of the array in a diagonal order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,4,7,5,3,6,8,9]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/10/diag1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[1,2],[3,4]]\nOutput: [1,2,3,4]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/10/diag1-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 104",
+    "1 <= m * n <= 104",
+    "-105 <= mat[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findDiagonalOrder(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findDiagonalOrder(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findDiagonalOrder(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findDiagonalOrder(int** mat, int matSize, int* matColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindDiagonalOrder(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number[]}\n */\nvar findDiagonalOrder = function(mat) {\n    \n};",
+    "typescript": "function findDiagonalOrder(mat: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer[]\n     */\n    function findDiagonalOrder($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findDiagonalOrder(_ mat: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findDiagonalOrder(mat: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findDiagonalOrder(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func findDiagonalOrder(mat [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer[]}\ndef find_diagonal_order(mat)\n    \nend",
+    "scala": "object Solution {\n    def findDiagonalOrder(mat: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_diagonal_order(mat: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-diagonal-order mat)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_diagonal_order(Mat :: [[integer()]]) -> [integer()].\nfind_diagonal_order(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_diagonal_order(mat :: [[integer]]) :: [integer]\n  def find_diagonal_order(mat) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n### Approach 1: Diagonal Iteration and Reversal\n\n**Intuition**\n\nA common strategy for solving a lot of programming problem is to first solve a stripped down, simpler version of them and then think what needs to be changed to achieve the original goal. Our first approach to this problem is also based on this very idea. So, instead of thinking about the zig-zag pattern of printing for the diagonals, let's say the problem statement simply asked us to print out the contents of the matrix, one diagonal after the other starting from the first element. Let's see what this problem would look like.The first row and the last column in this problem would serve as the starting point for the corresponding diagonal. Given an element inside a diagonal, say $$[i, j]$$, we can either go up the diagonal by going one row up and one column ahead i.e. $$[i - 1, j + 1]$$ or, we can go down the diagonal by going one row down and one column to the left i.e. $$[i + 1, j - 1]$$. *Note* that this applies to diagonals that go from `right to left` only. The math would change for the ones that go from left to right. \n\nThis is a simple problem to solve, right? The only difference between this one and the original problem is that some of the diagonals are not printed in the right order. That's all we need to fix to get the right solution!\n\n> We simply need to reverse the odd numbered diagonals before we add the elements to the final result array. So, for e.g. the third diagonal starting from the left would be [3, 7, 11] and before we add these elements to the final result array, we simply reverse them i.e. [11, 7, 3]. \n\n**Algorithm**\n\n1. Initialize a `result` array that we will eventually return. \n2. We would have an outer loop that will go over each of the diagonals one by one. As mentioned before, the elements in the first row and the last column would actually be the heads of their corresponding diagonals. \n3. We then have an inner while loop that iterates over all the elements in the diagonal. We can calculate the number of elements in the corresponding diagonal by doing some math but we can simply iterate until one of the indices goes out of bounds.\n4. For each diagonal we will need a new list or dynamic array like data structure since we don't know what size to allocate. Again, we can do some math and calculate the size of that particular diagonal and allocate memory; but it's not necessary for this explanation.  \n5. For odd numbered diagonals, we simply need to add the elements in our intermediary array, in reverse order to the final result array.**Complexity Analysis**\n\n* Time Complexity: $$O(N \\cdot M)$$ considering the array has $$N$$ rows and $$M$$ columns. An important thing to remember is that for all the odd numbered diagonals, we will be processing the elements twice since we have to reverse the elements before adding to the result array. Additionally, to save space, we have to `clear` the intermediate array before we process a new diagonal. That operation also takes $$O(K)$$ where $$K$$ is the size of that array. So, we will be processing all the elements of the array at least twice. But, as far as the asymptotic complexity is concerned, it remains the same.\n* Space Complexity: $$O(min(N, M))$$ since the extra space is occupied by the intermediate arrays we use for storing diagonal elements and the maximum it can occupy is the equal to the minimum of $$N$$ and $$M$$. Remember, the diagonal can only extend till one of its indices goes out of scope.---\n### Approach 2: Simulation\n\n**Intuition**\n\nThis approach simply and plainly does what the problem statement asks us to do. It's pure simulation. However, in order to implement this simulation, we need to understand the walking patterns inside the array. Basically, in the previous approach, figuring out the `head` of the diagonal was pretty easy. In this case, it won't be that easy. We need to figure out two things for each diagonal:\n\n1. The direction in which we want to process it's elements and\n2. The head or the starting point for the diagonal `depending upon its direction`.\n\nLet's see these two things annotated on a sample matrix.Now that we know what two things we need to figure out, let's get to the part where we actually do it! The direction is pretty straightforward. We can simply use a boolean variable and keep alternating it to figure out the direction for a diagonal. That part is sorted. The slightly tricky part is figuring out the head of the next diagonal. \n\nThe good part is, we already know the `end` of the previous diagonal. We can use that information to figure out the head of the next diagonal. \n\n**Next head when going UP**Let's look at the two scenarios that we may come across when we are at the tail end of a downwards diagonal and we want to find the head of the next diagonal.So, the general rule that we will be following when we want to find the head for an upwards going diagonal is that:\n\n> The head would be the node directly below the tail of the previous diagonal. Unless the tail lies in the last row of the matrix in which case the head would be the node right next to the tail.\n\n**Next head when going DOWN**Let's look at the two scenarios that we may come across when we are at the tail end of an upwards diagonal and we want to find the head of the next diagonal.So, the general rule that we will be following when we want to find the head for a downwards going diagonal is that:\n\n> The head would be the node to the right of the tail of the previous diagonal. Unless the tail lies in the last column of the matrix in which case the head would be the node directly below the tail.\n\n**Algorithm**\n\n1. Initialize a boolean variable called `direction` which will tell us whether the current diagonal is an upwards or downwards going. Based on the current direction and the tail, we will determine the head of the next diagonal. Initially the direction would be `1` which would indicate `up`. We will keep alternating this value from one iteration to the next.\n2. Assuming we know the head of a diagonal, say $$matrix[i][j]$$, we will use the direction to progress along the diagonal and process its elements. \n    - For an upwards going diagonal, the next element in the diagonal would be $$matrix[i - 1][j + 1]$$\n    - For a downwards going diagonal, the next element would be $$matrix[i + 1][j - 1]$$. \n3. We keep processing the elements of the current diagonal until we go out of the boundaries of the matrix. \n4. Now, given that we know the tail of the diagonal (the last node before we went out of bounds), let's see how we can find the next head. Note that in the following pseudocode, the `direction` is for the current diagonal and we are trying to find the head of the next diagonal. So, if the direction is `up`, it means the next diagonal would be going down and vice-versa.tail = [i, j]\n   if direction == up, then {\n      if [i, j + 1] is within bounds, then {\n          next_head = [i, j + 1]\n      } else { \n          next_head = [i + 1, j]\n      }\n   } else {\n      if [i + 1, j] is within bounds, then {\n          next_head = [i + 1, j]\n      } else { \n          next_head = [i, j + 1]\n      }\n   }5. We keep processing the elements of a diagonal and once the current diagonal ends, we use the current direction and the tail element to find the next head and we switch over to processing the next diagonal. Also remember to flip the direction bit.**Complexity Analysis**\n\n* Time Complexity: $$O(N \\cdot M)$$ since we process each element of the matrix exactly once.\n* Space Complexity: $$O(1)$$ since we don't make use of any additional data structure. Note that the space occupied by the output array doesn't count towards the space complexity since that is a requirement of the problem itself. Space complexity comprises any `additional` space that we may have used to get to build the final array. For the previous solution, it was the intermediate arrays. In this solution, we don't have any additional space apart from a couple of variables."
+}

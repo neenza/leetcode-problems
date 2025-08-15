@@ -1,0 +1,62 @@
+{
+  "title": "Unique Length-3 Palindromic Subsequences",
+  "problem_id": "2059",
+  "frontend_id": "1930",
+  "difficulty": "Medium",
+  "problem_slug": "unique-length-3-palindromic-subsequences",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "Given a string s, return the number of unique palindromes of length three that are a subsequence of s.\nNote that even if there are multiple ways to obtain the same subsequence, it is still only counted once.\nA palindrome is a string that reads the same forwards and backwards.\nA subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aabca\"\nOutput: 3\nExplanation: The 3 palindromic subsequences of length 3 are:\n- \"aba\" (subsequence of \"aabca\")\n- \"aaa\" (subsequence of \"aabca\")\n- \"aca\" (subsequence of \"aabca\")",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"adc\"\nOutput: 0\nExplanation: There are no palindromic subsequences of length 3 in \"adc\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bbcbaba\"\nOutput: 4\nExplanation: The 4 palindromic subsequences of length 3 are:\n- \"bbb\" (subsequence of \"bbcbaba\")\n- \"bcb\" (subsequence of \"bbcbaba\")\n- \"bab\" (subsequence of \"bbcbaba\")\n- \"aba\" (subsequence of \"bbcbaba\")",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 105",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the maximum number of length-3 palindromic strings?",
+    "How can we keep track of the characters that appeared to the left of a given position?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPalindromicSubsequence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPalindromicSubsequence(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPalindromicSubsequence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPalindromicSubsequence(self, s: str) -> int:\n        ",
+    "c": "int countPalindromicSubsequence(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPalindromicSubsequence(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countPalindromicSubsequence = function(s) {\n    \n};",
+    "typescript": "function countPalindromicSubsequence(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countPalindromicSubsequence($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPalindromicSubsequence(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPalindromicSubsequence(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPalindromicSubsequence(String s) {\n    \n  }\n}",
+    "golang": "func countPalindromicSubsequence(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_palindromic_subsequence(s)\n    \nend",
+    "scala": "object Solution {\n    def countPalindromicSubsequence(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_palindromic_subsequence(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-palindromic-subsequence s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_palindromic_subsequence(S :: unicode:unicode_binary()) -> integer().\ncount_palindromic_subsequence(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_palindromic_subsequence(s :: String.t) :: integer\n  def count_palindromic_subsequence(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Count Letters In-Between\n\n**Intuition**\n\nThere is only one possible form a palindrome with length 3 can take. The first and last character must be the same, and the character in the middle can be anything (including the same character as the first/last character).\n\nThe important thing to notice here is that the first and last characters must be the same. To solve this problem, we can focus on each letter of the alphabet `letter` and treat it as the first and last character. Then, we find how many characters we can put in between them to form a palindrome.\n\nThere may be many occurrences of a given `letter` in `s`. Which ones should we choose? We should choose the first occurrence of `letter` in `s` to be the first character in our palindrome, and the last occurrence of `letter` in `s` to be the last character in our palindrome. Why?\n\nThe problem wants us to find subsequences - so when we look for a character to put as the middle character in the palindrome, this character must also be in between our two occurrences in `s`. Thus, by choosing the first and last occurrence, we are maximizing the number of characters in between, and thus maximizing the number of potential palindromes we could form.\n\nFor each **unique** `letter` in `s`, we find `i` as the first index where `letter` occurs and `j` as the final index where `letter` occurs. Next, we look at all the characters between indices `i` and `j` (the range of `[i + 1, j - 1]`) and count how many **unique** letters there are. Each of these unique letters can form a palindrome by being between two `letter`.\n\n![example](../Figures/1930/1.png)How do we find the count of **unique** letters? We will use a hash set since hash sets do not record duplicates. We iterate over each index `k` between `i` and `j` and add `s[k]` to our hash set `between`. Once finished, we can add the size of `between` to our answer. We repeat this process for every unique `letter` that appears in `s`. We can also use a hash set to find all the unique letters that appear in `s`.\n\n**Algorithm**\n\n1. Create `letters`, a hash set of all letters in `s`.\n2. Initialize `ans = 0`.\n3. Iterate over each `letter` in `letters`:\n    - Calculate `i` as the first index in which `letter` appears in `s` and `j` as the final index in which `letter` appears in `s`:\n        - Initialize `i = -1` and `j = 0`. Iterate over each index `k` in `s`. If `s[k] = letter`, set `i = k` if `i = -1`, and set `j = k`.\n    - Initialize a hash set `between`.\n    - Iterate `k` over the indices between `i` and `j`:\n        - Add `s[k]` to `between`.\n    - Add the length of `between` to `ans`.\n4. Return `ans`.\n\n**Implementation**> Bonus Python 1-liner:**Complexity Analysis**\n\nGiven $$n$$ as the length of `s`,\n\n* Time complexity: $$O(n)$$\n\n    To create `letters`, we use $$O(n)$$ time to iterate over `s`.\n\n    Next, we iterate over each `letter` in `letters`. Because `s` only contains lowercase letters of the English alphabet, there will be no more than 26 iterations.\n    \n    At each iteration, we iterate over `s` to find `i` and `j`, which costs $$O(n)$$. Next, we iterate between `i` and `j`, which could cost $$O(n)$$ in the worst-case scenario.\n\n    Overall, each iteration costs $$O(n)$$. This gives us a time complexity of $$O(26n) = O(n)$$\n\n* Space complexity: $$O(1)$$\n\n    `letters` and `between` cannot grow beyond a size of 26, since `s` only contains letters of the English alphabet.---\n\n### Approach 2: Pre-Compute First and Last Indices\n\n**Intuition**\n\nWe can slightly optimize the previous approach by pre-computing the indices `i` and `j` for each `letter`.\n\nIn the first approach, it costs $$O(n)$$ to calculate `i` and `j`. While this does not affect the time complexity, it does add a large constant factor to our runtime. In this approach, we will spend $$O(n)$$ once, then be able to retrieve `i` and `j` for every letter in $$O(1)$$.\n\nLet `first` be an array of length `26`, where `first[c]` represents the first index the character `c` appears in `s`. Similarly, let `last` be an array of length `26`, where `last[c]` represents the last index the character `c` appears in `s`. Because we need integer indices, we will map each character to its position in the alphabet.\n\n- `'a' = 0`.\n- `'b' = 1`.\n- ...\n- `'z' = 25`.\n\nWe will calculate the arrays `first` and `last` prior to calculating the answer. To indicate if a letter appears in `s` at all, we will initialize `first` to have values of `-1`, which would be overridden if a letter appears in `s`.\n\n> To calculate `first` and `last`, we use a similar process from the previous approach. We iterate over `s` and for each `s[i]`, if `first[s[i]] = -1`, we set `first[s[i]] = i`. We always set `last[s[i]] = i`.\n\nOnce we have `first` and `last`, we can iterate over each position in the alphabet `i`. We first check if this character appears in `s` at all, which we can do by checking if `first[i] = -1`. If `i` appears in `s`, we reference `first[i]` and `last[i]` to get the first and last indices.\n\nWe then perform the same process from the previous approach - declare a hash set `between`, iterate between the first and last indices, add each character to `between`, and finally add the length of `between` to our answer.\n\nWe repeat this process for each position `i` in the alphabet from `0` until `26`.\n\n**Algorithm**\n\n1. Initialize `first` and `last` as arrays of length `26` with values `-1`.\n2. Iterate `i` over the indices of `s`:\n    - Calculate the current alphabet position as `curr = s[i] - 'a'`.\n    - If `first[curr] = -1`, set `first[curr] = i`.\n    - Set `last[curr] = i`.\n3. Initialize `ans = 0`.\n4. Iterate over each alphabet position `i` from `0` until `26`:\n    - If `first[i] = -1`, continue to the next iteration.\n    - Initialize a hash set `between`.\n    - Iterate `j` over the indices between `first[i]` and `last[i]`:\n        - Add `s[j]` to `between`.\n    - Add the length of `between` to `ans`.\n5. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `s`,\n\n* Time complexity: $$O(n)$$\n\n    First, we calculate `first` and `last` by iterating over `s`, which costs $$O(n)$$.\n\n    Next, we iterate over 26 alphabet positions. At each iteration, we iterate `j` over some indices, which in the worst-case scenario would cost $$O(n)$$. Overall, each of the 26 iterations cost $$O(n)$$, giving us a time complexity of $$O(26n) = O(n)$$.\n\n* Space complexity: $$O(1)$$\n\n    `first`, `last`, and `between` all use constant space since `s` only contains letters in the English alphabet.---"
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Modify Columns",
+  "problem_id": "3067",
+  "frontend_id": "2884",
+  "difficulty": "Easy",
+  "problem_slug": "modify-columns",
+  "topics": [],
+  "description": "A company intends to give its employees a pay rise.\nWrite a solution to modify the salary column by multiplying each salary by 2.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame employees\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| salary      | int    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\nDataFrame employees\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 19666  |\n| Piper   | 74754  |\n| Mia     | 62509  |\n| Ulysses | 54866  |\n+---------+--------+\nOutput:\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 39332  |\n| Piper   | 149508 |\n| Mia     | 125018 |\n| Ulysses | 109732 |\n+---------+--------+\nExplanation:\nEvery salary has been doubled.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Considering multiplying each salary value by 2, using a simple assignment operation. The calculation of the value is done column-wise."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nOur objective is to modify the `salary` column in the DataFrame `employees` so that each employee's salary is doubled.\n\n**Key Concepts**:\n - **column-wise operations:** operations that can be performed on each individual element in a DataFrame Series. A few examples of types of column-wise operations are arithmetic operations, aggregate functions, filtering and conditional operations, and string operations.\n\n### Intuition\n\nWe double the salary for each employee by multiplying the `salary` column by 2. In pandas, operations can be applied column-wise, affecting each element in the column.\n\n```python\nemployees['salary'] = employees['salary'] * 2\n```\n\n**Visualization of column-wise operations**\n\n![fig](../Figures/3311/3311-1.png)\n\nThis line modifies the `salary` column of the `employees` DataFrame by doubling each value. Let's break it down piece by piece:\n\n**1. employees['salary']:** \n\nThis is how you access a specific column of a DataFrame in pandas. `employees` is the DataFrame, and `['salary']` refers to the column named \"salary\". It will return a pandas Series, which is a one-dimensional labeled array.\n\nSo, `employees['salary']` will give you all the values in the `salary` column of the DataFrame `employees`.\n\n**Example:**\nIf you have the following DataFrame:namesalaryJack19666Piper74754Mia62509Ulysses54866`employees['salary']` would give:indexsalary019666174754262509354866**2. employees['salary']**\n\npandas allows for vectorized operations. When you multiply a Series by a scalar (a single number), it multiplies every single element in the Series by that number.\n\nIn our case, it's doubling each value in the `salary` column.\n\n**Example:**\nUsing the previous DataFrame, `employees['salary'] * 2` would result in:indexsalary039332114950821250183109732**3. employees['salary'] = ...:**\n\nThis line updates the values in an existing column of the DataFrame. If the column `salary` didn't exist for some reason, pandas would create it.\n\nIn the statement `employees['salary'] = employees['salary'] * 2`, what we're essentially doing is taking each salary value from the `salary` column, doubling it, and then updating the original `salary` column with these newly calculated values.\n\nThe DataFrame `employees` retains its `salary` column, but the values within this column have now been updated to be twice their original amounts.\n\n### Implementation"
+}

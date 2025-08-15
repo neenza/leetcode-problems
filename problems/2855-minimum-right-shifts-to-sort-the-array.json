@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Right Shifts to Sort the Array",
+  "problem_id": "3045",
+  "frontend_id": "2855",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-right-shifts-to-sort-the-array",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a 0-indexed array nums of length n containing distinct positive integers. Return the minimum number of right shifts required to sort nums and -1 if this is not possible.\nA right shift is defined as shifting the element at index i to index (i + 1) % n, for all indices.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,4,5,1,2]\nOutput: 2\nExplanation: \nAfter the first right shift, nums = [2,3,4,5,1].\nAfter the second right shift, nums = [1,2,3,4,5].\nNow nums is sorted; therefore the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,5]\nOutput: 0\nExplanation: nums is already sorted therefore, the answer is 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,1,4]\nOutput: -1\nExplanation: It's impossible to sort the array using right shifts.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "nums contains distinct integers."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the pivot point around which the array is rotated.",
+    "Will the answer exist if there is more than one point where <code>nums[i] < nums[i-1]</code>?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumRightShifts(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumRightShifts(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumRightShifts(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumRightShifts(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumRightShifts(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumRightShifts(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumRightShifts = function(nums) {\n    \n};",
+    "typescript": "function minimumRightShifts(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumRightShifts($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumRightShifts(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumRightShifts(nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumRightShifts(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumRightShifts(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_right_shifts(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumRightShifts(nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_right_shifts(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-right-shifts nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_right_shifts(Nums :: [integer()]) -> integer().\nminimum_right_shifts(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_right_shifts(nums :: [integer]) :: integer\n  def minimum_right_shifts(nums) do\n    \n  end\nend"
+  }
+}

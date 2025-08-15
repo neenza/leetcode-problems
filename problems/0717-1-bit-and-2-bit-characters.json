@@ -1,0 +1,53 @@
+{
+  "title": "1-bit and 2-bit Characters",
+  "problem_id": "717",
+  "frontend_id": "717",
+  "difficulty": "Easy",
+  "problem_slug": "1-bit-and-2-bit-characters",
+  "topics": [
+    "Array"
+  ],
+  "description": "We have two special characters:\nGiven a binary array bits that ends with 0, return true if the last character must be a one-bit character.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: bits = [1,0,0]\nOutput: true\nExplanation: The only way to decode it is two-bit character and one-bit character.\nSo the last character is one-bit character.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: bits = [1,1,1,0]\nOutput: false\nExplanation: The only way to decode it is two-bit character and two-bit character.\nSo the last character is not one-bit character.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= bits.length <= 1000",
+    "bits[i] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of where the next character starts.  At the end, you want to know if you started on the last bit."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isOneBitCharacter(vector<int>& bits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isOneBitCharacter(int[] bits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isOneBitCharacter(self, bits):\n        \"\"\"\n        :type bits: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isOneBitCharacter(self, bits: List[int]) -> bool:\n        ",
+    "c": "bool isOneBitCharacter(int* bits, int bitsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsOneBitCharacter(int[] bits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} bits\n * @return {boolean}\n */\nvar isOneBitCharacter = function(bits) {\n    \n};",
+    "typescript": "function isOneBitCharacter(bits: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $bits\n     * @return Boolean\n     */\n    function isOneBitCharacter($bits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isOneBitCharacter(_ bits: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isOneBitCharacter(bits: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isOneBitCharacter(List<int> bits) {\n    \n  }\n}",
+    "golang": "func isOneBitCharacter(bits []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} bits\n# @return {Boolean}\ndef is_one_bit_character(bits)\n    \nend",
+    "scala": "object Solution {\n    def isOneBitCharacter(bits: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_one_bit_character(bits: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-one-bit-character bits)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_one_bit_character(Bits :: [integer()]) -> boolean().\nis_one_bit_character(Bits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_one_bit_character(bits :: [integer]) :: boolean\n  def is_one_bit_character(bits) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n\n### Approach 1: Increment Pointer\n\n#### Intuition\n\nWhen reading from the `i`-th position, if `bits[i] == 0`, the next character must be at `i + 1`, because `0` is 1-bit; else if `bits[i] == 1`, the next character must be at `i + 2`, because `1` is only present in 2-bit characters `10` and `11`. We increment our read-pointer `i` to the start of the next character appropriately. At the end, if our pointer is at `bits.length - 1`, then the last character must have a size of 1 bit.#### Complexity Analysis\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `bits`.\n\n* Space Complexity: $$O(1)$$, the space used by `i`.\n\n---\n\n### Approach 2: Greedy\n\n#### Intuition\n\nTo find if the last character in the array is a one-bit character, we can use a parity-based approach. First, we remove the last element, which is the character we want to check. We then initialize a `parity` variable and iterate backward through the array. Each time we encounter a `1`, we toggle `parity` with `parity ^= 1`, effectively flipping its value. This toggle allows us to track whether the number of `1`s is odd or even.\n\nAt the end, if `parity` is `0`, it indicates the last character is a one-bit character; if `parity` is `1`, it’s part of a two-bit sequence.#### Complexity Analysis\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the length of `bits`.\n\n* Space Complexity: $$O(1)$$, the space used by `parity` (or `i`)."
+}

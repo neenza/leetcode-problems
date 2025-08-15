@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Non-Zero Product of the Array Elements",
+  "problem_id": "2100",
+  "frontend_id": "1969",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-non-zero-product-of-the-array-elements",
+  "topics": [
+    "Math",
+    "Greedy",
+    "Recursion"
+  ],
+  "description": "You are given a positive integer p. Consider an array nums (1-indexed) that consists of the integers in the inclusive range [1, 2p - 1] in their binary representations. You are allowed to do the following operation any number of times:\nFor example, if x = 1101 and y = 0011, after swapping the 2nd bit from the right, we have x = 1111 and y = 0001.\nFind the minimum non-zero product of nums after performing the above operation any number of times. Return this product modulo 109 + 7.\nNote: The answer should be the minimum product before the modulo operation is done.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: p = 1\nOutput: 1\nExplanation: nums = [1].\nThere is only one element, so the product equals that element.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: p = 2\nOutput: 6\nExplanation: nums = [01, 10, 11].\nAny swap would either make the product 0 or stay the same.\nThus, the array product of 1 * 2 * 3 = 6 is already minimized.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: p = 3\nOutput: 1512\nExplanation: nums = [001, 010, 011, 100, 101, 110, 111]\n- In the first operation we can swap the leftmost bit of the second and fifth elements.\n    - The resulting array is [001, 110, 011, 100, 001, 110, 111].\n- In the second operation we can swap the middle bit of the third and fourth elements.\n    - The resulting array is [001, 110, 001, 110, 001, 110, 111].\nThe array product is 1 * 6 * 1 * 6 * 1 * 6 * 7 = 1512, which is the minimum possible product.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= p <= 60"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to minimize each element by swapping bits with any of the elements after it.",
+    "If you swap out all the 1s in some element, this will lead to a product of zero."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minNonZeroProduct(int p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minNonZeroProduct(int p) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minNonZeroProduct(self, p):\n        \"\"\"\n        :type p: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minNonZeroProduct(self, p: int) -> int:\n        ",
+    "c": "int minNonZeroProduct(int p) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinNonZeroProduct(int p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} p\n * @return {number}\n */\nvar minNonZeroProduct = function(p) {\n    \n};",
+    "typescript": "function minNonZeroProduct(p: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $p\n     * @return Integer\n     */\n    function minNonZeroProduct($p) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minNonZeroProduct(_ p: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minNonZeroProduct(p: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minNonZeroProduct(int p) {\n    \n  }\n}",
+    "golang": "func minNonZeroProduct(p int) int {\n    \n}",
+    "ruby": "# @param {Integer} p\n# @return {Integer}\ndef min_non_zero_product(p)\n    \nend",
+    "scala": "object Solution {\n    def minNonZeroProduct(p: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_non_zero_product(p: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-non-zero-product p)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_non_zero_product(P :: integer()) -> integer().\nmin_non_zero_product(P) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_non_zero_product(p :: integer) :: integer\n  def min_non_zero_product(p) do\n    \n  end\nend"
+  }
+}

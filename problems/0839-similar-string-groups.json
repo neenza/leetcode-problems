@@ -1,0 +1,57 @@
+{
+  "title": "Similar String Groups",
+  "problem_id": "869",
+  "frontend_id": "839",
+  "difficulty": "Hard",
+  "problem_slug": "similar-string-groups",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find"
+  ],
+  "description": "Two strings, X and Y, are considered similar if either they are identical or we can make them equivalent by swapping at most two letters (in distinct positions) within the string X.\nFor example, \"tars\" and \"rats\" are similar (swapping at positions 0 and 2), and \"rats\" and \"arts\" are similar, but \"star\" is not similar to \"tars\", \"rats\", or \"arts\".\nTogether, these form two connected groups by similarity: {\"tars\", \"rats\", \"arts\"} and {\"star\"}.  Notice that \"tars\" and \"arts\" are in the same group even though they are not similar.  Formally, each group is such that a word is in the group if and only if it is similar to at least one other word in the group.\nWe are given a list strs of strings where every string in strs is an anagram of every other string in strs. How many groups are there?\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: strs = [\"tars\",\"rats\",\"arts\",\"star\"]\nOutput: 2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: strs = [\"omv\",\"ovm\"]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= strs.length <= 300",
+    "1 <= strs[i].length <= 300",
+    "strs[i] consists of lowercase letters only.",
+    "All words in strs have the same length and are anagrams of each other."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSimilarGroups(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSimilarGroups(String[] strs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSimilarGroups(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSimilarGroups(self, strs: List[str]) -> int:\n        ",
+    "c": "int numSimilarGroups(char** strs, int strsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSimilarGroups(string[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar numSimilarGroups = function(strs) {\n    \n};",
+    "typescript": "function numSimilarGroups(strs: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function numSimilarGroups($strs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSimilarGroups(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSimilarGroups(strs: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSimilarGroups(List<String> strs) {\n    \n  }\n}",
+    "golang": "func numSimilarGroups(strs []string) int {\n    \n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef num_similar_groups(strs)\n    \nend",
+    "scala": "object Solution {\n    def numSimilarGroups(strs: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_similar_groups(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-similar-groups strs)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec num_similar_groups(Strs :: [unicode:unicode_binary()]) -> integer().\nnum_similar_groups(Strs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_similar_groups(strs :: [String.t]) :: integer\n  def num_similar_groups(strs) do\n    \n  end\nend"
+  }
+}

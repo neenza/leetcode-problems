@@ -1,0 +1,62 @@
+{
+  "title": "Count of Interesting Subarrays",
+  "problem_id": "2915",
+  "frontend_id": "2845",
+  "difficulty": "Medium",
+  "problem_slug": "count-of-interesting-subarrays",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums, an integer modulo, and an integer k.\nYour task is to find the count of subarrays that are interesting.\nA subarray nums[l..r] is interesting if the following condition holds:\nReturn an integer denoting the count of interesting subarrays.\nNote: A subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,4], modulo = 2, k = 1\nOutput: 3\nExplanation: In this example the interesting subarrays are: \nThe subarray nums[0..0] which is [3]. \n- There is only one index, i = 0, in the range [0, 0] that satisfies nums[i] % modulo == k. \n- Hence, cnt = 1 and cnt % modulo == k.  \nThe subarray nums[0..1] which is [3,2].\n- There is only one index, i = 0, in the range [0, 1] that satisfies nums[i] % modulo == k.  \n- Hence, cnt = 1 and cnt % modulo == k.\nThe subarray nums[0..2] which is [3,2,4]. \n- There is only one index, i = 0, in the range [0, 2] that satisfies nums[i] % modulo == k. \n- Hence, cnt = 1 and cnt % modulo == k. \nIt can be shown that there are no other interesting subarrays. So, the answer is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,1,9,6], modulo = 3, k = 0\nOutput: 2\nExplanation: In this example the interesting subarrays are: \nThe subarray nums[0..3] which is [3,1,9,6]. \n- There are three indices, i = 0, 2, 3, in the range [0, 3] that satisfy nums[i] % modulo == k. \n- Hence, cnt = 3 and cnt % modulo == k. \nThe subarray nums[1..1] which is [1]. \n- There is no index, i, in the range [1, 1] that satisfies nums[i] % modulo == k. \n- Hence, cnt = 0 and cnt % modulo == k. \nIt can be shown that there are no other interesting subarrays. So, the answer is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "1 <= modulo <= 109",
+    "0 <= k < modulo"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The problem can be solved using prefix sums.",
+    "Let <code>count[i]</code> be the number of indices where <code>nums[i] % modulo == k</code> among the first <code>i</code> indices.",
+    "<code>count[0] = 0</code> and <code>count[i] = count[i - 1] + (nums[i - 1] % modulo == k ? 1 : 0)</code> for <code>i = 1, 2, ..., n</code>.",
+    "Now we want to calculate for each <code>i = 1, 2, ..., n</code>, how many indices <code>j < i</code> such that <code>(count[i] - count[j]) % modulo == k</code>.",
+    "Rewriting <code>(count[i] - count[j]) % modulo == k</code> becomes <code>count[j] = (count[i] + modulo - k) % modulo</code>.",
+    "Using a map data structure, for each <code>i = 0, 1, 2, ..., n</code>, we just sum up all <code>map[(count[i] + modulo - k) % modulo]</code> before increasing <code>map[count[i] % modulo]</code>, and the total sum is the final answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countInterestingSubarrays(vector<int>& nums, int modulo, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countInterestingSubarrays(self, nums, modulo, k):\n        \"\"\"\n        :type nums: List[int]\n        :type modulo: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:\n        ",
+    "c": "long long countInterestingSubarrays(int* nums, int numsSize, int modulo, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountInterestingSubarrays(IList<int> nums, int modulo, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} modulo\n * @param {number} k\n * @return {number}\n */\nvar countInterestingSubarrays = function(nums, modulo, k) {\n    \n};",
+    "typescript": "function countInterestingSubarrays(nums: number[], modulo: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $modulo\n     * @param Integer $k\n     * @return Integer\n     */\n    function countInterestingSubarrays($nums, $modulo, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countInterestingSubarrays(_ nums: [Int], _ modulo: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countInterestingSubarrays(nums: List<Int>, modulo: Int, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countInterestingSubarrays(List<int> nums, int modulo, int k) {\n    \n  }\n}",
+    "golang": "func countInterestingSubarrays(nums []int, modulo int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} modulo\n# @param {Integer} k\n# @return {Integer}\ndef count_interesting_subarrays(nums, modulo, k)\n    \nend",
+    "scala": "object Solution {\n    def countInterestingSubarrays(nums: List[Int], modulo: Int, k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_interesting_subarrays(nums: Vec<i32>, modulo: i32, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-interesting-subarrays nums modulo k)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_interesting_subarrays(Nums :: [integer()], Modulo :: integer(), K :: integer()) -> integer().\ncount_interesting_subarrays(Nums, Modulo, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_interesting_subarrays(nums :: [integer], modulo :: integer, k :: integer) :: integer\n  def count_interesting_subarrays(nums, modulo, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Prefix Sum\n\n#### Intuition\n\nAccording to the description, given the array $\\textit{nums}$ and integers $\\textit{modulo}$ and $k$, if the element $x$ in the subarray $\\textit{nums}[l..r]$ satisfies $x \\bmod \\textit{modulo} = k$ and appears $\\textit{cnt}$ times, then the subarray $\\textit{nums}[l..r]$ is called an **interesting subarray** if $\\textit{cnt} \\bmod \\textit{modulo} = k$.\n\nSince we need to count the number of occurrences of special elements in the array interval, we can consider using prefix sums. We define $\\textit{sum}[i]$ as the number of special elements that satisfy $x \\bmod \\textit{modulo} = k$ in the array $\\textit{nums}$ from index $0$ to $i$. The number of special elements in the subarray $\\textit{nums}[l..r]$ is then $\\textit{sum}[r] - \\textit{sum}[l-1]$. According to the description, it can be deduced that at this time, in order to satisfy:\n\n$$\n(\\textit{sum}[r] - \\textit{sum}[l-1]) \\bmod \\textit{modulo} = k\n$$\n\nThe transformation of the above equation yields:\n\n$$\n(\\textit{sum}[r]  - k +  \\textit{modulo}) \\bmod \\textit{modulo} = \\textit{sum}[l-1] \\bmod \\textit{modulo}\n$$\n\nAccording to the above formula, it can be known that for index $r$, if there exists an index $l$ such that $l \\leq r$, and which satisfies $(\\textit{sum}[r] - k + \\textit{modulo}) \\bmod \\textit{modulo} = \\textit{sum}[l-1] \\bmod \\textit{modulo}$, then the subarray $\\textit{nums}[l..r]$ is an **interesting subarray**.\n\nWe use a hash table $\\textit{cnt}$ to store the number of occurrences of $\\textit{sum}[i] \\bmod \\textit{modulo}$ in the current prefix that has been traversed. Each time we enumerate the index $r$ from small to large, we expect to be able to quickly find the number of \"interesting subarrays\" with $r$ as the right endpoint, i.e., the number of left boundaries $l$ that satisfy the condition. According to the above inference, it can be known that at this time, it is only necessary to find the number of elements equal to $(\\textit{sum}[r] - k + \\textit{modulo}) \\bmod \\textit{modulo}$ in the hash table $\\textit{cnt}$, which is the number of elements satisfying the left boundary condition. Add this to the result, and finally return the total accumulated result. To optimize the calculation, the prefix sum of the special elements can be represented by a single variable $\\textit{prefix}$ at this time.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe only need to traverse the array once, and the time required is $O(n)$.\n\n- Space complexity: $O(\\min(n, \\textit{modulo}))$\n\nIt is necessary to use a hash map to store the frequency of each element's modulo result in the array. There can be at most $O(\\min(n, \\textit{modulo}))$ different modulo results, so the required space is $O(\\min(n, \\textit{modulo}))$."
+}

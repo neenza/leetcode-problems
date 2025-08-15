@@ -1,0 +1,46 @@
+{
+  "title": "Find Stores with Inventory Imbalance",
+  "problem_id": "3971",
+  "frontend_id": "3626",
+  "difficulty": "Medium",
+  "problem_slug": "find-stores-with-inventory-imbalance",
+  "topics": [],
+  "description": "Table: stores\nTable: inventory\nWrite a solution to find stores that have inventory imbalance - stores where the most expensive product has lower stock than the cheapest product.\nReturn the result table ordered by imbalance ratio in descending order, then by store name in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| store_id    | int     |\n| store_name  | varchar |\n| location    | varchar |\n+-------------+---------+\nstore_id is the unique identifier for this table.\nEach row contains information about a store and its location.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| inventory_id| int     |\n| store_id    | int     |\n| product_name| varchar |\n| quantity    | int     |\n| price       | decimal |\n+-------------+---------+\ninventory_id is the unique identifier for this table.\nEach row represents the inventory of a specific product at a specific store.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+----------+----------------+-------------+\n| store_id | store_name     | location    |\n+----------+----------------+-------------+\n| 1        | Downtown Tech  | New York    |\n| 2        | Suburb Mall    | Chicago     |\n| 3        | City Center    | Los Angeles |\n| 4        | Corner Shop    | Miami       |\n| 5        | Plaza Store    | Seattle     |\n+----------+----------------+-------------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+--------------+----------+--------------+----------+--------+\n| inventory_id | store_id | product_name | quantity | price  |\n+--------------+----------+--------------+----------+--------+\n| 1            | 1        | Laptop       | 5        | 999.99 |\n| 2            | 1        | Mouse        | 50       | 19.99  |\n| 3            | 1        | Keyboard     | 25       | 79.99  |\n| 4            | 1        | Monitor      | 15       | 299.99 |\n| 5            | 2        | Phone        | 3        | 699.99 |\n| 6            | 2        | Charger      | 100      | 25.99  |\n| 7            | 2        | Case         | 75       | 15.99  |\n| 8            | 2        | Headphones   | 20       | 149.99 |\n| 9            | 3        | Tablet       | 2        | 499.99 |\n| 10           | 3        | Stylus       | 80       | 29.99  |\n| 11           | 3        | Cover        | 60       | 39.99  |\n| 12           | 4        | Watch        | 10       | 299.99 |\n| 13           | 4        | Band         | 25       | 49.99  |\n| 14           | 5        | Camera       | 8        | 599.99 |\n| 15           | 5        | Lens         | 12       | 199.99 |\n+--------------+----------+--------------+----------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+----------+----------------+-------------+------------------+--------------------+------------------+\n| store_id | store_name     | location    | most_exp_product | cheapest_product   | imbalance_ratio  |\n+----------+----------------+-------------+------------------+--------------------+------------------+\n| 3        | City Center    | Los Angeles | Tablet           | Stylus             | 40.00            |\n| 1        | Downtown Tech  | New York    | Laptop           | Mouse              | 10.00            |\n| 2        | Suburb Mall    | Chicago     | Phone            | Case               | 25.00            |\n+----------+----------------+-------------+------------------+--------------------+------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_inventory_imbalance(stores: pd.DataFrame, inventory: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

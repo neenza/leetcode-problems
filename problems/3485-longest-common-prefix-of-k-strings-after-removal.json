@@ -1,0 +1,60 @@
+{
+  "title": "Longest Common Prefix of K Strings After Removal",
+  "problem_id": "3784",
+  "frontend_id": "3485",
+  "difficulty": "Hard",
+  "problem_slug": "longest-common-prefix-of-k-strings-after-removal",
+  "topics": [
+    "Array",
+    "String",
+    "Trie"
+  ],
+  "description": "You are given an array of strings words and an integer k.\nFor each index i in the range [0, words.length - 1], find the length of the longest common prefix among any k strings (selected at distinct indices) from the remaining array after removing the ith element.\nReturn an array answer, where answer[i] is the answer for ith element. If removing the ith element leaves the array with fewer than k strings, answer[i] is 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"jump\",\"run\",\"run\",\"jump\",\"run\"], k = 2\nOutput: [3,4,4,3,4]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"dog\",\"racer\",\"car\"], k = 2\nOutput: [0,0,0]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= words.length <= 105",
+    "1 <= words[i].length <= 104",
+    "words[i] consists of lowercase English letters.",
+    "The sum of words[i].length is smaller than or equal 105."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a trie to store all the strings initially.",
+    "For each node in the trie, maintain the count of paths ending there.",
+    "For each <code>arr[i]</code>, remove it from the trie and update the counts.",
+    "During evaluation, find the innermost node with at least <code>k</code> paths ending there.",
+    "Use a multiset or similar structure to handle updates efficiently."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> longestCommonPrefix(vector<string>& words, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestCommonPrefix(String[] words, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestCommonPrefix(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestCommonPrefix(self, words: List[str], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestCommonPrefix(char** words, int wordsSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] LongestCommonPrefix(string[] words, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number} k\n * @return {number[]}\n */\nvar longestCommonPrefix = function(words, k) {\n    \n};",
+    "typescript": "function longestCommonPrefix(words: string[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function longestCommonPrefix($words, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestCommonPrefix(_ words: [String], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestCommonPrefix(words: Array<String>, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> longestCommonPrefix(List<String> words, int k) {\n    \n  }\n}",
+    "golang": "func longestCommonPrefix(words []string, k int) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer} k\n# @return {Integer[]}\ndef longest_common_prefix(words, k)\n    \nend",
+    "scala": "object Solution {\n    def longestCommonPrefix(words: Array[String], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_common_prefix(words: Vec<String>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (longest-common-prefix words k)\n  (-> (listof string?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec longest_common_prefix(Words :: [unicode:unicode_binary()], K :: integer()) -> [integer()].\nlongest_common_prefix(Words, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_common_prefix(words :: [String.t], k :: integer) :: [integer]\n  def longest_common_prefix(words, k) do\n    \n  end\nend"
+  }
+}

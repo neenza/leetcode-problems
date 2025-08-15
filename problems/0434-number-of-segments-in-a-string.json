@@ -1,0 +1,52 @@
+{
+  "title": "Number of Segments in a String",
+  "problem_id": "434",
+  "frontend_id": "434",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-segments-in-a-string",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string s, return the number of segments in the string.\nA segment is defined to be a contiguous sequence of non-space characters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"Hello, my name is John\"\nOutput: 5\nExplanation: The five segments are [\"Hello,\", \"my\", \"name\", \"is\", \"John\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"Hello\"\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= s.length <= 300",
+    "s consists of lowercase and uppercase English letters, digits, or one of the following characters \"!@#$%^&*()_+-=',.:\".",
+    "The only space character in s is ' '."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSegments(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSegments(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSegments(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSegments(self, s: str) -> int:\n        ",
+    "c": "int countSegments(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSegments(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countSegments = function(s) {\n    \n};",
+    "typescript": "function countSegments(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countSegments($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSegments(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSegments(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSegments(String s) {\n    \n  }\n}",
+    "golang": "func countSegments(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_segments(s)\n    \nend",
+    "scala": "object Solution {\n    def countSegments(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_segments(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-segments s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_segments(S :: unicode:unicode_binary()) -> integer().\ncount_segments(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_segments(s :: String.t) :: integer\n  def count_segments(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1 Using Language Builtins [Accepted]\n\n**Intuition**\n\nIn a situation where raw efficiency is less important than code legibility,\nit is likely better to use language-idiomatic builtin functions to solve this\nproblem.\n\n**Algorithm**\n\nThere are a few corner cases that you can get snagged on in this problem, at\nleast in Java. First, one or more leading spaces will cause `split` to deduce\nan erroneous `\"\"` token at the beginning of the string, so we use the builtin\n`trim` method to remove leading and trailing spaces. Then, if the resulting\nstring is the empty string, then we can simply output `0`. This is necessary due\nto the following behavior of the `split` method:\n\n```java\nString[] tokens = \"\".split(\"\\\\s++\");\ntokens.length; // 1\ntokens[0]; // \"\"\n```\n\nIf we reach the final return statement, we `split` the trimmed string on\nsequences of one or more whitespace characters (`split` can take a regular\nexpression) and return the length of the resulting array.\n\nThe Python solution is trivially short because Python's `split` has a lot of\ndefault behavior that makes it perfect for this sort of problem. Notably, it\nreturns an empty list when `split`ting an empty string, it splits on\nwhitespace by default, and it implicitly `trim`s (`strip`s, in Python lingo)\nthe string beforehand.**Complexity Analysis**\n\n* Time complexity : $$\\mathcal{O}(n)$$\n\n    All builtin language functionality used here (in both the Java and Python\n    examples) runs in either $$\\mathcal{O}(n)$$ or $$\\mathcal{O}(1)$$ time, so the entire algorithm\n    runs in linear time.\n\n* Space complexity : $$\\mathcal{O}(n)$$\n\n    `split` (in both languages) returns an array/list of $$\\mathcal{O}(n)$$ length, so\n    the algorithm uses linear additional space.\n\n---\n\n### Approach #2 In-place [Accepted]\n\n**Intuition**\n\nIf we cannot afford to allocate linear additional space, a fairly simple\nalgorithm can deduce the number of segments in linear time and constant\nspace.\n\n**Algorithm**\n\nTo count the number of segments, it is equivalent to count the number of\nstring indices at which a segment begins. Therefore, by formally defining the\ncharacteristics of such an index, we can simply iterate over the string and\ntest each index in turn. Such a definition is as follows: a string index\nbegins a segment if it is preceded by whitespace (or is the first index) and\nis not whitespace itself, which can be checked in constant time. Finally, we\nsimply return the number of indices for which the condition is satisfied.**Complexity Analysis**\n\n* Time complexity : $$\\mathcal{O}(n)$$\n\n    We do a constant time check for each of the string's $$n$$ indices, so the\n    runtime is overall linear.\n\n* Space complexity : $$\\mathcal{O}(1)$$\n\n    There are only a few integers allocated, so the memory footprint is\n    constant."
+}

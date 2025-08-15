@@ -1,0 +1,54 @@
+{
+  "title": "Last Stone Weight II",
+  "problem_id": "1130",
+  "frontend_id": "1049",
+  "difficulty": "Medium",
+  "problem_slug": "last-stone-weight-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array of integers stones where stones[i] is the weight of the ith stone.\nWe are playing a game with the stones. On each turn, we choose any two stones and smash them together. Suppose the stones have weights x and y with x <= y. The result of this smash is:\nAt the end of the game, there is at most one stone left.\nReturn the smallest possible weight of the left stone. If there are no stones left, return 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [2,7,4,1,8,1]\nOutput: 1\nExplanation:\nWe can combine 2 and 4 to get 2, so the array converts to [2,7,1,8,1] then,\nwe can combine 7 and 8 to get 1, so the array converts to [2,1,1,1] then,\nwe can combine 2 and 1 to get 1, so the array converts to [1,1,1] then,\nwe can combine 1 and 1 to get 0, so the array converts to [1], then that's the optimal value.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [31,26,33,21,40]\nOutput: 5",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= stones.length <= 30",
+    "1 <= stones[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of the final answer as a sum of weights with + or - sign symbols infront of each weight.  Actually, all sums with 1 of each sign symbol are possible.",
+    "Use dynamic programming: for every possible sum with N stones, those sums +x or -x is possible with N+1 stones, where x is the value of the newest stone.  (This overcounts sums that are all positive or all negative, but those don't matter.)"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int lastStoneWeightII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lastStoneWeightII(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lastStoneWeightII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lastStoneWeightII(self, stones: List[int]) -> int:\n        ",
+    "c": "int lastStoneWeightII(int* stones, int stonesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LastStoneWeightII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number}\n */\nvar lastStoneWeightII = function(stones) {\n    \n};",
+    "typescript": "function lastStoneWeightII(stones: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Integer\n     */\n    function lastStoneWeightII($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lastStoneWeightII(_ stones: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lastStoneWeightII(stones: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lastStoneWeightII(List<int> stones) {\n    \n  }\n}",
+    "golang": "func lastStoneWeightII(stones []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Integer}\ndef last_stone_weight_ii(stones)\n    \nend",
+    "scala": "object Solution {\n    def lastStoneWeightII(stones: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn last_stone_weight_ii(stones: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (last-stone-weight-ii stones)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec last_stone_weight_ii(Stones :: [integer()]) -> integer().\nlast_stone_weight_ii(Stones) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec last_stone_weight_ii(stones :: [integer]) :: integer\n  def last_stone_weight_ii(stones) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Sum of Scores of Built Strings",
+  "problem_id": "2326",
+  "frontend_id": "2223",
+  "difficulty": "Hard",
+  "problem_slug": "sum-of-scores-of-built-strings",
+  "topics": [
+    "String",
+    "Binary Search",
+    "Rolling Hash",
+    "Suffix Array",
+    "String Matching",
+    "Hash Function"
+  ],
+  "description": "You are building a string s of length n one character at a time, prepending each new character to the front of the string. The strings are labeled from 1 to n, where the string with length i is labeled si.\nThe score of si is the length of the longest common prefix between si and sn (Note that s == sn).\nGiven the final string s, return the sum of the score of every si.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"babab\"\nOutput: 9\nExplanation:\nFor s1 == \"b\", the longest common prefix is \"b\" which has a score of 1.\nFor s2 == \"ab\", there is no common prefix so the score is 0.\nFor s3 == \"bab\", the longest common prefix is \"bab\" which has a score of 3.\nFor s4 == \"abab\", there is no common prefix so the score is 0.\nFor s5 == \"babab\", the longest common prefix is \"babab\" which has a score of 5.\nThe sum of the scores is 1 + 0 + 3 + 0 + 5 = 9, so we return 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"azbazbzaz\"\nOutput: 14\nExplanation: \nFor s2 == \"az\", the longest common prefix is \"az\" which has a score of 2.\nFor s6 == \"azbzaz\", the longest common prefix is \"azb\" which has a score of 3.\nFor s9 == \"azbazbzaz\", the longest common prefix is \"azbazbzaz\" which has a score of 9.\nFor all other si, the score is 0.\nThe sum of the scores is 2 + 3 + 9 = 14, so we return 14.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Each s_i is a suffix of the string s, so consider algorithms that can determine the longest prefix that is also a suffix.",
+    "Could you use the Z array from the Z algorithm to find the score of each s_i?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long sumScores(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long sumScores(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumScores(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumScores(self, s: str) -> int:\n        ",
+    "c": "long long sumScores(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long SumScores(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar sumScores = function(s) {\n    \n};",
+    "typescript": "function sumScores(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function sumScores($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumScores(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumScores(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumScores(String s) {\n    \n  }\n}",
+    "golang": "func sumScores(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef sum_scores(s)\n    \nend",
+    "scala": "object Solution {\n    def sumScores(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_scores(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-scores s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec sum_scores(S :: unicode:unicode_binary()) -> integer().\nsum_scores(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_scores(s :: String.t) :: integer\n  def sum_scores(s) do\n    \n  end\nend"
+  }
+}

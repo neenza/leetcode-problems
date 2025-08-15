@@ -1,0 +1,62 @@
+{
+  "title": "Maximum Score of Non-overlapping Intervals",
+  "problem_id": "3562",
+  "frontend_id": "3414",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-score-of-non-overlapping-intervals",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "description": "You are given a 2D integer array intervals, where intervals[i] = [li, ri, weighti]. Interval i starts at position li and ends at ri, and has a weight of weighti. You can choose up to 4 non-overlapping intervals. The score of the chosen intervals is defined as the total sum of their weights.\nReturn the lexicographically smallest array of at most 4 indices from intervals with maximum score, representing your choice of non-overlapping intervals.\nTwo intervals are said to be non-overlapping if they do not share any points. In particular, intervals sharing a left or right boundary are considered overlapping.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: intervals = [[1,3,2],[4,5,2],[1,5,5],[6,9,3],[6,7,1],[8,9,1]]\nOutput: [2,3]\nExplanation:\nYou can choose the intervals with indices 2, and 3 with respective weights of 5, and 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: intervals = [[5,8,1],[6,7,7],[4,7,3],[9,10,6],[7,8,2],[11,14,3],[3,5,5]]\nOutput: [1,3,5,6]\nExplanation:\nYou can choose the intervals with indices 1, 3, 5, and 6 with respective weights of 7, 6, 3, and 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= intevals.length <= 5 * 104",
+    "intervals[i].length == 3",
+    "intervals[i] = [li, ri, weighti]",
+    "1 <= li <= ri <= 109",
+    "1 <= weighti <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic Programming.",
+    "Sort <code>intervals</code> by right boundary.",
+    "Let <code>dp[r][i]</code> denote the maximum score having picked <code>r</code> intervals from the prefix of <code>intervals</code> ending at index <code>i</code>.",
+    "<code>dp[r][i] = max(dp[r][i - 1], intervals[i][2] + dp[r][j])</code> where <code>j</code> is the largest index such that <code>intervals[j][1] < intervals[i][0]</code>.",
+    "Since <code>intervals</code> is sorted by right boundary, we can find index <code>j</code> using binary search."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> maximumWeight(vector<vector<int>>& intervals) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maximumWeight(List<List<Integer>> intervals) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumWeight(self, intervals):\n        \"\"\"\n        :type intervals: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumWeight(self, intervals: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maximumWeight(int** intervals, int intervalsSize, int* intervalsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MaximumWeight(IList<IList<int>> intervals) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} intervals\n * @return {number[]}\n */\nvar maximumWeight = function(intervals) {\n    \n};",
+    "typescript": "function maximumWeight(intervals: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $intervals\n     * @return Integer[]\n     */\n    function maximumWeight($intervals) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumWeight(_ intervals: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumWeight(intervals: List<List<Int>>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maximumWeight(List<List<int>> intervals) {\n    \n  }\n}",
+    "golang": "func maximumWeight(intervals [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} intervals\n# @return {Integer[]}\ndef maximum_weight(intervals)\n    \nend",
+    "scala": "object Solution {\n    def maximumWeight(intervals: List[List[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_weight(intervals: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-weight intervals)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec maximum_weight(Intervals :: [[integer()]]) -> [integer()].\nmaximum_weight(Intervals) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_weight(intervals :: [[integer]]) :: [integer]\n  def maximum_weight(intervals) do\n    \n  end\nend"
+  }
+}

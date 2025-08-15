@@ -1,0 +1,57 @@
+{
+  "title": "Divide a String Into Groups of Size k",
+  "problem_id": "2260",
+  "frontend_id": "2138",
+  "difficulty": "Easy",
+  "problem_slug": "divide-a-string-into-groups-of-size-k",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "A string s can be partitioned into groups of size k using the following procedure:\nNote that the partition is done so that after removing the fill character from the last group (if it exists) and concatenating all the groups in order, the resultant string should be s.\nGiven the string s, the size of each group k and the character fill, return a string array denoting the composition of every group s has been divided into, using the above procedure.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcdefghi\", k = 3, fill = \"x\"\nOutput: [\"abc\",\"def\",\"ghi\"]\nExplanation:\nThe first 3 characters \"abc\" form the first group.\nThe next 3 characters \"def\" form the second group.\nThe last 3 characters \"ghi\" form the third group.\nSince all groups can be completely filled by characters from the string, we do not need to use fill.\nThus, the groups formed are \"abc\", \"def\", and \"ghi\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdefghij\", k = 3, fill = \"x\"\nOutput: [\"abc\",\"def\",\"ghi\",\"jxx\"]\nExplanation:\nSimilar to the previous example, we are forming the first three groups \"abc\", \"def\", and \"ghi\".\nFor the last group, we can only use the character 'j' from the string. To complete this group, we add 'x' twice.\nThus, the 4 groups formed are \"abc\", \"def\", \"ghi\", and \"jxx\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of lowercase English letters only.",
+    "1 <= k <= 100",
+    "fill is a lowercase English letter."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Using the length of the string and k, can you count the number of groups the string can be divided into?",
+    "Try completing each group using characters from the string. If there aren’t enough characters for the last group, use the fill character to complete the group."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> divideString(string s, int k, char fill) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] divideString(String s, int k, char fill) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def divideString(self, s, k, fill):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :type fill: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def divideString(self, s: str, k: int, fill: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** divideString(char* s, int k, char fill, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] DivideString(string s, int k, char fill) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @param {character} fill\n * @return {string[]}\n */\nvar divideString = function(s, k, fill) {\n    \n};",
+    "typescript": "function divideString(s: string, k: number, fill: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @param String $fill\n     * @return String[]\n     */\n    function divideString($s, $k, $fill) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func divideString(_ s: String, _ k: Int, _ fill: Character) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun divideString(s: String, k: Int, fill: Char): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> divideString(String s, int k, String fill) {\n    \n  }\n}",
+    "golang": "func divideString(s string, k int, fill byte) []string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @param {Character} fill\n# @return {String[]}\ndef divide_string(s, k, fill)\n    \nend",
+    "scala": "object Solution {\n    def divideString(s: String, k: Int, fill: Char): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn divide_string(s: String, k: i32, fill: char) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (divide-string s k fill)\n  (-> string? exact-integer? char? (listof string?))\n  )",
+    "erlang": "-spec divide_string(S :: unicode:unicode_binary(), K :: integer(), Fill :: char()) -> [unicode:unicode_binary()].\ndivide_string(S, K, Fill) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec divide_string(s :: String.t, k :: integer, fill :: char) :: [String.t]\n  def divide_string(s, k, fill) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Search for the starting index of each group\n\n#### Intuition\n\nWe assume that the length of the string $s$ is $n$. Since the length of each group of strings - except for the last one i.e., $k$, we can determine the starting index of each group: the starting index of the $i$-th group is $k \\times i$. Based on this, we can compute the index range of the characters in each group of the string $s$, which corresponds to the closed interval $[k \\times i, \\min((k + 1) \\times i, n) - 1]$.\n\nWe use the array $\\textit{res}$ to store each group of strings, and a variable $\\textit{curr}$ to track the starting index of the current group. Initially, $\\textit{curr}$ is set to $0$. As long as $\\textit{curr}$ is a valid index, it indicates that the current group exists. We then append the substring $s[k \\times i..\\min((k + 1) \\times i, n) - 1]$ to the end of $\\textit{res}$ and increment $\\textit{curr}$ by $k$ to move to the next group's starting index.\n\nFinally, the last element in the array $\\textit{res}$ may need padding. We use the fill character $\\textit{fill}$ to extend its length to $k$. After completing this process, we return the array $\\textit{res}$ as the result.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $s$.\n\n- Time complexity: $O(\\max(n, k))$.\n  \n  This is the time complexity for grouping the strings and applying padding.\n\n- Space complexity: $O(1)$.\n  \n  The output array is not included in the space complexity."
+}

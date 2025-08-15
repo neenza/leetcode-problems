@@ -1,0 +1,61 @@
+{
+  "title": "Count Submatrices With All Ones",
+  "problem_id": "1628",
+  "frontend_id": "1504",
+  "difficulty": "Medium",
+  "problem_slug": "count-submatrices-with-all-ones",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Matrix",
+    "Monotonic Stack"
+  ],
+  "description": "Given an m x n binary matrix mat, return the number of submatrices that have all ones.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,0,1],[1,1,0],[1,1,0]]\nOutput: 13\nExplanation: \nThere are 6 rectangles of side 1x1.\nThere are 2 rectangles of side 1x2.\nThere are 3 rectangles of side 2x1.\nThere is 1 rectangle of side 2x2. \nThere is 1 rectangle of side 3x1.\nTotal number of rectangles = 6 + 2 + 3 + 1 + 1 = 13.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/27/ones1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[0,1,1,0],[0,1,1,1],[1,1,1,0]]\nOutput: 24\nExplanation: \nThere are 8 rectangles of side 1x1.\nThere are 5 rectangles of side 1x2.\nThere are 2 rectangles of side 1x3. \nThere are 4 rectangles of side 2x1.\nThere are 2 rectangles of side 2x2. \nThere are 2 rectangles of side 3x1. \nThere is 1 rectangle of side 3x2. \nTotal number of rectangles = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/27/ones2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 150",
+    "mat[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each row i, create an array nums where:  if mat[i][j] == 0 then nums[j] = 0 else nums[j] = nums[j-1] +1.",
+    "In the row i, number of rectangles between column j and k(inclusive) and ends in row i, is equal to SUM(min(nums[j, .. idx])) where idx go from j to k.  Expected solution is O(n^3)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSubmat(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSubmat(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSubmat(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSubmat(self, mat: List[List[int]]) -> int:\n        ",
+    "c": "int numSubmat(int** mat, int matSize, int* matColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSubmat(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number}\n */\nvar numSubmat = function(mat) {\n    \n};",
+    "typescript": "function numSubmat(mat: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer\n     */\n    function numSubmat($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSubmat(_ mat: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSubmat(mat: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSubmat(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func numSubmat(mat [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer}\ndef num_submat(mat)\n    \nend",
+    "scala": "object Solution {\n    def numSubmat(mat: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_submat(mat: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-submat mat)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec num_submat(Mat :: [[integer()]]) -> integer().\nnum_submat(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_submat(mat :: [[integer]]) :: integer\n  def num_submat(mat) do\n    \n  end\nend"
+  }
+}

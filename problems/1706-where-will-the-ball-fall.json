@@ -1,0 +1,68 @@
+{
+  "title": "Where Will the Ball Fall",
+  "problem_id": "1324",
+  "frontend_id": "1706",
+  "difficulty": "Medium",
+  "problem_slug": "where-will-the-ball-fall",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You have a 2-D grid of size m x n representing a box, and you have n balls. The box is open on the top and bottom sides.\nEach cell in the box has a diagonal board spanning two corners of the cell that can redirect a ball to the right or to the left.\nWe drop one ball at the top of each column of the box. Each ball can get stuck in the box or fall out of the bottom. A ball gets stuck if it hits a \"V\" shaped pattern between two boards or if a board redirects the ball into either wall of the box.\nReturn an array answer of size n where answer[i] is the column that the ball falls out of at the bottom after dropping the ball from the ith column at the top, or -1 if the ball gets stuck in the box.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]\nOutput: [1,-1,-1,-1,-1]\nExplanation: This example is shown in the photo.\nBall b0 is dropped at column 0 and falls out of the box at column 1.\nBall b1 is dropped at column 1 and will get stuck in the box between column 2 and 3 and row 1.\nBall b2 is dropped at column 2 and will get stuck on the box between column 2 and 3 and row 0.\nBall b3 is dropped at column 3 and will get stuck on the box between column 2 and 3 and row 0.\nBall b4 is dropped at column 4 and will get stuck on the box between column 2 and 3 and row 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/26/ball.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[-1]]\nOutput: [-1]\nExplanation: The ball gets stuck against the left wall.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/26/ball.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1],[1,1,1,1,1,1],[-1,-1,-1,-1,-1,-1]]\nOutput: [0,1,2,3,4,-1]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/26/ball.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 100",
+    "grid[i][j] is 1 or -1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use DFS.",
+    "Traverse the path of the ball downwards until you reach the bottom or get stuck."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findBall(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findBall(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findBall(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findBall(self, grid: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findBall(int** grid, int gridSize, int* gridColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindBall(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number[]}\n */\nvar findBall = function(grid) {\n    \n};",
+    "typescript": "function findBall(grid: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer[]\n     */\n    function findBall($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findBall(_ grid: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findBall(grid: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findBall(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func findBall(grid [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer[]}\ndef find_ball(grid)\n    \nend",
+    "scala": "object Solution {\n    def findBall(grid: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_ball(grid: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-ball grid)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_ball(Grid :: [[integer()]]) -> [integer()].\nfind_ball(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_ball(grid :: [[integer]]) :: [integer]\n  def find_ball(grid) do\n    \n  end\nend"
+  }
+}

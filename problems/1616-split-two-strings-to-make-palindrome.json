@@ -1,0 +1,60 @@
+{
+  "title": "Split Two Strings to Make Palindrome",
+  "problem_id": "1739",
+  "frontend_id": "1616",
+  "difficulty": "Medium",
+  "problem_slug": "split-two-strings-to-make-palindrome",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "You are given two strings a and b of the same length. Choose an index and split both strings at the same index, splitting a into two strings: aprefix and asuffix where a = aprefix + asuffix, and splitting b into two strings: bprefix and bsuffix where b = bprefix + bsuffix. Check if aprefix + bsuffix or bprefix + asuffix forms a palindrome.\nWhen you split a string s into sprefix and ssuffix, either ssuffix or sprefix is allowed to be empty. For example, if s = \"abc\", then \"\" + \"abc\", \"a\" + \"bc\", \"ab\" + \"c\" , and \"abc\" + \"\" are valid splits.\nReturn true if it is possible to form a palindrome string, otherwise return false.\nNotice that x + y denotes the concatenation of strings x and y.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = \"x\", b = \"y\"\nOutput: true\nExplaination: If either a or b are palindromes the answer is true since you can split in the following way:\naprefix = \"\", asuffix = \"x\"\nbprefix = \"\", bsuffix = \"y\"\nThen, aprefix + bsuffix = \"\" + \"y\" = \"y\", which is a palindrome.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = \"xbdef\", b = \"xecab\"\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: a = \"ulacfd\", b = \"jizalu\"\nOutput: true\nExplaination: Split them at index 3:\naprefix = \"ula\", asuffix = \"cfd\"\nbprefix = \"jiz\", bsuffix = \"alu\"\nThen, aprefix + bsuffix = \"ula\" + \"alu\" = \"ulaalu\", which is a palindrome.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= a.length, b.length <= 105",
+    "a.length == b.length",
+    "a and b consist of lowercase English letters"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try finding the largest prefix from a that matches a suffix in b",
+    "Try string matching"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkPalindromeFormation(string a, string b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPalindromeFormation(String a, String b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkPalindromeFormation(self, a, b):\n        \"\"\"\n        :type a: str\n        :type b: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkPalindromeFormation(self, a: str, b: str) -> bool:\n        ",
+    "c": "bool checkPalindromeFormation(char* a, char* b) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckPalindromeFormation(string a, string b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} a\n * @param {string} b\n * @return {boolean}\n */\nvar checkPalindromeFormation = function(a, b) {\n    \n};",
+    "typescript": "function checkPalindromeFormation(a: string, b: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $a\n     * @param String $b\n     * @return Boolean\n     */\n    function checkPalindromeFormation($a, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkPalindromeFormation(_ a: String, _ b: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkPalindromeFormation(a: String, b: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkPalindromeFormation(String a, String b) {\n    \n  }\n}",
+    "golang": "func checkPalindromeFormation(a string, b string) bool {\n    \n}",
+    "ruby": "# @param {String} a\n# @param {String} b\n# @return {Boolean}\ndef check_palindrome_formation(a, b)\n    \nend",
+    "scala": "object Solution {\n    def checkPalindromeFormation(a: String, b: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_palindrome_formation(a: String, b: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-palindrome-formation a b)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec check_palindrome_formation(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> boolean().\ncheck_palindrome_formation(A, B) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_palindrome_formation(a :: String.t, b :: String.t) :: boolean\n  def check_palindrome_formation(a, b) do\n    \n  end\nend"
+  }
+}

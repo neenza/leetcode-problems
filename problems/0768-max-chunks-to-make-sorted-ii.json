@@ -1,0 +1,56 @@
+{
+  "title": "Max Chunks To Make Sorted II",
+  "problem_id": "779",
+  "frontend_id": "768",
+  "difficulty": "Hard",
+  "problem_slug": "max-chunks-to-make-sorted-ii",
+  "topics": [
+    "Array",
+    "Stack",
+    "Greedy",
+    "Sorting",
+    "Monotonic Stack"
+  ],
+  "description": "You are given an integer array arr.\nWe split arr into some number of chunks (i.e., partitions), and individually sort each chunk. After concatenating them, the result should equal the sorted array.\nReturn the largest number of chunks we can make to sort the array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [5,4,3,2,1]\nOutput: 1\nExplanation:\nSplitting into two or more chunks will not return the required result.\nFor example, splitting into [5, 4], [3, 2, 1] will result in [4, 5, 1, 2, 3], which isn't sorted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [2,1,3,4,4]\nOutput: 4\nExplanation:\nWe can split into two chunks, such as [2, 1], [3, 4, 4].\nHowever, splitting into [2, 1], [3], [4], [4] is the highest number of chunks possible.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 2000",
+    "0 <= arr[i] <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Each k for which some permutation of arr[:k] is equal to sorted(arr)[:k] is where we should cut each chunk."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxChunksToSorted(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxChunksToSorted(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxChunksToSorted(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxChunksToSorted(self, arr: List[int]) -> int:\n        ",
+    "c": "int maxChunksToSorted(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxChunksToSorted(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar maxChunksToSorted = function(arr) {\n    \n};",
+    "typescript": "function maxChunksToSorted(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function maxChunksToSorted($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxChunksToSorted(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxChunksToSorted(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxChunksToSorted(List<int> arr) {\n    \n  }\n}",
+    "golang": "func maxChunksToSorted(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef max_chunks_to_sorted(arr)\n    \nend",
+    "scala": "object Solution {\n    def maxChunksToSorted(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_chunks_to_sorted(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-chunks-to-sorted arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_chunks_to_sorted(Arr :: [integer()]) -> integer().\nmax_chunks_to_sorted(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_chunks_to_sorted(arr :: [integer]) :: integer\n  def max_chunks_to_sorted(arr) do\n    \n  end\nend"
+  }
+}

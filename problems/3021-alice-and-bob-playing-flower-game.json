@@ -1,0 +1,51 @@
+{
+  "title": "Alice and Bob Playing Flower Game",
+  "problem_id": "3279",
+  "frontend_id": "3021",
+  "difficulty": "Medium",
+  "problem_slug": "alice-and-bob-playing-flower-game",
+  "topics": [
+    "Math"
+  ],
+  "description": "Alice and Bob are playing a turn-based game on a circular field surrounded by flowers. The circle represents the field, and there are x flowers in the clockwise direction between Alice and Bob, and y flowers in the anti-clockwise direction between them.\nThe game proceeds as follows:\nGiven two integers, n and m, the task is to compute the number of possible pairs (x, y) that satisfy the conditions:\nReturn the number of possible pairs (x, y) that satisfy the conditions mentioned in the statement.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, m = 2\nOutput: 3\nExplanation: The following pairs satisfy conditions described in the statement: (1,2), (3,2), (2,1).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, m = 1\nOutput: 0\nExplanation: No pairs satisfy the conditions described in the statement.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, m <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "(x, y) is valid if and only if they have different parities."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long flowerGame(int n, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long flowerGame(int n, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def flowerGame(self, n, m):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def flowerGame(self, n: int, m: int) -> int:\n        ",
+    "c": "long long flowerGame(int n, int m) {\n    \n}",
+    "csharp": "public class Solution {\n    public long FlowerGame(int n, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @return {number}\n */\nvar flowerGame = function(n, m) {\n    \n};",
+    "typescript": "function flowerGame(n: number, m: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @return Integer\n     */\n    function flowerGame($n, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func flowerGame(_ n: Int, _ m: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun flowerGame(n: Int, m: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int flowerGame(int n, int m) {\n    \n  }\n}",
+    "golang": "func flowerGame(n int, m int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @return {Integer}\ndef flower_game(n, m)\n    \nend",
+    "scala": "object Solution {\n    def flowerGame(n: Int, m: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn flower_game(n: i32, m: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (flower-game n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec flower_game(N :: integer(), M :: integer()) -> integer().\nflower_game(N, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec flower_game(n :: integer, m :: integer) :: integer\n  def flower_game(n, m) do\n    \n  end\nend"
+  }
+}

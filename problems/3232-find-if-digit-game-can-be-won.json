@@ -1,0 +1,58 @@
+{
+  "title": "Find if Digit Game Can Be Won",
+  "problem_id": "3515",
+  "frontend_id": "3232",
+  "difficulty": "Easy",
+  "problem_slug": "find-if-digit-game-can-be-won",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are given an array of positive integers nums.\nAlice and Bob are playing a game. In the game, Alice can choose either all single-digit numbers or all double-digit numbers from nums, and the rest of the numbers are given to Bob. Alice wins if the sum of her numbers is strictly greater than the sum of Bob's numbers.\nReturn true if Alice can win this game, otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,10]\nOutput: false\nExplanation:\nAlice cannot win by choosing either single-digit or double-digit numbers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5,14]\nOutput: true\nExplanation:\nAlice can win by choosing single-digit numbers which have a sum equal to 15.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,5,5,25]\nOutput: true\nExplanation:\nAlice can win by choosing double-digit numbers which have a sum equal to 25.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 99"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Alice wins if the sum of all single-digit numbers and the sum of all double-digit numbers are different."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canAliceWin(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canAliceWin(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canAliceWin(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canAliceWin(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool canAliceWin(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanAliceWin(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar canAliceWin = function(nums) {\n    \n};",
+    "typescript": "function canAliceWin(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function canAliceWin($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canAliceWin(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canAliceWin(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canAliceWin(List<int> nums) {\n    \n  }\n}",
+    "golang": "func canAliceWin(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef can_alice_win(nums)\n    \nend",
+    "scala": "object Solution {\n    def canAliceWin(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_alice_win(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-alice-win nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_alice_win(Nums :: [integer()]) -> boolean().\ncan_alice_win(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_alice_win(nums :: [integer]) :: boolean\n  def can_alice_win(nums) do\n    \n  end\nend"
+  }
+}

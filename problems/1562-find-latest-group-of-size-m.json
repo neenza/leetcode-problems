@@ -1,0 +1,59 @@
+{
+  "title": "Find Latest Group of Size M",
+  "problem_id": "1684",
+  "frontend_id": "1562",
+  "difficulty": "Medium",
+  "problem_slug": "find-latest-group-of-size-m",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Simulation"
+  ],
+  "description": "Given an array arr that represents a permutation of numbers from 1 to n.\nYou have a binary string of size n that initially has all its bits set to zero. At each step i (assuming both the binary string and arr are 1-indexed) from 1 to n, the bit at position arr[i] is set to 1.\nYou are also given an integer m. Find the latest step at which there exists a group of ones of length m. A group of ones is a contiguous substring of 1's such that it cannot be extended in either direction.\nReturn the latest step at which there exists a group of ones of length exactly m. If no such group exists, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,5,1,2,4], m = 1\nOutput: 4\nExplanation: \nStep 1: \"00100\", groups: [\"1\"]\nStep 2: \"00101\", groups: [\"1\", \"1\"]\nStep 3: \"10101\", groups: [\"1\", \"1\", \"1\"]\nStep 4: \"11101\", groups: [\"111\", \"1\"]\nStep 5: \"11111\", groups: [\"11111\"]\nThe latest step at which there exists a group of size 1 is step 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [3,1,5,4,2], m = 2\nOutput: -1\nExplanation: \nStep 1: \"00100\", groups: [\"1\"]\nStep 2: \"10100\", groups: [\"1\", \"1\"]\nStep 3: \"10101\", groups: [\"1\", \"1\", \"1\"]\nStep 4: \"10111\", groups: [\"1\", \"111\"]\nStep 5: \"11111\", groups: [\"11111\"]\nNo group of size 2 exists during any step.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == arr.length",
+    "1 <= m <= n <= 105",
+    "1 <= arr[i] <= n",
+    "All integers in arr are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since the problem asks for the latest step, can you start the searching from the end of arr?",
+    "Use a map to store the current “1” groups.",
+    "At each step (going backwards) you need to split one group and update the map."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findLatestStep(vector<int>& arr, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLatestStep(int[] arr, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLatestStep(self, arr, m):\n        \"\"\"\n        :type arr: List[int]\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLatestStep(self, arr: List[int], m: int) -> int:\n        ",
+    "c": "int findLatestStep(int* arr, int arrSize, int m) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindLatestStep(int[] arr, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} m\n * @return {number}\n */\nvar findLatestStep = function(arr, m) {\n    \n};",
+    "typescript": "function findLatestStep(arr: number[], m: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $m\n     * @return Integer\n     */\n    function findLatestStep($arr, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLatestStep(_ arr: [Int], _ m: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLatestStep(arr: IntArray, m: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLatestStep(List<int> arr, int m) {\n    \n  }\n}",
+    "golang": "func findLatestStep(arr []int, m int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} m\n# @return {Integer}\ndef find_latest_step(arr, m)\n    \nend",
+    "scala": "object Solution {\n    def findLatestStep(arr: Array[Int], m: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_latest_step(arr: Vec<i32>, m: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-latest-step arr m)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_latest_step(Arr :: [integer()], M :: integer()) -> integer().\nfind_latest_step(Arr, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_latest_step(arr :: [integer], m :: integer) :: integer\n  def find_latest_step(arr, m) do\n    \n  end\nend"
+  }
+}

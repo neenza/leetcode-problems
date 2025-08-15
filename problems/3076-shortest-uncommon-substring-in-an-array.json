@@ -1,0 +1,58 @@
+{
+  "title": "Shortest Uncommon Substring in an Array",
+  "problem_id": "3356",
+  "frontend_id": "3076",
+  "difficulty": "Medium",
+  "problem_slug": "shortest-uncommon-substring-in-an-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Trie"
+  ],
+  "description": "You are given an array arr of size n consisting of non-empty strings.\nFind a string array answer of size n such that:\nReturn the array answer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [\"cab\",\"ad\",\"bad\",\"c\"]\nOutput: [\"ab\",\"\",\"ba\",\"\"]\nExplanation: We have the following:\n- For the string \"cab\", the shortest substring that does not occur in any other string is either \"ca\" or \"ab\", we choose the lexicographically smaller substring, which is \"ab\".\n- For the string \"ad\", there is no substring that does not occur in any other string.\n- For the string \"bad\", the shortest substring that does not occur in any other string is \"ba\".\n- For the string \"c\", there is no substring that does not occur in any other string.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [\"abc\",\"bcd\",\"abcd\"]\nOutput: [\"\",\"\",\"abcd\"]\nExplanation: We have the following:\n- For the string \"abc\", there is no substring that does not occur in any other string.\n- For the string \"bcd\", there is no substring that does not occur in any other string.\n- For the string \"abcd\", the shortest substring that does not occur in any other string is \"abcd\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == arr.length",
+    "2 <= n <= 100",
+    "1 <= arr[i].length <= 20",
+    "arr[i] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try a brute force solution where you check every substring.",
+    "Use a Hash map to keep track of the substrings."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> shortestSubstrings(vector<string>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] shortestSubstrings(String[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestSubstrings(self, arr):\n        \"\"\"\n        :type arr: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestSubstrings(self, arr: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** shortestSubstrings(char** arr, int arrSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] ShortestSubstrings(string[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} arr\n * @return {string[]}\n */\nvar shortestSubstrings = function(arr) {\n    \n};",
+    "typescript": "function shortestSubstrings(arr: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $arr\n     * @return String[]\n     */\n    function shortestSubstrings($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestSubstrings(_ arr: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestSubstrings(arr: Array<String>): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> shortestSubstrings(List<String> arr) {\n    \n  }\n}",
+    "golang": "func shortestSubstrings(arr []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} arr\n# @return {String[]}\ndef shortest_substrings(arr)\n    \nend",
+    "scala": "object Solution {\n    def shortestSubstrings(arr: Array[String]): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_substrings(arr: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-substrings arr)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec shortest_substrings(Arr :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nshortest_substrings(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_substrings(arr :: [String.t]) :: [String.t]\n  def shortest_substrings(arr) do\n    \n  end\nend"
+  }
+}

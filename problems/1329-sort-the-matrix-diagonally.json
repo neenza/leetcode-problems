@@ -1,0 +1,62 @@
+{
+  "title": "Sort the Matrix Diagonally",
+  "problem_id": "1253",
+  "frontend_id": "1329",
+  "difficulty": "Medium",
+  "problem_slug": "sort-the-matrix-diagonally",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "A matrix diagonal is a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until reaching the matrix's end. For example, the matrix diagonal starting from mat[2][0], where mat is a 6 x 3 matrix, includes cells mat[2][0], mat[3][1], and mat[4][2].\nGiven an m x n matrix mat of integers, sort each matrix diagonal in ascending order and return the resulting matrix.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[3,3,1,1],[2,2,1,2],[1,1,1,2]]\nOutput: [[1,1,1,1],[1,2,2,2],[1,2,3,3]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/21/1482_example_1_2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[11,25,66,1,69,7],[23,55,17,45,15,52],[75,31,36,44,58,8],[22,27,33,25,68,4],[84,28,14,11,5,50]]\nOutput: [[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,66],[84,28,75,33,55,68]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/21/1482_example_1_2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 100",
+    "1 <= mat[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a data structure to store all values of each diagonal.",
+    "How to index the data structure with the id of the diagonal?",
+    "All cells in the same diagonal (i,j) have the same difference so we can get the diagonal of a cell using the difference i-j."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> diagonalSort(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] diagonalSort(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def diagonalSort(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def diagonalSort(self, mat: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** diagonalSort(int** mat, int matSize, int* matColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] DiagonalSort(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number[][]}\n */\nvar diagonalSort = function(mat) {\n    \n};",
+    "typescript": "function diagonalSort(mat: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer[][]\n     */\n    function diagonalSort($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func diagonalSort(_ mat: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun diagonalSort(mat: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> diagonalSort(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func diagonalSort(mat [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer[][]}\ndef diagonal_sort(mat)\n    \nend",
+    "scala": "object Solution {\n    def diagonalSort(mat: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn diagonal_sort(mat: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (diagonal-sort mat)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec diagonal_sort(Mat :: [[integer()]]) -> [[integer()]].\ndiagonal_sort(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec diagonal_sort(mat :: [[integer]]) :: [[integer]]\n  def diagonal_sort(mat) do\n    \n  end\nend"
+  }
+}

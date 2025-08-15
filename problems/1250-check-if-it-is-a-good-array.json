@@ -1,0 +1,60 @@
+{
+  "title": "Check If It Is a Good Array",
+  "problem_id": "1372",
+  "frontend_id": "1250",
+  "difficulty": "Hard",
+  "problem_slug": "check-if-it-is-a-good-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "Given an array nums of positive integers. Your task is to select some subset of nums, multiply each element by an integer and add all these numbers. The array is said to be good if you can obtain a sum of 1 from the array by any possible subset and multiplicand.\nReturn True if the array is good otherwise return False.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [12,5,7,23]\nOutput: true\nExplanation: Pick numbers 5 and 7.\n5*3 + 7*(-2) = 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [29,6,10]\nOutput: true\nExplanation: Pick numbers 29, 6 and 10.\n29*1 + 6*(-3) + 10*(-1) = 1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,6]\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10^5",
+    "1 <= nums[i] <= 10^9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Eq.  ax+by=1 has solution x, y if gcd(a,b) = 1.",
+    "Can you generalize the formula?.  Check Bézout's lemma."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isGoodArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isGoodArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isGoodArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isGoodArray(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool isGoodArray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsGoodArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar isGoodArray = function(nums) {\n    \n};",
+    "typescript": "function isGoodArray(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function isGoodArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isGoodArray(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isGoodArray(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isGoodArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func isGoodArray(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef is_good_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def isGoodArray(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_good_array(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-good-array nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_good_array(Nums :: [integer()]) -> boolean().\nis_good_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_good_array(nums :: [integer]) :: boolean\n  def is_good_array(nums) do\n    \n  end\nend"
+  }
+}

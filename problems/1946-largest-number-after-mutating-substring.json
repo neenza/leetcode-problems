@@ -1,0 +1,63 @@
+{
+  "title": "Largest Number After Mutating Substring",
+  "problem_id": "2077",
+  "frontend_id": "1946",
+  "difficulty": "Medium",
+  "problem_slug": "largest-number-after-mutating-substring",
+  "topics": [
+    "Array",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string num, which represents a large integer. You are also given a 0-indexed integer array change of length 10 that maps each digit 0-9 to another digit. More formally, digit d maps to digit change[d].\nYou may choose to mutate a single substring of num. To mutate a substring, replace each digit num[i] with the digit it maps to in change (i.e. replace num[i] with change[num[i]]).\nReturn a string representing the largest possible integer after mutating (or choosing not to) a single substring of num.\nA substring is a contiguous sequence of characters within the string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"132\", change = [9,8,5,0,3,6,4,2,6,8]\nOutput: \"832\"\nExplanation: Replace the substring \"1\":\n- 1 maps to change[1] = 8.\nThus, \"132\" becomes \"832\".\n\"832\" is the largest number that can be created, so return it.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"021\", change = [9,4,3,5,7,2,1,9,0,6]\nOutput: \"934\"\nExplanation: Replace the substring \"021\":\n- 0 maps to change[0] = 9.\n- 2 maps to change[2] = 3.\n- 1 maps to change[1] = 4.\nThus, \"021\" becomes \"934\".\n\"934\" is the largest number that can be created, so return it.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"5\", change = [1,4,7,5,3,2,5,6,9,4]\nOutput: \"5\"\nExplanation: \"5\" is already the largest number that can be created, so return it.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 105",
+    "num consists of only digits 0-9.",
+    "change.length == 10",
+    "0 <= change[d] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Should you change a digit if the new digit is smaller than the original?",
+    "If changing the first digit and the last digit both make the number bigger, but you can only change one of them; which one should you change?",
+    "Changing numbers closer to the front is always better"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string maximumNumber(string num, vector<int>& change) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maximumNumber(String num, int[] change) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumNumber(self, num, change):\n        \"\"\"\n        :type num: str\n        :type change: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumNumber(self, num: str, change: List[int]) -> str:\n        ",
+    "c": "char* maximumNumber(char* num, int* change, int changeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MaximumNumber(string num, int[] change) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @param {number[]} change\n * @return {string}\n */\nvar maximumNumber = function(num, change) {\n    \n};",
+    "typescript": "function maximumNumber(num: string, change: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @param Integer[] $change\n     * @return String\n     */\n    function maximumNumber($num, $change) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumNumber(_ num: String, _ change: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumNumber(num: String, change: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String maximumNumber(String num, List<int> change) {\n    \n  }\n}",
+    "golang": "func maximumNumber(num string, change []int) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @param {Integer[]} change\n# @return {String}\ndef maximum_number(num, change)\n    \nend",
+    "scala": "object Solution {\n    def maximumNumber(num: String, change: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_number(num: String, change: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-number num change)\n  (-> string? (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec maximum_number(Num :: unicode:unicode_binary(), Change :: [integer()]) -> unicode:unicode_binary().\nmaximum_number(Num, Change) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_number(num :: String.t, change :: [integer]) :: String.t\n  def maximum_number(num, change) do\n    \n  end\nend"
+  }
+}

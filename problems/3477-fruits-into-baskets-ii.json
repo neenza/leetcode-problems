@@ -1,0 +1,58 @@
+{
+  "title": "Fruits Into Baskets II",
+  "problem_id": "3790",
+  "frontend_id": "3477",
+  "difficulty": "Easy",
+  "problem_slug": "fruits-into-baskets-ii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Segment Tree",
+    "Simulation",
+    "Ordered Set"
+  ],
+  "description": "You are given two arrays of integers, fruits and baskets, each of length n, where fruits[i] represents the quantity of the ith type of fruit, and baskets[j] represents the capacity of the jth basket.\nFrom left to right, place the fruits according to these rules:\nReturn the number of fruit types that remain unplaced after all possible allocations are made.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: fruits = [4,2,5], baskets = [3,5,4]\nOutput: 1\nExplanation:\nSince one fruit type remains unplaced, we return 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: fruits = [3,6,1], baskets = [6,4,7]\nOutput: 0\nExplanation:\nSince all fruits are successfully placed, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == fruits.length == baskets.length",
+    "1 <= n <= 100",
+    "1 <= fruits[i], baskets[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the operations for each fruit as described"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numOfUnplacedFruits(vector<int>& fruits, vector<int>& baskets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfUnplacedFruits(int[] fruits, int[] baskets) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfUnplacedFruits(self, fruits, baskets):\n        \"\"\"\n        :type fruits: List[int]\n        :type baskets: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfUnplacedFruits(self, fruits: List[int], baskets: List[int]) -> int:\n        ",
+    "c": "int numOfUnplacedFruits(int* fruits, int fruitsSize, int* baskets, int basketsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumOfUnplacedFruits(int[] fruits, int[] baskets) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} fruits\n * @param {number[]} baskets\n * @return {number}\n */\nvar numOfUnplacedFruits = function(fruits, baskets) {\n    \n};",
+    "typescript": "function numOfUnplacedFruits(fruits: number[], baskets: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $fruits\n     * @param Integer[] $baskets\n     * @return Integer\n     */\n    function numOfUnplacedFruits($fruits, $baskets) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfUnplacedFruits(_ fruits: [Int], _ baskets: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfUnplacedFruits(fruits: IntArray, baskets: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfUnplacedFruits(List<int> fruits, List<int> baskets) {\n    \n  }\n}",
+    "golang": "func numOfUnplacedFruits(fruits []int, baskets []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} fruits\n# @param {Integer[]} baskets\n# @return {Integer}\ndef num_of_unplaced_fruits(fruits, baskets)\n    \nend",
+    "scala": "object Solution {\n    def numOfUnplacedFruits(fruits: Array[Int], baskets: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-unplaced-fruits fruits baskets)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_of_unplaced_fruits(Fruits :: [integer()], Baskets :: [integer()]) -> integer().\nnum_of_unplaced_fruits(Fruits, Baskets) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_unplaced_fruits(fruits :: [integer], baskets :: [integer]) :: integer\n  def num_of_unplaced_fruits(fruits, baskets) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Simulation\n\n#### Intuition\n\nSince the input size is small, we can simulate the process directly. We iterate over each fruit from left to right and try to find a basket that can hold it. A fruit can only be placed in a basket if the basket’s capacity is greater than or equal to the fruit's requirement. Once a fruit is placed in a basket, that basket is marked as used and cannot be used again.\n\nThere are two possibilities for each fruit:\n\n1. If a basket with enough capacity is found, we use that basket and mark it as unavailable by setting its capacity to `0`.\n2. If no such basket is found, we increment the counter `count` to indicate this fruit couldn't be placed.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{fruits}$.\n\n- Time complexity: $O(n^2)$.\n  \n  Every time a fruit is encountered, the basket array needs to be traversed.\n\n- Space complexity: $O(1)$.\n\n  Only a few additional variables were used.\n  \n---"
+}

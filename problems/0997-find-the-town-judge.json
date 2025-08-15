@@ -1,0 +1,61 @@
+{
+  "title": "Find the Town Judge",
+  "problem_id": "1039",
+  "frontend_id": "997",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-town-judge",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Graph"
+  ],
+  "description": "In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.\nIf the town judge exists, then:\nYou are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi. If a trust relationship does not exist in trust array, then such a trust relationship does not exist.\nReturn the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, trust = [[1,2]]\nOutput: 2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, trust = [[1,3],[2,3]]\nOutput: 3",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, trust = [[1,3],[2,3],[3,1]]\nOutput: -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000",
+    "0 <= trust.length <= 104",
+    "trust[i].length == 2",
+    "All the pairs of trust are unique.",
+    "ai != bi",
+    "1 <= ai, bi <= n"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findJudge(int n, vector<vector<int>>& trust) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findJudge(int n, int[][] trust) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findJudge(self, n, trust):\n        \"\"\"\n        :type n: int\n        :type trust: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findJudge(self, n: int, trust: List[List[int]]) -> int:\n        ",
+    "c": "int findJudge(int n, int** trust, int trustSize, int* trustColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindJudge(int n, int[][] trust) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} trust\n * @return {number}\n */\nvar findJudge = function(n, trust) {\n    \n};",
+    "typescript": "function findJudge(n: number, trust: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $trust\n     * @return Integer\n     */\n    function findJudge($n, $trust) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findJudge(_ n: Int, _ trust: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findJudge(n: Int, trust: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findJudge(int n, List<List<int>> trust) {\n    \n  }\n}",
+    "golang": "func findJudge(n int, trust [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} trust\n# @return {Integer}\ndef find_judge(n, trust)\n    \nend",
+    "scala": "object Solution {\n    def findJudge(n: Int, trust: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_judge(n: i32, trust: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-judge n trust)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_judge(N :: integer(), Trust :: [[integer()]]) -> integer().\nfind_judge(N, Trust) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_judge(n :: integer, trust :: [[integer]]) :: integer\n  def find_judge(n, trust) do\n    \n  end\nend"
+  }
+}

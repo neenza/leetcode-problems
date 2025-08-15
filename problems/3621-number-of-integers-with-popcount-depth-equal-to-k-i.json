@@ -1,0 +1,56 @@
+{
+  "title": "Number of Integers With Popcount-Depth Equal to K I",
+  "problem_id": "3937",
+  "frontend_id": "3621",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-integers-with-popcount-depth-equal-to-k-i",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "You are given two integers n and k.\nFor any positive integer x, define the following sequence:\nThis sequence will eventually reach the value 1.\nThe popcount-depth of x is defined as the smallest integer d >= 0 such that pd = 1.\nFor example, if x = 7 (binary representation \"111\"). Then, the sequence is: 7 → 3 → 2 → 1, so the popcount-depth of 7 is 3.\nYour task is to determine the number of integers in the range [1, n] whose popcount-depth is exactly equal to k.\nReturn the number of such integers.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, k = 1\nOutput: 2\nExplanation:\nThe following integers in the range [1, 4] have popcount-depth exactly equal to 1:\nThus, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 7, k = 2\nOutput: 3\nExplanation:\nThe following integers in the range [1, 7] have popcount-depth exactly equal to 2:\nThus, the answer is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1015",
+    "0 <= k <= 5"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use digit dynamic programming on the binary representation of <code>n</code>: let <code>dp[pos][ones][tight]</code> = number of ways to choose bits from the most significant down to position <code>pos</code> with exactly <code>ones</code> ones so far, where <code>tight</code> indicates whether you're still matching the prefix of <code>n</code>.",
+    "Precompute <code>depth[j]</code> for all <code>j</code> from <code>0</code> to <code>64</code> by repeatedly applying <code>popcount(j)</code> until you reach <code>1</code>.",
+    "After your DP, let <code>dp_final[j]</code> be the count of numbers <= <code>n</code> that have exactly <code>j</code> ones; the answer is the sum of all <code>dp_final[j]</code> for which <code>depth[j] == k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long popcountDepth(long long n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long popcountDepth(long n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def popcountDepth(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def popcountDepth(self, n: int, k: int) -> int:\n        ",
+    "c": "long long popcountDepth(long long n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long PopcountDepth(long n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar popcountDepth = function(n, k) {\n    \n};",
+    "typescript": "function popcountDepth(n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function popcountDepth($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func popcountDepth(_ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun popcountDepth(n: Long, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int popcountDepth(int n, int k) {\n    \n  }\n}",
+    "golang": "func popcountDepth(n int64, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef popcount_depth(n, k)\n    \nend",
+    "scala": "object Solution {\n    def popcountDepth(n: Long, k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn popcount_depth(n: i64, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (popcount-depth n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec popcount_depth(N :: integer(), K :: integer()) -> integer().\npopcount_depth(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec popcount_depth(n :: integer, k :: integer) :: integer\n  def popcount_depth(n, k) do\n    \n  end\nend"
+  }
+}

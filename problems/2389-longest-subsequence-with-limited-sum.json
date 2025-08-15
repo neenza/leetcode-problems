@@ -1,0 +1,60 @@
+{
+  "title": "Longest Subsequence With Limited Sum",
+  "problem_id": "2469",
+  "frontend_id": "2389",
+  "difficulty": "Easy",
+  "problem_slug": "longest-subsequence-with-limited-sum",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of length n, and an integer array queries of length m.\nReturn an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,5,2,1], queries = [3,10,21]\nOutput: [2,3,4]\nExplanation: We answer the queries as follows:\n- The subsequence [2,1] has a sum less than or equal to 3. It can be proven that 2 is the maximum size of such a subsequence, so answer[0] = 2.\n- The subsequence [4,5,1] has a sum less than or equal to 10. It can be proven that 3 is the maximum size of such a subsequence, so answer[1] = 3.\n- The subsequence [4,5,2,1] has a sum less than or equal to 21. It can be proven that 4 is the maximum size of such a subsequence, so answer[2] = 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,4,5], queries = [1]\nOutput: [0]\nExplanation: The empty subsequence is the only subsequence that has a sum less than or equal to 1, so answer[0] = 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "m == queries.length",
+    "1 <= n, m <= 1000",
+    "1 <= nums[i], queries[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Solve each query independently.",
+    "When solving a query, which elements of nums should you choose to make the subsequence as long as possible?",
+    "Choose the smallest elements in nums that add up to a sum less than the query."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] answerQueries(int[] nums, int[] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def answerQueries(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* answerQueries(int* nums, int numsSize, int* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] AnswerQueries(int[] nums, int[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} queries\n * @return {number[]}\n */\nvar answerQueries = function(nums, queries) {\n    \n};",
+    "typescript": "function answerQueries(nums: number[], queries: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $queries\n     * @return Integer[]\n     */\n    function answerQueries($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func answerQueries(_ nums: [Int], _ queries: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun answerQueries(nums: IntArray, queries: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> answerQueries(List<int> nums, List<int> queries) {\n    \n  }\n}",
+    "golang": "func answerQueries(nums []int, queries []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} queries\n# @return {Integer[]}\ndef answer_queries(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def answerQueries(nums: Array[Int], queries: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn answer_queries(nums: Vec<i32>, queries: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (answer-queries nums queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec answer_queries(Nums :: [integer()], Queries :: [integer()]) -> [integer()].\nanswer_queries(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec answer_queries(nums :: [integer], queries :: [integer]) :: [integer]\n  def answer_queries(nums, queries) do\n    \n  end\nend"
+  }
+}

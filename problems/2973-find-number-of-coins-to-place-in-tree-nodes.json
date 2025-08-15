@@ -1,0 +1,75 @@
+{
+  "title": "Find Number of Coins to Place in Tree Nodes",
+  "problem_id": "3218",
+  "frontend_id": "2973",
+  "difficulty": "Hard",
+  "problem_slug": "find-number-of-coins-to-place-in-tree-nodes",
+  "topics": [
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an undirected tree with n nodes labeled from 0 to n - 1, and rooted at node 0. You are given a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\nYou are also given a 0-indexed integer array cost of length n, where cost[i] is the cost assigned to the ith node.\nYou need to place some coins on every node of the tree. The number of coins to be placed at node i can be calculated as:\nReturn an array coin of size n such that coin[i] is the number of coins placed at node i.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1],[0,2],[0,3],[0,4],[0,5]], cost = [1,2,3,4,5,6]\nOutput: [120,1,1,1,1,1]\nExplanation: For node 0 place 6 * 5 * 4 = 120 coins. All other nodes are leaves with subtree of size 1, place 1 coin on each of them.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/09/screenshot-2023-11-10-012641.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[0,1],[0,2],[1,3],[1,4],[1,5],[2,6],[2,7],[2,8]], cost = [1,4,2,3,5,7,8,-4,2]\nOutput: [280,140,32,1,1,1,1,1,1]\nExplanation: The coins placed on each node are:\n- Place 8 * 7 * 5 = 280 coins on node 0.\n- Place 7 * 5 * 4 = 140 coins on node 1.\n- Place 8 * 2 * 2 = 32 coins on node 2.\n- All other nodes are leaves with subtree of size 1, place 1 coin on each of them.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/09/screenshot-2023-11-10-012614.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: edges = [[0,1],[0,2]], cost = [1,2,-2]\nOutput: [0,1,1]\nExplanation: Node 1 and 2 are leaves with subtree of size 1, place 1 coin on each of them. For node 0 the only possible product of cost is 2 * 1 * -2 = -4. Hence place 0 coins on node 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/09/screenshot-2023-11-10-012513.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 2 * 104",
+    "edges.length == n - 1",
+    "edges[i].length == 2",
+    "0 <= ai, bi < n",
+    "cost.length == n",
+    "1 <= |cost[i]| <= 104",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use DFS on the whole tree, for each subtree, save the largest three positive costs and the smallest three non-positive costs. This can be done by using two Heaps with the size of at most three.",
+    "You need to store at most six values at each subtree.",
+    "If there are more than three values in total, we can sort them. Let’s call the resultant array <code>A</code>, the maximum product of three is <code>max(A[0] * A[1] * A[n - 1], A[n - 1] * A[n - 2] * A[n - 3])</code>. Don’t forget to set the result to <code>0</code> if the value is negative.",
+    "If there are less than three values for a subtree, set its result to <code>1</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> placedCoins(vector<vector<int>>& edges, vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] placedCoins(int[][] edges, int[] cost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def placedCoins(self, edges, cost):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type cost: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def placedCoins(self, edges: List[List[int]], cost: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* placedCoins(int** edges, int edgesSize, int* edgesColSize, int* cost, int costSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] PlacedCoins(int[][] edges, int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} cost\n * @return {number[]}\n */\nvar placedCoins = function(edges, cost) {\n    \n};",
+    "typescript": "function placedCoins(edges: number[][], cost: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer[] $cost\n     * @return Integer[]\n     */\n    function placedCoins($edges, $cost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func placedCoins(_ edges: [[Int]], _ cost: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun placedCoins(edges: Array<IntArray>, cost: IntArray): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> placedCoins(List<List<int>> edges, List<int> cost) {\n    \n  }\n}",
+    "golang": "func placedCoins(edges [][]int, cost []int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer[]} cost\n# @return {Integer[]}\ndef placed_coins(edges, cost)\n    \nend",
+    "scala": "object Solution {\n    def placedCoins(edges: Array[Array[Int]], cost: Array[Int]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn placed_coins(edges: Vec<Vec<i32>>, cost: Vec<i32>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (placed-coins edges cost)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec placed_coins(Edges :: [[integer()]], Cost :: [integer()]) -> [integer()].\nplaced_coins(Edges, Cost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec placed_coins(edges :: [[integer]], cost :: [integer]) :: [integer]\n  def placed_coins(edges, cost) do\n    \n  end\nend"
+  }
+}

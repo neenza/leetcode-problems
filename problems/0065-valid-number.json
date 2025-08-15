@@ -1,0 +1,55 @@
+{
+  "title": "Valid Number",
+  "problem_id": "65",
+  "frontend_id": "65",
+  "difficulty": "Hard",
+  "problem_slug": "valid-number",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string s, return whether s is a valid number.\n\nFor example, all the following are valid numbers: \"2\", \"0089\", \"-0.1\", \"+3.14\", \"4.\", \"-.9\", \"2e10\", \"-90E3\", \"3e+7\", \"+6e-1\", \"53.5e93\", \"-123.456e789\", while the following are not valid numbers: \"abc\", \"1a\", \"1e\", \"e3\", \"99e2.5\", \"--6\", \"-+3\", \"95a54e53\".\nFormally, a valid number is defined using one of the following definitions:\nAn integer number is defined with an optional sign '-' or '+' followed by digits.\nA decimal number is defined with an optional sign '-' or '+' followed by one of the following definitions:\nAn exponent is defined with an exponent notation 'e' or 'E' followed by an integer number.\nThe digits are defined as one or more digits.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"0\"\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"e\"\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \".\"\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 20",
+    "s consists of only English letters (both uppercase and lowercase), digits (0-9), plus '+', minus '-', or dot '.'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isNumber(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isNumber(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isNumber(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isNumber(self, s: str) -> bool:\n        ",
+    "c": "bool isNumber(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsNumber(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isNumber = function(s) {\n    \n};",
+    "typescript": "function isNumber(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function isNumber($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isNumber(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isNumber(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isNumber(String s) {\n    \n  }\n}",
+    "golang": "func isNumber(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef is_number(s)\n    \nend",
+    "scala": "object Solution {\n    def isNumber(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_number(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-number s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_number(S :: unicode:unicode_binary()) -> boolean().\nis_number(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_number(s :: String.t) :: boolean\n  def is_number(s) do\n    \n  end\nend"
+  }
+}

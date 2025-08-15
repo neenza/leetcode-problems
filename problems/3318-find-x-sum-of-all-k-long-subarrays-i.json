@@ -1,0 +1,56 @@
+{
+  "title": "Find X-Sum of All K-Long Subarrays I",
+  "problem_id": "3610",
+  "frontend_id": "3318",
+  "difficulty": "Easy",
+  "problem_slug": "find-x-sum-of-all-k-long-subarrays-i",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array nums of n integers and two integers k and x.\nThe x-sum of an array is calculated by the following procedure:\nNote that if an array has less than x distinct elements, its x-sum is the sum of the array.\nReturn an integer array answer of length n - k + 1 where answer[i] is the x-sum of the subarray nums[i..i + k - 1].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,2,2,3,4,2,3], k = 6, x = 2\nOutput: [6,10,12]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,8,7,8,7,5], k = 2, x = 2\nOutput: [11,15,15,15,12]\nExplanation:\nSince k == x , answer[i] is equal to the sum of the subarray nums[i..i + k - 1] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 50",
+    "1 <= nums[i] <= 50",
+    "1 <= x <= k <= nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Implement the x-sum function. Then, run x-sum on every subarray of <code>nums</code> of size <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findXSum(vector<int>& nums, int k, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findXSum(int[] nums, int k, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findXSum(self, nums, k, x):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type x: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findXSum(self, nums: List[int], k: int, x: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findXSum(int* nums, int numsSize, int k, int x, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindXSum(int[] nums, int k, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} x\n * @return {number[]}\n */\nvar findXSum = function(nums, k, x) {\n    \n};",
+    "typescript": "function findXSum(nums: number[], k: number, x: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer $x\n     * @return Integer[]\n     */\n    function findXSum($nums, $k, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findXSum(_ nums: [Int], _ k: Int, _ x: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findXSum(nums: IntArray, k: Int, x: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findXSum(List<int> nums, int k, int x) {\n    \n  }\n}",
+    "golang": "func findXSum(nums []int, k int, x int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer} x\n# @return {Integer[]}\ndef find_x_sum(nums, k, x)\n    \nend",
+    "scala": "object Solution {\n    def findXSum(nums: Array[Int], k: Int, x: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_x_sum(nums: Vec<i32>, k: i32, x: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-x-sum nums k x)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec find_x_sum(Nums :: [integer()], K :: integer(), X :: integer()) -> [integer()].\nfind_x_sum(Nums, K, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_x_sum(nums :: [integer], k :: integer, x :: integer) :: [integer]\n  def find_x_sum(nums, k, x) do\n    \n  end\nend"
+  }
+}

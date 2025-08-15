@@ -1,0 +1,53 @@
+{
+  "title": "Sum of Subarray Minimums",
+  "problem_id": "943",
+  "frontend_id": "907",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-subarray-minimums",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "Given an array of integers arr, find the sum of min(b), where b ranges over every (contiguous) subarray of arr. Since the answer may be large, return the answer modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,1,2,4]\nOutput: 17\nExplanation: \nSubarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4]. \nMinimums are 3, 1, 2, 4, 1, 1, 2, 1, 1, 1.\nSum is 17.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [11,81,94,43,3]\nOutput: 444",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 3 * 104",
+    "1 <= arr[i] <= 3 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumSubarrayMins(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumSubarrayMins(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumSubarrayMins(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumSubarrayMins(self, arr: List[int]) -> int:\n        ",
+    "c": "int sumSubarrayMins(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumSubarrayMins(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar sumSubarrayMins = function(arr) {\n    \n};",
+    "typescript": "function sumSubarrayMins(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function sumSubarrayMins($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumSubarrayMins(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumSubarrayMins(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumSubarrayMins(List<int> arr) {\n    \n  }\n}",
+    "golang": "func sumSubarrayMins(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef sum_subarray_mins(arr)\n    \nend",
+    "scala": "object Solution {\n    def sumSubarrayMins(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_subarray_mins(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-subarray-mins arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec sum_subarray_mins(Arr :: [integer()]) -> integer().\nsum_subarray_mins(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_subarray_mins(arr :: [integer]) :: integer\n  def sum_subarray_mins(arr) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Consecutive Characters",
+  "problem_id": "1542",
+  "frontend_id": "1446",
+  "difficulty": "Easy",
+  "problem_slug": "consecutive-characters",
+  "topics": [
+    "String"
+  ],
+  "description": "The power of the string is the maximum length of a non-empty substring that contains only one unique character.\nGiven a string s, return the power of s.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcode\"\nOutput: 2\nExplanation: The substring \"ee\" is of length 2 with the character 'e' only.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abbcccddddeeeeedcba\"\nOutput: 5\nExplanation: The substring \"eeeee\" is of length 5 with the character 'e' only.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep an array power where power[i] is the maximum power of the i-th character.",
+    "The answer is max(power[i])."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPower(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPower(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPower(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPower(self, s: str) -> int:\n        ",
+    "c": "int maxPower(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPower(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxPower = function(s) {\n    \n};",
+    "typescript": "function maxPower(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maxPower($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPower(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPower(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPower(String s) {\n    \n  }\n}",
+    "golang": "func maxPower(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef max_power(s)\n    \nend",
+    "scala": "object Solution {\n    def maxPower(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_power(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-power s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_power(S :: unicode:unicode_binary()) -> integer().\nmax_power(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_power(s :: String.t) :: integer\n  def max_power(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThis problem is very similar to [674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/), and the only difference is that we need a substring with the same characters instead of an increasing one. Therefore, similar methods can be applied. Below, a similar and simple approach is introduced.\n\n---\n\n### Approach #1: One Pass\n\n**Intuition and Algorithm**\n\nRecall the problem, we need to find \"the maximum length of a non-empty substring that contains only one unique character\".\n\nIn other words, we need to find the Longest Substring with **the same characters**.\n\nWe can iterate over the given string, and use a variable `count` to record the length of that substring.\n\nWhen the next character is the same as the previous one, we increase `count` by one. Else, we reset `count` to 1.\n\nWith this method, when reaching the end of a substring with the same characters, `count` will be the length of that substring, since we reset the `count` when that substring starts, and increase `count` when iterate that substring.\n\nTherefore, the maximum value of `count` is what we need. Another variable is needed to store the maximum while iterating.**Complexity Analysis**\n\nLet $$N$$ be the length of `s`.\n\n* Time Complexity: $$O(N)$$, since we perform one loop through `s`.\n\n* Space Complexity: $$O(1)$$, since we only have two integer variables `count` and `max_count`(`maxCount`), and one character variable `previous`."
+}

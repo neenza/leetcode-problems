@@ -1,0 +1,61 @@
+{
+  "title": "Separate Black and White Balls",
+  "problem_id": "3195",
+  "frontend_id": "2938",
+  "difficulty": "Medium",
+  "problem_slug": "separate-black-and-white-balls",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Greedy"
+  ],
+  "description": "There are n balls on a table, each ball has a color black or white.\nYou are given a 0-indexed binary string s of length n, where 1 and 0 represent black and white balls, respectively.\nIn each step, you can choose two adjacent balls and swap them.\nReturn the minimum number of steps to group all the black balls to the right and all the white balls to the left.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"101\"\nOutput: 1\nExplanation: We can group all the black balls to the right in the following way:\n- Swap s[0] and s[1], s = \"011\".\nInitially, 1s are not grouped together, requiring at least 1 step to group them to the right.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"100\"\nOutput: 2\nExplanation: We can group all the black balls to the right in the following way:\n- Swap s[0] and s[1], s = \"010\".\n- Swap s[1] and s[2], s = \"001\".\nIt can be proven that the minimum number of steps needed is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"0111\"\nOutput: 0\nExplanation: All the black balls are already grouped to the right.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == s.length <= 105",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Every <code>1</code> in the string <code>s</code> should be swapped with every <code>0</code> on its right side.",
+    "Iterate right to left and count the number of <code>0</code> that have already occurred, whenever you iterate on <code>1</code> add that counter to the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumSteps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumSteps(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumSteps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumSteps(self, s: str) -> int:\n        ",
+    "c": "long long minimumSteps(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumSteps(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumSteps = function(s) {\n    \n};",
+    "typescript": "function minimumSteps(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minimumSteps($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSteps(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumSteps(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSteps(String s) {\n    \n  }\n}",
+    "golang": "func minimumSteps(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef minimum_steps(s)\n    \nend",
+    "scala": "object Solution {\n    def minimumSteps(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_steps(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-steps s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_steps(S :: unicode:unicode_binary()) -> integer().\nminimum_steps(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_steps(s :: String.t) :: integer\n  def minimum_steps(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a binary string `s`, where each `0` represents a white ball and each `1` represents a black ball. Our goal is to move all the white balls to the left and all the black balls to the right. \n\nIn each operation, we can swap two adjacent characters. The task is to find the minimum number of swaps required to achieve the desired arrangement, where all `0`s come before all `1`s.\n\n### Approach 1: Two Pointer\n\n#### Intuition\n\nOur job is to move all the white balls to the front of the string. Each move forward requires one swap. The number of swaps needed for a white ball equals the gap between its current and final positions. Once the white balls are in place, the black balls will naturally move to the back.\n\nTo find out where each white ball should go, we use a pointer, `whitePosition`. When we find a white ball, we calculate how many swaps it needs to reach the position marked by `whitePosition`. After calculating, we update `whitePosition` to the next available spot.\n\nWe track the total number of swaps with a counter, `totalSwaps`. For each white ball, we add its swaps to the counter. This approach counts all the necessary moves without physically making them.\n\nBy the end, `totalSwaps` will hold the minimum number of swaps required to move the white balls to the front.\n\nThe algorithm is visualized in the slideshow below:\n\n!?!../Documents/2938/slideshow.json:1264,620!?!\n\n#### Algorithm\n\n- Initialize variables:\n  - `whitePosition` to 0. This represents the next available position for a white ball.\n  - `totalSwaps` to 0 to keep track of the total number of swaps required.\n- Iterate over each character in the string `s`:\n  - If the character is `0` (a white ball):\n    - Calculate the number of swaps needed by subtracting `whitePosition` from the current position. Add it to `totalSwaps`.\n    - Increment `whitePosition` by 1 to mark the next available position for a white ball.\n- After the loop ends, return the value of `totalSwaps`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input string `s`.\n\n- Time complexity: $O(n)$\n\n    The algorithm makes a single pass through the string `s`. Each operation inside the loop (addition and subtraction) takes constant time. Thus, the time complexity of the algorithm is $O(n)$. \n\n- Space complexity: $O(1)$\n\n    The algorithm does not use any data structures which scale with input space. Thus, the space complexity is constant.\n\n---\n\n### Approach 2: Counter\n\n#### Intuition\n\nWhen we find a white ball in the array, we need to move it to the front by swapping it past the black balls. Here's what that looks like:\n\n![](../Figures/2938/app2.png)\n\nTo push a white ball to the front, we need to swap it with each black ball in front of it. Each swap moves the white ball forward by one position. The number of swaps for each white ball is equal to the number of black balls before it.\n\nAs we go through the array, we use a variable `blackBallCount` to track how many black balls we've passed. Each time we find a white ball, we add the current value of `blackBallCount` to the total swap count `totalSwaps`. When we're done, `totalSwaps` holds the answer.\n\n#### Algorithm                          \n\n- Initialize variables:\n  - `totalSwaps` to 0 to keep track of the total number of swaps required.\n  - `blackBallCount` to 0 to count the number of black balls encountered.\n- Loop over each character in the string `s`:\n  - If the character is `0`:\n    - Add the current `blackBallCount` to `totalSwaps`.\n  - If it is not `0` (meaning it's a black ball):\n    - Increment `blackBallCount` by 1.\n- Return the value of `totalSwaps`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input string `s`. \n\n* Time complexity: $O(n)$\n\n    The algorithm also traverses the input string `s` only once, taking linear time. The operations inside the loop take constant time. Thus, the overall time complexity of the algorithm is $O(n)$.\n\n* Space complexity: $O(1)$\n\n    The algorithm only uses two variables, `totalSwaps` and `blackBallCount`. Thus, the space complexity is constant, $O(1)$.\n\n---"
+}

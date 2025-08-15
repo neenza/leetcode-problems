@@ -1,0 +1,58 @@
+{
+  "title": "Find the Count of Monotonic Pairs I",
+  "problem_id": "3535",
+  "frontend_id": "3250",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-count-of-monotonic-pairs-i",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics",
+    "Prefix Sum"
+  ],
+  "description": "You are given an array of positive integers nums of length n.\nWe call a pair of non-negative integer arrays (arr1, arr2) monotonic if:\nReturn the count of monotonic pairs.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,2]\nOutput: 4\nExplanation:\nThe good pairs are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,5,5,5]\nOutput: 126",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 2000",
+    "1 <= nums[i] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i][s]</code> is the number of monotonic pairs of length <code>i</code> with the <code>arr1[i - 1] = s</code>.",
+    "If <code>arr1[i - 1] = s</code>, <code>arr2[i - 1] = nums[i - 1] - s</code>.",
+    "Check if the state in recurrence is valid."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countOfPairs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countOfPairs(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countOfPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countOfPairs(self, nums: List[int]) -> int:\n        ",
+    "c": "int countOfPairs(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountOfPairs(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countOfPairs = function(nums) {\n    \n};",
+    "typescript": "function countOfPairs(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countOfPairs($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countOfPairs(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countOfPairs(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countOfPairs(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countOfPairs(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_of_pairs(nums)\n    \nend",
+    "scala": "object Solution {\n    def countOfPairs(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_of_pairs(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-of-pairs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_of_pairs(Nums :: [integer()]) -> integer().\ncount_of_pairs(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_of_pairs(nums :: [integer]) :: integer\n  def count_of_pairs(nums) do\n    \n  end\nend"
+  }
+}

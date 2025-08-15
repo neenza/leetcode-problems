@@ -1,0 +1,66 @@
+{
+  "title": "Delivering Boxes from Storage to Ports",
+  "problem_id": "1789",
+  "frontend_id": "1687",
+  "difficulty": "Hard",
+  "problem_slug": "delivering-boxes-from-storage-to-ports",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Segment Tree",
+    "Queue",
+    "Heap (Priority Queue)",
+    "Prefix Sum",
+    "Monotonic Queue"
+  ],
+  "description": "You have the task of delivering some boxes from storage to their ports using only one ship. However, this ship has a limit on the number of boxes and the total weight that it can carry.\nYou are given an array boxes, where boxes[i] = [ports​​i​, weighti], and three integers portsCount, maxBoxes, and maxWeight.\nThe boxes need to be delivered in the order they are given. The ship will follow these steps:\nThe ship must end at storage after all the boxes have been delivered.\nReturn the minimum number of trips the ship needs to make to deliver all boxes to their respective ports.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: boxes = [[1,1],[2,1],[1,1]], portsCount = 2, maxBoxes = 3, maxWeight = 3\nOutput: 4\nExplanation: The optimal strategy is as follows: \n- The ship takes all the boxes in the queue, goes to port 1, then port 2, then port 1 again, then returns to storage. 4 trips.\nSo the total number of trips is 4.\nNote that the first and third boxes cannot be delivered together because the boxes need to be delivered in order (i.e. the second box needs to be delivered at port 2 before the third box).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: boxes = [[1,2],[3,3],[3,1],[3,1],[2,4]], portsCount = 3, maxBoxes = 3, maxWeight = 6\nOutput: 6\nExplanation: The optimal strategy is as follows: \n- The ship takes the first box, goes to port 1, then returns to storage. 2 trips.\n- The ship takes the second, third and fourth boxes, goes to port 3, then returns to storage. 2 trips.\n- The ship takes the fifth box, goes to port 2, then returns to storage. 2 trips.\nSo the total number of trips is 2 + 2 + 2 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: boxes = [[1,4],[1,2],[2,1],[2,1],[3,2],[3,4]], portsCount = 3, maxBoxes = 6, maxWeight = 7\nOutput: 6\nExplanation: The optimal strategy is as follows:\n- The ship takes the first and second boxes, goes to port 1, then returns to storage. 2 trips.\n- The ship takes the third and fourth boxes, goes to port 2, then returns to storage. 2 trips.\n- The ship takes the fifth and sixth boxes, goes to port 3, then returns to storage. 2 trips.\nSo the total number of trips is 2 + 2 + 2 = 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= boxes.length <= 105",
+    "1 <= portsCount, maxBoxes, maxWeight <= 105",
+    "1 <= ports​​i <= portsCount",
+    "1 <= weightsi <= maxWeight"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to think of the most basic dp which is n^2 now optimize it",
+    "Think of any range query data structure to optimize"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int boxDelivering(vector<vector<int>>& boxes, int portsCount, int maxBoxes, int maxWeight) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int boxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def boxDelivering(self, boxes, portsCount, maxBoxes, maxWeight):\n        \"\"\"\n        :type boxes: List[List[int]]\n        :type portsCount: int\n        :type maxBoxes: int\n        :type maxWeight: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def boxDelivering(self, boxes: List[List[int]], portsCount: int, maxBoxes: int, maxWeight: int) -> int:\n        ",
+    "c": "int boxDelivering(int** boxes, int boxesSize, int* boxesColSize, int portsCount, int maxBoxes, int maxWeight) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BoxDelivering(int[][] boxes, int portsCount, int maxBoxes, int maxWeight) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} boxes\n * @param {number} portsCount\n * @param {number} maxBoxes\n * @param {number} maxWeight\n * @return {number}\n */\nvar boxDelivering = function(boxes, portsCount, maxBoxes, maxWeight) {\n    \n};",
+    "typescript": "function boxDelivering(boxes: number[][], portsCount: number, maxBoxes: number, maxWeight: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $boxes\n     * @param Integer $portsCount\n     * @param Integer $maxBoxes\n     * @param Integer $maxWeight\n     * @return Integer\n     */\n    function boxDelivering($boxes, $portsCount, $maxBoxes, $maxWeight) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func boxDelivering(_ boxes: [[Int]], _ portsCount: Int, _ maxBoxes: Int, _ maxWeight: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun boxDelivering(boxes: Array<IntArray>, portsCount: Int, maxBoxes: Int, maxWeight: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int boxDelivering(List<List<int>> boxes, int portsCount, int maxBoxes, int maxWeight) {\n    \n  }\n}",
+    "golang": "func boxDelivering(boxes [][]int, portsCount int, maxBoxes int, maxWeight int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} boxes\n# @param {Integer} ports_count\n# @param {Integer} max_boxes\n# @param {Integer} max_weight\n# @return {Integer}\ndef box_delivering(boxes, ports_count, max_boxes, max_weight)\n    \nend",
+    "scala": "object Solution {\n    def boxDelivering(boxes: Array[Array[Int]], portsCount: Int, maxBoxes: Int, maxWeight: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn box_delivering(boxes: Vec<Vec<i32>>, ports_count: i32, max_boxes: i32, max_weight: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (box-delivering boxes portsCount maxBoxes maxWeight)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec box_delivering(Boxes :: [[integer()]], PortsCount :: integer(), MaxBoxes :: integer(), MaxWeight :: integer()) -> integer().\nbox_delivering(Boxes, PortsCount, MaxBoxes, MaxWeight) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec box_delivering(boxes :: [[integer]], ports_count :: integer, max_boxes :: integer, max_weight :: integer) :: integer\n  def box_delivering(boxes, ports_count, max_boxes, max_weight) do\n    \n  end\nend"
+  }
+}

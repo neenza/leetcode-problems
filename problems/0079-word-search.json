@@ -1,0 +1,70 @@
+{
+  "title": "Word Search",
+  "problem_id": "79",
+  "frontend_id": "79",
+  "difficulty": "Medium",
+  "problem_slug": "word-search",
+  "topics": [
+    "Array",
+    "String",
+    "Backtracking",
+    "Depth-First Search",
+    "Matrix"
+  ],
+  "description": "Given an m x n grid of characters board and a string word, return true if word exists in the grid.\nThe word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Could you use search pruning to make your solution faster with a larger board?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/04/word2.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"SEE\"\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/04/word-1.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCB\"\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/15/word3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == board.length",
+    "n = board[i].length",
+    "1 <= m, n <= 6",
+    "1 <= word.length <= 15",
+    "board and word consists of only lowercase and uppercase English letters."
+  ],
+  "follow_ups": [
+    "Could you use search pruning to make your solution faster with a larger board?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool exist(vector<vector<char>>& board, string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean exist(char[][] board, String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def exist(self, board, word):\n        \"\"\"\n        :type board: List[List[str]]\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def exist(self, board: List[List[str]], word: str) -> bool:\n        ",
+    "c": "bool exist(char** board, int boardSize, int* boardColSize, char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool Exist(char[][] board, string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @param {string} word\n * @return {boolean}\n */\nvar exist = function(board, word) {\n    \n};",
+    "typescript": "function exist(board: string[][], word: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @param String $word\n     * @return Boolean\n     */\n    function exist($board, $word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func exist(_ board: [[Character]], _ word: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun exist(board: Array<CharArray>, word: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool exist(List<List<String>> board, String word) {\n    \n  }\n}",
+    "golang": "func exist(board [][]byte, word string) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @param {String} word\n# @return {Boolean}\ndef exist(board, word)\n    \nend",
+    "scala": "object Solution {\n    def exist(board: Array[Array[Char]], word: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn exist(board: Vec<Vec<char>>, word: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (exist board word)\n  (-> (listof (listof char?)) string? boolean?)\n  )",
+    "erlang": "-spec exist(Board :: [[char()]], Word :: unicode:unicode_binary()) -> boolean().\nexist(Board, Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec exist(board :: [[char]], word :: String.t) :: boolean\n  def exist(board, word) do\n    \n  end\nend"
+  }
+}

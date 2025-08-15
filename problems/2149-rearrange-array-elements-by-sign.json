@@ -1,0 +1,58 @@
+{
+  "title": "Rearrange Array Elements by Sign",
+  "problem_id": "2271",
+  "frontend_id": "2149",
+  "difficulty": "Medium",
+  "problem_slug": "rearrange-array-elements-by-sign",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums of even length consisting of an equal number of positive and negative integers.\nYou should return the array of nums such that the the array follows the given conditions:\nReturn the modified array after rearranging the elements to satisfy the aforementioned conditions.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,1,-2,-5,2,-4]\nOutput: [3,-2,1,-5,2,-4]\nExplanation:\nThe positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].\nThe only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].\nOther ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,1]\nOutput: [1,-1]\nExplanation:\n1 is the only positive integer and -1 the only negative integer in nums.\nSo nums is rearranged to [1,-1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 2 * 105",
+    "nums.length is even",
+    "1 <= |nums[i]| <= 105",
+    "nums consists of equal number of positive and negative integers."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Divide the array into two parts- one comprising of only positive integers and the other of negative integers.",
+    "Merge the two parts to get the resultant array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> rearrangeArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] rearrangeArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rearrangeArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rearrangeArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* rearrangeArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RearrangeArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar rearrangeArray = function(nums) {\n    \n};",
+    "typescript": "function rearrangeArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function rearrangeArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rearrangeArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rearrangeArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> rearrangeArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func rearrangeArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef rearrange_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def rearrangeArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rearrange_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (rearrange-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec rearrange_array(Nums :: [integer()]) -> [integer()].\nrearrange_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rearrange_array(nums :: [integer]) :: [integer]\n  def rearrange_array(nums) do\n    \n  end\nend"
+  },
+  "solution": "​\n[TOC]\n​\n## Solution\n---\n### Approach: Two Pointers\n\n#### Intuition\nThe first and third conditions state that every consecutive pair of integers should have opposite signs and the resultant array should begin with a positive integer. Hence, the `0th` index shall contain a positive integer, the `1st` index shall contain a negative integer, and so on. From these conditions, we can say that all even indices of the result should have positive integers and all odd indices should have negative integers. This suggests we can use two pointers to track the even and odd indices of the resultant array `ans`.\nLet us now consider the second condition, which states that all integers of the same sign should be in the same order as they were in the original array `nums`. If we were to iterate over `nums` in order and populate our `ans` array using the two pointers based on the sign of the current integer, the order of the integers of the same sign would be maintained. Therefore, we can satisfy all the conditions in one pass! Note that since every other index will be odd and every other index will be even, both pointers would increment by 2 rather than 1.\n\n\n#### Algorithm\nLet us label the two pointers to track even and odd indices as `posIndex` and `negIndex` respectively. These pointers shall be initialized with 0 for `posIndex` and 1 for `negIndex`. These indices will traverse the `ans` array which will be initialized with the same size as `nums`. \nNow, we'll start traversing `nums` from the `0th` index. Recall that traversing `nums` from the start will ensure that the order is maintained in our `ans` array. If a positive integer is encountered in `nums`, we'll set it in `ans[posIndex]`. Since the next positive integer should be placed in `posIndex + 2`, we'll increment `posIndex` accordingly. This process will be the same for any negative integer and `negIndex`. Since it is given that there are equal numbers of positive and negative integers, we don't stand the risk of going out of bounds with either of the two indices.\n\nLet us summarize the algorithm.\n\n1. Initialize `n` to the size of `nums`. Initialize `ans` array of size `n`.\n2. Initialize two integers `posIndex` and `negIndex` with 0 and 1 respectively.\n3. Traverse `nums` from the start. Note that `0` won't be in the array according to the constraints.\n\n   i. If the current integer is positive, set `ans[posIndex]` equal to it. Increment `posIndex` by 2.\n\n   ii. If the current integer is negative, set `ans[negIndex]` equal to it. Increment `negIndex` by 2.\n\n4. Once `nums` is fully traversed, return `ans`.\n\n!?!../Documents/2149/slideshow1.json:960,540!?!​\n\n#### Implementation​\n\n#### Complexity Analysis\n\n​Let $$n$$ be the length of `nums`\n​\n* Time complexity: $$O(n)$$\n  +  We traverse `nums` once and populate `ans`. Since both these arrays have size $$n$$, this results in a time complexity of $$O(n)$$. \n​\n* Space complexity: $$O(n)$$\n  + We create an auxiliary array `ans` of size $$n$$.\n        \n---\n​"
+}

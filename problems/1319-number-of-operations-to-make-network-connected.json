@@ -1,0 +1,72 @@
+{
+  "title": "Number of Operations to Make Network Connected",
+  "problem_id": "1442",
+  "frontend_id": "1319",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-operations-to-make-network-connected",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph"
+  ],
+  "description": "There are n computers numbered from 0 to n - 1 connected by ethernet cables connections forming a network where connections[i] = [ai, bi] represents a connection between computers ai and bi. Any computer can reach any other computer directly or indirectly through the network.\nYou are given an initial computer network connections. You can extract certain cables between two directly connected computers, and place them between any pair of disconnected computers to make them directly connected.\nReturn the minimum number of times you need to do this in order to make all the computers connected. If it is not possible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, connections = [[0,1],[0,2],[1,2]]\nOutput: 1\nExplanation: Remove cable between computer 1 and 2 and place between computers 1 and 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/02/sample_1_1677.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, connections = [[0,1],[0,2],[0,3],[1,2],[1,3]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/02/sample_2_1677.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 6, connections = [[0,1],[0,2],[0,3],[1,2]]\nOutput: -1\nExplanation: There are not enough cables.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/02/sample_2_1677.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "1 <= connections.length <= min(n * (n - 1) / 2, 105)",
+    "connections[i].length == 2",
+    "0 <= ai, bi < n",
+    "ai != bi",
+    "There are no repeated connections.",
+    "No two computers are connected by more than one cable."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "As long as there are at least (n - 1) connections, there is definitely a way to connect all computers.",
+    "Use DFS to determine the number of isolated computer clusters."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int makeConnected(int n, vector<vector<int>>& connections) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int makeConnected(int n, int[][] connections) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeConnected(self, n, connections):\n        \"\"\"\n        :type n: int\n        :type connections: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeConnected(self, n: int, connections: List[List[int]]) -> int:\n        ",
+    "c": "int makeConnected(int n, int** connections, int connectionsSize, int* connectionsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MakeConnected(int n, int[][] connections) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} connections\n * @return {number}\n */\nvar makeConnected = function(n, connections) {\n    \n};",
+    "typescript": "function makeConnected(n: number, connections: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $connections\n     * @return Integer\n     */\n    function makeConnected($n, $connections) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeConnected(_ n: Int, _ connections: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeConnected(n: Int, connections: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int makeConnected(int n, List<List<int>> connections) {\n    \n  }\n}",
+    "golang": "func makeConnected(n int, connections [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} connections\n# @return {Integer}\ndef make_connected(n, connections)\n    \nend",
+    "scala": "object Solution {\n    def makeConnected(n: Int, connections: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_connected(n: i32, connections: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (make-connected n connections)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec make_connected(N :: integer(), Connections :: [[integer()]]) -> integer().\nmake_connected(N, Connections) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_connected(n :: integer, connections :: [[integer]]) :: integer\n  def make_connected(n, connections) do\n    \n  end\nend"
+  }
+}

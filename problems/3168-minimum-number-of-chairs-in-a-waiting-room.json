@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Number of Chairs in a Waiting Room",
+  "problem_id": "3426",
+  "frontend_id": "3168",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-number-of-chairs-in-a-waiting-room",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a string s. Simulate events at each second i:\nReturn the minimum number of chairs needed so that a chair is available for every person who enters the waiting room given that it is initially empty.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"EEEEEEE\"\nOutput: 7\nExplanation:\nAfter each second, a person enters the waiting room and no person leaves it. Therefore, a minimum of 7 chairs is needed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ELELEEL\"\nOutput: 2\nExplanation:\nLet's consider that there are 2 chairs in the waiting room. The table below shows the state of the waiting room at each second.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"ELEELEELLL\"\nOutput: 3\nExplanation:\nLet's consider that there are 3 chairs in the waiting room. The table below shows the state of the waiting room at each second.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "s consists only of the letters 'E' and 'L'.",
+    "s represents a valid sequence of entries and exits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate from left to right over the string and keep track of the number of people in the waiting room using a variable that you will increment on every occurrence of ‘E’ and decrement on every occurrence of ‘L’.",
+    "The answer is the maximum number of people in the waiting room at any instance."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumChairs(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumChairs(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumChairs(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumChairs(self, s: str) -> int:\n        ",
+    "c": "int minimumChairs(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumChairs(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumChairs = function(s) {\n    \n};",
+    "typescript": "function minimumChairs(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minimumChairs($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumChairs(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumChairs(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumChairs(String s) {\n    \n  }\n}",
+    "golang": "func minimumChairs(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef minimum_chairs(s)\n    \nend",
+    "scala": "object Solution {\n    def minimumChairs(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_chairs(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-chairs s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_chairs(S :: unicode:unicode_binary()) -> integer().\nminimum_chairs(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_chairs(s :: String.t) :: integer\n  def minimum_chairs(s) do\n    \n  end\nend"
+  }
+}

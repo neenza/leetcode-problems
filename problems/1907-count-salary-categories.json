@@ -1,0 +1,33 @@
+{
+  "title": "Count Salary Categories",
+  "problem_id": "2057",
+  "frontend_id": "1907",
+  "difficulty": "Medium",
+  "problem_slug": "count-salary-categories",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Accounts\nWrite a solution to calculate the number of bank accounts for each salary category. The salary categories are:\nThe result table must contain all three categories. If there are no accounts in a category, return 0.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| account_id  | int  |\n| income      | int  |\n+-------------+------+\naccount_id is the primary key (column with unique values) for this table.\nEach row contains information about the monthly income for one bank account.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nAccounts table:\n+------------+--------+\n| account_id | income |\n+------------+--------+\n| 3          | 108939 |\n| 2          | 12747  |\n| 8          | 87709  |\n| 6          | 91796  |\n+------------+--------+\nOutput: \n+----------------+----------------+\n| category       | accounts_count |\n+----------------+----------------+\n| Low Salary     | 1              |\n| Average Salary | 0              |\n| High Salary    | 3              |\n+----------------+----------------+\nExplanation: \nLow Salary: Account 2.\nAverage Salary: No accounts.\nHigh Salary: Accounts 3, 6, and 8.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef count_salary_categories(accounts: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

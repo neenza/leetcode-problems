@@ -1,0 +1,67 @@
+{
+  "title": "Sorted GCD Pair Queries",
+  "problem_id": "3583",
+  "frontend_id": "3312",
+  "difficulty": "Hard",
+  "problem_slug": "sorted-gcd-pair-queries",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Binary Search",
+    "Combinatorics",
+    "Counting",
+    "Number Theory",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of length n and an integer array queries.\nLet gcdPairs denote an array obtained by calculating the GCD of all possible pairs (nums[i], nums[j]), where 0 <= i < j < n, and then sorting these values in ascending order.\nFor each query queries[i], you need to find the element at index queries[i] in gcdPairs.\nReturn an integer array answer, where answer[i] is the value at gcdPairs[queries[i]] for each query.\nThe term gcd(a, b) denotes the greatest common divisor of a and b.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,4], queries = [0,2,2]\nOutput: [1,2,2]\nExplanation:\ngcdPairs = [gcd(nums[0], nums[1]), gcd(nums[0], nums[2]), gcd(nums[1], nums[2])] = [1, 2, 1] .\nAfter sorting in ascending order, gcdPairs = [1, 1, 2] .\nSo, the answer is [gcdPairs[queries[0]], gcdPairs[queries[1]], gcdPairs[queries[2]]] = [1, 2, 2] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,4,2,1], queries = [5,3,1,0]\nOutput: [4,2,1,1]\nExplanation:\ngcdPairs sorted in ascending order is [1, 1, 1, 2, 2, 4] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,2], queries = [0,0]\nOutput: [2,2]\nExplanation:\ngcdPairs = [2] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 5 * 104",
+    "1 <= queries.length <= 105",
+    "0 <= queries[i] < n * (n - 1) / 2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try counting the number of pairs that have a GCD of <code>g</code.",
+    "Use inclusion-exclusion."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> gcdValues(vector<int>& nums, vector<long long>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] gcdValues(int[] nums, long[] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def gcdValues(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def gcdValues(self, nums: List[int], queries: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* gcdValues(int* nums, int numsSize, long long* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GcdValues(int[] nums, long[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} queries\n * @return {number[]}\n */\nvar gcdValues = function(nums, queries) {\n    \n};",
+    "typescript": "function gcdValues(nums: number[], queries: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $queries\n     * @return Integer[]\n     */\n    function gcdValues($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func gcdValues(_ nums: [Int], _ queries: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun gcdValues(nums: IntArray, queries: LongArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> gcdValues(List<int> nums, List<int> queries) {\n    \n  }\n}",
+    "golang": "func gcdValues(nums []int, queries []int64) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} queries\n# @return {Integer[]}\ndef gcd_values(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def gcdValues(nums: Array[Int], queries: Array[Long]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn gcd_values(nums: Vec<i32>, queries: Vec<i64>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (gcd-values nums queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec gcd_values(Nums :: [integer()], Queries :: [integer()]) -> [integer()].\ngcd_values(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec gcd_values(nums :: [integer], queries :: [integer]) :: [integer]\n  def gcd_values(nums, queries) do\n    \n  end\nend"
+  }
+}

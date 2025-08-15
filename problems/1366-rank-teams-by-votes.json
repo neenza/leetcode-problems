@@ -1,0 +1,66 @@
+{
+  "title": "Rank Teams by Votes",
+  "problem_id": "1483",
+  "frontend_id": "1366",
+  "difficulty": "Medium",
+  "problem_slug": "rank-teams-by-votes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "In a special ranking system, each voter gives a rank from highest to lowest to all teams participating in the competition.\nThe ordering of teams is decided by who received the most position-one votes. If two or more teams tie in the first position, we consider the second position to resolve the conflict, if they tie again, we continue this process until the ties are resolved. If two or more teams are still tied after considering all positions, we rank them alphabetically based on their team letter.\nYou are given an array of strings votes which is the votes of all voters in the ranking systems. Sort all teams according to the ranking system described above.\nReturn a string of all teams sorted by the ranking system.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: votes = [\"ABC\",\"ACB\",\"ABC\",\"ACB\",\"ACB\"]\nOutput: \"ACB\"\nExplanation: \nTeam A was ranked first place by 5 voters. No other team was voted as first place, so team A is the first team.\nTeam B was ranked second by 2 voters and ranked third by 3 voters.\nTeam C was ranked second by 3 voters and ranked third by 2 voters.\nAs most of the voters ranked C second, team C is the second team, and team B is the third.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: votes = [\"WXYZ\",\"XYZW\"]\nOutput: \"XWYZ\"\nExplanation:\nX is the winner due to the tie-breaking rule. X has the same votes as W for the first position, but X has one vote in the second position, while W does not have any votes in the second position.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: votes = [\"ZMNAGUEDSJYLBOPHRQICWFXTVK\"]\nOutput: \"ZMNAGUEDSJYLBOPHRQICWFXTVK\"\nExplanation: Only one voter, so their votes are used for the ranking.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= votes.length <= 1000",
+    "1 <= votes[i].length <= 26",
+    "votes[i].length == votes[j].length for 0 <= i, j < votes.length.",
+    "votes[i][j] is an English uppercase letter.",
+    "All characters of votes[i] are unique.",
+    "All the characters that occur in votes[0] also occur in votes[j] where 1 <= j < votes.length."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Build array rank where rank[i][j] is the number of votes for team i to be the j-th rank.",
+    "Sort the teams by rank array. if rank array is the same for two or more teams, sort them by the ID in ascending order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string rankTeams(vector<string>& votes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String rankTeams(String[] votes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rankTeams(self, votes):\n        \"\"\"\n        :type votes: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rankTeams(self, votes: List[str]) -> str:\n        ",
+    "c": "char* rankTeams(char** votes, int votesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RankTeams(string[] votes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} votes\n * @return {string}\n */\nvar rankTeams = function(votes) {\n    \n};",
+    "typescript": "function rankTeams(votes: string[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $votes\n     * @return String\n     */\n    function rankTeams($votes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rankTeams(_ votes: [String]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rankTeams(votes: Array<String>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String rankTeams(List<String> votes) {\n    \n  }\n}",
+    "golang": "func rankTeams(votes []string) string {\n    \n}",
+    "ruby": "# @param {String[]} votes\n# @return {String}\ndef rank_teams(votes)\n    \nend",
+    "scala": "object Solution {\n    def rankTeams(votes: Array[String]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rank_teams(votes: Vec<String>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (rank-teams votes)\n  (-> (listof string?) string?)\n  )",
+    "erlang": "-spec rank_teams(Votes :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nrank_teams(Votes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rank_teams(votes :: [String.t]) :: String.t\n  def rank_teams(votes) do\n    \n  end\nend"
+  }
+}

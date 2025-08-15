@@ -1,0 +1,30 @@
+{
+  "title": "Select Data",
+  "problem_id": "3074",
+  "frontend_id": "2880",
+  "difficulty": "Easy",
+  "problem_slug": "select-data",
+  "topics": [],
+  "description": "Write a solution to select the name and age of the student with student_id = 101.\nThe result format is in the following example.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Example 1:\nInput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 101        | Ulysses | 13  |\n| 53         | William | 10  |\n| 128        | Henry   | 6   |\n| 3          | Henry   | 11  |\n+------------+---------+-----+\nOutput:\n+---------+-----+\n| name    | age | \n+---------+-----+\n| Ulysses | 13  |\n+---------+-----+\nExplanation:\nStudent Ulysses has student_id = 101, we select the name and age.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider applying both row and column filtering to select the desired data."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef selectData(students: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\n\nThis problem provides us with a pandas DataFrame and requires us to return data about one of the records in the DataFrame.\n\n**Key Concepts**:\n\n1. **DataFrame:** a 2D table-like structure, similar to a spreadsheet or SQL table. Each row represents an individual record and each column represents a different attribute. It is size-mutable designed to handle a mix of different types of data. \n2. **`loc` attribute:** one of the primary ways to select data from a DataFrame. It is label-based, which means you have to specify the name of the rows or columns to select data. `loc` is label-based.\n3. **boolean mask:** a series of True/False values used to filter or select elements from another data structure, such as a list, array, or DataFrame, based on a certain condition.\n\n### Intuition\n\nThe `students` DataFrame has three columns:\n\n1. `student_id` (type: int) - a unique identifier for the student.\n2. `name` (type: object, which is generally a string in pandas) - the student's name.\n3. `age` (type: int) - the student's age.\n\nIn this problem, we must create a function that accepts a DataFrame as an argument and returns a DataFrame with the required information. \n  \nInside our function, we will use the `loc` function to select the row where `student_id` is `101` and return the value from the `name` and `age` columns. \n\nTo do this, we must provide `loc` with two arguments. \n\n```python\nstudents.loc[students['student_id'] == 101, ['name', 'age']]\n```\n\n**Visualization of `loc` function**\n\n![fig](../Figures/3318/3318-1.png)\n\nWhen you pass this DataFrame to the function:student_idnameage101Ulysses1353William10128Henry63Henry11It will return:nameageUlysses13### Implementation"
+}

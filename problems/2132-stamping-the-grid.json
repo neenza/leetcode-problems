@@ -1,0 +1,63 @@
+{
+  "title": "Stamping the Grid",
+  "problem_id": "2200",
+  "frontend_id": "2132",
+  "difficulty": "Hard",
+  "problem_slug": "stamping-the-grid",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "You are given an m x n binary matrix grid where each cell is either 0 (empty) or 1 (occupied).\nYou are then given stamps of size stampHeight x stampWidth. We want to fit the stamps such that they follow the given restrictions and requirements:\nReturn true if it is possible to fit the stamps while following the given restrictions and requirements. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0],[1,0,0,0]], stampHeight = 4, stampWidth = 3\nOutput: true\nExplanation: We have two overlapping stamps (labeled 1 and 2 in the image) that are able to cover all the empty cells.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/03/ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]], stampHeight = 2, stampWidth = 2 \nOutput: false \nExplanation: There is no way to fit the stamps onto all the empty cells without the stamps going outside the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/03/ex2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[r].length",
+    "1 <= m, n <= 105",
+    "1 <= m * n <= 2 * 105",
+    "grid[r][c] is either 0 or 1.",
+    "1 <= stampHeight, stampWidth <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use prefix sums here?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool possibleToStamp(vector<vector<int>>& grid, int stampHeight, int stampWidth) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean possibleToStamp(int[][] grid, int stampHeight, int stampWidth) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def possibleToStamp(self, grid, stampHeight, stampWidth):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type stampHeight: int\n        :type stampWidth: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def possibleToStamp(self, grid: List[List[int]], stampHeight: int, stampWidth: int) -> bool:\n        ",
+    "c": "bool possibleToStamp(int** grid, int gridSize, int* gridColSize, int stampHeight, int stampWidth) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool PossibleToStamp(int[][] grid, int stampHeight, int stampWidth) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} stampHeight\n * @param {number} stampWidth\n * @return {boolean}\n */\nvar possibleToStamp = function(grid, stampHeight, stampWidth) {\n    \n};",
+    "typescript": "function possibleToStamp(grid: number[][], stampHeight: number, stampWidth: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $stampHeight\n     * @param Integer $stampWidth\n     * @return Boolean\n     */\n    function possibleToStamp($grid, $stampHeight, $stampWidth) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func possibleToStamp(_ grid: [[Int]], _ stampHeight: Int, _ stampWidth: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun possibleToStamp(grid: Array<IntArray>, stampHeight: Int, stampWidth: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool possibleToStamp(List<List<int>> grid, int stampHeight, int stampWidth) {\n    \n  }\n}",
+    "golang": "func possibleToStamp(grid [][]int, stampHeight int, stampWidth int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} stamp_height\n# @param {Integer} stamp_width\n# @return {Boolean}\ndef possible_to_stamp(grid, stamp_height, stamp_width)\n    \nend",
+    "scala": "object Solution {\n    def possibleToStamp(grid: Array[Array[Int]], stampHeight: Int, stampWidth: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn possible_to_stamp(grid: Vec<Vec<i32>>, stamp_height: i32, stamp_width: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (possible-to-stamp grid stampHeight stampWidth)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec possible_to_stamp(Grid :: [[integer()]], StampHeight :: integer(), StampWidth :: integer()) -> boolean().\npossible_to_stamp(Grid, StampHeight, StampWidth) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec possible_to_stamp(grid :: [[integer]], stamp_height :: integer, stamp_width :: integer) :: boolean\n  def possible_to_stamp(grid, stamp_height, stamp_width) do\n    \n  end\nend"
+  }
+}

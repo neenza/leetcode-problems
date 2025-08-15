@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Number of Operations to Make String Sorted",
+  "problem_id": "1941",
+  "frontend_id": "1830",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-number-of-operations-to-make-string-sorted",
+  "topics": [
+    "Math",
+    "String",
+    "Combinatorics"
+  ],
+  "description": "You are given a string s (0-indexed)​​​​​​. You are asked to perform the following operation on s​​​​​​ until you get a sorted string:\nReturn the number of operations needed to make the string sorted. Since the answer can be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"cba\"\nOutput: 5\nExplanation: The simulation goes as follows:\nOperation 1: i=2, j=2. Swap s[1] and s[2] to get s=\"cab\", then reverse the suffix starting at 2. Now, s=\"cab\".\nOperation 2: i=1, j=2. Swap s[0] and s[2] to get s=\"bac\", then reverse the suffix starting at 1. Now, s=\"bca\".\nOperation 3: i=2, j=2. Swap s[1] and s[2] to get s=\"bac\", then reverse the suffix starting at 2. Now, s=\"bac\".\nOperation 4: i=1, j=1. Swap s[0] and s[1] to get s=\"abc\", then reverse the suffix starting at 1. Now, s=\"acb\".\nOperation 5: i=2, j=2. Swap s[1] and s[2] to get s=\"abc\", then reverse the suffix starting at 2. Now, s=\"abc\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aabaa\"\nOutput: 2\nExplanation: The simulation goes as follows:\nOperation 1: i=3, j=4. Swap s[2] and s[4] to get s=\"aaaab\", then reverse the substring starting at 3. Now, s=\"aaaba\".\nOperation 2: i=4, j=4. Swap s[3] and s[4] to get s=\"aaaab\", then reverse the substring starting at 4. Now, s=\"aaaab\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 3000",
+    "s​​​​​​ consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that the operations given describe getting the previous permutation of s",
+    "To solve this problem you need to solve every suffix separately"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int makeStringSorted(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int makeStringSorted(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeStringSorted(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeStringSorted(self, s: str) -> int:\n        ",
+    "c": "int makeStringSorted(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MakeStringSorted(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar makeStringSorted = function(s) {\n    \n};",
+    "typescript": "function makeStringSorted(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function makeStringSorted($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeStringSorted(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeStringSorted(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int makeStringSorted(String s) {\n    \n  }\n}",
+    "golang": "func makeStringSorted(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef make_string_sorted(s)\n    \nend",
+    "scala": "object Solution {\n    def makeStringSorted(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_string_sorted(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (make-string-sorted s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec make_string_sorted(S :: unicode:unicode_binary()) -> integer().\nmake_string_sorted(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_string_sorted(s :: String.t) :: integer\n  def make_string_sorted(s) do\n    \n  end\nend"
+  }
+}

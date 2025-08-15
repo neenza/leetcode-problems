@@ -1,0 +1,54 @@
+{
+  "title": "Stream of Characters",
+  "problem_id": "1097",
+  "frontend_id": "1032",
+  "difficulty": "Hard",
+  "problem_slug": "stream-of-characters",
+  "topics": [
+    "Array",
+    "String",
+    "Design",
+    "Trie",
+    "Data Stream"
+  ],
+  "description": "Design an algorithm that accepts a stream of characters and checks if a suffix of these characters is a string of a given array of strings words.\nFor example, if words = [\"abc\", \"xyz\"] and the stream added the four characters (one by one) 'a', 'x', 'y', and 'z', your algorithm should detect that the suffix \"xyz\" of the characters \"axyz\" matches \"xyz\" from words.\nImplement the StreamChecker class:\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"StreamChecker\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\"]\n[[[\"cd\", \"f\", \"kl\"]], [\"a\"], [\"b\"], [\"c\"], [\"d\"], [\"e\"], [\"f\"], [\"g\"], [\"h\"], [\"i\"], [\"j\"], [\"k\"], [\"l\"]]\nOutput\n[null, false, false, false, true, false, true, false, false, false, false, false, true]\n\nExplanation\nStreamChecker streamChecker = new StreamChecker([\"cd\", \"f\", \"kl\"]);\nstreamChecker.query(\"a\"); // return False\nstreamChecker.query(\"b\"); // return False\nstreamChecker.query(\"c\"); // return False\nstreamChecker.query(\"d\"); // return True, because 'cd' is in the wordlist\nstreamChecker.query(\"e\"); // return False\nstreamChecker.query(\"f\"); // return True, because 'f' is in the wordlist\nstreamChecker.query(\"g\"); // return False\nstreamChecker.query(\"h\"); // return False\nstreamChecker.query(\"i\"); // return False\nstreamChecker.query(\"j\"); // return False\nstreamChecker.query(\"k\"); // return False\nstreamChecker.query(\"l\"); // return True, because 'kl' is in the wordlist",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 2000",
+    "1 <= words[i].length <= 200",
+    "words[i] consists of lowercase English letters.",
+    "letter is a lowercase English letter.",
+    "At most 4 * 104 calls will be made to query."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Put the words into a trie, and manage a set of pointers within that trie."
+  ],
+  "code_snippets": {
+    "cpp": "class StreamChecker {\npublic:\n    StreamChecker(vector<string>& words) {\n        \n    }\n    \n    bool query(char letter) {\n        \n    }\n};\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * StreamChecker* obj = new StreamChecker(words);\n * bool param_1 = obj->query(letter);\n */",
+    "java": "class StreamChecker {\n\n    public StreamChecker(String[] words) {\n        \n    }\n    \n    public boolean query(char letter) {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * StreamChecker obj = new StreamChecker(words);\n * boolean param_1 = obj.query(letter);\n */",
+    "python": "class StreamChecker(object):\n\n    def __init__(self, words):\n        \"\"\"\n        :type words: List[str]\n        \"\"\"\n        \n\n    def query(self, letter):\n        \"\"\"\n        :type letter: str\n        :rtype: bool\n        \"\"\"\n        \n\n\n# Your StreamChecker object will be instantiated and called as such:\n# obj = StreamChecker(words)\n# param_1 = obj.query(letter)",
+    "python3": "class StreamChecker:\n\n    def __init__(self, words: List[str]):\n        \n\n    def query(self, letter: str) -> bool:\n        \n\n\n# Your StreamChecker object will be instantiated and called as such:\n# obj = StreamChecker(words)\n# param_1 = obj.query(letter)",
+    "c": "\n\n\ntypedef struct {\n    \n} StreamChecker;\n\n\nStreamChecker* streamCheckerCreate(char** words, int wordsSize) {\n    \n}\n\nbool streamCheckerQuery(StreamChecker* obj, char letter) {\n    \n}\n\nvoid streamCheckerFree(StreamChecker* obj) {\n    \n}\n\n/**\n * Your StreamChecker struct will be instantiated and called as such:\n * StreamChecker* obj = streamCheckerCreate(words, wordsSize);\n * bool param_1 = streamCheckerQuery(obj, letter);\n \n * streamCheckerFree(obj);\n*/",
+    "csharp": "public class StreamChecker {\n\n    public StreamChecker(string[] words) {\n        \n    }\n    \n    public bool Query(char letter) {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * StreamChecker obj = new StreamChecker(words);\n * bool param_1 = obj.Query(letter);\n */",
+    "javascript": "/**\n * @param {string[]} words\n */\nvar StreamChecker = function(words) {\n    \n};\n\n/** \n * @param {character} letter\n * @return {boolean}\n */\nStreamChecker.prototype.query = function(letter) {\n    \n};\n\n/** \n * Your StreamChecker object will be instantiated and called as such:\n * var obj = new StreamChecker(words)\n * var param_1 = obj.query(letter)\n */",
+    "typescript": "class StreamChecker {\n    constructor(words: string[]) {\n        \n    }\n\n    query(letter: string): boolean {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * var obj = new StreamChecker(words)\n * var param_1 = obj.query(letter)\n */",
+    "php": "class StreamChecker {\n    /**\n     * @param String[] $words\n     */\n    function __construct($words) {\n        \n    }\n  \n    /**\n     * @param String $letter\n     * @return Boolean\n     */\n    function query($letter) {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * $obj = StreamChecker($words);\n * $ret_1 = $obj->query($letter);\n */",
+    "swift": "\nclass StreamChecker {\n\n    init(_ words: [String]) {\n        \n    }\n    \n    func query(_ letter: Character) -> Bool {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * let obj = StreamChecker(words)\n * let ret_1: Bool = obj.query(letter)\n */",
+    "kotlin": "class StreamChecker(words: Array<String>) {\n\n    fun query(letter: Char): Boolean {\n        \n    }\n\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * var obj = StreamChecker(words)\n * var param_1 = obj.query(letter)\n */",
+    "dart": "class StreamChecker {\n\n  StreamChecker(List<String> words) {\n    \n  }\n  \n  bool query(String letter) {\n    \n  }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * StreamChecker obj = StreamChecker(words);\n * bool param1 = obj.query(letter);\n */",
+    "golang": "type StreamChecker struct {\n    \n}\n\n\nfunc Constructor(words []string) StreamChecker {\n    \n}\n\n\nfunc (this *StreamChecker) Query(letter byte) bool {\n    \n}\n\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * obj := Constructor(words);\n * param_1 := obj.Query(letter);\n */",
+    "ruby": "class StreamChecker\n\n=begin\n    :type words: String[]\n=end\n    def initialize(words)\n        \n    end\n\n\n=begin\n    :type letter: Character\n    :rtype: Boolean\n=end\n    def query(letter)\n        \n    end\n\n\nend\n\n# Your StreamChecker object will be instantiated and called as such:\n# obj = StreamChecker.new(words)\n# param_1 = obj.query(letter)",
+    "scala": "class StreamChecker(_words: Array[String]) {\n\n    def query(letter: Char): Boolean = {\n        \n    }\n\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * val obj = new StreamChecker(words)\n * val param_1 = obj.query(letter)\n */",
+    "rust": "struct StreamChecker {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl StreamChecker {\n\n    fn new(words: Vec<String>) -> Self {\n        \n    }\n    \n    fn query(&self, letter: char) -> bool {\n        \n    }\n}\n\n/**\n * Your StreamChecker object will be instantiated and called as such:\n * let obj = StreamChecker::new(words);\n * let ret_1: bool = obj.query(letter);\n */",
+    "racket": "(define stream-checker%\n  (class object%\n    (super-new)\n    \n    ; words : (listof string?)\n    (init-field\n      words)\n    \n    ; query : char? -> boolean?\n    (define/public (query letter)\n      )))\n\n;; Your stream-checker% object will be instantiated and called as such:\n;; (define obj (new stream-checker% [words words]))\n;; (define param_1 (send obj query letter))",
+    "erlang": "-spec stream_checker_init_(Words :: [unicode:unicode_binary()]) -> any().\nstream_checker_init_(Words) ->\n  .\n\n-spec stream_checker_query(Letter :: char()) -> boolean().\nstream_checker_query(Letter) ->\n  .\n\n\n%% Your functions will be called as such:\n%% stream_checker_init_(Words),\n%% Param_1 = stream_checker_query(Letter),\n\n%% stream_checker_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule StreamChecker do\n  @spec init_(words :: [String.t]) :: any\n  def init_(words) do\n    \n  end\n\n  @spec query(letter :: char) :: boolean\n  def query(letter) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# StreamChecker.init_(words)\n# param_1 = StreamChecker.query(letter)\n\n# StreamChecker.init_ will be called before every test case, in which you can do some necessary initializations."
+  }
+}

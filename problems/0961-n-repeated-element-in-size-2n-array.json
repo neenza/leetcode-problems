@@ -1,0 +1,59 @@
+{
+  "title": "N-Repeated Element in Size 2N Array",
+  "problem_id": "1001",
+  "frontend_id": "961",
+  "difficulty": "Easy",
+  "problem_slug": "n-repeated-element-in-size-2n-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums with the following properties:\nReturn the element that is repeated n times.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,3]\nOutput: 3",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,2,5,3,2]\nOutput: 2",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,1,5,2,5,3,5,4]\nOutput: 5",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 5000",
+    "nums.length == 2 * n",
+    "0 <= nums[i] <= 104",
+    "nums contains n + 1 unique elements and one of them is repeated exactly n times."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int repeatedNTimes(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int repeatedNTimes(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def repeatedNTimes(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def repeatedNTimes(self, nums: List[int]) -> int:\n        ",
+    "c": "int repeatedNTimes(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RepeatedNTimes(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar repeatedNTimes = function(nums) {\n    \n};",
+    "typescript": "function repeatedNTimes(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function repeatedNTimes($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func repeatedNTimes(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun repeatedNTimes(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int repeatedNTimes(List<int> nums) {\n    \n  }\n}",
+    "golang": "func repeatedNTimes(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef repeated_n_times(nums)\n    \nend",
+    "scala": "object Solution {\n    def repeatedNTimes(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn repeated_n_times(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (repeated-n-times nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec repeated_n_times(Nums :: [integer()]) -> integer().\nrepeated_n_times(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec repeated_n_times(nums :: [integer]) :: integer\n  def repeated_n_times(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Count\n\n**Intuition and Algorithm**\n\nLet's count the number of elements.  We can use a `HashMap` or an array - here, we use a `HashMap`.\n\nAfter, the element with a count larger than 1 must be the answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Compare\n\n**Intuition and Algorithm**\n\nIf we ever find a repeated element, it must be the answer.  Let's call this answer the *major element*.\n\nConsider all subarrays of length 4.  There must be a major element in at least one such subarray.\n\nThis is because either:\n\n* There is a major element in a length 2 subarray, or;\n* Every length 2 subarray has exactly 1 major element, which means that a length 4 subarray that begins at a major element will have 2 major elements.\n\nThus, we only have to compare elements with their neighbors that are distance 1, 2, or 3 away.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+}

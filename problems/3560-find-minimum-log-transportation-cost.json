@@ -1,0 +1,56 @@
+{
+  "title": "Find Minimum Log Transportation Cost",
+  "problem_id": "3879",
+  "frontend_id": "3560",
+  "difficulty": "Easy",
+  "problem_slug": "find-minimum-log-transportation-cost",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given integers n, m, and k.\nThere are two logs of lengths n and m units, which need to be transported in three trucks where each truck can carry one log with length at most k units.\nYou may cut the logs into smaller pieces, where the cost of cutting a log of length x into logs of length len1 and len2 is cost = len1 * len2 such that len1 + len2 = x.\nReturn the minimum total cost to distribute the logs onto the trucks. If the logs don't need to be cut, the total cost is 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, m = 5, k = 5\nOutput: 5\nExplanation:\nCut the log with length 6 into logs with length 1 and 5, at a cost equal to 1 * 5 == 5 . Now the three logs of length 1, 5, and 5 can fit in one truck each.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, m = 4, k = 6\nOutput: 0\nExplanation:\nThe two logs can fit in the trucks already, hence we don't need to cut the logs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= k <= 105",
+    "1 <= n, m <= 2 * k",
+    "The input is generated such that it is always possible to transport the logs."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If both logs have a length less than <code>k</code>, cost is zero.",
+    "Can we transport the logs if both logs have length greater than <code>k</code>.",
+    "Otherwise, pick the log with greater length and cut it into logs with lengths <code>len1</code> and <code>len2</code> such that <code>len1 + len2</code> equals the original length.",
+    "To minimize the cost <code>len1 * len2</code>, choose <code>len1</code> and <code>len2</code> as far apart as possible (e.g. <code>1</code> and <code>length−1</code>)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minCuttingCost(int n, int m, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCuttingCost(int n, int m, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCuttingCost(self, n, m, k):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCuttingCost(self, n: int, m: int, k: int) -> int:\n        ",
+    "c": "long long minCuttingCost(int n, int m, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinCuttingCost(int n, int m, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @param {number} k\n * @return {number}\n */\nvar minCuttingCost = function(n, m, k) {\n    \n};",
+    "typescript": "function minCuttingCost(n: number, m: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @param Integer $k\n     * @return Integer\n     */\n    function minCuttingCost($n, $m, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCuttingCost(_ n: Int, _ m: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCuttingCost(n: Int, m: Int, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCuttingCost(int n, int m, int k) {\n    \n  }\n}",
+    "golang": "func minCuttingCost(n int, m int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @param {Integer} k\n# @return {Integer}\ndef min_cutting_cost(n, m, k)\n    \nend",
+    "scala": "object Solution {\n    def minCuttingCost(n: Int, m: Int, k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cutting_cost(n: i32, m: i32, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cutting-cost n m k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cutting_cost(N :: integer(), M :: integer(), K :: integer()) -> integer().\nmin_cutting_cost(N, M, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cutting_cost(n :: integer, m :: integer, k :: integer) :: integer\n  def min_cutting_cost(n, m, k) do\n    \n  end\nend"
+  }
+}

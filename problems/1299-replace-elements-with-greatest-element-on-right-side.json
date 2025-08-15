@@ -1,0 +1,53 @@
+{
+  "title": "Replace Elements with Greatest Element on Right Side",
+  "problem_id": "1231",
+  "frontend_id": "1299",
+  "difficulty": "Easy",
+  "problem_slug": "replace-elements-with-greatest-element-on-right-side",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.\nAfter doing so, return the array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [17,18,5,4,6,1]\nOutput: [18,6,6,6,1,-1]\nExplanation: \n- index 0 --> the greatest element to the right of index 0 is index 1 (18).\n- index 1 --> the greatest element to the right of index 1 is index 4 (6).\n- index 2 --> the greatest element to the right of index 2 is index 4 (6).\n- index 3 --> the greatest element to the right of index 3 is index 4 (6).\n- index 4 --> the greatest element to the right of index 4 is index 5 (1).\n- index 5 --> there are no elements to the right of index 5, so we put -1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [400]\nOutput: [-1]\nExplanation: There are no elements to the right of index 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 104",
+    "1 <= arr[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Loop through the array starting from the end.",
+    "Keep the maximum value seen so far."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> replaceElements(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] replaceElements(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def replaceElements(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def replaceElements(self, arr: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* replaceElements(int* arr, int arrSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ReplaceElements(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number[]}\n */\nvar replaceElements = function(arr) {\n    \n};",
+    "typescript": "function replaceElements(arr: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer[]\n     */\n    function replaceElements($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func replaceElements(_ arr: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun replaceElements(arr: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> replaceElements(List<int> arr) {\n    \n  }\n}",
+    "golang": "func replaceElements(arr []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer[]}\ndef replace_elements(arr)\n    \nend",
+    "scala": "object Solution {\n    def replaceElements(arr: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn replace_elements(arr: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (replace-elements arr)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec replace_elements(Arr :: [integer()]) -> [integer()].\nreplace_elements(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec replace_elements(arr :: [integer]) :: [integer]\n  def replace_elements(arr) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Removals to Balance Array",
+  "problem_id": "3958",
+  "frontend_id": "3634",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-removals-to-balance-array",
+  "topics": [],
+  "description": "You are given an integer array nums and an integer k.\nAn array is considered balanced if the value of its maximum element is at most k times the minimum element.\nYou may remove any number of elements from nums​​​​​​​ without making it empty.\nReturn the minimum number of elements to remove so that the remaining array is balanced.\nNote: An array of size 1 is considered balanced as its maximum and minimum are equal, and the condition always holds true.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,5], k = 2\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,6,2,9], k = 3\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,6], k = 2\nOutput: 0\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort <code>nums</code> and use two pointers <code>i</code> and <code>j</code> so that the window's minimum is <code>nums[i]</code> and maximum is <code>nums[j]</code>.",
+    "Expand <code>j</code> while <code>nums[j] <= k * nums[i]</code> to maximize the balanced window; answer = <code>n - (j - i + 1)</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minRemoval(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minRemoval(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minRemoval(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minRemoval(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minRemoval(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinRemoval(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minRemoval = function(nums, k) {\n    \n};",
+    "typescript": "function minRemoval(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minRemoval($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minRemoval(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minRemoval(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minRemoval(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minRemoval(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_removal(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minRemoval(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_removal(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-removal nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_removal(Nums :: [integer()], K :: integer()) -> integer().\nmin_removal(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_removal(nums :: [integer], k :: integer) :: integer\n  def min_removal(nums, k) do\n    \n  end\nend"
+  }
+}

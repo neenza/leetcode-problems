@@ -1,0 +1,58 @@
+{
+  "title": "Find the Original Typed String I",
+  "problem_id": "3617",
+  "frontend_id": "3330",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-original-typed-string-i",
+  "topics": [
+    "String"
+  ],
+  "description": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\nAlthough Alice tried to focus on her typing, she is aware that she may still have done this at most once.\nYou are given a string word, which represents the final output displayed on Alice's screen.\nReturn the total number of possible original strings that Alice might have intended to type.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abbcccc\"\nOutput: 5\nExplanation:\nThe possible strings are: \"abbcccc\" , \"abbccc\" , \"abbcc\" , \"abbc\" , and \"abcccc\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"abcd\"\nOutput: 1\nExplanation:\nThe only possible string is \"abcd\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"aaaa\"\nOutput: 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 100",
+    "word consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Any group of consecutive characters might have been the mistake."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int possibleStringCount(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int possibleStringCount(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def possibleStringCount(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def possibleStringCount(self, word: str) -> int:\n        ",
+    "c": "int possibleStringCount(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PossibleStringCount(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar possibleStringCount = function(word) {\n    \n};",
+    "typescript": "function possibleStringCount(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function possibleStringCount($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func possibleStringCount(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun possibleStringCount(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int possibleStringCount(String word) {\n    \n  }\n}",
+    "golang": "func possibleStringCount(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef possible_string_count(word)\n    \nend",
+    "scala": "object Solution {\n    def possibleStringCount(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn possible_string_count(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (possible-string-count word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec possible_string_count(Word :: unicode:unicode_binary()) -> integer().\npossible_string_count(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec possible_string_count(word :: String.t) :: integer\n  def possible_string_count(word) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: One-time Traversal\n\n#### Intuition\n\nIf a character in $\\textit{word}$ appears consecutively $k$ times (where $k > 1$), and Alice makes a mistake in this part, then in the actual original string, this character could have appeared $1, 2, \\dots, k - 1$ times. That is, there are $k - 1$ possible variations.\n\nFor the case $k = 1$, Alice will not make a mistake, so there are $0$ possibilities, which is consistent with the formula $k - 1$.\n\nTherefore, we can traverse the string once: let the current traversal position be $l$, and suppose the characters in $\\textit{word}$ from positions $[l, r]$ are the same, while the character at position $r + 1$ is different (or does not exist). In this case, we increase the answer by $r - l$, and continue traversing from position $r + 1$.\n\nThis further implies that the total contribution of the interval $[l, r]$ to the answer is $r - l$. We can interpret this as position $l$ not contributing to the answer, while each of the positions $[l + 1, r]$ contributes $1$. Therefore, for any position $i$ in the string $\\textit{word}$ (where $i > 0$), if $\\textit{word}[i - 1] = \\textit{word}[i]$, we can increase the answer by $1$.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{word}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$."
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Latest Time by Replacing Hidden Digits",
+  "problem_id": "1858",
+  "frontend_id": "1736",
+  "difficulty": "Easy",
+  "problem_slug": "latest-time-by-replacing-hidden-digits",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string time in the form of  hh:mm, where some of the digits in the string are hidden (represented by ?).\nThe valid times are those inclusively between 00:00 and 23:59.\nReturn the latest valid time you can get from time by replacing the hidden digits.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: time = \"2?:?0\"\nOutput: \"23:50\"\nExplanation: The latest hour beginning with the digit '2' is 23 and the latest minute ending with the digit '0' is 50.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: time = \"0?:3?\"\nOutput: \"09:39\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: time = \"1?:22\"\nOutput: \"19:22\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "time is in the format hh:mm.",
+    "It is guaranteed that you can produce a valid time from the given string."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Trying out all possible solutions from biggest to smallest would fit in the time limit.",
+    "To check if the solution is okay, you need to find out if it's valid and matches every character"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string maximumTime(string time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maximumTime(String time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumTime(self, time):\n        \"\"\"\n        :type time: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumTime(self, time: str) -> str:\n        ",
+    "c": "char* maximumTime(char* time) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MaximumTime(string time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} time\n * @return {string}\n */\nvar maximumTime = function(time) {\n    \n};",
+    "typescript": "function maximumTime(time: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $time\n     * @return String\n     */\n    function maximumTime($time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumTime(_ time: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumTime(time: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String maximumTime(String time) {\n    \n  }\n}",
+    "golang": "func maximumTime(time string) string {\n    \n}",
+    "ruby": "# @param {String} time\n# @return {String}\ndef maximum_time(time)\n    \nend",
+    "scala": "object Solution {\n    def maximumTime(time: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_time(time: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-time time)\n  (-> string? string?)\n  )",
+    "erlang": "-spec maximum_time(Time :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmaximum_time(Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_time(time :: String.t) :: String.t\n  def maximum_time(time) do\n    \n  end\nend"
+  }
+}

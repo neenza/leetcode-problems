@@ -1,0 +1,53 @@
+{
+  "title": "Calculate Delayed Arrival Time",
+  "problem_id": "2748",
+  "frontend_id": "2651",
+  "difficulty": "Easy",
+  "problem_slug": "calculate-delayed-arrival-time",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given a positive integer arrivalTime denoting the arrival time of a train in hours, and another positive integer delayedTime denoting the amount of delay in hours.\nReturn the time when the train will arrive at the station.\nNote that the time in this problem is in 24-hours format.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arrivalTime = 15, delayedTime = 5 \nOutput: 20 \nExplanation: Arrival time of the train was 15:00 hours. It is delayed by 5 hours. Now it will reach at 15+5 = 20 (20:00 hours).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arrivalTime = 13, delayedTime = 11\nOutput: 0\nExplanation: Arrival time of the train was 13:00 hours. It is delayed by 11 hours. Now it will reach at 13+11=24 (Which is denoted by 00:00 in 24 hours format so return 0).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arrivaltime < 24",
+    "1 <= delayedTime <= 24"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the modulo operator to handle the case when the arrival time plus the delayed time goes beyond 24 hours.",
+    "If the arrival time plus the delayed time is greater than or equal to 24, you can also subtract 24 to get the time in the 24-hour format."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findDelayedArrivalTime(int arrivalTime, int delayedTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findDelayedArrivalTime(int arrivalTime, int delayedTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findDelayedArrivalTime(self, arrivalTime, delayedTime):\n        \"\"\"\n        :type arrivalTime: int\n        :type delayedTime: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findDelayedArrivalTime(self, arrivalTime: int, delayedTime: int) -> int:\n        ",
+    "c": "int findDelayedArrivalTime(int arrivalTime, int delayedTime) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindDelayedArrivalTime(int arrivalTime, int delayedTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} arrivalTime\n * @param {number} delayedTime\n * @return {number}\n */\nvar findDelayedArrivalTime = function(arrivalTime, delayedTime) {\n    \n};",
+    "typescript": "function findDelayedArrivalTime(arrivalTime: number, delayedTime: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $arrivalTime\n     * @param Integer $delayedTime\n     * @return Integer\n     */\n    function findDelayedArrivalTime($arrivalTime, $delayedTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findDelayedArrivalTime(_ arrivalTime: Int, _ delayedTime: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findDelayedArrivalTime(arrivalTime: Int, delayedTime: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findDelayedArrivalTime(int arrivalTime, int delayedTime) {\n    \n  }\n}",
+    "golang": "func findDelayedArrivalTime(arrivalTime int, delayedTime int) int {\n    \n}",
+    "ruby": "# @param {Integer} arrival_time\n# @param {Integer} delayed_time\n# @return {Integer}\ndef find_delayed_arrival_time(arrival_time, delayed_time)\n    \nend",
+    "scala": "object Solution {\n    def findDelayedArrivalTime(arrivalTime: Int, delayedTime: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_delayed_arrival_time(arrival_time: i32, delayed_time: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-delayed-arrival-time arrivalTime delayedTime)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_delayed_arrival_time(ArrivalTime :: integer(), DelayedTime :: integer()) -> integer().\nfind_delayed_arrival_time(ArrivalTime, DelayedTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_delayed_arrival_time(arrival_time :: integer, delayed_time :: integer) :: integer\n  def find_delayed_arrival_time(arrival_time, delayed_time) do\n    \n  end\nend"
+  }
+}

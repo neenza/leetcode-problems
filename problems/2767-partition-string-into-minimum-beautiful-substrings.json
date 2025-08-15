@@ -1,0 +1,61 @@
+{
+  "title": "Partition String Into Minimum Beautiful Substrings",
+  "problem_id": "2883",
+  "frontend_id": "2767",
+  "difficulty": "Medium",
+  "problem_slug": "partition-string-into-minimum-beautiful-substrings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Backtracking"
+  ],
+  "description": "Given a binary string s, partition the string into one or more substrings such that each substring is beautiful.\nA string is beautiful if:\nReturn the minimum number of substrings in such partition. If it is impossible to partition the string s into beautiful substrings, return -1.\nA substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1011\"\nOutput: 2\nExplanation: We can paritition the given string into [\"101\", \"1\"].\n- The string \"101\" does not contain leading zeros and is the binary representation of integer 51 = 5.\n- The string \"1\" does not contain leading zeros and is the binary representation of integer 50 = 1.\nIt can be shown that 2 is the minimum number of beautiful substrings that s can be partitioned into.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"111\"\nOutput: 3\nExplanation: We can paritition the given string into [\"1\", \"1\", \"1\"].\n- The string \"1\" does not contain leading zeros and is the binary representation of integer 50 = 1.\nIt can be shown that 3 is the minimum number of beautiful substrings that s can be partitioned into.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"0\"\nOutput: -1\nExplanation: We can not partition the given string into beautiful substrings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 15",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To check if number x is a power of 5 or not, we will divide x by 5 while x > 1 and x mod 5 == 0. After iteration if x == 1, then it was a power of 5.",
+    "Since the constraint of s.length is small, we can use recursion to find all the partitions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumBeautifulSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumBeautifulSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumBeautifulSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumBeautifulSubstrings(self, s: str) -> int:\n        ",
+    "c": "int minimumBeautifulSubstrings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumBeautifulSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumBeautifulSubstrings = function(s) {\n    \n};",
+    "typescript": "function minimumBeautifulSubstrings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minimumBeautifulSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumBeautifulSubstrings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumBeautifulSubstrings(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumBeautifulSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func minimumBeautifulSubstrings(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef minimum_beautiful_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def minimumBeautifulSubstrings(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_beautiful_substrings(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-beautiful-substrings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_beautiful_substrings(S :: unicode:unicode_binary()) -> integer().\nminimum_beautiful_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_beautiful_substrings(s :: String.t) :: integer\n  def minimum_beautiful_substrings(s) do\n    \n  end\nend"
+  }
+}

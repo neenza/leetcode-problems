@@ -1,0 +1,60 @@
+{
+  "title": "Maximize Value of Function in a Ball Passing Game",
+  "problem_id": "3032",
+  "frontend_id": "2836",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-value-of-function-in-a-ball-passing-game",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer array receiver of length n and an integer k. n players are playing a ball-passing game.\nYou choose the starting player, i. The game proceeds as follows: player i passes the ball to player receiver[i], who then passes it to receiver[receiver[i]], and so on, for k passes in total. The game's score is the sum of the indices of the players who touched the ball, including repetitions, i.e. i + receiver[i] + receiver[receiver[i]] + ... + receiver(k)[i].\nReturn the maximum possible score.\nNotes:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: receiver = [2,0,1], k = 4\nOutput: 6\nExplanation:\nStarting with player i = 2 the initial score is 2:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: receiver = [1,1,1,2,3], k = 3\nOutput: 10\nExplanation:\nStarting with player i = 4 the initial score is 4:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= receiver.length == n <= 105",
+    "0 <= receiver[i] <= n - 1",
+    "1 <= k <= 1010"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">We can solve the problem using binary lifting.</div>",
+    "<div class=\"_1l1MA\">For each player with id <code>x</code> and for every <code>i</code> in the range <code>[0, ceil(log<sub>2</sub>k)]</code>, we can determine the last receiver's id and compute the sum of player ids who receive the ball after <code>2<sup>i</sup></code> passes, starting from <code>x</code>.</div>",
+    "<div class=\"_1l1MA\">Let <code>last_receiver[x][i] =</code> the last receiver's id after <code>2<sup>i</sup></code> passes, and <code>sum[x][i] =</code> the sum of player ids who receive the ball after <code>2<sup>i</sup></code> passes. For all <code>x</code> in the range <code>[0, n - 1]</code>, <code>last_receiver[x][0] = receiver[x]</code>, and <code>sum[x][0] = receiver[x]</code>.</div>",
+    "<div class=\"_1l1MA\">Then for <code>i</code> in range <code>[1, ceil(log<sub>2</sub>k)]</code>, <code>last_receiver[x][i] = last_receiver[last_receiver[x][i - 1]][i - 1]</code> and <code>sum[x][i] = sum[x][i - 1] + sum[last_receiver[x][i - 1]][i - 1]</code>, for all <code>x</code> in the range <code>[0, n - 1]</code>.</div>",
+    "<div class=\"_1l1MA\">Starting from each player id <code>x</code>, we can now go through the powers of <code>2</code> in the binary representation of <code>k</code> and make jumps corresponding to each power, using the pre-computed values, to compute <code>f(x)</code>.</div>",
+    "<div class=\"_1l1MA\">The answer is the maximum <code>f(x)</code> from each player id.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long getMaxFunctionValue(vector<int>& receiver, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long getMaxFunctionValue(List<Integer> receiver, long k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getMaxFunctionValue(self, receiver, k):\n        \"\"\"\n        :type receiver: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getMaxFunctionValue(self, receiver: List[int], k: int) -> int:\n        ",
+    "c": "long long getMaxFunctionValue(int* receiver, int receiverSize, long long k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long GetMaxFunctionValue(IList<int> receiver, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} receiver\n * @param {number} k\n * @return {number}\n */\nvar getMaxFunctionValue = function(receiver, k) {\n    \n};",
+    "typescript": "function getMaxFunctionValue(receiver: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $receiver\n     * @param Integer $k\n     * @return Integer\n     */\n    function getMaxFunctionValue($receiver, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getMaxFunctionValue(_ receiver: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getMaxFunctionValue(receiver: List<Int>, k: Long): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getMaxFunctionValue(List<int> receiver, int k) {\n    \n  }\n}",
+    "golang": "func getMaxFunctionValue(receiver []int, k int64) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} receiver\n# @param {Integer} k\n# @return {Integer}\ndef get_max_function_value(receiver, k)\n    \nend",
+    "scala": "object Solution {\n    def getMaxFunctionValue(receiver: List[Int], k: Long): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_max_function_value(receiver: Vec<i32>, k: i64) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (get-max-function-value receiver k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec get_max_function_value(Receiver :: [integer()], K :: integer()) -> integer().\nget_max_function_value(Receiver, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_max_function_value(receiver :: [integer], k :: integer) :: integer\n  def get_max_function_value(receiver, k) do\n    \n  end\nend"
+  }
+}

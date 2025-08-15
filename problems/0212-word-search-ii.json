@@ -1,0 +1,67 @@
+{
+  "title": "Word Search II",
+  "problem_id": "212",
+  "frontend_id": "212",
+  "difficulty": "Hard",
+  "problem_slug": "word-search-ii",
+  "topics": [
+    "Array",
+    "String",
+    "Backtracking",
+    "Trie",
+    "Matrix"
+  ],
+  "description": "Given an m x n board of characters and a list of strings words, return all words on the board.\nEach word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]\nOutput: [\"eat\",\"oath\"]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/07/search1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]\nOutput: []",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/07/search2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == board.length",
+    "n == board[i].length",
+    "1 <= m, n <= 12",
+    "board[i][j] is a lowercase English letter.",
+    "1 <= words.length <= 3 * 104",
+    "1 <= words[i].length <= 10",
+    "words[i] consists of lowercase English letters.",
+    "All the strings of words are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You would need to optimize your backtracking to pass the larger test. Could you stop backtracking earlier?",
+    "If the current candidate does not exist in all words&#39; prefix, you could stop backtracking immediately. What kind of data structure could answer such query efficiently? Does a hash table work? Why or why not? How about a Trie? If you would like to learn how to implement a basic trie, please work on this problem: <a href=\"https://leetcode.com/problems/implement-trie-prefix-tree/\">Implement Trie (Prefix Tree)</a> first."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findWords(char[][] board, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findWords(self, board, words):\n        \"\"\"\n        :type board: List[List[str]]\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findWords(char** board, int boardSize, int* boardColSize, char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> FindWords(char[][] board, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @param {string[]} words\n * @return {string[]}\n */\nvar findWords = function(board, words) {\n    \n};",
+    "typescript": "function findWords(board: string[][], words: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @param String[] $words\n     * @return String[]\n     */\n    function findWords($board, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findWords(_ board: [[Character]], _ words: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findWords(board: Array<CharArray>, words: Array<String>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> findWords(List<List<String>> board, List<String> words) {\n    \n  }\n}",
+    "golang": "func findWords(board [][]byte, words []string) []string {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @param {String[]} words\n# @return {String[]}\ndef find_words(board, words)\n    \nend",
+    "scala": "object Solution {\n    def findWords(board: Array[Array[Char]], words: Array[String]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (find-words board words)\n  (-> (listof (listof char?)) (listof string?) (listof string?))\n  )",
+    "erlang": "-spec find_words(Board :: [[char()]], Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nfind_words(Board, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_words(board :: [[char]], words :: [String.t]) :: [String.t]\n  def find_words(board, words) do\n    \n  end\nend"
+  }
+}

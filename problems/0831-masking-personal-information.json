@@ -1,0 +1,60 @@
+{
+  "title": "Masking Personal Information",
+  "problem_id": "858",
+  "frontend_id": "831",
+  "difficulty": "Medium",
+  "problem_slug": "masking-personal-information",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a personal information string s, representing either an email address or a phone number. Return the masked personal information using the below rules.\nEmail address:\nAn email address is:\nTo mask an email:\nPhone number:\nA phone number is formatted as follows:\nTo mask a phone number:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"LeetCode@LeetCode.com\"\nOutput: \"l*****e@leetcode.com\"\nExplanation: s is an email address.\nThe name and domain are converted to lowercase, and the middle of the name is replaced by 5 asterisks.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"AB@qq.com\"\nOutput: \"a*****b@qq.com\"\nExplanation: s is an email address.\nThe name and domain are converted to lowercase, and the middle of the name is replaced by 5 asterisks.\nNote that even though \"ab\" is 2 characters, it still must have 5 asterisks in the middle.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1(234)567-890\"\nOutput: \"***-***-7890\"\nExplanation: s is a phone number.\nThere are 10 digits, so the local number is 10 digits and the country code is 0 digits.\nThus, the resulting masked number is \"***-***-7890\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "s is either a valid email or a phone number.",
+    "If s is an email:\n\t\n8 <= s.length <= 40\ns consists of uppercase and lowercase English letters and exactly one '@' symbol and '.' symbol.",
+    "8 <= s.length <= 40",
+    "s consists of uppercase and lowercase English letters and exactly one '@' symbol and '.' symbol.",
+    "If s is a phone number:\n\t\n10 <= s.length <= 20\ns consists of digits, spaces, and the symbols '(', ')', '-', and '+'.",
+    "10 <= s.length <= 20",
+    "s consists of digits, spaces, and the symbols '(', ')', '-', and '+'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string maskPII(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maskPII(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maskPII(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maskPII(self, s: str) -> str:\n        ",
+    "c": "char* maskPII(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MaskPII(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar maskPII = function(s) {\n    \n};",
+    "typescript": "function maskPII(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function maskPII($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maskPII(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maskPII(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String maskPII(String s) {\n    \n  }\n}",
+    "golang": "func maskPII(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef mask_pii(s)\n    \nend",
+    "scala": "object Solution {\n    def maskPII(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn mask_pii(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (mask-pii s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec mask_pii(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmask_pii(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec mask_pii(s :: String.t) :: String.t\n  def mask_pii(s) do\n    \n  end\nend"
+  }
+}

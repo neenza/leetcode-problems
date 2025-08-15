@@ -1,0 +1,56 @@
+{
+  "title": "Check if Strings Can be Made Equal With Operations II",
+  "problem_id": "2978",
+  "frontend_id": "2840",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-strings-can-be-made-equal-with-operations-ii",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "You are given two strings s1 and s2, both of length n, consisting of lowercase English letters.\nYou can apply the following operation on any of the two strings any number of times:\nReturn true if you can make the strings s1 and s2 equal, and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s1 = \"abcdba\", s2 = \"cabdab\"\nOutput: true\nExplanation: We can apply the following operations on s1:\n- Choose the indices i = 0, j = 2. The resulting string is s1 = \"cbadba\".\n- Choose the indices i = 2, j = 4. The resulting string is s1 = \"cbbdaa\".\n- Choose the indices i = 1, j = 5. The resulting string is s1 = \"cabdab\" = s2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s1 = \"abe\", s2 = \"bea\"\nOutput: false\nExplanation: It is not possible to make the two strings equal.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == s1.length == s2.length",
+    "1 <= n <= 105",
+    "s1 and s2 consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">Characters in two positions can be swapped if and only if the two positions have the same parity.</div>",
+    "<div class=\"_1l1MA\">To be able to make the two strings equal, the characters at even and odd positions in the strings should be the same.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkStrings(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkStrings(String s1, String s2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkStrings(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkStrings(self, s1: str, s2: str) -> bool:\n        ",
+    "c": "bool checkStrings(char* s1, char* s2) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckStrings(string s1, string s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {boolean}\n */\nvar checkStrings = function(s1, s2) {\n    \n};",
+    "typescript": "function checkStrings(s1: string, s2: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s1\n     * @param String $s2\n     * @return Boolean\n     */\n    function checkStrings($s1, $s2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkStrings(_ s1: String, _ s2: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkStrings(s1: String, s2: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkStrings(String s1, String s2) {\n    \n  }\n}",
+    "golang": "func checkStrings(s1 string, s2 string) bool {\n    \n}",
+    "ruby": "# @param {String} s1\n# @param {String} s2\n# @return {Boolean}\ndef check_strings(s1, s2)\n    \nend",
+    "scala": "object Solution {\n    def checkStrings(s1: String, s2: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_strings(s1: String, s2: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-strings s1 s2)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec check_strings(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> boolean().\ncheck_strings(S1, S2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_strings(s1 :: String.t, s2 :: String.t) :: boolean\n  def check_strings(s1, s2) do\n    \n  end\nend"
+  }
+}

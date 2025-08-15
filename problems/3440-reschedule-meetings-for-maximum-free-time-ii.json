@@ -1,0 +1,74 @@
+{
+  "title": "Reschedule Meetings for Maximum Free Time II",
+  "problem_id": "3741",
+  "frontend_id": "3440",
+  "difficulty": "Medium",
+  "problem_slug": "reschedule-meetings-for-maximum-free-time-ii",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "You are given an integer eventTime denoting the duration of an event. You are also given two integer arrays startTime and endTime, each of length n.\nThese represent the start and end times of n non-overlapping meetings that occur during the event between time t = 0 and time t = eventTime, where the ith meeting occurs during the time [startTime[i], endTime[i]].\nYou can reschedule at most one meeting by moving its start time while maintaining the same duration, such that the meetings remain non-overlapping, to maximize the longest continuous period of free time during the event.\nReturn the maximum amount of free time possible after rearranging the meetings.\nNote that the meetings can not be rescheduled to a time outside the event and they should remain non-overlapping.\nNote: In this version, it is valid for the relative ordering of the meetings to change after rescheduling one meeting.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: eventTime = 5, startTime = [1,3], endTime = [2,5]\nOutput: 2\nExplanation:\n\nReschedule the meeting at [1, 2] to [2, 3] , leaving no meetings during the time [0, 2] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/22/example0_rescheduled.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: eventTime = 10, startTime = [0,7,9], endTime = [1,8,10]\nOutput: 7\nExplanation:\n\nReschedule the meeting at [0, 1] to [8, 9] , leaving no meetings during the time [0, 7] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/22/rescheduled_example0.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: eventTime = 10, startTime = [0,3,7,9], endTime = [1,4,8,10]\nOutput: 6\nExplanation:\n\nReschedule the meeting at [3, 4] to [8, 9] , leaving no meetings during the time [1, 7] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/28/image3.png"
+      ]
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: eventTime = 5, startTime = [0,1,2,3,4], endTime = [1,2,3,4,5]\nOutput: 0\nExplanation:\nThere is no time during the event not occupied by meetings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= eventTime <= 109",
+    "n == startTime.length == endTime.length",
+    "2 <= n <= 105",
+    "0 <= startTime[i] < endTime[i] <= eventTime",
+    "endTime[i] <= startTime[i + 1] where i lies in the range [0, n - 2]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we reschedule a meeting earlier or later, we need to find a gap of length at least <code>endTime[i] - startTime[i]</code>. Try maintaining the gaps in some sorted data structure."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxFreeTime(int eventTime, vector<int>& startTime, vector<int>& endTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxFreeTime(int eventTime, int[] startTime, int[] endTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxFreeTime(self, eventTime, startTime, endTime):\n        \"\"\"\n        :type eventTime: int\n        :type startTime: List[int]\n        :type endTime: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxFreeTime(self, eventTime: int, startTime: List[int], endTime: List[int]) -> int:\n        ",
+    "c": "int maxFreeTime(int eventTime, int* startTime, int startTimeSize, int* endTime, int endTimeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxFreeTime(int eventTime, int[] startTime, int[] endTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} eventTime\n * @param {number[]} startTime\n * @param {number[]} endTime\n * @return {number}\n */\nvar maxFreeTime = function(eventTime, startTime, endTime) {\n    \n};",
+    "typescript": "function maxFreeTime(eventTime: number, startTime: number[], endTime: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $eventTime\n     * @param Integer[] $startTime\n     * @param Integer[] $endTime\n     * @return Integer\n     */\n    function maxFreeTime($eventTime, $startTime, $endTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxFreeTime(_ eventTime: Int, _ startTime: [Int], _ endTime: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxFreeTime(eventTime: Int, startTime: IntArray, endTime: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxFreeTime(int eventTime, List<int> startTime, List<int> endTime) {\n    \n  }\n}",
+    "golang": "func maxFreeTime(eventTime int, startTime []int, endTime []int) int {\n    \n}",
+    "ruby": "# @param {Integer} event_time\n# @param {Integer[]} start_time\n# @param {Integer[]} end_time\n# @return {Integer}\ndef max_free_time(event_time, start_time, end_time)\n    \nend",
+    "scala": "object Solution {\n    def maxFreeTime(eventTime: Int, startTime: Array[Int], endTime: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_free_time(event_time: i32, start_time: Vec<i32>, end_time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-free-time eventTime startTime endTime)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_free_time(EventTime :: integer(), StartTime :: [integer()], EndTime :: [integer()]) -> integer().\nmax_free_time(EventTime, StartTime, EndTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_free_time(event_time :: integer, start_time :: [integer], end_time :: [integer]) :: integer\n  def max_free_time(event_time, start_time, end_time) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Greedy\n\n#### Intuition\n\nAssume the current meeting to be shifted is $i$. There are two optimal ways to translate the meeting:\n\n1. If meeting $i$ can be moved to an available time slot, and this slot is not adjacent to the two available time slots on either side of meeting $i$, then shifting it can create a new available time slot, with a duration equal to the sum of the durations of meeting $i$ and the two adjacent available slots on either side.\n\n2. Otherwise, moving meeting $i$ simply merges the two adjacent free time periods on both sides.\n\nAs we can see that maximum free time that can be obtained after rearranging the meetings is the maximum value of the new available time periods resulting from shifting a meeting.\n\nWe use $q[i]$ to record whether meeting $i$ satisfies the condition for the first case. We first traverse the meetings from left to right, maintaining the maximum duration $t_1$ of any non-adjacent free time slot to the left of the current meeting $i$. If $t_1 \\ge \\textit{endTime}[i] - \\textit{startTime}[i]$, then there is a free time slot on the left of meeting $i$ that satisfies case 1, so we record $q[i] = \\text{true}$. Similarly, we traverse from right to left to check whether the right side also satisfies the condition.\n\nThen, for each meeting $i$, we define $\\textit{left}_i$ as the end time of the previous meeting and $\\textit{right}_i$ as the start time of the next meeting. Based on the value of $q[i]$, we determine which case applies:\n\n- Case 1: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i$\n\n- Case 2: The new available time slot has a duration of $\\textit{right}_i - \\textit{left}_i - (\\textit{endTime}[i] - \\textit{startTime}[i])$\n\nFinally, return the maximum of all computed durations.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(n)$.\n  \n  A array is needed to record all the meeting situations.\n\n\n### Approach 2: Greedy + Optimization\n\n#### Intuition\n\nIn Approach 1, we used an array `q[i]` to determine whether meeting $i$ satisfied the condition for an optimal shift. However, if we calculate the result for both cases directly while enumerating meeting $i$, we can eliminate the need for the `q` array altogether. The specific process is as follows:\n\n- We iterate over each meeting and first calculate the duration of the new free time slot if we were to merge the adjacent free slots on both sides of the meeting. This corresponds to Case 2 in the previous approach.\n\n- Then, we perform a left-to-right traversal, maintaining a variable $t_1$ to store the maximum duration of any non-adjacent free slot to the left of the current meeting. If the duration of the current meeting is less than or equal to $t_1$, it means the meeting can be shifted into that earlier free slot. We then compute the new available time obtained after this shift (Case 1).\n\n- Similarly, we perform a right-to-left traversal, using $t_2$ to track the maximum duration of non-adjacent free slots on the right. If the current meeting's duration is less than or equal to $t_2$, then it can be shifted into that slot, and we calculate the resulting new available time (Case 1 from the right side).\n\nIn the end, we return the maximum duration among all the computed available time slots.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the number of all meetings.\n\n- Time complexity: $O(n)$.\n  \n  We need to go through all the meetings.\n\n- Space complexity: $O(1)$."
+}

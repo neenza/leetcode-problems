@@ -1,0 +1,64 @@
+{
+  "title": "People Whose List of Favorite Companies Is Not a Subset of Another List",
+  "problem_id": "1562",
+  "frontend_id": "1452",
+  "difficulty": "Medium",
+  "problem_slug": "people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given the array favoriteCompanies where favoriteCompanies[i] is the list of favorites companies for the ith person (indexed from 0).\nReturn the indices of people whose list of favorite companies is not a subset of any other list of favorites companies. You must return the indices in increasing order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: favoriteCompanies = [[\"leetcode\",\"google\",\"facebook\"],[\"google\",\"microsoft\"],[\"google\",\"facebook\"],[\"google\"],[\"amazon\"]]\nOutput: [0,1,4] \nExplanation: \nPerson with index=2 has favoriteCompanies[2]=[\"google\",\"facebook\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] corresponding to the person with index 0. \nPerson with index=3 has favoriteCompanies[3]=[\"google\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] and favoriteCompanies[1]=[\"google\",\"microsoft\"]. \nOther lists of favorite companies are not a subset of another list, therefore, the answer is [0,1,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: favoriteCompanies = [[\"leetcode\",\"google\",\"facebook\"],[\"leetcode\",\"amazon\"],[\"facebook\",\"google\"]]\nOutput: [0,1] \nExplanation: In this case favoriteCompanies[2]=[\"facebook\",\"google\"] is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"], therefore, the answer is [0,1].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: favoriteCompanies = [[\"leetcode\"],[\"google\"],[\"facebook\"],[\"amazon\"]]\nOutput: [0,1,2,3]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= favoriteCompanies.length <= 100",
+    "1 <= favoriteCompanies[i].length <= 500",
+    "1 <= favoriteCompanies[i][j].length <= 20",
+    "All strings in favoriteCompanies[i] are distinct.",
+    "All lists of favorite companies are distinct, that is, If we sort alphabetically each list then favoriteCompanies[i] != favoriteCompanies[j].",
+    "All strings consist of lowercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use hashing to convert company names in numbers and then for each list check if this is a subset of any other list.",
+    "In order to check if a list is a subset of another list, use two pointers technique to get a linear solution for this task. The total complexity will be O(n^2 * m) where n is the number of lists and m is the maximum number of elements in a list."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> peopleIndexes(vector<vector<string>>& favoriteCompanies) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> peopleIndexes(List<List<String>> favoriteCompanies) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def peopleIndexes(self, favoriteCompanies):\n        \"\"\"\n        :type favoriteCompanies: List[List[str]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* peopleIndexes(char*** favoriteCompanies, int favoriteCompaniesSize, int* favoriteCompaniesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> PeopleIndexes(IList<IList<string>> favoriteCompanies) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} favoriteCompanies\n * @return {number[]}\n */\nvar peopleIndexes = function(favoriteCompanies) {\n    \n};",
+    "typescript": "function peopleIndexes(favoriteCompanies: string[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $favoriteCompanies\n     * @return Integer[]\n     */\n    function peopleIndexes($favoriteCompanies) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func peopleIndexes(_ favoriteCompanies: [[String]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun peopleIndexes(favoriteCompanies: List<List<String>>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> peopleIndexes(List<List<String>> favoriteCompanies) {\n    \n  }\n}",
+    "golang": "func peopleIndexes(favoriteCompanies [][]string) []int {\n    \n}",
+    "ruby": "# @param {String[][]} favorite_companies\n# @return {Integer[]}\ndef people_indexes(favorite_companies)\n    \nend",
+    "scala": "object Solution {\n    def peopleIndexes(favoriteCompanies: List[List[String]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn people_indexes(favorite_companies: Vec<Vec<String>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (people-indexes favoriteCompanies)\n  (-> (listof (listof string?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec people_indexes(FavoriteCompanies :: [[unicode:unicode_binary()]]) -> [integer()].\npeople_indexes(FavoriteCompanies) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec people_indexes(favorite_companies :: [[String.t]]) :: [integer]\n  def people_indexes(favorite_companies) do\n    \n  end\nend"
+  }
+}

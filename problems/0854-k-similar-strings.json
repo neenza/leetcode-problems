@@ -1,0 +1,54 @@
+{
+  "title": "K-Similar Strings",
+  "problem_id": "884",
+  "frontend_id": "854",
+  "difficulty": "Hard",
+  "problem_slug": "k-similar-strings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Breadth-First Search"
+  ],
+  "description": "Strings s1 and s2 are k-similar (for some non-negative integer k) if we can swap the positions of two letters in s1 exactly k times so that the resulting string equals s2.\nGiven two anagrams s1 and s2, return the smallest k for which s1 and s2 are k-similar.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s1 = \"ab\", s2 = \"ba\"\nOutput: 1\nExplanation: The two string are 1-similar because we can use one swap to change s1 to s2: \"ab\" --> \"ba\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s1 = \"abc\", s2 = \"bca\"\nOutput: 2\nExplanation: The two strings are 2-similar because we can use two swaps to change s1 to s2: \"abc\" --> \"bac\" --> \"bca\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s1.length <= 20",
+    "s2.length == s1.length",
+    "s1 and s2 contain only lowercase letters from the set {'a', 'b', 'c', 'd', 'e', 'f'}.",
+    "s2 is an anagram of s1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int kSimilarity(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kSimilarity(String s1, String s2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kSimilarity(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kSimilarity(self, s1: str, s2: str) -> int:\n        ",
+    "c": "int kSimilarity(char* s1, char* s2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int KSimilarity(string s1, string s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {number}\n */\nvar kSimilarity = function(s1, s2) {\n    \n};",
+    "typescript": "function kSimilarity(s1: string, s2: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s1\n     * @param String $s2\n     * @return Integer\n     */\n    function kSimilarity($s1, $s2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kSimilarity(_ s1: String, _ s2: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kSimilarity(s1: String, s2: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int kSimilarity(String s1, String s2) {\n    \n  }\n}",
+    "golang": "func kSimilarity(s1 string, s2 string) int {\n    \n}",
+    "ruby": "# @param {String} s1\n# @param {String} s2\n# @return {Integer}\ndef k_similarity(s1, s2)\n    \nend",
+    "scala": "object Solution {\n    def kSimilarity(s1: String, s2: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn k_similarity(s1: String, s2: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (k-similarity s1 s2)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec k_similarity(S1 :: unicode:unicode_binary(), S2 :: unicode:unicode_binary()) -> integer().\nk_similarity(S1, S2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec k_similarity(s1 :: String.t, s2 :: String.t) :: integer\n  def k_similarity(s1, s2) do\n    \n  end\nend"
+  }
+}

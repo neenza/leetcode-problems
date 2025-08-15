@@ -1,0 +1,59 @@
+{
+  "title": "Toeplitz Matrix",
+  "problem_id": "777",
+  "frontend_id": "766",
+  "difficulty": "Easy",
+  "problem_slug": "toeplitz-matrix",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "Given an m x n matrix, return true if the matrix is Toeplitz. Otherwise, return false.\nA matrix is Toeplitz if every diagonal from top-left to bottom-right has the same elements.\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,2,3,4],[5,1,2,3],[9,5,1,2]]\nOutput: true\nExplanation:\nIn the above grid, the diagonals are:\n\"[9]\", \"[5, 5]\", \"[1, 1, 1]\", \"[2, 2, 2]\", \"[3, 3]\", \"[4]\".\nIn each diagonal all elements are the same, so the answer is True.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/04/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,2],[2,2]]\nOutput: false\nExplanation:\nThe diagonal \"[1, 2]\" has different elements.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/04/ex2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 20",
+    "0 <= matrix[i][j] <= 99"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check whether each value is equal to the value of it's top-left neighbor."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isToeplitzMatrix(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isToeplitzMatrix(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isToeplitzMatrix(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:\n        ",
+    "c": "bool isToeplitzMatrix(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsToeplitzMatrix(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {boolean}\n */\nvar isToeplitzMatrix = function(matrix) {\n    \n};",
+    "typescript": "function isToeplitzMatrix(matrix: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Boolean\n     */\n    function isToeplitzMatrix($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isToeplitzMatrix(_ matrix: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isToeplitzMatrix(matrix: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isToeplitzMatrix(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func isToeplitzMatrix(matrix [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Boolean}\ndef is_toeplitz_matrix(matrix)\n    \nend",
+    "scala": "object Solution {\n    def isToeplitzMatrix(matrix: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_toeplitz_matrix(matrix: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-toeplitz-matrix matrix)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec is_toeplitz_matrix(Matrix :: [[integer()]]) -> boolean().\nis_toeplitz_matrix(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_toeplitz_matrix(matrix :: [[integer]]) :: boolean\n  def is_toeplitz_matrix(matrix) do\n    \n  end\nend"
+  }
+}

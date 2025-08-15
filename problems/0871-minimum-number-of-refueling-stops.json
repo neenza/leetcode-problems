@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Number of Refueling Stops",
+  "problem_id": "902",
+  "frontend_id": "871",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-number-of-refueling-stops",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "A car travels from a starting position to a destination which is target miles east of the starting position.\nThere are gas stations along the way. The gas stations are represented as an array stations where stations[i] = [positioni, fueli] indicates that the ith gas station is positioni miles east of the starting position and has fueli liters of gas.\nThe car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it. It uses one liter of gas per one mile that it drives. When the car reaches a gas station, it may stop and refuel, transferring all the gas from the station into the car.\nReturn the minimum number of refueling stops the car must make in order to reach its destination. If it cannot reach the destination, return -1.\nNote that if the car reaches a gas station with 0 fuel left, the car can still refuel there. If the car reaches the destination with 0 fuel left, it is still considered to have arrived.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: target = 1, startFuel = 1, stations = []\nOutput: 0\nExplanation: We can reach the target without refueling.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: target = 100, startFuel = 1, stations = [[10,100]]\nOutput: -1\nExplanation: We can not reach the target (or even the first gas station).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: target = 100, startFuel = 10, stations = [[10,60],[20,30],[30,30],[60,40]]\nOutput: 2\nExplanation: We start with 10 liters of fuel.\nWe drive to position 10, expending 10 liters of fuel.  We refuel from 0 liters to 60 liters of gas.\nThen, we drive from position 10 to position 60 (expending 50 liters of fuel),\nand refuel from 10 liters to 50 liters of gas.  We then drive to and reach the target.\nWe made 2 refueling stops along the way, so we return 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= target, startFuel <= 109",
+    "0 <= stations.length <= 500",
+    "1 <= positioni < positioni+1 < target",
+    "1 <= fueli < 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minRefuelStops(int target, int startFuel, vector<vector<int>>& stations) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minRefuelStops(int target, int startFuel, int[][] stations) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minRefuelStops(self, target, startFuel, stations):\n        \"\"\"\n        :type target: int\n        :type startFuel: int\n        :type stations: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:\n        ",
+    "c": "int minRefuelStops(int target, int startFuel, int** stations, int stationsSize, int* stationsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinRefuelStops(int target, int startFuel, int[][] stations) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} target\n * @param {number} startFuel\n * @param {number[][]} stations\n * @return {number}\n */\nvar minRefuelStops = function(target, startFuel, stations) {\n    \n};",
+    "typescript": "function minRefuelStops(target: number, startFuel: number, stations: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $target\n     * @param Integer $startFuel\n     * @param Integer[][] $stations\n     * @return Integer\n     */\n    function minRefuelStops($target, $startFuel, $stations) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minRefuelStops(_ target: Int, _ startFuel: Int, _ stations: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minRefuelStops(target: Int, startFuel: Int, stations: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minRefuelStops(int target, int startFuel, List<List<int>> stations) {\n    \n  }\n}",
+    "golang": "func minRefuelStops(target int, startFuel int, stations [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} target\n# @param {Integer} start_fuel\n# @param {Integer[][]} stations\n# @return {Integer}\ndef min_refuel_stops(target, start_fuel, stations)\n    \nend",
+    "scala": "object Solution {\n    def minRefuelStops(target: Int, startFuel: Int, stations: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_refuel_stops(target: i32, start_fuel: i32, stations: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-refuel-stops target startFuel stations)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_refuel_stops(Target :: integer(), StartFuel :: integer(), Stations :: [[integer()]]) -> integer().\nmin_refuel_stops(Target, StartFuel, Stations) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_refuel_stops(target :: integer, start_fuel :: integer, stations :: [[integer]]) :: integer\n  def min_refuel_stops(target, start_fuel, stations) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition**\n\nLet's determine `dp[i]`, the farthest location we can get to using `i` refueling stops.  This is motivated by the fact that we want the smallest `i` for which `dp[i] >= target`.\n\n**Algorithm**\n\nLet's update `dp` as we consider each station in order.  With no stations, clearly we can get a maximum distance of `startFuel` with `0` refueling stops.\n\nNow let's look at the update step.  When adding a station `station[i] = (location, capacity)`, any time we could reach this station with `t` refueling stops, we can now reach `capacity` further with `t+1` refueling stops.\n\nFor example, if we could reach a distance of 15 with 1 refueling stop, and now we added a station at location 10 with 30 liters of fuel, then we could potentially reach a distance of 45 with 2 refueling stops.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the length of `stations`.\n\n* Space Complexity:  $$O(N)$$, the space used by `dp`.---\n### Approach 2: Heap\n\n**Intuition**\n\nWhen driving past a gas station, let's remember the amount of fuel it contained.  We don't need to decide yet whether to fuel up here or not - for example, there could be a bigger gas station up ahead that we would rather refuel at.\n\nWhen we run out of fuel before reaching the next station, we'll retroactively fuel up: greedily choosing the largest gas stations first.\n\nThis is guaranteed to succeed because we drive the largest distance possible before each refueling stop, and therefore have the largest choice of gas stations to (retroactively) stop at.\n\n**Algorithm**\n\n`pq` (\"priority queue\") will be a max-heap of the capacity of each gas station we've driven by.  We'll also keep track of `tank`, our current fuel.\n\nWhen we reach a station but have negative fuel (ie. we needed to have refueled at some point in the past), we will add the capacities of the largest gas stations we've driven by until the fuel is non-negative.\n\nIf at any point this process fails (that is, no more gas stations), then the task is impossible.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `stations`.\n\n* Space Complexity:  $$O(N)$$, the space used by `pq`."
+}

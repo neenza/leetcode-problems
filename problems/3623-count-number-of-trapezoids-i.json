@@ -1,0 +1,64 @@
+{
+  "title": "Count Number of Trapezoids I",
+  "problem_id": "3886",
+  "frontend_id": "3623",
+  "difficulty": "Medium",
+  "problem_slug": "count-number-of-trapezoids-i",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given a 2D integer array points, where points[i] = [xi, yi] represents the coordinates of the ith point on the Cartesian plane.\nA horizontal trapezoid is a convex quadrilateral with at least one pair of horizontal sides (i.e. parallel to the x-axis). Two lines are parallel if and only if they have the same slope.\nReturn the  number of unique horizontal trapezoids that can be formed by choosing any four distinct points from points.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[1,0],[2,0],[3,0],[2,2],[3,2]]\nOutput: 3\nExplanation:\n\nThere are three distinct ways to pick four points that form a horizontal trapezoid:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/05/01/desmos-graph-6.png",
+        "https://assets.leetcode.com/uploads/2025/05/01/desmos-graph-7.png",
+        "https://assets.leetcode.com/uploads/2025/05/01/desmos-graph-8.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[0,0],[1,0],[0,1],[2,1]]\nOutput: 1\nExplanation:\n\nThere is only one horizontal trapezoid that can be formed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/desmos-graph-5.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "4 <= points.length <= 105",
+    "–108 <= xi, yi <= 108",
+    "All points are pairwise distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For a line parallel to the x‑axis, all its points must share the same y‑coordinate.",
+    "Group the points by their y‑coordinate.",
+    "Choose two distinct groups (two horizontal lines), and from each group select two points to form a trapezoid."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countTrapezoids(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTrapezoids(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countTrapezoids(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countTrapezoids(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int countTrapezoids(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountTrapezoids(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar countTrapezoids = function(points) {\n    \n};",
+    "typescript": "function countTrapezoids(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function countTrapezoids($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countTrapezoids(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countTrapezoids(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countTrapezoids(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func countTrapezoids(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef count_trapezoids(points)\n    \nend",
+    "scala": "object Solution {\n    def countTrapezoids(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_trapezoids(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-trapezoids points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec count_trapezoids(Points :: [[integer()]]) -> integer().\ncount_trapezoids(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_trapezoids(points :: [[integer]]) :: integer\n  def count_trapezoids(points) do\n    \n  end\nend"
+  }
+}

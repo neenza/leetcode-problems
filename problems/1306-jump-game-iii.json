@@ -1,0 +1,61 @@
+{
+  "title": "Jump Game III",
+  "problem_id": "1428",
+  "frontend_id": "1306",
+  "difficulty": "Medium",
+  "problem_slug": "jump-game-iii",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ],
+  "description": "Given an array of non-negative integers arr, you are initially positioned at start index of the array. When you are at index i, you can jump to i + arr[i] or i - arr[i], check if you can reach any index with value 0.\nNotice that you can not jump outside of the array at any time.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [4,2,3,0,3,1,2], start = 5\nOutput: true\nExplanation: \nAll possible ways to reach at index 3 with value 0 are: \nindex 5 -> index 4 -> index 1 -> index 3 \nindex 5 -> index 6 -> index 4 -> index 1 -> index 3",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [4,2,3,0,3,1,2], start = 0\nOutput: true \nExplanation: \nOne possible way to reach at index 3 with value 0 is: \nindex 0 -> index 4 -> index 1 -> index 3",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [3,0,2,1,2], start = 2\nOutput: false\nExplanation: There is no way to reach at index 1 with value 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 5 * 104",
+    "0 <= arr[i] < arr.length",
+    "0 <= start < arr.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of BFS to solve the problem.",
+    "When you reach a position with a value = 0 then return true."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canReach(vector<int>& arr, int start) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canReach(int[] arr, int start) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canReach(self, arr, start):\n        \"\"\"\n        :type arr: List[int]\n        :type start: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canReach(self, arr: List[int], start: int) -> bool:\n        ",
+    "c": "bool canReach(int* arr, int arrSize, int start) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanReach(int[] arr, int start) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} start\n * @return {boolean}\n */\nvar canReach = function(arr, start) {\n    \n};",
+    "typescript": "function canReach(arr: number[], start: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $start\n     * @return Boolean\n     */\n    function canReach($arr, $start) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canReach(_ arr: [Int], _ start: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canReach(arr: IntArray, start: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canReach(List<int> arr, int start) {\n    \n  }\n}",
+    "golang": "func canReach(arr []int, start int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} start\n# @return {Boolean}\ndef can_reach(arr, start)\n    \nend",
+    "scala": "object Solution {\n    def canReach(arr: Array[Int], start: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_reach(arr: Vec<i32>, start: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-reach arr start)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_reach(Arr :: [integer()], Start :: integer()) -> boolean().\ncan_reach(Arr, Start) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_reach(arr :: [integer], start :: integer) :: boolean\n  def can_reach(arr, start) do\n    \n  end\nend"
+  }
+}

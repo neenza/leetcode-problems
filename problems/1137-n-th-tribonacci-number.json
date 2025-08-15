@@ -1,0 +1,55 @@
+{
+  "title": "N-th Tribonacci Number",
+  "problem_id": "1236",
+  "frontend_id": "1137",
+  "difficulty": "Easy",
+  "problem_slug": "n-th-tribonacci-number",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "description": "The Tribonacci sequence Tn is defined as follows:\nT0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.\nGiven n, return the value of Tn.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4\nOutput: 4\nExplanation:\nT_3 = 0 + 1 + 1 = 2\nT_4 = 1 + 1 + 2 = 4",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 25\nOutput: 1389537",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 37",
+    "The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Make an array F of length 38, and set F[0] = 0, F[1] = F[2] = 1.",
+    "Now write a loop where you set F[n+3] = F[n] + F[n+1] + F[n+2], and return F[n]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int tribonacci(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int tribonacci(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def tribonacci(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def tribonacci(self, n: int) -> int:\n        ",
+    "c": "int tribonacci(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int Tribonacci(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar tribonacci = function(n) {\n    \n};",
+    "typescript": "function tribonacci(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function tribonacci($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func tribonacci(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun tribonacci(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int tribonacci(int n) {\n    \n  }\n}",
+    "golang": "func tribonacci(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef tribonacci(n)\n    \nend",
+    "scala": "object Solution {\n    def tribonacci(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn tribonacci(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (tribonacci n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec tribonacci(N :: integer()) -> integer().\ntribonacci(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec tribonacci(n :: integer) :: integer\n  def tribonacci(n) do\n    \n  end\nend"
+  }
+}

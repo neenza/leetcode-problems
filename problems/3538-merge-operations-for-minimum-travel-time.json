@@ -1,0 +1,64 @@
+{
+  "title": "Merge Operations for Minimum Travel Time",
+  "problem_id": "3833",
+  "frontend_id": "3538",
+  "difficulty": "Hard",
+  "problem_slug": "merge-operations-for-minimum-travel-time",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You are given a straight road of length l km, an integer n, an integer k, and two integer arrays, position and time, each of length n.\nThe array position lists the positions (in km) of signs in strictly increasing order (with position[0] = 0 and position[n - 1] = l).\nEach time[i] represents the time (in minutes) required to travel 1 km between position[i] and position[i + 1].\nYou must perform exactly k merge operations. In one merge, you can choose any two adjacent signs at indices i and i + 1 (with i > 0 and i + 1 < n) and:\nReturn the minimum total travel time (in minutes) to travel from 0 to l after exactly k merges.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: l = 10, n = 4, k = 1, position = [0,3,8,10], time = [5,8,3,6]\nOutput: 62\nExplanation:\nMerge the signs at indices 1 and 2. Remove the sign at index 1, and change the time at index 2 to 8 + 3 = 11 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: l = 5, n = 5, k = 1, position = [0,1,2,3,5], time = [8,3,9,3,3]\nOutput: 34\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= l <= 105",
+    "2 <= n <= min(l + 1, 50)",
+    "0 <= k <= min(n - 2, 10)",
+    "position.length == n",
+    "position[0] = 0 and position[n - 1] = l",
+    "position is sorted in strictly increasing order.",
+    "time.length == n",
+    "1 <= time[i] <= 100​",
+    "1 <= sum(time) <= 100​​​​​​"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "After <code>k</code> merges, you’ll have <code>n-k</code> signs left.",
+    "Define <code>DP[i][j][s]</code> as the minimum travel time for positions <code>0..i</code> when <code>i</code> is kept, <code>j</code> deletions are done overall, and <code>s</code> consecutive deletions occurred immediately before <code>i</code>.",
+    "Update the DP by either merging (increment <code>s</code> and <code>j</code>) or not merging (reset <code>s</code>) and adding the appropriate travel time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minTravelTime(int l, int n, int k, vector<int>& position, vector<int>& time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minTravelTime(int l, int n, int k, int[] position, int[] time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTravelTime(self, l, n, k, position, time):\n        \"\"\"\n        :type l: int\n        :type n: int\n        :type k: int\n        :type position: List[int]\n        :type time: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTravelTime(self, l: int, n: int, k: int, position: List[int], time: List[int]) -> int:\n        ",
+    "c": "int minTravelTime(int l, int n, int k, int* position, int positionSize, int* time, int timeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinTravelTime(int l, int n, int k, int[] position, int[] time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} l\n * @param {number} n\n * @param {number} k\n * @param {number[]} position\n * @param {number[]} time\n * @return {number}\n */\nvar minTravelTime = function(l, n, k, position, time) {\n    \n};",
+    "typescript": "function minTravelTime(l: number, n: number, k: number, position: number[], time: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $l\n     * @param Integer $n\n     * @param Integer $k\n     * @param Integer[] $position\n     * @param Integer[] $time\n     * @return Integer\n     */\n    function minTravelTime($l, $n, $k, $position, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTravelTime(_ l: Int, _ n: Int, _ k: Int, _ position: [Int], _ time: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTravelTime(l: Int, n: Int, k: Int, position: IntArray, time: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTravelTime(int l, int n, int k, List<int> position, List<int> time) {\n    \n  }\n}",
+    "golang": "func minTravelTime(l int, n int, k int, position []int, time []int) int {\n    \n}",
+    "ruby": "# @param {Integer} l\n# @param {Integer} n\n# @param {Integer} k\n# @param {Integer[]} position\n# @param {Integer[]} time\n# @return {Integer}\ndef min_travel_time(l, n, k, position, time)\n    \nend",
+    "scala": "object Solution {\n    def minTravelTime(l: Int, n: Int, k: Int, position: Array[Int], time: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_travel_time(l: i32, n: i32, k: i32, position: Vec<i32>, time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-travel-time l n k position time)\n  (-> exact-integer? exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_travel_time(L :: integer(), N :: integer(), K :: integer(), Position :: [integer()], Time :: [integer()]) -> integer().\nmin_travel_time(L, N, K, Position, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_travel_time(l :: integer, n :: integer, k :: integer, position :: [integer], time :: [integer]) :: integer\n  def min_travel_time(l, n, k, position, time) do\n    \n  end\nend"
+  }
+}

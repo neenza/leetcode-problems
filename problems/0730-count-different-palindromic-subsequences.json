@@ -1,0 +1,53 @@
+{
+  "title": "Count Different Palindromic Subsequences",
+  "problem_id": "730",
+  "frontend_id": "730",
+  "difficulty": "Hard",
+  "problem_slug": "count-different-palindromic-subsequences",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string s, return the number of different non-empty palindromic subsequences in s. Since the answer may be very large, return it modulo 109 + 7.\nA subsequence of a string is obtained by deleting zero or more characters from the string.\nA sequence is palindromic if it is equal to the sequence reversed.\nTwo sequences a1, a2, ... and b1, b2, ... are different if there is some i for which ai != bi.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"bccb\"\nOutput: 6\nExplanation: The 6 different non-empty palindromic subsequences are 'b', 'c', 'bb', 'cc', 'bcb', 'bccb'.\nNote that 'bcb' is counted only once, even though it occurs twice.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba\"\nOutput: 104860361\nExplanation: There are 3104860382 different non-empty palindromic subsequences, which is 104860361 modulo 109 + 7.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either 'a', 'b', 'c', or 'd'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let dp(i, j) be the answer for the string T = S[i:j+1] including the empty sequence. The answer is the number of unique characters in T, plus palindromes of the form \"a_a\", \"b_b\", \"c_c\", and \"d_d\", where \"_\" represents zero or more characters."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPalindromicSubsequences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPalindromicSubsequences(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPalindromicSubsequences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPalindromicSubsequences(self, s: str) -> int:\n        ",
+    "c": "int countPalindromicSubsequences(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPalindromicSubsequences(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countPalindromicSubsequences = function(s) {\n    \n};",
+    "typescript": "function countPalindromicSubsequences(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countPalindromicSubsequences($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPalindromicSubsequences(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPalindromicSubsequences(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPalindromicSubsequences(String s) {\n    \n  }\n}",
+    "golang": "func countPalindromicSubsequences(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_palindromic_subsequences(s)\n    \nend",
+    "scala": "object Solution {\n    def countPalindromicSubsequences(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_palindromic_subsequences(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-palindromic-subsequences s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_palindromic_subsequences(S :: unicode:unicode_binary()) -> integer().\ncount_palindromic_subsequences(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_palindromic_subsequences(s :: String.t) :: integer\n  def count_palindromic_subsequences(s) do\n    \n  end\nend"
+  }
+}

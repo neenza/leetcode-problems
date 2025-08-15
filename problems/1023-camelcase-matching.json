@@ -1,0 +1,64 @@
+{
+  "title": "Camelcase Matching",
+  "problem_id": "1080",
+  "frontend_id": "1023",
+  "difficulty": "Medium",
+  "problem_slug": "camelcase-matching",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String",
+    "Trie",
+    "String Matching"
+  ],
+  "description": "Given an array of strings queries and a string pattern, return a boolean array answer where answer[i] is true if queries[i] matches pattern, and false otherwise.\nA query word queries[i] matches pattern if you can insert lowercase English letters into the pattern so that it equals the query. You may insert a character at any position in pattern or you may choose not to insert any characters at all.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FB\"\nOutput: [true,false,true,true,false]\nExplanation: \"FooBar\" can be generated like this \"F\" + \"oo\" + \"B\" + \"ar\".\n\"FootBall\" can be generated like this \"F\" + \"oot\" + \"B\" + \"all\".\n\"FrameBuffer\" can be generated like this \"F\" + \"rame\" + \"B\" + \"uffer\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FoBa\"\nOutput: [true,false,true,false,false]\nExplanation: \"FooBar\" can be generated like this \"Fo\" + \"o\" + \"Ba\" + \"r\".\n\"FootBall\" can be generated like this \"Fo\" + \"ot\" + \"Ba\" + \"ll\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: queries = [\"FooBar\",\"FooBarTest\",\"FootBall\",\"FrameBuffer\",\"ForceFeedBack\"], pattern = \"FoBaT\"\nOutput: [false,true,false,false,false]\nExplanation: \"FooBarTest\" can be generated like this \"Fo\" + \"o\" + \"Ba\" + \"r\" + \"T\" + \"est\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pattern.length, queries.length <= 100",
+    "1 <= queries[i].length <= 100",
+    "queries[i] and pattern consist of English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Given a single pattern and word, how can we solve it?",
+    "One way to do it is using a DP (pos1, pos2) where pos1 is a pointer to the word and pos2 to the pattern and returns true if we can match the pattern with the given word.",
+    "We have two scenarios: The first one is when `word[pos1] == pattern[pos2]`, then the transition will be just DP(pos1 + 1, pos2 + 1). The second scenario is when `word[pos1]` is lowercase then we can add this character to the pattern so that the transition is just DP(pos1 + 1, pos2)\r\nThe case base is `if (pos1 == n && pos2 == m) return true;` Where n and m are the sizes of the strings word and pattern respectively."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> camelMatch(vector<string>& queries, string pattern) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Boolean> camelMatch(String[] queries, String pattern) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def camelMatch(self, queries, pattern):\n        \"\"\"\n        :type queries: List[str]\n        :type pattern: str\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def camelMatch(self, queries: List[str], pattern: str) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* camelMatch(char** queries, int queriesSize, char* pattern, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<bool> CamelMatch(string[] queries, string pattern) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} queries\n * @param {string} pattern\n * @return {boolean[]}\n */\nvar camelMatch = function(queries, pattern) {\n    \n};",
+    "typescript": "function camelMatch(queries: string[], pattern: string): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $queries\n     * @param String $pattern\n     * @return Boolean[]\n     */\n    function camelMatch($queries, $pattern) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func camelMatch(_ queries: [String], _ pattern: String) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun camelMatch(queries: Array<String>, pattern: String): List<Boolean> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> camelMatch(List<String> queries, String pattern) {\n    \n  }\n}",
+    "golang": "func camelMatch(queries []string, pattern string) []bool {\n    \n}",
+    "ruby": "# @param {String[]} queries\n# @param {String} pattern\n# @return {Boolean[]}\ndef camel_match(queries, pattern)\n    \nend",
+    "scala": "object Solution {\n    def camelMatch(queries: Array[String], pattern: String): List[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn camel_match(queries: Vec<String>, pattern: String) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (camel-match queries pattern)\n  (-> (listof string?) string? (listof boolean?))\n  )",
+    "erlang": "-spec camel_match(Queries :: [unicode:unicode_binary()], Pattern :: unicode:unicode_binary()) -> [boolean()].\ncamel_match(Queries, Pattern) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec camel_match(queries :: [String.t], pattern :: String.t) :: [boolean]\n  def camel_match(queries, pattern) do\n    \n  end\nend"
+  }
+}

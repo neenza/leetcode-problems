@@ -1,0 +1,56 @@
+{
+  "title": "Find the Array Concatenation Value",
+  "problem_id": "2698",
+  "frontend_id": "2562",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-array-concatenation-value",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums.\nThe concatenation of two numbers is the number formed by concatenating their numerals.\nThe concatenation value of nums is initially equal to 0. Perform this operation until nums becomes empty:\nReturn the concatenation value of nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,52,2,4]\nOutput: 596\nExplanation: Before performing any operation, nums is [7,52,2,4] and concatenation value is 0.\n - In the first operation:\nWe pick the first element, 7, and the last element, 4.\nTheir concatenation is 74, and we add it to the concatenation value, so it becomes equal to 74.\nThen we delete them from nums, so nums becomes equal to [52,2].\n - In the second operation:\nWe pick the first element, 52, and the last element, 2.\nTheir concatenation is 522, and we add it to the concatenation value, so it becomes equal to 596.\nThen we delete them from the nums, so nums becomes empty.\nSince the concatenation value is 596 so the answer is 596.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,14,13,8,12]\nOutput: 673\nExplanation: Before performing any operation, nums is [5,14,13,8,12] and concatenation value is 0.\n - In the first operation:\nWe pick the first element, 5, and the last element, 12.\nTheir concatenation is 512, and we add it to the concatenation value, so it becomes equal to 512.\nThen we delete them from the nums, so nums becomes equal to [14,13,8].\n - In the second operation:\nWe pick the first element, 14, and the last element, 8.\nTheir concatenation is 148, and we add it to the concatenation value, so it becomes equal to 660.\nThen we delete them from the nums, so nums becomes equal to [13].\n - In the third operation:\nnums has only one element, so we pick 13 and add it to the concatenation value, so it becomes equal to 673.\nThen we delete it from nums, so nums become empty.\nSince the concatenation value is 673 so the answer is 673.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider simulating the process to calculate the answer",
+    "iterate until the array becomes empty. In each iteration, concatenate the first element to the last element and add their concatenation value to the answer.",
+    "Don’t forget to handle cases when one element is left in the end, not two elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long findTheArrayConcVal(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findTheArrayConcVal(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findTheArrayConcVal(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findTheArrayConcVal(self, nums: List[int]) -> int:\n        ",
+    "c": "long long findTheArrayConcVal(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long FindTheArrayConcVal(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findTheArrayConcVal = function(nums) {\n    \n};",
+    "typescript": "function findTheArrayConcVal(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findTheArrayConcVal($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findTheArrayConcVal(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findTheArrayConcVal(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findTheArrayConcVal(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findTheArrayConcVal(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_the_array_conc_val(nums)\n    \nend",
+    "scala": "object Solution {\n    def findTheArrayConcVal(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_the_array_conc_val(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (find-the-array-conc-val nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_the_array_conc_val(Nums :: [integer()]) -> integer().\nfind_the_array_conc_val(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_the_array_conc_val(nums :: [integer]) :: integer\n  def find_the_array_conc_val(nums) do\n    \n  end\nend"
+  }
+}

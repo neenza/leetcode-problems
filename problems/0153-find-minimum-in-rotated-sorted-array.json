@@ -1,0 +1,63 @@
+{
+  "title": "Find Minimum in Rotated Sorted Array",
+  "problem_id": "153",
+  "frontend_id": "153",
+  "difficulty": "Medium",
+  "problem_slug": "find-minimum-in-rotated-sorted-array",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:\nNotice that rotating an array [a[0], a[1], a[2], ..., a[n-1]] 1 time results in the array [a[n-1], a[0], a[1], a[2], ..., a[n-2]].\nGiven the sorted rotated array nums of unique elements, return the minimum element of this array.\nYou must write an algorithm that runs in O(log n) time.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,4,5,1,2]\nOutput: 1\nExplanation: The original array was [1,2,3,4,5] rotated 3 times.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,5,6,7,0,1,2]\nOutput: 0\nExplanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [11,13,15,17]\nOutput: 11\nExplanation: The original array was [11,13,15,17] and it was rotated 4 times.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 5000",
+    "-5000 <= nums[i] <= 5000",
+    "All the integers of nums are unique.",
+    "nums is sorted and rotated between 1 and n times."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Array was originally in ascending order. Now that the array is rotated, there would be a point in the array where there is a small deflection from the increasing sequence. eg. The array would be something like [4, 5, 6, 7, 0, 1, 2].",
+    "You can divide the search space into two and see which direction to go.\r\nCan you think of an algorithm which has O(logN) search complexity?",
+    "<ol>\r\n<li>All the elements to the left of inflection point > first element of the array.</li>\r\n<li>All the elements to the right of inflection point < first element of the array.</li>\r\n<ol>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMin(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMin(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMin(self, nums: List[int]) -> int:\n        ",
+    "c": "int findMin(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMin(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findMin = function(nums) {\n    \n};",
+    "typescript": "function findMin(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findMin($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMin(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMin(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMin(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findMin(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_min(nums)\n    \nend",
+    "scala": "object Solution {\n    def findMin(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_min(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-min nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_min(Nums :: [integer()]) -> integer().\nfind_min(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_min(nums :: [integer]) :: integer\n  def find_min(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Find the Sum of Encrypted Integers",
+  "problem_id": "3367",
+  "frontend_id": "3079",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-sum-of-encrypted-integers",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are given an integer array nums containing positive integers. We define a function encrypt such that encrypt(x) replaces every digit in x with the largest digit in x. For example, encrypt(523) = 555 and encrypt(213) = 333.\nReturn the sum of encrypted elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 6\nExplanation: The encrypted elements are [1,2,3] . The sum of encrypted elements is 1 + 2 + 3 == 6 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,21,31]\nOutput: 66\nExplanation: The encrypted elements are [11,22,33] . The sum of encrypted elements is 11 + 22 + 33 == 66 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Encrypted numbers are of the form <code>11…1 * maxDigit</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumOfEncryptedInt(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfEncryptedInt(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfEncryptedInt(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfEncryptedInt(self, nums: List[int]) -> int:\n        ",
+    "c": "int sumOfEncryptedInt(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumOfEncryptedInt(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumOfEncryptedInt = function(nums) {\n    \n};",
+    "typescript": "function sumOfEncryptedInt(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function sumOfEncryptedInt($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfEncryptedInt(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfEncryptedInt(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumOfEncryptedInt(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sumOfEncryptedInt(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef sum_of_encrypted_int(nums)\n    \nend",
+    "scala": "object Solution {\n    def sumOfEncryptedInt(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_encrypted_int(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-encrypted-int nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec sum_of_encrypted_int(Nums :: [integer()]) -> integer().\nsum_of_encrypted_int(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_encrypted_int(nums :: [integer]) :: integer\n  def sum_of_encrypted_int(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Changes to Make K Semi-palindromes",
+  "problem_id": "2879",
+  "frontend_id": "2911",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-changes-to-make-k-semi-palindromes",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string s and an integer k, partition s into k substrings such that the letter changes needed to make each substring a semi-palindrome are minimized.\nReturn the minimum number of letter changes required.\nA semi-palindrome is a special type of string that can be divided into palindromes based on a repeating pattern. To check if a string is a semi-palindrome:​\nConsider the string \"abcabc\":\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcac\", k = 2\nOutput: 1\nExplanation: Divide s into \"ab\" and \"cac\" . \"cac\" is already semi-palindrome. Change \"ab\" to \"aa\" , it becomes semi-palindrome with d = 1 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdef\", k = 2\nOutput: 2\nExplanation: Divide s into substrings \"abc\" and \"def\" . Each needs one change to become semi-palindrome.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"aabbaa\", k = 3\nOutput: 0\nExplanation: Divide s into substrings \"aa\" , \"bb\" and \"aa\" . All are already semi-palindromes.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 200",
+    "1 <= k <= s.length / 2",
+    "s contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Define <code>dp[i][j]</code> as the minimum count of letter changes needed to split the suffix of string <code>s</code> starting from <code>s[i]</code> into <code>j</code> valid parts.",
+    "We have <code>dp[i][j] = min(dp[x + 1][j - 1] + v[i][x])</code>. Here <code>v[i][x]</code> is the minimum number of letter changes to change substring <code>s[i..x]</code> into semi-palindrome.",
+    "<code>v[i][j]</code> can be calculated separately by <b>brute-force</b>. We can create a table of <code>v[i][j]</code> independently to improve the complexity. Also note that semi-palindrome’s length is at least <code>2</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumChanges(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumChanges(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumChanges(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumChanges(self, s: str, k: int) -> int:\n        ",
+    "c": "int minimumChanges(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumChanges(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar minimumChanges = function(s, k) {\n    \n};",
+    "typescript": "function minimumChanges(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function minimumChanges($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumChanges(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumChanges(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumChanges(String s, int k) {\n    \n  }\n}",
+    "golang": "func minimumChanges(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef minimum_changes(s, k)\n    \nend",
+    "scala": "object Solution {\n    def minimumChanges(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_changes(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-changes s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_changes(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_changes(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_changes(s :: String.t, k :: integer) :: integer\n  def minimum_changes(s, k) do\n    \n  end\nend"
+  }
+}

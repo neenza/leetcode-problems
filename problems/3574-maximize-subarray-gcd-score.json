@@ -1,0 +1,62 @@
+{
+  "title": "Maximize Subarray GCD Score",
+  "problem_id": "3888",
+  "frontend_id": "3574",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-subarray-gcd-score",
+  "topics": [
+    "Array",
+    "Math",
+    "Enumeration",
+    "Number Theory"
+  ],
+  "description": "You are given an array of positive integers nums and an integer k.\nYou may perform at most k operations. In each operation, you can choose one element in the array and double its value. Each element can be doubled at most once.\nThe score of a contiguous subarray is defined as the product of its length and the greatest common divisor (GCD) of all its elements.\nYour task is to return the maximum score that can be achieved by selecting a contiguous subarray from the modified array.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4], k = 1\nOutput: 8\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,5,7], k = 2\nOutput: 14\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,5,5], k = 1\nOutput: 15\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 1500",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try iterating over the subarrays",
+    "Handle the 2s in the factors of elements separately"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxGCDScore(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxGCDScore(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxGCDScore(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxGCDScore(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long maxGCDScore(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxGCDScore(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxGCDScore = function(nums, k) {\n    \n};",
+    "typescript": "function maxGCDScore(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxGCDScore($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxGCDScore(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxGCDScore(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxGCDScore(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxGCDScore(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_gcd_score(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxGCDScore(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_gcd_score(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-gcd-score nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_gcd_score(Nums :: [integer()], K :: integer()) -> integer().\nmax_gcd_score(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_gcd_score(nums :: [integer], k :: integer) :: integer\n  def max_gcd_score(nums, k) do\n    \n  end\nend"
+  }
+}

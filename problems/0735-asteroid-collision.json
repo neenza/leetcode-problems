@@ -1,0 +1,60 @@
+{
+  "title": "Asteroid Collision",
+  "problem_id": "735",
+  "frontend_id": "735",
+  "difficulty": "Medium",
+  "problem_slug": "asteroid-collision",
+  "topics": [
+    "Array",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "We are given an array asteroids of integers representing asteroids in a row. The indices of the asteriod in the array represent their relative position in space.\nFor each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.\nFind out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: asteroids = [5,10,-5]\nOutput: [5,10]\nExplanation: The 10 and -5 collide resulting in 10. The 5 and 10 never collide.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: asteroids = [8,-8]\nOutput: []\nExplanation: The 8 and -8 collide exploding each other.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: asteroids = [10,2,-5]\nOutput: [10]\nExplanation: The 2 and -5 collide resulting in -5. The 10 and -5 collide resulting in 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= asteroids.length <= 104",
+    "-1000 <= asteroids[i] <= 1000",
+    "asteroids[i] != 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Say a row of asteroids is stable.  What happens when a new asteroid is added on the right?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> asteroidCollision(vector<int>& asteroids) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] asteroidCollision(int[] asteroids) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def asteroidCollision(self, asteroids):\n        \"\"\"\n        :type asteroids: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def asteroidCollision(self, asteroids: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* asteroidCollision(int* asteroids, int asteroidsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] AsteroidCollision(int[] asteroids) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} asteroids\n * @return {number[]}\n */\nvar asteroidCollision = function(asteroids) {\n    \n};",
+    "typescript": "function asteroidCollision(asteroids: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $asteroids\n     * @return Integer[]\n     */\n    function asteroidCollision($asteroids) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func asteroidCollision(_ asteroids: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun asteroidCollision(asteroids: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> asteroidCollision(List<int> asteroids) {\n    \n  }\n}",
+    "golang": "func asteroidCollision(asteroids []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} asteroids\n# @return {Integer[]}\ndef asteroid_collision(asteroids)\n    \nend",
+    "scala": "object Solution {\n    def asteroidCollision(asteroids: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn asteroid_collision(asteroids: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (asteroid-collision asteroids)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec asteroid_collision(Asteroids :: [integer()]) -> [integer()].\nasteroid_collision(Asteroids) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec asteroid_collision(asteroids :: [integer]) :: [integer]\n  def asteroid_collision(asteroids) do\n    \n  end\nend"
+  }
+}

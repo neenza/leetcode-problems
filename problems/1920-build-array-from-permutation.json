@@ -1,0 +1,56 @@
+{
+  "title": "Build Array from Permutation",
+  "problem_id": "2048",
+  "frontend_id": "1920",
+  "difficulty": "Easy",
+  "problem_slug": "build-array-from-permutation",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "Given a zero-based permutation nums (0-indexed), build an array ans of the same length where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.\nA zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive).\nExample 1:\nExample 2:\nConstraints:\nFollow-up: Can you solve it without using an extra space (i.e., O(1) memory)?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,2,1,5,3,4]\nOutput: [0,1,2,4,5,3]\nExplanation: The array ans is built as follows: \nans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], nums[nums[5]]]\n    = [nums[0], nums[2], nums[1], nums[5], nums[3], nums[4]]\n    = [0,1,2,4,5,3]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,0,1,2,3,4]\nOutput: [4,5,0,1,2,3]\nExplanation: The array ans is built as follows:\nans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], nums[nums[5]]]\n    = [nums[5], nums[0], nums[1], nums[2], nums[3], nums[4]]\n    = [4,5,0,1,2,3]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "0 <= nums[i] < nums.length",
+    "The elements in nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Just apply what's said in the statement.",
+    "Notice that you can't apply it on the same array directly since some elements will change after application"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> buildArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] buildArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def buildArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def buildArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* buildArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] BuildArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar buildArray = function(nums) {\n    \n};",
+    "typescript": "function buildArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function buildArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func buildArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun buildArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> buildArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func buildArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef build_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def buildArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn build_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (build-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec build_array(Nums :: [integer()]) -> [integer()].\nbuild_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec build_array(nums :: [integer]) :: [integer]\n  def build_array(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Build As Required\n\n#### Intuition\n\nWe can construct a new array of the same length as the original array $\\textit{nums}$, with the element at index $i$ in the new array equal to $\\textit{nums}[\\textit{nums}[i]]$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nThis is the time complexity for constructing the new array.\n\n- Space complexity: $O(1)$.\n\nThe output array is not counted in the space complexity.\n\n### Approach 2: Build In Place\n\n#### Intuition\n\nWe can also directly modify the original array $\\textit{nums}$.\n\nIn order to allow the construction process to proceed completely, we need to enable each element $\\textit{nums}[i]$ in $\\textit{nums}$ to store both the 'current value' (i.e., $\\textit{nums}[i]$) and the 'final value' (i.e., $\\textit{nums}[\\textit{nums}[i]]$).\n\nWe noticed that the range of values of the elements in $\\textit{nums}$ is $[0, 999]$ inclusive, which means that both the 'current value' and the 'final value' of each element in $\\textit{nums}$ are within the closed interval $[0, 999]$.\n\nTherefore, we can use a concept similar to the \"$1000$-based system\" to represent the \"current value\" and \"final value\" of each element. For each element, we use the quotient when it is divided by $1000$ to represent its \"final value,\" and the remainder to represent its \"current value.\"\n\nSo, we first traverse $\\textit{nums}$, calculate the \"final value\" of each element, and add $1000$ times that value to the element. Then, we traverse the array again, and divide the value of each element by $1000$, retaining the quotient. At this point, $\\textit{nums}$ is the completed array, and we return this array as the answer.\n\n#### Details\n\nWhen calculating the \"final value\" of $\\textit{nums}[i]$ and modifying the element, we need to calculate the value of $\\textit{nums}[\\textit{nums}[i]]$ before the modification, and the element at the index $\\textit{nums}[i]$ in $\\textit{nums}$ may have been modified. Therefore, we need to take the modulus of the value at that index with 1000 to get the \"final value\".\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe traversed and modified the $\\textit{nums}$ array twice, and the time complexity of each traversal and modification is $O(n)$.\n\n- Space complexity: $O(1)$.\n\nOnly a few additional variables are needed."
+}

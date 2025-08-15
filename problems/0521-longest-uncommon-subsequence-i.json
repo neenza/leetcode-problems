@@ -1,0 +1,60 @@
+{
+  "title": "Longest Uncommon Subsequence I",
+  "problem_id": "521",
+  "frontend_id": "521",
+  "difficulty": "Easy",
+  "problem_slug": "longest-uncommon-subsequence-i",
+  "topics": [
+    "String"
+  ],
+  "description": "Given two strings a and b, return the length of the longest uncommon subsequence between a and b. If no such uncommon subsequence exists, return -1.\nAn uncommon subsequence between two strings is a string that is a subsequence of exactly one of them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = \"aba\", b = \"cdc\"\nOutput: 3\nExplanation: One longest uncommon subsequence is \"aba\" because \"aba\" is a subsequence of \"aba\" but not \"cdc\".\nNote that \"cdc\" is also a longest uncommon subsequence.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = \"aaa\", b = \"bbb\"\nOutput: 3\nExplanation: The longest uncommon subsequences are \"aaa\" and \"bbb\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: a = \"aaa\", b = \"aaa\"\nOutput: -1\nExplanation: Every subsequence of string a is also a subsequence of string b. Similarly, every subsequence of string b is also a subsequence of string a. So the answer would be -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= a.length, b.length <= 100",
+    "a and b consist of lower-case English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think very simple.",
+    "If <code>a == b</code>, the answer is -1.",
+    "Otherwise, the answer is the string <code>a</code> or the string <code>b</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findLUSlength(string a, string b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLUSlength(String a, String b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLUSlength(self, a, b):\n        \"\"\"\n        :type a: str\n        :type b: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLUSlength(self, a: str, b: str) -> int:\n        ",
+    "c": "int findLUSlength(char* a, char* b) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindLUSlength(string a, string b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} a\n * @param {string} b\n * @return {number}\n */\nvar findLUSlength = function(a, b) {\n    \n};",
+    "typescript": "function findLUSlength(a: string, b: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $a\n     * @param String $b\n     * @return Integer\n     */\n    function findLUSlength($a, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLUSlength(_ a: String, _ b: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLUSlength(a: String, b: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLUSlength(String a, String b) {\n    \n  }\n}",
+    "golang": "func findLUSlength(a string, b string) int {\n    \n}",
+    "ruby": "# @param {String} a\n# @param {String} b\n# @return {Integer}\ndef find_lu_slength(a, b)\n    \nend",
+    "scala": "object Solution {\n    def findLUSlength(a: String, b: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_lu_slength(a: String, b: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-lu-slength a b)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec find_lu_slength(A :: unicode:unicode_binary(), B :: unicode:unicode_binary()) -> integer().\nfind_lu_slength(A, B) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_lu_slength(a :: String.t, b :: String.t) :: integer\n  def find_lu_slength(a, b) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n\n---\n\n### Overview\n\nA subsequence of a string is a sequence of its characters. It maintains the order of the characters but does not need to be continuous. Each character may occur up to as many times as it occurs in the original string.\n\n> An **uncommon subsequence** between two strings is a string that is a **subsequence of one but not the other**.\n\nOur objective is to find the length of the longest uncommon subsequence between two strings, `a` and `b`. If none exists, we must return `-1`.\n\nA real-world application of finding uncommon subsequences is plagiarism detection, where long common subsequences could signify plagiarism.\n\n---\n\n### Approach: Maximum Length\n\n#### Intuition\n\nLet's approach this problem by viewing some examples. \n\n**What are the characteristics of `a` and `b` when no uncommon subsequence exists?**\n\n##### Example 1: (Example 3 from the problem description)\n\n>***Input:*** a = \"aaa\", b = \"aaa\" \\\n***Output:*** = -1 \\\n***Explanation:*** Every subsequence of string a is also a subsequence of string b. Similarly, every subsequence of string b is also a subsequence of string a.\n\n##### Example 2: \n\n>***Input:*** a = \"xyz\", b = \"xyz\" \\\n***Output:*** = -1 \\\n***Explanation:*** Every subsequence of string a is also a subsequence of string b. Similarly, every subsequence of string b is also a subsequence of string a.\n\nWhat do these two examples have in common? Strings `a` and `b` contain the same characters in the same order. We realize that if `a` and `b` are equal, an uncommon subsequence does not exist.\n\n---\n\n**What patterns can we observe between the longest uncommon subsequences?**\n\n##### Example 3: \n\n>***Input:*** a = \"xyz\", b = \"wxyz\" \\\n***Output:*** = 4 \\\n***Explanation:*** Every subsequence of string a is also a subsequence of string b. The subsequence \"wxyz\" is an uncommon subsequence, as it is not a subsequence of `a`.\n\n##### Example 4:  (Example 1 from the problem description)\n\n>***Input:*** a = \"aba\", b = \"cdc\" \\\n***Output:*** = 3 \\\n***Explanation:*** One longest uncommon subsequence is \"aba\" because \"aba\" is a subsequence of \"aba\" but not \"cdc\".\nNote that \"cdc\" is also a longest uncommon subsequence.\n\n We can observe that the longest uncommon subsequences in examples 3 and 4 are all entire strings. We notice that \"cd\" is an uncommon subsequence of `b` in the above example, but it is not the longest. We can reason that if the two strings are not identical, then the longest uncommon subsequence will be the longer string because it has some additional character(s) that guarantee it is uncommon from the other string, and it is also the longest possible subsequence we can create. If both strings are the same length but are not identical, they will both be longest uncommon subsequences, as in example 4, and we can return the length of either.\n\n\n\n#### Algorithm\n\n1. If `a` is equal to `b`:\n    1. Return `-1`, there is no uncommon subsequence.\n2. Else:\n    1. Calculate the lengths of `a` and `b` and return the length of the longer string.\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity: $O(n)$ \n    \n    In the worst case, string comparison will take $O(n)$. \n    \n    In the best case, string comparison can take $O(1)$. Some languages, including Java, optimize string comparison and can determine immediately that the strings are not the same if they are not the same length. For these languages, it still takes $O(n)$ in the worst case when the strings are the same.\n\n* Space complexity:\n  \n    $O(1)$ because we do not use data structures that require additional space.\n\n---"
+}

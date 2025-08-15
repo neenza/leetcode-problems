@@ -1,0 +1,33 @@
+{
+  "title": "Employees Earning More Than Their Managers",
+  "problem_id": "181",
+  "frontend_id": "181",
+  "difficulty": "Easy",
+  "problem_slug": "employees-earning-more-than-their-managers",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employee\nWrite a solution to find the employees who earn more than their managers.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| salary      | int     |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the ID of an employee, their name, salary, and the ID of their manager.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nEmployee table:\n+----+-------+--------+-----------+\n| id | name  | salary | managerId |\n+----+-------+--------+-----------+\n| 1  | Joe   | 70000  | 3         |\n| 2  | Henry | 80000  | 4         |\n| 3  | Sam   | 60000  | Null      |\n| 4  | Max   | 90000  | Null      |\n+----+-------+--------+-----------+\nOutput: \n+----------+\n| Employee |\n+----------+\n| Joe      |\n+----------+\nExplanation: Joe is the only employee who earns more than his manager.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_employees(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

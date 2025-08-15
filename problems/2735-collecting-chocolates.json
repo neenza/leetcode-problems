@@ -1,0 +1,55 @@
+{
+  "title": "Collecting Chocolates",
+  "problem_id": "2810",
+  "frontend_id": "2735",
+  "difficulty": "Medium",
+  "problem_slug": "collecting-chocolates",
+  "topics": [
+    "Array",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed integer array nums of size n representing the cost of collecting different chocolates. The cost of collecting the chocolate at the index i is nums[i]. Each chocolate is of a different type, and initially, the chocolate at the index i is of ith type.\nIn one operation, you can do the following with an incurred cost of x:\nReturn the minimum cost to collect chocolates of all types, given that you can perform as many operations as you would like.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [20,1,15], x = 5\nOutput: 13\nExplanation: Initially, the chocolate types are [0,1,2]. We will buy the 1st type of chocolate at a cost of 1.\nNow, we will perform the operation at a cost of 5, and the types of chocolates will become [1,2,0]. We will buy the 2nd type of chocolate at a cost of 1.\nNow, we will again perform the operation at a cost of 5, and the chocolate types will become [2,0,1]. We will buy the 0th type of chocolate at a cost of 1. \nThus, the total cost will become (1 + 5 + 1 + 5 + 1) = 13. We can prove that this is optimal.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3], x = 4\nOutput: 6\nExplanation: We will collect all three types of chocolates at their own price without performing any operations. Therefore, the total cost is 1 + 2 + 3 = 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 109",
+    "1 <= x <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How many maximum rotations will be needed?",
+    "The array will be rotated for a max of N times, so try all possibilities as N = 1000."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minCost(vector<int>& nums, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int[] nums, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, nums, x):\n        \"\"\"\n        :type nums: List[int]\n        :type x: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, nums: List[int], x: int) -> int:\n        ",
+    "c": "long long minCost(int* nums, int numsSize, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinCost(int[] nums, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} x\n * @return {number}\n */\nvar minCost = function(nums, x) {\n    \n};",
+    "typescript": "function minCost(nums: number[], x: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $x\n     * @return Integer\n     */\n    function minCost($nums, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ nums: [Int], _ x: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(nums: IntArray, x: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> nums, int x) {\n    \n  }\n}",
+    "golang": "func minCost(nums []int, x int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} x\n# @return {Integer}\ndef min_cost(nums, x)\n    \nend",
+    "scala": "object Solution {\n    def minCost(nums: Array[Int], x: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(nums: Vec<i32>, x: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost nums x)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Nums :: [integer()], X :: integer()) -> integer().\nmin_cost(Nums, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(nums :: [integer], x :: integer) :: integer\n  def min_cost(nums, x) do\n    \n  end\nend"
+  }
+}

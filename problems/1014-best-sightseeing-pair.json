@@ -1,0 +1,54 @@
+{
+  "title": "Best Sightseeing Pair",
+  "problem_id": "1063",
+  "frontend_id": "1014",
+  "difficulty": "Medium",
+  "problem_slug": "best-sightseeing-pair",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array values where values[i] represents the value of the ith sightseeing spot. Two sightseeing spots i and j have a distance j - i between them.\nThe score of a pair (i < j) of sightseeing spots is values[i] + values[j] + i - j: the sum of the values of the sightseeing spots, minus the distance between them.\nReturn the maximum score of a pair of sightseeing spots.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: values = [8,1,5,2,6]\nOutput: 11\nExplanation: i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: values = [1,2]\nOutput: 2",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= values.length <= 5 * 104",
+    "1 <= values[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you tell the best sightseeing spot in one pass (ie. as you iterate over the input?)  What should we store or keep track of as we iterate to do this?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxScoreSightseeingPair(vector<int>& values) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScoreSightseeingPair(int[] values) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScoreSightseeingPair(self, values):\n        \"\"\"\n        :type values: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScoreSightseeingPair(self, values: List[int]) -> int:\n        ",
+    "c": "int maxScoreSightseeingPair(int* values, int valuesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxScoreSightseeingPair(int[] values) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} values\n * @return {number}\n */\nvar maxScoreSightseeingPair = function(values) {\n    \n};",
+    "typescript": "function maxScoreSightseeingPair(values: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $values\n     * @return Integer\n     */\n    function maxScoreSightseeingPair($values) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScoreSightseeingPair(_ values: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScoreSightseeingPair(values: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScoreSightseeingPair(List<int> values) {\n    \n  }\n}",
+    "golang": "func maxScoreSightseeingPair(values []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} values\n# @return {Integer}\ndef max_score_sightseeing_pair(values)\n    \nend",
+    "scala": "object Solution {\n    def maxScoreSightseeingPair(values: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score_sightseeing_pair(values: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score-sightseeing-pair values)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_score_sightseeing_pair(Values :: [integer()]) -> integer().\nmax_score_sightseeing_pair(Values) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score_sightseeing_pair(values :: [integer]) :: integer\n  def max_score_sightseeing_pair(values) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given an array `values`, where each element represents the value of a sightseeing spot. Our task is to find the *best sightseeing pair* of spots. This means selecting two indices of the array, $i$ and $j$ ($i < j$) such that the score of the pair, calculated as $values[i] + values[j] + i - j$ is the highest possible.\n\nA naive way to approach the problem would involve going over all pairs of spots, calculating their score using the above formula and returning the highest of these scores. However, this solution requires a nested loop over the array, resulting in a time complexity of $O(n^2)$, which is inefficient for the given constraints.\n\n---\n\n### Approach 1: Dynamic Programming\n\n#### Intuition\n\nFirst, we observe that each element `values[i]`, can be part of the score in two ways:  \n- As the **left element**: it adds `values[i] + i` to the score.  \n- As the **right element**: it adds `values[i] - i` to the score.\n\nNow, let's fix the **right element** at position `j`. To get the best score, we need to find a **left element** at some position `i` (where `i < j`) that gives the biggest value for `values[i] + i`. \n\nTo do so, we need to calculate this value for all indices up to `j` and get the highest of these. Now, we have to check whether the index `j + 1` is a better right spot than index `j`. What should we do? Is it necessary to go over the array again and compare the left-scores for all indices $0, 1, ..., j$ or is there a better strategy? \n\nInstead of recalculating the best `values[i] + i` for each new `j` from scratch, we can keep track of the highest `values[i] + i` encountered as we advance through the array. This way, we reuse the results computed in earlier steps rather than re-examining the entire array every time. Recognizing that we can reuse results from earlier steps reveals the overlapping states of the problem and helps us land at a dynamic programming approach.\n\n> **Dynamic Programming**: For a more comprehensive understanding of dynamic programming, check out the [Dynamic Programming Explore Card 🔗](https://leetcode.com/explore/learn/card/dynamic-programming/). This resource provides an in-depth look at dynamic programming, explaining its key concepts and applications with a variety of problems to solidify understanding of the pattern.\n\n#### Algorithm\n\n- Initialize an array `maxLeftScore` of size `n` to store the maximum left scores up to each index.\n  - Set `maxLeftScore[0]` to `values[0]` because the left score at the first index is simply the value of the first element.\n\n- Initialize `maxScore` to 0 to keep track of the maximum score of sightseeing pairs.\n\n- Iterate through the array from index `1` to `n - 1`:\n  - Calculate the current right score for the sightseeing pair as `values[i] - i`.\n  - Update `maxScore` by combining the best left score so far (`maxLeftScore[i - 1]`) with the current right score.\n  - Calculate the current left score as `values[i] + i`.\n  - Update `maxLeftScore[i]` to be the maximum of `maxLeftScore[i - 1]` and `currentLeftScore`, ensuring it stores the best left score up to the current index.\n\n- After completing the iteration, return `maxScore`, which contains the maximum sightseeing pair score.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array.\n\n- Time complexity: $O(n)$\n\n    We loop over the array once and perform constant-time operations on each iteration. Therefore, the time complexity of the algorithm is $O(n)$.\n\n- Space complexity: $O(n)$\n\n    We are creating an array `maxLeftScore` of size $n$ to store the maximum left-score up to each index. That's why the algorithm requires $O(n)$ extra space.\n\n---\n\n### Approach 2: Space-Optimized DP\n\n#### Intuition\n\nBuilding on the previous approach, we observe that the calculations for each array element depend only on the stored score of the previous element. This means that once `maxLeftScore[i]` is computed, earlier values in the DP table become useless, resulting in wasted memory. \n\nTo tackle this, we can replace the entire `maxLeftScores` array with a single variable to store the most recently calculated value.\n\n#### Algorithm\n\n- Initialize `maxLeftScore` with the value of the first element in the `values` array (this represents the best score for the left side at the start).\n- Initialize `maxScore` to 0 to keep track of the maximum score of sightseeing pairs.\n\n- Iterate through the array from index `1` to `n - 1`:\n  - Calculate the current right score for the sightseeing pair as `values[i] - i`.\n  - Update `maxScore` by combining the best left score so far (`maxLeftScore`) with the current right score.\n  - Calculate the current left score as `values[i] + i`.\n  - Update `maxLeftScore` to be the maximum of `maxLeftScore` and `currentLeftScore`, ensuring it stores the best left score up to the current index.\n\n- After completing the iteration, return `maxScore`, which contains the maximum sightseeing pair score.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array.\n\n- Time complexity: $O(n)$\n\n    Just like the previous approach, the single loop over the `values` array costs $O(n)$ time.\n\n- Space complexity: $O(1)$\n\n    We are only using a fixed number of variables, so the algorithm requires constant extra space.\n\n---"
+}

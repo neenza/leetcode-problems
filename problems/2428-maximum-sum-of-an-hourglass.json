@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Sum of an Hourglass",
+  "problem_id": "2508",
+  "frontend_id": "2428",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-sum-of-an-hourglass",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "You are given an m x n integer matrix grid.\nWe define an hourglass as a part of the matrix with the following form:\nReturn the maximum sum of the elements of an hourglass.\nNote that an hourglass cannot be rotated and must be entirely contained within the matrix.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[6,2,1,3],[4,2,1,5],[9,2,8,7],[4,1,2,9]]\nOutput: 30\nExplanation: The cells shown above represent the hourglass with the maximum sum: 6 + 2 + 1 + 2 + 9 + 2 + 8 = 30.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/08/21/1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: 35\nExplanation: There is only one hourglass in the matrix, with the sum: 1 + 2 + 3 + 5 + 7 + 8 + 9 = 35.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/08/21/2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "3 <= m, n <= 150",
+    "0 <= grid[i][j] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Each 3x3 submatrix has exactly one hourglass.",
+    "Find the sum of each hourglass in the matrix and return the largest of these values."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSum(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSum(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maxSum(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSum(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxSum = function(grid) {\n    \n};",
+    "typescript": "function maxSum(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maxSum($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSum(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSum(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSum(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maxSum(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef max_sum(grid)\n    \nend",
+    "scala": "object Solution {\n    def maxSum(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_sum(Grid :: [[integer()]]) -> integer().\nmax_sum(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum(grid :: [[integer]]) :: integer\n  def max_sum(grid) do\n    \n  end\nend"
+  }
+}

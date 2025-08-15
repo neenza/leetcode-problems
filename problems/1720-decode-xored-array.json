@@ -1,0 +1,56 @@
+{
+  "title": "Decode XORed Array",
+  "problem_id": "1839",
+  "frontend_id": "1720",
+  "difficulty": "Easy",
+  "problem_slug": "decode-xored-array",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "description": "There is a hidden integer array arr that consists of n non-negative integers.\nIt was encoded into another integer array encoded of length n - 1, such that encoded[i] = arr[i] XOR arr[i + 1]. For example, if arr = [1,0,2,1], then encoded = [1,2,3].\nYou are given the encoded array. You are also given an integer first, that is the first element of arr, i.e. arr[0].\nReturn the original array arr. It can be proved that the answer exists and is unique.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: encoded = [1,2,3], first = 1\nOutput: [1,0,2,1]\nExplanation: If arr = [1,0,2,1], then first = 1 and encoded = [1 XOR 0, 0 XOR 2, 2 XOR 1] = [1,2,3]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: encoded = [6,2,7,3], first = 4\nOutput: [4,2,0,7,4]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 104",
+    "encoded.length == n - 1",
+    "0 <= encoded[i] <= 105",
+    "0 <= first <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since that encoded[i] = arr[i] XOR arr[i+1], then arr[i+1] = encoded[i] XOR arr[i].",
+    "Iterate on i from beginning to end, and set arr[i+1] = encoded[i] XOR arr[i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> decode(vector<int>& encoded, int first) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] decode(int[] encoded, int first) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decode(self, encoded, first):\n        \"\"\"\n        :type encoded: List[int]\n        :type first: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decode(self, encoded: List[int], first: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* decode(int* encoded, int encodedSize, int first, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] Decode(int[] encoded, int first) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} encoded\n * @param {number} first\n * @return {number[]}\n */\nvar decode = function(encoded, first) {\n    \n};",
+    "typescript": "function decode(encoded: number[], first: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $encoded\n     * @param Integer $first\n     * @return Integer[]\n     */\n    function decode($encoded, $first) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decode(_ encoded: [Int], _ first: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decode(encoded: IntArray, first: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> decode(List<int> encoded, int first) {\n    \n  }\n}",
+    "golang": "func decode(encoded []int, first int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} encoded\n# @param {Integer} first\n# @return {Integer[]}\ndef decode(encoded, first)\n    \nend",
+    "scala": "object Solution {\n    def decode(encoded: Array[Int], first: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decode(encoded: Vec<i32>, first: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (decode encoded first)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec decode(Encoded :: [integer()], First :: integer()) -> [integer()].\ndecode(Encoded, First) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decode(encoded :: [integer], first :: integer) :: [integer]\n  def decode(encoded, first) do\n    \n  end\nend"
+  }
+}

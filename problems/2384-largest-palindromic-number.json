@@ -1,0 +1,58 @@
+{
+  "title": "Largest Palindromic Number",
+  "problem_id": "2475",
+  "frontend_id": "2384",
+  "difficulty": "Medium",
+  "problem_slug": "largest-palindromic-number",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "You are given a string num consisting of digits only.\nReturn the largest palindromic integer (in the form of a string) that can be formed using digits taken from num. It should not contain leading zeroes.\nNotes:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"444947137\"\nOutput: \"7449447\"\nExplanation: \nUse the digits \"4449477\" from \"444947137\" to form the palindromic integer \"7449447\".\nIt can be shown that \"7449447\" is the largest palindromic integer that can be formed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"00009\"\nOutput: \"9\"\nExplanation: \nIt can be shown that \"9\" is the largest palindromic integer that can be formed.\nNote that the integer returned should not contain leading zeroes.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 105",
+    "num consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In order to form a valid palindrome, other than the middle digit in an odd-length palindrome, every digit needs to exist on both sides.",
+    "A longer palindrome implies a larger valued palindrome. For palindromes of the same length, the larger digits should occur first.",
+    "We can count the occurrences of each digit and build the palindrome starting from the ends. Starting from the larger digits, if there are still at least 2 occurrences of a digit, we can place these digits on each side.",
+    "Make sure to consider the special case for the center digit (if any) and zeroes. There should not be leading zeroes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestPalindromic(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestPalindromic(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestPalindromic(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestPalindromic(self, num: str) -> str:\n        ",
+    "c": "char* largestPalindromic(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestPalindromic(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {string}\n */\nvar largestPalindromic = function(num) {\n    \n};",
+    "typescript": "function largestPalindromic(num: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return String\n     */\n    function largestPalindromic($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestPalindromic(_ num: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestPalindromic(num: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestPalindromic(String num) {\n    \n  }\n}",
+    "golang": "func largestPalindromic(num string) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {String}\ndef largest_palindromic(num)\n    \nend",
+    "scala": "object Solution {\n    def largestPalindromic(num: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_palindromic(num: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-palindromic num)\n  (-> string? string?)\n  )",
+    "erlang": "-spec largest_palindromic(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_palindromic(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_palindromic(num :: String.t) :: String.t\n  def largest_palindromic(num) do\n    \n  end\nend"
+  }
+}

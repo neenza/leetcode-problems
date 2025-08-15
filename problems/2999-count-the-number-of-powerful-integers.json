@@ -1,0 +1,65 @@
+{
+  "title": "Count the Number of Powerful Integers",
+  "problem_id": "3243",
+  "frontend_id": "2999",
+  "difficulty": "Hard",
+  "problem_slug": "count-the-number-of-powerful-integers",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given three integers start, finish, and limit. You are also given a 0-indexed string s representing a positive integer.\nA positive integer x is called powerful if it ends with s (in other words, s is a suffix of x) and each digit in x is at most limit.\nReturn the total number of powerful integers in the range [start..finish].\nA string x is a suffix of a string y if and only if x is a substring of y that starts from some index (including 0) in y and extends to the index y.length - 1. For example, 25 is a suffix of 5125 whereas 512 is not.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: start = 1, finish = 6000, limit = 4, s = \"124\"\nOutput: 5\nExplanation: The powerful integers in the range [1..6000] are 124, 1124, 2124, 3124, and, 4124. All these integers have each digit <= 4, and \"124\" as a suffix. Note that 5124 is not a powerful integer because the first digit is 5 which is greater than 4.\nIt can be shown that there are only 5 powerful integers in this range.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: start = 15, finish = 215, limit = 6, s = \"10\"\nOutput: 2\nExplanation: The powerful integers in the range [15..215] are 110 and 210. All these integers have each digit <= 6, and \"10\" as a suffix.\nIt can be shown that there are only 2 powerful integers in this range.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: start = 1000, finish = 2000, limit = 4, s = \"3000\"\nOutput: 0\nExplanation: All integers in the range [1000..2000] are smaller than 3000, hence \"3000\" cannot be a suffix of any integer in this range.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= start <= finish <= 1015",
+    "1 <= limit <= 9",
+    "1 <= s.length <= floor(log10(finish)) + 1",
+    "s only consists of numeric digits which are at most limit.",
+    "s does not have leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can use digit DP to count powerful integers in the range <code>[1, x]</code>.",
+    "Let <code>dp[i][j]</code> be the number of integers that have <code>i</code> digits (with allowed leading 0s) and <code>j</code> refers to the comparison between the current number and the prefix of <code>x</code>, <code>j == 0</code> if the i-digit number formed currently is identical to the leftmost <code>i</code> digits of <code>x</code>, else if <code>j ==1</code> it means the i-digit number is smaller than the leftmost <code>i</code> digits of <code>x</code>.",
+    "The answer is <code>count[finish] - count[start - 1]</code>, where <code>count[i]</code> refers to the number of powerful integers in the range <code>[1..i]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numberOfPowerfulInt(long long start, long long finish, int limit, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfPowerfulInt(long start, long finish, int limit, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfPowerfulInt(self, start, finish, limit, s):\n        \"\"\"\n        :type start: int\n        :type finish: int\n        :type limit: int\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfPowerfulInt(self, start: int, finish: int, limit: int, s: str) -> int:\n        ",
+    "c": "long long numberOfPowerfulInt(long long start, long long finish, int limit, char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumberOfPowerfulInt(long start, long finish, int limit, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} start\n * @param {number} finish\n * @param {number} limit\n * @param {string} s\n * @return {number}\n */\nvar numberOfPowerfulInt = function(start, finish, limit, s) {\n    \n};",
+    "typescript": "function numberOfPowerfulInt(start: number, finish: number, limit: number, s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $start\n     * @param Integer $finish\n     * @param Integer $limit\n     * @param String $s\n     * @return Integer\n     */\n    function numberOfPowerfulInt($start, $finish, $limit, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfPowerfulInt(_ start: Int, _ finish: Int, _ limit: Int, _ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfPowerfulInt(start: Long, finish: Long, limit: Int, s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfPowerfulInt(int start, int finish, int limit, String s) {\n    \n  }\n}",
+    "golang": "func numberOfPowerfulInt(start int64, finish int64, limit int, s string) int64 {\n    \n}",
+    "ruby": "# @param {Integer} start\n# @param {Integer} finish\n# @param {Integer} limit\n# @param {String} s\n# @return {Integer}\ndef number_of_powerful_int(start, finish, limit, s)\n    \nend",
+    "scala": "object Solution {\n    def numberOfPowerfulInt(start: Long, finish: Long, limit: Int, s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_powerful_int(start: i64, finish: i64, limit: i32, s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-powerful-int start finish limit s)\n  (-> exact-integer? exact-integer? exact-integer? string? exact-integer?)\n  )",
+    "erlang": "-spec number_of_powerful_int(Start :: integer(), Finish :: integer(), Limit :: integer(), S :: unicode:unicode_binary()) -> integer().\nnumber_of_powerful_int(Start, Finish, Limit, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_powerful_int(start :: integer, finish :: integer, limit :: integer, s :: String.t) :: integer\n  def number_of_powerful_int(start, finish, limit, s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Digital Dynamic Programming\n\n#### Intuition\n\nThe question requires us to find the number of positive integers within a given range whose suffix is $s$.\n\nSince the range of the interval is very large, the brute-force approach of enumerating numbers one by one would not only exceed the time limit but also perform many unnecessary computations. In fact, we can fix the suffix $s$, and only consider how many prefixes can be combined with it to form numbers within a certain range. This satisfies the conditions for applying digit $\\textit{dp}$.\n\nThe function $\\text{dfs}(i,\\textit{limitLow},\\textit{limitHigh})$ represents the number of valid numbers that can be formed starting from the $i$-th digit, and:\n\n- $\\textit{limitLow}$ indicates whether the current value is constrained by $\\textit{start}$. If it is $\\textit{true}$, it means that the first $i-1$ digits are the same as $\\textit{start}$, and the range of digits that can be filled in the $i$-th position is $[\\textit{start}[i],9]$. If the current position is constrained and $\\textit{start}[i]$ is filled in, then the next position is still constrained. Denote this digit as $\\textit{lo}$.\n- $\\textit{limitHigh}$ is similar to the $\\textit{limitLow}$, indicating whether the current state is constrained by $\\textit{finish}$. If it is $\\textit{true}$, it means that the first $i-1$ digits are the same as $\\textit{finish}$. The range of digits that can be filled in the $i$th position is $[0,\\min(\\textit{finish}[i],\\textit{limit})]$. Denote this digit as $\\textit{hi}$.\n- If the $i$-th digit is not constrained, it can be filled with any digit in $[0,\\textit{limit}]$. Note that each digit must not exceed $\\textit{limit}$, as required by the problem.\n\nWe use recursive enumeration for the digits filled in the $i$th position, so the transfer equations for the prefix and suffix parts are as follows, where $|s|$ denotes the length of $s$:\n\n$$\n\\text{dfs}(i,\\textit{limitLow},\\textit{limitHigh}) =\n\\begin{cases}\n1, & i = n \\\\\n\\sum\\limits_{d=\\textit{lo}}^{\\min(\\textit{hi}, \\textit{limit})} \\text{dfs}(i+1,\\textit{limitLow} \\land (d =\\textit{lo}),\\textit{limitHigh} \\land (d = \\textit{hi})), & i < n-|s| \\\\\n\\text{dfs}(i+1,\\textit{limitLow} \\land (d = \\textit{lo}),\\textit{limitHigh} \\land (d = \\textit{hi})), & i \\geq n-|s|, d = s[i - (n-|s|)]\n\\end{cases}\n$$\n\nAt first, we start from $\\text{dfs}(0,\\textit{true},\\textit{true})$, indicating that we start from the highest position and are constrained by $\\textit{start}$ and $\\textit{finish}$. According to the description, we can fill in any number that meets the constraints in the prefix part, but each digit in the suffix part is fixed.\n\nAfter enumerating the digits that can be filled in for the $i$-th digit, the subsequent digits will not change the result, so we can use a memoization method to avoid redundant calculations. Note that for states constrained by $\\textit{limitLow}$ or $\\textit{limitHigh}$, they will only be traversed once. This is because if the current position is constrained, then all the preceding positions are also constrained, which results in only one case. Therefore, we only need to memorize the unconstrained states.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(\\log (\\textit{finish})\\times 10)$.\n\nWe enumerate the numbers we can fill in for each digit, the length of the number of digits is $\\log (\\textit{finish})$, and there is only $[0,9]$ with a total of $10$ digits.\n\n- Space complexity: $O(\\log (\\textit{finish}))$.\n\nWe need an array with the same length as the number of digits to memoize the result of each digit.\n\n### Approach 2: Combinatorial mathematics\n\n#### Intuition\n\nWe can implement a counting function $\\textit{calculate}(x)$ to directly calculate the numbers less than or equal to $x$ that satisfy $\\textit{limit}$, and then the answer is $\\textit{calculate}(\\textit{finish})-\\textit{calculate}(\\textit{start}-1)$.\n\nFirstly, consider the suffix part of $x$ that has the same length as $s$ (if the length of $x$ is less than $s$, then the answer is $0$). If the suffix of $x$ is greater than or equal to $s$, then the suffix part contributes $1$ to the answer.\n\nNext, consider the remaining prefix part. Let $\\textit{preLen}$ represent the length of the prefix, that is, $|x|-|s|$. For each digit $x[i]$ of the prefix:\n\n- If it exceeds $\\textit{limit}$, it means that the current digit can only reach up to $\\textit{limit}$, and the number formed by any combination of the remaining digits will not exceed $x$. Therefore, including the $i$-th bit, all the following bits (a total of $\\textit{preLen}-i$ bits) can take values from $[0,\\textit{limit}]$ (a total of $\\textit{limit}+1$ numbers), and their contribution to the answer is $(\\textit{limit}+1)^{\\textit{preLen}-i}$.\n- If $x[i]$ does not exceed $\\textit{limit}$, then the current digit can take at most $x[i]$, and all the following digits can take $[0,\\textit{limit}]$, contributing to the answer as $x[i]\\times(\\textit{limit}+1)^{\\textit{preLen}-i-1}$.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(\\log(\\textit{finish}))$.\n\nTraverse each digit of $\\textit{finish}$ to accumulate the combination numbers.\n\n- Space complexity: $O(\\log(\\textit{finish}))$.\n\nWe need an array of the same digit length to store the suffixes."
+}

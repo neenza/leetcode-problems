@@ -1,0 +1,55 @@
+{
+  "title": "Search in Rotated Sorted Array II",
+  "problem_id": "81",
+  "frontend_id": "81",
+  "difficulty": "Medium",
+  "problem_slug": "search-in-rotated-sorted-array-ii",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).\nBefore being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].\nGiven the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.\nYou must decrease the overall operation steps as much as possible.\nExample 1:\nExample 2:\nConstraints:\nFollow up: This problem is similar to Search in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,6,0,0,1,2], target = 0\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,5,6,0,0,1,2], target = 3\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5000",
+    "-104 <= nums[i] <= 104",
+    "nums is guaranteed to be rotated at some pivot.",
+    "-104 <= target <= 104"
+  ],
+  "follow_ups": [
+    "This problem is similar to Search in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool search(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean search(int[] nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def search(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def search(self, nums: List[int], target: int) -> bool:\n        ",
+    "c": "bool search(int* nums, int numsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool Search(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {boolean}\n */\nvar search = function(nums, target) {\n    \n};",
+    "typescript": "function search(nums: number[], target: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Boolean\n     */\n    function search($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func search(_ nums: [Int], _ target: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun search(nums: IntArray, target: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool search(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func search(nums []int, target int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Boolean}\ndef search(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def search(nums: Array[Int], target: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn search(nums: Vec<i32>, target: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (search nums target)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec search(Nums :: [integer()], Target :: integer()) -> boolean().\nsearch(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec search(nums :: [integer], target :: integer) :: boolean\n  def search(nums, target) do\n    \n  end\nend"
+  }
+}

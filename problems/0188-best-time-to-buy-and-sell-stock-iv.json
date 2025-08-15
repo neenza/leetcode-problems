@@ -1,0 +1,52 @@
+{
+  "title": "Best Time to Buy and Sell Stock IV",
+  "problem_id": "188",
+  "frontend_id": "188",
+  "difficulty": "Hard",
+  "problem_slug": "best-time-to-buy-and-sell-stock-iv",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array prices where prices[i] is the price of a given stock on the ith day, and an integer k.\nFind the maximum profit you can achieve. You may complete at most k transactions: i.e. you may buy at most k times and sell at most k times.\nNote: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 2, prices = [2,4,1]\nOutput: 2\nExplanation: Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 2, prices = [3,2,6,5,0,3]\nOutput: 7\nExplanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4. Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 100",
+    "1 <= prices.length <= 1000",
+    "0 <= prices[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxProfit(int k, vector<int>& prices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProfit(int k, int[] prices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProfit(self, k, prices):\n        \"\"\"\n        :type k: int\n        :type prices: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProfit(self, k: int, prices: List[int]) -> int:\n        ",
+    "c": "int maxProfit(int k, int* prices, int pricesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxProfit(int k, int[] prices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number[]} prices\n * @return {number}\n */\nvar maxProfit = function(k, prices) {\n    \n};",
+    "typescript": "function maxProfit(k: number, prices: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @param Integer[] $prices\n     * @return Integer\n     */\n    function maxProfit($k, $prices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProfit(_ k: Int, _ prices: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProfit(k: Int, prices: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProfit(int k, List<int> prices) {\n    \n  }\n}",
+    "golang": "func maxProfit(k int, prices []int) int {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @param {Integer[]} prices\n# @return {Integer}\ndef max_profit(k, prices)\n    \nend",
+    "scala": "object Solution {\n    def maxProfit(k: Int, prices: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_profit(k: i32, prices: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-profit k prices)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_profit(K :: integer(), Prices :: [integer()]) -> integer().\nmax_profit(K, Prices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_profit(k :: integer, prices :: [integer]) :: integer\n  def max_profit(k, prices) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": "K Radius Subarray Averages",
+  "problem_id": "2211",
+  "frontend_id": "2090",
+  "difficulty": "Medium",
+  "problem_slug": "k-radius-subarray-averages",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "You are given a 0-indexed array nums of n integers, and an integer k.\nThe k-radius average for a subarray of nums centered at some index i with the radius k is the average of all elements in nums between the indices i - k and i + k (inclusive). If there are less than k elements before or after the index i, then the k-radius average is -1.\nBuild and return an array avgs of length n where avgs[i] is the k-radius average for the subarray centered at index i.\nThe average of x elements is the sum of the x elements divided by x, using integer division. The integer division truncates toward zero, which means losing its fractional part.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,4,3,9,1,8,5,2,6], k = 3\nOutput: [-1,-1,-1,5,4,4,-1,-1,-1]\nExplanation:\n- avg[0], avg[1], and avg[2] are -1 because there are less than k elements before each index.\n- The sum of the subarray centered at index 3 with radius 3 is: 7 + 4 + 3 + 9 + 1 + 8 + 5 = 37.\n  Using integer division, avg[3] = 37 / 7 = 5.\n- For the subarray centered at index 4, avg[4] = (4 + 3 + 9 + 1 + 8 + 5 + 2) / 7 = 4.\n- For the subarray centered at index 5, avg[5] = (3 + 9 + 1 + 8 + 5 + 2 + 6) / 7 = 4.\n- avg[6], avg[7], and avg[8] are -1 because there are less than k elements after each index.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/07/eg1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [100000], k = 0\nOutput: [100000]\nExplanation:\n- The sum of the subarray centered at index 0 with radius 0 is: 100000.\n  avg[0] = 100000 / 1 = 100000.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/07/eg1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [8], k = 100000\nOutput: [-1]\nExplanation: \n- avg[0] is -1 because there are less than k elements before and after index 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/07/eg1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "0 <= nums[i], k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To calculate the average of a subarray, you need the sum and the K. K is already given. How could you quickly calculate the sum of a subarray?",
+    "Use the Prefix Sums method to calculate the subarray sums.",
+    "It is possible that the sum of all the elements does not fit in a 32-bit integer type. Be sure to use a 64-bit integer type for the prefix sum array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getAverages(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getAverages(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getAverages(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getAverages(self, nums: List[int], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getAverages(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GetAverages(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar getAverages = function(nums, k) {\n    \n};",
+    "typescript": "function getAverages(nums: number[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function getAverages($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getAverages(_ nums: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getAverages(nums: IntArray, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getAverages(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func getAverages(nums []int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer[]}\ndef get_averages(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def getAverages(nums: Array[Int], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_averages(nums: Vec<i32>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (get-averages nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec get_averages(Nums :: [integer()], K :: integer()) -> [integer()].\nget_averages(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_averages(nums :: [integer], k :: integer) :: [integer]\n  def get_averages(nums, k) do\n    \n  end\nend"
+  }
+}

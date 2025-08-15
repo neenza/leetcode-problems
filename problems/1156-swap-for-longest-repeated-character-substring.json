@@ -1,0 +1,59 @@
+{
+  "title": "Swap For Longest Repeated Character Substring",
+  "problem_id": "1261",
+  "frontend_id": "1156",
+  "difficulty": "Medium",
+  "problem_slug": "swap-for-longest-repeated-character-substring",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a string text. You can swap two of the characters in the text.\nReturn the length of the longest substring with repeated characters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"ababa\"\nOutput: 3\nExplanation: We can swap the first 'b' with the last 'a', or the last 'b' with the first 'a'. Then, the longest repeated character substring is \"aaa\" with length 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"aaabaaa\"\nOutput: 6\nExplanation: Swap 'b' with the last 'a' (or the first 'a'), and we get longest repeated character substring \"aaaaaa\" with length 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: text = \"aaaaa\"\nOutput: 5\nExplanation: No need to swap, longest repeated character substring is \"aaaaa\" with length is 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 2 * 104",
+    "text consist of lowercase English characters only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are two cases:  a block of characters, or two blocks of characters between one different character. \r\n By keeping a run-length encoded version of the string, we can easily check these cases."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxRepOpt1(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRepOpt1(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRepOpt1(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRepOpt1(self, text: str) -> int:\n        ",
+    "c": "int maxRepOpt1(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxRepOpt1(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar maxRepOpt1 = function(text) {\n    \n};",
+    "typescript": "function maxRepOpt1(text: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return Integer\n     */\n    function maxRepOpt1($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRepOpt1(_ text: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRepOpt1(text: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRepOpt1(String text) {\n    \n  }\n}",
+    "golang": "func maxRepOpt1(text string) int {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {Integer}\ndef max_rep_opt1(text)\n    \nend",
+    "scala": "object Solution {\n    def maxRepOpt1(text: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_rep_opt1(text: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-rep-opt1 text)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_rep_opt1(Text :: unicode:unicode_binary()) -> integer().\nmax_rep_opt1(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_rep_opt1(text :: String.t) :: integer\n  def max_rep_opt1(text) do\n    \n  end\nend"
+  }
+}

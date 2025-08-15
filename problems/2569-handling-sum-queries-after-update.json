@@ -1,0 +1,59 @@
+{
+  "title": "Handling Sum Queries After Update",
+  "problem_id": "2703",
+  "frontend_id": "2569",
+  "difficulty": "Hard",
+  "problem_slug": "handling-sum-queries-after-update",
+  "topics": [
+    "Array",
+    "Segment Tree"
+  ],
+  "description": "You are given two 0-indexed arrays nums1 and nums2 and a 2D array queries of queries. There are three types of queries:\nReturn an array containing all the answers to the third type queries.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,0,1], nums2 = [0,0,0], queries = [[1,1,1],[2,1,0],[3,0,0]]\nOutput: [3]\nExplanation: After the first query nums1 becomes [1,1,1]. After the second query, nums2 becomes [1,1,1], so the answer to the third query is 3. Thus, [3] is returned.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [1], nums2 = [5], queries = [[2,0,0],[3,0,0]]\nOutput: [5]\nExplanation: After the first query, nums2 remains [5], so the answer to the second query is 5. Thus, [5] is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums1.length,nums2.length <= 105",
+    "nums1.length = nums2.length",
+    "1 <= queries.length <= 105",
+    "queries[i].length = 3",
+    "0 <= l <= r <= nums1.length - 1",
+    "0 <= p <= 106",
+    "0 <= nums1[i] <= 1",
+    "0 <= nums2[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the Lazy Segment Tree to process the queries quickly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> handleQuery(vector<int>& nums1, vector<int>& nums2, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] handleQuery(int[] nums1, int[] nums2, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def handleQuery(self, nums1, nums2, queries):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def handleQuery(self, nums1: List[int], nums2: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* handleQuery(int* nums1, int nums1Size, int* nums2, int nums2Size, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] HandleQuery(int[] nums1, int[] nums2, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar handleQuery = function(nums1, nums2, queries) {\n    \n};",
+    "typescript": "function handleQuery(nums1: number[], nums2: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function handleQuery($nums1, $nums2, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func handleQuery(_ nums1: [Int], _ nums2: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun handleQuery(nums1: IntArray, nums2: IntArray, queries: Array<IntArray>): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> handleQuery(List<int> nums1, List<int> nums2, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef handle_query(nums1, nums2, queries)\n    \nend",
+    "scala": "object Solution {\n    def handleQuery(nums1: Array[Int], nums2: Array[Int], queries: Array[Array[Int]]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn handle_query(nums1: Vec<i32>, nums2: Vec<i32>, queries: Vec<Vec<i32>>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (handle-query nums1 nums2 queries)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec handle_query(Nums1 :: [integer()], Nums2 :: [integer()], Queries :: [[integer()]]) -> [integer()].\nhandle_query(Nums1, Nums2, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec handle_query(nums1 :: [integer], nums2 :: [integer], queries :: [[integer]]) :: [integer]\n  def handle_query(nums1, nums2, queries) do\n    \n  end\nend"
+  }
+}

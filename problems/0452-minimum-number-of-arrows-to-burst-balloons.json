@@ -1,0 +1,58 @@
+{
+  "title": "Minimum Number of Arrows to Burst Balloons",
+  "problem_id": "452",
+  "frontend_id": "452",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-arrows-to-burst-balloons",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.\nArrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart <= x <= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.\nGiven the array points, return the minimum number of arrows that must be shot to burst all balloons.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[10,16],[2,8],[1,6],[7,12]]\nOutput: 2\nExplanation: The balloons can be burst by 2 arrows:\n- Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].\n- Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,2],[3,4],[5,6],[7,8]]\nOutput: 4\nExplanation: One arrow needs to be shot for each balloon for a total of 4 arrows.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: points = [[1,2],[2,3],[3,4],[4,5]]\nOutput: 2\nExplanation: The balloons can be burst by 2 arrows:\n- Shoot an arrow at x = 2, bursting the balloons [1,2] and [2,3].\n- Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 105",
+    "points[i].length == 2",
+    "-231 <= xstart < xend <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMinArrowShots(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinArrowShots(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMinArrowShots(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMinArrowShots(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int findMinArrowShots(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMinArrowShots(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar findMinArrowShots = function(points) {\n    \n};",
+    "typescript": "function findMinArrowShots(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function findMinArrowShots($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMinArrowShots(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMinArrowShots(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMinArrowShots(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func findMinArrowShots(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef find_min_arrow_shots(points)\n    \nend",
+    "scala": "object Solution {\n    def findMinArrowShots(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_min_arrow_shots(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-min-arrow-shots points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_min_arrow_shots(Points :: [[integer()]]) -> integer().\nfind_min_arrow_shots(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_min_arrow_shots(points :: [[integer]]) :: integer\n  def find_min_arrow_shots(points) do\n    \n  end\nend"
+  }
+}

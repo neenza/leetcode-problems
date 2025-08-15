@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Seconds to Equalize a Circular Array",
+  "problem_id": "2920",
+  "frontend_id": "2808",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-seconds-to-equalize-a-circular-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given a 0-indexed array nums containing n integers.\nAt each second, you perform the following operation on the array:\nNote that all the elements get replaced simultaneously.\nReturn the minimum number of seconds needed to make all elements in the array nums equal.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,1,2]\nOutput: 1\nExplanation: We can equalize the array in 1 second in the following way:\n- At 1st second, replace values at each index with [nums[3],nums[1],nums[3],nums[3]]. After replacement, nums = [2,2,2,2].\nIt can be proven that 1 second is the minimum amount of seconds needed for equalizing the array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,3,3,2]\nOutput: 2\nExplanation: We can equalize the array in 2 seconds in the following way:\n- At 1st second, replace values at each index with [nums[0],nums[2],nums[2],nums[2],nums[3]]. After replacement, nums = [2,3,3,3,3].\n- At 2nd second, replace values at each index with [nums[1],nums[1],nums[2],nums[3],nums[4]]. After replacement, nums = [3,3,3,3,3].\nIt can be proven that 2 seconds is the minimum amount of seconds needed for equalizing the array.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,5,5,5]\nOutput: 0\nExplanation: We don't need to perform any operations as all elements in the initial array are the same.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For every possible x - the final value of the array, calculate the number of seconds needed to make all elements equal to x.",
+    "Notice that if you take two consecutive occurrences (i, j) of x, then the number of operations to make segment [i + 1, j - 1] equal to x is floor((j - i) / 2)"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumSeconds(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSeconds(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumSeconds(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumSeconds(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumSeconds(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumSeconds(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumSeconds = function(nums) {\n    \n};",
+    "typescript": "function minimumSeconds(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumSeconds($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSeconds(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumSeconds(nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSeconds(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumSeconds(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_seconds(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumSeconds(nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_seconds(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-seconds nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_seconds(Nums :: [integer()]) -> integer().\nminimum_seconds(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_seconds(nums :: [integer]) :: integer\n  def minimum_seconds(nums) do\n    \n  end\nend"
+  }
+}

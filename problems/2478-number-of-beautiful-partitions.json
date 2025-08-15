@@ -1,0 +1,59 @@
+{
+  "title": "Number of Beautiful Partitions",
+  "problem_id": "2569",
+  "frontend_id": "2478",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-beautiful-partitions",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string s that consists of the digits '1' to '9' and two integers k and minLength.\nA partition of s is called beautiful if:\nReturn the number of beautiful partitions of s. Since the answer may be very large, return it modulo 109 + 7.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"23542185131\", k = 3, minLength = 2\nOutput: 3\nExplanation: There exists three ways to create a beautiful partition:\n\"2354 | 218 | 5131\"\n\"2354 | 21851 | 31\"\n\"2354218 | 51 | 31\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"23542185131\", k = 3, minLength = 3\nOutput: 1\nExplanation: There exists one way to create a beautiful partition: \"2354 | 218 | 5131\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"3312958\", k = 3, minLength = 1\nOutput: 1\nExplanation: There exists one way to create a beautiful partition: \"331 | 29 | 58\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k, minLength <= s.length <= 1000",
+    "s consists of the digits '1' to '9'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try using a greedy approach where you take as many digits as possible from the left of the string for each partition.",
+    "You can also use a dynamic programming approach, let an array dp where dp[i] is the solution of the problem for the prefix of the string ending at index i, the answer of the problem will be dp[n-1]. What are the transitions of this dp?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int beautifulPartitions(string s, int k, int minLength) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int beautifulPartitions(String s, int k, int minLength) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def beautifulPartitions(self, s, k, minLength):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :type minLength: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def beautifulPartitions(self, s: str, k: int, minLength: int) -> int:\n        ",
+    "c": "int beautifulPartitions(char* s, int k, int minLength) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BeautifulPartitions(string s, int k, int minLength) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @param {number} minLength\n * @return {number}\n */\nvar beautifulPartitions = function(s, k, minLength) {\n    \n};",
+    "typescript": "function beautifulPartitions(s: string, k: number, minLength: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @param Integer $minLength\n     * @return Integer\n     */\n    function beautifulPartitions($s, $k, $minLength) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func beautifulPartitions(_ s: String, _ k: Int, _ minLength: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun beautifulPartitions(s: String, k: Int, minLength: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int beautifulPartitions(String s, int k, int minLength) {\n    \n  }\n}",
+    "golang": "func beautifulPartitions(s string, k int, minLength int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @param {Integer} min_length\n# @return {Integer}\ndef beautiful_partitions(s, k, min_length)\n    \nend",
+    "scala": "object Solution {\n    def beautifulPartitions(s: String, k: Int, minLength: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn beautiful_partitions(s: String, k: i32, min_length: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (beautiful-partitions s k minLength)\n  (-> string? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec beautiful_partitions(S :: unicode:unicode_binary(), K :: integer(), MinLength :: integer()) -> integer().\nbeautiful_partitions(S, K, MinLength) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec beautiful_partitions(s :: String.t, k :: integer, min_length :: integer) :: integer\n  def beautiful_partitions(s, k, min_length) do\n    \n  end\nend"
+  }
+}

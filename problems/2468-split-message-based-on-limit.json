@@ -1,0 +1,57 @@
+{
+  "title": "Split Message Based on Limit",
+  "problem_id": "2563",
+  "frontend_id": "2468",
+  "difficulty": "Hard",
+  "problem_slug": "split-message-based-on-limit",
+  "topics": [
+    "String",
+    "Binary Search",
+    "Enumeration"
+  ],
+  "description": "You are given a string, message, and a positive integer, limit.\nYou must split message into one or more parts based on limit. Each resulting part should have the suffix \"<a/b>\", where \"b\" is to be replaced with the total number of parts and \"a\" is to be replaced with the index of the part, starting from 1 and going up to b. Additionally, the length of each resulting part (including its suffix) should be equal to limit, except for the last part whose length can be at most limit.\nThe resulting parts should be formed such that when their suffixes are removed and they are all concatenated in order, they should be equal to message. Also, the result should contain as few parts as possible.\nReturn the parts message would be split into as an array of strings. If it is impossible to split message as required, return an empty array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: message = \"this is really a very awesome message\", limit = 9\nOutput: [\"thi<1/14>\",\"s i<2/14>\",\"s r<3/14>\",\"eal<4/14>\",\"ly <5/14>\",\"a v<6/14>\",\"ery<7/14>\",\" aw<8/14>\",\"eso<9/14>\",\"me<10/14>\",\" m<11/14>\",\"es<12/14>\",\"sa<13/14>\",\"ge<14/14>\"]\nExplanation:\nThe first 9 parts take 3 characters each from the beginning of message.\nThe next 5 parts take 2 characters each to finish splitting message. \nIn this example, each part, including the last, has length 9. \nIt can be shown it is not possible to split message into less than 14 parts.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: message = \"short message\", limit = 15\nOutput: [\"short mess<1/2>\",\"age<2/2>\"]\nExplanation:\nUnder the given constraints, the string can be split into two parts: \n- The first part comprises of the first 10 characters, and has a length 15.\n- The next part comprises of the last 3 characters, and has a length 8.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= message.length <= 104",
+    "message consists only of lowercase English letters and ' '.",
+    "1 <= limit <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Could you solve the problem if you knew how many digits the total number of parts has?",
+    "Try all possible lengths of the total number of parts, and see if the string can be split such that the total number of parts has that length.",
+    "Binary search can be used for each part length to find the precise number of parts needed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> splitMessage(string message, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] splitMessage(String message, int limit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitMessage(self, message, limit):\n        \"\"\"\n        :type message: str\n        :type limit: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitMessage(self, message: str, limit: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** splitMessage(char* message, int limit, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] SplitMessage(string message, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} message\n * @param {number} limit\n * @return {string[]}\n */\nvar splitMessage = function(message, limit) {\n    \n};",
+    "typescript": "function splitMessage(message: string, limit: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $message\n     * @param Integer $limit\n     * @return String[]\n     */\n    function splitMessage($message, $limit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitMessage(_ message: String, _ limit: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitMessage(message: String, limit: Int): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> splitMessage(String message, int limit) {\n    \n  }\n}",
+    "golang": "func splitMessage(message string, limit int) []string {\n    \n}",
+    "ruby": "# @param {String} message\n# @param {Integer} limit\n# @return {String[]}\ndef split_message(message, limit)\n    \nend",
+    "scala": "object Solution {\n    def splitMessage(message: String, limit: Int): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_message(message: String, limit: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (split-message message limit)\n  (-> string? exact-integer? (listof string?))\n  )",
+    "erlang": "-spec split_message(Message :: unicode:unicode_binary(), Limit :: integer()) -> [unicode:unicode_binary()].\nsplit_message(Message, Limit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_message(message :: String.t, limit :: integer) :: [String.t]\n  def split_message(message, limit) do\n    \n  end\nend"
+  }
+}

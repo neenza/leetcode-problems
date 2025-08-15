@@ -1,0 +1,61 @@
+{
+  "title": "Shuffle String",
+  "problem_id": "1651",
+  "frontend_id": "1528",
+  "difficulty": "Easy",
+  "problem_slug": "shuffle-string",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given a string s and an integer array indices of the same length. The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.\nReturn the shuffled string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"codeleet\", indices = [4,5,6,7,0,2,1,3]\nOutput: \"leetcode\"\nExplanation: As shown, \"codeleet\" becomes \"leetcode\" after shuffling.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/09/q1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abc\", indices = [0,1,2]\nOutput: \"abc\"\nExplanation: After shuffling, each character remains in its position.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/09/q1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "s.length == indices.length == n",
+    "1 <= n <= 100",
+    "s consists of only lowercase English letters.",
+    "0 <= indices[i] < n",
+    "All values of indices are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can create an auxiliary string t of length n.",
+    "Assign t[indexes[i]] to s[i] for each i from 0 to n-1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string restoreString(string s, vector<int>& indices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String restoreString(String s, int[] indices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def restoreString(self, s, indices):\n        \"\"\"\n        :type s: str\n        :type indices: List[int]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def restoreString(self, s: str, indices: List[int]) -> str:\n        ",
+    "c": "char* restoreString(char* s, int* indices, int indicesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RestoreString(string s, int[] indices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} indices\n * @return {string}\n */\nvar restoreString = function(s, indices) {\n    \n};",
+    "typescript": "function restoreString(s: string, indices: number[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $indices\n     * @return String\n     */\n    function restoreString($s, $indices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func restoreString(_ s: String, _ indices: [Int]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun restoreString(s: String, indices: IntArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String restoreString(String s, List<int> indices) {\n    \n  }\n}",
+    "golang": "func restoreString(s string, indices []int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} indices\n# @return {String}\ndef restore_string(s, indices)\n    \nend",
+    "scala": "object Solution {\n    def restoreString(s: String, indices: Array[Int]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn restore_string(s: String, indices: Vec<i32>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (restore-string s indices)\n  (-> string? (listof exact-integer?) string?)\n  )",
+    "erlang": "-spec restore_string(S :: unicode:unicode_binary(), Indices :: [integer()]) -> unicode:unicode_binary().\nrestore_string(S, Indices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec restore_string(s :: String.t, indices :: [integer]) :: String.t\n  def restore_string(s, indices) do\n    \n  end\nend"
+  }
+}

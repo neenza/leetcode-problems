@@ -1,0 +1,61 @@
+{
+  "title": "Find the Minimum Area to Cover All Ones II",
+  "problem_id": "3459",
+  "frontend_id": "3197",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-minimum-area-to-cover-all-ones-ii",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ],
+  "description": "You are given a 2D binary array grid. You need to find 3 non-overlapping rectangles having non-zero areas with horizontal and vertical sides such that all the 1's in grid lie inside these rectangles.\nReturn the minimum possible sum of the area of these rectangles.\nNote that the rectangles are allowed to touch.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,1],[1,1,1]]\nOutput: 5\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/14/example0rect21.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,1,0],[0,1,0,1]]\nOutput: 5\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/14/example1rect2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 30",
+    "grid[i][j] is either 0 or 1.",
+    "The input is generated such that there are at least three 1's in grid."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider covering using 2 rectangles. As the rectangles don’t overlap, one of the rectangles must either be vertically above or horizontally left to the other.",
+    "To find the minimum area, check all possible vertical and horizontal splits.",
+    "For 3 rectangles, extend the idea to first covering using one rectangle, and then try splitting leftover ones both horizontally and vertically."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumSum(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSum(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumSum(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumSum(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumSum(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumSum(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumSum = function(grid) {\n    \n};",
+    "typescript": "function minimumSum(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumSum($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumSum(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumSum(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumSum(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumSum(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_sum(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumSum(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_sum(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-sum grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_sum(Grid :: [[integer()]]) -> integer().\nminimum_sum(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_sum(grid :: [[integer]]) :: integer\n  def minimum_sum(grid) do\n    \n  end\nend"
+  }
+}

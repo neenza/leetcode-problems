@@ -1,0 +1,59 @@
+{
+  "title": "Max Consecutive Ones III",
+  "problem_id": "1046",
+  "frontend_id": "1004",
+  "difficulty": "Medium",
+  "problem_slug": "max-consecutive-ones-iii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2\nOutput: 6\nExplanation: [1,1,1,0,0,1,1,1,1,1,1]\nBolded numbers were flipped from 0 to 1. The longest subarray is underlined.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3\nOutput: 10\nExplanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]\nBolded numbers were flipped from 0 to 1. The longest subarray is underlined.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "nums[i] is either 0 or 1.",
+    "0 <= k <= nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One thing's for sure, we will only flip a zero if it extends an existing window of 1s. Otherwise, there's no point in doing it, right? Think Sliding Window!",
+    "Since we know this problem can be solved using the sliding window construct, we might as well focus in that direction for hints. Basically, in a given window, we can never have > K zeros, right?",
+    "We don't have a fixed size window in this case. The window size can grow and shrink depending upon the number of zeros we have (we don't actually have to flip the zeros here!).",
+    "The way to shrink or expand a window would be based on the number of zeros that can still be flipped and so on."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestOnes(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestOnes(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestOnes(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestOnes(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int longestOnes(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestOnes(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar longestOnes = function(nums, k) {\n    \n};",
+    "typescript": "function longestOnes(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function longestOnes($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestOnes(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestOnes(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestOnes(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func longestOnes(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef longest_ones(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def longestOnes(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_ones(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-ones nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec longest_ones(Nums :: [integer()], K :: integer()) -> integer().\nlongest_ones(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_ones(nums :: [integer], k :: integer) :: integer\n  def longest_ones(nums, k) do\n    \n  end\nend"
+  }
+}

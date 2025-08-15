@@ -1,0 +1,34 @@
+{
+  "title": "User Activity for the Past 30 Days I",
+  "problem_id": "1245",
+  "frontend_id": "1141",
+  "difficulty": "Easy",
+  "problem_slug": "user-activity-for-the-past-30-days-i",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Activity\nWrite a solution to find the daily active user count for a period of 30 days ending 2019-07-27 inclusively. A user was active on someday if they made at least one activity on that day.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| session_id    | int     |\n| activity_date | date    |\n| activity_type | enum    |\n+---------------+---------+\nThis table may have duplicate rows.\nThe activity_type column is an ENUM (category) of type ('open_session', 'end_session', 'scroll_down', 'send_message').\nThe table shows the user activities for a social media website. \nNote that each session belongs to exactly one user.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nActivity table:\n+---------+------------+---------------+---------------+\n| user_id | session_id | activity_date | activity_type |\n+---------+------------+---------------+---------------+\n| 1       | 1          | 2019-07-20    | open_session  |\n| 1       | 1          | 2019-07-20    | scroll_down   |\n| 1       | 1          | 2019-07-20    | end_session   |\n| 2       | 4          | 2019-07-20    | open_session  |\n| 2       | 4          | 2019-07-21    | send_message  |\n| 2       | 4          | 2019-07-21    | end_session   |\n| 3       | 2          | 2019-07-21    | open_session  |\n| 3       | 2          | 2019-07-21    | send_message  |\n| 3       | 2          | 2019-07-21    | end_session   |\n| 4       | 3          | 2019-06-25    | open_session  |\n| 4       | 3          | 2019-06-25    | end_session   |\n+---------+------------+---------------+---------------+\nOutput: \n+------------+--------------+ \n| day        | active_users |\n+------------+--------------+ \n| 2019-07-20 | 2            |\n| 2019-07-21 | 2            |\n+------------+--------------+ \nExplanation: Note that we do not care about days with zero active users.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef user_activity(activity: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\n\nThe two keys for solving this question are:\n\n1. select a specific date range\n2. count only distinct users as there are users having more than one activity per day, and the final results are grouped by day. \n\nThere are several ways to select a specific range of dates:\n\n1. manually calculate the date and use this date in the filter to get the range. For this question, the result is looking for a period of 30 days ending 2019-07-27, which is all the days between 2019-06-28 and 2019-07-27:\n\n```\nactivity_date > '2019-06-27' AND activity_date <= '2019-07-27' \n```\nor using `BETWEEN`:\n\n```\nactivity_day BETWEEN '2019-06-28' AND '2019-07-27'\n```\nThe date '2019-06-28' is used here because the BETWEEN operator is inclusive, and the begin and end values are included. \n\n\n2. [DATEDIFF(date1, date2)](https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_datediff): this function returns date1 - date2 expressed as a value in days from one date to the other, so there is no need to calculate the exact date for the filter:\n```\nDATEDIFF('2019-07-27', activity_date)<30 \nAND \nDATEDIFF('2019-07-27', activity_date)>=0 \n```\nthe first condition checks that `date2` is within `30` days of `date1`. The second condition checks that `date2` does not occur after `date1`. Without the second condition, a negative difference is also '<30', and we will get dates after 2019-07-27 in this case\n\nAnother way to use DATEDIFF:\n```\nDATEDIFF('2019-07-27', activity_date) BETWEEN 0 AND 29\n```\n\n3. [DATE_SUB(date, INTERVAL expr unit)](https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_date-add): this function performs date arithmetic, if the syntax does not support adding or subtracting days directly using operators such as '+' or '-': \n```\nactivity_date BETWEEN date_sub('2019-07-27', INTERVAL 29 DAY) \nAND '2019-07-27'\n```\n\n---\n\n### Approach: \n\n#### Algorithm\n\n1. Select the columns needed for the final output: the dates, and the number of distinct users for each date.\n2. Add the filter for the date range. Make sure you are familiar with at least one method to pull the date range correctly with minimum calculation. \n3. Group the results by the activity date.\n\n\n##### MySQL\n\n```sql\nSELECT \n    activity_date AS day, \n    COUNT(DISTINCT user_id) AS active_users\nFROM \n    Activity\nWHERE \n    DATEDIFF('2019-07-27', activity_date) < 30 AND DATEDIFF('2019-07-27', activity_date)>=0\nGROUP BY 1\n```\n\n---"
+}

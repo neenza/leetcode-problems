@@ -1,0 +1,57 @@
+{
+  "title": "Largest Triangle Area",
+  "problem_id": "830",
+  "frontend_id": "812",
+  "difficulty": "Easy",
+  "problem_slug": "largest-triangle-area",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "Given an array of points on the X-Y plane points where points[i] = [xi, yi], return the area of the largest triangle that can be formed by any three different points. Answers within 10-5 of the actual answer will be accepted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[0,0],[0,1],[1,0],[0,2],[2,0]]\nOutput: 2.00000\nExplanation: The five points are shown in the above figure. The red triangle is the largest.",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/04/1027.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,0],[0,0],[0,1]]\nOutput: 0.50000",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/04/04/1027.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= points.length <= 50",
+    "-50 <= xi, yi <= 50",
+    "All the given points are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double largestTriangleArea(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double largestTriangleArea(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestTriangleArea(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestTriangleArea(self, points: List[List[int]]) -> float:\n        ",
+    "c": "double largestTriangleArea(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public double LargestTriangleArea(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar largestTriangleArea = function(points) {\n    \n};",
+    "typescript": "function largestTriangleArea(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Float\n     */\n    function largestTriangleArea($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestTriangleArea(_ points: [[Int]]) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestTriangleArea(points: Array<IntArray>): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double largestTriangleArea(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func largestTriangleArea(points [][]int) float64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Float}\ndef largest_triangle_area(points)\n    \nend",
+    "scala": "object Solution {\n    def largestTriangleArea(points: Array[Array[Int]]): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_triangle_area(points: Vec<Vec<i32>>) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-triangle-area points)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
+    "erlang": "-spec largest_triangle_area(Points :: [[integer()]]) -> float().\nlargest_triangle_area(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_triangle_area(points :: [[integer]]) :: float\n  def largest_triangle_area(points) do\n    \n  end\nend"
+  }
+}

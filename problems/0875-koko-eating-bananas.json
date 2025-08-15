@@ -1,0 +1,57 @@
+{
+  "title": "Koko Eating Bananas",
+  "problem_id": "907",
+  "frontend_id": "875",
+  "difficulty": "Medium",
+  "problem_slug": "koko-eating-bananas",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.\nKoko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.\nKoko likes to eat slowly but still wants to finish eating all the bananas before the guards return.\nReturn the minimum integer k such that she can eat all the bananas within h hours.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: piles = [3,6,7,11], h = 8\nOutput: 4",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: piles = [30,11,23,4,20], h = 5\nOutput: 30",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: piles = [30,11,23,4,20], h = 6\nOutput: 23",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= piles.length <= 104",
+    "piles.length <= h <= 109",
+    "1 <= piles[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minEatingSpeed(vector<int>& piles, int h) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minEatingSpeed(int[] piles, int h) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minEatingSpeed(self, piles, h):\n        \"\"\"\n        :type piles: List[int]\n        :type h: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minEatingSpeed(self, piles: List[int], h: int) -> int:\n        ",
+    "c": "int minEatingSpeed(int* piles, int pilesSize, int h) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinEatingSpeed(int[] piles, int h) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} piles\n * @param {number} h\n * @return {number}\n */\nvar minEatingSpeed = function(piles, h) {\n    \n};",
+    "typescript": "function minEatingSpeed(piles: number[], h: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $piles\n     * @param Integer $h\n     * @return Integer\n     */\n    function minEatingSpeed($piles, $h) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minEatingSpeed(_ piles: [Int], _ h: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minEatingSpeed(piles: IntArray, h: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minEatingSpeed(List<int> piles, int h) {\n    \n  }\n}",
+    "golang": "func minEatingSpeed(piles []int, h int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} piles\n# @param {Integer} h\n# @return {Integer}\ndef min_eating_speed(piles, h)\n    \nend",
+    "scala": "object Solution {\n    def minEatingSpeed(piles: Array[Int], h: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_eating_speed(piles: Vec<i32>, h: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-eating-speed piles h)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_eating_speed(Piles :: [integer()], H :: integer()) -> integer().\nmin_eating_speed(Piles, H) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_eating_speed(piles :: [integer], h :: integer) :: integer\n  def min_eating_speed(piles, h) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Unique Paths III",
+  "problem_id": "1022",
+  "frontend_id": "980",
+  "difficulty": "Hard",
+  "problem_slug": "unique-paths-iii",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer array grid where grid[i][j] could be:\nReturn the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]\nOutput: 2\nExplanation: We have the following two paths: \n1. (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2)\n2. (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2)",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/02/lc-unique1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,0,0],[0,0,0,0],[0,0,0,2]]\nOutput: 4\nExplanation: We have the following four paths: \n1. (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2),(2,3)\n2. (0,0),(0,1),(1,1),(1,0),(2,0),(2,1),(2,2),(1,2),(0,2),(0,3),(1,3),(2,3)\n3. (0,0),(1,0),(2,0),(2,1),(2,2),(1,2),(1,1),(0,1),(0,2),(0,3),(1,3),(2,3)\n4. (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2),(2,3)",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/02/lc-unique2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[0,1],[2,0]]\nOutput: 0\nExplanation: There is no path that walks over every empty square exactly once.\nNote that the starting and ending square can be anywhere in the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/02/lc-unique3-.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 20",
+    "1 <= m * n <= 20",
+    "-1 <= grid[i][j] <= 2",
+    "There is exactly one starting cell and one ending cell."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int uniquePathsIII(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniquePathsIII(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uniquePathsIII(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uniquePathsIII(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int uniquePathsIII(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int UniquePathsIII(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar uniquePathsIII = function(grid) {\n    \n};",
+    "typescript": "function uniquePathsIII(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function uniquePathsIII($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniquePathsIII(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uniquePathsIII(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniquePathsIII(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func uniquePathsIII(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef unique_paths_iii(grid)\n    \nend",
+    "scala": "object Solution {\n    def uniquePathsIII(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_paths_iii(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (unique-paths-iii grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec unique_paths_iii(Grid :: [[integer()]]) -> integer().\nunique_paths_iii(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unique_paths_iii(grid :: [[integer]]) :: integer\n  def unique_paths_iii(grid) do\n    \n  end\nend"
+  }
+}

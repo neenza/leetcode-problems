@@ -1,0 +1,58 @@
+{
+  "title": "Find Resultant Array After Removing Anagrams",
+  "problem_id": "1353",
+  "frontend_id": "2273",
+  "difficulty": "Easy",
+  "problem_slug": "find-resultant-array-after-removing-anagrams",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed string array words, where words[i] consists of lowercase English letters.\nIn one operation, select any index i such that 0 < i < words.length and words[i - 1] and words[i] are anagrams, and delete words[i] from words. Keep performing this operation as long as you can select an index that satisfies the conditions.\nReturn words after performing all operations. It can be shown that selecting the indices for each operation in any arbitrary order will lead to the same result.\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase using all the original letters exactly once. For example, \"dacb\" is an anagram of \"abdc\".\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abba\",\"baba\",\"bbaa\",\"cd\",\"cd\"]\nOutput: [\"abba\",\"cd\"]\nExplanation:\nOne of the ways we can obtain the resultant array is by using the following operations:\n- Since words[2] = \"bbaa\" and words[1] = \"baba\" are anagrams, we choose index 2 and delete words[2].\n  Now words = [\"abba\",\"baba\",\"cd\",\"cd\"].\n- Since words[1] = \"baba\" and words[0] = \"abba\" are anagrams, we choose index 1 and delete words[1].\n  Now words = [\"abba\",\"cd\",\"cd\"].\n- Since words[2] = \"cd\" and words[1] = \"cd\" are anagrams, we choose index 2 and delete words[2].\n  Now words = [\"abba\",\"cd\"].\nWe can no longer perform any operations, so [\"abba\",\"cd\"] is the final answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"b\",\"c\",\"d\",\"e\"]\nOutput: [\"a\",\"b\",\"c\",\"d\",\"e\"]\nExplanation:\nNo two adjacent strings in words are anagrams of each other, so no operations are performed.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 10",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Instead of removing each repeating anagram, try to find all the strings in words which will not be present in the final answer.",
+    "For every index i, find the largest index j < i such that words[j] will be present in the final answer.",
+    "Check if words[i] and words[j] are anagrams. If they are, then it can be confirmed that words[i] will not be present in the final answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> removeAnagrams(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> removeAnagrams(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeAnagrams(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeAnagrams(self, words: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** removeAnagrams(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> RemoveAnagrams(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string[]}\n */\nvar removeAnagrams = function(words) {\n    \n};",
+    "typescript": "function removeAnagrams(words: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return String[]\n     */\n    function removeAnagrams($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeAnagrams(_ words: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeAnagrams(words: Array<String>): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> removeAnagrams(List<String> words) {\n    \n  }\n}",
+    "golang": "func removeAnagrams(words []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {String[]}\ndef remove_anagrams(words)\n    \nend",
+    "scala": "object Solution {\n    def removeAnagrams(words: Array[String]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_anagrams(words: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (remove-anagrams words)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec remove_anagrams(Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nremove_anagrams(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_anagrams(words :: [String.t]) :: [String.t]\n  def remove_anagrams(words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Check if Any Element Has Prime Frequency",
+  "problem_id": "3914",
+  "frontend_id": "3591",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-any-element-has-prime-frequency",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums.\nReturn true if the frequency of any element of the array is prime, otherwise, return false.\nThe frequency of an element x is the number of times it occurs in the array.\nA prime number is a natural number greater than 1 with only two factors, 1 and itself.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5,4]\nOutput: true\nExplanation:\n4 has a frequency of two, which is a prime number.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: false\nExplanation:\nAll elements have a frequency of one.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,2,2,4,4]\nOutput: true\nExplanation:\nBoth 2 and 4 have a prime frequency.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Implement a function to check if a number is prime",
+    "Find the frequencies of all the distinct elements in the array (using data structures like map in C++), check if there is any element with prime frequency"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkPrimeFrequency(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPrimeFrequency(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkPrimeFrequency(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkPrimeFrequency(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool checkPrimeFrequency(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckPrimeFrequency(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar checkPrimeFrequency = function(nums) {\n    \n};",
+    "typescript": "function checkPrimeFrequency(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function checkPrimeFrequency($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkPrimeFrequency(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkPrimeFrequency(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkPrimeFrequency(List<int> nums) {\n    \n  }\n}",
+    "golang": "func checkPrimeFrequency(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef check_prime_frequency(nums)\n    \nend",
+    "scala": "object Solution {\n    def checkPrimeFrequency(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_prime_frequency(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-prime-frequency nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec check_prime_frequency(Nums :: [integer()]) -> boolean().\ncheck_prime_frequency(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_prime_frequency(nums :: [integer]) :: boolean\n  def check_prime_frequency(nums) do\n    \n  end\nend"
+  }
+}

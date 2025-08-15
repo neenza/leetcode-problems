@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Points in an Archery Competition",
+  "problem_id": "2318",
+  "frontend_id": "2212",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-points-in-an-archery-competition",
+  "topics": [
+    "Array",
+    "Backtracking",
+    "Bit Manipulation",
+    "Enumeration"
+  ],
+  "description": "Alice and Bob are opponents in an archery competition. The competition has set the following rules:\nYou are given the integer numArrows and an integer array aliceArrows of size 12, which represents the number of arrows Alice shot on each scoring section from 0 to 11. Now, Bob wants to maximize the total number of points he can obtain.\nReturn the array bobArrows which represents the number of arrows Bob shot on each scoring section from 0 to 11. The sum of the values in bobArrows should equal numArrows.\nIf there are multiple ways for Bob to earn the maximum total points, return any one of them.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numArrows = 9, aliceArrows = [1,1,0,1,0,0,2,1,0,1,2,0]\nOutput: [0,0,0,0,1,1,0,0,1,2,3,1]\nExplanation: The table above shows how the competition is scored. \nBob earns a total point of 4 + 5 + 8 + 9 + 10 + 11 = 47.\nIt can be shown that Bob cannot obtain a score higher than 47 points.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/02/24/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numArrows = 3, aliceArrows = [0,0,1,0,0,0,0,0,0,0,0,2]\nOutput: [0,0,0,0,0,0,0,0,1,1,1,0]\nExplanation: The table above shows how the competition is scored.\nBob earns a total point of 8 + 9 + 10 = 27.\nIt can be shown that Bob cannot obtain a score higher than 27 points.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/02/24/ex2new.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= numArrows <= 105",
+    "aliceArrows.length == bobArrows.length == 12",
+    "0 <= aliceArrows[i], bobArrows[i] <= numArrows",
+    "sum(aliceArrows[i]) == numArrows"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To obtain points for some certain section x, what is the minimum number of arrows Bob must shoot?",
+    "Given the small number of sections, can we brute force which sections Bob wants to win?",
+    "For every set of sections Bob wants to win, check if we have the required amount of arrows. If we do, it is a valid selection."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> maximumBobPoints(int numArrows, vector<int>& aliceArrows) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maximumBobPoints(int numArrows, int[] aliceArrows) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumBobPoints(self, numArrows, aliceArrows):\n        \"\"\"\n        :type numArrows: int\n        :type aliceArrows: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumBobPoints(self, numArrows: int, aliceArrows: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maximumBobPoints(int numArrows, int* aliceArrows, int aliceArrowsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MaximumBobPoints(int numArrows, int[] aliceArrows) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} numArrows\n * @param {number[]} aliceArrows\n * @return {number[]}\n */\nvar maximumBobPoints = function(numArrows, aliceArrows) {\n    \n};",
+    "typescript": "function maximumBobPoints(numArrows: number, aliceArrows: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $numArrows\n     * @param Integer[] $aliceArrows\n     * @return Integer[]\n     */\n    function maximumBobPoints($numArrows, $aliceArrows) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumBobPoints(_ numArrows: Int, _ aliceArrows: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumBobPoints(numArrows: Int, aliceArrows: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maximumBobPoints(int numArrows, List<int> aliceArrows) {\n    \n  }\n}",
+    "golang": "func maximumBobPoints(numArrows int, aliceArrows []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} num_arrows\n# @param {Integer[]} alice_arrows\n# @return {Integer[]}\ndef maximum_bob_points(num_arrows, alice_arrows)\n    \nend",
+    "scala": "object Solution {\n    def maximumBobPoints(numArrows: Int, aliceArrows: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_bob_points(num_arrows: i32, alice_arrows: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-bob-points numArrows aliceArrows)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec maximum_bob_points(NumArrows :: integer(), AliceArrows :: [integer()]) -> [integer()].\nmaximum_bob_points(NumArrows, AliceArrows) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_bob_points(num_arrows :: integer, alice_arrows :: [integer]) :: [integer]\n  def maximum_bob_points(num_arrows, alice_arrows) do\n    \n  end\nend"
+  }
+}

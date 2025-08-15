@@ -1,0 +1,56 @@
+{
+  "title": "The Number of Full Rounds You Have Played",
+  "problem_id": "2033",
+  "frontend_id": "1904",
+  "difficulty": "Medium",
+  "problem_slug": "the-number-of-full-rounds-you-have-played",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "You are participating in an online chess tournament. There is a chess round that starts every 15 minutes. The first round of the day starts at 00:00, and after every 15 minutes, a new round starts.\nYou are given two strings loginTime and logoutTime where:\nIf logoutTime is earlier than loginTime, this means you have played from loginTime to midnight and from midnight to logoutTime.\nReturn the number of full chess rounds you have played in the tournament.\nNote: All the given times follow the 24-hour clock. That means the first round of the day starts at 00:00 and the last round of the day starts at 23:45.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: loginTime = \"09:31\", logoutTime = \"10:14\"\nOutput: 1\nExplanation: You played one full round from 09:45 to 10:00.\nYou did not play the full round from 09:30 to 09:45 because you logged in at 09:31 after it began.\nYou did not play the full round from 10:00 to 10:15 because you logged out at 10:14 before it ended.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: loginTime = \"21:30\", logoutTime = \"03:00\"\nOutput: 22\nExplanation: You played 10 full rounds from 21:30 to 00:00 and 12 full rounds from 00:00 to 03:00.\n10 + 12 = 22.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "loginTime and logoutTime are in the format hh:mm.",
+    "00 <= hh <= 23",
+    "00 <= mm <= 59",
+    "loginTime and logoutTime are not equal."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider the day as 48 hours instead of 24.",
+    "For each round check if you were playing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfRounds(string loginTime, string logoutTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfRounds(String loginTime, String logoutTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfRounds(self, loginTime, logoutTime):\n        \"\"\"\n        :type loginTime: str\n        :type logoutTime: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfRounds(self, loginTime: str, logoutTime: str) -> int:\n        ",
+    "c": "int numberOfRounds(char* loginTime, char* logoutTime) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfRounds(string loginTime, string logoutTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} loginTime\n * @param {string} logoutTime\n * @return {number}\n */\nvar numberOfRounds = function(loginTime, logoutTime) {\n    \n};",
+    "typescript": "function numberOfRounds(loginTime: string, logoutTime: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $loginTime\n     * @param String $logoutTime\n     * @return Integer\n     */\n    function numberOfRounds($loginTime, $logoutTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfRounds(_ loginTime: String, _ logoutTime: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfRounds(loginTime: String, logoutTime: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfRounds(String loginTime, String logoutTime) {\n    \n  }\n}",
+    "golang": "func numberOfRounds(loginTime string, logoutTime string) int {\n    \n}",
+    "ruby": "# @param {String} login_time\n# @param {String} logout_time\n# @return {Integer}\ndef number_of_rounds(login_time, logout_time)\n    \nend",
+    "scala": "object Solution {\n    def numberOfRounds(loginTime: String, logoutTime: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_rounds(login_time: String, logout_time: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-rounds loginTime logoutTime)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec number_of_rounds(LoginTime :: unicode:unicode_binary(), LogoutTime :: unicode:unicode_binary()) -> integer().\nnumber_of_rounds(LoginTime, LogoutTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_rounds(login_time :: String.t, logout_time :: String.t) :: integer\n  def number_of_rounds(login_time, logout_time) do\n    \n  end\nend"
+  }
+}

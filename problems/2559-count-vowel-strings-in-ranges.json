@@ -1,0 +1,62 @@
+{
+  "title": "Count Vowel Strings in Ranges",
+  "problem_id": "2691",
+  "frontend_id": "2559",
+  "difficulty": "Medium",
+  "problem_slug": "count-vowel-strings-in-ranges",
+  "topics": [
+    "Array",
+    "String",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed array of strings words and a 2D array of integers queries.\nEach query queries[i] = [li, ri] asks us to find the number of strings present at the indices ranging from li to ri (both inclusive) of words that start and end with a vowel.\nReturn an array ans of size queries.length, where ans[i] is the answer to the ith query.\nNote that the vowel letters are 'a', 'e', 'i', 'o', and 'u'.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"aba\",\"bcb\",\"ece\",\"aa\",\"e\"], queries = [[0,2],[1,4],[1,1]]\nOutput: [2,3,0]\nExplanation: The strings starting and ending with a vowel are \"aba\", \"ece\", \"aa\" and \"e\".\nThe answer to the query [0,2] is 2 (strings \"aba\" and \"ece\").\nto query [1,4] is 3 (strings \"ece\", \"aa\", \"e\").\nto query [1,1] is 0.\nWe return [2,3,0].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"e\",\"i\"], queries = [[0,2],[0,1],[2,2]]\nOutput: [3,2,1]\nExplanation: Every string satisfies the conditions, so we return [3,2,1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 105",
+    "1 <= words[i].length <= 40",
+    "words[i] consists only of lowercase English letters.",
+    "sum(words[i].length) <= 3 * 105",
+    "1 <= queries.length <= 105",
+    "0 <= li <= ri < words.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precompute the prefix sum of strings that start and end with vowels.",
+    "Use unordered_set to store vowels.",
+    "Check if the first and last characters of the string are present in the vowels set.",
+    "Subtract prefix sum for range [l-1, r] to find the number of strings starting and ending with vowels."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] vowelStrings(String[] words, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def vowelStrings(self, words, queries):\n        \"\"\"\n        :type words: List[str]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* vowelStrings(char** words, int wordsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] VowelStrings(string[] words, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar vowelStrings = function(words, queries) {\n    \n};",
+    "typescript": "function vowelStrings(words: string[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function vowelStrings($words, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func vowelStrings(_ words: [String], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun vowelStrings(words: Array<String>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> vowelStrings(List<String> words, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func vowelStrings(words []string, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef vowel_strings(words, queries)\n    \nend",
+    "scala": "object Solution {\n    def vowelStrings(words: Array[String], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn vowel_strings(words: Vec<String>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (vowel-strings words queries)\n  (-> (listof string?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec vowel_strings(Words :: [unicode:unicode_binary()], Queries :: [[integer()]]) -> [integer()].\nvowel_strings(Words, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec vowel_strings(words :: [String.t], queries :: [[integer]]) :: [integer]\n  def vowel_strings(words, queries) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a 2D `queries` array where each query specifies a range `[l, r]` (inclusive). For each query, we need to count how many strings in the `words` array start and end with a vowel and have an index within the specified range. These strings are referred to as \"vowel strings.\" In other words, for each query, we need to count the number of vowel strings within the subarray `words[l:r]`.  \n\nWe will go through a solution that can perform this count efficiently for all queries.\n\n### Approach: Prefix Sum\n\n#### Intuition\n\nA brute force approach to calculate the answer for each query `[l, r]` would involve iterating through the subarray `words[l:r]` and counting how many vowel strings we find. We can use a set to containing all vowels (`a, e, i, o, u`) to quickly check if a string is a vowel string in constant time, $O(1)$.  \n\nHowever, this approach is slow as it requires us to iterate through a portion of `words` for every query. If many queries contain a long range, this will be an expensive operation. Furthermore, a lot of work is repeated since many elements will be visited many times across queries.\n\nFor a more optimized approach, we can first perform some precomputations on `words`. Specifically, we can create a prefix sum array `prefixSum` to store the cumulative counts of vowel strings in `words`. `prefixSum[i]` would contain the total number of vowel strings from the first element of the array up to index `i` (the prefix array `words[0:i]`). Populating this `prefixSum` array would only take one linear scan across `words` as we maintain a cumulative sum while iterating through `words`. \n\nHaving this `prefixSum` array will allow us to answer each query very quickly. The key insight here is that the number of vowel strings that fall between a query range `[l, r]` can be found by subtracting the cumulative sum up to index `l-1` from the cumulative sum up to index `r`: `prefixSum[r] - prefixSum[l - 1]`.\n\n##### Why subtract `prefixSum[l - 1]`?\n\n Note that we look at the lower boundary `l - 1` instead of `l` because the range is inclusive. The prefix sum array represents the cumulative count of vowel strings up to each index. By subtracting `prefixSum[l - 1]`, we ignore all the vowel strings that have appeared before index `l` in our count and include only those within the range `[l, r]`.\n\nLet's look at an example: \n\n- We have `prefixSum = [0, 1, 2, 2, 3, 3, 4]`.\n- Our query range is `[1, 5]`.\n\nTaking a look at `prefixSum`:\n- The total number of vowel strings right before the start of the range is `prefixSum[0] = 0`\n- The total number of vowel strings right at the end of the range (index 5) is `prefixSum[5] = 3`. \n\nThis then means that `prefixSum[5] - prefixSum[0]` will give us the number of vowel strings that have appeared in the range `[1, 5]`, yielding an answer of 3 vowel strings.\n\n#### Algorithm\n\n- Declare our answer array `ans`.\n- Initialize our set of vowels `vowels` to contain the vowel list `[a, e, i, o, u]`.\n- Declare our prefix sum array `prefixSum` to store the cumulative sum of vowel words up to each index.\n- To fill in `prefixSum`, loop through each word in `words`:\n    - For each word, check if the first and last letter of `word` is in `vowels`. If so, we have found a new vowel string so we increment `sum++`.\n    - Fill in the prefix count: `prefixSum[i] = sum`\n- Loop through each query in `queries`:\n        - Check if the left bound `queries[i][0]` is 0. If it is, then the answer is simply the cumulative count of vowel strings up to index `i`: `ans[i] = prefixSum[queries[i][1]]`\n        - Otherwise, `ans[i] = prefixSum[queries[i][1]] - prefixSum[queries[i][0] - 1]`\n- Return answer array `ans` containing answers for all queries.\n\n#### Implementation#### Complexity Analysis\n\nLet $M$ be the size of `words` and $N$ be the size of `queries`.\n\n* Time Complexity: $O(M + N)$\n\n    Calculating `prefixSum` array involves iterating through `words` once, which takes $O(M)$ time. Answering each query takes $O(1)$ time, which means answering all queries takes $O(N)$ time. Thus, the total time complexity is $O(M + N)$\n\n* Space Complexity: $O(M)$\n\n    Our only auxiliary data structure is the `prefixSum` array, which has size $M$, so the total space complexity is $O(M)$.\n\n---"
+}

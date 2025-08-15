@@ -1,0 +1,63 @@
+{
+  "title": "Lucky Numbers in a Matrix",
+  "problem_id": "1496",
+  "frontend_id": "1380",
+  "difficulty": "Easy",
+  "problem_slug": "lucky-numbers-in-a-matrix",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "Given an m x n matrix of distinct numbers, return all lucky numbers in the matrix in any order.\nA lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[3,7,8],[9,11,13],[15,16,17]]\nOutput: [15]\nExplanation: 15 is the only lucky number since it is the minimum in its row and the maximum in its column.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]\nOutput: [12]\nExplanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: matrix = [[7,8],[1,2]]\nOutput: [7]\nExplanation: 7 is the only lucky number since it is the minimum in its row and the maximum in its column.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= n, m <= 50",
+    "1 <= matrix[i][j] <= 105.",
+    "All elements in the matrix are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find out and save the minimum of each row and maximum of each column in two lists.",
+    "Then scan through the whole matrix to identify the elements that satisfy the criteria."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> luckyNumbers(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> luckyNumbers(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def luckyNumbers(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* luckyNumbers(int** matrix, int matrixSize, int* matrixColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> LuckyNumbers(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number[]}\n */\nvar luckyNumbers = function(matrix) {\n    \n};",
+    "typescript": "function luckyNumbers(matrix: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer[]\n     */\n    function luckyNumbers($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func luckyNumbers(_ matrix: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun luckyNumbers(matrix: Array<IntArray>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> luckyNumbers(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func luckyNumbers(matrix [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer[]}\ndef lucky_numbers(matrix)\n    \nend",
+    "scala": "object Solution {\n    def luckyNumbers(matrix: Array[Array[Int]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn lucky_numbers(matrix: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (lucky-numbers matrix)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec lucky_numbers(Matrix :: [[integer()]]) -> [integer()].\nlucky_numbers(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec lucky_numbers(matrix :: [[integer]]) :: [integer]\n  def lucky_numbers(matrix) do\n    \n  end\nend"
+  },
+  "solution": "## Solution\n\n---\n\n### Approach 1: Simulation\n\n#### Intuition\n\nWe are given a matrix of size $M X N$ with distinct integers. We need to return the list of lucky numbers in the matrix. An integer in the matrix is lucky if it is the maximum integer in its column and it is the minimum value in its row.\n\nIn this approach, we will simulate the process by iterating over each integer in the matrix, checking if it is the maximum in its row and the minimum in its column. If it meets both criteria, we will add it to the list of lucky numbers, `luckyNumbers`.\n\nThe naive approach to check the criteria for each integer involves iterating over each integer in the current row and column to verify the minimum and maximum criteria, requiring $M + N$ operations per integer. A more efficient method is to precompute the minimum of each row and the maximum of each column before processing the matrix. This allows us to check the criteria for each integer in constant time. We iterate over each row to store the minimum in `rowMin` and each column to store the maximum in `colMax`.\n\n#### Algorithm\n\n1. Iterate over each row and store the minimum of the `ith` row at the `ith` position in the list `rowMin`.\n2. Iterate over each column and store the maximum of the `ith` column at the `ith` position in the list `colMax`.\n3. Iterate over each integer in the matrix and for each integer at `(i, j)`, check if the integer is equal to `rowMin[i]` and `colMax[j]`. If yes, add it to the list `luckyNumbers`.\n4. Return `luckyNumbers`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of rows in the matrix and $M$ is the number of columns in the matrix.\n\n* Time complexity: $O(N * M)$.\n\n  To store the maximum of each row, we require $N * M$ operations and the same for strong the maximum of each column. In the end, to find the lucky numbers we again iterate over each integer. Hence, the total time complexity is equal to $O(N * M)$.\n\n* Space complexity: $O(N + M)$.\n\n  We require two lists, `rowMin` and `colMax` of size $N$ and $M$ respectively. Hence the total space complexity is equal to $O(N + M)$.\n---\n\n### Approach 2: Greedy\n\n#### Intuition\n\nIn the previous approach, we didn't observe a key observation that there can be at most one lucky number in the matrix. Let's first try to prove that there cannot be more than one lucky number in the matrix by contradiction.\n\nSuppose we have an integer `X` in the row `r1` and column `c1` as shown below, the integer `X` is the minimum in its row and maximum in its column and hence is a lucky number. Let's say there's another integer `Y` in the column `r2` and column `c2` let's assume that `Y` is also a lucky number. The below figure shows the expressions we have based on these assumptions that lead us to a contradictory expression.\n\n![fig](../Figures/1380/1380A.png)\n\nHence, we can conclude that there can be at most one lucky number. If it exists, it can be found as follows: the lucky number is the minimum element in its row and the maximum element in its column. Therefore, we first find the minimum element of each row and then determine the maximum of these minimums as `rowMinMax`. Similarly, we find the maximum of each column and then determine the minimum of these maximums as `colMaxMin`. If `rowMinMax` equals `colMaxMin`, then this value is the lucky number; otherwise, we return an empty list.\n\n#### Algorithm\n\n1. Iterate over each row and find the minimum as `rMin`, then find the maximum of these minimum elements in each row as `rMinMax`.\n2. Iterate over each column and find the maximum as `rMax`, then find the minimum of these maximum elements in each column as `cMaxMin`.\n3. If the values `rMinMax` and `cMaxMin` are equal then return `rMinMax` or `cMaxMin`.\n4. Otherwise, return an empty list.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of rows in the matrix and $M$ is the number of columns in the matrix.\n\n* Time complexity: $O(N * M)$.\n\n  To find the value `rMinMax` and `cMaxMin` we are iterating over each integer in the matrix. Hence, the total time complexity is equal to $O(N * M)$.\n\n* Space complexity: $O(1)$.\n\n  No extra space is required apart from the few variables. Hence the total space complexity is constant.\n---"
+}

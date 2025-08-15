@@ -1,0 +1,53 @@
+{
+  "title": "Random Pick with Blacklist",
+  "problem_id": "894",
+  "frontend_id": "710",
+  "difficulty": "Hard",
+  "problem_slug": "random-pick-with-blacklist",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Binary Search",
+    "Sorting",
+    "Randomized"
+  ],
+  "description": "You are given an integer n and an array of unique integers blacklist. Design an algorithm to pick a random integer in the range [0, n - 1] that is not in blacklist. Any integer that is in the mentioned range and not in blacklist should be equally likely to be returned.\nOptimize your algorithm such that it minimizes the number of calls to the built-in random function of your language.\nImplement the Solution class:\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"Solution\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\"]\n[[7, [2, 3, 5]], [], [], [], [], [], [], []]\nOutput\n[null, 0, 4, 1, 6, 1, 0, 4]\n\nExplanation\nSolution solution = new Solution(7, [2, 3, 5]);\nsolution.pick(); // return 0, any integer from [0,1,4,6] should be ok. Note that for every call of pick,\n                 // 0, 1, 4, and 6 must be equally likely to be returned (i.e., with probability 1/4).\nsolution.pick(); // return 4\nsolution.pick(); // return 1\nsolution.pick(); // return 6\nsolution.pick(); // return 1\nsolution.pick(); // return 0\nsolution.pick(); // return 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 109",
+    "0 <= blacklist.length <= min(105, n - 1)",
+    "0 <= blacklist[i] < n",
+    "All the values of blacklist are unique.",
+    "At most 2 * 104 calls will be made to pick."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    Solution(int n, vector<int>& blacklist) {\n        \n    }\n    \n    int pick() {\n        \n    }\n};\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution* obj = new Solution(n, blacklist);\n * int param_1 = obj->pick();\n */",
+    "java": "class Solution {\n\n    public Solution(int n, int[] blacklist) {\n        \n    }\n    \n    public int pick() {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(n, blacklist);\n * int param_1 = obj.pick();\n */",
+    "python": "class Solution(object):\n\n    def __init__(self, n, blacklist):\n        \"\"\"\n        :type n: int\n        :type blacklist: List[int]\n        \"\"\"\n        \n\n    def pick(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        \n\n\n# Your Solution object will be instantiated and called as such:\n# obj = Solution(n, blacklist)\n# param_1 = obj.pick()",
+    "python3": "class Solution:\n\n    def __init__(self, n: int, blacklist: List[int]):\n        \n\n    def pick(self) -> int:\n        \n\n\n# Your Solution object will be instantiated and called as such:\n# obj = Solution(n, blacklist)\n# param_1 = obj.pick()",
+    "c": "\n\n\ntypedef struct {\n    \n} Solution;\n\n\nSolution* solutionCreate(int n, int* blacklist, int blacklistSize) {\n    \n}\n\nint solutionPick(Solution* obj) {\n    \n}\n\nvoid solutionFree(Solution* obj) {\n    \n}\n\n/**\n * Your Solution struct will be instantiated and called as such:\n * Solution* obj = solutionCreate(n, blacklist, blacklistSize);\n * int param_1 = solutionPick(obj);\n \n * solutionFree(obj);\n*/",
+    "csharp": "public class Solution {\n\n    public Solution(int n, int[] blacklist) {\n        \n    }\n    \n    public int Pick() {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = new Solution(n, blacklist);\n * int param_1 = obj.Pick();\n */",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} blacklist\n */\nvar Solution = function(n, blacklist) {\n    \n};\n\n/**\n * @return {number}\n */\nSolution.prototype.pick = function() {\n    \n};\n\n/** \n * Your Solution object will be instantiated and called as such:\n * var obj = new Solution(n, blacklist)\n * var param_1 = obj.pick()\n */",
+    "typescript": "class Solution {\n    constructor(n: number, blacklist: number[]) {\n        \n    }\n\n    pick(): number {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * var obj = new Solution(n, blacklist)\n * var param_1 = obj.pick()\n */",
+    "php": "class Solution {\n    /**\n     * @param Integer $n\n     * @param Integer[] $blacklist\n     */\n    function __construct($n, $blacklist) {\n        \n    }\n  \n    /**\n     * @return Integer\n     */\n    function pick() {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * $obj = Solution($n, $blacklist);\n * $ret_1 = $obj->pick();\n */",
+    "swift": "\nclass Solution {\n\n    init(_ n: Int, _ blacklist: [Int]) {\n        \n    }\n    \n    func pick() -> Int {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * let obj = Solution(n, blacklist)\n * let ret_1: Int = obj.pick()\n */",
+    "kotlin": "class Solution(n: Int, blacklist: IntArray) {\n\n    fun pick(): Int {\n        \n    }\n\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * var obj = Solution(n, blacklist)\n * var param_1 = obj.pick()\n */",
+    "dart": "class Solution {\n\n  Solution(int n, List<int> blacklist) {\n    \n  }\n  \n  int pick() {\n    \n  }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * Solution obj = Solution(n, blacklist);\n * int param1 = obj.pick();\n */",
+    "golang": "type Solution struct {\n    \n}\n\n\nfunc Constructor(n int, blacklist []int) Solution {\n    \n}\n\n\nfunc (this *Solution) Pick() int {\n    \n}\n\n\n/**\n * Your Solution object will be instantiated and called as such:\n * obj := Constructor(n, blacklist);\n * param_1 := obj.Pick();\n */",
+    "ruby": "class Solution\n\n=begin\n    :type n: Integer\n    :type blacklist: Integer[]\n=end\n    def initialize(n, blacklist)\n        \n    end\n\n\n=begin\n    :rtype: Integer\n=end\n    def pick()\n        \n    end\n\n\nend\n\n# Your Solution object will be instantiated and called as such:\n# obj = Solution.new(n, blacklist)\n# param_1 = obj.pick()",
+    "scala": "class Solution(_n: Int, _blacklist: Array[Int]) {\n\n    def pick(): Int = {\n        \n    }\n\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * val obj = new Solution(n, blacklist)\n * val param_1 = obj.pick()\n */",
+    "rust": "struct Solution {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl Solution {\n\n    fn new(n: i32, blacklist: Vec<i32>) -> Self {\n        \n    }\n    \n    fn pick(&self) -> i32 {\n        \n    }\n}\n\n/**\n * Your Solution object will be instantiated and called as such:\n * let obj = Solution::new(n, blacklist);\n * let ret_1: i32 = obj.pick();\n */",
+    "racket": "(define solution%\n  (class object%\n    (super-new)\n    \n    ; n : exact-integer?\n    ; blacklist : (listof exact-integer?)\n    (init-field\n      n\n      blacklist)\n    \n    ; pick : -> exact-integer?\n    (define/public (pick)\n      )))\n\n;; Your solution% object will be instantiated and called as such:\n;; (define obj (new solution% [n n] [blacklist blacklist]))\n;; (define param_1 (send obj pick))",
+    "erlang": "-spec solution_init_(N :: integer(), Blacklist :: [integer()]) -> any().\nsolution_init_(N, Blacklist) ->\n  .\n\n-spec solution_pick() -> integer().\nsolution_pick() ->\n  .\n\n\n%% Your functions will be called as such:\n%% solution_init_(N, Blacklist),\n%% Param_1 = solution_pick(),\n\n%% solution_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule Solution do\n  @spec init_(n :: integer, blacklist :: [integer]) :: any\n  def init_(n, blacklist) do\n    \n  end\n\n  @spec pick() :: integer\n  def pick() do\n    \n  end\nend\n\n# Your functions will be called as such:\n# Solution.init_(n, blacklist)\n# param_1 = Solution.pick()\n\n# Solution.init_ will be called before every test case, in which you can do some necessary initializations."
+  }
+}

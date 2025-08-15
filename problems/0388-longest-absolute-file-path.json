@@ -1,0 +1,71 @@
+{
+  "title": "Longest Absolute File Path",
+  "problem_id": "388",
+  "frontend_id": "388",
+  "difficulty": "Medium",
+  "problem_slug": "longest-absolute-file-path",
+  "topics": [
+    "String",
+    "Stack",
+    "Depth-First Search"
+  ],
+  "description": "Suppose we have a file system that stores both files and directories. An example of one system is represented in the following picture:\nHere, we have dir as the only directory in the root. dir contains two subdirectories, subdir1 and subdir2. subdir1 contains a file file1.ext and subdirectory subsubdir1. subdir2 contains a subdirectory subsubdir2, which contains a file file2.ext.\nIn text form, it looks like this (with ⟶ representing the tab character):\nIf we were to write this representation in code, it will look like this: \"dir\\n\\tsubdir1\\n\\t\\tfile1.ext\\n\\t\\tsubsubdir1\\n\\tsubdir2\\n\\t\\tsubsubdir2\\n\\t\\t\\tfile2.ext\". Note that the '\\n' and '\\t' are the new-line and tab characters.\nEvery file and directory has a unique absolute path in the file system, which is the order of directories that must be opened to reach the file/directory itself, all concatenated by '/'s. Using the above example, the absolute path to file2.ext is \"dir/subdir2/subsubdir2/file2.ext\". Each directory name consists of letters, digits, and/or spaces. Each file name is of the form name.extension, where name and extension consist of letters, digits, and/or spaces.\nGiven a string input representing the file system in the explained format, return the length of the longest absolute path to a file in the abstracted file system. If there is no file in the system, return 0.\nNote that the testcases are generated such that the file system is valid and no file or directory name has length 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "dir\n⟶ subdir1\n⟶ ⟶ file1.ext\n⟶ ⟶ subsubdir1\n⟶ subdir2\n⟶ ⟶ subsubdir2\n⟶ ⟶ ⟶ file2.ext",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/28/mdir.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: input = \"dir\\n\\tsubdir1\\n\\tsubdir2\\n\\t\\tfile.ext\"\nOutput: 20\nExplanation: We have only one file, and the absolute path is \"dir/subdir2/file.ext\" of length 20.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/28/dir1.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: input = \"dir\\n\\tsubdir1\\n\\t\\tfile1.ext\\n\\t\\tsubsubdir1\\n\\tsubdir2\\n\\t\\tsubsubdir2\\n\\t\\t\\tfile2.ext\"\nOutput: 32\nExplanation: We have two files:\n\"dir/subdir1/file1.ext\" of length 21\n\"dir/subdir2/subsubdir2/file2.ext\" of length 32.\nWe return 32 since it is the longest absolute path to a file.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/28/dir2.jpg"
+      ]
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: input = \"a\"\nOutput: 0\nExplanation: We do not have any files, just a single directory named \"a\".",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/28/dir2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= input.length <= 104",
+    "input may contain lowercase or uppercase English letters, a new line character '\\n', a tab character '\\t', a dot '.', a space ' ', and digits.",
+    "All file and directory names have positive length."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int lengthLongestPath(string input) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthLongestPath(String input) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lengthLongestPath(self, input):\n        \"\"\"\n        :type input: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lengthLongestPath(self, input: str) -> int:\n        ",
+    "c": "int lengthLongestPath(char* input) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LengthLongestPath(string input) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} input\n * @return {number}\n */\nvar lengthLongestPath = function(input) {\n    \n};",
+    "typescript": "function lengthLongestPath(input: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $input\n     * @return Integer\n     */\n    function lengthLongestPath($input) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lengthLongestPath(_ input: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lengthLongestPath(input: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lengthLongestPath(String input) {\n    \n  }\n}",
+    "golang": "func lengthLongestPath(input string) int {\n    \n}",
+    "ruby": "# @param {String} input\n# @return {Integer}\ndef length_longest_path(input)\n    \nend",
+    "scala": "object Solution {\n    def lengthLongestPath(input: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn length_longest_path(input: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (length-longest-path input)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec length_longest_path(Input :: unicode:unicode_binary()) -> integer().\nlength_longest_path(Input) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec length_longest_path(input :: String.t) :: integer\n  def length_longest_path(input) do\n    \n  end\nend"
+  }
+}

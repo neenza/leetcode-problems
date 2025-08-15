@@ -1,0 +1,60 @@
+{
+  "title": "Count the Number of Incremovable Subarrays I",
+  "problem_id": "3252",
+  "frontend_id": "2970",
+  "difficulty": "Easy",
+  "problem_slug": "count-the-number-of-incremovable-subarrays-i",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed array of positive integers nums.\nA subarray of nums is called incremovable if nums becomes strictly increasing on removing the subarray. For example, the subarray [3, 4] is an incremovable subarray of [5, 3, 4, 6, 7] because removing this subarray changes the array [5, 3, 4, 6, 7] to [5, 6, 7] which is strictly increasing.\nReturn the total number of incremovable subarrays of nums.\nNote that an empty array is considered strictly increasing.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 10\nExplanation: The 10 incremovable subarrays are: [1], [2], [3], [4], [1,2], [2,3], [3,4], [1,2,3], [2,3,4], and [1,2,3,4], because on removing any one of these subarrays nums becomes strictly increasing. Note that you cannot select an empty subarray.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,5,7,8]\nOutput: 7\nExplanation: The 7 incremovable subarrays are: [5], [6], [5,7], [6,5], [5,7,8], [6,5,7] and [6,5,7,8].\nIt can be shown that there are only 7 incremovable subarrays in nums.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [8,7,6,6]\nOutput: 3\nExplanation: The 3 incremovable subarrays are: [8,7,6], [7,6,6], and [8,7,6,6]. Note that [8,7] is not an incremovable subarray because after removing [8,7] nums becomes [6,6], which is sorted in ascending order but not strictly increasing.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use two loops to check all the subarrays."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int incremovableSubarrayCount(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int incremovableSubarrayCount(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def incremovableSubarrayCount(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def incremovableSubarrayCount(self, nums: List[int]) -> int:\n        ",
+    "c": "int incremovableSubarrayCount(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int IncremovableSubarrayCount(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar incremovableSubarrayCount = function(nums) {\n    \n};",
+    "typescript": "function incremovableSubarrayCount(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function incremovableSubarrayCount($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func incremovableSubarrayCount(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun incremovableSubarrayCount(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int incremovableSubarrayCount(List<int> nums) {\n    \n  }\n}",
+    "golang": "func incremovableSubarrayCount(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef incremovable_subarray_count(nums)\n    \nend",
+    "scala": "object Solution {\n    def incremovableSubarrayCount(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn incremovable_subarray_count(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (incremovable-subarray-count nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec incremovable_subarray_count(Nums :: [integer()]) -> integer().\nincremovable_subarray_count(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec incremovable_subarray_count(nums :: [integer]) :: integer\n  def incremovable_subarray_count(nums) do\n    \n  end\nend"
+  }
+}

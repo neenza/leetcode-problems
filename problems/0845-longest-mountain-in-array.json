@@ -1,0 +1,54 @@
+{
+  "title": "Longest Mountain in Array",
+  "problem_id": "875",
+  "frontend_id": "845",
+  "difficulty": "Medium",
+  "problem_slug": "longest-mountain-in-array",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Dynamic Programming",
+    "Enumeration"
+  ],
+  "description": "You may recall that an array arr is a mountain array if and only if:\nGiven an integer array arr, return the length of the longest subarray, which is a mountain. Return 0 if there is no mountain subarray.\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [2,1,4,7,3,2,5]\nOutput: 5\nExplanation: The largest mountain is [1,4,7,3,2] which has length 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [2,2,2]\nOutput: 0\nExplanation: There is no mountain.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 104",
+    "0 <= arr[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestMountain(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestMountain(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestMountain(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestMountain(self, arr: List[int]) -> int:\n        ",
+    "c": "int longestMountain(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestMountain(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar longestMountain = function(arr) {\n    \n};",
+    "typescript": "function longestMountain(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function longestMountain($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestMountain(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestMountain(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestMountain(List<int> arr) {\n    \n  }\n}",
+    "golang": "func longestMountain(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef longest_mountain(arr)\n    \nend",
+    "scala": "object Solution {\n    def longestMountain(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_mountain(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-mountain arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec longest_mountain(Arr :: [integer()]) -> integer().\nlongest_mountain(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_mountain(arr :: [integer]) :: integer\n  def longest_mountain(arr) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Two Pointer [Accepted]\n\n**Intuition**\n\nWithout loss of generality, a mountain can only start after the previous one ends.\n\nThis is because if it starts before the peak, it will be smaller than a mountain starting previous; and it is impossible to start after the peak.\n\n**Algorithm**\n\nFor a starting index `base`, let's calculate the length of the longest mountain `A[base], A[base+1], ..., A[end]`.\n\nIf such a mountain existed, the next possible mountain will start at `base = end`; if it didn't, then either we reached the end, or we have `A[base] >= A[base+1]` and we can start at `base + 1`.\n\n**Example**\n\nHere is a worked example on the array `A = [1, 2, 3, 2, 1, 0, 2, 3, 1]`:`base` starts at `0`, and `end` travels using the first while loop to `end = 2` (`A[end] = 3`), the potential peak of this mountain.  After, it travels to `end = 5` (`A[end] = 0`) during the second while loop, and a candidate answer of 6 `(base = 0, end = 5)` is recorded.\n\nAfterwards, base is set to `5` and the process starts over again, with `end = 7` the peak of the mountain, and `end = 8` the right boundary, and the candidate answer of 4 `(base = 5, end = 8)` being recorded.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(1)$$."
+}

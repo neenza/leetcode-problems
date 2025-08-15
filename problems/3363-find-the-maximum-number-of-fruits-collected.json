@@ -1,0 +1,59 @@
+{
+  "title": "Find the Maximum Number of Fruits Collected",
+  "problem_id": "3648",
+  "frontend_id": "3363",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-maximum-number-of-fruits-collected",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "There is a game dungeon comprised of n x n rooms arranged in a grid.\nYou are given a 2D array fruits of size n x n, where fruits[i][j] represents the number of fruits in the room (i, j). Three children will play in the game dungeon, with initial positions at the corner rooms (0, 0), (0, n - 1), and (n - 1, 0).\nThe children will make exactly n - 1 moves according to the following rules to reach the room (n - 1, n - 1):\nWhen a child enters a room, they will collect all the fruits there. If two or more children enter the same room, only one child will collect the fruits, and the room will be emptied after they leave.\nReturn the maximum number of fruits the children can collect from the dungeon.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: fruits = [[1,2,3,4],[5,6,8,7],[9,10,11,12],[13,14,15,16]]\nOutput: 100\nExplanation:\n\nIn this example:\nIn total they collect 1 + 6 + 11 + 16 + 4 + 8 + 12 + 13 + 14 + 15 = 100 fruits.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/10/15/example_1.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: fruits = [[1,1],[1,1]]\nOutput: 4\nExplanation:\nIn this example:\nIn total they collect 1 + 1 + 1 + 1 = 4 fruits.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == fruits.length == fruits[i].length <= 1000",
+    "0 <= fruits[i][j] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The child at <code>(0, 0)</code> has only one possible path.",
+    "The other two children won’t intersect its path.",
+    "Use Dynamic Programming."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxCollectedFruits(vector<vector<int>>& fruits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxCollectedFruits(int[][] fruits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxCollectedFruits(self, fruits):\n        \"\"\"\n        :type fruits: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxCollectedFruits(self, fruits: List[List[int]]) -> int:\n        ",
+    "c": "int maxCollectedFruits(int** fruits, int fruitsSize, int* fruitsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxCollectedFruits(int[][] fruits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} fruits\n * @return {number}\n */\nvar maxCollectedFruits = function(fruits) {\n    \n};",
+    "typescript": "function maxCollectedFruits(fruits: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $fruits\n     * @return Integer\n     */\n    function maxCollectedFruits($fruits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxCollectedFruits(_ fruits: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxCollectedFruits(fruits: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxCollectedFruits(List<List<int>> fruits) {\n    \n  }\n}",
+    "golang": "func maxCollectedFruits(fruits [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} fruits\n# @return {Integer}\ndef max_collected_fruits(fruits)\n    \nend",
+    "scala": "object Solution {\n    def maxCollectedFruits(fruits: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_collected_fruits(fruits: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-collected-fruits fruits)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_collected_fruits(Fruits :: [[integer()]]) -> integer().\nmax_collected_fruits(Fruits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_collected_fruits(fruits :: [[integer]]) :: integer\n  def max_collected_fruits(fruits) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Dynamic Programming\n\n#### Intuition\n\nFirstly, since the child starting from $(0,0)$ can only move $n-1$ times, he can only walk along the main diagonal. Therefore, we only need to calculate the maximum total number of fruits collected by the remaining two children.\n\nFor the child starting from the upper-right corner $(0, n-1)$, it's easy to see that he can only move above the main diagonal and cannot cross it; otherwise, he won’t be able to reach the lower-right corner in exactly $n-1$ moves. The same constraint applies to the other child starting from the lower-left corner $(n-1, 0)$.\n\nSince the three children are not allowed to enter the same room, we only need to consider one of these two diagonal-symmetric cases. We can use dynamic programming to compute the maximum fruits collected along one valid path. Then, by flipping the matrix along the main diagonal, we can reuse the same logic to compute the other path. This transforms the problem into:\n\n- Starting from the top-right corner $(0, n-1)$, without passing through the main diagonal, find the maximum number of fruits that can be collected by the time the child reaches room $(n-2, n-1)$.\n\nThis can be solved using dynamic programming. Let $\\textit{dp}[i][j]$ represent the maximum number of fruits that can be collected when reaching room $(i, j)$. For $1 \\leq i < n-1$ and $1 < j < n$, we define the recurrence as\n\n$$\n\\textit{dp}[i][j] = \\max(\\textit{dp}[i-1][j-1],\\ \\textit{dp}[i-1][j],\\ \\textit{dp}[i-1][j+1]) + \\textit{fruits}[i][j].\n$$\n\nSince the destination is $(n-2, n-1)$, and every step moves the child downward (increasing $i$), the column index $j$ is always greater than $i$. So we can initialize $j$ to start from $\\max(n-1-i,\\ i+1)$ at each row.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the 2D grid $\\textit{fruits}$.\n\n- Time complexity: $O(n^2)$.\n  \n  The dynamic programming required to calculate the contribution of the upper triangular area takes $O(n^2)$ time.\n\n- Space complexity: $O(n)$.\n  \n  We use a rolling array to optimize the space complexity from $O(n^2)$ to $O(n)$.\n  \n---"
+}

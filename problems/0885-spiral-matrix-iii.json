@@ -1,0 +1,58 @@
+{
+  "title": "Spiral Matrix III",
+  "problem_id": "921",
+  "frontend_id": "885",
+  "difficulty": "Medium",
+  "problem_slug": "spiral-matrix-iii",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You start at the cell (rStart, cStart) of an rows x cols grid facing east. The northwest corner is at the first row and column in the grid, and the southeast corner is at the last row and column.\nYou will walk in a clockwise spiral shape to visit every position in this grid. Whenever you move outside the grid's boundary, we continue our walk outside the grid (but may return to the grid boundary later.). Eventually, we reach all rows * cols spaces of the grid.\nReturn an array of coordinates representing the positions of the grid in the order you visited them.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rows = 1, cols = 4, rStart = 0, cStart = 0\nOutput: [[0,0],[0,1],[0,2],[0,3]]",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/24/example_1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rows = 5, cols = 6, rStart = 1, cStart = 4\nOutput: [[1,4],[1,5],[2,5],[2,4],[2,3],[1,3],[0,3],[0,4],[0,5],[3,5],[3,4],[3,3],[3,2],[2,2],[1,2],[0,2],[4,5],[4,4],[4,3],[4,2],[4,1],[3,1],[2,1],[1,1],[0,1],[4,0],[3,0],[2,0],[1,0],[0,0]]",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/24/example_2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= rows, cols <= 100",
+    "0 <= rStart < rows",
+    "0 <= cStart < cols"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> spiralMatrixIII(int rows, int cols, int rStart, int cStart) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] spiralMatrixIII(int rows, int cols, int rStart, int cStart) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def spiralMatrixIII(self, rows, cols, rStart, cStart):\n        \"\"\"\n        :type rows: int\n        :type cols: int\n        :type rStart: int\n        :type cStart: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def spiralMatrixIII(self, rows: int, cols: int, rStart: int, cStart: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** spiralMatrixIII(int rows, int cols, int rStart, int cStart, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] SpiralMatrixIII(int rows, int cols, int rStart, int cStart) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} rows\n * @param {number} cols\n * @param {number} rStart\n * @param {number} cStart\n * @return {number[][]}\n */\nvar spiralMatrixIII = function(rows, cols, rStart, cStart) {\n    \n};",
+    "typescript": "function spiralMatrixIII(rows: number, cols: number, rStart: number, cStart: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $rows\n     * @param Integer $cols\n     * @param Integer $rStart\n     * @param Integer $cStart\n     * @return Integer[][]\n     */\n    function spiralMatrixIII($rows, $cols, $rStart, $cStart) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func spiralMatrixIII(_ rows: Int, _ cols: Int, _ rStart: Int, _ cStart: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun spiralMatrixIII(rows: Int, cols: Int, rStart: Int, cStart: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> spiralMatrixIII(int rows, int cols, int rStart, int cStart) {\n    \n  }\n}",
+    "golang": "func spiralMatrixIII(rows int, cols int, rStart int, cStart int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} rows\n# @param {Integer} cols\n# @param {Integer} r_start\n# @param {Integer} c_start\n# @return {Integer[][]}\ndef spiral_matrix_iii(rows, cols, r_start, c_start)\n    \nend",
+    "scala": "object Solution {\n    def spiralMatrixIII(rows: Int, cols: Int, rStart: Int, cStart: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn spiral_matrix_iii(rows: i32, cols: i32, r_start: i32, c_start: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (spiral-matrix-iii rows cols rStart cStart)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec spiral_matrix_iii(Rows :: integer(), Cols :: integer(), RStart :: integer(), CStart :: integer()) -> [[integer()]].\nspiral_matrix_iii(Rows, Cols, RStart, CStart) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec spiral_matrix_iii(rows :: integer, cols :: integer, r_start :: integer, c_start :: integer) :: [[integer]]\n  def spiral_matrix_iii(rows, cols, r_start, c_start) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]  \n\n## Solution\n\n---\n\n### Approach 1: Simulation\n\n#### Intuition\n\nInitially, we are located at the coordinates `rStart` and `cStart` and must make our first movement toward the East. Let's simulate the clockwise movement and note the distances moved with each direction to identify any patterns: \n\n- Move 1 unit towards the East.\n- Move 1 unit towards the South.\n- Move 2 units towards the West.\n- Move 2 units towards the North.\n- Move 3 units towards the East.\n- Move 3 units towards the South.\n- Move 4 units towards the West.\n- Move 4 units towards the North.\n- and so on...\n\nWe observe a pattern where distances are covered in pairs of directions, increasing the distance by 1 after each pair. Specifically, we move in the order of East, South, West, and North, increasing the distance after every pair.\n\nTo implement this, we can store the directional movements in an array: for instance, East corresponds to `(x+0, y+1)` and South to `(x+1, y+0)`. We then simulate the process by taking two directions simultaneously and increasing the step size after every pair. If the current cell lies within the matrix, we append it to the `traversed` matrix. We return `traversed` once all matrix cells have been covered.\n\n#### Algorithm\n\n1. Initialize an array `dir` with all possible directional movements in the movement.\n2. Initialize a matrix `traversed` to store the coordinates of cells.\n3. Initialize the integers `step = 1`, `direction = 0` and iterate until all cells have been traversed:\n    - Iterate `i` from `0` to `1`:\n        - Iterate `j` from `0` to `step - 1`:\n            - If `rStart >= 0`, `rStart < rows`, `cStart >= 0`, `cStart < cols`:\n                - Append `{rStart,cstart}` to `traversed`.\n        - Add `dir[direction][0]` to `rStart` and `dir[direction][1]` to `cStart`.\n    - Increment `step` by 1.\n4. Return `traversed`.\n\n!?!../Documents/885/slideshow.json:960,540!?!       \n\n#### Implementation#### Complexity Analysis\n\nLet $rows$ be the number of rows and $cols$ be the number of columns in the matrix.\n\n- Time complexity: $O(\\max(\\text{rows}, \\text{cols})^2)$\n\n    We fill the `traversed` matrix with the values on the simulated path. However, we might also move out of the matrix during traversal. The total distance covered depends on $\\max(\\text{rows}, \\text{cols})^2$. Can you think of some cases with the worst case time complexity? An example is shown below for the 2x2 matrix:\n    \n    ![img](../Figures/885/example.png)\n    \n    Therefore, the total time complexity is $O(\\max(\\text{rows}, \\text{cols})^2)$.\n   \n- Space complexity: $O(\\text{rows} \\cdot \\text{cols})$\n   \n    Apart from the `traversed` matrix, no additional memory is used. The `traversed` matrix stores all the cells of the matrix, so its size is $\\text{rows} \\times \\text{cols}$. Therefore, the total space complexity is $O(\\text{rows} \\cdot \\text{cols})$.\n\n---"
+}

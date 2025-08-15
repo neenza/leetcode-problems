@@ -1,0 +1,57 @@
+{
+  "title": "Zero Array Transformation I",
+  "problem_id": "3639",
+  "frontend_id": "3355",
+  "difficulty": "Medium",
+  "problem_slug": "zero-array-transformation-i",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of length n and a 2D array queries, where queries[i] = [li, ri].\nFor each queries[i]:\nA Zero Array is an array where all elements are equal to 0.\nReturn true if it is possible to transform nums into a Zero Array after processing all the queries sequentially, otherwise return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,1], queries = [[0,2]]\nOutput: true\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,3,2,1], queries = [[1,3],[0,2]]\nOutput: false\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 105",
+    "1 <= queries.length <= 105",
+    "queries[i].length == 2",
+    "0 <= li <= ri < nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use difference array and prefix sum to check if an index can be made zero?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isZeroArray(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isZeroArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isZeroArray(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isZeroArray(self, nums: List[int], queries: List[List[int]]) -> bool:\n        ",
+    "c": "bool isZeroArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsZeroArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {boolean}\n */\nvar isZeroArray = function(nums, queries) {\n    \n};",
+    "typescript": "function isZeroArray(nums: number[], queries: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Boolean\n     */\n    function isZeroArray($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isZeroArray(_ nums: [Int], _ queries: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isZeroArray(nums: IntArray, queries: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isZeroArray(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func isZeroArray(nums []int, queries [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Boolean}\ndef is_zero_array(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def isZeroArray(nums: Array[Int], queries: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_zero_array(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-zero-array nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec is_zero_array(Nums :: [integer()], Queries :: [[integer()]]) -> boolean().\nis_zero_array(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_zero_array(nums :: [integer], queries :: [[integer]]) :: boolean\n  def is_zero_array(nums, queries) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Difference Array\n\n#### Intuition\n\nWe count the maximum number of operations that can be performed at each position using a difference array. Construct the difference array `deltaArray` with a length of `n + 1` (where `n` is the length of the array `nums`), which is used to record the increment for each query on the number of operations. \n\nFor each query interval `[left, right]`, increment `deltaArray[left]` by `+1`, indicating an increase in the operation count starting from `left`. Decrement `deltaArray[right + 1]` by `-1`, indicating that the operation count returns to its original value after `right + 1`. \n\nNext, perform a prefix sum accumulation on the difference array `deltaArray` to obtain the total operation count at each position in the array, storing these counts in `operationCounts`. Traverse the `nums` array and the `operationCounts` array, comparing the actual operation counts (`operations`) at each position to see if they meet the minimum number of operations (`target`) required for zeroing. If all positions meet `operations >= target`, return `true`; otherwise, return `false`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of $\\textit{nums}$ and $m$ be the length of $\\textit{queries}$.\n\n- Time complexity: $O(n + m)$.\n  \n  We need $O(m)$ time to construct the difference array, followed by checking all $O(n)$ positions.\n\n- Space complexity: $O(n)$.\n  \n  We need $O(n)$ space to store the difference array."
+}

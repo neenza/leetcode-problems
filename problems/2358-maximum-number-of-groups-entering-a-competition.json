@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Number of Groups Entering a Competition",
+  "problem_id": "2437",
+  "frontend_id": "2358",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-groups-entering-a-competition",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Greedy"
+  ],
+  "description": "You are given a positive integer array grades which represents the grades of students in a university. You would like to enter all these students into a competition in ordered non-empty groups, such that the ordering meets the following conditions:\nReturn the maximum number of groups that can be formed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grades = [10,6,12,7,3,5]\nOutput: 3\nExplanation: The following is a possible way to form 3 groups of students:\n- 1st group has the students with grades = [12]. Sum of grades: 12. Student count: 1\n- 2nd group has the students with grades = [6,7]. Sum of grades: 6 + 7 = 13. Student count: 2\n- 3rd group has the students with grades = [10,3,5]. Sum of grades: 10 + 3 + 5 = 18. Student count: 3\nIt can be shown that it is not possible to form more than 3 groups.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grades = [8,8]\nOutput: 1\nExplanation: We can only form 1 group, since forming 2 groups would lead to an equal number of students in both groups.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= grades.length <= 105",
+    "1 <= grades[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Would it be easier to place the students into valid groups after sorting them based on their grades in ascending order?",
+    "Notice that, after sorting, we can separate them into groups of sizes 1, 2, 3, and so on.",
+    "If the last group is invalid, we can merge it with the previous group.",
+    "This creates the maximum number of groups because we always greedily form the smallest possible group."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumGroups(vector<int>& grades) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumGroups(int[] grades) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumGroups(self, grades):\n        \"\"\"\n        :type grades: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumGroups(self, grades: List[int]) -> int:\n        ",
+    "c": "int maximumGroups(int* grades, int gradesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumGroups(int[] grades) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} grades\n * @return {number}\n */\nvar maximumGroups = function(grades) {\n    \n};",
+    "typescript": "function maximumGroups(grades: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $grades\n     * @return Integer\n     */\n    function maximumGroups($grades) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumGroups(_ grades: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumGroups(grades: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumGroups(List<int> grades) {\n    \n  }\n}",
+    "golang": "func maximumGroups(grades []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} grades\n# @return {Integer}\ndef maximum_groups(grades)\n    \nend",
+    "scala": "object Solution {\n    def maximumGroups(grades: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_groups(grades: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-groups grades)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_groups(Grades :: [integer()]) -> integer().\nmaximum_groups(Grades) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_groups(grades :: [integer]) :: integer\n  def maximum_groups(grades) do\n    \n  end\nend"
+  }
+}

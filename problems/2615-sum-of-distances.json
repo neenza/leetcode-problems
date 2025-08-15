@@ -1,0 +1,56 @@
+{
+  "title": "Sum of Distances",
+  "problem_id": "2721",
+  "frontend_id": "2615",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-distances",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums. There exists an array arr of length nums.length, where arr[i] is the sum of |i - j| over all j such that nums[j] == nums[i] and j != i. If there is no such j, set arr[i] to be 0.\nReturn the array arr.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as  2121: Intervals Between Identical Elements.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,1,1,2]\nOutput: [5,0,3,4,0]\nExplanation: \nWhen i = 0, nums[0] == nums[2] and nums[0] == nums[3]. Therefore, arr[0] = |0 - 2| + |0 - 3| = 5. \nWhen i = 1, arr[1] = 0 because there is no other index with value 3.\nWhen i = 2, nums[2] == nums[0] and nums[2] == nums[3]. Therefore, arr[2] = |2 - 0| + |2 - 3| = 3. \nWhen i = 3, nums[3] == nums[0] and nums[3] == nums[2]. Therefore, arr[3] = |3 - 0| + |3 - 2| = 4. \nWhen i = 4, arr[4] = 0 because there is no other index with value 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,5,3]\nOutput: [0,0,0]\nExplanation: Since each element in nums is distinct, arr[i] = 0 for all i.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use the prefix sum here?",
+    "For each number x, collect all the indices where x occurs, and calculate the prefix sum of the array.",
+    "For each occurrence of x, the indices to the right will be regular subtraction while the indices to the left will be reversed subtraction."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> distance(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] distance(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distance(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distance(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* distance(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] Distance(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar distance = function(nums) {\n    \n};",
+    "typescript": "function distance(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function distance($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distance(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distance(nums: IntArray): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> distance(List<int> nums) {\n    \n  }\n}",
+    "golang": "func distance(nums []int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef distance(nums)\n    \nend",
+    "scala": "object Solution {\n    def distance(nums: Array[Int]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distance(nums: Vec<i32>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (distance nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec distance(Nums :: [integer()]) -> [integer()].\ndistance(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distance(nums :: [integer]) :: [integer]\n  def distance(nums) do\n    \n  end\nend"
+  }
+}

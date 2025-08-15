@@ -1,0 +1,60 @@
+{
+  "title": "Most Popular Video Creator",
+  "problem_id": "2543",
+  "frontend_id": "2456",
+  "difficulty": "Medium",
+  "problem_slug": "most-popular-video-creator",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two string arrays creators and ids, and an integer array views, all of length n. The ith video on a platform was created by creators[i], has an id of ids[i], and has views[i] views.\nThe popularity of a creator is the sum of the number of views on all of the creator's videos. Find the creator with the highest popularity and the id of their most viewed video.\nNote: It is possible for different videos to have the same id, meaning that ids do not uniquely identify a video. For example, two videos with the same ID are considered as distinct videos with their own viewcount.\nReturn a 2D array of strings answer where answer[i] = [creatorsi, idi] means that creatorsi has the highest popularity and idi is the id of their most popular video. The answer can be returned in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: creators = [\"alice\",\"bob\",\"alice\",\"chris\"], ids = [\"one\",\"two\",\"three\",\"four\"], views = [5,10,5,4]\nOutput: [[\"alice\",\"one\"],[\"bob\",\"two\"]]\nExplanation:\nThe popularity of alice is 5 + 5 = 10. The popularity of bob is 10. The popularity of chris is 4. alice and bob are the most popular creators. For bob, the video with the highest view count is \"two\". For alice, the videos with the highest view count are \"one\" and \"three\". Since \"one\" is lexicographically smaller than \"three\", it is included in the answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: creators = [\"alice\",\"alice\",\"alice\"], ids = [\"a\",\"b\",\"c\"], views = [1,2,2]\nOutput: [[\"alice\",\"b\"]]\nExplanation:\nThe videos with id \"b\" and \"c\" have the highest view count. Since \"b\" is lexicographically smaller than \"c\", it is included in the answer.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == creators.length == ids.length == views.length",
+    "1 <= n <= 105",
+    "1 <= creators[i].length, ids[i].length <= 5",
+    "creators[i] and ids[i] consist only of lowercase English letters.",
+    "0 <= views[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a hash table to store and categorize videos based on their creator.",
+    "For each creator, iterate through all their videos and use three variables to keep track of their popularity, their most popular video, and the id of their most popular video."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> mostPopularCreator(vector<string>& creators, vector<string>& ids, vector<int>& views) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> mostPopularCreator(String[] creators, String[] ids, int[] views) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostPopularCreator(self, creators, ids, views):\n        \"\"\"\n        :type creators: List[str]\n        :type ids: List[str]\n        :type views: List[int]\n        :rtype: List[List[str]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostPopularCreator(self, creators: List[str], ids: List[str], views: List[int]) -> List[List[str]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** mostPopularCreator(char** creators, int creatorsSize, char** ids, int idsSize, int* views, int viewsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<string>> MostPopularCreator(string[] creators, string[] ids, int[] views) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} creators\n * @param {string[]} ids\n * @param {number[]} views\n * @return {string[][]}\n */\nvar mostPopularCreator = function(creators, ids, views) {\n    \n};",
+    "typescript": "function mostPopularCreator(creators: string[], ids: string[], views: number[]): string[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $creators\n     * @param String[] $ids\n     * @param Integer[] $views\n     * @return String[][]\n     */\n    function mostPopularCreator($creators, $ids, $views) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostPopularCreator(_ creators: [String], _ ids: [String], _ views: [Int]) -> [[String]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostPopularCreator(creators: Array<String>, ids: Array<String>, views: IntArray): List<List<String>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<String>> mostPopularCreator(List<String> creators, List<String> ids, List<int> views) {\n    \n  }\n}",
+    "golang": "func mostPopularCreator(creators []string, ids []string, views []int) [][]string {\n    \n}",
+    "ruby": "# @param {String[]} creators\n# @param {String[]} ids\n# @param {Integer[]} views\n# @return {String[][]}\ndef most_popular_creator(creators, ids, views)\n    \nend",
+    "scala": "object Solution {\n    def mostPopularCreator(creators: Array[String], ids: Array[String], views: Array[Int]): List[List[String]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_popular_creator(creators: Vec<String>, ids: Vec<String>, views: Vec<i32>) -> Vec<Vec<String>> {\n        \n    }\n}",
+    "racket": "(define/contract (most-popular-creator creators ids views)\n  (-> (listof string?) (listof string?) (listof exact-integer?) (listof (listof string?)))\n  )",
+    "erlang": "-spec most_popular_creator(Creators :: [unicode:unicode_binary()], Ids :: [unicode:unicode_binary()], Views :: [integer()]) -> [[unicode:unicode_binary()]].\nmost_popular_creator(Creators, Ids, Views) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_popular_creator(creators :: [String.t], ids :: [String.t], views :: [integer]) :: [[String.t]]\n  def most_popular_creator(creators, ids, views) do\n    \n  end\nend"
+  }
+}

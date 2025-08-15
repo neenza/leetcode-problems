@@ -1,0 +1,56 @@
+{
+  "title": "Length of the Longest Valid Substring",
+  "problem_id": "2884",
+  "frontend_id": "2781",
+  "difficulty": "Hard",
+  "problem_slug": "length-of-the-longest-valid-substring",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a string word and an array of strings forbidden.\nA string is called valid if none of its substrings are present in forbidden.\nReturn the length of the longest valid substring of the string word.\nA substring is a contiguous sequence of characters in a string, possibly empty.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"cbaaaabc\", forbidden = [\"aaa\",\"cb\"]\nOutput: 4\nExplanation: There are 11 valid substrings in word: \"c\", \"b\", \"a\", \"ba\", \"aa\", \"bc\", \"baa\", \"aab\", \"ab\", \"abc\" and \"aabc\". The length of the longest valid substring is 4. \nIt can be shown that all other substrings contain either \"aaa\" or \"cb\" as a substring.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"leetcode\", forbidden = [\"de\",\"le\",\"e\"]\nOutput: 4\nExplanation: There are 11 valid substrings in word: \"l\", \"t\", \"c\", \"o\", \"d\", \"tc\", \"co\", \"od\", \"tco\", \"cod\", and \"tcod\". The length of the longest valid substring is 4.\nIt can be shown that all other substrings contain either \"de\", \"le\", or \"e\" as a substring.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 105",
+    "word consists only of lowercase English letters.",
+    "1 <= forbidden.length <= 105",
+    "1 <= forbidden[i].length <= 10",
+    "forbidden[i] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestValidSubstring(string word, vector<string>& forbidden) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestValidSubstring(String word, List<String> forbidden) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestValidSubstring(self, word, forbidden):\n        \"\"\"\n        :type word: str\n        :type forbidden: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestValidSubstring(self, word: str, forbidden: List[str]) -> int:\n        ",
+    "c": "int longestValidSubstring(char* word, char** forbidden, int forbiddenSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestValidSubstring(string word, IList<string> forbidden) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {string[]} forbidden\n * @return {number}\n */\nvar longestValidSubstring = function(word, forbidden) {\n    \n};",
+    "typescript": "function longestValidSubstring(word: string, forbidden: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @param String[] $forbidden\n     * @return Integer\n     */\n    function longestValidSubstring($word, $forbidden) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestValidSubstring(_ word: String, _ forbidden: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestValidSubstring(word: String, forbidden: List<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestValidSubstring(String word, List<String> forbidden) {\n    \n  }\n}",
+    "golang": "func longestValidSubstring(word string, forbidden []string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @param {String[]} forbidden\n# @return {Integer}\ndef longest_valid_substring(word, forbidden)\n    \nend",
+    "scala": "object Solution {\n    def longestValidSubstring(word: String, forbidden: List[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_valid_substring(word: String, forbidden: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-valid-substring word forbidden)\n  (-> string? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec longest_valid_substring(Word :: unicode:unicode_binary(), Forbidden :: [unicode:unicode_binary()]) -> integer().\nlongest_valid_substring(Word, Forbidden) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_valid_substring(word :: String.t, forbidden :: [String.t]) :: integer\n  def longest_valid_substring(word, forbidden) do\n    \n  end\nend"
+  }
+}

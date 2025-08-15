@@ -1,0 +1,61 @@
+{
+  "title": "Split Strings by Separator",
+  "problem_id": "2881",
+  "frontend_id": "2788",
+  "difficulty": "Easy",
+  "problem_slug": "split-strings-by-separator",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "Given an array of strings words and a character separator, split each string in words by separator.\nReturn an array of strings containing the new strings formed after the splits, excluding empty strings.\nNotes\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"one.two.three\",\"four.five\",\"six\"], separator = \".\"\nOutput: [\"one\",\"two\",\"three\",\"four\",\"five\",\"six\"]\nExplanation: In this example we split as follows:\n\n\"one.two.three\" splits into \"one\", \"two\", \"three\"\n\"four.five\" splits into \"four\", \"five\"\n\"six\" splits into \"six\" \n\nHence, the resulting array is [\"one\",\"two\",\"three\",\"four\",\"five\",\"six\"].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"$easy$\",\"$problem$\"], separator = \"$\"\nOutput: [\"easy\",\"problem\"]\nExplanation: In this example we split as follows: \n\n\"$easy$\" splits into \"easy\" (excluding empty strings)\n\"$problem$\" splits into \"problem\" (excluding empty strings)\n\nHence, the resulting array is [\"easy\",\"problem\"].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"|||\"], separator = \"|\"\nOutput: []\nExplanation: In this example the resulting split of \"|||\" will contain only empty strings, so we return an empty array [].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 20",
+    "characters in words[i] are either lowercase English letters or characters from the string \".,|$#@\" (excluding the quotes)",
+    "separator is a character from the string \".,|$#@\" (excluding the quotes)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over each string in the given array using a loop and perform string splitting based on the provided separator character.",
+    "Be sure not to return empty strings."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> splitWordsBySeparator(vector<string>& words, char separator) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> splitWordsBySeparator(List<String> words, char separator) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitWordsBySeparator(self, words, separator):\n        \"\"\"\n        :type words: List[str]\n        :type separator: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitWordsBySeparator(self, words: List[str], separator: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** splitWordsBySeparator(char** words, int wordsSize, char separator, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> SplitWordsBySeparator(IList<string> words, char separator) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {character} separator\n * @return {string[]}\n */\nvar splitWordsBySeparator = function(words, separator) {\n    \n};",
+    "typescript": "function splitWordsBySeparator(words: string[], separator: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $separator\n     * @return String[]\n     */\n    function splitWordsBySeparator($words, $separator) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitWordsBySeparator(_ words: [String], _ separator: Character) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitWordsBySeparator(words: List<String>, separator: Char): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> splitWordsBySeparator(List<String> words, String separator) {\n    \n  }\n}",
+    "golang": "func splitWordsBySeparator(words []string, separator byte) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Character} separator\n# @return {String[]}\ndef split_words_by_separator(words, separator)\n    \nend",
+    "scala": "object Solution {\n    def splitWordsBySeparator(words: List[String], separator: Char): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_words_by_separator(words: Vec<String>, separator: char) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (split-words-by-separator words separator)\n  (-> (listof string?) char? (listof string?))\n  )",
+    "erlang": "-spec split_words_by_separator(Words :: [unicode:unicode_binary()], Separator :: char()) -> [unicode:unicode_binary()].\nsplit_words_by_separator(Words, Separator) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_words_by_separator(words :: [String.t], separator :: char) :: [String.t]\n  def split_words_by_separator(words, separator) do\n    \n  end\nend"
+  }
+}

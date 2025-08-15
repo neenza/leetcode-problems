@@ -1,0 +1,63 @@
+{
+  "title": "Count Lattice Points Inside a Circle",
+  "problem_id": "2332",
+  "frontend_id": "2249",
+  "difficulty": "Medium",
+  "problem_slug": "count-lattice-points-inside-a-circle",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Geometry",
+    "Enumeration"
+  ],
+  "description": "Given a 2D integer array circles where circles[i] = [xi, yi, ri] represents the center (xi, yi) and radius ri of the ith circle drawn on a grid, return the number of lattice points that are present inside at least one circle.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: circles = [[2,2,1]]\nOutput: 5\nExplanation:\nThe figure above shows the given circle.\nThe lattice points present inside the circle are (1, 2), (2, 1), (2, 2), (2, 3), and (3, 2) and are shown in green.\nOther points such as (1, 1) and (1, 3), which are shown in red, are not considered inside the circle.\nHence, the number of lattice points present inside at least one circle is 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/02/exa-11.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: circles = [[2,2,2],[3,4,1]]\nOutput: 16\nExplanation:\nThe figure above shows the given circles.\nThere are exactly 16 lattice points which are present inside at least one circle. \nSome of them are (0, 2), (2, 0), (2, 4), (3, 2), and (4, 4).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/02/exa-22.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= circles.length <= 200",
+    "circles[i].length == 3",
+    "1 <= xi, yi <= 100",
+    "1 <= ri <= min(xi, yi)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each circle, how can you check whether or not a lattice point lies inside it?",
+    "Since you need to reduce the search space, consider the minimum and maximum possible values of the coordinates of a lattice point contained in any circle."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countLatticePoints(vector<vector<int>>& circles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countLatticePoints(int[][] circles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countLatticePoints(self, circles):\n        \"\"\"\n        :type circles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countLatticePoints(self, circles: List[List[int]]) -> int:\n        ",
+    "c": "int countLatticePoints(int** circles, int circlesSize, int* circlesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountLatticePoints(int[][] circles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} circles\n * @return {number}\n */\nvar countLatticePoints = function(circles) {\n    \n};",
+    "typescript": "function countLatticePoints(circles: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $circles\n     * @return Integer\n     */\n    function countLatticePoints($circles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countLatticePoints(_ circles: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countLatticePoints(circles: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countLatticePoints(List<List<int>> circles) {\n    \n  }\n}",
+    "golang": "func countLatticePoints(circles [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} circles\n# @return {Integer}\ndef count_lattice_points(circles)\n    \nend",
+    "scala": "object Solution {\n    def countLatticePoints(circles: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_lattice_points(circles: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-lattice-points circles)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec count_lattice_points(Circles :: [[integer()]]) -> integer().\ncount_lattice_points(Circles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_lattice_points(circles :: [[integer]]) :: integer\n  def count_lattice_points(circles) do\n    \n  end\nend"
+  }
+}

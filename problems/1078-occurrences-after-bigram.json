@@ -1,0 +1,56 @@
+{
+  "title": "Occurrences After Bigram",
+  "problem_id": "1156",
+  "frontend_id": "1078",
+  "difficulty": "Easy",
+  "problem_slug": "occurrences-after-bigram",
+  "topics": [
+    "String"
+  ],
+  "description": "Given two strings first and second, consider occurrences in some text of the form \"first second third\", where second comes immediately after first, and third comes immediately after second.\nReturn an array of all the words third for each occurrence of \"first second third\".\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"alice is a good girl she is a good student\", first = \"a\", second = \"good\"\nOutput: [\"girl\",\"student\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"we will we will rock you\", first = \"we\", second = \"will\"\nOutput: [\"we\",\"rock\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 1000",
+    "text consists of lowercase English letters and spaces.",
+    "All the words in text are separated by a single space.",
+    "1 <= first.length, second.length <= 10",
+    "first and second consist of lowercase English letters.",
+    "text will not have any leading or trailing spaces."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Split the string into words, then look at adjacent triples of words."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> findOcurrences(string text, string first, string second) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] findOcurrences(String text, String first, String second) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findOcurrences(self, text, first, second):\n        \"\"\"\n        :type text: str\n        :type first: str\n        :type second: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findOcurrences(self, text: str, first: str, second: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findOcurrences(char* text, char* first, char* second, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] FindOcurrences(string text, string first, string second) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @param {string} first\n * @param {string} second\n * @return {string[]}\n */\nvar findOcurrences = function(text, first, second) {\n    \n};",
+    "typescript": "function findOcurrences(text: string, first: string, second: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @param String $first\n     * @param String $second\n     * @return String[]\n     */\n    function findOcurrences($text, $first, $second) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findOcurrences(_ text: String, _ first: String, _ second: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findOcurrences(text: String, first: String, second: String): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> findOcurrences(String text, String first, String second) {\n    \n  }\n}",
+    "golang": "func findOcurrences(text string, first string, second string) []string {\n    \n}",
+    "ruby": "# @param {String} text\n# @param {String} first\n# @param {String} second\n# @return {String[]}\ndef find_ocurrences(text, first, second)\n    \nend",
+    "scala": "object Solution {\n    def findOcurrences(text: String, first: String, second: String): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_ocurrences(text: String, first: String, second: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (find-ocurrences text first second)\n  (-> string? string? string? (listof string?))\n  )",
+    "erlang": "-spec find_ocurrences(Text :: unicode:unicode_binary(), First :: unicode:unicode_binary(), Second :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nfind_ocurrences(Text, First, Second) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_ocurrences(text :: String.t, first :: String.t, second :: String.t) :: [String.t]\n  def find_ocurrences(text, first, second) do\n    \n  end\nend"
+  }
+}

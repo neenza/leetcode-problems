@@ -1,0 +1,55 @@
+{
+  "title": "Make Array Elements Equal to Zero",
+  "problem_id": "3616",
+  "frontend_id": "3354",
+  "difficulty": "Easy",
+  "problem_slug": "make-array-elements-equal-to-zero",
+  "topics": [
+    "Array",
+    "Simulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums.\nStart by selecting a starting position curr such that nums[curr] == 0, and choose a movement direction of either left or right.\nAfter that, you repeat the following process:\nA selection of the initial position curr and movement direction is considered valid if every element in nums becomes 0 by the end of the process.\nReturn the number of possible valid selections.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,2,0,3]\nOutput: 2\nExplanation:\nThe only possible valid selections are the following:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,4,0,4,1,0]\nOutput: 0\nExplanation:\nThere are no possible valid selections.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 100",
+    "There is at least one element i where nums[i] == 0."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since the constraints are very small, you can simulate the process described."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countValidSelections(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countValidSelections(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countValidSelections(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countValidSelections(self, nums: List[int]) -> int:\n        ",
+    "c": "int countValidSelections(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountValidSelections(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countValidSelections = function(nums) {\n    \n};",
+    "typescript": "function countValidSelections(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countValidSelections($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countValidSelections(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countValidSelections(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countValidSelections(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countValidSelections(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_valid_selections(nums)\n    \nend",
+    "scala": "object Solution {\n    def countValidSelections(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_valid_selections(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-valid-selections nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_valid_selections(Nums :: [integer()]) -> integer().\ncount_valid_selections(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_valid_selections(nums :: [integer]) :: integer\n  def count_valid_selections(nums) do\n    \n  end\nend"
+  }
+}

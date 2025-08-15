@@ -1,0 +1,55 @@
+{
+  "title": "Pass the Pillow",
+  "problem_id": "2645",
+  "frontend_id": "2582",
+  "difficulty": "Easy",
+  "problem_slug": "pass-the-pillow",
+  "topics": [
+    "Math",
+    "Simulation"
+  ],
+  "description": "There are n people standing in a line labeled from 1 to n. The first person in the line is holding a pillow initially. Every second, the person holding the pillow passes it to the next person standing in the line. Once the pillow reaches the end of the line, the direction changes, and people continue passing the pillow in the opposite direction.\nGiven the two positive integers n and time, return the index of the person holding the pillow after time seconds.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as  3178: Find the Child Who Has the Ball After K Seconds.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, time = 5\nOutput: 2\nExplanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.\nAfter five seconds, the 2nd person is holding the pillow.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, time = 2\nOutput: 3\nExplanation: People pass the pillow in the following way: 1 -> 2 -> 3.\nAfter two seconds, the 3rd person is holding the pillow.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "1 <= time <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain two integer variables, direction and i, where direction denotes the current direction in which the pillow should pass, and i denotes an index of the person holding the pillow.",
+    "While time is positive, update the current index with the current direction. If the index reaches the end of the line, multiply direction by - 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int passThePillow(int n, int time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int passThePillow(int n, int time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def passThePillow(self, n, time):\n        \"\"\"\n        :type n: int\n        :type time: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def passThePillow(self, n: int, time: int) -> int:\n        ",
+    "c": "int passThePillow(int n, int time) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PassThePillow(int n, int time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} time\n * @return {number}\n */\nvar passThePillow = function(n, time) {\n    \n};",
+    "typescript": "function passThePillow(n: number, time: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $time\n     * @return Integer\n     */\n    function passThePillow($n, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func passThePillow(_ n: Int, _ time: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun passThePillow(n: Int, time: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int passThePillow(int n, int time) {\n    \n  }\n}",
+    "golang": "func passThePillow(n int, time int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} time\n# @return {Integer}\ndef pass_the_pillow(n, time)\n    \nend",
+    "scala": "object Solution {\n    def passThePillow(n: Int, time: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn pass_the_pillow(n: i32, time: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (pass-the-pillow n time)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec pass_the_pillow(N :: integer(), Time :: integer()) -> integer().\npass_the_pillow(N, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec pass_the_pillow(n :: integer, time :: integer) :: integer\n  def pass_the_pillow(n, time) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nWe are given the number of people in the line and the number of seconds it takes each person to pass the pillow, and we need to determine who will be holding the pillow after a certain amount of time has passed. Solving this challenge helps us understand how to model and solve problems involving cyclic or repetitive processes.\n\n---\n\n### Approach 1: Simulation\n\n#### Intuition\n\nThe direction the pillow travels is determined by its current position and previous direction. If the pillow is with the first person, it can only move forward. If it is with the last person, it can only move backward. For all other positions, the movement direction follows the previous direction: it continues forward if it was moving forward, and continues backward if it was moving backward.\n\nLet's simulate the pillow's movement, starting with the first person and moving it from left to right. We change direction if the pillow reaches the end of the line. The index of the person holding the pillow after the total time time has elapsed is the final answer.\n\n> Note: `direction = 1` indicates movement towards the right, along the positive x-axis, while `direction = -1` indicates movement towards the left, along the negative x-axis.\n\n!?!../Documents/2582/pass_the_pillow.json:3000,1687!?!\n\n#### Algorithm\n\n  - Start with the pillow at the first person (`currentPillowPosition = 1`).\n  - Begin counting time from `0` (`currentTime = 0`).\n  - Set the initial direction of movement towards the end of the line (`direction = 1`).\n  - Enter a loop that runs until `currentTime` is less than `time`.\n  - Check if moving in the current direction (`direction`) will keep the pillow within the line boundaries (`1` to `n`):\n    - Move the pillow to the next position (`currentPillowPosition + direction`).\n    - Increment the current time (`currentTime++`) since one second has passed.\n    - Reverse the direction of movement (`direction *= -1`) if moving out of bounds.\n  - After simulating for `time` seconds, return `currentPillowPosition`, which identifies the person holding the pillow after `time` seconds.\n\n#### Implementation#### Complexity Analysis\n\nLet $T$ be the amount of time given by the input.\n\n* Time complexity: $O(T)$. \n    \n    The algorithm runs a loop `T` times, with each iteration representing one second. It continues until `current_time` equals `time`, resulting in a time complexity of $O(T)$.\n\n* Space complexity: $O(1)$. \n\n    The algorithm only uses a fixed number of variables (`current_pillow_position`, `current_time`, and `direction`). These variables take up a constant amount of space, and no additional space is used. Therefore, the space complexity is constant, or $O(1)$.\n\n---\n\n### Approach 2: Math\n\n#### Intuition\n\nTo understand how the pillow moves among the people in line, let's understand the pattern of its movement. The pillow completes a full round when it travels from the first person to the last or vice versa. Each complete round takes `n - 1` seconds, where `n` is the total number of people.\n\nTo determine how many complete rounds the pillow makes within a given time `time`, we divide `time` by `n - 1`. This gives us `fullRounds`, representing the number of times the pillow moves from one end of the line to the other. The remainder of this division, `extraTime = time % (n - 1)`, indicates the extra time left after completing these full rounds.\n\nNow, let's consider the direction of the pillow's movement:\n- If `fullRounds` is even, the pillow moves forward along the line.\n- If `fullRounds` is odd, the pillow moves backward. This directional change occurs after each complete round.\n\nIn the case of forward movement (`fullRounds` is even), the person holding the pillow after the extra time will be positioned at `extraTime + 1` (since we start counting positions from one). Conversely, during backward movement (`fullRounds` is odd), the person holding the pillow will be at position `n - extraTime`.\n\n#### Algorithm\n\n- `fullRounds = time / (n - 1)` calculates how many complete rounds of passing occur.\n- `extraTime = time % (n - 1)` calculates the remaining time after complete rounds.\n- Check if `fullRounds % 2 == 0`:\n  - If true, calculate the position as `extraTime + 1`.\n  - If false, calculate the position as `n - extraTime`.\n- Return the position determined in the above step, which indicates the person holding the pillow after `time` seconds.\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity: $O(1)$. \n    \n    Regardless of the size of the input, we always perform a fixed number of operations thus the time complexity is $O(1)$.\n\n* Space complexity: $O(1)$. \n    \n    Regardless of the size of the input, we only use a fixed number of auxiliary variables (`full_rounds` and `extra_time`), thus the space complexity is $O(1)$.\n\n---"
+}

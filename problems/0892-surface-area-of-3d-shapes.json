@@ -1,0 +1,65 @@
+{
+  "title": "Surface Area of 3D Shapes",
+  "problem_id": "928",
+  "frontend_id": "892",
+  "difficulty": "Easy",
+  "problem_slug": "surface-area-of-3d-shapes",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Matrix"
+  ],
+  "description": "You are given an n x n grid where you have placed some 1 x 1 x 1 cubes. Each value v = grid[i][j] represents a tower of v cubes placed on top of cell (i, j).\nAfter placing these cubes, you have decided to glue any directly adjacent cubes to each other, forming several irregular 3D shapes.\nReturn the total surface area of the resulting shapes.\nNote: The bottom face of each shape counts toward its surface area.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2],[3,4]]\nOutput: 34",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/08/tmp-grid2.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[1,0,1],[1,1,1]]\nOutput: 32",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/08/tmp-grid4.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[2,2,2],[2,1,2],[2,2,2]]\nOutput: 46",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/08/tmp-grid5.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "1 <= n <= 50",
+    "0 <= grid[i][j] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int surfaceArea(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int surfaceArea(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def surfaceArea(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def surfaceArea(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int surfaceArea(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SurfaceArea(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar surfaceArea = function(grid) {\n    \n};",
+    "typescript": "function surfaceArea(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function surfaceArea($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func surfaceArea(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun surfaceArea(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int surfaceArea(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func surfaceArea(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef surface_area(grid)\n    \nend",
+    "scala": "object Solution {\n    def surfaceArea(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn surface_area(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (surface-area grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec surface_area(Grid :: [[integer()]]) -> integer().\nsurface_area(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec surface_area(grid :: [[integer]]) :: integer\n  def surface_area(grid) do\n    \n  end\nend"
+  }
+}

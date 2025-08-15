@@ -1,0 +1,69 @@
+{
+  "title": "Minimize the Difference Between Target and Chosen Elements",
+  "problem_id": "2108",
+  "frontend_id": "1981",
+  "difficulty": "Medium",
+  "problem_slug": "minimize-the-difference-between-target-and-chosen-elements",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer matrix mat and an integer target.\nChoose one integer from each row in the matrix such that the absolute difference between target and the sum of the chosen elements is minimized.\nReturn the minimum absolute difference.\nThe absolute difference between two numbers a and b is the absolute value of a - b.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]], target = 13\nOutput: 0\nExplanation: One possible choice is to:\n- Choose 1 from the first row.\n- Choose 5 from the second row.\n- Choose 7 from the third row.\nThe sum of the chosen elements is 13, which equals the target, so the absolute difference is 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/03/matrix1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[1],[2],[3]], target = 100\nOutput: 94\nExplanation: The best possible choice is to:\n- Choose 1 from the first row.\n- Choose 2 from the second row.\n- Choose 3 from the third row.\nThe sum of the chosen elements is 6, and the absolute difference is 94.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/03/matrix1-1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: mat = [[1,2,9,8,7]], target = 6\nOutput: 1\nExplanation: The best choice is to choose 7 from the first row.\nThe absolute difference is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/03/matrix1-3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 70",
+    "1 <= mat[i][j] <= 70",
+    "1 <= target <= 800"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The sum of chosen elements will not be too large. Consider using a hash set to record all possible sums while iterating each row.",
+    "Instead of keeping track of all possible sums, since in each row, we are adding positive numbers, only keep those that can be a candidate, not exceeding the target by too much."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimizeTheDifference(vector<vector<int>>& mat, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimizeTheDifference(int[][] mat, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimizeTheDifference(self, mat, target):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimizeTheDifference(self, mat: List[List[int]], target: int) -> int:\n        ",
+    "c": "int minimizeTheDifference(int** mat, int matSize, int* matColSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimizeTheDifference(int[][] mat, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} target\n * @return {number}\n */\nvar minimizeTheDifference = function(mat, target) {\n    \n};",
+    "typescript": "function minimizeTheDifference(mat: number[][], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @param Integer $target\n     * @return Integer\n     */\n    function minimizeTheDifference($mat, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimizeTheDifference(_ mat: [[Int]], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimizeTheDifference(mat: Array<IntArray>, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimizeTheDifference(List<List<int>> mat, int target) {\n    \n  }\n}",
+    "golang": "func minimizeTheDifference(mat [][]int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @param {Integer} target\n# @return {Integer}\ndef minimize_the_difference(mat, target)\n    \nend",
+    "scala": "object Solution {\n    def minimizeTheDifference(mat: Array[Array[Int]], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimize_the_difference(mat: Vec<Vec<i32>>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimize-the-difference mat target)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimize_the_difference(Mat :: [[integer()]], Target :: integer()) -> integer().\nminimize_the_difference(Mat, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimize_the_difference(mat :: [[integer]], target :: integer) :: integer\n  def minimize_the_difference(mat, target) do\n    \n  end\nend"
+  }
+}

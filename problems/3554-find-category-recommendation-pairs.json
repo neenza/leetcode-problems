@@ -1,0 +1,48 @@
+{
+  "title": "Find Category Recommendation Pairs",
+  "problem_id": "3891",
+  "frontend_id": "3554",
+  "difficulty": "Hard",
+  "problem_slug": "find-category-recommendation-pairs",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: ProductPurchases\nTable: ProductInfo\nAmazon wants to understand shopping patterns across product categories. Write a solution to:\nA category pair is considered reportable if at least 3 different customers have purchased products from both categories.\nReturn the result table of reportable category pairs ordered by customer_count in descending order, and in case of a tie, by category1 in ascending order lexicographically, and then by category2 in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type | \n+-------------+------+\n| user_id     | int  |\n| product_id  | int  |\n| quantity    | int  |\n+-------------+------+\n(user_id, product_id) is the unique identifier for this table. \nEach row represents a purchase of a product by a user in a specific quantity.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    | \n+-------------+---------+\n| product_id  | int     |\n| category    | varchar |\n| price       | decimal |\n+-------------+---------+\nproduct_id is the unique identifier for this table.\nEach row assigns a category and price to a product.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------+------------+----------+\n| user_id | product_id | quantity |\n+---------+------------+----------+\n| 1       | 101        | 2        |\n| 1       | 102        | 1        |\n| 1       | 201        | 3        |\n| 1       | 301        | 1        |\n| 2       | 101        | 1        |\n| 2       | 102        | 2        |\n| 2       | 103        | 1        |\n| 2       | 201        | 5        |\n| 3       | 101        | 2        |\n| 3       | 103        | 1        |\n| 3       | 301        | 4        |\n| 3       | 401        | 2        |\n| 4       | 101        | 1        |\n| 4       | 201        | 3        |\n| 4       | 301        | 1        |\n| 4       | 401        | 2        |\n| 5       | 102        | 2        |\n| 5       | 103        | 1        |\n| 5       | 201        | 2        |\n| 5       | 202        | 3        |\n+---------+------------+----------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+------------+-------------+-------+\n| product_id | category    | price |\n+------------+-------------+-------+\n| 101        | Electronics | 100   |\n| 102        | Books       | 20    |\n| 103        | Books       | 35    |\n| 201        | Clothing    | 45    |\n| 202        | Clothing    | 60    |\n| 301        | Sports      | 75    |\n| 401        | Kitchen     | 50    |\n+------------+-------------+-------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+-------------+-------------+----------------+\n| category1   | category2   | customer_count |\n+-------------+-------------+----------------+\n| Books       | Clothing    | 3              |\n| Books       | Electronics | 3              |\n| Clothing    | Electronics | 3              |\n| Electronics | Sports      | 3              |\n+-------------+-------------+----------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_category_recommendation_pairs(product_purchases: pd.DataFrame, product_info: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

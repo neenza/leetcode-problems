@@ -1,0 +1,78 @@
+{
+  "title": "Maximum Good Subtree Score",
+  "problem_id": "3875",
+  "frontend_id": "3575",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-good-subtree-score",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Tree",
+    "Depth-First Search",
+    "Bitmask"
+  ],
+  "description": "You are given an undirected tree rooted at node 0 with n nodes numbered from 0 to n - 1. Each node i has an integer value vals[i], and its parent is given by par[i].\nA subset of nodes within the subtree of a node is called good if every digit from 0 to 9 appears at most once in the decimal representation of the values of the selected nodes.\nThe score of a good subset is the sum of the values of its nodes.\nDefine an array maxScore of length n, where maxScore[u] represents the maximum possible sum of values of a good subset of nodes that belong to the subtree rooted at node u, including u itself and all its descendants.\nReturn the sum of all values in maxScore.\nSince the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: vals = [2,3], par = [-1,0]\nOutput: 8\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/screenshot-2025-04-29-at-150754.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: vals = [1,5,2], par = [-1,0,0]\nOutput: 15\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/screenshot-2025-04-29-at-151408.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: vals = [34,1,2], par = [-1,0,1]\nOutput: 42\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/screenshot-2025-04-29-at-151747.png"
+      ]
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: vals = [3,22,5], par = [-1,0,1]\nOutput: 18\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == vals.length <= 500",
+    "1 <= vals[i] <= 109",
+    "par.length == n",
+    "par[0] == -1",
+    "0 <= par[i] < n for i in [1, n - 1]",
+    "The input is generated such that the parent array par represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use tree dynamic programming.",
+    "Use bits (integer) to represent which digits are used."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int goodSubtreeSum(vector<int>& vals, vector<int>& par) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int goodSubtreeSum(int[] vals, int[] par) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def goodSubtreeSum(self, vals, par):\n        \"\"\"\n        :type vals: List[int]\n        :type par: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def goodSubtreeSum(self, vals: List[int], par: List[int]) -> int:\n        ",
+    "c": "int goodSubtreeSum(int* vals, int valsSize, int* par, int parSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GoodSubtreeSum(int[] vals, int[] par) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} vals\n * @param {number[]} par\n * @return {number}\n */\nvar goodSubtreeSum = function(vals, par) {\n    \n};",
+    "typescript": "function goodSubtreeSum(vals: number[], par: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $vals\n     * @param Integer[] $par\n     * @return Integer\n     */\n    function goodSubtreeSum($vals, $par) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func goodSubtreeSum(_ vals: [Int], _ par: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun goodSubtreeSum(vals: IntArray, par: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int goodSubtreeSum(List<int> vals, List<int> par) {\n    \n  }\n}",
+    "golang": "func goodSubtreeSum(vals []int, par []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} vals\n# @param {Integer[]} par\n# @return {Integer}\ndef good_subtree_sum(vals, par)\n    \nend",
+    "scala": "object Solution {\n    def goodSubtreeSum(vals: Array[Int], par: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn good_subtree_sum(vals: Vec<i32>, par: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (good-subtree-sum vals par)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec good_subtree_sum(Vals :: [integer()], Par :: [integer()]) -> integer().\ngood_subtree_sum(Vals, Par) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec good_subtree_sum(vals :: [integer], par :: [integer]) :: integer\n  def good_subtree_sum(vals, par) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Encode and Decode TinyURL",
+  "problem_id": "535",
+  "frontend_id": "535",
+  "difficulty": "Medium",
+  "problem_slug": "encode-and-decode-tinyurl",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Design",
+    "Hash Function"
+  ],
+  "description": "TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk. Design a class to encode a URL and decode a tiny URL.\nThere is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.\nImplement the Solution class:\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: url = \"https://leetcode.com/problems/design-tinyurl\"\nOutput: \"https://leetcode.com/problems/design-tinyurl\"\n\nExplanation:\nSolution obj = new Solution();\nstring tiny = obj.encode(url); // returns the encoded tiny url.\nstring ans = obj.decode(tiny); // returns the original url after decoding it.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= url.length <= 104",
+    "url is guranteed to be a valid URL."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n\n    // Encodes a URL to a shortened URL.\n    string encode(string longUrl) {\n        \n    }\n\n    // Decodes a shortened URL to its original URL.\n    string decode(string shortUrl) {\n        \n    }\n};\n\n// Your Solution object will be instantiated and called as such:\n// Solution solution;\n// solution.decode(solution.encode(url));",
+    "java": "public class Codec {\n\n    // Encodes a URL to a shortened URL.\n    public String encode(String longUrl) {\n        \n    }\n\n    // Decodes a shortened URL to its original URL.\n    public String decode(String shortUrl) {\n        \n    }\n}\n\n// Your Codec object will be instantiated and called as such:\n// Codec codec = new Codec();\n// codec.decode(codec.encode(url));",
+    "python": "class Codec:\n\n    def encode(self, longUrl):\n        \"\"\"Encodes a URL to a shortened URL.\n        \n        :type longUrl: str\n        :rtype: str\n        \"\"\"\n        \n\n    def decode(self, shortUrl):\n        \"\"\"Decodes a shortened URL to its original URL.\n        \n        :type shortUrl: str\n        :rtype: str\n        \"\"\"\n        \n\n# Your Codec object will be instantiated and called as such:\n# codec = Codec()\n# codec.decode(codec.encode(url))",
+    "python3": "class Codec:\n\n    def encode(self, longUrl: str) -> str:\n        \"\"\"Encodes a URL to a shortened URL.\n        \"\"\"\n        \n\n    def decode(self, shortUrl: str) -> str:\n        \"\"\"Decodes a shortened URL to its original URL.\n        \"\"\"\n        \n\n# Your Codec object will be instantiated and called as such:\n# codec = Codec()\n# codec.decode(codec.encode(url))",
+    "c": "/** Encodes a URL to a shortened URL. */\nchar* encode(char* longUrl) {\n    \n}\n\n/** Decodes a shortened URL to its original URL. */\nchar* decode(char* shortUrl) {\n    \n}\n\n// Your functions will be called as such:\n// char* s = encode(s);\n// decode(s);",
+    "csharp": "public class Codec {\n\n    // Encodes a URL to a shortened URL\n    public string encode(string longUrl) {\n        \n    }\n\n    // Decodes a shortened URL to its original URL.\n    public string decode(string shortUrl) {\n        \n    }\n}\n\n// Your Codec object will be instantiated and called as such:\n// Codec codec = new Codec();\n// codec.decode(codec.encode(url));",
+    "javascript": "/**\n * Encodes a URL to a shortened URL.\n *\n * @param {string} longUrl\n * @return {string}\n */\nvar encode = function(longUrl) {\n    \n};\n\n/**\n * Decodes a shortened URL to its original URL.\n *\n * @param {string} shortUrl\n * @return {string}\n */\nvar decode = function(shortUrl) {\n    \n};\n\n/**\n * Your functions will be called as such:\n * decode(encode(url));\n */",
+    "typescript": "/**\n * Encodes a URL to a shortened URL.\n */\nfunction encode(longUrl: string): string {\n\t\n};\n\n/**\n * Decodes a shortened URL to its original URL.\n */\nfunction decode(shortUrl: string): string {\n\t\n};\n\n/**\n * Your functions will be called as such:\n * decode(encode(strs));\n */",
+    "php": "class Codec {\n    /**\n     * Encodes a URL to a shortened URL.\n     * @param String $longUrl\n     * @return String\n     */\n    function encode($longUrl) {\n        \n    }\n    \n    /**\n     * Decodes a shortened URL to its original URL.\n     * @param String $shortUrl\n     * @return String\n     */\n    function decode($shortUrl) {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * $obj = Codec();\n * $s = $obj->encode($longUrl);\n * $ans = $obj->decode($s);\n */",
+    "swift": "class Codec {\n    // Encodes a URL to a shortened URL.\n    func encode(_ longUrl: String) -> String {\n        \n    }\n    \n    // Decodes a shortened URL to its original URL.\n    func decode(_ shortUrl: String) -> String {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * let obj = Codec()\n * val s = obj.encode(longUrl)\n * let ans = obj.decode(s)\n*/",
+    "kotlin": "class Codec() {\n    // Encodes a URL to a shortened URL.\n    fun encode(longUrl: String): String {\n        \n    }\n\n    // Decodes a shortened URL to its original URL.\n    fun decode(shortUrl: String): String {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * var obj = Codec()\n * var url = obj.encode(longUrl)\n * var ans = obj.decode(url)\n */",
+    "golang": "type Codec struct {\n    \n}\n\n\nfunc Constructor() Codec {\n    \n}\n\n// Encodes a URL to a shortened URL.\nfunc (this *Codec) encode(longUrl string) string {\n\t\n}\n\n// Decodes a shortened URL to its original URL.\nfunc (this *Codec) decode(shortUrl string) string {\n    \n}\n\n\n/**\n * Your Codec object will be instantiated and called as such:\n * obj := Constructor();\n * url := obj.encode(longUrl);\n * ans := obj.decode(url);\n */\n",
+    "ruby": "# Encodes a URL to a shortened URL.\n#\n# @param {string} longUrl\n# @return {string}\ndef encode(longUrl)\n    \nend\n\n# Decodes a shortened URL to its original URL.\n#\n# @param {string} shortUrl\n# @return {string}\ndef decode(shortUrl)\n    \nend\n\n\n# Your functions will be called as such:\n# decode(encode(url))",
+    "scala": "class Codec {\n    // Encodes a URL to a shortened URL.\n    def encode(longURL: String): String = {\n        \n    }\n    \n    // Decodes a shortened URL to its original URL.\n    def decode(shortURL: String): String = {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * var obj = new Codec()\n * val s = obj.encode(longURL)\n * val ans = obj.decode(s)\n */",
+    "rust": "struct Codec {\n\t\n}\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl Codec {\n    fn new() -> Self {\n        \n    }\n\t\n    // Encodes a URL to a shortened URL.\n    fn encode(&self, longURL: String) -> String {\n        \n    }\n\t\n    // Decodes a shortened URL to its original URL.\n    fn decode(&self, shortURL: String) -> String {\n        \n    }\n}\n\n/**\n * Your Codec object will be instantiated and called as such:\n * let obj = Codec::new();\n * let s: String = obj.encode(strs);\n * let ans: VecVec<String> = obj.decode(s);\n */"
+  }
+}

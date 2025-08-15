@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Matrix Sum",
+  "problem_id": "2089",
+  "frontend_id": "1975",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-matrix-sum",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "description": "You are given an n x n integer matrix. You can do the following operation any number of times:\nTwo elements are considered adjacent if and only if they share a border.\nYour goal is to maximize the summation of the matrix's elements. Return the maximum sum of the matrix's elements using the operation mentioned above.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,-1],[-1,1]]\nOutput: 4\nExplanation: We can follow the following steps to reach sum equals 4:\n- Multiply the 2 elements in the first row by -1.\n- Multiply the 2 elements in the first column by -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/16/pc79-q2ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,2,3],[-1,-2,-3],[1,2,3]]\nOutput: 16\nExplanation: We can follow the following step to reach sum equals 16:\n- Multiply the 2 last elements in the second row by -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/16/pc79-q2ex2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == matrix.length == matrix[i].length",
+    "2 <= n <= 250",
+    "-105 <= matrix[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to use the operation so that each row has only one negative number.",
+    "If you have only one negative element you cannot convert it to positive."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxMatrixSum(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxMatrixSum(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxMatrixSum(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxMatrixSum(self, matrix: List[List[int]]) -> int:\n        ",
+    "c": "long long maxMatrixSum(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxMatrixSum(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number}\n */\nvar maxMatrixSum = function(matrix) {\n    \n};",
+    "typescript": "function maxMatrixSum(matrix: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer\n     */\n    function maxMatrixSum($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxMatrixSum(_ matrix: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxMatrixSum(matrix: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxMatrixSum(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func maxMatrixSum(matrix [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer}\ndef max_matrix_sum(matrix)\n    \nend",
+    "scala": "object Solution {\n    def maxMatrixSum(matrix: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_matrix_sum(matrix: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-matrix-sum matrix)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_matrix_sum(Matrix :: [[integer()]]) -> integer().\nmax_matrix_sum(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_matrix_sum(matrix :: [[integer]]) :: integer\n  def max_matrix_sum(matrix) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Journey From Minus to Plus\n\n#### Intuition\n\nTo maximize the matrix sum, let’s first imagine the ideal situation: if every element in the matrix were positive, we would have the highest possible sum. Since we can flip pairs of adjacent elements by multiplying them by -1, we could, in theory, make all values positive if we wanted. So, we start by calculating the sum of the absolute values of all elements, as this would be the ideal maximum sum if all elements were positive.\n\nNext, we need to think about when flipping doesn’t work perfectly. Specifically, if there’s an odd number of negative elements, it won’t be possible to make everything positive because one negative will always remain. This observation leads us to a simple rule: if there’s an even count of negative numbers, we can flip them all to positive values. But if the count is odd, one number has to stay negative, which means the sum can’t be quite as high as in the ideal case.\n\nTo minimize the impact of this remaining negative, we want it to be the smallest number in the matrix. So, while calculating the absolute sum, we also track the smallest absolute value. This way, if we end up with an odd count of negatives, we can subtract twice this smallest value from the total. This subtraction accounts for the one unavoidable negative element and keeps the final sum as high as possible.Why subtract twice the smallest absolute value? (Click Here!)For an odd count of negative numbers, flipping a negative number to positive adds that number's absolute value to the total sum. For example, if we had flipped -1 to +1, it would increase the sum by +1. However, since we can't flip this number (due to the odd count of negatives), we need to \"remove\" this potential gain. This is why we subtract twice the smallest absolute value: once to account for the gain we didn’t get and again because we didn’t flip it.!?!../Documents/1975/1975_maximum_matrix_sum.json:760,680!?!\n\n#### Algorithm\n\n- Initialize `totalSum` to 0, `minAbsVal` to `INT_MAX`, and `negativeCount` to 0 to store the sum of absolute values, track the smallest absolute value, and count the number of negative elements, respectively.\n\n- For each row in `matrix`:\n  - For each `val` in the row:\n    - Add the absolute value of `val` to `totalSum` to accumulate the absolute sum.\n    - If `val` is negative, increment `negativeCount`.\n    - Update `minAbsVal` to the smaller of `minAbsVal` and `abs(val)`.\n\n- After traversing the matrix, check if `negativeCount` is odd:\n  - If it is, subtract `2 * minAbsVal` from `totalSum` to adjust for the odd number of negatives, ensuring the maximum possible matrix sum.\n\n- Return `totalSum`, which now represents the maximum achievable matrix sum after adjustments.\n\n#### Implementation#### Complexity Analysis\n\nLet `n` be the number of rows and `m` be the number of columns in the matrix.\n\n- Time complexity: $O(n \\times m)$\n\n    The algorithm iterates through each element in the matrix, performing constant-time operations per element, resulting in an overall time complexity of $O(n \\times m)$.\n\n- Space complexity: $O(1)$\n\n    The algorithm uses a constant amount of space, independent of the size of the matrix, resulting in a space complexity of $O(1)$.\n\n---"
+}

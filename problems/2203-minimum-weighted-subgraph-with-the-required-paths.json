@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Weighted Subgraph With the Required Paths",
+  "problem_id": "2321",
+  "frontend_id": "2203",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-weighted-subgraph-with-the-required-paths",
+  "topics": [
+    "Graph",
+    "Shortest Path"
+  ],
+  "description": "You are given an integer n denoting the number of nodes of a weighted directed graph. The nodes are numbered from 0 to n - 1.\nYou are also given a 2D integer array edges where edges[i] = [fromi, toi, weighti] denotes that there exists a directed edge from fromi to toi with weight weighti.\nLastly, you are given three distinct integers src1, src2, and dest denoting three distinct nodes of the graph.\nReturn the minimum weight of a subgraph of the graph such that it is possible to reach dest from both src1 and src2 via a set of edges of this subgraph. In case such a subgraph does not exist, return -1.\nA subgraph is a graph whose vertices and edges are subsets of the original graph. The weight of a subgraph is the sum of weights of its constituent edges.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, edges = [[0,2,2],[0,5,6],[1,0,3],[1,4,5],[2,1,1],[2,3,3],[2,3,4],[3,4,2],[4,5,1]], src1 = 0, src2 = 1, dest = 5\nOutput: 9\nExplanation:\nThe above figure represents the input graph.\nThe blue edges represent one of the subgraphs that yield the optimal answer.\nNote that the subgraph [[1,0,3],[0,5,6]] also yields the optimal answer. It is not possible to get a subgraph with less weight satisfying all the constraints.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/02/17/example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1,1],[2,1,1]], src1 = 0, src2 = 1, dest = 2\nOutput: -1\nExplanation:\nThe above figure represents the input graph.\nIt can be seen that there does not exist any path from node 1 to node 2, hence there are no subgraphs satisfying all the constraints.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/02/17/example2-1drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 105",
+    "0 <= edges.length <= 105",
+    "edges[i].length == 3",
+    "0 <= fromi, toi, src1, src2, dest <= n - 1",
+    "fromi != toi",
+    "src1, src2, and dest are pairwise distinct.",
+    "1 <= weight[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider what the paths from src1 to dest and src2 to dest would look like in the optimal solution.",
+    "It can be shown that in an optimal solution, the two paths from src1 and src2 will coincide at one node, and the remaining part to dest will be the same for both paths. Now consider how to find the node where the paths will coincide.",
+    "How can algorithms for finding the shortest path between two nodes help us?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumWeight(int n, vector<vector<int>>& edges, int src1, int src2, int dest) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumWeight(int n, int[][] edges, int src1, int src2, int dest) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumWeight(self, n, edges, src1, src2, dest):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type src1: int\n        :type src2: int\n        :type dest: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumWeight(self, n: int, edges: List[List[int]], src1: int, src2: int, dest: int) -> int:\n        ",
+    "c": "long long minimumWeight(int n, int** edges, int edgesSize, int* edgesColSize, int src1, int src2, int dest) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumWeight(int n, int[][] edges, int src1, int src2, int dest) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} src1\n * @param {number} src2\n * @param {number} dest\n * @return {number}\n */\nvar minimumWeight = function(n, edges, src1, src2, dest) {\n    \n};",
+    "typescript": "function minimumWeight(n: number, edges: number[][], src1: number, src2: number, dest: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer $src1\n     * @param Integer $src2\n     * @param Integer $dest\n     * @return Integer\n     */\n    function minimumWeight($n, $edges, $src1, $src2, $dest) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumWeight(_ n: Int, _ edges: [[Int]], _ src1: Int, _ src2: Int, _ dest: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumWeight(n: Int, edges: Array<IntArray>, src1: Int, src2: Int, dest: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumWeight(int n, List<List<int>> edges, int src1, int src2, int dest) {\n    \n  }\n}",
+    "golang": "func minimumWeight(n int, edges [][]int, src1 int, src2 int, dest int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer} src1\n# @param {Integer} src2\n# @param {Integer} dest\n# @return {Integer}\ndef minimum_weight(n, edges, src1, src2, dest)\n    \nend",
+    "scala": "object Solution {\n    def minimumWeight(n: Int, edges: Array[Array[Int]], src1: Int, src2: Int, dest: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_weight(n: i32, edges: Vec<Vec<i32>>, src1: i32, src2: i32, dest: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-weight n edges src1 src2 dest)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_weight(N :: integer(), Edges :: [[integer()]], Src1 :: integer(), Src2 :: integer(), Dest :: integer()) -> integer().\nminimum_weight(N, Edges, Src1, Src2, Dest) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_weight(n :: integer, edges :: [[integer]], src1 :: integer, src2 :: integer, dest :: integer) :: integer\n  def minimum_weight(n, edges, src1, src2, dest) do\n    \n  end\nend"
+  }
+}

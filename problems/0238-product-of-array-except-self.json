@@ -1,0 +1,57 @@
+{
+  "title": "Product of Array Except Self",
+  "problem_id": "238",
+  "frontend_id": "238",
+  "difficulty": "Medium",
+  "problem_slug": "product-of-array-except-self",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\nYou must write an algorithm that runs in O(n) time and without using the division operation.\nExample 1:\nExample 2:\nConstraints:\nFollow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: [24,12,8,6]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,1,0,-3,3]\nOutput: [0,0,9,0,0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "-30 <= nums[i] <= 30",
+    "The input is generated such that answer[i] is guaranteed to fit in a 32-bit integer."
+  ],
+  "follow_ups": [
+    "Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)"
+  ],
+  "hints": [
+    "Think how you can efficiently utilize prefix and suffix products to calculate the product of all elements except self for each index. Can you pre-compute the prefix and suffix products in linear time to avoid redundant calculations?",
+    "Can you minimize additional space usage by reusing memory or modifying the input array to store intermediate results?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def productExceptSelf(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def productExceptSelf(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* productExceptSelf(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ProductExceptSelf(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar productExceptSelf = function(nums) {\n    \n};",
+    "typescript": "function productExceptSelf(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function productExceptSelf($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func productExceptSelf(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun productExceptSelf(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> productExceptSelf(List<int> nums) {\n    \n  }\n}",
+    "golang": "func productExceptSelf(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef product_except_self(nums)\n    \nend",
+    "scala": "object Solution {\n    def productExceptSelf(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (product-except-self nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec product_except_self(Nums :: [integer()]) -> [integer()].\nproduct_except_self(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec product_except_self(nums :: [integer]) :: [integer]\n  def product_except_self(nums) do\n    \n  end\nend"
+  }
+}

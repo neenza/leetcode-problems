@@ -1,0 +1,62 @@
+{
+  "title": "Flood Fill",
+  "problem_id": "733",
+  "frontend_id": "733",
+  "difficulty": "Easy",
+  "problem_slug": "flood-fill",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given an image represented by an m x n grid of integers image, where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and color. Your task is to perform a flood fill on the image starting from the pixel image[sr][sc].\nTo perform a flood fill:\nReturn the modified image after performing the flood fill.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2\nOutput: [[2,2,2],[2,2,0],[2,0,1]]\nExplanation:\n\nFrom the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.\nNote the bottom corner is not colored 2, because it is not horizontally or vertically connected to the starting pixel.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/01/flood1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0\nOutput: [[0,0,0],[0,0,0]]\nExplanation:\nThe starting pixel is already colored with 0, which is the same as the target color. Therefore, no changes are made to the image.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == image.length",
+    "n == image[i].length",
+    "1 <= m, n <= 50",
+    "0 <= image[i][j], color < 216",
+    "0 <= sr < m",
+    "0 <= sc < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Write a recursive function that paints the pixel if it's the correct color, then recurses on neighboring pixels."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] floodFill(int[][] image, int sr, int sc, int color) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def floodFill(self, image, sr, sc, color):\n        \"\"\"\n        :type image: List[List[int]]\n        :type sr: int\n        :type sc: int\n        :type color: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** floodFill(int** image, int imageSize, int* imageColSize, int sr, int sc, int color, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] FloodFill(int[][] image, int sr, int sc, int color) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} image\n * @param {number} sr\n * @param {number} sc\n * @param {number} color\n * @return {number[][]}\n */\nvar floodFill = function(image, sr, sc, color) {\n    \n};",
+    "typescript": "function floodFill(image: number[][], sr: number, sc: number, color: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $image\n     * @param Integer $sr\n     * @param Integer $sc\n     * @param Integer $color\n     * @return Integer[][]\n     */\n    function floodFill($image, $sr, $sc, $color) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func floodFill(_ image: [[Int]], _ sr: Int, _ sc: Int, _ color: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun floodFill(image: Array<IntArray>, sr: Int, sc: Int, color: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> floodFill(List<List<int>> image, int sr, int sc, int color) {\n    \n  }\n}",
+    "golang": "func floodFill(image [][]int, sr int, sc int, color int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} image\n# @param {Integer} sr\n# @param {Integer} sc\n# @param {Integer} color\n# @return {Integer[][]}\ndef flood_fill(image, sr, sc, color)\n    \nend",
+    "scala": "object Solution {\n    def floodFill(image: Array[Array[Int]], sr: Int, sc: Int, color: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn flood_fill(image: Vec<Vec<i32>>, sr: i32, sc: i32, color: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (flood-fill image sr sc color)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec flood_fill(Image :: [[integer()]], Sr :: integer(), Sc :: integer(), Color :: integer()) -> [[integer()]].\nflood_fill(Image, Sr, Sc, Color) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec flood_fill(image :: [[integer]], sr :: integer, sc :: integer, color :: integer) :: [[integer]]\n  def flood_fill(image, sr, sc, color) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1: Depth-First Search [Accepted]\n\n**Intuition**\n\nWe perform the algorithm explained in the problem description: paint the starting pixels, plus adjacent pixels of the same color, and so on.\n\n**Algorithm**\n\nSay `color` is the color of the starting pixel. Let's flood fill the starting pixel: we change the color of that pixel to the new color, then check the 4 neighboring pixels to make sure they are valid pixels of the same `color`, and of the valid ones, we flood fill those, and so on.\n\nWe can use a function `dfs` to perform a flood fill on a target pixel.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the number of pixels in the image. We might process every pixel.\n\n* Space Complexity: $$O(N)$$, the size of the implicit call stack when calling `dfs`."
+}

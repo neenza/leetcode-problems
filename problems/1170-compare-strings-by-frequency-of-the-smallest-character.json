@@ -1,0 +1,59 @@
+{
+  "title": "Compare Strings by Frequency of the Smallest Character",
+  "problem_id": "1273",
+  "frontend_id": "1170",
+  "difficulty": "Medium",
+  "problem_slug": "compare-strings-by-frequency-of-the-smallest-character",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "Let the function f(s) be the frequency of the lexicographically smallest character in a non-empty string s. For example, if s = \"dcce\" then f(s) = 2 because the lexicographically smallest character is 'c', which has a frequency of 2.\nYou are given an array of strings words and another array of query strings queries. For each query queries[i], count the number of words in words such that f(queries[i]) < f(W) for each W in words.\nReturn an integer array answer, where each answer[i] is the answer to the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [\"cbd\"], words = [\"zaaaz\"]\nOutput: [1]\nExplanation: On the first query we have f(\"cbd\") = 1, f(\"zaaaz\") = 3 so f(\"cbd\") < f(\"zaaaz\").",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [\"bbb\",\"cc\"], words = [\"a\",\"aa\",\"aaa\",\"aaaa\"]\nOutput: [1,2]\nExplanation: On the first query only f(\"bbb\") < f(\"aaaa\"). On the second query both f(\"aaa\") and f(\"aaaa\") are both > f(\"cc\").",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= queries.length <= 2000",
+    "1 <= words.length <= 2000",
+    "1 <= queries[i].length, words[i].length <= 10",
+    "queries[i][j], words[i][j] consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each string from words calculate the leading count and store it in an array, then sort the integer array.",
+    "For each string from queries calculate the leading count \"p\" and in base of the sorted array calculated on the step 1 do a binary search to count the number of items greater than \"p\"."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numSmallerByFrequency(String[] queries, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSmallerByFrequency(self, queries, words):\n        \"\"\"\n        :type queries: List[str]\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numSmallerByFrequency(char** queries, int queriesSize, char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] NumSmallerByFrequency(string[] queries, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} queries\n * @param {string[]} words\n * @return {number[]}\n */\nvar numSmallerByFrequency = function(queries, words) {\n    \n};",
+    "typescript": "function numSmallerByFrequency(queries: string[], words: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $queries\n     * @param String[] $words\n     * @return Integer[]\n     */\n    function numSmallerByFrequency($queries, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSmallerByFrequency(_ queries: [String], _ words: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSmallerByFrequency(queries: Array<String>, words: Array<String>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> numSmallerByFrequency(List<String> queries, List<String> words) {\n    \n  }\n}",
+    "golang": "func numSmallerByFrequency(queries []string, words []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} queries\n# @param {String[]} words\n# @return {Integer[]}\ndef num_smaller_by_frequency(queries, words)\n    \nend",
+    "scala": "object Solution {\n    def numSmallerByFrequency(queries: Array[String], words: Array[String]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_smaller_by_frequency(queries: Vec<String>, words: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (num-smaller-by-frequency queries words)\n  (-> (listof string?) (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec num_smaller_by_frequency(Queries :: [unicode:unicode_binary()], Words :: [unicode:unicode_binary()]) -> [integer()].\nnum_smaller_by_frequency(Queries, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_smaller_by_frequency(queries :: [String.t], words :: [String.t]) :: [integer]\n  def num_smaller_by_frequency(queries, words) do\n    \n  end\nend"
+  }
+}

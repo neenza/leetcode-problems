@@ -1,0 +1,60 @@
+{
+  "title": "Check if a String Is an Acronym of Words",
+  "problem_id": "2977",
+  "frontend_id": "2828",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-a-string-is-an-acronym-of-words",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "Given an array of strings words and a string s, determine if s is an acronym of words.\nThe string s is considered an acronym of words if it can be formed by concatenating the first character of each string in words in order. For example, \"ab\" can be formed from [\"apple\", \"banana\"], but it can't be formed from [\"bear\", \"aardvark\"].\nReturn true if s is an acronym of words, and false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"alice\",\"bob\",\"charlie\"], s = \"abc\"\nOutput: true\nExplanation: The first character in the words \"alice\", \"bob\", and \"charlie\" are 'a', 'b', and 'c', respectively. Hence, s = \"abc\" is the acronym.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"an\",\"apple\"], s = \"a\"\nOutput: false\nExplanation: The first character in the words \"an\" and \"apple\" are 'a' and 'a', respectively. \nThe acronym formed by concatenating these characters is \"aa\". \nHence, s = \"a\" is not the acronym.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"never\",\"gonna\",\"give\",\"up\",\"on\",\"you\"], s = \"ngguoy\"\nOutput: true\nExplanation: By concatenating the first character of the words in the array, we get the string \"ngguoy\". \nHence, s = \"ngguoy\" is the acronym.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 10",
+    "1 <= s.length <= 100",
+    "words[i] and s consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">Concatenate the first characters of the strings in <code>words</code>, and compare the resulting concatenation to <code>s</code>.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isAcronym(vector<string>& words, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isAcronym(List<String> words, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isAcronym(self, words, s):\n        \"\"\"\n        :type words: List[str]\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isAcronym(self, words: List[str], s: str) -> bool:\n        ",
+    "c": "bool isAcronym(char** words, int wordsSize, char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsAcronym(IList<string> words, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} s\n * @return {boolean}\n */\nvar isAcronym = function(words, s) {\n    \n};",
+    "typescript": "function isAcronym(words: string[], s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $s\n     * @return Boolean\n     */\n    function isAcronym($words, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isAcronym(_ words: [String], _ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isAcronym(words: List<String>, s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isAcronym(List<String> words, String s) {\n    \n  }\n}",
+    "golang": "func isAcronym(words []string, s string) bool {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} s\n# @return {Boolean}\ndef is_acronym(words, s)\n    \nend",
+    "scala": "object Solution {\n    def isAcronym(words: List[String], s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_acronym(words: Vec<String>, s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-acronym words s)\n  (-> (listof string?) string? boolean?)\n  )",
+    "erlang": "-spec is_acronym(Words :: [unicode:unicode_binary()], S :: unicode:unicode_binary()) -> boolean().\nis_acronym(Words, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_acronym(words :: [String.t], s :: String.t) :: boolean\n  def is_acronym(words, s) do\n    \n  end\nend"
+  }
+}

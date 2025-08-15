@@ -1,0 +1,54 @@
+{
+  "title": "Distribute Money to Maximum Children",
+  "problem_id": "2663",
+  "frontend_id": "2591",
+  "difficulty": "Easy",
+  "problem_slug": "distribute-money-to-maximum-children",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given an integer money denoting the amount of money (in dollars) that you have and another integer children denoting the number of children that you must distribute the money to.\nYou have to distribute the money according to the following rules:\nReturn the maximum number of children who may receive exactly 8 dollars if you distribute the money according to the aforementioned rules. If there is no way to distribute the money, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: money = 20, children = 3\nOutput: 1\nExplanation: \nThe maximum number of children with 8 dollars will be 1. One of the ways to distribute the money is:\n- 8 dollars to the first child.\n- 9 dollars to the second child. \n- 3 dollars to the third child.\nIt can be proven that no distribution exists such that number of children getting 8 dollars is greater than 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: money = 16, children = 2\nOutput: 2\nExplanation: Each child can be given 8 dollars.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= money <= 200",
+    "2 <= children <= 30"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we distribute the money according to the rules if we give 'k' children exactly 8 dollars?",
+    "Brute force to find the largest possible value of k, or return -1 if there doesn’t exist any such k."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distMoney(int money, int children) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distMoney(int money, int children) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distMoney(self, money, children):\n        \"\"\"\n        :type money: int\n        :type children: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distMoney(self, money: int, children: int) -> int:\n        ",
+    "c": "int distMoney(int money, int children) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistMoney(int money, int children) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} money\n * @param {number} children\n * @return {number}\n */\nvar distMoney = function(money, children) {\n    \n};",
+    "typescript": "function distMoney(money: number, children: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $money\n     * @param Integer $children\n     * @return Integer\n     */\n    function distMoney($money, $children) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distMoney(_ money: Int, _ children: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distMoney(money: Int, children: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distMoney(int money, int children) {\n    \n  }\n}",
+    "golang": "func distMoney(money int, children int) int {\n    \n}",
+    "ruby": "# @param {Integer} money\n# @param {Integer} children\n# @return {Integer}\ndef dist_money(money, children)\n    \nend",
+    "scala": "object Solution {\n    def distMoney(money: Int, children: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn dist_money(money: i32, children: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (dist-money money children)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec dist_money(Money :: integer(), Children :: integer()) -> integer().\ndist_money(Money, Children) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec dist_money(money :: integer, children :: integer) :: integer\n  def dist_money(money, children) do\n    \n  end\nend"
+  }
+}

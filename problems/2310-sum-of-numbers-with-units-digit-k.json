@@ -1,0 +1,61 @@
+{
+  "title": "Sum of Numbers With Units Digit K",
+  "problem_id": "1334",
+  "frontend_id": "2310",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-numbers-with-units-digit-k",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Greedy",
+    "Enumeration"
+  ],
+  "description": "Given two integers num and k, consider a set of positive integers with the following properties:\nReturn the minimum possible size of such a set, or -1 if no such set exists.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 58, k = 9\nOutput: 2\nExplanation:\nOne valid set is [9,49], as the sum is 58 and each integer has a units digit of 9.\nAnother valid set is [19,39].\nIt can be shown that 2 is the minimum possible size of a valid set.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 37, k = 2\nOutput: -1\nExplanation: It is not possible to obtain a sum of 37 using only integers that have a units digit of 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = 0, k = 7\nOutput: 0\nExplanation: The sum of an empty set is considered 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= num <= 3000",
+    "0 <= k <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try solving this recursively.",
+    "Create a method that takes an integer x as a parameter. This method returns the minimum possible size of a set where each number has units digit k and the sum of the numbers in the set is x."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumNumbers(int num, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumNumbers(int num, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumNumbers(self, num, k):\n        \"\"\"\n        :type num: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumNumbers(self, num: int, k: int) -> int:\n        ",
+    "c": "int minimumNumbers(int num, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumNumbers(int num, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @param {number} k\n * @return {number}\n */\nvar minimumNumbers = function(num, k) {\n    \n};",
+    "typescript": "function minimumNumbers(num: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @param Integer $k\n     * @return Integer\n     */\n    function minimumNumbers($num, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumNumbers(_ num: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumNumbers(num: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumNumbers(int num, int k) {\n    \n  }\n}",
+    "golang": "func minimumNumbers(num int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @param {Integer} k\n# @return {Integer}\ndef minimum_numbers(num, k)\n    \nend",
+    "scala": "object Solution {\n    def minimumNumbers(num: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_numbers(num: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-numbers num k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_numbers(Num :: integer(), K :: integer()) -> integer().\nminimum_numbers(Num, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_numbers(num :: integer, k :: integer) :: integer\n  def minimum_numbers(num, k) do\n    \n  end\nend"
+  }
+}

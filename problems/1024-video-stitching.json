@@ -1,0 +1,61 @@
+{
+  "title": "Video Stitching",
+  "problem_id": "1081",
+  "frontend_id": "1024",
+  "difficulty": "Medium",
+  "problem_slug": "video-stitching",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a series of video clips from a sporting event that lasted time seconds. These video clips can be overlapping with each other and have varying lengths.\nEach video clip is described by an array clips where clips[i] = [starti, endi] indicates that the ith clip started at starti and ended at endi.\nWe can cut these clips into segments freely.\nReturn the minimum number of clips needed so that we can cut the clips into segments that cover the entire sporting event [0, time]. If the task is impossible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], time = 10\nOutput: 3\nExplanation: We take the clips [0,2], [8,10], [1,9]; a total of 3 clips.\nThen, we can reconstruct the sporting event as follows:\nWe cut [1,9] into segments [1,2] + [2,8] + [8,9].\nNow we have segments [0,2] + [2,8] + [8,10] which cover the sporting event [0, 10].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: clips = [[0,1],[1,2]], time = 5\nOutput: -1\nExplanation: We cannot cover [0,5] with only [0,1] and [1,2].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: clips = [[0,1],[6,8],[0,2],[5,6],[0,4],[0,3],[6,7],[1,3],[4,7],[1,4],[2,5],[2,6],[3,4],[4,5],[5,7],[6,9]], time = 9\nOutput: 3\nExplanation: We can take clips [0,4], [4,7], and [6,9].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= clips.length <= 100",
+    "0 <= starti <= endi <= 100",
+    "1 <= time <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What if we sort the intervals?  Considering the sorted intervals, how can we solve the problem with dynamic programming?",
+    "Let's consider a DP(pos, limit) where pos represents the position of the current interval we are gonna take the decision and limit is the current covered area from [0 - limit]. This DP returns the minimum number of taken intervals or infinite if it's not possible to cover the [0 - T] section."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int videoStitching(vector<vector<int>>& clips, int time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int videoStitching(int[][] clips, int time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def videoStitching(self, clips, time):\n        \"\"\"\n        :type clips: List[List[int]]\n        :type time: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def videoStitching(self, clips: List[List[int]], time: int) -> int:\n        ",
+    "c": "int videoStitching(int** clips, int clipsSize, int* clipsColSize, int time) {\n    \n}",
+    "csharp": "public class Solution {\n    public int VideoStitching(int[][] clips, int time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} clips\n * @param {number} time\n * @return {number}\n */\nvar videoStitching = function(clips, time) {\n    \n};",
+    "typescript": "function videoStitching(clips: number[][], time: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $clips\n     * @param Integer $time\n     * @return Integer\n     */\n    function videoStitching($clips, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func videoStitching(_ clips: [[Int]], _ time: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun videoStitching(clips: Array<IntArray>, time: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int videoStitching(List<List<int>> clips, int time) {\n    \n  }\n}",
+    "golang": "func videoStitching(clips [][]int, time int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} clips\n# @param {Integer} time\n# @return {Integer}\ndef video_stitching(clips, time)\n    \nend",
+    "scala": "object Solution {\n    def videoStitching(clips: Array[Array[Int]], time: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn video_stitching(clips: Vec<Vec<i32>>, time: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (video-stitching clips time)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec video_stitching(Clips :: [[integer()]], Time :: integer()) -> integer().\nvideo_stitching(Clips, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec video_stitching(clips :: [[integer]], time :: integer) :: integer\n  def video_stitching(clips, time) do\n    \n  end\nend"
+  }
+}

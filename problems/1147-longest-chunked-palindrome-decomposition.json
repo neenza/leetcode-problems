@@ -1,0 +1,63 @@
+{
+  "title": "Longest Chunked Palindrome Decomposition",
+  "problem_id": "1251",
+  "frontend_id": "1147",
+  "difficulty": "Hard",
+  "problem_slug": "longest-chunked-palindrome-decomposition",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Rolling Hash",
+    "Hash Function"
+  ],
+  "description": "You are given a string text. You should split it to k substrings (subtext1, subtext2, ..., subtextk) such that:\nReturn the largest possible value of k.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"ghiabcdefhelloadamhelloabcdefghi\"\nOutput: 7\nExplanation: We can split the string on \"(ghi)(abcdef)(hello)(adam)(hello)(abcdef)(ghi)\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"merchant\"\nOutput: 1\nExplanation: We can split the string on \"(merchant)\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: text = \"antaprezatepzapreanta\"\nOutput: 11\nExplanation: We can split the string on \"(a)(nt)(a)(pre)(za)(tep)(za)(pre)(a)(nt)(a)\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 1000",
+    "text consists only of lowercase English characters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Using a rolling hash, we can quickly check whether two strings are equal.",
+    "Use that as the basis of a dp."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestDecomposition(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestDecomposition(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestDecomposition(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestDecomposition(self, text: str) -> int:\n        ",
+    "c": "int longestDecomposition(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestDecomposition(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar longestDecomposition = function(text) {\n    \n};",
+    "typescript": "function longestDecomposition(text: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return Integer\n     */\n    function longestDecomposition($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestDecomposition(_ text: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestDecomposition(text: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestDecomposition(String text) {\n    \n  }\n}",
+    "golang": "func longestDecomposition(text string) int {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {Integer}\ndef longest_decomposition(text)\n    \nend",
+    "scala": "object Solution {\n    def longestDecomposition(text: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_decomposition(text: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-decomposition text)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec longest_decomposition(Text :: unicode:unicode_binary()) -> integer().\nlongest_decomposition(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_decomposition(text :: String.t) :: integer\n  def longest_decomposition(text) do\n    \n  end\nend"
+  }
+}

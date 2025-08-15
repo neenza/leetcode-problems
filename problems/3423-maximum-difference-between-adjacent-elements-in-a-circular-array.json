@@ -1,0 +1,54 @@
+{
+  "title": "Maximum Difference Between Adjacent Elements in a Circular Array",
+  "problem_id": "3747",
+  "frontend_id": "3423",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-difference-between-adjacent-elements-in-a-circular-array",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given a circular array nums, find the maximum absolute difference between adjacent elements.\nNote: In a circular array, the first and last elements are adjacent.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,4]\nOutput: 3\nExplanation:\nBecause nums is circular, nums[0] and nums[2] are adjacent. They have the maximum absolute difference of |4 - 1| = 3 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-5,-10,-5]\nOutput: 5\nExplanation:\nThe adjacent elements nums[0] and nums[1] have the maximum absolute difference of |-5 - (-10)| = 5 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Traverse from the second element to the last element and check the difference of every adjacent pair.",
+    "The edge case is to check the difference between the first and last elements."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxAdjacentDistance(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxAdjacentDistance(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxAdjacentDistance(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxAdjacentDistance(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxAdjacentDistance(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxAdjacentDistance(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxAdjacentDistance = function(nums) {\n    \n};",
+    "typescript": "function maxAdjacentDistance(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxAdjacentDistance($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxAdjacentDistance(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxAdjacentDistance(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxAdjacentDistance(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxAdjacentDistance(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_adjacent_distance(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxAdjacentDistance(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_adjacent_distance(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-adjacent-distance nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_adjacent_distance(Nums :: [integer()]) -> integer().\nmax_adjacent_distance(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_adjacent_distance(nums :: [integer]) :: integer\n  def max_adjacent_distance(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Traversal\n\n#### Intuition\n\nFirst, calculate the absolute difference between the first and last elements to initialize the maximum absolute difference. Then, traverse the array to calculate the absolute difference between adjacent elements and update the answer.\n\nFinally, return the maximum absolute difference in the circular array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array.\n\n- Time complexity: $O(n)$.\n  \n  Only need to traverse the array once.\n\n- Space complexity: $O(1)$.\n  \n  Only a few additional variables are needed."
+}

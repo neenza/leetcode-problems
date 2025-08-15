@@ -1,0 +1,53 @@
+{
+  "title": "Sum of Subsequence Widths",
+  "problem_id": "927",
+  "frontend_id": "891",
+  "difficulty": "Hard",
+  "problem_slug": "sum-of-subsequence-widths",
+  "topics": [
+    "Array",
+    "Math",
+    "Sorting"
+  ],
+  "description": "The width of a sequence is the difference between the maximum and minimum elements in the sequence.\nGiven an array of integers nums, return the sum of the widths of all the non-empty subsequences of nums. Since the answer may be very large, return it modulo 109 + 7.\nA subsequence is a sequence that can be derived from an array by deleting some or no elements without changing the order of the remaining elements. For example, [3,6,2,7] is a subsequence of the array [0,3,1,6,2,2,7].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,3]\nOutput: 6\nExplanation: The subsequences are [1], [2], [3], [2,1], [2,3], [1,3], [2,1,3].\nThe corresponding widths are 0, 0, 0, 1, 1, 2, 2.\nThe sum of these widths is 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumSubseqWidths(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumSubseqWidths(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumSubseqWidths(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumSubseqWidths(self, nums: List[int]) -> int:\n        ",
+    "c": "int sumSubseqWidths(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumSubseqWidths(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumSubseqWidths = function(nums) {\n    \n};",
+    "typescript": "function sumSubseqWidths(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function sumSubseqWidths($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumSubseqWidths(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumSubseqWidths(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumSubseqWidths(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sumSubseqWidths(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef sum_subseq_widths(nums)\n    \nend",
+    "scala": "object Solution {\n    def sumSubseqWidths(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_subseq_widths(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-subseq-widths nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec sum_subseq_widths(Nums :: [integer()]) -> integer().\nsum_subseq_widths(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_subseq_widths(nums :: [integer]) :: integer\n  def sum_subseq_widths(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\r\n\r\n## Solution\r\n---\r\n### Approach 1: Mathematical\r\n\r\n**Intuition**\r\n\r\nLet's try to count the number of subsequences with minimum `A[i]` and maximum `A[j]`.\r\n\r\n**Algorithm**\r\n\r\nWe can sort the array as it doesn't change the answer.  After sorting the array, this allows us to know that the number of subsequences with minimum `A[i]` and maximum `A[j]` is $$2^{j-i-1}$$.  Hence, the desired answer is:\r\n\r\n$$\r\n\\sum\\limits_{j > i} (2^{j-i-1}) (A_j - A_i)\r\n$$\r\n\r\n$$\r\n= \\big( \\sum\\limits_{i = 0}^{n-2} \\sum\\limits_{j = i+1}^{n-1} (2^{j-i-1}) (A_j) \\big) - \\big( \\sum\\limits_{i = 0}^{n-2} \\sum\\limits_{j = i+1}^{n-1} (2^{j-i-1}) (A_i) \\big)\r\n$$\r\n\r\n$$\r\n= \\big( (2^0 A_1 + 2^1 A_2 + 2^2 A_3 + \\cdots) + (2^0 A_2 + 2^1 A_3 + \\cdots) + (2^0 A_3 + 2^1 A_4 + \\cdots) + \\cdots \\big)\r\n$$\r\n$$\r\n - \\big( \\sum\\limits_{i = 0}^{n-2} (2^0 + 2^1 + \\cdots + 2^{N-i-2}) (A_i) \\big)\r\n$$\r\n\r\n$$\r\n= \\big( \\sum\\limits_{j = 1}^{n-1} (2^j - 1) A_j \\big) - \\big( \\sum\\limits_{i = 0}^{n-2} (2^{N-i-1} - 1) A_i \\big)\r\n$$\r\n\r\n$$\r\n= \\sum\\limits_{i = 0}^{n-1} \\big(((2^i - 1) A_i) - ((2^{N-i-1} - 1) A_i)\\big)\r\n$$\r\n\r\n$$\r\n= \\sum\\limits_{i = 0}^{n-1} (2^i - 2^{N-i-1}) A_i\r\n$$**Complexity Analysis**\r\n\r\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\r\n\r\n* Space Complexity:  $$O(N)$$, the space used by `pow2`.  (We can improve this to $$O(1)$$ space by calculating these powers on the fly.)"
+}

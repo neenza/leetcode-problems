@@ -1,0 +1,61 @@
+{
+  "title": "Count Substrings That Can Be Rearranged to Contain a String I",
+  "problem_id": "3573",
+  "frontend_id": "3297",
+  "difficulty": "Medium",
+  "problem_slug": "count-substrings-that-can-be-rearranged-to-contain-a-string-i",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given two strings word1 and word2.\nA string x is called valid if x can be rearranged to have word2 as a prefix.\nReturn the total number of valid substrings of word1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word1 = \"bcca\", word2 = \"abc\"\nOutput: 1\nExplanation:\nThe only valid substring is \"bcca\" which can be rearranged to \"abcc\" having \"abc\" as a prefix.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word1 = \"abcabc\", word2 = \"abc\"\nOutput: 10\nExplanation:\nAll the substrings except substrings of size 1 and size 2 are valid.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word1 = \"abcabc\", word2 = \"aaabc\"\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word1.length <= 105",
+    "1 <= word2.length <= 104",
+    "word1 and word2 consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Store the frequency of each character for all prefixes.",
+    "Use Binary Search."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long validSubstringCount(string word1, string word2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long validSubstringCount(String word1, String word2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validSubstringCount(self, word1, word2):\n        \"\"\"\n        :type word1: str\n        :type word2: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validSubstringCount(self, word1: str, word2: str) -> int:\n        ",
+    "c": "long long validSubstringCount(char* word1, char* word2) {\n    \n}",
+    "csharp": "public class Solution {\n    public long ValidSubstringCount(string word1, string word2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word1\n * @param {string} word2\n * @return {number}\n */\nvar validSubstringCount = function(word1, word2) {\n    \n};",
+    "typescript": "function validSubstringCount(word1: string, word2: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word1\n     * @param String $word2\n     * @return Integer\n     */\n    function validSubstringCount($word1, $word2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validSubstringCount(_ word1: String, _ word2: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validSubstringCount(word1: String, word2: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int validSubstringCount(String word1, String word2) {\n    \n  }\n}",
+    "golang": "func validSubstringCount(word1 string, word2 string) int64 {\n    \n}",
+    "ruby": "# @param {String} word1\n# @param {String} word2\n# @return {Integer}\ndef valid_substring_count(word1, word2)\n    \nend",
+    "scala": "object Solution {\n    def validSubstringCount(word1: String, word2: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_substring_count(word1: String, word2: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (valid-substring-count word1 word2)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec valid_substring_count(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> integer().\nvalid_substring_count(Word1, Word2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_substring_count(word1 :: String.t, word2 :: String.t) :: integer\n  def valid_substring_count(word1, word2) do\n    \n  end\nend"
+  }
+}

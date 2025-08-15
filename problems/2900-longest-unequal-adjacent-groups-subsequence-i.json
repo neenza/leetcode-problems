@@ -1,0 +1,61 @@
+{
+  "title": "Longest Unequal Adjacent Groups Subsequence I",
+  "problem_id": "3143",
+  "frontend_id": "2900",
+  "difficulty": "Easy",
+  "problem_slug": "longest-unequal-adjacent-groups-subsequence-i",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a string array words and a binary array groups both of length n.\nA subsequence of words is alternating if for any two consecutive strings in the sequence, their corresponding elements at the same indices in groups are different (that is, there cannot be consecutive 0 or 1).\nYour task is to select the longest alternating subsequence from words.\nReturn the selected subsequence. If there are multiple answers, return any of them.\nNote: The elements in words are distinct.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"e\",\"a\",\"b\"], groups = [0,0,1]\nOutput: [\"e\",\"b\"]\nExplanation: A subsequence that can be selected is [\"e\",\"b\"] because groups[0] != groups[2] . Another subsequence that can be selected is [\"a\",\"b\"] because groups[1] != groups[2] . It can be demonstrated that the length of the longest subsequence of indices that satisfies the condition is 2 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"b\",\"c\",\"d\"], groups = [1,0,1,1]\nOutput: [\"a\",\"b\",\"c\"]\nExplanation: A subsequence that can be selected is [\"a\",\"b\",\"c\"] because groups[0] != groups[1] and groups[1] != groups[2] . Another subsequence that can be selected is [\"a\",\"b\",\"d\"] because groups[0] != groups[1] and groups[1] != groups[3] . It can be shown that the length of the longest subsequence of indices that satisfies the condition is 3 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == words.length == groups.length <= 100",
+    "1 <= words[i].length <= 10",
+    "groups[i] is either 0 or 1.",
+    "words consists of distinct strings.",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "This problem can be solved greedily.",
+    "Begin by constructing the answer starting with the first number in <code>groups</code>.",
+    "For each index <code>i</code> in the range <code>[1, n - 1]</code>, add <code>i</code> to the answer if <code>groups[i] != groups[i - 1]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> getLongestSubsequence(vector<string>& words, vector<int>& groups) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> getLongestSubsequence(String[] words, int[] groups) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getLongestSubsequence(self, words, groups):\n        \"\"\"\n        :type words: List[str]\n        :type groups: List[int]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getLongestSubsequence(self, words: List[str], groups: List[int]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** getLongestSubsequence(char** words, int wordsSize, int* groups, int groupsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> GetLongestSubsequence(string[] words, int[] groups) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number[]} groups\n * @return {string[]}\n */\nvar getLongestSubsequence = function(words, groups) {\n    \n};",
+    "typescript": "function getLongestSubsequence(words: string[], groups: number[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer[] $groups\n     * @return String[]\n     */\n    function getLongestSubsequence($words, $groups) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getLongestSubsequence(_ words: [String], _ groups: [Int]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getLongestSubsequence(words: Array<String>, groups: IntArray): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> getLongestSubsequence(List<String> words, List<int> groups) {\n    \n  }\n}",
+    "golang": "func getLongestSubsequence(words []string, groups []int) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer[]} groups\n# @return {String[]}\ndef get_longest_subsequence(words, groups)\n    \nend",
+    "scala": "object Solution {\n    def getLongestSubsequence(words: Array[String], groups: Array[Int]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_longest_subsequence(words: Vec<String>, groups: Vec<i32>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (get-longest-subsequence words groups)\n  (-> (listof string?) (listof exact-integer?) (listof string?))\n  )",
+    "erlang": "-spec get_longest_subsequence(Words :: [unicode:unicode_binary()], Groups :: [integer()]) -> [unicode:unicode_binary()].\nget_longest_subsequence(Words, Groups) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_longest_subsequence(words :: [String.t], groups :: [integer]) :: [String.t]\n  def get_longest_subsequence(words, groups) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Dynamic Programming\n\n#### Intuition\n\nThe task is to find the **longest subsequence** in `groups` where adjacent elements are different. We can use dynamic programming, where $\\textit{dp}[i]$ represents the length of the longest valid subsequence ending at index $i$. Specifically, if an element before $i$ (say, at index $j$) satisfies $\\textit{groups}[i] \\neq \\textit{groups}[j]$ and $j < i$, then appending the $i$-th string after the $j$-th string yields $\\textit{dp}[i] = \\textit{dp}[j] + 1$. Based on this, we derive the following recurrence relation:\n\n$$\n\\textit{dp}[i] = \\max(\\textit{dp}[i], \\textit{dp}[j] + 1) \\quad \\text{if} \\quad \\textit{groups}[i] \\neq \\textit{groups}[j]\n$$\n\nBy this, for index $i$, we can enumerate all indices before $i$, thereby calculating the length of the **longest subsequence** ending with $i$, at which point we can find the **longest subsequence** in the entire array. To facilitate calculation, we use $\\textit{prev}[i]$ to record the index $j$ of the previous element in the **longest subsequence** for index $i$. When we find the ending index $i$ of the **longest subsequence**, we can find the entire sequence of indices by moving forward along $i$, and then add the string corresponding to each index to the array. The reversed result of the entire array is the answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the given array.\n\n- Time complexity: $O(n^2)$.\n  \n  Finding the length of the **longest subsequence** ending with index $i$ requires $O(n)$ time, and calculating the length of the **longest subsequence** ending with each index requires $O(n^2)$ time at this point.\n\n- Space complexity: $O(n)$.\n  \n  The required space is $O(n)$, which needs to store the length of the longest subsequence ending with each index.\n\n### Approach 2: Greedy\n\n#### Intuition\n\nThe task is to find the **longest subsequence** in `groups` where adjacent elements are different. Since the array `groups` contains only two possible values, `0` and `1`, the problem simplifies to removing consecutive duplicates. In other words, we can construct the longest valid subsequence by selecting just one representative element from each group of consecutive identical values. For example, given the input:\n\n$$\n[0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1]\n$$\n\nwe can break it into segments of consecutive identical elements:\n\n$$\n[[0, 0, 0], [1, 1, 1], [0], [1], [0], [1, 1, 1]]\n$$\n\nTo ensure adjacent elements in the resulting subsequence are different, we select a single index from each segment. In order to maximize the subsequence length, we must select exactly one index from every segment of identical elements. At the same time, we append the corresponding string from `words` to the result.\n\nFor ease of implementation, we can simply select either the leftmost or the rightmost index from each segment. For the array above, the index groups of identical values are:\n\n$$\n[[0,1,2], [3,4,5], [6], [7], [8], [9,10,11]]\n$$\n\nFrom these, we can construct two valid sets of indices by picking either:\n\n* The leftmost index of each segment:\n  $[0, 3, 6, 7, 8, 9]$\n\n* Or the rightmost index of each segment:\n  $[2, 5, 6, 7, 8, 11]$\n\nHere we choose the **leftmost** index from each segment and add the corresponding string from `words` to the final answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the given array.\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array once.\n\n- Space complexity: $O(1)$.\n  \n  In addition to the return value, no extra space is required."
+}

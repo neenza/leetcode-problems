@@ -1,0 +1,53 @@
+{
+  "title": "Find the Peaks",
+  "problem_id": "3221",
+  "frontend_id": "2951",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-peaks",
+  "topics": [
+    "Array",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed array mountain. Your task is to find all the peaks in the mountain array.\nReturn an array that consists of indices of peaks in the given array in any order.\nNotes:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mountain = [2,4,4]\nOutput: []\nExplanation: mountain[0] and mountain[2] can not be a peak because they are first and last elements of the array.\nmountain[1] also can not be a peak because it is not strictly greater than mountain[2].\nSo the answer is [].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mountain = [1,4,3,8,5]\nOutput: [1,3]\nExplanation: mountain[0] and mountain[4] can not be a peak because they are first and last elements of the array.\nmountain[2] also can not be a peak because it is not strictly greater than mountain[3] and mountain[1].\nBut mountain [1] and mountain[3] are strictly greater than their neighboring elements.\nSo the answer is [1,3].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= mountain.length <= 100",
+    "1 <= mountain[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If <code>nums[i] > num[i - 1]</code> and <code>nums[i] > nums[i + 1]</code> <code>nums[i]</code> is a peak."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findPeaks(vector<int>& mountain) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findPeaks(int[] mountain) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPeaks(self, mountain):\n        \"\"\"\n        :type mountain: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPeaks(self, mountain: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findPeaks(int* mountain, int mountainSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindPeaks(int[] mountain) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} mountain\n * @return {number[]}\n */\nvar findPeaks = function(mountain) {\n    \n};",
+    "typescript": "function findPeaks(mountain: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $mountain\n     * @return Integer[]\n     */\n    function findPeaks($mountain) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPeaks(_ mountain: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPeaks(mountain: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findPeaks(List<int> mountain) {\n    \n  }\n}",
+    "golang": "func findPeaks(mountain []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} mountain\n# @return {Integer[]}\ndef find_peaks(mountain)\n    \nend",
+    "scala": "object Solution {\n    def findPeaks(mountain: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_peaks(mountain: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-peaks mountain)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_peaks(Mountain :: [integer()]) -> [integer()].\nfind_peaks(Mountain) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_peaks(mountain :: [integer]) :: [integer]\n  def find_peaks(mountain) do\n    \n  end\nend"
+  }
+}

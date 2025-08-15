@@ -1,0 +1,56 @@
+{
+  "title": "Sort Colors",
+  "problem_id": "75",
+  "frontend_id": "75",
+  "difficulty": "Medium",
+  "problem_slug": "sort-colors",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "description": "Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\nWe will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.\nYou must solve this problem without using the library's sort function.\nExample 1:\nExample 2:\nConstraints:\nFollow up: Could you come up with a one-pass algorithm using only constant extra space?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,0,2,1,1,0]\nOutput: [0,0,1,1,2,2]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,0,1]\nOutput: [0,1,2]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 300",
+    "nums[i] is either 0, 1, or 2."
+  ],
+  "follow_ups": [
+    "Could you come up with a one-pass algorithm using only constant extra space?"
+  ],
+  "hints": [
+    "A rather straight forward solution is a two-pass algorithm using counting sort.",
+    "Iterate the array counting number of 0's, 1's, and 2's.",
+    "Overwrite array with the total number of 0's, then 1's and followed by 2's."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    void sortColors(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void sortColors(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortColors(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: None Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortColors(self, nums: List[int]) -> None:\n        \"\"\"\n        Do not return anything, modify nums in-place instead.\n        \"\"\"\n        ",
+    "c": "void sortColors(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public void SortColors(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar sortColors = function(nums) {\n    \n};",
+    "typescript": "/**\n Do not return anything, modify nums in-place instead.\n */\nfunction sortColors(nums: number[]): void {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return NULL\n     */\n    function sortColors(&$nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortColors(_ nums: inout [Int]) {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortColors(nums: IntArray): Unit {\n        \n    }\n}",
+    "dart": "class Solution {\n  void sortColors(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sortColors(nums []int)  {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Void} Do not return anything, modify nums in-place instead.\ndef sort_colors(nums)\n    \nend",
+    "scala": "object Solution {\n    def sortColors(nums: Array[Int]): Unit = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_colors(nums: &mut Vec<i32>) {\n        \n    }\n}"
+  }
+}

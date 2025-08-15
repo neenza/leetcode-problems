@@ -1,0 +1,63 @@
+{
+  "title": "Removing Minimum and Maximum From Array",
+  "problem_id": "2212",
+  "frontend_id": "2091",
+  "difficulty": "Medium",
+  "problem_slug": "removing-minimum-and-maximum-from-array",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed array of distinct integers nums.\nThere is an element in nums that has the lowest value and an element that has the highest value. We call them the minimum and maximum respectively. Your goal is to remove both these elements from the array.\nA deletion is defined as either removing an element from the front of the array or removing an element from the back of the array.\nReturn the minimum number of deletions it would take to remove both the minimum and maximum element from the array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,10,7,5,4,1,8,6]\nOutput: 5\nExplanation: \nThe minimum element in the array is nums[5], which is 1.\nThe maximum element in the array is nums[1], which is 10.\nWe can remove both the minimum and maximum by removing 2 elements from the front and 3 elements from the back.\nThis results in 2 + 3 = 5 deletions, which is the minimum number possible.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,-4,19,1,8,-2,-3,5]\nOutput: 3\nExplanation: \nThe minimum element in the array is nums[1], which is -4.\nThe maximum element in the array is nums[2], which is 19.\nWe can remove both the minimum and maximum by removing 3 elements from the front.\nThis results in only 3 deletions, which is the minimum number possible.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [101]\nOutput: 1\nExplanation:  \nThere is only one element in the array, which makes it both the minimum and maximum element.\nWe can remove it with 1 deletion.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-105 <= nums[i] <= 105",
+    "The integers in nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There can only be three scenarios for deletions such that both minimum and maximum elements are removed:",
+    "Scenario 1: Both elements are removed by only deleting from the front.",
+    "Scenario 2: Both elements are removed by only deleting from the back.",
+    "Scenario 3: Delete from the front to remove one of the elements, and delete from the back to remove the other element.",
+    "Compare which of the three scenarios results in the minimum number of moves."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumDeletions(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDeletions(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumDeletions(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumDeletions(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumDeletions(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumDeletions(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDeletions = function(nums) {\n    \n};",
+    "typescript": "function minimumDeletions(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumDeletions($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDeletions(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumDeletions(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDeletions(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumDeletions(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_deletions(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumDeletions(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_deletions(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-deletions nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_deletions(Nums :: [integer()]) -> integer().\nminimum_deletions(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_deletions(nums :: [integer]) :: integer\n  def minimum_deletions(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Count Vowels Permutation",
+  "problem_id": "1332",
+  "frontend_id": "1220",
+  "difficulty": "Hard",
+  "problem_slug": "count-vowels-permutation",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "description": "Given an integer n, your task is to count how many strings of length n can be formed under the following rules:\nSince the answer may be too large, return it modulo 10^9 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 5\nExplanation: All possible strings are: \"a\", \"e\", \"i\" , \"o\" and \"u\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 10\nExplanation: All possible strings are: \"ae\", \"ea\", \"ei\", \"ia\", \"ie\", \"io\", \"iu\", \"oi\", \"ou\" and \"ua\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5\nOutput: 68",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2 * 10^4"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "Let dp[i][j] be the number of strings of length i that ends with the j-th vowel.",
+    "Deduce the recurrence from the given relations between vowels."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countVowelPermutation(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countVowelPermutation(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countVowelPermutation(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countVowelPermutation(self, n: int) -> int:\n        ",
+    "c": "int countVowelPermutation(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountVowelPermutation(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countVowelPermutation = function(n) {\n    \n};",
+    "typescript": "function countVowelPermutation(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countVowelPermutation($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countVowelPermutation(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countVowelPermutation(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countVowelPermutation(int n) {\n    \n  }\n}",
+    "golang": "func countVowelPermutation(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_vowel_permutation(n)\n    \nend",
+    "scala": "object Solution {\n    def countVowelPermutation(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_vowel_permutation(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-vowel-permutation n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_vowel_permutation(N :: integer()) -> integer().\ncount_vowel_permutation(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_vowel_permutation(n :: integer) :: integer\n  def count_vowel_permutation(n) do\n    \n  end\nend"
+  }
+}

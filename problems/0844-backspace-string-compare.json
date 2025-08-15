@@ -1,0 +1,61 @@
+{
+  "title": "Backspace String Compare",
+  "problem_id": "874",
+  "frontend_id": "844",
+  "difficulty": "Easy",
+  "problem_slug": "backspace-string-compare",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.\nNote that after backspacing an empty text, the text will continue empty.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Can you solve it in O(n) time and O(1) space?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ab#c\", t = \"ad#c\"\nOutput: true\nExplanation: Both s and t become \"ac\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ab##\", t = \"c#d#\"\nOutput: true\nExplanation: Both s and t become \"\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"a#c\", t = \"b\"\nOutput: false\nExplanation: s becomes \"c\" while t becomes \"b\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 200",
+    "s and t only contain lowercase letters and '#' characters."
+  ],
+  "follow_ups": [
+    "Can you solve it in O(n) time and O(1) space?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool backspaceCompare(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean backspaceCompare(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def backspaceCompare(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def backspaceCompare(self, s: str, t: str) -> bool:\n        ",
+    "c": "bool backspaceCompare(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool BackspaceCompare(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar backspaceCompare = function(s, t) {\n    \n};",
+    "typescript": "function backspaceCompare(s: string, t: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Boolean\n     */\n    function backspaceCompare($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func backspaceCompare(_ s: String, _ t: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun backspaceCompare(s: String, t: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool backspaceCompare(String s, String t) {\n    \n  }\n}",
+    "golang": "func backspaceCompare(s string, t string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Boolean}\ndef backspace_compare(s, t)\n    \nend",
+    "scala": "object Solution {\n    def backspaceCompare(s: String, t: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn backspace_compare(s: String, t: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (backspace-compare s t)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec backspace_compare(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> boolean().\nbackspace_compare(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec backspace_compare(s :: String.t, t :: String.t) :: boolean\n  def backspace_compare(s, t) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Build String [Accepted]\n\n**Intuition**\n\nLet's individually build the result of each string (`build(S)` and `build(T)`), then compare if they are equal.\n\n**Algorithm**\n\nTo build the result of a string `build(S)`, we'll use a stack based approach, simulating the result of each keystroke.**Complexity Analysis**\n\n* Time Complexity:  $$O(M + N)$$, where $$M, N$$ are the lengths of `S` and `T` respectively.\n\n* Space Complexity:  $$O(M + N)$$.\n\n\n---\n### Approach #2: Two Pointer [Accepted]\n\n**Intuition**\n\nWhen writing a character, it may or may not be part of the final string depending on how many backspace keystrokes occur in the future.\n\nIf instead we iterate through the string in reverse, then we will know how many backspace characters we have seen, and therefore whether the result includes our character.\n\n**Algorithm**\n\nIterate through the string in reverse.  If we see a backspace character, the next non-backspace character is skipped.  If a character isn't skipped, it is part of the final answer.\n\nSee the comments in the code for more details.**Complexity Analysis**\n\n* Time Complexity:  $$O(M + N)$$, where $$M, N$$ are the lengths of `S` and `T` respectively.\n\n* Space Complexity:  $$O(1)$$."
+}

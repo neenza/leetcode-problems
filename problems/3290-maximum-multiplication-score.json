@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Multiplication Score",
+  "problem_id": "3518",
+  "frontend_id": "3290",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-multiplication-score",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array a of size 4 and another integer array b of size at least 4.\nYou need to choose 4 indices i0, i1, i2, and i3 from the array b such that i0 < i1 < i2 < i3. Your score will be equal to the value a[0] * b[i0] + a[1] * b[i1] + a[2] * b[i2] + a[3] * b[i3].\nReturn the maximum score you can achieve.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = [3,2,5,6], b = [2,-6,4,-5,-3,2,-7]\nOutput: 26\nExplanation: We can choose the indices 0, 1, 2, and 5. The score will be 3 * 2 + 2 * (-6) + 5 * 4 + 6 * 2 = 26 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = [-1,4,5,-2], b = [-5,-1,-3,-2,-4]\nOutput: -1\nExplanation: We can choose the indices 0, 1, 3, and 4. The score will be (-1) * (-5) + 4 * (-1) + 5 * (-2) + (-2) * (-4) = -1 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "a.length == 4",
+    "4 <= b.length <= 105",
+    "-105 <= a[i], b[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try using dynamic programming.",
+    "Consider a dp with the following states: The current position in the array b, and the number of indices considered."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& a, vector<int>& b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] a, int[] b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, a, b):\n        \"\"\"\n        :type a: List[int]\n        :type b: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, a: List[int], b: List[int]) -> int:\n        ",
+    "c": "long long maxScore(int* a, int aSize, int* b, int bSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxScore(int[] a, int[] b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} a\n * @param {number[]} b\n * @return {number}\n */\nvar maxScore = function(a, b) {\n    \n};",
+    "typescript": "function maxScore(a: number[], b: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $a\n     * @param Integer[] $b\n     * @return Integer\n     */\n    function maxScore($a, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ a: [Int], _ b: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(a: IntArray, b: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> a, List<int> b) {\n    \n  }\n}",
+    "golang": "func maxScore(a []int, b []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} a\n# @param {Integer[]} b\n# @return {Integer}\ndef max_score(a, b)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(a: Array[Int], b: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(a: Vec<i32>, b: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score a b)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_score(A :: [integer()], B :: [integer()]) -> integer().\nmax_score(A, B) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(a :: [integer], b :: [integer]) :: integer\n  def max_score(a, b) do\n    \n  end\nend"
+  }
+}

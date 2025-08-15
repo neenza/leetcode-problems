@@ -1,0 +1,69 @@
+{
+  "title": "Earliest Possible Day of Full Bloom",
+  "problem_id": "2257",
+  "frontend_id": "2136",
+  "difficulty": "Hard",
+  "problem_slug": "earliest-possible-day-of-full-bloom",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You have n flower seeds. Every seed must be planted first before it can begin to grow, then bloom. Planting a seed takes time and so does the growth of a seed. You are given two 0-indexed integer arrays plantTime and growTime, of length n each:\nFrom the beginning of day 0, you can plant the seeds in any order.\nReturn the earliest possible day where all seeds are blooming.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: plantTime = [1,4,3], growTime = [2,3,1]\nOutput: 9\nExplanation: The grayed out pots represent planting days, colored pots represent growing days, and the flower represents the day it blooms.\nOne optimal way is:\nOn day 0, plant the 0th seed. The seed grows for 2 full days and blooms on day 3.\nOn days 1, 2, 3, and 4, plant the 1st seed. The seed grows for 3 full days and blooms on day 8.\nOn days 5, 6, and 7, plant the 2nd seed. The seed grows for 1 full day and blooms on day 9.\nThus, on day 9, all the seeds are blooming.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/21/1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: plantTime = [1,2,3,2], growTime = [2,1,2,1]\nOutput: 9\nExplanation: The grayed out pots represent planting days, colored pots represent growing days, and the flower represents the day it blooms.\nOne optimal way is:\nOn day 1, plant the 0th seed. The seed grows for 2 full days and blooms on day 4.\nOn days 0 and 3, plant the 1st seed. The seed grows for 1 full day and blooms on day 5.\nOn days 2, 4, and 5, plant the 2nd seed. The seed grows for 2 full days and blooms on day 8.\nOn days 6 and 7, plant the 3rd seed. The seed grows for 1 full day and blooms on day 9.\nThus, on day 9, all the seeds are blooming.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/21/2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: plantTime = [1], growTime = [1]\nOutput: 2\nExplanation: On day 0, plant the 0th seed. The seed grows for 1 full day and blooms on day 2.\nThus, on day 2, all the seeds are blooming.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/21/2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == plantTime.length == growTime.length",
+    "1 <= n <= 105",
+    "1 <= plantTime[i], growTime[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "List the planting like the diagram above shows, where a row represents the timeline of a seed. A row i is above another row j if the last day planting seed i is ahead of the last day for seed j. Does it have any advantage to spend some days to plant seed j before completely planting seed i?",
+    "No. It does not help seed j but could potentially delay the completion of seed i, resulting in a worse final answer. Remaining focused is a part of the optimal solution.",
+    "Sort the seeds by their growTime in descending order. Can you prove why this strategy is the other part of the optimal solution? Note the bloom time of a seed is the sum of plantTime of all seeds preceding this seed plus the growTime of this seed.",
+    "There is no way to improve this strategy. The seed to bloom last dominates the final answer. Exchanging the planting of this seed with another seed with either a larger or smaller growTime will result in a potentially worse answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int earliestFullBloom(vector<int>& plantTime, vector<int>& growTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int earliestFullBloom(int[] plantTime, int[] growTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def earliestFullBloom(self, plantTime, growTime):\n        \"\"\"\n        :type plantTime: List[int]\n        :type growTime: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def earliestFullBloom(self, plantTime: List[int], growTime: List[int]) -> int:\n        ",
+    "c": "int earliestFullBloom(int* plantTime, int plantTimeSize, int* growTime, int growTimeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EarliestFullBloom(int[] plantTime, int[] growTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} plantTime\n * @param {number[]} growTime\n * @return {number}\n */\nvar earliestFullBloom = function(plantTime, growTime) {\n    \n};",
+    "typescript": "function earliestFullBloom(plantTime: number[], growTime: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $plantTime\n     * @param Integer[] $growTime\n     * @return Integer\n     */\n    function earliestFullBloom($plantTime, $growTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func earliestFullBloom(_ plantTime: [Int], _ growTime: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun earliestFullBloom(plantTime: IntArray, growTime: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int earliestFullBloom(List<int> plantTime, List<int> growTime) {\n    \n  }\n}",
+    "golang": "func earliestFullBloom(plantTime []int, growTime []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} plant_time\n# @param {Integer[]} grow_time\n# @return {Integer}\ndef earliest_full_bloom(plant_time, grow_time)\n    \nend",
+    "scala": "object Solution {\n    def earliestFullBloom(plantTime: Array[Int], growTime: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn earliest_full_bloom(plant_time: Vec<i32>, grow_time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (earliest-full-bloom plantTime growTime)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec earliest_full_bloom(PlantTime :: [integer()], GrowTime :: [integer()]) -> integer().\nearliest_full_bloom(PlantTime, GrowTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec earliest_full_bloom(plant_time :: [integer], grow_time :: [integer]) :: integer\n  def earliest_full_bloom(plant_time, grow_time) do\n    \n  end\nend"
+  }
+}

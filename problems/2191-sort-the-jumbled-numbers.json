@@ -1,0 +1,58 @@
+{
+  "title": "Sort the Jumbled Numbers",
+  "problem_id": "1333",
+  "frontend_id": "2191",
+  "difficulty": "Medium",
+  "problem_slug": "sort-the-jumbled-numbers",
+  "topics": [
+    "Array",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array mapping which represents the mapping rule of a shuffled decimal system. mapping[i] = j means digit i should be mapped to digit j in this system.\nThe mapped value of an integer is the new integer obtained by replacing each occurrence of digit i in the integer with mapping[i] for all 0 <= i <= 9.\nYou are also given another integer array nums. Return the array nums sorted in non-decreasing order based on the mapped values of its elements.\nNotes:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mapping = [8,9,4,0,2,1,3,5,7,6], nums = [991,338,38]\nOutput: [338,38,991]\nExplanation: \nMap the number 991 as follows:\n1. mapping[9] = 6, so all occurrences of the digit 9 will become 6.\n2. mapping[1] = 9, so all occurrences of the digit 1 will become 9.\nTherefore, the mapped value of 991 is 669.\n338 maps to 007, or 7 after removing the leading zeros.\n38 maps to 07, which is also 7 after removing leading zeros.\nSince 338 and 38 share the same mapped value, they should remain in the same relative order, so 338 comes before 38.\nThus, the sorted array is [338,38,991].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mapping = [0,1,2,3,4,5,6,7,8,9], nums = [789,456,123]\nOutput: [123,456,789]\nExplanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the sorted array is [123,456,789].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "mapping.length == 10",
+    "0 <= mapping[i] <= 9",
+    "All the values of mapping[i] are unique.",
+    "1 <= nums.length <= 3 * 104",
+    "0 <= nums[i] < 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Map the original numbers to new numbers by the mapping rule and sort the new numbers.",
+    "To maintain the same relative order for equal mapped values, use the index in the original input array as a tiebreaker."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] sortJumbled(int[] mapping, int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortJumbled(self, mapping, nums):\n        \"\"\"\n        :type mapping: List[int]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sortJumbled(int* mapping, int mappingSize, int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SortJumbled(int[] mapping, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} mapping\n * @param {number[]} nums\n * @return {number[]}\n */\nvar sortJumbled = function(mapping, nums) {\n    \n};",
+    "typescript": "function sortJumbled(mapping: number[], nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $mapping\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function sortJumbled($mapping, $nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortJumbled(_ mapping: [Int], _ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortJumbled(mapping: IntArray, nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sortJumbled(List<int> mapping, List<int> nums) {\n    \n  }\n}",
+    "golang": "func sortJumbled(mapping []int, nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} mapping\n# @param {Integer[]} nums\n# @return {Integer[]}\ndef sort_jumbled(mapping, nums)\n    \nend",
+    "scala": "object Solution {\n    def sortJumbled(mapping: Array[Int], nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_jumbled(mapping: Vec<i32>, nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (sort-jumbled mapping nums)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec sort_jumbled(Mapping :: [integer()], Nums :: [integer()]) -> [integer()].\nsort_jumbled(Mapping, Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_jumbled(mapping :: [integer], nums :: [integer]) :: [integer]\n  def sort_jumbled(mapping, nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given an integer array `mapping` containing 10 unique values from `0` to `9` and an integer `nums` containing at most `30000` integers. \n\nThe mapped value of an integer is given by replacing the index with the value of `mapping` at that index (zero-based indexing). For example, if `mapped` is `[0,9,8,7,6,5,4,3,2,1]` then the mapped value of `123` is `987`.\n\nWe need to return the array `nums` sorted in the non-decreasing order based on the mapped values of its elements. These values should not be the mapped values. \n\n> Note: Elements with the same mapped values should be arranged in the same relative order as `nums`.\n\n---\n\n### Approach 1: Conversion using strings and Sorting\n\n#### Intuition\n\nObserve that we need to replace every digit of all elements in `nums` with the digits of the `mapping` array. Since the data type for `nums` is an integer, we might find it difficult to make the updates directly on a particular digit of the integer. If we convert this integer to a string, we can directly convert any character of this integer to the desired character in constant time.\n\nAfter making the changes, we can convert the mapped string to an integer and push it into an array. But, what if there are equal mapped values for two strings? Then, we need to sort them according to their indices. So, we create an array of pairs that stores the mapped integer value and its index.\n\nSort the array of pairs in non-decreasing order using any stable sorting algorithm. By default, C++, Java, and Python use stable sorting algorithms. Therefore, the first value of every pair is sorted in non-decreasing order. If these values are equal, the array is sorted in the non-decreasing order of the index values. Store the values of `nums` at these sorted indices and return them.\n\n#### Algorithm\n\n1. Initialize an array of pairs given by `storePairs`.\n2. Iterate `i` through the `nums` array:\n   - Store a string `number` as the string conversion of the integer `nums[i]`.\n   - Initialize an empty string `formed`.\n   - Iterate `j` through the string `number`:\n      - Append the mapping of the current character of `number` to `formed`.\n   - Convert the string `formed` to an integer `mappedValue`.\n   - Push the pair `mappedValue` and the current index `i` in `storePairs`.\n3. Sort the `storePairs` array.\n4. Create an array `answer`.\n5. Iterate through `storePairs` and append the `nums` value at the index to the `answer`.\n6. Return the `answer` array.\n\n!?!../Documents/2191/slideshow.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `nums` array.\n\n- Time complexity: $O(n\\cdot \\log n)$\n\n   For every integer in `nums`, we convert it to a string and perform constant operations over its length. The time taken for converting an integer to a string, and vice versa, is $O(length of integer)$ time, which is proportional to the logarithmic value of `n`. Therefore, the time complexity for these operations is given by $O(n\\cdot \\log n)$.\n\n   Sorting the array of pairs takes $O(n\\cdot \\log n)$ time. All other operations are linear or constant time.\n\n   Therefore, the total time complexity is given by $O(n\\cdot \\log n)$.\n\n- Space complexity: $O(n)$\n\n   We create two new arrays of size `n`. Apart from this, some extra space is used when we sort arrays in place. The space complexity of the sorting algorithm depends on the programming language.\n    - In Python, the sort method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has $O(n)$ additional space.\n    - In Java, `Arrays.sort()` is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log n )$ for sorting two arrays.\n    - In C++, the `sort()` function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worse-case space complexity of $O( \\log n )$.\n\n   Therefore, the total space complexity is given by $O(n)$.\n\n---\n\n### Approach 2: Conversion without using strings and Sorting\n\n#### Intuition\n\nIn the previous approach, we converted every integer in `nums` to a string, mapped the changes, and converted it back to an integer. Can we directly convert the given integer to the mapped integer?\n\nObserve that to make changes to a specific digit, we must avoid altering the digits before and after it. This can be achieved by constructing the mapped integer one digit at a time. Start from the unit place, change the digit to its mapped value, and then move to the tenth place. After changing the digit at the tenth place, multiply it by 10 and add it to the unit place. Repeat this process for each position.\n\n#### Algorithm\n\n1. Initialize an array of pairs given by `storePairs`.\n2. Iterate `i` through the `nums` array:\n    - Initialize `mappedValue` with 0, `temp` with `nums[i]` and `place` with 1.\n    - If `temp` is 0, push the value of `mapping[0]` in `storePairs`.\n    - While `temp` is not equal to 0:\n        - Increment `place * mapping[temp%10]` to `mappedValue`.\n        - Multiply `place` by 10.\n        - Divide `temp` by 10.\n    - Push the value of `mappedValue` and the index in `storePairs`.\n3. Sort the `storePairs` array.\n4. Create an array `answer`.\n5. Iterate through `storePairs` and append the `nums` value at the index to the `answer`.\n6. Return the `answer` array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `nums` array.\n\n- Time complexity: $O(n\\cdot \\log n)$\n\n   For every integer in `nums`, we convert it to the mapped integer. The time taken for this operation is $O(length of integer)$ time, which is proportional to the logarithmic value of `n`. Therefore, the time complexity for these operations on `nums` is given by $O(n\\cdot \\log n)$.\n\n   Sorting the array of pairs takes $O(n\\cdot \\log n)$ time. All other operations are linear or constant time.\n\n   Therefore, the total time complexity is given by $O(n\\cdot \\log n)$.\n\n- Space complexity: $O(n)$\n\n   We create two new arrays of size `n`. Apart from this, some extra space is used when we sort arrays in place. The space complexity of the sorting algorithm depends on the programming language.\n    - In Python, the sort method sorts a list using the Timsort algorithm which is a combination of Merge Sort and Insertion Sort and has $O(n)$ additional space.\n    - In Java, `Arrays.sort()` is implemented using a variant of the Quick Sort algorithm which has a space complexity of $O( \\log n )$ for sorting two arrays.\n    - In C++, the `sort()` function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worse-case space complexity of $O( \\log n )$.\n\n   Therefore, the total space complexity is given by $O(n)$.\n\n---"
+}

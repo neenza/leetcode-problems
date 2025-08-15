@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Enemy Forts That Can Be Captured",
+  "problem_id": "2602",
+  "frontend_id": "2511",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-enemy-forts-that-can-be-captured",
+  "topics": [
+    "Array",
+    "Two Pointers"
+  ],
+  "description": "You are given a 0-indexed integer array forts of length n representing the positions of several forts. forts[i] can be -1, 0, or 1 where:\nNow you have decided to move your army from one of your forts at position i to an empty position j such that:\nWhile moving the army, all the enemy forts that come in the way are captured.\nReturn the maximum number of enemy forts that can be captured. In case it is impossible to move your army, or you do not have any fort under your command, return 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: forts = [1,0,0,-1,0,0,0,0,1]\nOutput: 4\nExplanation:\n- Moving the army from position 0 to position 3 captures 2 enemy forts, at 1 and 2.\n- Moving the army from position 8 to position 3 captures 4 enemy forts.\nSince 4 is the maximum number of enemy forts that can be captured, we return 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: forts = [0,0,1,-1]\nOutput: 0\nExplanation: Since no enemy fort can be captured, 0 is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= forts.length <= 1000",
+    "-1 <= forts[i] <= 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each fort under your command, check if you can move the army from here.",
+    "If yes, find the closest empty positions satisfying all criteria.",
+    "How can two-pointers be used to solve this problem optimally?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int captureForts(vector<int>& forts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int captureForts(int[] forts) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def captureForts(self, forts):\n        \"\"\"\n        :type forts: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def captureForts(self, forts: List[int]) -> int:\n        ",
+    "c": "int captureForts(int* forts, int fortsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CaptureForts(int[] forts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} forts\n * @return {number}\n */\nvar captureForts = function(forts) {\n    \n};",
+    "typescript": "function captureForts(forts: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $forts\n     * @return Integer\n     */\n    function captureForts($forts) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func captureForts(_ forts: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun captureForts(forts: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int captureForts(List<int> forts) {\n    \n  }\n}",
+    "golang": "func captureForts(forts []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} forts\n# @return {Integer}\ndef capture_forts(forts)\n    \nend",
+    "scala": "object Solution {\n    def captureForts(forts: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn capture_forts(forts: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (capture-forts forts)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec capture_forts(Forts :: [integer()]) -> integer().\ncapture_forts(Forts) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec capture_forts(forts :: [integer]) :: integer\n  def capture_forts(forts) do\n    \n  end\nend"
+  }
+}

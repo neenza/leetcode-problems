@@ -1,0 +1,67 @@
+{
+  "title": "Two Furthest Houses With Different Colors",
+  "problem_id": "2199",
+  "frontend_id": "2078",
+  "difficulty": "Easy",
+  "problem_slug": "two-furthest-houses-with-different-colors",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "There are n houses evenly lined up on the street, and each house is beautifully painted. You are given a 0-indexed integer array colors of length n, where colors[i] represents the color of the ith house.\nReturn the maximum distance between two houses with different colors.\nThe distance between the ith and jth houses is abs(i - j), where abs(x) is the absolute value of x.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: colors = [1,1,1,6,1,1,1]\nOutput: 3\nExplanation: In the above image, color 1 is blue, and color 6 is red.\nThe furthest two houses with different colors are house 0 and house 3.\nHouse 0 has color 1, and house 3 has color 6. The distance between them is abs(0 - 3) = 3.\nNote that houses 3 and 6 can also produce the optimal answer.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/31/eg1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: colors = [1,8,3,8,3]\nOutput: 4\nExplanation: In the above image, color 1 is blue, color 8 is yellow, and color 3 is green.\nThe furthest two houses with different colors are house 0 and house 4.\nHouse 0 has color 1, and house 4 has color 3. The distance between them is abs(0 - 4) = 4.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/31/eg2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: colors = [0,1]\nOutput: 1\nExplanation: The furthest two houses with different colors are house 0 and house 1.\nHouse 0 has color 0, and house 1 has color 1. The distance between them is abs(0 - 1) = 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/31/eg2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == colors.length",
+    "2 <= n <= 100",
+    "0 <= colors[i] <= 100",
+    "Test data are generated such that at least two houses have different colors."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small. Can you try the combination of every two houses?",
+    "Greedily, the maximum distance will come from either the pair of the leftmost house and possibly some house on the right with a different color, or the pair of the rightmost house and possibly some house on the left with a different color."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(vector<int>& colors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(int[] colors) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, colors):\n        \"\"\"\n        :type colors: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, colors: List[int]) -> int:\n        ",
+    "c": "int maxDistance(int* colors, int colorsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(int[] colors) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} colors\n * @return {number}\n */\nvar maxDistance = function(colors) {\n    \n};",
+    "typescript": "function maxDistance(colors: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $colors\n     * @return Integer\n     */\n    function maxDistance($colors) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ colors: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(colors: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(List<int> colors) {\n    \n  }\n}",
+    "golang": "func maxDistance(colors []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} colors\n# @return {Integer}\ndef max_distance(colors)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(colors: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(colors: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance colors)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_distance(Colors :: [integer()]) -> integer().\nmax_distance(Colors) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(colors :: [integer]) :: integer\n  def max_distance(colors) do\n    \n  end\nend"
+  }
+}

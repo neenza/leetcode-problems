@@ -1,0 +1,68 @@
+{
+  "title": "Maximum Palindromes After Operations",
+  "problem_id": "3317",
+  "frontend_id": "3035",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-palindromes-after-operations",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed string array words having length n and containing 0-indexed strings.\nYou are allowed to perform the following operation any number of times (including zero):\nReturn an integer denoting the maximum number of palindromes words can contain, after performing some operations.\nNote: i and j may be equal during an operation.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abbb\",\"ba\",\"aa\"]\nOutput: 3\nExplanation: In this example, one way to get the maximum number of palindromes is:\nChoose i = 0, j = 1, x = 0, y = 0, so we swap words[0][0] and words[1][0]. words becomes [\"bbbb\",\"aa\",\"aa\"].\nAll strings in words are now palindromes.\nHence, the maximum number of palindromes achievable is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"abc\",\"ab\"]\nOutput: 2\nExplanation: In this example, one way to get the maximum number of palindromes is: \nChoose i = 0, j = 1, x = 1, y = 0, so we swap words[0][1] and words[1][0]. words becomes [\"aac\",\"bb\"].\nChoose i = 0, j = 0, x = 1, y = 2, so we swap words[0][1] and words[0][2]. words becomes [\"aca\",\"bb\"].\nBoth strings are now palindromes.\nHence, the maximum number of palindromes achievable is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"cd\",\"ef\",\"a\"]\nOutput: 1\nExplanation: In this example, there is no need to perform any operation.\nThere is one palindrome in words \"a\".\nIt can be shown that it is not possible to get more than one palindrome after any number of operations.\nHence, the answer is 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 1000",
+    "1 <= words[i].length <= 100",
+    "words[i] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can redistribute all the letters freely among the words.",
+    "Calculate the frequency of each letter and total the number of matching letter pairs that can be formed from the letters, i.e., <code>total = sum(freq[ch] / 2)</code> for all <code>'a' <= ch <= 'z'</code>.",
+    "We can greedily try making palindromes from <code>words[i]</code> with the smallest length to <code>words[i]</code> with the longest length.",
+    "For the current index, <code>i</code>, we try to make <code>words[i]</code> a palindrome. We need <code>len(words[i]) / 2</code> matching character pairs, and the letter in the middle (if it exists) can be freely chosen afterward.",
+    "We can check if we have enough pairs for index <code>i</code>; if we do, we increase the number of palindromes we can make and decrease the number of pairs we have. Otherwise, we end the loop at this index.",
+    "The answer is the number of palindromes we were able to make in the end."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPalindromesAfterOperations(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPalindromesAfterOperations(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPalindromesAfterOperations(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPalindromesAfterOperations(self, words: List[str]) -> int:\n        ",
+    "c": "int maxPalindromesAfterOperations(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPalindromesAfterOperations(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar maxPalindromesAfterOperations = function(words) {\n    \n};",
+    "typescript": "function maxPalindromesAfterOperations(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function maxPalindromesAfterOperations($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPalindromesAfterOperations(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPalindromesAfterOperations(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPalindromesAfterOperations(List<String> words) {\n    \n  }\n}",
+    "golang": "func maxPalindromesAfterOperations(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef max_palindromes_after_operations(words)\n    \nend",
+    "scala": "object Solution {\n    def maxPalindromesAfterOperations(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_palindromes_after_operations(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-palindromes-after-operations words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec max_palindromes_after_operations(Words :: [unicode:unicode_binary()]) -> integer().\nmax_palindromes_after_operations(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_palindromes_after_operations(words :: [String.t]) :: integer\n  def max_palindromes_after_operations(words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Count Special Subsequences",
+  "problem_id": "3699",
+  "frontend_id": "3404",
+  "difficulty": "Medium",
+  "problem_slug": "count-special-subsequences",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Enumeration"
+  ],
+  "description": "You are given an array nums consisting of positive integers.\nA special subsequence is defined as a subsequence of length 4, represented by indices (p, q, r, s), where p < q < r < s. This subsequence must satisfy the following conditions:\nReturn the number of different special subsequences in nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,3,6,1]\nOutput: 1\nExplanation:\nThere is one special subsequence in nums .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,4,3,4,3,4,3,4]\nOutput: 3\nExplanation:\nThere are three special subsequences in nums .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "7 <= nums.length <= 1000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count pairs where <code>nums[p] / nums[q]</code> equals <code>nums[s] / nums[r]</code>, using GCD to handle ratios efficiently.",
+    "Try iterating over <code>(p, q)</code> pairs and efficiently count valid <code>(r, s)</code> pairs with the same ratio."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numberOfSubsequences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfSubsequences(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSubsequences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSubsequences(self, nums: List[int]) -> int:\n        ",
+    "c": "long long numberOfSubsequences(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumberOfSubsequences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar numberOfSubsequences = function(nums) {\n    \n};",
+    "typescript": "function numberOfSubsequences(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function numberOfSubsequences($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSubsequences(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSubsequences(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSubsequences(List<int> nums) {\n    \n  }\n}",
+    "golang": "func numberOfSubsequences(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef number_of_subsequences(nums)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSubsequences(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_subsequences(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-subsequences nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec number_of_subsequences(Nums :: [integer()]) -> integer().\nnumber_of_subsequences(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_subsequences(nums :: [integer]) :: integer\n  def number_of_subsequences(nums) do\n    \n  end\nend"
+  }
+}

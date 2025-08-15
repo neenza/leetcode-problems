@@ -1,0 +1,30 @@
+{
+  "title": "Get the Size of a DataFrame",
+  "problem_id": "3076",
+  "frontend_id": "2878",
+  "difficulty": "Easy",
+  "problem_slug": "get-the-size-of-a-dataframe",
+  "topics": [],
+  "description": "Write a solution to calculate and display the number of rows and columns of players.\nReturn the result as an array:\n[number of rows, number of columns]\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame players:\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| player_id   | int    |\n| name        | object |\n| age         | int    |\n| position    | object |\n| ...         | ...    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\n+-----------+----------+-----+-------------+--------------------+\n| player_id | name     | age | position    | team               |\n+-----------+----------+-----+-------------+--------------------+\n| 846       | Mason    | 21  | Forward     | RealMadrid         |\n| 749       | Riley    | 30  | Winger      | Barcelona          |\n| 155       | Bob      | 28  | Striker     | ManchesterUnited   |\n| 583       | Isabella | 32  | Goalkeeper  | Liverpool          |\n| 388       | Zachary  | 24  | Midfielder  | BayernMunich       |\n| 883       | Ava      | 23  | Defender    | Chelsea            |\n| 355       | Violet   | 18  | Striker     | Juventus           |\n| 247       | Thomas   | 27  | Striker     | ParisSaint-Germain |\n| 761       | Jack     | 33  | Midfielder  | ManchesterCity     |\n| 642       | Charlie  | 36  | Center-back | Arsenal            |\n+-----------+----------+-----+-------------+--------------------+\nOutput:\n[10, 5]\nExplanation:\nThis DataFrame contains 10 rows and 5 columns.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using a built-in function in pandas library to get the size of a DataFrame."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef getDataframeSize(players: pd.DataFrame) -> List[int]:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\n\nThis problem requires us to return the number of rows and columns present in the `players` DataFrame. \n\n**Key Concepts**:\n - **Attribute**: In Python's pandas library, an attribute refers to a property or characteristic of an object that helps describe the object's state or its meta-information. Attributes in pandas are used to access various properties of DataFrame or Series objects, allowing users to retrieve meta-information or underlying data without performing a computation or causing side effects.\n - **`shape` attribute**: Returns the dimensions of the DataFrame or Series in the form of a tuple (rows, columns).\n\n### Intuition\n\nHere's a step-by-step breakdown of the solution:\n\n**1. Importing the Required Library**:\n```python\nimport pandas as pd\n```\n - We first need to import the `pandas` library, which is a powerful tool in Python for data manipulation and analysis.\n\n**2. Defining the function:**\n```python\ndef getDataframeSize(players: pd.DataFrame) -> List:\n```\n\n - This line defines a new function named `getDataframeSize` which takes a DataFrame `players` as an input argument and returns a list that contains the number of rows and columns in the DataFrame `players`.\n     \n**3. Using the `shape` attribute**:\n - Every DataFrame in pandas has a `shape` attribute. When you call it, it returns a tuple `(number of rows, number of columns)`. In our case, for the given `players` DataFrame, the shape would be `(10, 5)` because there are 10 players and 5 attributes for each player.\n\n**4. The Function**:\n```python\nreturn [players.shape[0], players.shape[1]]\n```\n\n - `players.shape[0]` gives the number of rows in the DataFrame `players`.\n - `players.shape[1]` gives the number of columns in the DataFrame `players`.\n - This line thus returns a list containing these two values: `[players.shape[0], players.shape[1]]`.\n\n**Using the Solution**\n\n**Visualization of `shape` attribute**\n\n![fig](../Figures/2878/2878.png)\n\nWhen you pass this DataFrame to the function:player_idnameagepositionteam846Mason21ForwardRealMadrid749Riley30WingerBarcelona155Bob28StrikerManchesterUnited583Isabella32GoalkeeperLiverpool388Zachary24MidfielderBayernMunich883Ava23DefenderChelsea355Violet18StrikerJuventus247Thomas27StrikerParisSaint-Germain761Jack33MidfielderManchesterCity642Charlie36Center-backArsenalIt will return:\n\n```python\n[10, 5]\n```\n\n### Implementation"
+}

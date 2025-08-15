@@ -1,0 +1,62 @@
+{
+  "title": "Ways to Split Array Into Three Subarrays",
+  "problem_id": "1831",
+  "frontend_id": "1712",
+  "difficulty": "Medium",
+  "problem_slug": "ways-to-split-array-into-three-subarrays",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Prefix Sum"
+  ],
+  "description": "A split of an integer array is good if:\nGiven nums, an array of non-negative integers, return the number of good ways to split nums. As the number may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,1]\nOutput: 1\nExplanation: The only good way to split nums is [1] [1] [1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,2,2,5,0]\nOutput: 3\nExplanation: There are three good ways of splitting nums:\n[1] [2] [2,2,5,0]\n[1] [2,2] [2,5,0]\n[1,2] [2,2] [5,0]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,2,1]\nOutput: 0\nExplanation: There is no good way to split nums.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 105",
+    "0 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create a prefix array to efficiently find the sum of subarrays.",
+    "As we are dividing the array into three subarrays, there are two \"walls\". Iterate over the right wall positions and find where the left wall could be for each right wall position.",
+    "Use binary search to find the left-most position and right-most position the left wall could be."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int waysToSplit(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int waysToSplit(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def waysToSplit(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def waysToSplit(self, nums: List[int]) -> int:\n        ",
+    "c": "int waysToSplit(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int WaysToSplit(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar waysToSplit = function(nums) {\n    \n};",
+    "typescript": "function waysToSplit(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function waysToSplit($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func waysToSplit(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun waysToSplit(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int waysToSplit(List<int> nums) {\n    \n  }\n}",
+    "golang": "func waysToSplit(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef ways_to_split(nums)\n    \nend",
+    "scala": "object Solution {\n    def waysToSplit(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn ways_to_split(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (ways-to-split nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec ways_to_split(Nums :: [integer()]) -> integer().\nways_to_split(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec ways_to_split(nums :: [integer]) :: integer\n  def ways_to_split(nums) do\n    \n  end\nend"
+  }
+}

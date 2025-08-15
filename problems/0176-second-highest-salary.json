@@ -1,0 +1,38 @@
+{
+  "title": "Second Highest Salary",
+  "problem_id": "176",
+  "frontend_id": "176",
+  "difficulty": "Medium",
+  "problem_slug": "second-highest-salary",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employee\nWrite a solution to find the second highest distinct salary from the Employee table. If there is no second highest salary, return null (return None in Pandas).\nThe result format is in the following example.\nExample 1:\nExample 2:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| salary      | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains information about the salary of an employee.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nEmployee table:\n+----+--------+\n| id | salary |\n+----+--------+\n| 1  | 100    |\n| 2  | 200    |\n| 3  | 300    |\n+----+--------+\nOutput: \n+---------------------+\n| SecondHighestSalary |\n+---------------------+\n| 200                 |\n+---------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nEmployee table:\n+----+--------+\n| id | salary |\n+----+--------+\n| 1  | 100    |\n+----+--------+\nOutput: \n+---------------------+\n| SecondHighestSalary |\n+---------------------+\n| null                |\n+---------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Paths in Matrix Whose Sum Is Divisible by K",
+  "problem_id": "2521",
+  "frontend_id": "2435",
+  "difficulty": "Hard",
+  "problem_slug": "paths-in-matrix-whose-sum-is-divisible-by-k",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given a 0-indexed m x n integer matrix grid and an integer k. You are currently at position (0, 0) and you want to reach position (m - 1, n - 1) moving only down or right.\nReturn the number of paths where the sum of the elements on the path is divisible by k. Since the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[5,2,4],[3,0,5],[0,7,2]], k = 3\nOutput: 2\nExplanation: There are two paths where the sum of the elements on the path is divisible by k.\nThe first path highlighted in red has a sum of 5 + 2 + 4 + 5 + 2 = 18 which is divisible by 3.\nThe second path highlighted in blue has a sum of 5 + 3 + 0 + 5 + 2 = 15 which is divisible by 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/08/13/image-20220813183124-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,0]], k = 5\nOutput: 1\nExplanation: The path highlighted in red has a sum of 0 + 0 = 0 which is divisible by 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/08/17/image-20220817112930-3.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[7,3,4,9],[2,3,6,2],[2,3,7,0]], k = 1\nOutput: 10\nExplanation: Every integer is divisible by 1 so the sum of the elements on every possible path is divisible by k.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/08/12/image-20220812224605-3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 5 * 104",
+    "1 <= m * n <= 5 * 104",
+    "0 <= grid[i][j] <= 100",
+    "1 <= k <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The actual numbers in grid do not matter. What matters are the remainders you get when you divide the numbers by k.",
+    "We can use dynamic programming to solve this problem. What can we use as states?",
+    "Let dp[i][j][value] represent the number of paths where the sum of the elements on the path has a remainder of value when divided by k."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfPaths(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfPaths(int[][] grid, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfPaths(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfPaths(self, grid: List[List[int]], k: int) -> int:\n        ",
+    "c": "int numberOfPaths(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfPaths(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar numberOfPaths = function(grid, k) {\n    \n};",
+    "typescript": "function numberOfPaths(grid: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $k\n     * @return Integer\n     */\n    function numberOfPaths($grid, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfPaths(_ grid: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfPaths(grid: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfPaths(List<List<int>> grid, int k) {\n    \n  }\n}",
+    "golang": "func numberOfPaths(grid [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} k\n# @return {Integer}\ndef number_of_paths(grid, k)\n    \nend",
+    "scala": "object Solution {\n    def numberOfPaths(grid: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_paths(grid: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-paths grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_paths(Grid :: [[integer()]], K :: integer()) -> integer().\nnumber_of_paths(Grid, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_paths(grid :: [[integer]], k :: integer) :: integer\n  def number_of_paths(grid, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Super Egg Drop",
+  "problem_id": "923",
+  "frontend_id": "887",
+  "difficulty": "Hard",
+  "problem_slug": "super-egg-drop",
+  "topics": [
+    "Math",
+    "Binary Search",
+    "Dynamic Programming"
+  ],
+  "description": "You are given k identical eggs and you have access to a building with n floors labeled from 1 to n.\nYou know that there exists a floor f where 0 <= f <= n such that any egg dropped at a floor higher than f will break, and any egg dropped at or below floor f will not break.\nEach move, you may take an unbroken egg and drop it from any floor x (where 1 <= x <= n). If the egg breaks, you can no longer use it. However, if the egg does not break, you may reuse it in future moves.\nReturn the minimum number of moves that you need to determine with certainty what the value of f is.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 1, n = 2\nOutput: 2\nExplanation: \nDrop the egg from floor 1. If it breaks, we know that f = 0.\nOtherwise, drop the egg from floor 2. If it breaks, we know that f = 1.\nIf it does not break, then we know f = 2.\nHence, we need at minimum 2 moves to determine with certainty what the value of f is.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 2, n = 6\nOutput: 3",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: k = 3, n = 14\nOutput: 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 100",
+    "1 <= n <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int superEggDrop(int k, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int superEggDrop(int k, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def superEggDrop(self, k, n):\n        \"\"\"\n        :type k: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def superEggDrop(self, k: int, n: int) -> int:\n        ",
+    "c": "int superEggDrop(int k, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SuperEggDrop(int k, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number} n\n * @return {number}\n */\nvar superEggDrop = function(k, n) {\n    \n};",
+    "typescript": "function superEggDrop(k: number, n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @param Integer $n\n     * @return Integer\n     */\n    function superEggDrop($k, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func superEggDrop(_ k: Int, _ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun superEggDrop(k: Int, n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int superEggDrop(int k, int n) {\n    \n  }\n}",
+    "golang": "func superEggDrop(k int, n int) int {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @param {Integer} n\n# @return {Integer}\ndef super_egg_drop(k, n)\n    \nend",
+    "scala": "object Solution {\n    def superEggDrop(k: Int, n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn super_egg_drop(k: i32, n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (super-egg-drop k n)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec super_egg_drop(K :: integer(), N :: integer()) -> integer().\nsuper_egg_drop(K, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec super_egg_drop(k :: integer, n :: integer) :: integer\n  def super_egg_drop(k, n) do\n    \n  end\nend"
+  }
+}

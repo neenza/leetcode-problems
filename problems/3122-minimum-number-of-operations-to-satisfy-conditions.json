@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Number of Operations to Satisfy Conditions",
+  "problem_id": "3404",
+  "frontend_id": "3122",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-operations-to-satisfy-conditions",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given a 2D matrix grid of size m x n. In one operation, you can change the value of any cell to any non-negative number. You need to perform some operations such that each cell grid[i][j] is:\nReturn the minimum number of operations needed.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,2],[1,0,2]]\nOutput: 0\nExplanation:\n\nAll the cells in the matrix already satisfy the properties.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/04/15/examplechanged.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[0,0,0]]\nOutput: 3\nExplanation:\n\nThe matrix becomes [[1,0,1],[1,0,1]] which satisfies the properties, by doing these 3 operations:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/03/27/example21.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1],[2],[3]]\nOutput: 2\nExplanation:\n\nThere is a single column. We can change the value to 1 in each cell using 2 operations.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/03/31/changed.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n, m <= 1000",
+    "0 <= grid[i][j] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumOperations(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumOperations = function(grid) {\n    \n};",
+    "typescript": "function minimumOperations(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumOperations($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumOperations(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_operations(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Grid :: [[integer()]]) -> integer().\nminimum_operations(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(grid :: [[integer]]) :: integer\n  def minimum_operations(grid) do\n    \n  end\nend"
+  }
+}

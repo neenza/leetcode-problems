@@ -1,0 +1,60 @@
+{
+  "title": "Delete Columns to Make Sorted III",
+  "problem_id": "1000",
+  "frontend_id": "960",
+  "difficulty": "Hard",
+  "problem_slug": "delete-columns-to-make-sorted-iii",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array of n strings strs, all of the same length.\nWe may choose any deletion indices, and we delete all the characters in those indices for each string.\nFor example, if we have strs = [\"abcdef\",\"uvwxyz\"] and deletion indices {0, 2, 3}, then the final array after deletions is [\"bef\", \"vyz\"].\nSuppose we chose a set of deletion indices answer such that after deletions, the final array has every string (row) in lexicographic order. (i.e., (strs[0][0] <= strs[0][1] <= ... <= strs[0][strs[0].length - 1]), and (strs[1][0] <= strs[1][1] <= ... <= strs[1][strs[1].length - 1]), and so on). Return the minimum possible value of answer.length.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: strs = [\"babca\",\"bbazb\"]\nOutput: 3\nExplanation: After deleting columns 0, 1, and 4, the final array is strs = [\"bc\", \"az\"].\nBoth these rows are individually in lexicographic order (ie. strs[0][0] <= strs[0][1] and strs[1][0] <= strs[1][1]).\nNote that strs[0] > strs[1] - the array strs is not necessarily in lexicographic order.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: strs = [\"edcba\"]\nOutput: 4\nExplanation: If we delete less than 4 columns, the only row will not be lexicographically sorted.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: strs = [\"ghi\",\"def\",\"abc\"]\nOutput: 0\nExplanation: All rows are already lexicographically sorted.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == strs.length",
+    "1 <= n <= 100",
+    "1 <= strs[i].length <= 100",
+    "strs[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDeletionSize(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDeletionSize(String[] strs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDeletionSize(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDeletionSize(self, strs: List[str]) -> int:\n        ",
+    "c": "int minDeletionSize(char** strs, int strsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDeletionSize(string[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar minDeletionSize = function(strs) {\n    \n};",
+    "typescript": "function minDeletionSize(strs: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $strs\n     * @return Integer\n     */\n    function minDeletionSize($strs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDeletionSize(_ strs: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDeletionSize(strs: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDeletionSize(List<String> strs) {\n    \n  }\n}",
+    "golang": "func minDeletionSize(strs []string) int {\n    \n}",
+    "ruby": "# @param {String[]} strs\n# @return {Integer}\ndef min_deletion_size(strs)\n    \nend",
+    "scala": "object Solution {\n    def minDeletionSize(strs: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_deletion_size(strs: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-deletion-size strs)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec min_deletion_size(Strs :: [unicode:unicode_binary()]) -> integer().\nmin_deletion_size(Strs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_deletion_size(strs :: [String.t]) :: integer\n  def min_deletion_size(strs) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition and Algorithm**\n\nThis is a tricky problem that is hard to build an intuition about.\n\nFirst, lets try to find the number of columns to keep, instead of the number to delete.  At the end, we can subtract to find the desired answer.\n\nNow, let's say we must keep the first column `C`.  The next column `D` we keep must have all rows lexicographically sorted (ie. `C[i] <= D[i]`), and we can say that we have deleted all columns between `C` and `D`.\n\nNow, we can use dynamic programming to solve the problem in this manner.  Let `dp[k]` be the number of columns that are kept in answering the question for input `[row[k:] for row in A]`.  The above gives a simple recursion for `dp[k]`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N * W^2)$$, where $$N$$ is the length of `A`, and $$W$$ is the length of each word in `A`.\n\n* Space Complexity:  $$O(W)$$."
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Escape the Spreading Fire",
+  "problem_id": "2344",
+  "frontend_id": "2258",
+  "difficulty": "Hard",
+  "problem_slug": "escape-the-spreading-fire",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given a 0-indexed 2D integer array grid of size m x n which represents a field. Each cell has one of three values:\nYou are situated in the top-left cell, (0, 0), and you want to travel to the safehouse at the bottom-right cell, (m - 1, n - 1). Every minute, you may move to an adjacent grass cell. After your move, every fire cell will spread to all adjacent cells that are not walls.\nReturn the maximum number of minutes that you can stay in your initial position before moving while still safely reaching the safehouse. If this is impossible, return -1. If you can always reach the safehouse regardless of the minutes stayed, return 109.\nNote that even if the fire spreads to the safehouse immediately after you have reached it, it will be counted as safely reaching the safehouse.\nA cell is adjacent to another cell if the former is directly north, east, south, or west of the latter (i.e., their sides are touching).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,2,0,0,0,0,0],[0,0,0,2,2,1,0],[0,2,0,0,1,2,0],[0,0,2,2,2,0,2],[0,0,0,0,0,0,0]]\nOutput: 3\nExplanation: The figure above shows the scenario where you stay in the initial position for 3 minutes.\nYou will still be able to safely reach the safehouse.\nStaying for more than 3 minutes will not allow you to safely reach the safehouse.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/10/ex1new.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,0,0,0],[0,1,2,0],[0,2,0,0]]\nOutput: -1\nExplanation: The figure above shows the scenario where you immediately move towards the safehouse.\nFire will spread to any cell you move towards and it is impossible to safely reach the safehouse.\nThus, -1 is returned.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/10/ex2new2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[0,0,0],[2,2,0],[1,2,0]]\nOutput: 1000000000\nExplanation: The figure above shows the initial grid.\nNotice that the fire is contained by walls and you will always be able to safely reach the safehouse.\nThus, 109 is returned.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/10/ex3new.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "2 <= m, n <= 300",
+    "4 <= m * n <= 2 * 104",
+    "grid[i][j] is either 0, 1, or 2.",
+    "grid[0][0] == grid[m - 1][n - 1] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For some tile (x, y), how can we determine when, if ever, the fire will reach it?",
+    "We can use multi-source BFS to find the earliest time the fire will reach each cell.",
+    "Then, starting with a given t minutes of staying in the initial position, we can check if there is a safe path to the safehouse using the obtained information about the fire.",
+    "We can use binary search to efficiently find the maximum t that allows us to reach the safehouse."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumMinutes(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumMinutes(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumMinutes(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumMinutes(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int maximumMinutes(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumMinutes(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maximumMinutes = function(grid) {\n    \n};",
+    "typescript": "function maximumMinutes(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function maximumMinutes($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumMinutes(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumMinutes(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumMinutes(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func maximumMinutes(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef maximum_minutes(grid)\n    \nend",
+    "scala": "object Solution {\n    def maximumMinutes(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_minutes(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-minutes grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec maximum_minutes(Grid :: [[integer()]]) -> integer().\nmaximum_minutes(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_minutes(grid :: [[integer]]) :: integer\n  def maximum_minutes(grid) do\n    \n  end\nend"
+  }
+}

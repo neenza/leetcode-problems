@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Split of Positive Even Integers",
+  "problem_id": "2279",
+  "frontend_id": "2178",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-split-of-positive-even-integers",
+  "topics": [
+    "Math",
+    "Backtracking",
+    "Greedy"
+  ],
+  "description": "You are given an integer finalSum. Split it into a sum of a maximum number of unique positive even integers.\nReturn a list of integers that represent a valid split containing a maximum number of integers. If no valid split exists for finalSum, return an empty list. You may return the integers in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: finalSum = 12\nOutput: [2,4,6]\nExplanation: The following are valid splits: (12), (2 + 10), (2 + 4 + 6), and (4 + 8).\n(2 + 4 + 6) has the maximum number of integers, which is 3. Thus, we return [2,4,6].\nNote that [2,6,4], [6,2,4], etc. are also accepted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: finalSum = 7\nOutput: []\nExplanation: There are no valid splits for the given finalSum.\nThus, we return an empty array.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: finalSum = 28\nOutput: [6,8,2,12]\nExplanation: The following are valid splits: (2 + 26), (6 + 8 + 2 + 12), and (4 + 24). \n(6 + 8 + 2 + 12) has the maximum number of integers, which is 4. Thus, we return [6,8,2,12].\nNote that [10,2,4,12], [6,2,4,16], etc. are also accepted.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= finalSum <= 1010"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "First, check if finalSum is divisible by 2. If it isn’t, then we cannot split it into even integers.",
+    "Let k be the number of elements in our split. As we want the maximum number of elements, we should try to use the first k - 1 even elements to grow our sum as slowly as possible.",
+    "Thus, we find the maximum sum of the first k - 1 even elements which is less than finalSum.",
+    "We then add the difference over to the kth element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> maximumEvenSplit(long long finalSum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Long> maximumEvenSplit(long finalSum) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumEvenSplit(self, finalSum):\n        \"\"\"\n        :type finalSum: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumEvenSplit(self, finalSum: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* maximumEvenSplit(long long finalSum, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<long> MaximumEvenSplit(long finalSum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} finalSum\n * @return {number[]}\n */\nvar maximumEvenSplit = function(finalSum) {\n    \n};",
+    "typescript": "function maximumEvenSplit(finalSum: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $finalSum\n     * @return Integer[]\n     */\n    function maximumEvenSplit($finalSum) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumEvenSplit(_ finalSum: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumEvenSplit(finalSum: Long): List<Long> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maximumEvenSplit(int finalSum) {\n    \n  }\n}",
+    "golang": "func maximumEvenSplit(finalSum int64) []int64 {\n    \n}",
+    "ruby": "# @param {Integer} final_sum\n# @return {Integer[]}\ndef maximum_even_split(final_sum)\n    \nend",
+    "scala": "object Solution {\n    def maximumEvenSplit(finalSum: Long): List[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_even_split(final_sum: i64) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-even-split finalSum)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec maximum_even_split(FinalSum :: integer()) -> [integer()].\nmaximum_even_split(FinalSum) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_even_split(final_sum :: integer) :: [integer]\n  def maximum_even_split(final_sum) do\n    \n  end\nend"
+  }
+}

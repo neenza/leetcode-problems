@@ -1,0 +1,58 @@
+{
+  "title": "Count Stepping Numbers in Range",
+  "problem_id": "2921",
+  "frontend_id": "2801",
+  "difficulty": "Hard",
+  "problem_slug": "count-stepping-numbers-in-range",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given two positive integers low and high represented as strings, find the count of stepping numbers in the inclusive range [low, high].\nA stepping number is an integer such that all of its adjacent digits have an absolute difference of exactly 1.\nReturn an integer denoting the count of stepping numbers in the inclusive range [low, high].\nSince the answer may be very large, return it modulo 109 + 7.\nNote: A stepping number should not have a leading zero.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: low = \"1\", high = \"11\"\nOutput: 10\nExplanation: The stepping numbers in the range [1,11] are 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10. There are a total of 10 stepping numbers in the range. Hence, the output is 10.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: low = \"90\", high = \"101\"\nOutput: 2\nExplanation: The stepping numbers in the range [90,101] are 98 and 101. There are a total of 2 stepping numbers in the range. Hence, the output is 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= int(low) <= int(high) < 10100",
+    "1 <= low.length, high.length <= 100",
+    "low and high consist of only digits.",
+    "low and high don't have any leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Calculate the number of stepping numbers in the range [1, high] and subtract the number of stepping numbers in the range [1, low - 1].",
+    "The main problem is calculating the number of stepping numbers in the range [1, x].",
+    "First, calculate the number of stepping numbers shorter than x in length, which can be done using dynamic programming. (dp[i][j] is the number of i-digit stepping numbers ending with digit j).",
+    "Finally, calculate the number of stepping numbers that have the same length as x similarly. However, this time we need to maintain whether the prefix (in string) is smaller than or equal to x in the DP state."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSteppingNumbers(string low, string high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSteppingNumbers(String low, String high) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSteppingNumbers(self, low, high):\n        \"\"\"\n        :type low: str\n        :type high: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSteppingNumbers(self, low: str, high: str) -> int:\n        ",
+    "c": "int countSteppingNumbers(char* low, char* high) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSteppingNumbers(string low, string high) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} low\n * @param {string} high\n * @return {number}\n */\nvar countSteppingNumbers = function(low, high) {\n    \n};",
+    "typescript": "function countSteppingNumbers(low: string, high: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $low\n     * @param String $high\n     * @return Integer\n     */\n    function countSteppingNumbers($low, $high) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSteppingNumbers(_ low: String, _ high: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSteppingNumbers(low: String, high: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSteppingNumbers(String low, String high) {\n    \n  }\n}",
+    "golang": "func countSteppingNumbers(low string, high string) int {\n    \n}",
+    "ruby": "# @param {String} low\n# @param {String} high\n# @return {Integer}\ndef count_stepping_numbers(low, high)\n    \nend",
+    "scala": "object Solution {\n    def countSteppingNumbers(low: String, high: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_stepping_numbers(low: String, high: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-stepping-numbers low high)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec count_stepping_numbers(Low :: unicode:unicode_binary(), High :: unicode:unicode_binary()) -> integer().\ncount_stepping_numbers(Low, High) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_stepping_numbers(low :: String.t, high :: String.t) :: integer\n  def count_stepping_numbers(low, high) do\n    \n  end\nend"
+  }
+}

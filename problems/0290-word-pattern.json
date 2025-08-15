@@ -1,0 +1,60 @@
+{
+  "title": "Word Pattern",
+  "problem_id": "290",
+  "frontend_id": "290",
+  "difficulty": "Easy",
+  "problem_slug": "word-pattern",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a pattern and a string s, find if s follows the same pattern.\nHere follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. Specifically:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pattern = \"abba\", s = \"dog cat cat dog\"\nOutput: true\nExplanation:\nThe bijection can be established as:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pattern = \"abba\", s = \"dog cat cat fish\"\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: pattern = \"aaaa\", s = \"dog cat cat dog\"\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pattern.length <= 300",
+    "pattern contains only lower-case English letters.",
+    "1 <= s.length <= 3000",
+    "s contains only lowercase English letters and spaces ' '.",
+    "s does not contain any leading or trailing spaces.",
+    "All the words in s are separated by a single space."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool wordPattern(string pattern, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean wordPattern(String pattern, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def wordPattern(self, pattern, s):\n        \"\"\"\n        :type pattern: str\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def wordPattern(self, pattern: str, s: str) -> bool:\n        ",
+    "c": "bool wordPattern(char* pattern, char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool WordPattern(string pattern, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} pattern\n * @param {string} s\n * @return {boolean}\n */\nvar wordPattern = function(pattern, s) {\n    \n};",
+    "typescript": "function wordPattern(pattern: string, s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $pattern\n     * @param String $s\n     * @return Boolean\n     */\n    function wordPattern($pattern, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func wordPattern(_ pattern: String, _ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun wordPattern(pattern: String, s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool wordPattern(String pattern, String s) {\n    \n  }\n}",
+    "golang": "func wordPattern(pattern string, s string) bool {\n    \n}",
+    "ruby": "# @param {String} pattern\n# @param {String} s\n# @return {Boolean}\ndef word_pattern(pattern, s)\n    \nend",
+    "scala": "object Solution {\n    def wordPattern(pattern: String, s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn word_pattern(pattern: String, s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (word-pattern pattern s)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec word_pattern(Pattern :: unicode:unicode_binary(), S :: unicode:unicode_binary()) -> boolean().\nword_pattern(Pattern, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec word_pattern(pattern :: String.t, s :: String.t) :: boolean\n  def word_pattern(pattern, s) do\n    \n  end\nend"
+  }
+}

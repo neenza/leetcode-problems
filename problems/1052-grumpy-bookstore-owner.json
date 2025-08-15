@@ -1,0 +1,56 @@
+{
+  "title": "Grumpy Bookstore Owner",
+  "problem_id": "1138",
+  "frontend_id": "1052",
+  "difficulty": "Medium",
+  "problem_slug": "grumpy-bookstore-owner",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "There is a bookstore owner that has a store open for n minutes. You are given an integer array customers of length n where customers[i] is the number of the customers that enter the store at the start of the ith minute and all those customers leave after the end of that minute.\nDuring certain minutes, the bookstore owner is grumpy. You are given a binary array grumpy where grumpy[i] is 1 if the bookstore owner is grumpy during the ith minute, and is 0 otherwise.\nWhen the bookstore owner is grumpy, the customers entering during that minute are not satisfied. Otherwise, they are satisfied.\nThe bookstore owner knows a secret technique to remain not grumpy for minutes consecutive minutes, but this technique can only be used once.\nReturn the maximum number of customers that can be satisfied throughout the day.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: customers = [1,0,1,2,1,1,7,5], grumpy = [0,1,0,1,0,1,0,1], minutes = 3\nOutput: 16\nExplanation:\nThe bookstore owner keeps themselves not grumpy for the last 3 minutes.\nThe maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: customers = [1], grumpy = [0], minutes = 1\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == customers.length == grumpy.length",
+    "1 <= minutes <= n <= 2 * 104",
+    "0 <= customers[i] <= 1000",
+    "grumpy[i] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Say the store owner uses their power in minute 1 to X and we have some answer A.  If they instead use their power from minute 2 to X+1, we only have to use data from minutes 1, 2, X and X+1 to update our answer A."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int minutes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSatisfied(self, customers, grumpy, minutes):\n        \"\"\"\n        :type customers: List[int]\n        :type grumpy: List[int]\n        :type minutes: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSatisfied(self, customers: List[int], grumpy: List[int], minutes: int) -> int:\n        ",
+    "c": "int maxSatisfied(int* customers, int customersSize, int* grumpy, int grumpySize, int minutes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSatisfied(int[] customers, int[] grumpy, int minutes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} customers\n * @param {number[]} grumpy\n * @param {number} minutes\n * @return {number}\n */\nvar maxSatisfied = function(customers, grumpy, minutes) {\n    \n};",
+    "typescript": "function maxSatisfied(customers: number[], grumpy: number[], minutes: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $customers\n     * @param Integer[] $grumpy\n     * @param Integer $minutes\n     * @return Integer\n     */\n    function maxSatisfied($customers, $grumpy, $minutes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSatisfied(_ customers: [Int], _ grumpy: [Int], _ minutes: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSatisfied(customers: IntArray, grumpy: IntArray, minutes: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSatisfied(List<int> customers, List<int> grumpy, int minutes) {\n    \n  }\n}",
+    "golang": "func maxSatisfied(customers []int, grumpy []int, minutes int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} customers\n# @param {Integer[]} grumpy\n# @param {Integer} minutes\n# @return {Integer}\ndef max_satisfied(customers, grumpy, minutes)\n    \nend",
+    "scala": "object Solution {\n    def maxSatisfied(customers: Array[Int], grumpy: Array[Int], minutes: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_satisfied(customers: Vec<i32>, grumpy: Vec<i32>, minutes: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-satisfied customers grumpy minutes)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_satisfied(Customers :: [integer()], Grumpy :: [integer()], Minutes :: integer()) -> integer().\nmax_satisfied(Customers, Grumpy, Minutes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_satisfied(customers :: [integer], grumpy :: [integer], minutes :: integer) :: integer\n  def max_satisfied(customers, grumpy, minutes) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThis problem is basically about a store owner who gets a little grumpy sometimes. Don't we all? We are in charge of helping as many customers as possible have a satisfying shopping experience.\n\nGood news: we have all of the information needed in advance to plan the best possible schedule. The customers are scheduled to come at specific times, so we know exactly how many will be in the store at any given time. We also know all of the times of day that the bookstore owner is likely to be grumpy.\n\nMore good news: we also have **one** length of time we can prevent the manager from being grumpy during the day....maybe this is the length of time that he's drinking his coffee. Or, maybe we can think of it as when we can schedule an assistant to help with the customers. \n\nEither way, we want to schedule this window during the time period that would save the largest number of customers from his grumpiness. \n\nFor example: Let's say we have a scenario where the bookstore owner has two grumpy minutes scheduled and we can cancel only of them. During one grumpy minute, the store has 7 customers, while during the other, it has 2. To maximize customer satisfaction, we want to counteract the grumpiness during the minute with 7 customers.\n\nNow, how to do that?\n    \n---\n\n### Approach 1: Sliding Window\n\n#### Intuition\n\nThe key to solving this problem is to identify the optimal window of `minutes` during which the owner can convert grumpy minutes into non-grumpy minutes. This will maximize number of customers who will be satisfied.\n\nHow do we find this optimal window of `minutes`? One approach is to apply the window over the entire `customers` array and note the position at which the maximum number of customers could be converted from unsatisfied to satisfied. This technique is popularly called the fixed-size Sliding Window method, in which a window of fixed length moves across the array, and the impact of the window is noted at each step. This is an efficient method that maintains a window of elements and updates it incrementally as it slides, typically operating in linear time, $O(n)$.\n\nThe initial window will span from index `0` to index `minutes - 1` in the `customers` array. This window will slide across the array until its right end reaches the last index. At each iteration, we will add the newly included customers who would have been unsatisfied due to the owner's grumpiness. Simultaneously, we will remove the customers who are no longer within the window's range. The maximum number of unsatisfied customers across all windows represents the maximum impact of the secret technique.\n\nThe algorithm is visualized in the slideshow below. The green elements in the `customers` array specify unsatisfied customers and the red elements in `grumpy` are the grumpy minutes in the window.\n\n!?!../Documents/1052/slideshow.json:1294,602!?! \n\nFinally, we can determine the maximum number of satisfied customers throughout the day by summing the customers who were initially satisfied and those who became satisfied due to the secret technique.\n\n#### Algorithm\n\n- Initialize variables:\n  - `n` as the length of `customers` array.\n  - `unrealizedCustomers` to store the number of unsatisfied customer for each window\n- Calculate `unrealizedCustomers` for the initial window.\n- Initialize `maxUnrealizedCustomers` with the initial window.\n- Move the window over the `customers` array.\n  - Add the current minute's customers if the owner is grumpy.\n  - Remove the customers who entered `minutes` ago and are now out of the window's range.\n  - Update `maxUnrealizedCustomers` to be the maximum value between the current `maxUnrealizedCustomers` and `unrealizedCustomers`.\n- Initialize a variable `totalCustomers` to `maxUnrealizedCustomers`.\n- Add all satisfied customers during the non-grumpy minutes.\n- Return `totalCustomers`, which holds the total number of satisfied customers. \n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the `customers` array.\n\n- Time complexity: $O(n)$\n\n    The algorithm loops over the entire length of `customers` twice, which takes $2 \\cdot O(n)$ time. This can be simplified to a time complexity of $O(n)$.\n\n- Space complexity: $O(1)$\n\n    The algorithm does not use any additional data structures, so the space complexity remains $O(1)$.\n\n---"
+}

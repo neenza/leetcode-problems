@@ -1,0 +1,48 @@
+{
+  "title": "String Without AAA or BBB",
+  "problem_id": "1026",
+  "frontend_id": "984",
+  "difficulty": "Medium",
+  "problem_slug": "string-without-aaa-or-bbb",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "Given two integers a and b, return any string s such that:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = 1, b = 2\nOutput: \"abb\"\nExplanation: \"abb\", \"bab\" and \"bba\" are all correct answers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = 4, b = 1\nOutput: \"aabaa\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= a, b <= 100",
+    "It is guaranteed such an s exists for the given a and b."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string strWithout3a3b(int a, int b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String strWithout3a3b(int a, int b) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def strWithout3a3b(self, a, b):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def strWithout3a3b(self, a: int, b: int) -> str:\n        ",
+    "c": "\n\nchar * strWithout3a3b(int a, int b){\n\n}",
+    "csharp": "public class Solution {\n    public string StrWithout3a3b(int a, int b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} a\n * @param {number} b\n * @return {string}\n */\nvar strWithout3a3b = function(a, b) {\n    \n};",
+    "typescript": "function strWithout3a3b(a: number, b: number): string {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $a\n     * @param Integer $b\n     * @return String\n     */\n    function strWithout3a3b($a, $b) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func strWithout3a3b(_ a: Int, _ b: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun strWithout3a3b(a: Int, b: Int): String {\n        \n    }\n}",
+    "golang": "func strWithout3a3b(a int, b int) string {\n    \n}",
+    "ruby": "# @param {Integer} a\n# @param {Integer} b\n# @return {String}\ndef str_without3a3b(a, b)\n    \nend",
+    "scala": "object Solution {\n    def strWithout3a3b(a: Int, b: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn str_without3a3b(a: i32, b: i32) -> String {\n        \n    }\n}"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIntuitively, we should write the most common letter first.  For example, if we have `A = 6, B = 2`, we want to write `'aabaabaa'`.  The only time we don't write the most common letter is if the last two letters we have written are also the most common letter\n\n**Algorithm**\n\nLet's maintain `A, B`: the number of `'a'` and `'b'`'s left to write.\n\nIf we have already written the most common letter twice, we'll write the other letter.  Otherwise, we'll write the most common letter.**Complexity Analysis**\n\n* Time Complexity:  $$O(A+B)$$.\n\n* Space Complexity:  $$O(A+B)$$."
+}

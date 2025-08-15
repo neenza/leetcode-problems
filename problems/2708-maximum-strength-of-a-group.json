@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Strength of a Group",
+  "problem_id": "2754",
+  "frontend_id": "2708",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-strength-of-a-group",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Greedy",
+    "Bit Manipulation",
+    "Sorting",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed integer array nums representing the score of students in an exam. The teacher would like to form one non-empty group of students with maximal strength, where the strength of a group of students of indices i0, i1, i2, ... , ik is defined as nums[i0] * nums[i1] * nums[i2] * ... * nums[ik​].\nReturn the maximum strength of a group the teacher can create.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,-1,-5,2,5,-9]\nOutput: 1350\nExplanation: One way to form a group of maximal strength is to group the students at indices [0,2,3,4,5]. Their strength is 3 * (-5) * 2 * 5 * (-9) = 1350, which we can show is optimal.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-4,-5,-4]\nOutput: 20\nExplanation: Group the students at indices [0, 1] . Then, we’ll have a resulting strength of 20. We cannot achieve greater strength.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 13",
+    "-9 <= nums[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to generate all pairs of subsets and check which group provides maximal strength.",
+    "It can also be solved in O(NlogN) by sorting the array and using all positive integers.",
+    "Use negative integers only in pairs such that their product becomes positive."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxStrength(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxStrength(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxStrength(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxStrength(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maxStrength(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxStrength(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxStrength = function(nums) {\n    \n};",
+    "typescript": "function maxStrength(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxStrength($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxStrength(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxStrength(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxStrength(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxStrength(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_strength(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxStrength(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_strength(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-strength nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_strength(Nums :: [integer()]) -> integer().\nmax_strength(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_strength(nums :: [integer]) :: integer\n  def max_strength(nums) do\n    \n  end\nend"
+  }
+}

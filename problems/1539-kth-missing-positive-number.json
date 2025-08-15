@@ -1,0 +1,55 @@
+{
+  "title": "Kth Missing Positive Number",
+  "problem_id": "1646",
+  "frontend_id": "1539",
+  "difficulty": "Easy",
+  "problem_slug": "kth-missing-positive-number",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.\nReturn the kth positive integer that is missing from this array.\nExample 1:\nExample 2:\nConstraints:\nFollow up:\nCould you solve this problem in less than O(n) complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [2,3,4,7,11], k = 5\nOutput: 9\nExplanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,2,3,4], k = 2\nOutput: 6\nExplanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 1000",
+    "1 <= arr[i] <= 1000",
+    "1 <= k <= 1000",
+    "arr[i] < arr[j] for 1 <= i < j <= arr.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of how many positive numbers are missing as you scan the array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findKthPositive(vector<int>& arr, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findKthPositive(int[] arr, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findKthPositive(self, arr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findKthPositive(self, arr: List[int], k: int) -> int:\n        ",
+    "c": "int findKthPositive(int* arr, int arrSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindKthPositive(int[] arr, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} k\n * @return {number}\n */\nvar findKthPositive = function(arr, k) {\n    \n};",
+    "typescript": "function findKthPositive(arr: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $k\n     * @return Integer\n     */\n    function findKthPositive($arr, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findKthPositive(_ arr: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findKthPositive(arr: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findKthPositive(List<int> arr, int k) {\n    \n  }\n}",
+    "golang": "func findKthPositive(arr []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} k\n# @return {Integer}\ndef find_kth_positive(arr, k)\n    \nend",
+    "scala": "object Solution {\n    def findKthPositive(arr: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_kth_positive(arr: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-kth-positive arr k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_kth_positive(Arr :: [integer()], K :: integer()) -> integer().\nfind_kth_positive(Arr, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_kth_positive(arr :: [integer], k :: integer) :: integer\n  def find_kth_positive(arr, k) do\n    \n  end\nend"
+  }
+}

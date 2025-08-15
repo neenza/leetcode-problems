@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Number That Sum of the Prices Is Less Than or Equal to K",
+  "problem_id": "3240",
+  "frontend_id": "3007",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+  "topics": [
+    "Binary Search",
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer k and an integer x. The price of a number num is calculated by the count of set bits at positions x, 2x, 3x, etc., in its binary representation, starting from the least significant bit. The following table contains examples of how price is calculated.\nThe accumulated price of num is the total price of numbers from 1 to num. num is considered cheap if its accumulated price is less than or equal to k.\nReturn the greatest cheap number.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 9, x = 1\nOutput: 6\nExplanation:\nAs shown in the table below, 6 is the greatest cheap number.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 7, x = 2\nOutput: 9\nExplanation:\nAs shown in the table below, 9 is the greatest cheap number.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 1015",
+    "1 <= x <= 8"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary search the answer.",
+    "In each step of the binary search you should calculate the number of the set bits in the <code>i<sup>th</sup></code> position. Then calculate the sum of them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long findMaximumNumber(long long k, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findMaximumNumber(long k, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMaximumNumber(self, k, x):\n        \"\"\"\n        :type k: int\n        :type x: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMaximumNumber(self, k: int, x: int) -> int:\n        ",
+    "c": "long long findMaximumNumber(long long k, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public long FindMaximumNumber(long k, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number} x\n * @return {number}\n */\nvar findMaximumNumber = function(k, x) {\n    \n};",
+    "typescript": "function findMaximumNumber(k: number, x: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @param Integer $x\n     * @return Integer\n     */\n    function findMaximumNumber($k, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMaximumNumber(_ k: Int, _ x: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMaximumNumber(k: Long, x: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMaximumNumber(int k, int x) {\n    \n  }\n}",
+    "golang": "func findMaximumNumber(k int64, x int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @param {Integer} x\n# @return {Integer}\ndef find_maximum_number(k, x)\n    \nend",
+    "scala": "object Solution {\n    def findMaximumNumber(k: Long, x: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_maximum_number(k: i64, x: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (find-maximum-number k x)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_maximum_number(K :: integer(), X :: integer()) -> integer().\nfind_maximum_number(K, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_maximum_number(k :: integer, x :: integer) :: integer\n  def find_maximum_number(k, x) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Teemo Attacking",
+  "problem_id": "495",
+  "frontend_id": "495",
+  "difficulty": "Easy",
+  "problem_slug": "teemo-attacking",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack.\nYou are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration.\nReturn the total number of seconds that Ashe is poisoned.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: timeSeries = [1,4], duration = 2\nOutput: 4\nExplanation: Teemo's attacks on Ashe go as follows:\n- At second 1, Teemo attacks, and Ashe is poisoned for seconds 1 and 2.\n- At second 4, Teemo attacks, and Ashe is poisoned for seconds 4 and 5.\nAshe is poisoned for seconds 1, 2, 4, and 5, which is 4 seconds in total.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: timeSeries = [1,2], duration = 2\nOutput: 3\nExplanation: Teemo's attacks on Ashe go as follows:\n- At second 1, Teemo attacks, and Ashe is poisoned for seconds 1 and 2.\n- At second 2 however, Teemo attacks again and resets the poison timer. Ashe is poisoned for seconds 2 and 3.\nAshe is poisoned for seconds 1, 2, and 3, which is 3 seconds in total.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= timeSeries.length <= 104",
+    "0 <= timeSeries[i], duration <= 107",
+    "timeSeries is sorted in non-decreasing order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findPoisonedDuration(vector<int>& timeSeries, int duration) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findPoisonedDuration(int[] timeSeries, int duration) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPoisonedDuration(self, timeSeries, duration):\n        \"\"\"\n        :type timeSeries: List[int]\n        :type duration: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPoisonedDuration(self, timeSeries: List[int], duration: int) -> int:\n        ",
+    "c": "int findPoisonedDuration(int* timeSeries, int timeSeriesSize, int duration) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindPoisonedDuration(int[] timeSeries, int duration) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} timeSeries\n * @param {number} duration\n * @return {number}\n */\nvar findPoisonedDuration = function(timeSeries, duration) {\n    \n};",
+    "typescript": "function findPoisonedDuration(timeSeries: number[], duration: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $timeSeries\n     * @param Integer $duration\n     * @return Integer\n     */\n    function findPoisonedDuration($timeSeries, $duration) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPoisonedDuration(_ timeSeries: [Int], _ duration: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPoisonedDuration(timeSeries: IntArray, duration: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findPoisonedDuration(List<int> timeSeries, int duration) {\n    \n  }\n}",
+    "golang": "func findPoisonedDuration(timeSeries []int, duration int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} time_series\n# @param {Integer} duration\n# @return {Integer}\ndef find_poisoned_duration(time_series, duration)\n    \nend",
+    "scala": "object Solution {\n    def findPoisonedDuration(timeSeries: Array[Int], duration: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_poisoned_duration(time_series: Vec<i32>, duration: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-poisoned-duration timeSeries duration)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_poisoned_duration(TimeSeries :: [integer()], Duration :: integer()) -> integer().\nfind_poisoned_duration(TimeSeries, Duration) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_poisoned_duration(time_series :: [integer], duration :: integer) :: integer\n  def find_poisoned_duration(time_series, duration) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: One pass\n\n**Intuition**\n\nThe problem is an example of merge interval questions which are now [quite popular in Google](https://leetcode.com/discuss/interview-question/280433/Google-or-Phone-screen-or-Program-scheduling).\n\nTypically such problems could be solved in a linear time in the case of sorted input, like [here](https://leetcode.com/articles/insert-interval/), and in $$\\mathcal{O}(N \\log N)$$ time otherwise, [here is an example](https://leetcode.com/articles/merge-intervals/).\n\nHere one deals with a sorted input, and the problem could be solved in one pass with a constant space. The idea is straightforward: consider only the interval between two attacks. Ashe spends in a poisoned condition the whole time interval if this interval is shorter than the poisoning time duration `duration`, and `duration` otherwise. \n\n**Algorithm**\n\n- Initiate total time in poisoned condition `total = 0`.\n\n- Iterate over `timeSeries` list. At each step add to the total time the minimum between interval length and the poisoning time duration `duration`. \n\n- Return `total + duration` to take the last attack into account.  \n \n**Implementation**\n\n![pic](../Figures/495/ashe.png)**Complexity Analysis**\n\n* Time complexity: $$\\mathcal{O}(N)$$, where N is the length of the input list since we iterate the entire list.\n\n* Space complexity: $$\\mathcal{O}(1)$$, it's a constant space solution."
+}

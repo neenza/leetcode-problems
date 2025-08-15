@@ -1,0 +1,54 @@
+{
+  "title": "Maximum Difference by Remapping a Digit",
+  "problem_id": "2704",
+  "frontend_id": "2566",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-difference-by-remapping-a-digit",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given an integer num. You know that Bob will sneakily remap one of the 10 possible digits (0 to 9) to another digit.\nReturn the difference between the maximum and minimum values Bob can make by remapping exactly one digit in num.\nNotes:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 11891\nOutput: 99009\nExplanation: \nTo achieve the maximum value, Bob can remap the digit 1 to the digit 9 to yield 99899.\nTo achieve the minimum value, Bob can remap the digit 1 to the digit 0, yielding 890.\nThe difference between these two numbers is 99009.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 90\nOutput: 99\nExplanation:\nThe maximum value that can be returned by the function is 99 (if 0 is replaced by 9) and the minimum value that can be returned by the function is 0 (if 9 is replaced by 0).\nThus, we return 99.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to remap the first non-nine digit to 9 to obtain the maximum number.",
+    "Try to remap the first non-zero digit to 0 to obtain the minimum number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMaxDifference(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMaxDifference(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMaxDifference(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMaxDifference(self, num: int) -> int:\n        ",
+    "c": "int minMaxDifference(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMaxDifference(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar minMaxDifference = function(num) {\n    \n};",
+    "typescript": "function minMaxDifference(num: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer\n     */\n    function minMaxDifference($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMaxDifference(_ num: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMaxDifference(num: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMaxDifference(int num) {\n    \n  }\n}",
+    "golang": "func minMaxDifference(num int) int {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer}\ndef min_max_difference(num)\n    \nend",
+    "scala": "object Solution {\n    def minMaxDifference(num: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_max_difference(num: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-max-difference num)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_max_difference(Num :: integer()) -> integer().\nmin_max_difference(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_max_difference(num :: integer) :: integer\n  def min_max_difference(num) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Greedy\n\n#### Intuition\n\nThe task requires returning the difference between the maximum and minimum values obtained by replacing digits in the number `num`. According to the rules of digits, to generate the **maximum** value, we should replace digits to make the number as large as possible, typically by replacing some digit with `'9'`. To generate the **minimum** value, we should do the opposite and replace some digit with `'0'` to make the number as small as possible. For ease of calculation, we first convert `num` to a string `s`, and then apply the following greedy rules:\n\n+ To generate the maximum value: scan from left to right to find the first digit that is not `'9'`, and replace all occurrences of that digit with `'9'`.\n\n+ To generate the minimum value: scan from left to right to find the first digit that is not `'0'`, and replace all occurrences of that digit with `'0'`. Since `s[0]` is guaranteed not to be `'0'`, we can simply replace all occurrences of `s[0]` with `'0'`.\n\nFinally, return the difference between the maximum and minimum values obtained.\n\n#### Implementation#### Complexity Analysis\n\nLet $\\textit{num}$ be the given number.\n\n- Time complexity: $O(\\log \\textit{num})$.\n  \n  To generate the minimum and maximum values, we need to traverse each digit of $\\textit{num}$. Since the number of digits in $\\textit{num}$ is $O(\\log \\textit{num})$, the time required is also $O(\\log \\textit{num})$.\n\n- Space complexity: $O(\\log \\textit{num})$.\n  \n  Similarly, to generate the minimum and maximum values, we need to store each digit of $\\textit{num}$, requiring $O(\\log \\textit{num})$ space."
+}

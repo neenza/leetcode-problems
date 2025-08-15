@@ -1,0 +1,55 @@
+{
+  "title": "Earliest Finish Time for Land and Water Rides II",
+  "problem_id": "3967",
+  "frontend_id": "3635",
+  "difficulty": "Medium",
+  "problem_slug": "earliest-finish-time-for-land-and-water-rides-ii",
+  "topics": [],
+  "description": "You are given two categories of theme park attractions: land rides and water rides.\nA tourist must experience exactly one ride from each category, in either order.\nReturn the earliest possible time at which the tourist can finish both rides.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: landStartTime = [2,8], landDuration = [4,1], waterStartTime = [6], waterDuration = [3]\nOutput: 9\nExplanation: ​​​​​​​\nPlan A gives the earliest finish time of 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: landStartTime = [5], landDuration = [3], waterStartTime = [1], waterDuration = [10]\nOutput: 14\nExplanation: ​​​​​​​\nPlan A provides the earliest finish time of 14. ​​​​​​​",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, m <= 5 * 104",
+    "landStartTime.length == landDuration.length == n",
+    "waterStartTime.length == waterDuration.length == m",
+    "1 <= landStartTime[i], landDuration[i], waterStartTime[j], waterDuration[j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort each ride list by opening time and build a prefix minimum of ride durations and a suffix minimum of ride finish times (<code>start + duration</code>).",
+    "Try both orders, land then water and water then land. For each ride in the first list compute <code>finish1 = start1 + duration1</code>.",
+    "Binary‑search the second list (sorted by <code>start</code>) to split rides into those with <code>start <= finish1</code> and those with <code>start > finish1</code>. Use the prefix minimum duration on the early group to get an earliest finish of <code>finish1 + minDuration</code> and the suffix minimum finish time on the late group.",
+    "For each pairing take the smaller finish time and track the overall minimum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int earliestFinishTime(vector<int>& landStartTime, vector<int>& landDuration, vector<int>& waterStartTime, vector<int>& waterDuration) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int earliestFinishTime(int[] landStartTime, int[] landDuration, int[] waterStartTime, int[] waterDuration) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def earliestFinishTime(self, landStartTime, landDuration, waterStartTime, waterDuration):\n        \"\"\"\n        :type landStartTime: List[int]\n        :type landDuration: List[int]\n        :type waterStartTime: List[int]\n        :type waterDuration: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def earliestFinishTime(self, landStartTime: List[int], landDuration: List[int], waterStartTime: List[int], waterDuration: List[int]) -> int:\n        ",
+    "c": "int earliestFinishTime(int* landStartTime, int landStartTimeSize, int* landDuration, int landDurationSize, int* waterStartTime, int waterStartTimeSize, int* waterDuration, int waterDurationSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EarliestFinishTime(int[] landStartTime, int[] landDuration, int[] waterStartTime, int[] waterDuration) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} landStartTime\n * @param {number[]} landDuration\n * @param {number[]} waterStartTime\n * @param {number[]} waterDuration\n * @return {number}\n */\nvar earliestFinishTime = function(landStartTime, landDuration, waterStartTime, waterDuration) {\n    \n};",
+    "typescript": "function earliestFinishTime(landStartTime: number[], landDuration: number[], waterStartTime: number[], waterDuration: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $landStartTime\n     * @param Integer[] $landDuration\n     * @param Integer[] $waterStartTime\n     * @param Integer[] $waterDuration\n     * @return Integer\n     */\n    function earliestFinishTime($landStartTime, $landDuration, $waterStartTime, $waterDuration) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func earliestFinishTime(_ landStartTime: [Int], _ landDuration: [Int], _ waterStartTime: [Int], _ waterDuration: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun earliestFinishTime(landStartTime: IntArray, landDuration: IntArray, waterStartTime: IntArray, waterDuration: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int earliestFinishTime(List<int> landStartTime, List<int> landDuration, List<int> waterStartTime, List<int> waterDuration) {\n    \n  }\n}",
+    "golang": "func earliestFinishTime(landStartTime []int, landDuration []int, waterStartTime []int, waterDuration []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} land_start_time\n# @param {Integer[]} land_duration\n# @param {Integer[]} water_start_time\n# @param {Integer[]} water_duration\n# @return {Integer}\ndef earliest_finish_time(land_start_time, land_duration, water_start_time, water_duration)\n    \nend",
+    "scala": "object Solution {\n    def earliestFinishTime(landStartTime: Array[Int], landDuration: Array[Int], waterStartTime: Array[Int], waterDuration: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn earliest_finish_time(land_start_time: Vec<i32>, land_duration: Vec<i32>, water_start_time: Vec<i32>, water_duration: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (earliest-finish-time landStartTime landDuration waterStartTime waterDuration)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec earliest_finish_time(LandStartTime :: [integer()], LandDuration :: [integer()], WaterStartTime :: [integer()], WaterDuration :: [integer()]) -> integer().\nearliest_finish_time(LandStartTime, LandDuration, WaterStartTime, WaterDuration) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec earliest_finish_time(land_start_time :: [integer], land_duration :: [integer], water_start_time :: [integer], water_duration :: [integer]) :: integer\n  def earliest_finish_time(land_start_time, land_duration, water_start_time, water_duration) do\n    \n  end\nend"
+  }
+}

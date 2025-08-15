@@ -1,0 +1,65 @@
+{
+  "title": "Building Boxes",
+  "problem_id": "1861",
+  "frontend_id": "1739",
+  "difficulty": "Hard",
+  "problem_slug": "building-boxes",
+  "topics": [
+    "Math",
+    "Binary Search",
+    "Greedy"
+  ],
+  "description": "You have a cubic storeroom where the width, length, and height of the room are all equal to n units. You are asked to place n boxes in this room where each box is a cube of unit side length. There are however some rules to placing the boxes:\nGiven an integer n, return the minimum possible number of boxes touching the floor.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3\nOutput: 3\nExplanation: The figure above is for the placement of the three boxes.\nThese boxes are placed in the corner of the room, where the corner is on the left side.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/04/3-boxes.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4\nOutput: 3\nExplanation: The figure above is for the placement of the four boxes.\nThese boxes are placed in the corner of the room, where the corner is on the left side.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/04/4-boxes.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 10\nOutput: 6\nExplanation: The figure above is for the placement of the ten boxes.\nThese boxes are placed in the corner of the room, where the corner is on the back side.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/04/10-boxes.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Suppose We can put m boxes on the floor, within all the ways to put the boxes, what’s the maximum number of boxes we can put in?",
+    "The first box should always start in the corner"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumBoxes(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumBoxes(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumBoxes(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumBoxes(self, n: int) -> int:\n        ",
+    "c": "int minimumBoxes(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumBoxes(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar minimumBoxes = function(n) {\n    \n};",
+    "typescript": "function minimumBoxes(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function minimumBoxes($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumBoxes(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumBoxes(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumBoxes(int n) {\n    \n  }\n}",
+    "golang": "func minimumBoxes(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef minimum_boxes(n)\n    \nend",
+    "scala": "object Solution {\n    def minimumBoxes(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_boxes(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-boxes n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_boxes(N :: integer()) -> integer().\nminimum_boxes(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_boxes(n :: integer) :: integer\n  def minimum_boxes(n) do\n    \n  end\nend"
+  }
+}

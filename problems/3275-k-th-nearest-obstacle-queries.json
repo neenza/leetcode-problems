@@ -1,0 +1,57 @@
+{
+  "title": "K-th Nearest Obstacle Queries",
+  "problem_id": "3495",
+  "frontend_id": "3275",
+  "difficulty": "Medium",
+  "problem_slug": "k-th-nearest-obstacle-queries",
+  "topics": [
+    "Array",
+    "Heap (Priority Queue)"
+  ],
+  "description": "There is an infinite 2D plane.\nYou are given a positive integer k. You are also given a 2D array queries, which contains the following queries:\nAfter each query, you need to find the distance of the kth nearest obstacle from the origin.\nReturn an integer array results where results[i] denotes the kth nearest obstacle after query i, or results[i] == -1 if there are less than k obstacles.\nNote that initially there are no obstacles anywhere.\nThe distance of an obstacle at coordinate (x, y) from the origin is given by |x| + |y|.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [[1,2],[3,4],[2,3],[-3,0]], k = 2\nOutput: [-1,7,5,3]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [[5,5],[4,4],[3,3]], k = 1\nOutput: [10,8,6]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= queries.length <= 2 * 105",
+    "All queries[i] are unique.",
+    "-109 <= queries[i][0], queries[i][1] <= 109",
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider if there are more than <code>k</code> obstacles. Can the <code>k + 1<sup>th</sup></code> obstacle ever be the answer to any query?",
+    "Maintain a max heap of size <code>k</code>, thus heap will contain minimum element at the top in that queue.",
+    "Remove top element and insert new element from input array if current max is larger than this."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> resultsArray(vector<vector<int>>& queries, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] resultsArray(int[][] queries, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def resultsArray(self, queries, k):\n        \"\"\"\n        :type queries: List[List[int]]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def resultsArray(self, queries: List[List[int]], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* resultsArray(int** queries, int queriesSize, int* queriesColSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ResultsArray(int[][] queries, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @param {number} k\n * @return {number[]}\n */\nvar resultsArray = function(queries, k) {\n    \n};",
+    "typescript": "function resultsArray(queries: number[][], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $queries\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function resultsArray($queries, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func resultsArray(_ queries: [[Int]], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun resultsArray(queries: Array<IntArray>, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> resultsArray(List<List<int>> queries, int k) {\n    \n  }\n}",
+    "golang": "func resultsArray(queries [][]int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} queries\n# @param {Integer} k\n# @return {Integer[]}\ndef results_array(queries, k)\n    \nend",
+    "scala": "object Solution {\n    def resultsArray(queries: Array[Array[Int]], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn results_array(queries: Vec<Vec<i32>>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (results-array queries k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec results_array(Queries :: [[integer()]], K :: integer()) -> [integer()].\nresults_array(Queries, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec results_array(queries :: [[integer]], k :: integer) :: [integer]\n  def results_array(queries, k) do\n    \n  end\nend"
+  }
+}

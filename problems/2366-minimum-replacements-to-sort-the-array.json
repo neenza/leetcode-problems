@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Replacements to Sort the Array",
+  "problem_id": "2450",
+  "frontend_id": "2366",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-replacements-to-sort-the-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed integer array nums. In one operation you can replace any element of the array with any two elements that sum to it.\nReturn the minimum number of operations to make an array that is sorted in non-decreasing order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,9,3]\nOutput: 2\nExplanation: Here are the steps to sort the array in non-decreasing order:\n- From [3,9,3], replace the 9 with 3 and 6 so the array becomes [3,3,6,3]\n- From [3,3,6,3], replace the 6 with 3 and 3 so the array becomes [3,3,3,3,3]\nThere are 2 steps to sort the array in non-decreasing order. Therefore, we return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: 0\nExplanation: The array is already in non-decreasing order. Therefore, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is optimal to never make an operation to the last element of the array.",
+    "You can iterate from the second last element to the first. If the current value is greater than the previous bound, we want to break it into pieces so that the smaller one is as large as possible but not larger than the previous one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumReplacement(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumReplacement(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumReplacement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumReplacement(self, nums: List[int]) -> int:\n        ",
+    "c": "long long minimumReplacement(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumReplacement(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumReplacement = function(nums) {\n    \n};",
+    "typescript": "function minimumReplacement(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumReplacement($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumReplacement(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumReplacement(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumReplacement(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumReplacement(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_replacement(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumReplacement(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_replacement(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-replacement nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_replacement(Nums :: [integer()]) -> integer().\nminimum_replacement(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_replacement(nums :: [integer]) :: integer\n  def minimum_replacement(nums) do\n    \n  end\nend"
+  }
+}

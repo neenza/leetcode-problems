@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Impossible OR",
+  "problem_id": "2705",
+  "frontend_id": "2568",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-impossible-or",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Brainteaser"
+  ],
+  "description": "You are given a 0-indexed integer array nums.\nWe say that an integer x is expressible from nums if there exist some integers 0 <= index1 < index2 < ... < indexk < nums.length for which nums[index1] | nums[index2] | ... | nums[indexk] = x. In other words, an integer is expressible if it can be written as the bitwise OR of some subsequence of nums.\nReturn the minimum positive non-zero integer that is not expressible from nums.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1]\nOutput: 4\nExplanation: 1 and 2 are already present in the array. We know that 3 is expressible, since nums[0] | nums[1] = 2 | 1 = 3. Since 4 is not expressible, we return 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,3,2]\nOutput: 1\nExplanation: We can show that 1 is the smallest number that is not expressible.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about forming numbers in the powers of 2 using their bit representation.",
+    "The minimum power of 2 not present in the array will be the first number that could not be expressed using the given operation."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minImpossibleOR(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minImpossibleOR(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minImpossibleOR(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minImpossibleOR(self, nums: List[int]) -> int:\n        ",
+    "c": "int minImpossibleOR(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinImpossibleOR(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minImpossibleOR = function(nums) {\n    \n};",
+    "typescript": "function minImpossibleOR(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minImpossibleOR($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minImpossibleOR(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minImpossibleOR(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minImpossibleOR(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minImpossibleOR(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_impossible_or(nums)\n    \nend",
+    "scala": "object Solution {\n    def minImpossibleOR(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_impossible_or(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-impossible-or nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_impossible_or(Nums :: [integer()]) -> integer().\nmin_impossible_or(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_impossible_or(nums :: [integer]) :: integer\n  def min_impossible_or(nums) do\n    \n  end\nend"
+  }
+}

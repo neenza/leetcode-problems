@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Addition to Make Integer Beautiful",
+  "problem_id": "2544",
+  "frontend_id": "2457",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-addition-to-make-integer-beautiful",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "description": "You are given two positive integers n and target.\nAn integer is considered beautiful if the sum of its digits is less than or equal to target.\nReturn the minimum non-negative integer x such that n + x is beautiful. The input will be generated such that it is always possible to make n beautiful.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 16, target = 6\nOutput: 4\nExplanation: Initially n is 16 and its digit sum is 1 + 6 = 7. After adding 4, n becomes 20 and digit sum becomes 2 + 0 = 2. It can be shown that we can not make n beautiful with adding non-negative integer less than 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 467, target = 6\nOutput: 33\nExplanation: Initially n is 467 and its digit sum is 4 + 6 + 7 = 17. After adding 33, n becomes 500 and digit sum becomes 5 + 0 + 0 = 5. It can be shown that we can not make n beautiful with adding non-negative integer less than 33.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 1, target = 1\nOutput: 0\nExplanation: Initially n is 1 and its digit sum is 1, which is already smaller than or equal to target.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1012",
+    "1 <= target <= 150",
+    "The input will be generated such that it is always possible to make n beautiful."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about each digit independently.",
+    "Turn the rightmost non-zero digit to zero until the digit sum is greater than target."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long makeIntegerBeautiful(long long n, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long makeIntegerBeautiful(long n, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeIntegerBeautiful(self, n, target):\n        \"\"\"\n        :type n: int\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeIntegerBeautiful(self, n: int, target: int) -> int:\n        ",
+    "c": "long long makeIntegerBeautiful(long long n, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MakeIntegerBeautiful(long n, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} target\n * @return {number}\n */\nvar makeIntegerBeautiful = function(n, target) {\n    \n};",
+    "typescript": "function makeIntegerBeautiful(n: number, target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $target\n     * @return Integer\n     */\n    function makeIntegerBeautiful($n, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeIntegerBeautiful(_ n: Int, _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeIntegerBeautiful(n: Long, target: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int makeIntegerBeautiful(int n, int target) {\n    \n  }\n}",
+    "golang": "func makeIntegerBeautiful(n int64, target int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} target\n# @return {Integer}\ndef make_integer_beautiful(n, target)\n    \nend",
+    "scala": "object Solution {\n    def makeIntegerBeautiful(n: Long, target: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_integer_beautiful(n: i64, target: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (make-integer-beautiful n target)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec make_integer_beautiful(N :: integer(), Target :: integer()) -> integer().\nmake_integer_beautiful(N, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_integer_beautiful(n :: integer, target :: integer) :: integer\n  def make_integer_beautiful(n, target) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Find the Minimum Cost Array Permutation",
+  "problem_id": "3431",
+  "frontend_id": "3149",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-minimum-cost-array-permutation",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given an array nums which is a permutation of [0, 1, 2, ..., n - 1]. The score of any permutation of [0, 1, 2, ..., n - 1] named perm is defined as:\nscore(perm) = |perm[0] - nums[perm[1]]| + |perm[1] - nums[perm[2]]| + ... + |perm[n - 1] - nums[perm[0]]|\nReturn the permutation perm which has the minimum possible score. If multiple permutations exist with this score, return the one that is lexicographically smallest among them.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,2]\nOutput: [0,1,2]\nExplanation:\n\nThe lexicographically smallest permutation with minimum cost is [0,1,2] . The cost of this permutation is |0 - 0| + |1 - 2| + |2 - 1| = 2 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/04/04/example0gif.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,2,1]\nOutput: [0,2,1]\nExplanation:\n\nThe lexicographically smallest permutation with minimum cost is [0,2,1] . The cost of this permutation is |0 - 1| + |2 - 2| + |1 - 0| = 2 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/04/04/example1gif.gif"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 14",
+    "nums is a permutation of [0, 1, 2, ..., n - 1]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The score function is cyclic, so we can always set <code>perm[0] = 0</code> for the smallest lexical order.",
+    "It’s similar to the Traveling Salesman Problem. Use Dynamic Programming.",
+    "Use a bitmask to track which elements have been assigned to <code>perm</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findPermutation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findPermutation(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPermutation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPermutation(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findPermutation(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindPermutation(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findPermutation = function(nums) {\n    \n};",
+    "typescript": "function findPermutation(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function findPermutation($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPermutation(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPermutation(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findPermutation(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findPermutation(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef find_permutation(nums)\n    \nend",
+    "scala": "object Solution {\n    def findPermutation(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_permutation(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-permutation nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_permutation(Nums :: [integer()]) -> [integer()].\nfind_permutation(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_permutation(nums :: [integer]) :: [integer]\n  def find_permutation(nums) do\n    \n  end\nend"
+  }
+}

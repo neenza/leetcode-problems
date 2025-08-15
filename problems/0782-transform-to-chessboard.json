@@ -1,0 +1,66 @@
+{
+  "title": "Transform to Chessboard",
+  "problem_id": "798",
+  "frontend_id": "782",
+  "difficulty": "Hard",
+  "problem_slug": "transform-to-chessboard",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation",
+    "Matrix"
+  ],
+  "description": "You are given an n x n binary grid board. In each move, you can swap any two rows with each other, or any two columns with each other.\nReturn the minimum number of moves to transform the board into a chessboard board. If the task is impossible, return -1.\nA chessboard board is a board where no 0's and no 1's are 4-directionally adjacent.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[0,1,1,0],[0,1,1,0],[1,0,0,1],[1,0,0,1]]\nOutput: 2\nExplanation: One potential sequence of moves is shown.\nThe first move swaps the first and second column.\nThe second move swaps the second and third row.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/chessboard1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[0,1],[1,0]]\nOutput: 0\nExplanation: Also note that the board with 0 in the top left corner, is also a valid chessboard.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/chessboard2-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [[1,0],[1,0]]\nOutput: -1\nExplanation: No matter what sequence of moves you make, you cannot end with a valid chessboard.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/chessboard3-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == board.length",
+    "n == board[i].length",
+    "2 <= n <= 30",
+    "board[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int movesToChessboard(vector<vector<int>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int movesToChessboard(int[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def movesToChessboard(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def movesToChessboard(self, board: List[List[int]]) -> int:\n        ",
+    "c": "int movesToChessboard(int** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MovesToChessboard(int[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} board\n * @return {number}\n */\nvar movesToChessboard = function(board) {\n    \n};",
+    "typescript": "function movesToChessboard(board: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $board\n     * @return Integer\n     */\n    function movesToChessboard($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func movesToChessboard(_ board: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun movesToChessboard(board: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int movesToChessboard(List<List<int>> board) {\n    \n  }\n}",
+    "golang": "func movesToChessboard(board [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} board\n# @return {Integer}\ndef moves_to_chessboard(board)\n    \nend",
+    "scala": "object Solution {\n    def movesToChessboard(board: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn moves_to_chessboard(board: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (moves-to-chessboard board)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec moves_to_chessboard(Board :: [[integer()]]) -> integer().\nmoves_to_chessboard(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec moves_to_chessboard(board :: [[integer]]) :: integer\n  def moves_to_chessboard(board) do\n    \n  end\nend"
+  }
+}

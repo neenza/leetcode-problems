@@ -1,0 +1,57 @@
+{
+  "title": "Distinct Echo Substrings",
+  "problem_id": "1244",
+  "frontend_id": "1316",
+  "difficulty": "Hard",
+  "problem_slug": "distinct-echo-substrings",
+  "topics": [
+    "String",
+    "Trie",
+    "Rolling Hash",
+    "Hash Function"
+  ],
+  "description": "Return the number of distinct non-empty substrings of text that can be written as the concatenation of some string with itself (i.e. it can be written as a + a where a is some string).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"abcabcabc\"\nOutput: 3\nExplanation: The 3 substrings are \"abcabc\", \"bcabca\" and \"cabcab\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \"leetcodeleetcode\"\nOutput: 2\nExplanation: The 2 substrings are \"ee\" and \"leetcodeleetcode\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 2000",
+    "text has only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Given a substring of the text, how to check if it can be written as the concatenation of a string with itself ?",
+    "We can do that in linear time, a faster way is to use hashing.",
+    "Try all substrings and use hashing to check them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distinctEchoSubstrings(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctEchoSubstrings(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctEchoSubstrings(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctEchoSubstrings(self, text: str) -> int:\n        ",
+    "c": "int distinctEchoSubstrings(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistinctEchoSubstrings(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar distinctEchoSubstrings = function(text) {\n    \n};",
+    "typescript": "function distinctEchoSubstrings(text: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return Integer\n     */\n    function distinctEchoSubstrings($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctEchoSubstrings(_ text: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctEchoSubstrings(text: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctEchoSubstrings(String text) {\n    \n  }\n}",
+    "golang": "func distinctEchoSubstrings(text string) int {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {Integer}\ndef distinct_echo_substrings(text)\n    \nend",
+    "scala": "object Solution {\n    def distinctEchoSubstrings(text: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_echo_substrings(text: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-echo-substrings text)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec distinct_echo_substrings(Text :: unicode:unicode_binary()) -> integer().\ndistinct_echo_substrings(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_echo_substrings(text :: String.t) :: integer\n  def distinct_echo_substrings(text) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Smallest Range II",
+  "problem_id": "946",
+  "frontend_id": "910",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-range-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nFor each index i where 0 <= i < nums.length, change nums[i] to be either nums[i] + k or nums[i] - k.\nThe score of nums is the difference between the maximum and minimum elements in nums.\nReturn the minimum score of nums after changing the values at each index.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1], k = 0\nOutput: 0\nExplanation: The score is max(nums) - min(nums) = 1 - 1 = 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,10], k = 2\nOutput: 6\nExplanation: Change nums to be [2, 8]. The score is max(nums) - min(nums) = 8 - 2 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,3,6], k = 3\nOutput: 3\nExplanation: Change nums to be [4, 6, 3]. The score is max(nums) - min(nums) = 6 - 3 = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "0 <= nums[i] <= 104",
+    "0 <= k <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int smallestRangeII(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestRangeII(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestRangeII(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestRangeII(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int smallestRangeII(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SmallestRangeII(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar smallestRangeII = function(nums, k) {\n    \n};",
+    "typescript": "function smallestRangeII(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function smallestRangeII($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestRangeII(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestRangeII(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int smallestRangeII(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func smallestRangeII(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef smallest_range_ii(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def smallestRangeII(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_range_ii(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-range-ii nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec smallest_range_ii(Nums :: [integer()], K :: integer()) -> integer().\nsmallest_range_ii(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_range_ii(nums :: [integer], k :: integer) :: integer\n  def smallest_range_ii(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Linear Scan\n\n**Intuition**\n\nAs in *Smallest Range I*, smaller `A[i]` will choose to increase their value (\"go up\"), and bigger `A[i]` will decrease their value (\"go down\").\n\n**Algorithm**\n\nWe can formalize the above concept: if `A[i] < A[j]`, we don't need to consider when `A[i]` goes down while `A[j]` goes up.  This is because the interval `(A[i] + K, A[j] - K)` is a subset of `(A[i] - K, A[j] + K)` (here, `(a, b)` for `a > b` denotes `(b, a)` instead.)\n\nThat means that it is never worse to choose `(up, down)` instead of `(down, up)`.  We can prove this claim that one interval is a subset of another, by showing both `A[i] + K` and `A[j] - K` are between `A[i] - K` and `A[j] + K`.\n\nFor sorted `A`, say `A[i]` is the largest `i` that goes up.  Then `A[0] + K, A[i] + K, A[i+1] - K, A[A.length - 1] - K` are the only relevant values for calculating the answer: every other value is between one of these extremal values.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of the `A`.\n\n* Space complexity : $$\\mathcal{O}(N)$$ or $$\\mathcal{O}(\\log{N})$$\n\n  - The space complexity of the sorting algorithm depends on the implementation of each program language.\n\n  - For instance, the `list.sort()` function in Python is implemented with the [Timsort](https://en.wikipedia.org/wiki/Timsort) algorithm whose space complexity is $$\\mathcal{O}(N)$$.\n\n  - In Java, the [Arrays.sort()](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-byte:A-) is implemented as a variant of quicksort algorithm whose space complexity is $$\\mathcal{O}(\\log{N})$$.\n\n\n---"
+}

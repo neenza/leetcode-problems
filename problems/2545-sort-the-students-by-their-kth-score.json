@@ -1,0 +1,63 @@
+{
+  "title": "Sort the Students by Their Kth Score",
+  "problem_id": "2631",
+  "frontend_id": "2545",
+  "difficulty": "Medium",
+  "problem_slug": "sort-the-students-by-their-kth-score",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "There is a class with m students and n exams. You are given a 0-indexed m x n integer matrix score, where each row represents one student and score[i][j] denotes the score the ith student got in the jth exam. The matrix score contains distinct integers only.\nYou are also given an integer k. Sort the students (i.e., the rows of the matrix) by their scores in the kth (0-indexed) exam from the highest to the lowest.\nReturn the matrix after sorting it.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k = 2\nOutput: [[7,5,11,2],[10,6,9,1],[4,8,3,15]]\nExplanation: In the above diagram, S denotes the student, while E denotes the exam.\n- The student with index 1 scored 11 in exam 2, which is the highest score, so they got first place.\n- The student with index 0 scored 9 in exam 2, which is the second highest score, so they got second place.\n- The student with index 2 scored 3 in exam 2, which is the lowest score, so they got third place.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/30/example1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: score = [[3,4],[5,6]], k = 0\nOutput: [[5,6],[3,4]]\nExplanation: In the above diagram, S denotes the student, while E denotes the exam.\n- The student with index 1 scored 5 in exam 0, which is the highest score, so they got first place.\n- The student with index 0 scored 3 in exam 0, which is the lowest score, so they got second place.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/30/example2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == score.length",
+    "n == score[i].length",
+    "1 <= m, n <= 250",
+    "1 <= score[i][j] <= 105",
+    "score consists of distinct integers.",
+    "0 <= k < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the row with the highest score in the kth exam and swap it with the first row.",
+    "After fixing the first row, perform the same operation for the rest of the rows, and the matrix's rows will get sorted one by one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> sortTheStudents(vector<vector<int>>& score, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] sortTheStudents(int[][] score, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortTheStudents(self, score, k):\n        \"\"\"\n        :type score: List[List[int]]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** sortTheStudents(int** score, int scoreSize, int* scoreColSize, int k, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] SortTheStudents(int[][] score, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} score\n * @param {number} k\n * @return {number[][]}\n */\nvar sortTheStudents = function(score, k) {\n    \n};",
+    "typescript": "function sortTheStudents(score: number[][], k: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $score\n     * @param Integer $k\n     * @return Integer[][]\n     */\n    function sortTheStudents($score, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortTheStudents(_ score: [[Int]], _ k: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortTheStudents(score: Array<IntArray>, k: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> sortTheStudents(List<List<int>> score, int k) {\n    \n  }\n}",
+    "golang": "func sortTheStudents(score [][]int, k int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} score\n# @param {Integer} k\n# @return {Integer[][]}\ndef sort_the_students(score, k)\n    \nend",
+    "scala": "object Solution {\n    def sortTheStudents(score: Array[Array[Int]], k: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_the_students(score: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (sort-the-students score k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec sort_the_students(Score :: [[integer()]], K :: integer()) -> [[integer()]].\nsort_the_students(Score, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_the_students(score :: [[integer]], k :: integer) :: [[integer]]\n  def sort_the_students(score, k) do\n    \n  end\nend"
+  }
+}

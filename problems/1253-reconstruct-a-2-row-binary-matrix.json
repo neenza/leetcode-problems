@@ -1,0 +1,61 @@
+{
+  "title": "Reconstruct a 2-Row Binary Matrix",
+  "problem_id": "1379",
+  "frontend_id": "1253",
+  "difficulty": "Medium",
+  "problem_slug": "reconstruct-a-2-row-binary-matrix",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "description": "Given the following details of a matrix with n columns and 2 rows :\nYour task is to reconstruct the matrix with upper, lower and colsum.\nReturn it as a 2-D integer array.\nIf there are more than one valid solution, any of them will be accepted.\nIf no valid solution exists, return an empty 2-D array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: upper = 2, lower = 1, colsum = [1,1,1]\nOutput: [[1,1,0],[0,0,1]]\nExplanation: [[1,0,1],[0,1,0]], and [[0,1,1],[1,0,0]] are also correct answers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: upper = 2, lower = 3, colsum = [2,2,1,1]\nOutput: []",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: upper = 5, lower = 5, colsum = [2,1,2,0,1,0,1,2,0,1]\nOutput: [[1,1,1,0,1,0,0,1,0,0],[1,0,1,0,0,0,1,1,0,1]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= colsum.length <= 10^5",
+    "0 <= upper, lower <= colsum.length",
+    "0 <= colsum[i] <= 2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You cannot do anything about colsum[i] = 2 case or colsum[i] = 0 case. Then you put colsum[i] = 1 case to the upper row until upper has reached. Then put the rest into lower row.",
+    "Fill 0 and 2 first, then fill 1 in the upper row or lower row in turn but be careful about exhausting permitted 1s in each row."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> reconstructMatrix(int upper, int lower, vector<int>& colsum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> reconstructMatrix(int upper, int lower, int[] colsum) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reconstructMatrix(self, upper, lower, colsum):\n        \"\"\"\n        :type upper: int\n        :type lower: int\n        :type colsum: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reconstructMatrix(self, upper: int, lower: int, colsum: List[int]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** reconstructMatrix(int upper, int lower, int* colsum, int colsumSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> ReconstructMatrix(int upper, int lower, int[] colsum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} upper\n * @param {number} lower\n * @param {number[]} colsum\n * @return {number[][]}\n */\nvar reconstructMatrix = function(upper, lower, colsum) {\n    \n};",
+    "typescript": "function reconstructMatrix(upper: number, lower: number, colsum: number[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $upper\n     * @param Integer $lower\n     * @param Integer[] $colsum\n     * @return Integer[][]\n     */\n    function reconstructMatrix($upper, $lower, $colsum) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reconstructMatrix(_ upper: Int, _ lower: Int, _ colsum: [Int]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reconstructMatrix(upper: Int, lower: Int, colsum: IntArray): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> reconstructMatrix(int upper, int lower, List<int> colsum) {\n    \n  }\n}",
+    "golang": "func reconstructMatrix(upper int, lower int, colsum []int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} upper\n# @param {Integer} lower\n# @param {Integer[]} colsum\n# @return {Integer[][]}\ndef reconstruct_matrix(upper, lower, colsum)\n    \nend",
+    "scala": "object Solution {\n    def reconstructMatrix(upper: Int, lower: Int, colsum: Array[Int]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reconstruct_matrix(upper: i32, lower: i32, colsum: Vec<i32>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (reconstruct-matrix upper lower colsum)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec reconstruct_matrix(Upper :: integer(), Lower :: integer(), Colsum :: [integer()]) -> [[integer()]].\nreconstruct_matrix(Upper, Lower, Colsum) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reconstruct_matrix(upper :: integer, lower :: integer, colsum :: [integer]) :: [[integer]]\n  def reconstruct_matrix(upper, lower, colsum) do\n    \n  end\nend"
+  }
+}

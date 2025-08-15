@@ -1,0 +1,59 @@
+{
+  "title": "Count Partitions with Even Sum Difference",
+  "problem_id": "3704",
+  "frontend_id": "3432",
+  "difficulty": "Easy",
+  "problem_slug": "count-partitions-with-even-sum-difference",
+  "topics": [
+    "Array",
+    "Math",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of length n.\nA partition is defined as an index i where 0 <= i < n - 1, splitting the array into two non-empty subarrays such that:\nReturn the number of partitions where the difference between the sum of the left and right subarrays is even.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [10,10,3,7,6]\nOutput: 4\nExplanation:\nThe 4 partitions are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,2]\nOutput: 0\nExplanation:\nNo partition results in an even sum difference.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,4,6,8]\nOutput: 3\nExplanation:\nAll partitions result in an even sum difference.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the parity of the sum is even, the partition is valid; otherwise, there is no partition."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPartitions(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPartitions(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPartitions(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPartitions(self, nums: List[int]) -> int:\n        ",
+    "c": "int countPartitions(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPartitions(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countPartitions = function(nums) {\n    \n};",
+    "typescript": "function countPartitions(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countPartitions($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPartitions(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPartitions(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPartitions(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countPartitions(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_partitions(nums)\n    \nend",
+    "scala": "object Solution {\n    def countPartitions(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_partitions(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-partitions nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_partitions(Nums :: [integer()]) -> integer().\ncount_partitions(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_partitions(nums :: [integer]) :: integer\n  def count_partitions(nums) do\n    \n  end\nend"
+  }
+}

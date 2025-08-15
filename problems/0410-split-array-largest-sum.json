@@ -1,0 +1,55 @@
+{
+  "title": "Split Array Largest Sum",
+  "problem_id": "410",
+  "frontend_id": "410",
+  "difficulty": "Hard",
+  "problem_slug": "split-array-largest-sum",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Greedy",
+    "Prefix Sum"
+  ],
+  "description": "Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.\nReturn the minimized largest sum of the split.\nA subarray is a contiguous part of the array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,2,5,10,8], k = 2\nOutput: 18\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5], k = 2\nOutput: 9\nExplanation: There are four ways to split nums into two subarrays.\nThe best way is to split it into [1,2,3] and [4,5], where the largest sum among the two subarrays is only 9.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "0 <= nums[i] <= 106",
+    "1 <= k <= min(50, nums.length)"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int splitArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int splitArray(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitArray(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int splitArray(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SplitArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar splitArray = function(nums, k) {\n    \n};",
+    "typescript": "function splitArray(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function splitArray($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitArray(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitArray(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int splitArray(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func splitArray(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef split_array(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def splitArray(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_array(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (split-array nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec split_array(Nums :: [integer()], K :: integer()) -> integer().\nsplit_array(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_array(nums :: [integer], k :: integer) :: integer\n  def split_array(nums, k) do\n    \n  end\nend"
+  }
+}

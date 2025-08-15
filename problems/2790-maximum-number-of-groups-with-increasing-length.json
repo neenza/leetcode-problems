@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Number of Groups With Increasing Length",
+  "problem_id": "2919",
+  "frontend_id": "2790",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-groups-with-increasing-length",
+  "topics": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed array usageLimits of length n.\nYour task is to create groups using numbers from 0 to n - 1, ensuring that each number, i, is used no more than usageLimits[i] times in total across all groups. You must also satisfy the following conditions:\nReturn an integer denoting the maximum number of groups you can create while satisfying these conditions.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: usageLimits = [1,2,5]\nOutput: 3\nExplanation: In this example, we can use 0 at most once, 1 at most twice, and 2 at most five times.\nOne way of creating the maximum number of groups while satisfying the conditions is: \nGroup 1 contains the number [2].\nGroup 2 contains the numbers [1,2].\nGroup 3 contains the numbers [0,1,2]. \nIt can be shown that the maximum number of groups is 3. \nSo, the output is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: usageLimits = [2,1,2]\nOutput: 2\nExplanation: In this example, we can use 0 at most twice, 1 at most once, and 2 at most twice.\nOne way of creating the maximum number of groups while satisfying the conditions is:\nGroup 1 contains the number [0].\nGroup 2 contains the numbers [1,2].\nIt can be shown that the maximum number of groups is 2.\nSo, the output is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: usageLimits = [1,1]\nOutput: 1\nExplanation: In this example, we can use both 0 and 1 at most once.\nOne way of creating the maximum number of groups while satisfying the conditions is:\nGroup 1 contains the number [0].\nIt can be shown that the maximum number of groups is 1.\nSo, the output is 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= usageLimits.length <= 105",
+    "1 <= usageLimits[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we solve this problem using sorting and binary search?",
+    "Sort the array in increasing order and run a binary search on the number of groups, x.",
+    "To determine if a value x is feasible, greedily distribute the numbers such that each group receives 1, 2, 3, ..., x numbers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxIncreasingGroups(vector<int>& usageLimits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxIncreasingGroups(List<Integer> usageLimits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxIncreasingGroups(self, usageLimits):\n        \"\"\"\n        :type usageLimits: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxIncreasingGroups(self, usageLimits: List[int]) -> int:\n        ",
+    "c": "int maxIncreasingGroups(int* usageLimits, int usageLimitsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxIncreasingGroups(IList<int> usageLimits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} usageLimits\n * @return {number}\n */\nvar maxIncreasingGroups = function(usageLimits) {\n    \n};",
+    "typescript": "function maxIncreasingGroups(usageLimits: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $usageLimits\n     * @return Integer\n     */\n    function maxIncreasingGroups($usageLimits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxIncreasingGroups(_ usageLimits: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxIncreasingGroups(usageLimits: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxIncreasingGroups(List<int> usageLimits) {\n    \n  }\n}",
+    "golang": "func maxIncreasingGroups(usageLimits []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} usage_limits\n# @return {Integer}\ndef max_increasing_groups(usage_limits)\n    \nend",
+    "scala": "object Solution {\n    def maxIncreasingGroups(usageLimits: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_increasing_groups(usage_limits: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-increasing-groups usageLimits)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_increasing_groups(UsageLimits :: [integer()]) -> integer().\nmax_increasing_groups(UsageLimits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_increasing_groups(usage_limits :: [integer]) :: integer\n  def max_increasing_groups(usage_limits) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Split the Array",
+  "problem_id": "3324",
+  "frontend_id": "3046",
+  "difficulty": "Easy",
+  "problem_slug": "split-the-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "You are given an integer array nums of even length. You have to split the array into two parts nums1 and nums2 such that:\nReturn true if it is possible to split the array, and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,2,2,3,4]\nOutput: true\nExplanation: One of the possible ways to split nums is nums1 = [1,2,3] and nums2 = [1,2,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,1]\nOutput: false\nExplanation: The only possible way to split nums is nums1 = [1,1] and nums2 = [1,1]. Both nums1 and nums2 do not contain distinct elements. Therefore, we return false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "nums.length % 2 == 0",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It’s impossible if the same number occurs more than twice. So just check the frequency of each value."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPossibleToSplit(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPossibleToSplit(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPossibleToSplit(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPossibleToSplit(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool isPossibleToSplit(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPossibleToSplit(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar isPossibleToSplit = function(nums) {\n    \n};",
+    "typescript": "function isPossibleToSplit(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function isPossibleToSplit($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPossibleToSplit(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPossibleToSplit(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPossibleToSplit(List<int> nums) {\n    \n  }\n}",
+    "golang": "func isPossibleToSplit(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef is_possible_to_split(nums)\n    \nend",
+    "scala": "object Solution {\n    def isPossibleToSplit(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_possible_to_split(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-possible-to-split nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_possible_to_split(Nums :: [integer()]) -> boolean().\nis_possible_to_split(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_possible_to_split(nums :: [integer]) :: boolean\n  def is_possible_to_split(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Paint House III",
+  "problem_id": "1583",
+  "frontend_id": "1473",
+  "difficulty": "Hard",
+  "problem_slug": "paint-house-iii",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "There is a row of m houses in a small city, each house must be painted with one of the n colors (labeled from 1 to n), some houses that have been painted last summer should not be painted again.\nA neighborhood is a maximal group of continuous houses that are painted with the same color.\nGiven an array houses, an m x n matrix cost and an integer target where:\nReturn the minimum cost of painting all the remaining houses in such a way that there are exactly target neighborhoods. If it is not possible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: houses = [0,0,0,0,0], cost = [[1,10],[10,1],[10,1],[1,10],[5,1]], m = 5, n = 2, target = 3\nOutput: 9\nExplanation: Paint houses of this way [1,2,2,1,1]\nThis array contains target = 3 neighborhoods, [{1}, {2,2}, {1,1}].\nCost of paint all houses (1 + 1 + 1 + 1 + 5) = 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: houses = [0,2,1,2,0], cost = [[1,10],[10,1],[10,1],[1,10],[5,1]], m = 5, n = 2, target = 3\nOutput: 11\nExplanation: Some houses are already painted, Paint the houses of this way [2,2,1,2,2]\nThis array contains target = 3 neighborhoods, [{2,2}, {1}, {2,2}]. \nCost of paint the first and last house (10 + 1) = 11.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: houses = [3,1,2,3], cost = [[1,1,1],[1,1,1],[1,1,1],[1,1,1]], m = 4, n = 3, target = 3\nOutput: -1\nExplanation: Houses are already painted with a total of 4 neighborhoods [{3},{1},{2},{3}] different of target = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == houses.length == cost.length",
+    "n == cost[i].length",
+    "1 <= m <= 100",
+    "1 <= n <= 20",
+    "1 <= target <= m",
+    "0 <= houses[i] <= n",
+    "1 <= cost[i][j] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic programming.",
+    "Define dp[i][j][k] as the minimum cost where we have k neighborhoods in the first i houses and the i-th house is painted with the color j."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCost(vector<int>& houses, vector<vector<int>>& cost, int m, int n, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(int[] houses, int[][] cost, int m, int n, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, houses, cost, m, n, target):\n        \"\"\"\n        :type houses: List[int]\n        :type cost: List[List[int]]\n        :type m: int\n        :type n: int\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:\n        ",
+    "c": "int minCost(int* houses, int housesSize, int** cost, int costSize, int* costColSize, int m, int n, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCost(int[] houses, int[][] cost, int m, int n, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} houses\n * @param {number[][]} cost\n * @param {number} m\n * @param {number} n\n * @param {number} target\n * @return {number}\n */\nvar minCost = function(houses, cost, m, n, target) {\n    \n};",
+    "typescript": "function minCost(houses: number[], cost: number[][], m: number, n: number, target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $houses\n     * @param Integer[][] $cost\n     * @param Integer $m\n     * @param Integer $n\n     * @param Integer $target\n     * @return Integer\n     */\n    function minCost($houses, $cost, $m, $n, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ houses: [Int], _ cost: [[Int]], _ m: Int, _ n: Int, _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(houses: IntArray, cost: Array<IntArray>, m: Int, n: Int, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> houses, List<List<int>> cost, int m, int n, int target) {\n    \n  }\n}",
+    "golang": "func minCost(houses []int, cost [][]int, m int, n int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} houses\n# @param {Integer[][]} cost\n# @param {Integer} m\n# @param {Integer} n\n# @param {Integer} target\n# @return {Integer}\ndef min_cost(houses, cost, m, n, target)\n    \nend",
+    "scala": "object Solution {\n    def minCost(houses: Array[Int], cost: Array[Array[Int]], m: Int, n: Int, target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(houses: Vec<i32>, cost: Vec<Vec<i32>>, m: i32, n: i32, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost houses cost m n target)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Houses :: [integer()], Cost :: [[integer()]], M :: integer(), N :: integer(), Target :: integer()) -> integer().\nmin_cost(Houses, Cost, M, N, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(houses :: [integer], cost :: [[integer]], m :: integer, n :: integer, target :: integer) :: integer\n  def min_cost(houses, cost, m, n, target) do\n    \n  end\nend"
+  }
+}

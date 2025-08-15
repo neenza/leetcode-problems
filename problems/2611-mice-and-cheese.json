@@ -1,0 +1,57 @@
+{
+  "title": "Mice and Cheese",
+  "problem_id": "2725",
+  "frontend_id": "2611",
+  "difficulty": "Medium",
+  "problem_slug": "mice-and-cheese",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "There are two mice and n different types of cheese, each type of cheese should be eaten by exactly one mouse.\nA point of the cheese with index i (0-indexed) is:\nYou are given a positive integer array reward1, a positive integer array reward2, and a non-negative integer k.\nReturn the maximum points the mice can achieve if the first mouse eats exactly k types of cheese.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: reward1 = [1,1,3,4], reward2 = [4,4,1,1], k = 2\nOutput: 15\nExplanation: In this example, the first mouse eats the 2nd (0-indexed) and the 3rd types of cheese, and the second mouse eats the 0th and the 1st types of cheese.\nThe total points are 4 + 4 + 3 + 4 = 15.\nIt can be proven that 15 is the maximum total points that the mice can achieve.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: reward1 = [1,1], reward2 = [1,1], k = 2\nOutput: 2\nExplanation: In this example, the first mouse eats the 0th (0-indexed) and 1st types of cheese, and the second mouse does not eat any cheese.\nThe total points are 1 + 1 = 2.\nIt can be proven that 2 is the maximum total points that the mice can achieve.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == reward1.length == reward2.length <= 105",
+    "1 <= reward1[i], reward2[i] <= 1000",
+    "0 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The intended solution uses greedy approach.",
+    "Imagine at first that the second mouse eats all the cheese, then we should choose k types of cheese with the maximum sum of - reward2[i] + reward1[i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int miceAndCheese(vector<int>& reward1, vector<int>& reward2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int miceAndCheese(int[] reward1, int[] reward2, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def miceAndCheese(self, reward1, reward2, k):\n        \"\"\"\n        :type reward1: List[int]\n        :type reward2: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def miceAndCheese(self, reward1: List[int], reward2: List[int], k: int) -> int:\n        ",
+    "c": "int miceAndCheese(int* reward1, int reward1Size, int* reward2, int reward2Size, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MiceAndCheese(int[] reward1, int[] reward2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} reward1\n * @param {number[]} reward2\n * @param {number} k\n * @return {number}\n */\nvar miceAndCheese = function(reward1, reward2, k) {\n    \n};",
+    "typescript": "function miceAndCheese(reward1: number[], reward2: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $reward1\n     * @param Integer[] $reward2\n     * @param Integer $k\n     * @return Integer\n     */\n    function miceAndCheese($reward1, $reward2, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func miceAndCheese(_ reward1: [Int], _ reward2: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun miceAndCheese(reward1: IntArray, reward2: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int miceAndCheese(List<int> reward1, List<int> reward2, int k) {\n    \n  }\n}",
+    "golang": "func miceAndCheese(reward1 []int, reward2 []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} reward1\n# @param {Integer[]} reward2\n# @param {Integer} k\n# @return {Integer}\ndef mice_and_cheese(reward1, reward2, k)\n    \nend",
+    "scala": "object Solution {\n    def miceAndCheese(reward1: Array[Int], reward2: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn mice_and_cheese(reward1: Vec<i32>, reward2: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (mice-and-cheese reward1 reward2 k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec mice_and_cheese(Reward1 :: [integer()], Reward2 :: [integer()], K :: integer()) -> integer().\nmice_and_cheese(Reward1, Reward2, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec mice_and_cheese(reward1 :: [integer], reward2 :: [integer], k :: integer) :: integer\n  def mice_and_cheese(reward1, reward2, k) do\n    \n  end\nend"
+  }
+}

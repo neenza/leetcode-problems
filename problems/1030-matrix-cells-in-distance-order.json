@@ -1,0 +1,60 @@
+{
+  "title": "Matrix Cells in Distance Order",
+  "problem_id": "1094",
+  "frontend_id": "1030",
+  "difficulty": "Easy",
+  "problem_slug": "matrix-cells-in-distance-order",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "You are given four integers row, cols, rCenter, and cCenter. There is a rows x cols matrix and you are on the cell with the coordinates (rCenter, cCenter).\nReturn the coordinates of all cells in the matrix, sorted by their distance from (rCenter, cCenter) from the smallest distance to the largest distance. You may return the answer in any order that satisfies this condition.\nThe distance between two cells (r1, c1) and (r2, c2) is |r1 - r2| + |c1 - c2|.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rows = 1, cols = 2, rCenter = 0, cCenter = 0\nOutput: [[0,0],[0,1]]\nExplanation: The distances from (0, 0) to other cells are: [0,1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rows = 2, cols = 2, rCenter = 0, cCenter = 1\nOutput: [[0,1],[0,0],[1,1],[1,0]]\nExplanation: The distances from (0, 1) to other cells are: [0,1,1,2]\nThe answer [[0,1],[1,1],[0,0],[1,0]] would also be accepted as correct.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: rows = 2, cols = 3, rCenter = 1, cCenter = 2\nOutput: [[1,2],[0,2],[1,1],[0,1],[1,0],[0,0]]\nExplanation: The distances from (1, 2) to other cells are: [0,1,1,2,2,3]\nThere are other answers that would also be accepted as correct, such as [[1,2],[1,1],[0,2],[1,0],[0,1],[0,0]].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= rows, cols <= 100",
+    "0 <= rCenter < rows",
+    "0 <= cCenter < cols"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def allCellsDistOrder(self, rows, cols, rCenter, cCenter):\n        \"\"\"\n        :type rows: int\n        :type cols: int\n        :type rCenter: int\n        :type cCenter: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def allCellsDistOrder(self, rows: int, cols: int, rCenter: int, cCenter: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** allCellsDistOrder(int rows, int cols, int rCenter, int cCenter, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] AllCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} rows\n * @param {number} cols\n * @param {number} rCenter\n * @param {number} cCenter\n * @return {number[][]}\n */\nvar allCellsDistOrder = function(rows, cols, rCenter, cCenter) {\n    \n};",
+    "typescript": "function allCellsDistOrder(rows: number, cols: number, rCenter: number, cCenter: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $rows\n     * @param Integer $cols\n     * @param Integer $rCenter\n     * @param Integer $cCenter\n     * @return Integer[][]\n     */\n    function allCellsDistOrder($rows, $cols, $rCenter, $cCenter) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func allCellsDistOrder(_ rows: Int, _ cols: Int, _ rCenter: Int, _ cCenter: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun allCellsDistOrder(rows: Int, cols: Int, rCenter: Int, cCenter: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {\n    \n  }\n}",
+    "golang": "func allCellsDistOrder(rows int, cols int, rCenter int, cCenter int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} rows\n# @param {Integer} cols\n# @param {Integer} r_center\n# @param {Integer} c_center\n# @return {Integer[][]}\ndef all_cells_dist_order(rows, cols, r_center, c_center)\n    \nend",
+    "scala": "object Solution {\n    def allCellsDistOrder(rows: Int, cols: Int, rCenter: Int, cCenter: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn all_cells_dist_order(rows: i32, cols: i32, r_center: i32, c_center: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (all-cells-dist-order rows cols rCenter cCenter)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec all_cells_dist_order(Rows :: integer(), Cols :: integer(), RCenter :: integer(), CCenter :: integer()) -> [[integer()]].\nall_cells_dist_order(Rows, Cols, RCenter, CCenter) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec all_cells_dist_order(rows :: integer, cols :: integer, r_center :: integer, c_center :: integer) :: [[integer]]\n  def all_cells_dist_order(rows, cols, r_center, c_center) do\n    \n  end\nend"
+  }
+}

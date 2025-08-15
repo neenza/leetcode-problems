@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Operations to Make the Array Increasing",
+  "problem_id": "1938",
+  "frontend_id": "1827",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-operations-to-make-the-array-increasing",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given an integer array nums (0-indexed). In one operation, you can choose an element of the array and increment it by 1.\nReturn the minimum number of operations needed to make nums strictly increasing.\nAn array nums is strictly increasing if nums[i] < nums[i+1] for all 0 <= i < nums.length - 1. An array of length 1 is trivially strictly increasing.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,1]\r\nOutput: 3\r\nExplanation: You can do the following operations:\r\n1) Increment nums[2], so nums becomes [1,1,2].\r\n2) Increment nums[1], so nums becomes [1,2,2].\r\n3) Increment nums[2], so nums becomes [1,2,3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,5,2,4,1]\r\nOutput: 14",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [8]\r\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5000",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "nums[i+1] must be at least equal to nums[i] + 1.",
+    "Think greedily. You don't have to increase nums[i+1] beyond nums[i]+1.",
+    "Iterate on i and set nums[i] = max(nums[i-1]+1, nums[i]) ."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "\n\nint minOperations(int* nums, int numsSize){\n\n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )"
+  }
+}

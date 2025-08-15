@@ -1,0 +1,57 @@
+{
+  "title": "Maximum Points After Enemy Battles",
+  "problem_id": "3264",
+  "frontend_id": "3207",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-points-after-enemy-battles",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given an integer array enemyEnergies denoting the energy values of various enemies.\nYou are also given an integer currentEnergy denoting the amount of energy you have initially.\nYou start with 0 points, and all the enemies are unmarked initially.\nYou can perform either of the following operations zero or multiple times to gain points:\nReturn an integer denoting the maximum points you can get in the end by optimally performing operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: enemyEnergies = [3,2,2], currentEnergy = 2\nOutput: 3\nExplanation:\nThe following operations can be performed to get 3 points, which is the maximum:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: enemyEnergies = [2] , currentEnergy = 10\nOutput: 5\nExplanation:\nPerforming the first operation 5 times on enemy 0 results in the maximum number of points.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= enemyEnergies.length <= 105",
+    "1 <= enemyEnergies[i] <= 109",
+    "0 <= currentEnergy <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The problem can be solved greedily.",
+    "Mark all the others except the smallest one first.",
+    "Use the smallest one to increase the energy.",
+    "Note that the initial energy should be no less than the smallest enemy."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumPoints(vector<int>& enemyEnergies, int currentEnergy) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumPoints(int[] enemyEnergies, int currentEnergy) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumPoints(self, enemyEnergies, currentEnergy):\n        \"\"\"\n        :type enemyEnergies: List[int]\n        :type currentEnergy: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumPoints(self, enemyEnergies: List[int], currentEnergy: int) -> int:\n        ",
+    "c": "long long maximumPoints(int* enemyEnergies, int enemyEnergiesSize, int currentEnergy) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumPoints(int[] enemyEnergies, int currentEnergy) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} enemyEnergies\n * @param {number} currentEnergy\n * @return {number}\n */\nvar maximumPoints = function(enemyEnergies, currentEnergy) {\n    \n};",
+    "typescript": "function maximumPoints(enemyEnergies: number[], currentEnergy: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $enemyEnergies\n     * @param Integer $currentEnergy\n     * @return Integer\n     */\n    function maximumPoints($enemyEnergies, $currentEnergy) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumPoints(_ enemyEnergies: [Int], _ currentEnergy: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumPoints(enemyEnergies: IntArray, currentEnergy: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumPoints(List<int> enemyEnergies, int currentEnergy) {\n    \n  }\n}",
+    "golang": "func maximumPoints(enemyEnergies []int, currentEnergy int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} enemy_energies\n# @param {Integer} current_energy\n# @return {Integer}\ndef maximum_points(enemy_energies, current_energy)\n    \nend",
+    "scala": "object Solution {\n    def maximumPoints(enemyEnergies: Array[Int], currentEnergy: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_points(enemy_energies: Vec<i32>, current_energy: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-points enemyEnergies currentEnergy)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_points(EnemyEnergies :: [integer()], CurrentEnergy :: integer()) -> integer().\nmaximum_points(EnemyEnergies, CurrentEnergy) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_points(enemy_energies :: [integer], current_energy :: integer) :: integer\n  def maximum_points(enemy_energies, current_energy) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Valid Permutations for DI Sequence",
+  "problem_id": "939",
+  "frontend_id": "903",
+  "difficulty": "Hard",
+  "problem_slug": "valid-permutations-for-di-sequence",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You are given a string s of length n where s[i] is either:\nA permutation perm of n + 1 integers of all the integers in the range [0, n] is called a valid permutation if for all valid i:\nReturn the number of valid permutations perm. Since the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"DID\"\nOutput: 5\nExplanation: The 5 valid permutations of (0, 1, 2, 3) are:\n(1, 0, 3, 2)\n(2, 0, 3, 1)\n(2, 1, 3, 0)\n(3, 0, 2, 1)\n(3, 1, 2, 0)",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"D\"\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == s.length",
+    "1 <= n <= 200",
+    "s[i] is either 'I' or 'D'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numPermsDISequence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numPermsDISequence(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numPermsDISequence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numPermsDISequence(self, s: str) -> int:\n        ",
+    "c": "int numPermsDISequence(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumPermsDISequence(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numPermsDISequence = function(s) {\n    \n};",
+    "typescript": "function numPermsDISequence(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numPermsDISequence($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numPermsDISequence(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numPermsDISequence(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numPermsDISequence(String s) {\n    \n  }\n}",
+    "golang": "func numPermsDISequence(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_perms_di_sequence(s)\n    \nend",
+    "scala": "object Solution {\n    def numPermsDISequence(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_perms_di_sequence(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-perms-di-sequence s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_perms_di_sequence(S :: unicode:unicode_binary()) -> integer().\nnum_perms_di_sequence(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_perms_di_sequence(s :: String.t) :: integer\n  def num_perms_di_sequence(s) do\n    \n  end\nend"
+  }
+}

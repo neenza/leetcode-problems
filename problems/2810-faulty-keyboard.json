@@ -1,0 +1,54 @@
+{
+  "title": "Faulty Keyboard",
+  "problem_id": "2886",
+  "frontend_id": "2810",
+  "difficulty": "Easy",
+  "problem_slug": "faulty-keyboard",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "Your laptop keyboard is faulty, and whenever you type a character 'i' on it, it reverses the string that you have written. Typing other characters works as expected.\nYou are given a 0-indexed string s, and you type each character of s using your faulty keyboard.\nReturn the final string that will be present on your laptop screen.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"string\"\nOutput: \"rtsng\"\nExplanation: \nAfter typing first character, the text on the screen is \"s\".\nAfter the second character, the text is \"st\". \nAfter the third character, the text is \"str\".\nSince the fourth character is an 'i', the text gets reversed and becomes \"rts\".\nAfter the fifth character, the text is \"rtsn\". \nAfter the sixth character, the text is \"rtsng\". \nTherefore, we return \"rtsng\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"poiinter\"\nOutput: \"ponter\"\nExplanation: \nAfter the first character, the text on the screen is \"p\".\nAfter the second character, the text is \"po\". \nSince the third character you type is an 'i', the text gets reversed and becomes \"op\". \nSince the fourth character you type is an 'i', the text gets reversed and becomes \"po\".\nAfter the fifth character, the text is \"pon\".\nAfter the sixth character, the text is \"pont\". \nAfter the seventh character, the text is \"ponte\". \nAfter the eighth character, the text is \"ponter\". \nTherefore, we return \"ponter\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of lowercase English letters.",
+    "s[0] != 'i'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to build a new string by traversing the given string and reversing whenever you get the character ‘i’."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string finalString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String finalString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def finalString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def finalString(self, s: str) -> str:\n        ",
+    "c": "char* finalString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FinalString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar finalString = function(s) {\n    \n};",
+    "typescript": "function finalString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function finalString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func finalString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun finalString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String finalString(String s) {\n    \n  }\n}",
+    "golang": "func finalString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef final_string(s)\n    \nend",
+    "scala": "object Solution {\n    def finalString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn final_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (final-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec final_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfinal_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec final_string(s :: String.t) :: String.t\n  def final_string(s) do\n    \n  end\nend"
+  }
+}

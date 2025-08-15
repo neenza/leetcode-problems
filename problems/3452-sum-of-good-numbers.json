@@ -1,0 +1,53 @@
+{
+  "title": "Sum of Good Numbers",
+  "problem_id": "3723",
+  "frontend_id": "3452",
+  "difficulty": "Easy",
+  "problem_slug": "sum-of-good-numbers",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an array of integers nums and an integer k, an element nums[i] is considered good if it is strictly greater than the elements at indices i - k and i + k (if those indices exist). If neither of these indices exists, nums[i] is still considered good.\nReturn the sum of all the good elements in the array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,2,1,5,4], k = 2\nOutput: 12\nExplanation:\nThe good numbers are nums[1] = 3 , nums[4] = 5 , and nums[5] = 4 because they are strictly greater than the numbers at indices i - k and i + k .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1], k = 1\nOutput: 2\nExplanation:\nThe only good number is nums[0] = 2 because it is strictly greater than nums[1] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "1 <= nums[i] <= 1000",
+    "1 <= k <= floor(nums.length / 2)"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each index, check if <code>nums[i]</code> is strictly greater than <code>nums[i - k]</code> and <code>nums[i + k]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumOfGoodNumbers(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfGoodNumbers(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfGoodNumbers(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfGoodNumbers(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int sumOfGoodNumbers(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumOfGoodNumbers(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar sumOfGoodNumbers = function(nums, k) {\n    \n};",
+    "typescript": "function sumOfGoodNumbers(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function sumOfGoodNumbers($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfGoodNumbers(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfGoodNumbers(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumOfGoodNumbers(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func sumOfGoodNumbers(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef sum_of_good_numbers(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def sumOfGoodNumbers(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_good_numbers(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-good-numbers nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec sum_of_good_numbers(Nums :: [integer()], K :: integer()) -> integer().\nsum_of_good_numbers(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_good_numbers(nums :: [integer], k :: integer) :: integer\n  def sum_of_good_numbers(nums, k) do\n    \n  end\nend"
+  }
+}

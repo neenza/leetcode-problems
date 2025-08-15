@@ -1,0 +1,34 @@
+{
+  "title": "Sleep",
+  "problem_id": "2733",
+  "frontend_id": "2621",
+  "difficulty": "Easy",
+  "problem_slug": "sleep",
+  "topics": [],
+  "description": "Given a positive integer millis, write an asynchronous function that sleeps for millis milliseconds. It can resolve any value.\nNote that minor deviation from millis in the actual sleep duration is acceptable.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: millis = 100\nOutput: 100\nExplanation: It should return a promise that resolves after 100ms.\nlet t = Date.now();\nsleep(100).then(() => {\n  console.log(Date.now() - t); // 100\n});",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: millis = 200\nOutput: 200\nExplanation: It should return a promise that resolves after 200ms.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= millis <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In Javascript, you can execute code after some delay with the setTimeout(fn, sleepTime) function.",
+    "An async function is defined as function which returns a Promise.",
+    "To create a Promise, you can code new Promise((resolve, reject) => {}). When you want the function to return a value, code resolve(value) inside the callback."
+  ],
+  "code_snippets": {
+    "javascript": "/**\n * @param {number} millis\n * @return {Promise}\n */\nasync function sleep(millis) {\n    \n}\n\n/** \n * let t = Date.now()\n * sleep(100).then(() => console.log(Date.now() - t)) // 100\n */",
+    "typescript": "async function sleep(millis: number): Promise<void> {\n    \n}\n\n\n/** \n * let t = Date.now()\n * sleep(100).then(() => console.log(Date.now() - t)) // 100\n */"
+  }
+}

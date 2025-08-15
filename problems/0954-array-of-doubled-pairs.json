@@ -1,0 +1,60 @@
+{
+  "title": "Array of Doubled Pairs",
+  "problem_id": "991",
+  "frontend_id": "954",
+  "difficulty": "Medium",
+  "problem_slug": "array-of-doubled-pairs",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an integer array of even length arr, return true if it is possible to reorder arr such that arr[2 * i + 1] = 2 * arr[2 * i] for every 0 <= i < len(arr) / 2, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,1,3,6]\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [2,1,2,6]\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [4,-2,2,-4]\nOutput: true\nExplanation: We can take two groups, [-2,-4] and [2,4] to form [-2,-4,2,4] or [2,4,-2,-4].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= arr.length <= 3 * 104",
+    "arr.length is even.",
+    "-105 <= arr[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canReorderDoubled(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canReorderDoubled(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canReorderDoubled(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canReorderDoubled(self, arr: List[int]) -> bool:\n        ",
+    "c": "bool canReorderDoubled(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanReorderDoubled(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {boolean}\n */\nvar canReorderDoubled = function(arr) {\n    \n};",
+    "typescript": "function canReorderDoubled(arr: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Boolean\n     */\n    function canReorderDoubled($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canReorderDoubled(_ arr: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canReorderDoubled(arr: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canReorderDoubled(List<int> arr) {\n    \n  }\n}",
+    "golang": "func canReorderDoubled(arr []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Boolean}\ndef can_reorder_doubled(arr)\n    \nend",
+    "scala": "object Solution {\n    def canReorderDoubled(arr: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_reorder_doubled(arr: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-reorder-doubled arr)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_reorder_doubled(Arr :: [integer()]) -> boolean().\ncan_reorder_doubled(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_reorder_doubled(arr :: [integer]) :: boolean\n  def can_reorder_doubled(arr) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Greedy\n\n**Intuition**\n\nIf `x` is currently the array element with the least absolute value, it must pair with `2*x`, as there does not exist any other `x/2` to pair with it.\n\n**Algorithm**\n\nLet's try to (virtually) \"write\" the final reordered array.\n\nLet's check elements in order of absolute value.  When we check an element `x` and it isn't used, it must pair with `2*x`.  We will attempt to write `x, 2x` - if we can't, then the answer is `false`.  If we write everything, the answer is `true`.\n\nTo keep track of what we have not yet written, we will store it in a `count`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log N)$$, where $$N$$ is the length of `A`.\n\n* Space Complexity:  $$O(N)$$."
+}

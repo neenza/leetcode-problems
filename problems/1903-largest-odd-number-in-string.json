@@ -1,0 +1,61 @@
+{
+  "title": "Largest Odd Number in String",
+  "problem_id": "2032",
+  "frontend_id": "1903",
+  "difficulty": "Easy",
+  "problem_slug": "largest-odd-number-in-string",
+  "topics": [
+    "Math",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string num, representing a large integer. Return the largest-valued odd integer (as a string) that is a non-empty substring of num, or an empty string \"\" if no odd integer exists.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"52\"\nOutput: \"5\"\nExplanation: The only non-empty substrings are \"5\", \"2\", and \"52\". \"5\" is the only odd number.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"4206\"\nOutput: \"\"\nExplanation: There are no odd numbers in \"4206\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"35427\"\nOutput: \"35427\"\nExplanation: \"35427\" is already an odd number.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num.length <= 105",
+    "num only consists of digits and does not contain any leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "In what order should you iterate through the digits?",
+    "If an odd number exists, where must the number start from?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestOddNumber(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestOddNumber(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestOddNumber(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestOddNumber(self, num: str) -> str:\n        ",
+    "c": "char* largestOddNumber(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestOddNumber(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {string}\n */\nvar largestOddNumber = function(num) {\n    \n};",
+    "typescript": "function largestOddNumber(num: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return String\n     */\n    function largestOddNumber($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestOddNumber(_ num: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestOddNumber(num: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestOddNumber(String num) {\n    \n  }\n}",
+    "golang": "func largestOddNumber(num string) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {String}\ndef largest_odd_number(num)\n    \nend",
+    "scala": "object Solution {\n    def largestOddNumber(num: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_odd_number(num: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-odd-number num)\n  (-> string? string?)\n  )",
+    "erlang": "-spec largest_odd_number(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_odd_number(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_odd_number(num :: String.t) :: String.t\n  def largest_odd_number(num) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Find the Rightmost Odd Digit\n\n**Intuition**\n\nA number is odd if and only if its rightmost digit is odd.\n\nFor any given substring of `num`, if the final character of the substring represents an odd number, then the entire substring's integer representation will also be odd.\n\nAs we are looking for the largest-valued substring, we should aim to maximize the length of our substring, as each additional character increases the integer representation's value by a magnitude.\n\nWhere should our substring start? The answer is at the beginning of `num`. Why? The only factor that determines if a number is odd is the final character - nothing else matters. Thus, there is no downside to **starting** from a given location, and by starting at the beginning of `num`, we are maximizing the size of our substring.\n\nWhere should our substring end? As mentioned above, we need it to end on a character that represents an odd digit. Of all the odd digits in `num`, which one should we choose? As we are trying to maximize the length, we should choose the rightmost one.\n\n![example](../Figures/1903/1.png)This brings us to our solution. We will iterate over each letter of `nums`, starting from the right. The first time we find an odd digit, we know this digit is the rightmost odd digit. Thus, we immediately return the substring of `nums` that begins at index `0` and ends at the current digit. We can determine if a character represents an odd digit by casting it to an integer and calculating its remainder when divided by 2 (which is also commonly known as taking its value mod 2). If the result is `0`, then it is an even digit, otherwise, it is an odd digit.\n\nIf `nums` doesn't have any odd digits, then it's impossible to form an odd number. We return `\"\"` in that case.\n\n**Algorithm**\n\n1. Iterate `i` starting from `nums.length - 1` to `0`:\n    - Cast `nums[i]` to an integer and take its value mod `2`. If the result is not `0`:\n        - Return the substring of `nums` starting at index `0` and ending with index `i`.\n2. Return `\"\"`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `num`,\n\n* Time complexity: $$O(n)$$\n\n    In the worst-case scenario, we iterate over every character in `num`, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space. We don't count the answer as part of the space complexity.---"
+}

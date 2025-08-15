@@ -1,0 +1,48 @@
+{
+  "title": "Seasonal Sales Analysis",
+  "problem_id": "3898",
+  "frontend_id": "3564",
+  "difficulty": "Medium",
+  "problem_slug": "seasonal-sales-analysis",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: sales\nTable: products\nWrite a solution to find the most popular product category for each season. The seasons are defined as:\nThe popularity of a category is determined by the total quantity sold in that season. If there is a tie, select the category with the highest total revenue (quantity × price).\nReturn the result table ordered by season in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| sale_id       | int     |\n| product_id    | int     |\n| sale_date     | date    |\n| quantity      | int     |\n| price         | decimal |\n+---------------+---------+\nsale_id is the unique identifier for this table.\nEach row contains information about a product sale including the product_id, date of sale, quantity sold, and price per unit.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| product_name  | varchar |\n| category      | varchar |\n+---------------+---------+\nproduct_id is the unique identifier for this table.\nEach row contains information about a product including its name and category.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------+------------+------------+----------+-------+\n| sale_id | product_id | sale_date  | quantity | price |\n+---------+------------+------------+----------+-------+\n| 1       | 1          | 2023-01-15 | 5        | 10.00 |\n| 2       | 2          | 2023-01-20 | 4        | 15.00 |\n| 3       | 3          | 2023-03-10 | 3        | 18.00 |\n| 4       | 4          | 2023-04-05 | 1        | 20.00 |\n| 5       | 1          | 2023-05-20 | 2        | 10.00 |\n| 6       | 2          | 2023-06-12 | 4        | 15.00 |\n| 7       | 5          | 2023-06-15 | 5        | 12.00 |\n| 8       | 3          | 2023-07-24 | 2        | 18.00 |\n| 9       | 4          | 2023-08-01 | 5        | 20.00 |\n| 10      | 5          | 2023-09-03 | 3        | 12.00 |\n| 11      | 1          | 2023-09-25 | 6        | 10.00 |\n| 12      | 2          | 2023-11-10 | 4        | 15.00 |\n| 13      | 3          | 2023-12-05 | 6        | 18.00 |\n| 14      | 4          | 2023-12-22 | 3        | 20.00 |\n| 15      | 5          | 2024-02-14 | 2        | 12.00 |\n+---------+------------+------------+----------+-------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+------------+-----------------+----------+\n| product_id | product_name    | category |\n+------------+-----------------+----------+\n| 1          | Warm Jacket     | Apparel  |\n| 2          | Designer Jeans  | Apparel  |\n| 3          | Cutting Board   | Kitchen  |\n| 4          | Smart Speaker   | Tech     |\n| 5          | Yoga Mat        | Fitness  |\n+------------+-----------------+----------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+---------+----------+----------------+---------------+\n| season  | category | total_quantity | total_revenue |\n+---------+----------+----------------+---------------+\n| Fall    | Apparel  | 10             | 120.00        |\n| Spring  | Kitchen  | 3              | 54.00         |\n| Summer  | Tech     | 5              | 100.00        |\n| Winter  | Apparel  | 9              | 110.00        |\n+---------+----------+----------------+---------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef seasonal_sales_analysis(products: pd.DataFrame, sales: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

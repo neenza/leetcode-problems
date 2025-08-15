@@ -1,0 +1,69 @@
+{
+  "title": "Minimum Weighted Subgraph With the Required Paths II",
+  "problem_id": "3853",
+  "frontend_id": "3553",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-weighted-subgraph-with-the-required-paths-ii",
+  "topics": [
+    "Array",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "You are given an undirected weighted tree with n nodes, numbered from 0 to n - 1. It is represented by a 2D integer array edges of length n - 1, where edges[i] = [ui, vi, wi] indicates that there is an edge between nodes ui and vi with weight wi.​\nAdditionally, you are given a 2D integer array queries, where queries[j] = [src1j, src2j, destj].\nReturn an array answer of length equal to queries.length, where answer[j] is the minimum total weight of a subtree such that it is possible to reach destj from both src1j and src2j using edges in this subtree.\nA subtree here is any connected subset of nodes and edges of the original tree forming a valid tree.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1,2],[1,2,3],[1,3,5],[1,4,4],[2,5,6]], queries = [[2,3,4],[0,2,5]]\nOutput: [12,11]\nExplanation:\nThe blue edges represent one of the subtrees that yield the optimal answer.\n\nanswer[0] : The total weight of the selected subtree that ensures a path from src1 = 2 and src2 = 3 to dest = 4 is 3 + 5 + 4 = 12 .\nanswer[1] : The total weight of the selected subtree that ensures a path from src1 = 0 and src2 = 2 to dest = 5 is 2 + 3 + 6 = 11 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/02/tree1-4.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[1,0,8],[0,2,7]], queries = [[0,1,2]]\nOutput: [15]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/02/tree1-5.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[i].length == 3",
+    "0 <= ui, vi < n",
+    "1 <= wi <= 104",
+    "1 <= queries.length <= 105",
+    "queries[j].length == 3",
+    "0 <= src1j, src2j, destj < n",
+    "src1j, src2j, and destj are pairwise distinct.",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary lifting",
+    "Find the lowest common ancestor (LCA) of any two nodes using binary lifting",
+    "For any node <code>x</code>, let <code>f(x)</code> be the distance from the root to <code>x</code>. Then for two nodes <code>x</code> and <code>y</code>:<code>d(x, y) = f(x) + f(y) - 2 * f(LCA(x, y))</code>",
+    "For three nodes <code>a</code>, <code>b</code> and <code>c</code>, the minimum total weight of the subtree connecting all three is:<code>(d(a, b) + d(b, c) + d(c, a)) / 2</code>, where <code>d(x, y)</code> is the distance between nodes <code>x</code> and <code>y</code>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minimumWeight(vector<vector<int>>& edges, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minimumWeight(int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumWeight(self, edges, queries):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumWeight(self, edges: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minimumWeight(int** edges, int edgesSize, int* edgesColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinimumWeight(int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar minimumWeight = function(edges, queries) {\n    \n};",
+    "typescript": "function minimumWeight(edges: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function minimumWeight($edges, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumWeight(_ edges: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumWeight(edges: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minimumWeight(List<List<int>> edges, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func minimumWeight(edges [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef minimum_weight(edges, queries)\n    \nend",
+    "scala": "object Solution {\n    def minimumWeight(edges: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_weight(edges: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-weight edges queries)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec minimum_weight(Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nminimum_weight(Edges, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_weight(edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def minimum_weight(edges, queries) do\n    \n  end\nend"
+  }
+}

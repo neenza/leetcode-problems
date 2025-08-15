@@ -1,0 +1,58 @@
+{
+  "title": "Longest Binary Subsequence Less Than or Equal to K",
+  "problem_id": "2395",
+  "frontend_id": "2311",
+  "difficulty": "Medium",
+  "problem_slug": "longest-binary-subsequence-less-than-or-equal-to-k",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Memoization"
+  ],
+  "description": "You are given a binary string s and a positive integer k.\nReturn the length of the longest subsequence of s that makes up a binary number less than or equal to k.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1001010\", k = 5\nOutput: 5\nExplanation: The longest subsequence of s that makes up a binary number less than or equal to 5 is \"00010\", as this number is equal to 2 in decimal.\nNote that \"00100\" and \"00101\" are also possible, which are equal to 4 and 5 in decimal, respectively.\nThe length of this subsequence is 5, so 5 is returned.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"00101001\", k = 1\nOutput: 6\nExplanation: \"000001\" is the longest subsequence of s that makes up a binary number less than or equal to 1, as this number is equal to 1 in decimal.\nThe length of this subsequence is 6, so 6 is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'.",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Choosing a subsequence from the string is equivalent to deleting all the other digits.",
+    "If you were to remove a digit, which one should you remove to reduce the value of the string?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestSubsequence(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubsequence(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSubsequence(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSubsequence(self, s: str, k: int) -> int:\n        ",
+    "c": "int longestSubsequence(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestSubsequence(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar longestSubsequence = function(s, k) {\n    \n};",
+    "typescript": "function longestSubsequence(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function longestSubsequence($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSubsequence(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSubsequence(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestSubsequence(String s, int k) {\n    \n  }\n}",
+    "golang": "func longestSubsequence(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef longest_subsequence(s, k)\n    \nend",
+    "scala": "object Solution {\n    def longestSubsequence(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_subsequence(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-subsequence s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec longest_subsequence(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nlongest_subsequence(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_subsequence(s :: String.t, k :: integer) :: integer\n  def longest_subsequence(s, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Greedy\n\n#### Intuition\n\nThe task is to select the longest subsequence of $s$ such that the binary value of this subsequence is less than or equal to $k$. The first instinct is to select as many $0$s as possible, because compared to $1$, a $0$ contributes nothing to the binary value.\n\nSo, is it okay to include all the $0$s? Yes, because choosing a $0$ is always better than choosing a $1$. Suppose we’ve already selected a subsequence and now want to add a $0$ to it. While the $0$ itself does not increase the binary value, it does double the contribution of any $1$s already present by shifting them to higher positions. However, if needed, we can simply remove the highest-order $1$ to maintain the binary value, keeping the total length the same. Therefore, adding a $0$ is always beneficial or at least non-harmful compared to adding a $1$.\n\nAfter adding all the $0$s, we then try to include as many $1$s as possible. To do this, we start from the least significant bit and add $1$s greedily, ensuring the binary value always remains $\\leq k$. Since $k$ restricts the maximum binary value, we can precompute the highest bit position that can be set to $1$, avoiding the need to recalculate the contribution of that bit each time.\n\nWith these two strategies, we identify all positions that can be added to the subsequence and return the result.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$.\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the string once.\n\n- Space complexity: $O(1)$.\n\n  Only a few additional variables are needed."
+}

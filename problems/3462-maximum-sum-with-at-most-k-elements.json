@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Sum With at Most K Elements",
+  "problem_id": "3764",
+  "frontend_id": "3462",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-sum-with-at-most-k-elements",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ],
+  "description": "You are given a 2D integer matrix grid of size n x m, an integer array limits of length n, and an integer k. The task is to find the maximum sum of at most k elements from the matrix grid such that:\nReturn the maximum sum.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2],[3,4]], limits = [1,2], k = 2\nOutput: 7\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[5,3,7],[8,2,6]], limits = [2,2], k = 3\nOutput: 21\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == grid.length == limits.length",
+    "m == grid[i].length",
+    "1 <= n, m <= 500",
+    "0 <= grid[i][j] <= 105",
+    "0 <= limits[i] <= m",
+    "0 <= k <= min(n * m, sum(limits))"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort each row in descending order and extract the top <code>limits[i]</code> elements.",
+    "Use a max-heap to efficiently pick the largest <code>k</code> elements across all rows."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxSum(vector<vector<int>>& grid, vector<int>& limits, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxSum(int[][] grid, int[] limits, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSum(self, grid, limits, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type limits: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSum(self, grid: List[List[int]], limits: List[int], k: int) -> int:\n        ",
+    "c": "long long maxSum(int** grid, int gridSize, int* gridColSize, int* limits, int limitsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxSum(int[][] grid, int[] limits, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number[]} limits\n * @param {number} k\n * @return {number}\n */\nvar maxSum = function(grid, limits, k) {\n    \n};",
+    "typescript": "function maxSum(grid: number[][], limits: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer[] $limits\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxSum($grid, $limits, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSum(_ grid: [[Int]], _ limits: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSum(grid: Array<IntArray>, limits: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSum(List<List<int>> grid, List<int> limits, int k) {\n    \n  }\n}",
+    "golang": "func maxSum(grid [][]int, limits []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer[]} limits\n# @param {Integer} k\n# @return {Integer}\ndef max_sum(grid, limits, k)\n    \nend",
+    "scala": "object Solution {\n    def maxSum(grid: Array[Array[Int]], limits: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum(grid: Vec<Vec<i32>>, limits: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum grid limits k)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_sum(Grid :: [[integer()]], Limits :: [integer()], K :: integer()) -> integer().\nmax_sum(Grid, Limits, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum(grid :: [[integer]], limits :: [integer], k :: integer) :: integer\n  def max_sum(grid, limits, k) do\n    \n  end\nend"
+  }
+}

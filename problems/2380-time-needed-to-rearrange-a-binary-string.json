@@ -1,0 +1,55 @@
+{
+  "title": "Time Needed to Rearrange a Binary String",
+  "problem_id": "2464",
+  "frontend_id": "2380",
+  "difficulty": "Medium",
+  "problem_slug": "time-needed-to-rearrange-a-binary-string",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Simulation"
+  ],
+  "description": "You are given a binary string s. In one second, all occurrences of \"01\" are simultaneously replaced with \"10\". This process repeats until no occurrences of \"01\" exist.\nReturn the number of seconds needed to complete this process.\nExample 1:\nExample 2:\nConstraints:\nFollow up:\nCan you solve this problem in O(n) time complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"0110101\"\nOutput: 4\nExplanation: \nAfter one second, s becomes \"1011010\".\nAfter another second, s becomes \"1101100\".\nAfter the third second, s becomes \"1110100\".\nAfter the fourth second, s becomes \"1111000\".\nNo occurrence of \"01\" exists any longer, and the process needed 4 seconds to complete,\nso we return 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"11100\"\nOutput: 0\nExplanation:\nNo occurrence of \"01\" exists in s, and the processes needed 0 seconds to complete,\nso we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try replicating the steps from the problem statement.",
+    "Perform the replacements simultaneously, and return the number of times the process repeats."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int secondsToRemoveOccurrences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int secondsToRemoveOccurrences(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def secondsToRemoveOccurrences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def secondsToRemoveOccurrences(self, s: str) -> int:\n        ",
+    "c": "int secondsToRemoveOccurrences(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SecondsToRemoveOccurrences(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar secondsToRemoveOccurrences = function(s) {\n    \n};",
+    "typescript": "function secondsToRemoveOccurrences(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function secondsToRemoveOccurrences($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func secondsToRemoveOccurrences(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun secondsToRemoveOccurrences(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int secondsToRemoveOccurrences(String s) {\n    \n  }\n}",
+    "golang": "func secondsToRemoveOccurrences(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef seconds_to_remove_occurrences(s)\n    \nend",
+    "scala": "object Solution {\n    def secondsToRemoveOccurrences(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn seconds_to_remove_occurrences(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (seconds-to-remove-occurrences s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec seconds_to_remove_occurrences(S :: unicode:unicode_binary()) -> integer().\nseconds_to_remove_occurrences(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec seconds_to_remove_occurrences(s :: String.t) :: integer\n  def seconds_to_remove_occurrences(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Queries on a Permutation With Key",
+  "problem_id": "1525",
+  "frontend_id": "1409",
+  "difficulty": "Medium",
+  "problem_slug": "queries-on-a-permutation-with-key",
+  "topics": [
+    "Array",
+    "Binary Indexed Tree",
+    "Simulation"
+  ],
+  "description": "Given the array queries of positive integers between 1 and m, you have to process all queries[i] (from i=0 to i=queries.length-1) according to the following rules:\nReturn an array containing the result for the given queries.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queries = [3,1,2,1], m = 5\nOutput: [2,1,2,1] \nExplanation: The queries are processed as follow: \nFor i=0: queries[i]=3, P=[1,2,3,4,5], position of 3 in P is 2, then we move 3 to the beginning of P resulting in P=[3,1,2,4,5]. \nFor i=1: queries[i]=1, P=[3,1,2,4,5], position of 1 in P is 1, then we move 1 to the beginning of P resulting in P=[1,3,2,4,5]. \nFor i=2: queries[i]=2, P=[1,3,2,4,5], position of 2 in P is 2, then we move 2 to the beginning of P resulting in P=[2,1,3,4,5]. \nFor i=3: queries[i]=1, P=[2,1,3,4,5], position of 1 in P is 1, then we move 1 to the beginning of P resulting in P=[1,2,3,4,5]. \nTherefore, the array containing the result is [2,1,2,1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queries = [4,1,2,2], m = 4\nOutput: [3,1,2,0]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: queries = [7,5,5,8,3], m = 8\nOutput: [6,5,0,7,5]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= m <= 10^3",
+    "1 <= queries.length <= m",
+    "1 <= queries[i] <= m"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create the permutation P=[1,2,...,m], it could be a list for example.",
+    "For each i, find the position of queries[i] with a simple scan over P and then move this to the beginning."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> processQueries(vector<int>& queries, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] processQueries(int[] queries, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def processQueries(self, queries, m):\n        \"\"\"\n        :type queries: List[int]\n        :type m: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def processQueries(self, queries: List[int], m: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* processQueries(int* queries, int queriesSize, int m, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ProcessQueries(int[] queries, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} queries\n * @param {number} m\n * @return {number[]}\n */\nvar processQueries = function(queries, m) {\n    \n};",
+    "typescript": "function processQueries(queries: number[], m: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $queries\n     * @param Integer $m\n     * @return Integer[]\n     */\n    function processQueries($queries, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func processQueries(_ queries: [Int], _ m: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun processQueries(queries: IntArray, m: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> processQueries(List<int> queries, int m) {\n    \n  }\n}",
+    "golang": "func processQueries(queries []int, m int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} queries\n# @param {Integer} m\n# @return {Integer[]}\ndef process_queries(queries, m)\n    \nend",
+    "scala": "object Solution {\n    def processQueries(queries: Array[Int], m: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn process_queries(queries: Vec<i32>, m: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (process-queries queries m)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec process_queries(Queries :: [integer()], M :: integer()) -> [integer()].\nprocess_queries(Queries, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec process_queries(queries :: [integer], m :: integer) :: [integer]\n  def process_queries(queries, m) do\n    \n  end\nend"
+  }
+}

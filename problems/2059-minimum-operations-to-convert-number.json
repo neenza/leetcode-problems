@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Operations to Convert Number",
+  "problem_id": "2183",
+  "frontend_id": "2059",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-convert-number",
+  "topics": [
+    "Array",
+    "Breadth-First Search"
+  ],
+  "description": "You are given a 0-indexed integer array nums containing distinct numbers, an integer start, and an integer goal. There is an integer x that is initially set to start, and you want to perform operations on x such that it is converted to goal. You can perform the following operation repeatedly on the number x:\nIf 0 <= x <= 1000, then for any index i in the array (0 <= i < nums.length), you can set x to any of the following:\nNote that you can use each nums[i] any number of times in any order. Operations that set x to be out of the range 0 <= x <= 1000 are valid, but no more operations can be done afterward.\nReturn the minimum number of operations needed to convert x = start into goal, and -1 if it is not possible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,12], start = 2, goal = 12\nOutput: 2\nExplanation: We can go from 2 → 14 → 12 with the following 2 operations.\n- 2 + 12 = 14\n- 14 - 2 = 12",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,5,7], start = 0, goal = -4\nOutput: 2\nExplanation: We can go from 0 → 3 → -4 with the following 2 operations. \n- 0 + 3 = 3\n- 3 - 7 = -4\nNote that the last operation sets x out of the range 0 <= x <= 1000, which is valid.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,8,16], start = 0, goal = 1\nOutput: -1\nExplanation: There is no way to convert 0 into 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "-109 <= nums[i], goal <= 109",
+    "0 <= start <= 1000",
+    "start != goal",
+    "All the integers in nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Once x drops below 0 or goes above 1000, is it possible to continue performing operations on x?",
+    "How can you use BFS to find the minimum operations?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums, int start, int goal) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[] nums, int start, int goal) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums, start, goal):\n        \"\"\"\n        :type nums: List[int]\n        :type start: int\n        :type goal: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, nums: List[int], start: int, goal: int) -> int:\n        ",
+    "c": "int minimumOperations(int* nums, int numsSize, int start, int goal) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(int[] nums, int start, int goal) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} start\n * @param {number} goal\n * @return {number}\n */\nvar minimumOperations = function(nums, start, goal) {\n    \n};",
+    "typescript": "function minimumOperations(nums: number[], start: number, goal: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $start\n     * @param Integer $goal\n     * @return Integer\n     */\n    function minimumOperations($nums, $start, $goal) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ nums: [Int], _ start: Int, _ goal: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(nums: IntArray, start: Int, goal: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(List<int> nums, int start, int goal) {\n    \n  }\n}",
+    "golang": "func minimumOperations(nums []int, start int, goal int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} start\n# @param {Integer} goal\n# @return {Integer}\ndef minimum_operations(nums, start, goal)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(nums: Array[Int], start: Int, goal: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(nums: Vec<i32>, start: i32, goal: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations nums start goal)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Nums :: [integer()], Start :: integer(), Goal :: integer()) -> integer().\nminimum_operations(Nums, Start, Goal) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(nums :: [integer], start :: integer, goal :: integer) :: integer\n  def minimum_operations(nums, start, goal) do\n    \n  end\nend"
+  }
+}

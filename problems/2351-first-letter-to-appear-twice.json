@@ -1,0 +1,57 @@
+{
+  "title": "First Letter to Appear Twice",
+  "problem_id": "2427",
+  "frontend_id": "2351",
+  "difficulty": "Easy",
+  "problem_slug": "first-letter-to-appear-twice",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Counting"
+  ],
+  "description": "Given a string s consisting of lowercase English letters, return the first letter to appear twice.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abccbaacz\"\nOutput: \"c\"\nExplanation:\nThe letter 'a' appears on the indexes 0, 5 and 6.\nThe letter 'b' appears on the indexes 1 and 4.\nThe letter 'c' appears on the indexes 2, 3 and 7.\nThe letter 'z' appears on the index 8.\nThe letter 'c' is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdd\"\nOutput: \"d\"\nExplanation:\nThe only letter that appears twice is 'd' so we return 'd'.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 100",
+    "s consists of lowercase English letters.",
+    "s has at least one repeated letter."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate through the string from left to right. Keep track of the elements you have already seen in a set.",
+    "If the current element is already in the set, return that element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    char repeatedCharacter(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char repeatedCharacter(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def repeatedCharacter(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def repeatedCharacter(self, s: str) -> str:\n        ",
+    "c": "char repeatedCharacter(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public char RepeatedCharacter(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {character}\n */\nvar repeatedCharacter = function(s) {\n    \n};",
+    "typescript": "function repeatedCharacter(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function repeatedCharacter($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func repeatedCharacter(_ s: String) -> Character {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun repeatedCharacter(s: String): Char {\n        \n    }\n}",
+    "dart": "class Solution {\n  String repeatedCharacter(String s) {\n    \n  }\n}",
+    "golang": "func repeatedCharacter(s string) byte {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Character}\ndef repeated_character(s)\n    \nend",
+    "scala": "object Solution {\n    def repeatedCharacter(s: String): Char = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn repeated_character(s: String) -> char {\n        \n    }\n}",
+    "racket": "(define/contract (repeated-character s)\n  (-> string? char?)\n  )",
+    "erlang": "-spec repeated_character(S :: unicode:unicode_binary()) -> char().\nrepeated_character(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec repeated_character(s :: String.t) :: char\n  def repeated_character(s) do\n    \n  end\nend"
+  }
+}

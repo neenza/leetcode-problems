@@ -1,0 +1,59 @@
+{
+  "title": "Maximize Y‑Sum by Picking a Triplet of Distinct X‑Values",
+  "problem_id": "3894",
+  "frontend_id": "3572",
+  "difficulty": "Medium",
+  "problem_slug": "maximize-ysum-by-picking-a-triplet-of-distinct-xvalues",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two integer arrays x and y, each of length n. You must choose three distinct indices i, j, and k such that:\nYour goal is to maximize the value of y[i] + y[j] + y[k] under these conditions. Return the maximum possible sum that can be obtained by choosing such a triplet of indices.\nIf no such triplet exists, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: x = [1,2,1,3,2], y = [5,3,4,6,2]\nOutput: 14\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: x = [1,2,1,2], y = [4,5,6,7]\nOutput: -1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == x.length == y.length",
+    "3 <= n <= 105",
+    "1 <= x[i], y[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each unique <code>x</code>, keep only the maximum <code>y</code>; all other pairs with the same <code>x</code> are redundant.",
+    "Sort the pairs by <code>x</code> so that identical <code>x</code> values form contiguous blocks, then take the maximum <code>y</code> from each block.",
+    "Alternatively, use a map (or dictionary) from <code>x</code> to its largest <code>y</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSumDistinctTriplet(vector<int>& x, vector<int>& y) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSumDistinctTriplet(int[] x, int[] y) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSumDistinctTriplet(self, x, y):\n        \"\"\"\n        :type x: List[int]\n        :type y: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSumDistinctTriplet(self, x: List[int], y: List[int]) -> int:\n        ",
+    "c": "int maxSumDistinctTriplet(int* x, int xSize, int* y, int ySize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSumDistinctTriplet(int[] x, int[] y) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} x\n * @param {number[]} y\n * @return {number}\n */\nvar maxSumDistinctTriplet = function(x, y) {\n    \n};",
+    "typescript": "function maxSumDistinctTriplet(x: number[], y: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $x\n     * @param Integer[] $y\n     * @return Integer\n     */\n    function maxSumDistinctTriplet($x, $y) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSumDistinctTriplet(_ x: [Int], _ y: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSumDistinctTriplet(x: IntArray, y: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSumDistinctTriplet(List<int> x, List<int> y) {\n    \n  }\n}",
+    "golang": "func maxSumDistinctTriplet(x []int, y []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} x\n# @param {Integer[]} y\n# @return {Integer}\ndef max_sum_distinct_triplet(x, y)\n    \nend",
+    "scala": "object Solution {\n    def maxSumDistinctTriplet(x: Array[Int], y: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum_distinct_triplet(x: Vec<i32>, y: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum-distinct-triplet x y)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_sum_distinct_triplet(X :: [integer()], Y :: [integer()]) -> integer().\nmax_sum_distinct_triplet(X, Y) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum_distinct_triplet(x :: [integer], y :: [integer]) :: integer\n  def max_sum_distinct_triplet(x, y) do\n    \n  end\nend"
+  }
+}

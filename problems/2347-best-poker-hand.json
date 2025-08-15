@@ -1,0 +1,61 @@
+{
+  "title": "Best Poker Hand",
+  "problem_id": "2433",
+  "frontend_id": "2347",
+  "difficulty": "Easy",
+  "problem_slug": "best-poker-hand",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "You are given an integer array ranks and a character array suits. You have 5 cards where the ith card has a rank of ranks[i] and a suit of suits[i].\nThe following are the types of poker hands you can make from best to worst:\nReturn a string representing the best type of poker hand you can make with the given cards.\nNote that the return values are case-sensitive.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ranks = [13,2,3,1,9], suits = [\"a\",\"a\",\"a\",\"a\",\"a\"]\nOutput: \"Flush\"\nExplanation: The hand with all the cards consists of 5 cards with the same suit, so we have a \"Flush\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ranks = [4,4,2,4,4], suits = [\"d\",\"a\",\"a\",\"b\",\"c\"]\nOutput: \"Three of a Kind\"\nExplanation: The hand with the first, second, and fourth card consists of 3 cards with the same rank, so we have a \"Three of a Kind\".\nNote that we could also make a \"Pair\" hand but \"Three of a Kind\" is a better hand.\nAlso note that other cards could be used to make the \"Three of a Kind\" hand.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: ranks = [10,10,2,12,9], suits = [\"a\",\"b\",\"c\",\"a\",\"d\"]\nOutput: \"Pair\"\nExplanation: The hand with the first and second card consists of 2 cards with the same rank, so we have a \"Pair\".\nNote that we cannot make a \"Flush\" or a \"Three of a Kind\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "ranks.length == suits.length == 5",
+    "1 <= ranks[i] <= 13",
+    "'a' <= suits[i] <= 'd'",
+    "No two cards have the same rank and suit."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sequentially check the conditions 1 through 4, and return the outcome corresponding to the first met condition."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string bestHand(vector<int>& ranks, vector<char>& suits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String bestHand(int[] ranks, char[] suits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def bestHand(self, ranks, suits):\n        \"\"\"\n        :type ranks: List[int]\n        :type suits: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def bestHand(self, ranks: List[int], suits: List[str]) -> str:\n        ",
+    "c": "char* bestHand(int* ranks, int ranksSize, char* suits, int suitsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string BestHand(int[] ranks, char[] suits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} ranks\n * @param {character[]} suits\n * @return {string}\n */\nvar bestHand = function(ranks, suits) {\n    \n};",
+    "typescript": "function bestHand(ranks: number[], suits: string[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $ranks\n     * @param String[] $suits\n     * @return String\n     */\n    function bestHand($ranks, $suits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func bestHand(_ ranks: [Int], _ suits: [Character]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun bestHand(ranks: IntArray, suits: CharArray): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String bestHand(List<int> ranks, List<String> suits) {\n    \n  }\n}",
+    "golang": "func bestHand(ranks []int, suits []byte) string {\n    \n}",
+    "ruby": "# @param {Integer[]} ranks\n# @param {Character[]} suits\n# @return {String}\ndef best_hand(ranks, suits)\n    \nend",
+    "scala": "object Solution {\n    def bestHand(ranks: Array[Int], suits: Array[Char]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn best_hand(ranks: Vec<i32>, suits: Vec<char>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (best-hand ranks suits)\n  (-> (listof exact-integer?) (listof char?) string?)\n  )",
+    "erlang": "-spec best_hand(Ranks :: [integer()], Suits :: [char()]) -> unicode:unicode_binary().\nbest_hand(Ranks, Suits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec best_hand(ranks :: [integer], suits :: [char]) :: String.t\n  def best_hand(ranks, suits) do\n    \n  end\nend"
+  }
+}

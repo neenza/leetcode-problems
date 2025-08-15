@@ -1,0 +1,52 @@
+{
+  "title": "Guess Number Higher or Lower",
+  "problem_id": "374",
+  "frontend_id": "374",
+  "difficulty": "Easy",
+  "problem_slug": "guess-number-higher-or-lower",
+  "topics": [
+    "Binary Search",
+    "Interactive"
+  ],
+  "description": "We are playing the Guess Game. The game is as follows:\nI pick a number from 1 to n. You have to guess which number I picked.\nEvery time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.\nYou call a pre-defined API int guess(int num), which returns three possible results:\nReturn the number that I picked.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 10, pick = 6\nOutput: 6",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, pick = 1\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, pick = 1\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 231 - 1",
+    "1 <= pick <= n"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\nclass Solution {\npublic:\n    int guessNumber(int n) {\n        \n    }\n};",
+    "java": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\npublic class Solution extends GuessGame {\n    public int guessNumber(int n) {\n        \n    }\n}",
+    "python": "# The guess API is already defined for you.\n# @param num, your guess\n# @return -1 if num is higher than the picked number\n#          1 if num is lower than the picked number\n#          otherwise return 0\n# def guess(num):\n\nclass Solution(object):\n    def guessNumber(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "# The guess API is already defined for you.\n# @param num, your guess\n# @return -1 if num is higher than the picked number\n#          1 if num is lower than the picked number\n#          otherwise return 0\n# def guess(num: int) -> int:\n\nclass Solution:\n    def guessNumber(self, n: int) -> int:\n        ",
+    "c": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\nint guessNumber(int n){\n\t\n}",
+    "csharp": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * int guess(int num);\n */\n\npublic class Solution : GuessGame {\n    public int GuessNumber(int n) {\n        \n    }\n}",
+    "javascript": "/** \n * Forward declaration of guess API.\n * @param {number} num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * var guess = function(num) {}\n */\n\n/**\n * @param {number} n\n * @return {number}\n */\nvar guessNumber = function(n) {\n    \n};",
+    "typescript": "/** \n * Forward declaration of guess API.\n * @param {number} num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * var guess = function(num) {}\n */\n\n\nfunction guessNumber(n: number): number {\n\n};",
+    "php": "/** \n * The API guess is defined in the parent class.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * public function guess($num){}\n */\n\nclass Solution extends GuessGame {\n    /**\n     * @param  Integer  $n\n     * @return Integer\n     */\n    function guessNumber($n) {\n        \n    }\n}",
+    "swift": "/** \n * Forward declaration of guess API.\n * @param  num -> your guess number\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0 \n * func guess(_ num: Int) -> Int \n */\n\nclass Solution : GuessGame {\n    func guessNumber(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "/** \n * The API guess is defined in the parent class.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * fun guess(num:Int):Int {}\n */\n\nclass Solution:GuessGame() {\n    override fun guessNumber(n:Int):Int {\n        \n    }\n}",
+    "golang": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * func guess(num int) int;\n */\n\nfunc guessNumber(n int) int {\n    \n}",
+    "ruby": "# The guess API is already defined for you.\n# @param num, your guess\n# @return -1 if num is higher than the picked number\n#          1 if num is lower than the picked number\n#          otherwise return 0\n# def guess(num)\n\ndef guessNumber(n)\n    \nend",
+    "scala": "/** \n * The API guess is defined in the parent class.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * def guess(num: Int): Int = {}\n */\n\nclass Solution extends GuessGame {\n    def guessNumber(n: Int): Int = {\n        \n    }\n}",
+    "rust": "/** \n * Forward declaration of guess API.\n * @param  num   your guess\n * @return \t     -1 if num is higher than the picked number\n *\t\t\t      1 if num is lower than the picked number\n *               otherwise return 0\n * unsafe fn guess(num: i32) -> i32 {}\n */\n\nimpl Solution {\n    unsafe fn guessNumber(n: i32) -> i32 {\n        \n    }\n}"
+  }
+}

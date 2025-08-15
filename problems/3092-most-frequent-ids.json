@@ -1,0 +1,60 @@
+{
+  "title": "Most Frequent IDs",
+  "problem_id": "3363",
+  "frontend_id": "3092",
+  "difficulty": "Medium",
+  "problem_slug": "most-frequent-ids",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Heap (Priority Queue)",
+    "Ordered Set"
+  ],
+  "description": "The problem involves tracking the frequency of IDs in a collection that changes over time. You have two integer arrays, nums and freq, of equal length n. Each element in nums represents an ID, and the corresponding element in freq indicates how many times that ID should be added to or removed from the collection at each step.\nReturn an array ans of length n, where ans[i] represents the count of the most frequent ID in the collection after the ith step. If the collection is empty at any step, ans[i] should be 0 for that step.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,2,1], freq = [3,2,-3,1]\nOutput: [3,3,2,2]\nExplanation:\nAfter step 0, we have 3 IDs with the value of 2. So ans[0] = 3 . After step 1, we have 3 IDs with the value of 2 and 2 IDs with the value of 3. So ans[1] = 3 . After step 2, we have 2 IDs with the value of 3. So ans[2] = 2 . After step 3, we have 2 IDs with the value of 3 and 1 ID with the value of 1. So ans[3] = 2 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,5,3], freq = [2,-2,1]\nOutput: [2,0,1]\nExplanation:\nAfter step 0, we have 2 IDs with the value of 5. So ans[0] = 2 . After step 1, there are no IDs. So ans[1] = 0 . After step 2, we have 1 ID with the value of 3. So ans[2] = 1 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length == freq.length <= 105",
+    "1 <= nums[i] <= 105",
+    "-105 <= freq[i] <= 105",
+    "freq[i] != 0",
+    "The input is generated such that the occurrences of an ID will not be negative in any step."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use an ordered set for maintaining the occurrences of each ID.",
+    "After step <code>i</code> find the occurrences of <code>nums[i]</code>.",
+    "Change the occurrences of <code>nums[i]</code> in the ordered set."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> mostFrequentIDs(vector<int>& nums, vector<int>& freq) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] mostFrequentIDs(int[] nums, int[] freq) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostFrequentIDs(self, nums, freq):\n        \"\"\"\n        :type nums: List[int]\n        :type freq: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostFrequentIDs(self, nums: List[int], freq: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* mostFrequentIDs(int* nums, int numsSize, int* freq, int freqSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] MostFrequentIDs(int[] nums, int[] freq) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} freq\n * @return {number[]}\n */\nvar mostFrequentIDs = function(nums, freq) {\n    \n};",
+    "typescript": "function mostFrequentIDs(nums: number[], freq: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $freq\n     * @return Integer[]\n     */\n    function mostFrequentIDs($nums, $freq) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostFrequentIDs(_ nums: [Int], _ freq: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostFrequentIDs(nums: IntArray, freq: IntArray): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> mostFrequentIDs(List<int> nums, List<int> freq) {\n    \n  }\n}",
+    "golang": "func mostFrequentIDs(nums []int, freq []int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} freq\n# @return {Integer[]}\ndef most_frequent_i_ds(nums, freq)\n    \nend",
+    "scala": "object Solution {\n    def mostFrequentIDs(nums: Array[Int], freq: Array[Int]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_frequent_i_ds(nums: Vec<i32>, freq: Vec<i32>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (most-frequent-i-ds nums freq)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec most_frequent_i_ds(Nums :: [integer()], Freq :: [integer()]) -> [integer()].\nmost_frequent_i_ds(Nums, Freq) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_frequent_i_ds(nums :: [integer], freq :: [integer]) :: [integer]\n  def most_frequent_i_ds(nums, freq) do\n    \n  end\nend"
+  }
+}

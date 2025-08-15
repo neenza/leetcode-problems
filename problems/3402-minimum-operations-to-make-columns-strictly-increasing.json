@@ -1,0 +1,54 @@
+{
+  "title": "Minimum Operations to Make Columns Strictly Increasing",
+  "problem_id": "3691",
+  "frontend_id": "3402",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-operations-to-make-columns-strictly-increasing",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "description": "You are given a m x n matrix grid consisting of non-negative integers.\nIn one operation, you can increment the value of any grid[i][j] by 1.\nReturn the minimum number of operations needed to make all columns of grid strictly increasing.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/11/10/secondexample.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 50",
+    "0 <= grid[i][j] < 2500"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<code>grid[i + 1][j]</code> must be at least equal to <code>grid[i][j] + 1<code>.",
+    "Iterate on <code>i</code> in increasing order, and set <code>grid[i + 1][j] = max(grid[i][j]+1, grid[i + 1][j])<code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumOperations(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumOperations = function(grid) {\n    \n};",
+    "typescript": "function minimumOperations(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumOperations($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumOperations(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_operations(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Grid :: [[integer()]]) -> integer().\nminimum_operations(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(grid :: [[integer]]) :: integer\n  def minimum_operations(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "A Number After a Double Reversal",
+  "problem_id": "2238",
+  "frontend_id": "2119",
+  "difficulty": "Easy",
+  "problem_slug": "a-number-after-a-double-reversal",
+  "topics": [
+    "Math"
+  ],
+  "description": "Reversing an integer means to reverse all its digits.\nGiven an integer num, reverse num to get reversed1, then reverse reversed1 to get reversed2. Return true if reversed2 equals num. Otherwise return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 526\nOutput: true\nExplanation: Reverse num to get 625, then reverse 625 to get 526, which equals num.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 1800\nOutput: false\nExplanation: Reverse num to get 81, then reverse 81 to get 18, which does not equal num.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = 0\nOutput: true\nExplanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= num <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Other than the number 0 itself, any number that ends with 0 would lose some digits permanently when reversed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isSameAfterReversals(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isSameAfterReversals(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isSameAfterReversals(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isSameAfterReversals(self, num: int) -> bool:\n        ",
+    "c": "bool isSameAfterReversals(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsSameAfterReversals(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {boolean}\n */\nvar isSameAfterReversals = function(num) {\n    \n};",
+    "typescript": "function isSameAfterReversals(num: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Boolean\n     */\n    function isSameAfterReversals($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isSameAfterReversals(_ num: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isSameAfterReversals(num: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isSameAfterReversals(int num) {\n    \n  }\n}",
+    "golang": "func isSameAfterReversals(num int) bool {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Boolean}\ndef is_same_after_reversals(num)\n    \nend",
+    "scala": "object Solution {\n    def isSameAfterReversals(num: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_same_after_reversals(num: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-same-after-reversals num)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec is_same_after_reversals(Num :: integer()) -> boolean().\nis_same_after_reversals(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_same_after_reversals(num :: integer) :: boolean\n  def is_same_after_reversals(num) do\n    \n  end\nend"
+  }
+}

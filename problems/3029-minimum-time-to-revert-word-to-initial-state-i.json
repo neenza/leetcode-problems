@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Time to Revert Word to Initial State I",
+  "problem_id": "3297",
+  "frontend_id": "3029",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-revert-word-to-initial-state-i",
+  "topics": [
+    "String",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ],
+  "description": "You are given a 0-indexed string word and an integer k.\nAt every second, you must perform the following operations:\nNote that you do not necessarily need to add the same characters that you removed. However, you must perform both operations at every second.\nReturn the minimum time greater than zero required for word to revert to its initial state.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abacaba\", k = 3\nOutput: 2\nExplanation: At the 1st second, we remove characters \"aba\" from the prefix of word, and add characters \"bac\" to the end of word. Thus, word becomes equal to \"cababac\".\nAt the 2nd second, we remove characters \"cab\" from the prefix of word, and add \"aba\" to the end of word. Thus, word becomes equal to \"abacaba\" and reverts to its initial state.\nIt can be shown that 2 seconds is the minimum time greater than zero required for word to revert to its initial state.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"abacaba\", k = 4\nOutput: 1\nExplanation: At the 1st second, we remove characters \"abac\" from the prefix of word, and add characters \"caba\" to the end of word. Thus, word becomes equal to \"abacaba\" and reverts to its initial state.\nIt can be shown that 1 second is the minimum time greater than zero required for word to revert to its initial state.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"abcbabcd\", k = 2\nOutput: 4\nExplanation: At every second, we will remove the first 2 characters of word, and add the same characters to the end of word.\nAfter 4 seconds, word becomes equal to \"abcbabcd\" and reverts to its initial state.\nIt can be shown that 4 seconds is the minimum time greater than zero required for word to revert to its initial state.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 50",
+    "1 <= k <= word.length",
+    "word consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the longest suffix which is also a prefix and the length is multiple of <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumTimeToInitialState(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTimeToInitialState(String word, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTimeToInitialState(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTimeToInitialState(self, word: str, k: int) -> int:\n        ",
+    "c": "int minimumTimeToInitialState(char* word, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumTimeToInitialState(string word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar minimumTimeToInitialState = function(word, k) {\n    \n};",
+    "typescript": "function minimumTimeToInitialState(word: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @param Integer $k\n     * @return Integer\n     */\n    function minimumTimeToInitialState($word, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTimeToInitialState(_ word: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTimeToInitialState(word: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTimeToInitialState(String word, int k) {\n    \n  }\n}",
+    "golang": "func minimumTimeToInitialState(word string, k int) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @param {Integer} k\n# @return {Integer}\ndef minimum_time_to_initial_state(word, k)\n    \nend",
+    "scala": "object Solution {\n    def minimumTimeToInitialState(word: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_time_to_initial_state(word: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-time-to-initial-state word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_time_to_initial_state(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\nminimum_time_to_initial_state(Word, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_time_to_initial_state(word :: String.t, k :: integer) :: integer\n  def minimum_time_to_initial_state(word, k) do\n    \n  end\nend"
+  }
+}

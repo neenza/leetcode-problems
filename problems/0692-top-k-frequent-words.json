@@ -1,0 +1,59 @@
+{
+  "title": "Top K Frequent Words",
+  "problem_id": "692",
+  "frontend_id": "692",
+  "difficulty": "Medium",
+  "problem_slug": "top-k-frequent-words",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Trie",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Bucket Sort",
+    "Counting"
+  ],
+  "description": "Given an array of strings words and an integer k, return the k most frequent strings.\nReturn the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.\nExample 1:\nExample 2:\nConstraints:\nFollow-up: Could you solve it in O(n log(k)) time and O(n) extra space?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"i\",\"love\",\"leetcode\",\"i\",\"love\",\"coding\"], k = 2\nOutput: [\"i\",\"love\"]\nExplanation: \"i\" and \"love\" are the two most frequent words.\nNote that \"i\" comes before \"love\" due to a lower alphabetical order.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"the\",\"day\",\"is\",\"sunny\",\"the\",\"the\",\"the\",\"sunny\",\"is\",\"is\"], k = 4\nOutput: [\"the\",\"is\",\"sunny\",\"day\"]\nExplanation: \"the\", \"is\", \"sunny\" and \"day\" are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 500",
+    "1 <= words[i].length <= 10",
+    "words[i] consists of lowercase English letters.",
+    "k is in the range [1, The number of unique words[i]]"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> topKFrequent(vector<string>& words, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def topKFrequent(self, words: List[str], k: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** topKFrequent(char** words, int wordsSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> TopKFrequent(string[] words, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number} k\n * @return {string[]}\n */\nvar topKFrequent = function(words, k) {\n    \n};",
+    "typescript": "function topKFrequent(words: string[], k: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer $k\n     * @return String[]\n     */\n    function topKFrequent($words, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func topKFrequent(_ words: [String], _ k: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun topKFrequent(words: Array<String>, k: Int): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> topKFrequent(List<String> words, int k) {\n    \n  }\n}",
+    "golang": "func topKFrequent(words []string, k int) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer} k\n# @return {String[]}\ndef top_k_frequent(words, k)\n    \nend",
+    "scala": "object Solution {\n    def topKFrequent(words: Array[String], k: Int): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn top_k_frequent(words: Vec<String>, k: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (top-k-frequent words k)\n  (-> (listof string?) exact-integer? (listof string?))\n  )",
+    "erlang": "-spec top_k_frequent(Words :: [unicode:unicode_binary()], K :: integer()) -> [unicode:unicode_binary()].\ntop_k_frequent(Words, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec top_k_frequent(words :: [String.t], k :: integer) :: [String.t]\n  def top_k_frequent(words, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Apply Operations on Array to Maximize Sum of Squares",
+  "problem_id": "3153",
+  "frontend_id": "2897",
+  "difficulty": "Hard",
+  "problem_slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a 0-indexed integer array nums and a positive integer k.\nYou can do the following operation on the array any number of times:\nYou have to choose k elements from the final array and calculate the sum of their squares.\nReturn the maximum sum of squares you can achieve.\nSince the answer can be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,6,5,8], k = 2\nOutput: 261\nExplanation: We can do the following operations on the array:\n- Choose i = 0 and j = 3, then change nums[0] to (2 AND 8) = 0 and nums[3] to (2 OR 8) = 10. The resulting array is nums = [0,6,5,10].\n- Choose i = 2 and j = 3, then change nums[2] to (5 AND 10) = 0 and nums[3] to (5 OR 10) = 15. The resulting array is nums = [0,6,0,15].\nWe can choose the elements 15 and 6 from the final array. The sum of squares is 152 + 62 = 261.\nIt can be shown that this is the maximum value we can get.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,5,4,7], k = 3\nOutput: 90\nExplanation: We do not need to apply any operations.\nWe can choose the elements 7, 5, and 4 with a sum of squares: 72 + 52 + 42 = 90.\nIt can be shown that this is the maximum value we can get.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The operation described only transfers some bits from one element to another in their binary representation.",
+    "To have a maximum sum of squares, it is optimal to greedily make each number as big as possible."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(List<Integer> nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSum(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maxSum(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSum(IList<int> nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxSum = function(nums, k) {\n    \n};",
+    "typescript": "function maxSum(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxSum($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSum(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSum(nums: List<Int>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSum(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxSum(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_sum(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxSum(nums: List[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_sum(Nums :: [integer()], K :: integer()) -> integer().\nmax_sum(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum(nums :: [integer], k :: integer) :: integer\n  def max_sum(nums, k) do\n    \n  end\nend"
+  }
+}

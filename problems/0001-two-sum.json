@@ -1,0 +1,63 @@
+{
+  "title": "Two Sum",
+  "problem_id": "1",
+  "frontend_id": "1",
+  "difficulty": "Easy",
+  "problem_slug": "two-sum",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,2,4], target = 6\nOutput: [1,2]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,3], target = 6\nOutput: [0,1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 104",
+    "-109 <= nums[i] <= 109",
+    "-109 <= target <= 109",
+    "Only one valid answer exists."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions for just for completeness. It is from these brute force solutions that you can come up with optimizations.",
+    "So, if we fix one of the numbers, say <code>x</code>, we have to scan the entire array to find the next number <code>y</code> which is <code>value - x</code> where value is the input parameter. Can we change our array somehow so that this search becomes faster?",
+    "The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def twoSum(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* twoSum(int* nums, int numsSize, int target, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] TwoSum(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(nums, target) {\n    \n};",
+    "typescript": "function twoSum(nums: number[], target: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer[]\n     */\n    function twoSum($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun twoSum(nums: IntArray, target: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> twoSum(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func twoSum(nums []int, target int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer[]}\ndef two_sum(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def twoSum(nums: Array[Int], target: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (two-sum nums target)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec two_sum(Nums :: [integer()], Target :: integer()) -> [integer()].\ntwo_sum(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec two_sum(nums :: [integer], target :: integer) :: [integer]\n  def two_sum(nums, target) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Video Solution\n\n---## Solution Article\n\n---\n\n### Approach 1: Brute Force\n\n**Algorithm**\n\nThe brute force approach is simple. Loop through each element $$x$$ and find if there is another value that equals to $$target - x$$.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n^2)$$.\nFor each element, we try to find its complement by looping through the rest of the array which takes $$O(n)$$ time. Therefore, the time complexity is $$O(n^2)$$.\n\n* Space complexity: $$O(1)$$.\nThe space required does not depend on the size of the input array, so only constant space is used.\n\n---\n### Approach 2: Two-pass Hash Table\n\n**Intuition**\n\nTo improve our runtime complexity, we need a more efficient way to check if the complement exists in the array. If the complement exists, we need to get its index. What is the best way to maintain a mapping of each element in the array to its index? A hash table.\n\nWe can reduce the lookup time from $$O(n)$$ to $$O(1)$$ by trading space for speed. A hash table is well suited for this purpose because it supports fast lookup in *near* constant time. I say \"near\" because if a collision occurred, a lookup could degenerate to $$O(n)$$ time. However, lookup in a hash table should be amortized $$O(1)$$ time as long as the hash function was chosen carefully.\n\n**Algorithm**\n\nA simple implementation uses two iterations. In the first iteration, we add each element's value as a key and its index as a value to the hash table. Then, in the second iteration, we check if each element's complement ($$target - nums[i]$$) exists in the hash table. If it does exist, we return current element's index and its complement's index. Beware that the complement must not be $$nums[i]$$ itself!\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n)$$.\nWe traverse the list containing $$n$$ elements exactly twice. Since the hash table reduces the lookup time to $$O(1)$$, the overall time complexity is $$O(n)$$.\n\n* Space complexity: $$O(n)$$.\nThe extra space required depends on the number of items stored in the hash table, which stores exactly $$n$$ elements.\n\n---\n### Approach 3: One-pass Hash Table\n\n**Algorithm**\n    \nIt turns out we can do it in one-pass. While we are iterating and inserting elements into the hash table, we also look back to check if current element's complement already exists in the hash table. If it exists, we have found a solution and return the indices immediately.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n)$$.\nWe traverse the list containing $$n$$ elements only once. Each lookup in the table costs only $$O(1)$$ time.\n\n* Space complexity: $$O(n)$$.\nThe extra space required depends on the number of items stored in the hash table, which stores at most $$n$$ elements."
+}

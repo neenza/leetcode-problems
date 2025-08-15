@@ -1,0 +1,57 @@
+{
+  "title": "Closest Divisors",
+  "problem_id": "1276",
+  "frontend_id": "1362",
+  "difficulty": "Medium",
+  "problem_slug": "closest-divisors",
+  "topics": [
+    "Math"
+  ],
+  "description": "Given an integer num, find the closest two integers in absolute difference whose product equals num + 1 or num + 2.\nReturn the two integers in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 8\nOutput: [3,3]\nExplanation: For num + 1 = 9, the closest divisors are 3 & 3, for num + 2 = 10, the closest divisors are 2 & 5, hence 3 & 3 is chosen.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 123\nOutput: [5,25]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = 999\nOutput: [40,25]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num <= 10^9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the divisors of n+1 and n+2.",
+    "To find the divisors of a number, you only need to iterate to the square root of that number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> closestDivisors(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] closestDivisors(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def closestDivisors(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def closestDivisors(self, num: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* closestDivisors(int num, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ClosestDivisors(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number[]}\n */\nvar closestDivisors = function(num) {\n    \n};",
+    "typescript": "function closestDivisors(num: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer[]\n     */\n    function closestDivisors($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func closestDivisors(_ num: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun closestDivisors(num: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> closestDivisors(int num) {\n    \n  }\n}",
+    "golang": "func closestDivisors(num int) []int {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer[]}\ndef closest_divisors(num)\n    \nend",
+    "scala": "object Solution {\n    def closestDivisors(num: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn closest_divisors(num: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (closest-divisors num)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec closest_divisors(Num :: integer()) -> [integer()].\nclosest_divisors(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec closest_divisors(num :: integer) :: [integer]\n  def closest_divisors(num) do\n    \n  end\nend"
+  }
+}

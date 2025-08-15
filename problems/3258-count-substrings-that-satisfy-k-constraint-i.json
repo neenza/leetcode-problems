@@ -1,0 +1,59 @@
+{
+  "title": "Count Substrings That Satisfy K-Constraint I",
+  "problem_id": "3543",
+  "frontend_id": "3258",
+  "difficulty": "Easy",
+  "problem_slug": "count-substrings-that-satisfy-k-constraint-i",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a binary string s and an integer k.\nA binary string satisfies the k-constraint if either of the following conditions holds:\nReturn an integer denoting the number of substrings of s that satisfy the k-constraint.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"10101\", k = 1\nOutput: 12\nExplanation:\nEvery substring of s except the substrings \"1010\" , \"10101\" , and \"0101\" satisfies the k-constraint.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"1010101\", k = 2\nOutput: 25\nExplanation:\nEvery substring of s except the substrings with a length greater than 5 satisfies the k-constraint.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"11111\", k = 1\nOutput: 15\nExplanation:\nAll substrings of s satisfy the k-constraint.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "1 <= k <= s.length",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Using a brute force approach, check each index until a substring satisfying the k-constraint is found, then increment."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countKConstraintSubstrings(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countKConstraintSubstrings(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countKConstraintSubstrings(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countKConstraintSubstrings(self, s: str, k: int) -> int:\n        ",
+    "c": "int countKConstraintSubstrings(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountKConstraintSubstrings(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar countKConstraintSubstrings = function(s, k) {\n    \n};",
+    "typescript": "function countKConstraintSubstrings(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function countKConstraintSubstrings($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countKConstraintSubstrings(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countKConstraintSubstrings(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countKConstraintSubstrings(String s, int k) {\n    \n  }\n}",
+    "golang": "func countKConstraintSubstrings(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef count_k_constraint_substrings(s, k)\n    \nend",
+    "scala": "object Solution {\n    def countKConstraintSubstrings(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_k_constraint_substrings(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-k-constraint-substrings s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_k_constraint_substrings(S :: unicode:unicode_binary(), K :: integer()) -> integer().\ncount_k_constraint_substrings(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_k_constraint_substrings(s :: String.t, k :: integer) :: integer\n  def count_k_constraint_substrings(s, k) do\n    \n  end\nend"
+  }
+}

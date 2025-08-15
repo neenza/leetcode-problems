@@ -1,0 +1,58 @@
+{
+  "title": "Running Sum of 1d Array",
+  "problem_id": "1603",
+  "frontend_id": "1480",
+  "difficulty": "Easy",
+  "problem_slug": "running-sum-of-1d-array",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).\nReturn the running sum of nums.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: [1,3,6,10]\nExplanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,1,1]\nOutput: [1,2,3,4,5]\nExplanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,1,2,10,1]\nOutput: [3,4,6,16,17]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "-10^6 <= nums[i] <= 10^6"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about how we can calculate the i-th number in the running sum from the (i-1)-th number."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> runningSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] runningSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def runningSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def runningSum(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* runningSum(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RunningSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar runningSum = function(nums) {\n    \n};",
+    "typescript": "function runningSum(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function runningSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func runningSum(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun runningSum(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> runningSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func runningSum(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef running_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def runningSum(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn running_sum(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (running-sum nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec running_sum(Nums :: [integer()]) -> [integer()].\nrunning_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec running_sum(nums :: [integer]) :: [integer]\n  def running_sum(nums) do\n    \n  end\nend"
+  }
+}

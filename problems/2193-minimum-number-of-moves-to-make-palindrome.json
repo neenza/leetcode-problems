@@ -1,0 +1,58 @@
+{
+  "title": "Minimum Number of Moves to Make Palindrome",
+  "problem_id": "1356",
+  "frontend_id": "2193",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-number-of-moves-to-make-palindrome",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Greedy",
+    "Binary Indexed Tree"
+  ],
+  "description": "You are given a string s consisting only of lowercase English letters.\nIn one move, you can select any two adjacent characters of s and swap them.\nReturn the minimum number of moves needed to make s a palindrome.\nNote that the input will be generated such that s can always be converted to a palindrome.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aabb\"\nOutput: 2\nExplanation:\nWe can obtain two palindromes from s, \"abba\" and \"baab\". \n- We can obtain \"abba\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"abba\".\n- We can obtain \"baab\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"baab\".\nThus, the minimum number of moves needed to make s a palindrome is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"letelt\"\nOutput: 2\nExplanation:\nOne of the palindromes we can obtain from s in 2 moves is \"lettel\".\nOne of the ways we can obtain it is \"letelt\" -> \"letetl\" -> \"lettel\".\nOther palindromes such as \"tleelt\" can also be obtained in 2 moves.\nIt can be shown that it is not possible to obtain a palindrome in less than 2 moves.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 2000",
+    "s consists only of lowercase English letters.",
+    "s can be converted to a palindrome using a finite number of moves."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider a greedy strategy.",
+    "Let’s start by making the leftmost and rightmost characters match with some number of swaps.",
+    "If we figure out how to do that using the minimum number of swaps, then we can delete the leftmost and rightmost characters and solve the problem recursively."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMovesToMakePalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMovesToMakePalindrome(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMovesToMakePalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMovesToMakePalindrome(self, s: str) -> int:\n        ",
+    "c": "int minMovesToMakePalindrome(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMovesToMakePalindrome(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minMovesToMakePalindrome = function(s) {\n    \n};",
+    "typescript": "function minMovesToMakePalindrome(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minMovesToMakePalindrome($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMovesToMakePalindrome(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMovesToMakePalindrome(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMovesToMakePalindrome(String s) {\n    \n  }\n}",
+    "golang": "func minMovesToMakePalindrome(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_moves_to_make_palindrome(s)\n    \nend",
+    "scala": "object Solution {\n    def minMovesToMakePalindrome(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_moves_to_make_palindrome(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-moves-to-make-palindrome s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_moves_to_make_palindrome(S :: unicode:unicode_binary()) -> integer().\nmin_moves_to_make_palindrome(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_moves_to_make_palindrome(s :: String.t) :: integer\n  def min_moves_to_make_palindrome(s) do\n    \n  end\nend"
+  }
+}

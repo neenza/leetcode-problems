@@ -1,0 +1,65 @@
+{
+  "title": "Count Pairs of Connectable Servers in a Weighted Tree Network",
+  "problem_id": "3326",
+  "frontend_id": "3067",
+  "difficulty": "Medium",
+  "problem_slug": "count-pairs-of-connectable-servers-in-a-weighted-tree-network",
+  "topics": [
+    "Array",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "You are given an unrooted weighted tree with n vertices representing servers numbered from 0 to n - 1, an array edges where edges[i] = [ai, bi, weighti] represents a bidirectional edge between vertices ai and bi of weight weighti. You are also given an integer signalSpeed.\nTwo servers a and b are connectable through a server c if:\nReturn an integer array count of length n where count[i] is the number of server pairs that are connectable through the server i.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: edges = [[0,1,1],[1,2,5],[2,3,13],[3,4,9],[4,5,2]], signalSpeed = 1\nOutput: [0,4,6,6,4,0]\nExplanation: Since signalSpeed is 1, count[c] is equal to the number of pairs of paths that start at c and do not share any edges.\nIn the case of the given path graph, count[c] is equal to the number of servers to the left of c multiplied by the servers to the right of c.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/21/example22.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: edges = [[0,6,3],[6,5,3],[0,3,1],[3,2,7],[3,1,6],[3,4,2]], signalSpeed = 3\nOutput: [2,0,0,0,0,0,2]\nExplanation: Through server 0, there are 2 pairs of connectable servers: (4, 5) and (4, 6).\nThrough server 6, there are 2 pairs of connectable servers: (4, 5) and (0, 5).\nIt can be shown that no two servers are connectable through servers other than 0 and 6.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/21/example11.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 1000",
+    "edges.length == n - 1",
+    "edges[i].length == 3",
+    "0 <= ai, bi < n",
+    "edges[i] = [ai, bi, weighti]",
+    "1 <= weighti <= 106",
+    "1 <= signalSpeed <= 106",
+    "The input is generated such that edges represents a valid tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Take each node as the root of the tree, run DFS, and save for each node <code>i</code>, the number of nodes in the subtree rooted at <code>i</code> whose distance to the root is divisible by <code>signalSpeed</code>.",
+    "If the root has <code>m</code> children named <code>c<sub>1</sub>, c<sub>2</sub>, …, c<sub>m</sub></code> that respectively have <code>num[c<sub>1</sub>], num[c<sub>2</sub>], …, num[c<sub>m</sub>]</code> nodes in their subtrees whose distance is divisible by signalSpeed. Then, there are <code>((S - num[c<sub>i</sub>]) * num[c<sub>i</sub>]) / 2</code>that are connectable through the root that we have fixed, where <code>S</code> is the sum of <code>num[c<sub>i</sub>]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countPairsOfConnectableServers(vector<vector<int>>& edges, int signalSpeed) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countPairsOfConnectableServers(int[][] edges, int signalSpeed) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairsOfConnectableServers(self, edges, signalSpeed):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type signalSpeed: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairsOfConnectableServers(self, edges: List[List[int]], signalSpeed: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countPairsOfConnectableServers(int** edges, int edgesSize, int* edgesColSize, int signalSpeed, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountPairsOfConnectableServers(int[][] edges, int signalSpeed) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number} signalSpeed\n * @return {number[]}\n */\nvar countPairsOfConnectableServers = function(edges, signalSpeed) {\n    \n};",
+    "typescript": "function countPairsOfConnectableServers(edges: number[][], signalSpeed: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $edges\n     * @param Integer $signalSpeed\n     * @return Integer[]\n     */\n    function countPairsOfConnectableServers($edges, $signalSpeed) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairsOfConnectableServers(_ edges: [[Int]], _ signalSpeed: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairsOfConnectableServers(edges: Array<IntArray>, signalSpeed: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countPairsOfConnectableServers(List<List<int>> edges, int signalSpeed) {\n    \n  }\n}",
+    "golang": "func countPairsOfConnectableServers(edges [][]int, signalSpeed int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} edges\n# @param {Integer} signal_speed\n# @return {Integer[]}\ndef count_pairs_of_connectable_servers(edges, signal_speed)\n    \nend",
+    "scala": "object Solution {\n    def countPairsOfConnectableServers(edges: Array[Array[Int]], signalSpeed: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs_of_connectable_servers(edges: Vec<Vec<i32>>, signal_speed: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs-of-connectable-servers edges signalSpeed)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec count_pairs_of_connectable_servers(Edges :: [[integer()]], SignalSpeed :: integer()) -> [integer()].\ncount_pairs_of_connectable_servers(Edges, SignalSpeed) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pairs_of_connectable_servers(edges :: [[integer]], signal_speed :: integer) :: [integer]\n  def count_pairs_of_connectable_servers(edges, signal_speed) do\n    \n  end\nend"
+  }
+}

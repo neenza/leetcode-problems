@@ -1,0 +1,55 @@
+{
+  "title": "Count Pairs That Form a Complete Day II",
+  "problem_id": "3418",
+  "frontend_id": "3185",
+  "difficulty": "Medium",
+  "problem_slug": "count-pairs-that-form-a-complete-day-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "Given an integer array hours representing times in hours, return an integer denoting the number of pairs i, j where i < j and hours[i] + hours[j] forms a complete day.\nA complete day is defined as a time duration that is an exact multiple of 24 hours.\nFor example, 1 day is 24 hours, 2 days is 48 hours, 3 days is 72 hours, and so on.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: hours = [12,12,30,24,24]\nOutput: 2\nExplanation: The pairs of indices that form a complete day are (0, 1) and (3, 4) .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: hours = [72,48,24,3]\nOutput: 3\nExplanation: The pairs of indices that form a complete day are (0, 1) , (0, 2) , and (1, 2) .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= hours.length <= 5 * 105",
+    "1 <= hours[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A pair <code>(i, j)</code> forms a valid complete day if <code>(hours[i] + hours[j]) % 24 == 0</code>.",
+    "Using an array or a map, for each index <code>j</code> moving from left to right, increase the answer by the count of <code>(24 - hours[j]) % 24</code>, and then increase the count of <code>hours[j]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countCompleteDayPairs(vector<int>& hours) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countCompleteDayPairs(int[] hours) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countCompleteDayPairs(self, hours):\n        \"\"\"\n        :type hours: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countCompleteDayPairs(self, hours: List[int]) -> int:\n        ",
+    "c": "long long countCompleteDayPairs(int* hours, int hoursSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountCompleteDayPairs(int[] hours) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} hours\n * @return {number}\n */\nvar countCompleteDayPairs = function(hours) {\n    \n};",
+    "typescript": "function countCompleteDayPairs(hours: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $hours\n     * @return Integer\n     */\n    function countCompleteDayPairs($hours) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countCompleteDayPairs(_ hours: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countCompleteDayPairs(hours: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countCompleteDayPairs(List<int> hours) {\n    \n  }\n}",
+    "golang": "func countCompleteDayPairs(hours []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} hours\n# @return {Integer}\ndef count_complete_day_pairs(hours)\n    \nend",
+    "scala": "object Solution {\n    def countCompleteDayPairs(hours: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_complete_day_pairs(hours: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-complete-day-pairs hours)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_complete_day_pairs(Hours :: [integer()]) -> integer().\ncount_complete_day_pairs(Hours) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_complete_day_pairs(hours :: [integer]) :: integer\n  def count_complete_day_pairs(hours) do\n    \n  end\nend"
+  }
+}

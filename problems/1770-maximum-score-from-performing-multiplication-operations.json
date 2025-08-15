@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Score from Performing Multiplication Operations",
+  "problem_id": "1896",
+  "frontend_id": "1770",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-score-from-performing-multiplication-operations",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given two 0-indexed integer arrays nums and multipliers of size n and m respectively, where n >= m.\nYou begin with a score of 0. You want to perform exactly m operations. On the ith operation (0-indexed) you will:\nReturn the maximum score after performing m operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], multipliers = [3,2,1]\nOutput: 14\nExplanation: An optimal solution is as follows:\n- Choose from the end, [1,2,3], adding 3 * 3 = 9 to the score.\n- Choose from the end, [1,2], adding 2 * 2 = 4 to the score.\n- Choose from the end, [1], adding 1 * 1 = 1 to the score.\nThe total score is 9 + 4 + 1 = 14.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-5,-3,-3,-2,7,1], multipliers = [-10,-5,3,4,6]\nOutput: 102\nExplanation: An optimal solution is as follows:\n- Choose from the start, [-5,-3,-3,-2,7,1], adding -5 * -10 = 50 to the score.\n- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.\n- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.\n- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.\n- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. \nThe total score is 50 + 15 - 9 + 4 + 42 = 102.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "m == multipliers.length",
+    "1 <= m <= 300",
+    "m <= n <= 105",
+    "-1000 <= nums[i], multipliers[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "At first glance, the solution seems to be greedy, but if you try to greedily take the largest value from the beginning or the end, this will not be optimal.",
+    "You should try all scenarios but this will be costly.",
+    "Memoizing the pre-visited states while trying all the possible scenarios will reduce the complexity, and hence dp is a perfect choice here."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumScore(vector<int>& nums, vector<int>& multipliers) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumScore(int[] nums, int[] multipliers) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumScore(self, nums, multipliers):\n        \"\"\"\n        :type nums: List[int]\n        :type multipliers: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumScore(self, nums: List[int], multipliers: List[int]) -> int:\n        ",
+    "c": "int maximumScore(int* nums, int numsSize, int* multipliers, int multipliersSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumScore(int[] nums, int[] multipliers) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} multipliers\n * @return {number}\n */\nvar maximumScore = function(nums, multipliers) {\n    \n};",
+    "typescript": "function maximumScore(nums: number[], multipliers: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $multipliers\n     * @return Integer\n     */\n    function maximumScore($nums, $multipliers) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumScore(_ nums: [Int], _ multipliers: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumScore(nums: IntArray, multipliers: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumScore(List<int> nums, List<int> multipliers) {\n    \n  }\n}",
+    "golang": "func maximumScore(nums []int, multipliers []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} multipliers\n# @return {Integer}\ndef maximum_score(nums, multipliers)\n    \nend",
+    "scala": "object Solution {\n    def maximumScore(nums: Array[Int], multipliers: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_score(nums: Vec<i32>, multipliers: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-score nums multipliers)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_score(Nums :: [integer()], Multipliers :: [integer()]) -> integer().\nmaximum_score(Nums, Multipliers) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_score(nums :: [integer], multipliers :: [integer]) :: integer\n  def maximum_score(nums, multipliers) do\n    \n  end\nend"
+  }
+}

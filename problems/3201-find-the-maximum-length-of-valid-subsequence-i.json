@@ -1,0 +1,61 @@
+{
+  "title": "Find the Maximum Length of Valid Subsequence I",
+  "problem_id": "3490",
+  "frontend_id": "3201",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-maximum-length-of-valid-subsequence-i",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "A subsequence sub of nums with length x is called valid if it satisfies:\nReturn the length of the longest valid subsequence of nums.\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 4\nExplanation:\nThe longest valid subsequence is [1, 2, 3, 4] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,1,1,2,1,2]\nOutput: 6\nExplanation:\nThe longest valid subsequence is [1, 2, 1, 2, 1, 2] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,3]\nOutput: 2\nExplanation:\nThe longest valid subsequence is [1, 3] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 2 * 105",
+    "1 <= nums[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The possible sequence either contains all even elements, all odd elements, alternate even odd, or alternate odd even elements.",
+    "Considering only the parity of elements, there are only 4 possibilities and we can try all of them.",
+    "When selecting an element with any parity, try to select the earliest one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumLength(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumLength(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumLength(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumLength(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumLength(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumLength(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumLength = function(nums) {\n    \n};",
+    "typescript": "function maximumLength(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumLength($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumLength(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumLength(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumLength(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumLength(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_length(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumLength(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_length(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-length nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_length(Nums :: [integer()]) -> integer().\nmaximum_length(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_length(nums :: [integer]) :: integer\n  def maximum_length(nums) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Parity of Enumeration Elements\n\n#### Intuition\n\nAccording to the definition of a valid subsequence, we can observe that all elements at odd indices in the subsequence must have the same parity, and all elements at even indices must also have the same parity. Therefore, there are a total of four possible parity patterns for the subsequence:\n\n1. All elements are even.\n2. All elements are odd.\n3. Elements at odd indices are odd, and elements at even indices are even.\n4. Elements at odd indices are even, and elements at even indices are odd.\n\nWe can enumerate these four possibilities. For each one, we traverse the entire `nums` array and calculate the maximum length of a subsequence that fits the chosen pattern. While traversing, if the current number satisfies the required parity based on its position in the subsequence, we greedily increase the length by 1.\nFinally, we return the maximum subsequence length across all possibilities.\n\n#### Implementation#### Time complexity\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array once.\n\n- Space complexity: $O(1)$."
+}

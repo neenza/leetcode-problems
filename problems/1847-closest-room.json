@@ -1,0 +1,60 @@
+{
+  "title": "Closest Room",
+  "problem_id": "1957",
+  "frontend_id": "1847",
+  "difficulty": "Hard",
+  "problem_slug": "closest-room",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Ordered Set"
+  ],
+  "description": "There is a hotel with n rooms. The rooms are represented by a 2D integer array rooms where rooms[i] = [roomIdi, sizei] denotes that there is a room with room number roomIdi and size equal to sizei. Each roomIdi is guaranteed to be unique.\nYou are also given k queries in a 2D array queries where queries[j] = [preferredj, minSizej]. The answer to the jth query is the room number id of a room such that:\nIf there is a tie in the absolute difference, then use the room with the smallest such id. If there is no such room, the answer is -1.\nReturn an array answer of length k where answer[j] contains the answer to the jth query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rooms = [[2,2],[1,2],[3,2]], queries = [[3,1],[3,3],[5,2]]\nOutput: [3,-1,3]\nExplanation: The answers to the queries are as follows:\nQuery = [3,1]: Room number 3 is the closest as abs(3 - 3) = 0, and its size of 2 is at least 1. The answer is 3.\nQuery = [3,3]: There are no rooms with a size of at least 3, so the answer is -1.\nQuery = [5,2]: Room number 3 is the closest as abs(3 - 5) = 2, and its size of 2 is at least 2. The answer is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rooms = [[1,4],[2,3],[3,5],[4,1],[5,2]], queries = [[2,3],[2,4],[2,5]]\nOutput: [2,1,3]\nExplanation: The answers to the queries are as follows:\nQuery = [2,3]: Room number 2 is the closest as abs(2 - 2) = 0, and its size of 3 is at least 3. The answer is 2.\nQuery = [2,4]: Room numbers 1 and 3 both have sizes of at least 4. The answer is 1 since it is smaller.\nQuery = [2,5]: Room number 3 is the only room with a size of at least 5. The answer is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == rooms.length",
+    "1 <= n <= 105",
+    "k == queries.length",
+    "1 <= k <= 104",
+    "1 <= roomIdi, preferredj <= 107",
+    "1 <= sizei, minSizej <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is there a way to sort the queries so it's easier to search the closest room larger than the size?",
+    "Use binary search to speed up the search time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> closestRoom(vector<vector<int>>& rooms, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] closestRoom(int[][] rooms, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def closestRoom(self, rooms, queries):\n        \"\"\"\n        :type rooms: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def closestRoom(self, rooms: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* closestRoom(int** rooms, int roomsSize, int* roomsColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ClosestRoom(int[][] rooms, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} rooms\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar closestRoom = function(rooms, queries) {\n    \n};",
+    "typescript": "function closestRoom(rooms: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $rooms\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function closestRoom($rooms, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func closestRoom(_ rooms: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun closestRoom(rooms: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> closestRoom(List<List<int>> rooms, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func closestRoom(rooms [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} rooms\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef closest_room(rooms, queries)\n    \nend",
+    "scala": "object Solution {\n    def closestRoom(rooms: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn closest_room(rooms: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (closest-room rooms queries)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec closest_room(Rooms :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nclosest_room(Rooms, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec closest_room(rooms :: [[integer]], queries :: [[integer]]) :: [integer]\n  def closest_room(rooms, queries) do\n    \n  end\nend"
+  }
+}

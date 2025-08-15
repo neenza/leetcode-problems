@@ -1,0 +1,58 @@
+{
+  "title": "Number of Arithmetic Triplets",
+  "problem_id": "2442",
+  "frontend_id": "2367",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-arithmetic-triplets",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed, strictly increasing integer array nums and a positive integer diff. A triplet (i, j, k) is an arithmetic triplet if the following conditions are met:\nReturn the number of unique arithmetic triplets.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,4,6,7,10], diff = 3\nOutput: 2\nExplanation:\n(1, 2, 4) is an arithmetic triplet because both 7 - 4 == 3 and 4 - 1 == 3.\n(2, 4, 5) is an arithmetic triplet because both 10 - 7 == 3 and 7 - 4 == 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,5,6,7,8,9], diff = 2\nOutput: 2\nExplanation:\n(0, 2, 4) is an arithmetic triplet because both 8 - 6 == 2 and 6 - 4 == 2.\n(1, 3, 5) is an arithmetic triplet because both 9 - 7 == 2 and 7 - 5 == 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 200",
+    "0 <= nums[i] <= 200",
+    "1 <= diff <= 50",
+    "nums is strictly increasing."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Are the constraints small enough for brute force?",
+    "We can use three loops, each iterating through the array to go through every possible triplet. Be sure to not count duplicates."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int arithmeticTriplets(vector<int>& nums, int diff) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int arithmeticTriplets(int[] nums, int diff) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def arithmeticTriplets(self, nums, diff):\n        \"\"\"\n        :type nums: List[int]\n        :type diff: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def arithmeticTriplets(self, nums: List[int], diff: int) -> int:\n        ",
+    "c": "int arithmeticTriplets(int* nums, int numsSize, int diff) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ArithmeticTriplets(int[] nums, int diff) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} diff\n * @return {number}\n */\nvar arithmeticTriplets = function(nums, diff) {\n    \n};",
+    "typescript": "function arithmeticTriplets(nums: number[], diff: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $diff\n     * @return Integer\n     */\n    function arithmeticTriplets($nums, $diff) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func arithmeticTriplets(_ nums: [Int], _ diff: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun arithmeticTriplets(nums: IntArray, diff: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int arithmeticTriplets(List<int> nums, int diff) {\n    \n  }\n}",
+    "golang": "func arithmeticTriplets(nums []int, diff int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} diff\n# @return {Integer}\ndef arithmetic_triplets(nums, diff)\n    \nend",
+    "scala": "object Solution {\n    def arithmeticTriplets(nums: Array[Int], diff: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn arithmetic_triplets(nums: Vec<i32>, diff: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (arithmetic-triplets nums diff)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec arithmetic_triplets(Nums :: [integer()], Diff :: integer()) -> integer().\narithmetic_triplets(Nums, Diff) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec arithmetic_triplets(nums :: [integer], diff :: integer) :: integer\n  def arithmetic_triplets(nums, diff) do\n    \n  end\nend"
+  }
+}

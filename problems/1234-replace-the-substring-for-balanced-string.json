@@ -1,0 +1,61 @@
+{
+  "title": "Replace the Substring for Balanced String",
+  "problem_id": "1351",
+  "frontend_id": "1234",
+  "difficulty": "Medium",
+  "problem_slug": "replace-the-substring-for-balanced-string",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a string s of length n containing only four kinds of characters: 'Q', 'W', 'E', and 'R'.\nA string is said to be balanced if each of its characters appears n / 4 times where n is the length of the string.\nReturn the minimum length of the substring that can be replaced with any other string of the same length to make s balanced. If s is already balanced, return 0.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"QWER\"\nOutput: 0\nExplanation: s is already balanced.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"QQWE\"\nOutput: 1\nExplanation: We need to replace a 'Q' to 'R', so that \"RQWE\" (or \"QRWE\") is balanced.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"QQQW\"\nOutput: 2\nExplanation: We can replace the first \"QQ\" to \"ER\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == s.length",
+    "4 <= n <= 105",
+    "n is a multiple of 4.",
+    "s contains only 'Q', 'W', 'E', and 'R'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use 2-pointers algorithm to make sure all amount of characters outside the 2 pointers are smaller or equal to n/4.",
+    "That means you need to count the amount of each letter and make sure the amount is enough."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int balancedString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int balancedString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def balancedString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def balancedString(self, s: str) -> int:\n        ",
+    "c": "int balancedString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BalancedString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar balancedString = function(s) {\n    \n};",
+    "typescript": "function balancedString(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function balancedString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func balancedString(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun balancedString(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int balancedString(String s) {\n    \n  }\n}",
+    "golang": "func balancedString(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef balanced_string(s)\n    \nend",
+    "scala": "object Solution {\n    def balancedString(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn balanced_string(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (balanced-string s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec balanced_string(S :: unicode:unicode_binary()) -> integer().\nbalanced_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec balanced_string(s :: String.t) :: integer\n  def balanced_string(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Loud and Rich",
+  "problem_id": "881",
+  "frontend_id": "851",
+  "difficulty": "Medium",
+  "problem_slug": "loud-and-rich",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Graph",
+    "Topological Sort"
+  ],
+  "description": "There is a group of n people labeled from 0 to n - 1 where each person has a different amount of money and a different level of quietness.\nYou are given an array richer where richer[i] = [ai, bi] indicates that ai has more money than bi and an integer array quiet where quiet[i] is the quietness of the ith person. All the given data in richer are logically correct (i.e., the data will not lead you to a situation where x is richer than y and y is richer than x at the same time).\nReturn an integer array answer where answer[x] = y if y is the least quiet person (that is, the person y with the smallest value of quiet[y]) among all people who definitely have equal to or more money than the person x.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: richer = [[1,0],[2,1],[3,1],[3,7],[4,3],[5,3],[6,3]], quiet = [3,2,5,4,6,1,7,0]\nOutput: [5,5,2,5,4,5,6,7]\nExplanation: \nanswer[0] = 5.\nPerson 5 has more money than 3, which has more money than 1, which has more money than 0.\nThe only person who is quieter (has lower quiet[x]) is person 7, but it is not clear if they have more money than person 0.\nanswer[7] = 7.\nAmong all people that definitely have equal to or more money than person 7 (which could be persons 3, 4, 5, 6, or 7), the person who is the quietest (has lower quiet[x]) is person 7.\nThe other answers can be filled out with similar reasoning.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: richer = [], quiet = [0]\nOutput: [0]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == quiet.length",
+    "1 <= n <= 500",
+    "0 <= quiet[i] < n",
+    "All the values of quiet are unique.",
+    "0 <= richer.length <= n * (n - 1) / 2",
+    "0 <= ai, bi < n",
+    "ai != bi",
+    "All the pairs of richer are unique.",
+    "The observations in richer are all logically consistent."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> loudAndRich(vector<vector<int>>& richer, vector<int>& quiet) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] loudAndRich(int[][] richer, int[] quiet) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def loudAndRich(self, richer, quiet):\n        \"\"\"\n        :type richer: List[List[int]]\n        :type quiet: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def loudAndRich(self, richer: List[List[int]], quiet: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* loudAndRich(int** richer, int richerSize, int* richerColSize, int* quiet, int quietSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] LoudAndRich(int[][] richer, int[] quiet) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} richer\n * @param {number[]} quiet\n * @return {number[]}\n */\nvar loudAndRich = function(richer, quiet) {\n    \n};",
+    "typescript": "function loudAndRich(richer: number[][], quiet: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $richer\n     * @param Integer[] $quiet\n     * @return Integer[]\n     */\n    function loudAndRich($richer, $quiet) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func loudAndRich(_ richer: [[Int]], _ quiet: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun loudAndRich(richer: Array<IntArray>, quiet: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> loudAndRich(List<List<int>> richer, List<int> quiet) {\n    \n  }\n}",
+    "golang": "func loudAndRich(richer [][]int, quiet []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} richer\n# @param {Integer[]} quiet\n# @return {Integer[]}\ndef loud_and_rich(richer, quiet)\n    \nend",
+    "scala": "object Solution {\n    def loudAndRich(richer: Array[Array[Int]], quiet: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn loud_and_rich(richer: Vec<Vec<i32>>, quiet: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (loud-and-rich richer quiet)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec loud_and_rich(Richer :: [[integer()]], Quiet :: [integer()]) -> [integer()].\nloud_and_rich(Richer, Quiet) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec loud_and_rich(richer :: [[integer]], quiet :: [integer]) :: [integer]\n  def loud_and_rich(richer, quiet) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Cached Depth-First Search [Accepted]\n\n**Intuition**\n\nConsider the directed graph with edge `x -> y` if `y` is richer than `x`.\n\nFor each person `x`, we want the quietest person in the subtree at `x`.\n\n**Algorithm**\n\nConstruct the graph described above, and say `dfs(person)` is the quietest person in the subtree at `person`.   Notice because the statements are logically consistent, the graph must be a DAG - a directed graph with no cycles.\n\nNow `dfs(person)` is either `person`, or `min(dfs(child) for child in person)`.  That is to say, the quietest person in the subtree is either the `person` itself, or the quietest person in some subtree of a child of `person`.\n\nWe can cache values of `dfs(person)` as `answer[person]`, when performing our *post-order traversal* of the graph.  That way, we don't repeat work.  This technique reduces a quadratic time algorithm down to linear time.**Complexity Analysis**\n\n* Time Complexity: $$\\mathcal{O}(N^2)$$, where $$N$$ is the number of people.\nWe are iterating here over array `richer`. It could contain up to \n$$1 + ... + N - 1 = N(N - 1) / 2$$ elements, for example, in the situation \nwhen each new person is richer than the previous one.  \n\n* Space Complexity: $$\\mathcal{O}(N^2)$$, to keep the graph with $$N^2$$ edges."
+}

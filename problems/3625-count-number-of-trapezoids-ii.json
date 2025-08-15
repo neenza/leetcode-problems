@@ -1,0 +1,65 @@
+{
+  "title": "Count Number of Trapezoids II",
+  "problem_id": "3897",
+  "frontend_id": "3625",
+  "difficulty": "Hard",
+  "problem_slug": "count-number-of-trapezoids-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given a 2D integer array points where points[i] = [xi, yi] represents the coordinates of the ith point on the Cartesian plane.\nReturn the number of unique trapezoids that can be formed by choosing any four distinct points from points.\nA trapezoid is a convex quadrilateral with at least one pair of parallel sides. Two lines are parallel if and only if they have the same slope.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[-3,2],[3,0],[2,3],[3,2],[2,-3]]\nOutput: 2\nExplanation:\n\nThere are two distinct ways to pick four points that form a trapezoid:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/desmos-graph-4.png",
+        "https://assets.leetcode.com/uploads/2025/04/29/desmos-graph-3.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[0,0],[1,0],[0,1],[2,1]]\nOutput: 1\nExplanation:\n\nThere is only one trapezoid which can be formed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/29/desmos-graph-5.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "4 <= points.length <= 500",
+    "–1000 <= xi, yi <= 1000",
+    "All points are pairwise distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Hash every point-pair by its reduced slope <code>(dy,dx)</code> (normalize with GCD and fix signs).",
+    "In each slope-bucket of size <code>k</code>, there are <code>C(k,2)</code> ways to pick two segments as the trapezoid's parallel bases.",
+    "Skip any base-pair that shares an endpoint since it would not form a quadrilateral.",
+    "Subtract one count for each parallelogram. Each parallelogram was counted once for each of its two parallel-side pairs, so after subtracting once, every quadrilateral with at least one pair of parallel sides, including parallelograms, contributes exactly one to the final total.",
+    "Final answer = total valid base-pairs minus parallelogram overcounts."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countTrapezoids(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTrapezoids(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countTrapezoids(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countTrapezoids(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int countTrapezoids(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountTrapezoids(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar countTrapezoids = function(points) {\n    \n};",
+    "typescript": "function countTrapezoids(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function countTrapezoids($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countTrapezoids(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countTrapezoids(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countTrapezoids(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func countTrapezoids(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef count_trapezoids(points)\n    \nend",
+    "scala": "object Solution {\n    def countTrapezoids(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_trapezoids(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-trapezoids points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec count_trapezoids(Points :: [[integer()]]) -> integer().\ncount_trapezoids(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_trapezoids(points :: [[integer]]) :: integer\n  def count_trapezoids(points) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Check Array Formation Through Concatenation",
+  "problem_id": "1760",
+  "frontend_id": "1640",
+  "difficulty": "Easy",
+  "problem_slug": "check-array-formation-through-concatenation",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an array of distinct integers arr and an array of integer arrays pieces, where the integers in pieces are distinct. Your goal is to form arr by concatenating the arrays in pieces in any order. However, you are not allowed to reorder the integers in each array pieces[i].\nReturn true if it is possible to form the array arr from pieces. Otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [15,88], pieces = [[88],[15]]\nOutput: true\nExplanation: Concatenate [15] then [88]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [49,18,16], pieces = [[16,18,49]]\nOutput: false\nExplanation: Even though the numbers match, we cannot reorder pieces[0].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [91,4,64,78], pieces = [[78],[4,64],[91]]\nOutput: true\nExplanation: Concatenate [91] then [4,64] then [78]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pieces.length <= arr.length <= 100",
+    "sum(pieces[i].length) == arr.length",
+    "1 <= pieces[i].length <= arr.length",
+    "1 <= arr[i], pieces[i][j] <= 100",
+    "The integers in arr are distinct.",
+    "The integers in pieces are distinct (i.e., If we flatten pieces in a 1D array, all the integers in this array are distinct)."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that the distinct part means that every position in the array belongs to only one piece",
+    "Note that you can get the piece every position belongs to naively"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canFormArray(vector<int>& arr, vector<vector<int>>& pieces) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canFormArray(int[] arr, int[][] pieces) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canFormArray(self, arr, pieces):\n        \"\"\"\n        :type arr: List[int]\n        :type pieces: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canFormArray(self, arr: List[int], pieces: List[List[int]]) -> bool:\n        ",
+    "c": "bool canFormArray(int* arr, int arrSize, int** pieces, int piecesSize, int* piecesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanFormArray(int[] arr, int[][] pieces) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number[][]} pieces\n * @return {boolean}\n */\nvar canFormArray = function(arr, pieces) {\n    \n};",
+    "typescript": "function canFormArray(arr: number[], pieces: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer[][] $pieces\n     * @return Boolean\n     */\n    function canFormArray($arr, $pieces) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canFormArray(_ arr: [Int], _ pieces: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canFormArray(arr: IntArray, pieces: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canFormArray(List<int> arr, List<List<int>> pieces) {\n    \n  }\n}",
+    "golang": "func canFormArray(arr []int, pieces [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer[][]} pieces\n# @return {Boolean}\ndef can_form_array(arr, pieces)\n    \nend",
+    "scala": "object Solution {\n    def canFormArray(arr: Array[Int], pieces: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_form_array(arr: Vec<i32>, pieces: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-form-array arr pieces)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec can_form_array(Arr :: [integer()], Pieces :: [[integer()]]) -> boolean().\ncan_form_array(Arr, Pieces) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_form_array(arr :: [integer], pieces :: [[integer]]) :: boolean\n  def can_form_array(arr, pieces) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Generate Tag for Video Caption",
+  "problem_id": "3893",
+  "frontend_id": "3582",
+  "difficulty": "Easy",
+  "problem_slug": "generate-tag-for-video-caption",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a string caption representing the caption for a video.\nThe following actions must be performed in order to generate a valid tag for the video:\nReturn the tag after performing the actions on caption.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: caption = \"Leetcode daily streak achieved\"\nOutput: \"#leetcodeDailyStreakAchieved\"\nExplanation:\nThe first letter for all words except \"leetcode\" should be capitalized.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: caption = \"can I Go There\"\nOutput: \"#canIGoThere\"\nExplanation:\nThe first letter for all words except \"can\" should be capitalized.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: caption = \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\"\nOutput: \"#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\"\nExplanation:\nSince the first word has length 101, we need to truncate the last two letters from the word.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= caption.length <= 150",
+    "caption consists only of English letters and ' '."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate as described"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string generateTag(string caption) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String generateTag(String caption) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def generateTag(self, caption):\n        \"\"\"\n        :type caption: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def generateTag(self, caption: str) -> str:\n        ",
+    "c": "char* generateTag(char* caption) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GenerateTag(string caption) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} caption\n * @return {string}\n */\nvar generateTag = function(caption) {\n    \n};",
+    "typescript": "function generateTag(caption: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $caption\n     * @return String\n     */\n    function generateTag($caption) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func generateTag(_ caption: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun generateTag(caption: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String generateTag(String caption) {\n    \n  }\n}",
+    "golang": "func generateTag(caption string) string {\n    \n}",
+    "ruby": "# @param {String} caption\n# @return {String}\ndef generate_tag(caption)\n    \nend",
+    "scala": "object Solution {\n    def generateTag(caption: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn generate_tag(caption: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (generate-tag caption)\n  (-> string? string?)\n  )",
+    "erlang": "-spec generate_tag(Caption :: unicode:unicode_binary()) -> unicode:unicode_binary().\ngenerate_tag(Caption) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec generate_tag(caption :: String.t) :: String.t\n  def generate_tag(caption) do\n    \n  end\nend"
+  }
+}

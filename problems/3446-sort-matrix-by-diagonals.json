@@ -1,0 +1,65 @@
+{
+  "title": "Sort Matrix by Diagonals",
+  "problem_id": "3748",
+  "frontend_id": "3446",
+  "difficulty": "Medium",
+  "problem_slug": "sort-matrix-by-diagonals",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ],
+  "description": "You are given an n x n square matrix of integers grid. Return the matrix such that:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,7,3],[9,8,2],[4,5,6]]\nOutput: [[8,2,3],[9,6,7],[4,5,1]]\nExplanation:\n\nThe diagonals with a black arrow (bottom-left triangle) should be sorted in non-increasing order:\nThe diagonals with a blue arrow (top-right triangle) should be sorted in non-decreasing order:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/29/4052example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1],[1,2]]\nOutput: [[2,1],[1,0]]\nExplanation:\n\nThe diagonals with a black arrow must be non-increasing, so [0, 2] is changed to [2, 0] . The other diagonals are already in the correct order.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/12/29/4052example2adrawio.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1]]\nOutput: [[1]]\nExplanation:\nDiagonals with exactly one element are already in order, so no changes are needed.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "grid.length == grid[i].length == n",
+    "1 <= n <= 10",
+    "-105 <= grid[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a data structure to store all values in each diagonal.",
+    "Sort and replace them in the matrix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> sortMatrix(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] sortMatrix(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortMatrix(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortMatrix(self, grid: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** sortMatrix(int** grid, int gridSize, int* gridColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] SortMatrix(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number[][]}\n */\nvar sortMatrix = function(grid) {\n    \n};",
+    "typescript": "function sortMatrix(grid: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer[][]\n     */\n    function sortMatrix($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortMatrix(_ grid: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortMatrix(grid: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> sortMatrix(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func sortMatrix(grid [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer[][]}\ndef sort_matrix(grid)\n    \nend",
+    "scala": "object Solution {\n    def sortMatrix(grid: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_matrix(grid: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (sort-matrix grid)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec sort_matrix(Grid :: [[integer()]]) -> [[integer()]].\nsort_matrix(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_matrix(grid :: [[integer]]) :: [[integer]]\n  def sort_matrix(grid) do\n    \n  end\nend"
+  }
+}

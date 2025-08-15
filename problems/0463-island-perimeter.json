@@ -1,0 +1,67 @@
+{
+  "title": "Island Perimeter",
+  "problem_id": "463",
+  "frontend_id": "463",
+  "difficulty": "Easy",
+  "problem_slug": "island-perimeter",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.\nGrid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).\nThe island doesn't have \"lakes\", meaning the water inside isn't connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don't exceed 100. Determine the perimeter of the island.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]\nOutput: 16\nExplanation: The perimeter is the 16 yellow stripes in the image above.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2018/10/12/island.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2018/10/12/island.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,0]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2018/10/12/island.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "row == grid.length",
+    "col == grid[i].length",
+    "1 <= row, col <= 100",
+    "grid[i][j] is 0 or 1.",
+    "There is exactly one island in grid."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int islandPerimeter(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int islandPerimeter(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def islandPerimeter(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def islandPerimeter(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int islandPerimeter(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int IslandPerimeter(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar islandPerimeter = function(grid) {\n    \n};",
+    "typescript": "function islandPerimeter(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function islandPerimeter($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func islandPerimeter(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun islandPerimeter(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int islandPerimeter(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func islandPerimeter(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef island_perimeter(grid)\n    \nend",
+    "scala": "object Solution {\n    def islandPerimeter(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn island_perimeter(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (island-perimeter grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec island_perimeter(Grid :: [[integer()]]) -> integer().\nisland_perimeter(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec island_perimeter(grid :: [[integer]]) :: integer\n  def island_perimeter(grid) do\n    \n  end\nend"
+  }
+}

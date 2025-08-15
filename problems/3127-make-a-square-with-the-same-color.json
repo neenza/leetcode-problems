@@ -1,0 +1,60 @@
+{
+  "title": "Make a Square with the Same Color",
+  "problem_id": "3398",
+  "frontend_id": "3127",
+  "difficulty": "Easy",
+  "problem_slug": "make-a-square-with-the-same-color",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ],
+  "description": "You are given a 2D matrix grid of size 3 x 3 consisting only of characters 'B' and 'W'. Character 'W' represents the white color, and character 'B' represents the black color.\nYour task is to change the color of at most one cell so that the matrix has a 2 x 2 square where all cells are of the same color.\nReturn true if it is possible to create a 2 x 2 square of the same color, otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"B\",\"W\",\"B\"],[\"B\",\"W\",\"W\"],[\"B\",\"W\",\"B\"]]\nOutput: true\nExplanation:\nIt can be done by changing the color of the grid[0][2] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\"B\",\"W\",\"B\"],[\"W\",\"B\",\"W\"],[\"B\",\"W\",\"B\"]]\nOutput: false\nExplanation:\nIt cannot be done by changing at most one cell.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[\"B\",\"W\",\"B\"],[\"B\",\"W\",\"W\"],[\"B\",\"W\",\"W\"]]\nOutput: true\nExplanation:\nThe grid already contains a 2 x 2 square of the same color.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "grid.length == 3",
+    "grid[i].length == 3",
+    "grid[i][j] is either 'W' or 'B'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It is impossible to create <code>2 x 2</code> square with the same color by changing the color of at most one cell when the number of <code>‘W'</code> or <code>'B’</code> in all squares is 2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canMakeSquare(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canMakeSquare(char[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canMakeSquare(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canMakeSquare(self, grid: List[List[str]]) -> bool:\n        ",
+    "c": "bool canMakeSquare(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanMakeSquare(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {boolean}\n */\nvar canMakeSquare = function(grid) {\n    \n};",
+    "typescript": "function canMakeSquare(grid: string[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @return Boolean\n     */\n    function canMakeSquare($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canMakeSquare(_ grid: [[Character]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canMakeSquare(grid: Array<CharArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canMakeSquare(List<List<String>> grid) {\n    \n  }\n}",
+    "golang": "func canMakeSquare(grid [][]byte) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @return {Boolean}\ndef can_make_square(grid)\n    \nend",
+    "scala": "object Solution {\n    def canMakeSquare(grid: Array[Array[Char]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_make_square(grid: Vec<Vec<char>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-make-square grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
+    "erlang": "-spec can_make_square(Grid :: [[char()]]) -> boolean().\ncan_make_square(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_make_square(grid :: [[char]]) :: boolean\n  def can_make_square(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Maximum Equal Frequency",
+  "problem_id": "1344",
+  "frontend_id": "1224",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-equal-frequency",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "Given an array nums of positive integers, return the longest possible length of an array prefix of nums, such that it is possible to remove exactly one element from this prefix so that every number that has appeared in it will have the same number of occurrences.\nIf after removing one element there are no remaining elements, it's still considered that every appeared number has the same number of ocurrences (0).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,2,1,1,5,3,3,5]\nOutput: 7\nExplanation: For the subarray [2,2,1,1,5,3,3] of length 7, if we remove nums[4] = 5, we will get [2,2,1,1,3,3], so that each number will appear exactly twice.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,2,2,2,3,3,3,4,4,4,5]\nOutput: 13",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of the min and max frequencies.",
+    "The number to be eliminated must have a frequency of 1, same as the others or the same +1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxEqualFreq(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxEqualFreq(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxEqualFreq(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxEqualFreq(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxEqualFreq(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxEqualFreq(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxEqualFreq = function(nums) {\n    \n};",
+    "typescript": "function maxEqualFreq(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxEqualFreq($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxEqualFreq(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxEqualFreq(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxEqualFreq(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxEqualFreq(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_equal_freq(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxEqualFreq(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_equal_freq(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-equal-freq nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_equal_freq(Nums :: [integer()]) -> integer().\nmax_equal_freq(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_equal_freq(nums :: [integer]) :: integer\n  def max_equal_freq(nums) do\n    \n  end\nend"
+  }
+}

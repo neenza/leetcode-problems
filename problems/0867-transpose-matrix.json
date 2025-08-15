@@ -1,0 +1,62 @@
+{
+  "title": "Transpose Matrix",
+  "problem_id": "898",
+  "frontend_id": "867",
+  "difficulty": "Easy",
+  "problem_slug": "transpose-matrix",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given a 2D integer array matrix, return the transpose of matrix.\nThe transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[1,4,7],[2,5,8],[3,6,9]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/10/hint_transpose.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,2,3],[4,5,6]]\nOutput: [[1,4],[2,5],[3,6]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/10/hint_transpose.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 1000",
+    "1 <= m * n <= 105",
+    "-109 <= matrix[i][j] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We don't need any special algorithms to do this. You just need to know what the transpose of a matrix looks like. Rows become columns and vice versa!"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> transpose(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] transpose(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def transpose(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def transpose(self, matrix: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** transpose(int** matrix, int matrixSize, int* matrixColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] Transpose(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number[][]}\n */\nvar transpose = function(matrix) {\n    \n};",
+    "typescript": "function transpose(matrix: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer[][]\n     */\n    function transpose($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func transpose(_ matrix: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun transpose(matrix: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> transpose(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func transpose(matrix [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer[][]}\ndef transpose(matrix)\n    \nend",
+    "scala": "object Solution {\n    def transpose(matrix: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn transpose(matrix: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (transpose matrix)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec transpose(Matrix :: [[integer()]]) -> [[integer()]].\ntranspose(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec transpose(matrix :: [[integer]]) :: [[integer]]\n  def transpose(matrix) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Copy Directly\n\n**Intuition and Algorithm**\n\nThe transpose of a matrix `A` with dimensions `R x C` is a matrix `ans` with dimensions `C x R` for which `ans[c][r] = A[r][c]`.\n\nLet's initialize a new matrix `ans` representing the answer.  Then, we'll copy each entry of the matrix as appropriate.**Complexity Analysis**\n\n* Time Complexity:  $$O(R * C)$$, where $$R$$ and $$C$$ are the number of rows and columns in the given matrix `A`.\n\n* Space Complexity:  $$O(R * C)$$, the space used by the answer."
+}

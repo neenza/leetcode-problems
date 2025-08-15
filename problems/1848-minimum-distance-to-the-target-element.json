@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Distance to the Target Element",
+  "problem_id": "1975",
+  "frontend_id": "1848",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-distance-to-the-target-element",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an integer array nums (0-indexed) and two integers target and start, find an index i such that nums[i] == target and abs(i - start) is minimized. Note that abs(x) is the absolute value of x.\nReturn abs(i - start).\nIt is guaranteed that target exists in nums.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5], target = 5, start = 3\nOutput: 1\nExplanation: nums[4] = 5 is the only value equal to target, so the answer is abs(4 - 3) = 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1], target = 1, start = 0\nOutput: 0\nExplanation: nums[0] = 1 is the only value equal to target, so the answer is abs(0 - 0) = 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1,1,1,1,1,1,1,1], target = 1, start = 0\nOutput: 0\nExplanation: Every value of nums is 1, but nums[0] minimizes abs(i - start), which is abs(0 - 0) = 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 104",
+    "0 <= start < nums.length",
+    "target is in nums."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Loop in both directions until you find the target element.",
+    "For each index i such that nums[i] == target calculate abs(i - start)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int getMinDistance(vector<int>& nums, int target, int start) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getMinDistance(int[] nums, int target, int start) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getMinDistance(self, nums, target, start):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :type start: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getMinDistance(self, nums: List[int], target: int, start: int) -> int:\n        ",
+    "c": "int getMinDistance(int* nums, int numsSize, int target, int start) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GetMinDistance(int[] nums, int target, int start) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @param {number} start\n * @return {number}\n */\nvar getMinDistance = function(nums, target, start) {\n    \n};",
+    "typescript": "function getMinDistance(nums: number[], target: number, start: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @param Integer $start\n     * @return Integer\n     */\n    function getMinDistance($nums, $target, $start) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getMinDistance(_ nums: [Int], _ target: Int, _ start: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getMinDistance(nums: IntArray, target: Int, start: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getMinDistance(List<int> nums, int target, int start) {\n    \n  }\n}",
+    "golang": "func getMinDistance(nums []int, target int, start int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @param {Integer} start\n# @return {Integer}\ndef get_min_distance(nums, target, start)\n    \nend",
+    "scala": "object Solution {\n    def getMinDistance(nums: Array[Int], target: Int, start: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_min_distance(nums: Vec<i32>, target: i32, start: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (get-min-distance nums target start)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec get_min_distance(Nums :: [integer()], Target :: integer(), Start :: integer()) -> integer().\nget_min_distance(Nums, Target, Start) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_min_distance(nums :: [integer], target :: integer, start :: integer) :: integer\n  def get_min_distance(nums, target, start) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Cost to Move Chips to The Same Position",
+  "problem_id": "1329",
+  "frontend_id": "1217",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-cost-to-move-chips-to-the-same-position",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy"
+  ],
+  "description": "We have n chips, where the position of the ith chip is position[i].\nWe need to move all the chips to the same position. In one step, we can change the position of the ith chip from position[i] to:\nReturn the minimum cost needed to move all the chips to the same position.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: position = [1,2,3]\nOutput: 1\nExplanation: First step: Move the chip at position 3 to position 1 with cost = 0.\nSecond step: Move the chip at position 2 to position 1 with cost = 1.\nTotal cost is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/15/chips_e1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: position = [2,2,2,3,3]\nOutput: 2\nExplanation: We can move the two chips at position  3 to position 2. Each move has cost = 1. The total cost = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/15/chip_e2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: position = [1,1000000000]\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/15/chip_e2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= position.length <= 100",
+    "1 <= position[i] <= 10^9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The first move keeps the parity of the element as it is.",
+    "The second move changes the parity of the element.",
+    "Since the first move is free, if all the numbers have the same parity, the answer would be zero.",
+    "Find the minimum cost to make all the numbers have the same parity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCostToMoveChips(vector<int>& position) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCostToMoveChips(int[] position) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCostToMoveChips(self, position):\n        \"\"\"\n        :type position: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCostToMoveChips(self, position: List[int]) -> int:\n        ",
+    "c": "int minCostToMoveChips(int* position, int positionSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCostToMoveChips(int[] position) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} position\n * @return {number}\n */\nvar minCostToMoveChips = function(position) {\n    \n};",
+    "typescript": "function minCostToMoveChips(position: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $position\n     * @return Integer\n     */\n    function minCostToMoveChips($position) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCostToMoveChips(_ position: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCostToMoveChips(position: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCostToMoveChips(List<int> position) {\n    \n  }\n}",
+    "golang": "func minCostToMoveChips(position []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} position\n# @return {Integer}\ndef min_cost_to_move_chips(position)\n    \nend",
+    "scala": "object Solution {\n    def minCostToMoveChips(position: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost_to_move_chips(position: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost-to-move-chips position)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_cost_to_move_chips(Position :: [integer()]) -> integer().\nmin_cost_to_move_chips(Position) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost_to_move_chips(position :: [integer]) :: integer\n  def min_cost_to_move_chips(position) do\n    \n  end\nend"
+  }
+}

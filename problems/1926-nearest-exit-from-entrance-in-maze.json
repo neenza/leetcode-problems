@@ -1,0 +1,72 @@
+{
+  "title": "Nearest Exit from Entrance in Maze",
+  "problem_id": "2038",
+  "frontend_id": "1926",
+  "difficulty": "Medium",
+  "problem_slug": "nearest-exit-from-entrance-in-maze",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given an m x n matrix maze (0-indexed) with empty cells (represented as '.') and walls (represented as '+'). You are also given the entrance of the maze, where entrance = [entrancerow, entrancecol] denotes the row and column of the cell you are initially standing at.\nIn one step, you can move one cell up, down, left, or right. You cannot step into a cell with a wall, and you cannot step outside the maze. Your goal is to find the nearest exit from the entrance. An exit is defined as an empty cell that is at the border of the maze. The entrance does not count as an exit.\nReturn the number of steps in the shortest path from the entrance to the nearest exit, or -1 if no such path exists.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: maze = [[\"+\",\"+\",\".\",\"+\"],[\".\",\".\",\".\",\"+\"],[\"+\",\"+\",\"+\",\".\"]], entrance = [1,2]\nOutput: 1\nExplanation: There are 3 exits in this maze at [1,0], [0,2], and [2,3].\nInitially, you are at the entrance cell [1,2].\n- You can reach [1,0] by moving 2 steps left.\n- You can reach [0,2] by moving 1 step up.\nIt is impossible to reach [2,3] from the entrance.\nThus, the nearest exit is [0,2], which is 1 step away.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/04/nearest1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: maze = [[\"+\",\"+\",\"+\"],[\".\",\".\",\".\"],[\"+\",\"+\",\"+\"]], entrance = [1,0]\nOutput: 2\nExplanation: There is 1 exit in this maze at [1,2].\n[1,0] does not count as an exit since it is the entrance cell.\nInitially, you are at the entrance cell [1,0].\n- You can reach [1,2] by moving 2 steps right.\nThus, the nearest exit is [1,2], which is 2 steps away.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/04/nearesr2-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: maze = [[\".\",\"+\"]], entrance = [0,0]\nOutput: -1\nExplanation: There are no exits in this maze.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/04/nearest3-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "maze.length == m",
+    "maze[i].length == n",
+    "1 <= m, n <= 100",
+    "maze[i][j] is either '.' or '+'.",
+    "entrance.length == 2",
+    "0 <= entrancerow < m",
+    "0 <= entrancecol < n",
+    "entrance will always be an empty cell."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Which type of traversal lets you find the distance from a point?",
+    "Try using a Breadth First Search."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nearestExit(char[][] maze, int[] entrance) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nearestExit(self, maze, entrance):\n        \"\"\"\n        :type maze: List[List[str]]\n        :type entrance: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nearestExit(self, maze: List[List[str]], entrance: List[int]) -> int:\n        ",
+    "c": "int nearestExit(char** maze, int mazeSize, int* mazeColSize, int* entrance, int entranceSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NearestExit(char[][] maze, int[] entrance) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} maze\n * @param {number[]} entrance\n * @return {number}\n */\nvar nearestExit = function(maze, entrance) {\n    \n};",
+    "typescript": "function nearestExit(maze: string[][], entrance: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $maze\n     * @param Integer[] $entrance\n     * @return Integer\n     */\n    function nearestExit($maze, $entrance) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nearestExit(_ maze: [[Character]], _ entrance: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nearestExit(maze: Array<CharArray>, entrance: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int nearestExit(List<List<String>> maze, List<int> entrance) {\n    \n  }\n}",
+    "golang": "func nearestExit(maze [][]byte, entrance []int) int {\n    \n}",
+    "ruby": "# @param {Character[][]} maze\n# @param {Integer[]} entrance\n# @return {Integer}\ndef nearest_exit(maze, entrance)\n    \nend",
+    "scala": "object Solution {\n    def nearestExit(maze: Array[Array[Char]], entrance: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn nearest_exit(maze: Vec<Vec<char>>, entrance: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (nearest-exit maze entrance)\n  (-> (listof (listof char?)) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec nearest_exit(Maze :: [[char()]], Entrance :: [integer()]) -> integer().\nnearest_exit(Maze, Entrance) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec nearest_exit(maze :: [[char]], entrance :: [integer]) :: integer\n  def nearest_exit(maze, entrance) do\n    \n  end\nend"
+  }
+}

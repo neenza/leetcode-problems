@@ -1,0 +1,58 @@
+{
+  "title": "Find the Longest Semi-Repetitive Substring",
+  "problem_id": "2786",
+  "frontend_id": "2730",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-longest-semi-repetitive-substring",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "You are given a digit string s that consists of digits from 0 to 9.\nA string is called semi-repetitive if there is at most one adjacent pair of the same digit. For example, \"0010\", \"002020\", \"0123\", \"2002\", and \"54944\" are semi-repetitive while the following are not: \"00101022\" (adjacent same digit pairs are 00 and 22), and \"1101234883\" (adjacent same digit pairs are 11 and 88).\nReturn the length of the longest semi-repetitive substring of s.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"52233\"\nOutput: 4\nExplanation:\nThe longest semi-repetitive substring is \"5223\". Picking the whole string \"52233\" has two adjacent same digit pairs 22 and 33, but at most one is allowed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"5494\"\nOutput: 4\nExplanation:\ns is a semi-repetitive string.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1111111\"\nOutput: 2\nExplanation:\nThe longest semi-repetitive substring is \"11\". Picking the substring \"111\" has two adjacent same digit pairs, but at most one is allowed.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "'0' <= s[i] <= '9'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since n is small, we can just check every substring, and if the substring is semi-repetitive, maximize the answer with its length."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestSemiRepetitiveSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSemiRepetitiveSubstring(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSemiRepetitiveSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSemiRepetitiveSubstring(self, s: str) -> int:\n        ",
+    "c": "int longestSemiRepetitiveSubstring(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestSemiRepetitiveSubstring(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar longestSemiRepetitiveSubstring = function(s) {\n    \n};",
+    "typescript": "function longestSemiRepetitiveSubstring(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function longestSemiRepetitiveSubstring($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSemiRepetitiveSubstring(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSemiRepetitiveSubstring(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestSemiRepetitiveSubstring(String s) {\n    \n  }\n}",
+    "golang": "func longestSemiRepetitiveSubstring(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef longest_semi_repetitive_substring(s)\n    \nend",
+    "scala": "object Solution {\n    def longestSemiRepetitiveSubstring(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_semi_repetitive_substring(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-semi-repetitive-substring s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec longest_semi_repetitive_substring(S :: unicode:unicode_binary()) -> integer().\nlongest_semi_repetitive_substring(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_semi_repetitive_substring(s :: String.t) :: integer\n  def longest_semi_repetitive_substring(s) do\n    \n  end\nend"
+  }
+}

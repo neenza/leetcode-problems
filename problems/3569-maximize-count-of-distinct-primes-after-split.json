@@ -1,0 +1,60 @@
+{
+  "title": "Maximize Count of Distinct Primes After Split",
+  "problem_id": "3878",
+  "frontend_id": "3569",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-count-of-distinct-primes-after-split",
+  "topics": [
+    "Array",
+    "Math",
+    "Segment Tree",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums having length n and a 2D integer array queries where queries[i] = [idx, val].\nFor each query:\nNote: The changes made to the array in one query persist into the next query.\nReturn an array containing the result for each query, in the order they are given.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,3,1,2], queries = [[1,2],[3,3]]\nOutput: [3,4]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,4], queries = [[0,1]]\nOutput: [0]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == nums.length <= 5 * 104",
+    "1 <= queries.length <= 5 * 104",
+    "1 <= nums[i] <= 105",
+    "0 <= queries[i][0] < nums.length",
+    "1 <= queries[i][1] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Preprocess all primes up to <code>max(nums)</code> with a sieve to enable O(1) primality checks.",
+    "For each prime <code>p</code>, record its occurrence <code>indices</code>; if it appears at least twice, treat <code>[first, last]</code> as a segment, and note that the split position <code>k</code> with the most overlapping segments equals the number of primes counted on both sides.",
+    "Use a segment tree with lazy propagation over all possible <code>k</code> to maintain, update, and query the sum of distinct-prime counts in the prefix and suffix, adjusting for overlaps."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> maximumCount(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maximumCount(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumCount(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumCount(self, nums: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maximumCount(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MaximumCount(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar maximumCount = function(nums, queries) {\n    \n};",
+    "typescript": "function maximumCount(nums: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function maximumCount($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumCount(_ nums: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumCount(nums: IntArray, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maximumCount(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func maximumCount(nums []int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef maximum_count(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def maximumCount(nums: Array[Int], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_count(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-count nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec maximum_count(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmaximum_count(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_count(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def maximum_count(nums, queries) do\n    \n  end\nend"
+  }
+}

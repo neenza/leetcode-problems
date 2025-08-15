@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Value after Insertion",
+  "problem_id": "2011",
+  "frontend_id": "1881",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-value-after-insertion",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a very large integer n, represented as a string,​​​​​​ and an integer digit x. The digits in n and the digit x are in the inclusive range [1, 9], and n may represent a negative number.\nYou want to maximize n's numerical value by inserting x anywhere in the decimal representation of n​​​​​​. You cannot insert x to the left of the negative sign.\nReturn a string representing the maximum value of n​​​​​​ after the insertion.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = \"99\", x = 9\nOutput: \"999\"\nExplanation: The result is the same regardless of where you insert 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = \"-13\", x = 2\nOutput: \"-123\"\nExplanation: You can make n one of {-213, -123, -132}, and the largest of those three is -123.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n.length <= 105",
+    "1 <= x <= 9",
+    "The digits in n​​​ are in the range [1, 9].",
+    "n is a valid representation of an integer.",
+    "In the case of a negative n,​​​​​​ it will begin with '-'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that if the number is negative it's the same as positive but you look for the minimum instead.",
+    "In the case of maximum, if s[i] < x it's optimal that x is put before s[i].",
+    "In the case of minimum, if s[i] > x it's optimal that x is put before s[i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string maxValue(string n, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maxValue(String n, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxValue(self, n, x):\n        \"\"\"\n        :type n: str\n        :type x: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxValue(self, n: str, x: int) -> str:\n        ",
+    "c": "char* maxValue(char* n, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MaxValue(string n, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} n\n * @param {number} x\n * @return {string}\n */\nvar maxValue = function(n, x) {\n    \n};",
+    "typescript": "function maxValue(n: string, x: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $n\n     * @param Integer $x\n     * @return String\n     */\n    function maxValue($n, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxValue(_ n: String, _ x: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxValue(n: String, x: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String maxValue(String n, int x) {\n    \n  }\n}",
+    "golang": "func maxValue(n string, x int) string {\n    \n}",
+    "ruby": "# @param {String} n\n# @param {Integer} x\n# @return {String}\ndef max_value(n, x)\n    \nend",
+    "scala": "object Solution {\n    def maxValue(n: String, x: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_value(n: String, x: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (max-value n x)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec max_value(N :: unicode:unicode_binary(), X :: integer()) -> unicode:unicode_binary().\nmax_value(N, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_value(n :: String.t, x :: integer) :: String.t\n  def max_value(n, x) do\n    \n  end\nend"
+  }
+}

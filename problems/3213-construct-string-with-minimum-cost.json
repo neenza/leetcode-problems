@@ -1,0 +1,59 @@
+{
+  "title": "Construct String with Minimum Cost",
+  "problem_id": "3482",
+  "frontend_id": "3213",
+  "difficulty": "Hard",
+  "problem_slug": "construct-string-with-minimum-cost",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Suffix Array"
+  ],
+  "description": "You are given a string target, an array of strings words, and an integer array costs, both arrays of the same length.\nImagine an empty string s.\nYou can perform the following operation any number of times (including zero):\nReturn the minimum cost to make s equal to target. If it's not possible, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: target = \"abcdef\", words = [\"abdef\",\"abc\",\"d\",\"def\",\"ef\"], costs = [100,1,1,10,5]\nOutput: 7\nExplanation:\nThe minimum cost can be achieved by performing the following operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: target = \"aaaa\", words = [\"z\",\"zz\",\"zzz\"], costs = [1,10,100]\nOutput: -1\nExplanation:\nIt is impossible to make s equal to target , so we return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= target.length <= 5 * 104",
+    "1 <= words.length == costs.length <= 5 * 104",
+    "1 <= words[i].length <= target.length",
+    "The total sum of words[i].length is less than or equal to 5 * 104.",
+    "target and words[i] consist only of lowercase English letters.",
+    "1 <= costs[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic Programming along with Aho-Corasick or Hashing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumCost(string target, vector<string>& words, vector<int>& costs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCost(String target, String[] words, int[] costs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumCost(self, target, words, costs):\n        \"\"\"\n        :type target: str\n        :type words: List[str]\n        :type costs: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumCost(self, target: str, words: List[str], costs: List[int]) -> int:\n        ",
+    "c": "int minimumCost(char* target, char** words, int wordsSize, int* costs, int costsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumCost(string target, string[] words, int[] costs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} target\n * @param {string[]} words\n * @param {number[]} costs\n * @return {number}\n */\nvar minimumCost = function(target, words, costs) {\n    \n};",
+    "typescript": "function minimumCost(target: string, words: string[], costs: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $target\n     * @param String[] $words\n     * @param Integer[] $costs\n     * @return Integer\n     */\n    function minimumCost($target, $words, $costs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumCost(_ target: String, _ words: [String], _ costs: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumCost(target: String, words: Array<String>, costs: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumCost(String target, List<String> words, List<int> costs) {\n    \n  }\n}",
+    "golang": "func minimumCost(target string, words []string, costs []int) int {\n    \n}",
+    "ruby": "# @param {String} target\n# @param {String[]} words\n# @param {Integer[]} costs\n# @return {Integer}\ndef minimum_cost(target, words, costs)\n    \nend",
+    "scala": "object Solution {\n    def minimumCost(target: String, words: Array[String], costs: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_cost(target: String, words: Vec<String>, costs: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-cost target words costs)\n  (-> string? (listof string?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_cost(Target :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()], Costs :: [integer()]) -> integer().\nminimum_cost(Target, Words, Costs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_cost(target :: String.t, words :: [String.t], costs :: [integer]) :: integer\n  def minimum_cost(target, words, costs) do\n    \n  end\nend"
+  }
+}

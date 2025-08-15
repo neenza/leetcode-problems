@@ -1,0 +1,42 @@
+{
+  "title": "Print FooBar Alternately",
+  "problem_id": "1187",
+  "frontend_id": "1115",
+  "difficulty": "Medium",
+  "problem_slug": "print-foobar-alternately",
+  "topics": [
+    "Concurrency"
+  ],
+  "description": "Suppose you are given the following code:\nThe same instance of FooBar will be passed to two different threads:\nModify the given program to output \"foobar\" n times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "class FooBar {\n  public void foo() {\n    for (int i = 0; i < n; i++) {\n      print(\"foo\");\n    }\n  }\n\n  public void bar() {\n    for (int i = 0; i < n; i++) {\n      print(\"bar\");\n    }\n  }\n}",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: \"foobar\"\nExplanation: There are two threads being fired asynchronously. One of them calls foo(), while the other calls bar().\n\"foobar\" is being output 1 time.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2\nOutput: \"foobarfoobar\"\nExplanation: \"foobar\" is being output 2 times.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class FooBar {\nprivate:\n    int n;\n\npublic:\n    FooBar(int n) {\n        this->n = n;\n    }\n\n    void foo(function<void()> printFoo) {\n        \n        for (int i = 0; i < n; i++) {\n            \n        \t// printFoo() outputs \"foo\". Do not change or remove this line.\n        \tprintFoo();\n        }\n    }\n\n    void bar(function<void()> printBar) {\n        \n        for (int i = 0; i < n; i++) {\n            \n        \t// printBar() outputs \"bar\". Do not change or remove this line.\n        \tprintBar();\n        }\n    }\n};",
+    "java": "class FooBar {\n    private int n;\n\n    public FooBar(int n) {\n        this.n = n;\n    }\n\n    public void foo(Runnable printFoo) throws InterruptedException {\n        \n        for (int i = 0; i < n; i++) {\n            \n        \t// printFoo.run() outputs \"foo\". Do not change or remove this line.\n        \tprintFoo.run();\n        }\n    }\n\n    public void bar(Runnable printBar) throws InterruptedException {\n        \n        for (int i = 0; i < n; i++) {\n            \n            // printBar.run() outputs \"bar\". Do not change or remove this line.\n        \tprintBar.run();\n        }\n    }\n}",
+    "python": "class FooBar(object):\n    def __init__(self, n):\n        self.n = n\n\n\n    def foo(self, printFoo):\n        \"\"\"\n        :type printFoo: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(self.n):\n            \n            # printFoo() outputs \"foo\". Do not change or remove this line.\n        \tprintFoo()\n\n\n    def bar(self, printBar):\n        \"\"\"\n        :type printBar: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(self.n):\n            \n            # printBar() outputs \"bar\". Do not change or remove this line.\n        \tprintBar()",
+    "python3": "class FooBar:\n    def __init__(self, n):\n        self.n = n\n\n\n    def foo(self, printFoo: 'Callable[[], None]') -> None:\n        \n        for i in range(self.n):\n            \n            # printFoo() outputs \"foo\". Do not change or remove this line.\n        \tprintFoo()\n\n\n    def bar(self, printBar: 'Callable[[], None]') -> None:\n        \n        for i in range(self.n):\n            \n            # printBar() outputs \"bar\". Do not change or remove this line.\n        \tprintBar()",
+    "c": "typedef struct {\n    int n;\n} FooBar;\n\n// Function declarations. Do not change or remove this line\nvoid printFoo();\nvoid printBar();\n\nFooBar* fooBarCreate(int n) {\n    FooBar* obj = (FooBar*) malloc(sizeof(FooBar));\n    obj->n = n;\n    return obj;\n}\n\nvoid foo(FooBar* obj) {\n    \n    for (int i = 0; i < obj->n; i++) {\n        \n        // printFoo() outputs \"foo\". Do not change or remove this line.\n        printFoo();\n    }\n}\n\nvoid bar(FooBar* obj) {\n    \n    for (int i = 0; i < obj->n; i++) {\n        \n        // printBar() outputs \"bar\". Do not change or remove this line.\n        printBar();\n    }\n}\n\nvoid fooBarFree(FooBar* obj) {\n    \n}",
+    "csharp": "public class FooBar {\n    private int n;\n\n    public FooBar(int n) {\n        this.n = n;\n    }\n\n    public void Foo(Action printFoo) {\n        \n        for (int i = 0; i < n; i++) {\n            \n        \t// printFoo() outputs \"foo\". Do not change or remove this line.\n        \tprintFoo();\n        }\n    }\n\n    public void Bar(Action printBar) {\n        \n        for (int i = 0; i < n; i++) {\n            \n            // printBar() outputs \"bar\". Do not change or remove this line.\n        \tprintBar();\n        }\n    }\n}",
+    "golang": "type FooBar struct {\n\tn int\n}\n\nfunc NewFooBar(n int) *FooBar {\n\treturn &FooBar{n: n}\n}\n\nfunc (fb *FooBar) Foo(printFoo func()) {\n\tfor i := 0; i < fb.n; i++ {\n\t\t// printFoo() outputs \"foo\". Do not change or remove this line.\n        printFoo()\n\t}\n}\n\nfunc (fb *FooBar) Bar(printBar func()) {\n\tfor i := 0; i < fb.n; i++ {\n\t\t// printBar() outputs \"bar\". Do not change or remove this line.\n        printBar()\n\t}\n}"
+  }
+}

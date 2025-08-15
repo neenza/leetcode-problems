@@ -1,0 +1,60 @@
+{
+  "title": "Reverse Only Letters",
+  "problem_id": "953",
+  "frontend_id": "917",
+  "difficulty": "Easy",
+  "problem_slug": "reverse-only-letters",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Given a string s, reverse the string according to the following rules:\nReturn s after reversing it.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ab-cd\"\nOutput: \"dc-ba\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"a-bC-dEf-ghIj\"\nOutput: \"j-Ih-gfE-dCba\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"Test1ng-Leet=code-Q!\"\nOutput: \"Qedo1ct-eeLg=ntse-T!\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of characters with ASCII values in the range [33, 122].",
+    "s does not contain '\\\"' or '\\\\'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "This problem is exactly like reversing a normal string except that there are certain characters that we have to simply skip. That should be easy enough to do if you know how to reverse a string using the two-pointer approach."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string reverseOnlyLetters(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseOnlyLetters(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reverseOnlyLetters(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reverseOnlyLetters(self, s: str) -> str:\n        ",
+    "c": "char* reverseOnlyLetters(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ReverseOnlyLetters(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reverseOnlyLetters = function(s) {\n    \n};",
+    "typescript": "function reverseOnlyLetters(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function reverseOnlyLetters($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reverseOnlyLetters(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reverseOnlyLetters(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reverseOnlyLetters(String s) {\n    \n  }\n}",
+    "golang": "func reverseOnlyLetters(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef reverse_only_letters(s)\n    \nend",
+    "scala": "object Solution {\n    def reverseOnlyLetters(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reverse_only_letters(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (reverse-only-letters s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec reverse_only_letters(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreverse_only_letters(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reverse_only_letters(s :: String.t) :: String.t\n  def reverse_only_letters(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Stack of Letters\n\n**Intuition and Algorithm**\n\nCollect the letters of `S` separately into a stack, so that popping the stack reverses the letters.  (Alternatively, we could have collected the letters into an array and reversed the array.)\n\nThen, when writing the characters of `S`, any time we need a letter, we use the one we have prepared instead.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Reverse Pointer\n\n**Intuition**\n\nWrite the characters of `S` one by one.  When we encounter a letter, we want to write the next letter that occurs if we iterated through the string backwards.\n\nSo we do just that: keep track of a pointer `j` that iterates through the string backwards.  When we need to write a letter, we use it.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity:  $$O(N)$$."
+}

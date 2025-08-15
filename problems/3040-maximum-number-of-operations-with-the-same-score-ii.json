@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Number of Operations With the Same Score II",
+  "problem_id": "3318",
+  "frontend_id": "3040",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-operations-with-the-same-score-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "description": "Given an array of integers called nums, you can perform any of the following operation while nums contains at least 2 elements:\nThe score of the operation is the sum of the deleted elements.\nYour task is to find the maximum number of operations that can be performed, such that all operations have the same score.\nReturn the maximum number of operations possible that satisfy the condition mentioned above.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,1,2,3,4]\nOutput: 3\nExplanation: We perform the following operations:\n- Delete the first two elements, with score 3 + 2 = 5, nums = [1,2,3,4].\n- Delete the first and the last elements, with score 1 + 4 = 5, nums = [2,3].\n- Delete the first and the last elements, with score 2 + 3 = 5, nums = [].\nWe are unable to perform any more operations as nums is empty.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,2,6,1,4]\nOutput: 2\nExplanation: We perform the following operations:\n- Delete the first two elements, with score 3 + 2 = 5, nums = [6,1,4].\n- Delete the last two elements, with score 1 + 4 = 5, nums = [6].\nIt can be proven that we can perform at most 2 operations.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 2000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "After the first operation, the score of other operations is fixed.",
+    "For the fixed score use dynamic programming <code>dp[l][r]</code> to find a maximum number of operations on the subarray <code>nums[l..r]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxOperations = function(nums) {\n    \n};",
+    "typescript": "function maxOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_operations(Nums :: [integer()]) -> integer().\nmax_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_operations(nums :: [integer]) :: integer\n  def max_operations(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Maximum Sum With Exactly K Elements ",
+  "problem_id": "2767",
+  "frontend_id": "2656",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-sum-with-exactly-k-elements",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed integer array nums and an integer k. Your task is to perform the following operation exactly k times in order to maximize your score:\nReturn the maximum score you can achieve after performing the operation exactly k times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5], k = 3\nOutput: 18\nExplanation: We need to choose exactly 3 elements from nums to maximize the sum.\nFor the first iteration, we choose 5. Then sum is 5 and nums = [1,2,3,4,6]\nFor the second iteration, we choose 6. Then sum is 5 + 6 and nums = [1,2,3,4,7]\nFor the third iteration, we choose 7. Then sum is 5 + 6 + 7 = 18 and nums = [1,2,3,4,8]\nSo, we will return 18.\nIt can be proven, that 18 is the maximum answer that we can achieve.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,5,5], k = 2\nOutput: 11\nExplanation: We need to choose exactly 2 elements from nums to maximize the sum.\nFor the first iteration, we choose 5. Then sum is 5 and nums = [5,5,6]\nFor the second iteration, we choose 6. Then sum is 5 + 6 = 11 and nums = [5,5,7]\nSo, we will return 11.\nIt can be proven, that 11 is the maximum answer that we can achieve.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "1 <= k <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximizeSum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximizeSum(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximizeSum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximizeSum(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maximizeSum(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximizeSum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maximizeSum = function(nums, k) {\n    \n};",
+    "typescript": "function maximizeSum(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximizeSum($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximizeSum(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximizeSum(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximizeSum(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maximizeSum(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef maximize_sum(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maximizeSum(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximize_sum(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximize-sum nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximize_sum(Nums :: [integer()], K :: integer()) -> integer().\nmaximize_sum(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximize_sum(nums :: [integer], k :: integer) :: integer\n  def maximize_sum(nums, k) do\n    \n  end\nend"
+  }
+}

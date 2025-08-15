@@ -1,0 +1,53 @@
+{
+  "title": "Next Greater Element II",
+  "problem_id": "503",
+  "frontend_id": "503",
+  "difficulty": "Medium",
+  "problem_slug": "next-greater-element-ii",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 104",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> nextGreaterElements(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nextGreaterElements(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nextGreaterElements(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* nextGreaterElements(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] NextGreaterElements(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar nextGreaterElements = function(nums) {\n    \n};",
+    "typescript": "function nextGreaterElements(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function nextGreaterElements($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nextGreaterElements(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nextGreaterElements(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> nextGreaterElements(List<int> nums) {\n    \n  }\n}",
+    "golang": "func nextGreaterElements(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef next_greater_elements(nums)\n    \nend",
+    "scala": "object Solution {\n    def nextGreaterElements(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn next_greater_elements(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (next-greater-elements nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec next_greater_elements(Nums :: [integer()]) -> [integer()].\nnext_greater_elements(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec next_greater_elements(nums :: [integer]) :: [integer]\n  def next_greater_elements(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Brute Force (using Double Length Array) [Time Limit Exceeded]\n\n#### Algorithm\n\nIn this method, we make use of an array $doublenums$ which is formed by concatenating two copies of the given $nums$ array one after the other. Now, when we need to find out the next greater element for $nums[i]$, we can simply scan all the elements $doublenums[j]$, such that $i < j < length(doublenums)$. The first element found satisfying the given condition is the required result for $nums[i]$. If no such element is found, we put a $\\text{-1}$ at the appropriate position in the $res$ array.#### Complexity Analysis\n\n* Time complexity : $O(n^2)$. The complete $doublenums$ array(of size $\\text{2n}$) is scanned for all the elements of $nums$ in the worst case.\n\n* Space complexity : $O(n)$. $doublenums$ array of size $\\text{2n}$ is used. $res$ array of size $\\text{n}$ is used.\n\n\n---\n\n### Approach 2: Better Brute Force [Accepted]\n\n#### Algorithm\n\nInstead of making a double length copy of $nums$ array , we can traverse circularly in the $nums$ array by making use of the $ \\text{modulus}$ operator. For every element $nums[i]$, we start searching in the $nums$ array(of length $n$) from the index $(i+1)%n$ and look at the next (circularly) $n-1$ elements. For $nums[i]$ we do so by scanning over $nums[j]$, such that\n$(i+1)%n ≤ j ≤ (i+(n-1))%n$, and we look for the first greater element found. If no such element is found, we put a $\\text{-1}$ at the appropriate position in the $res$ array.\n\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity : $O(n^2)$. The complete $nums$ array of size $n$ is scanned for all the elements of $nums$ in the worst case.\n\n* Space complexity : $O(n)$. $res$ array of size $n$ is used.\n\n---\n\n### Approach 3: Using Stack [Accepted]\n\n\n#### Algorithm\n\nThis approach makes use of a stack. This stack stores the indices of the appropriate elements from $nums$ array.  The top of the stack refers to the index of the Next Greater Element found so far. We store the indices instead of the elements since there could be duplicates in the $nums$ array. The description of the method will make the above statement clearer.\n\nWe start traversing the $nums$ array from right towards the left. For an element $nums[i]$ encountered, we pop all the elements\n$stack[top]$ from the stack such that $nums\\big[stack[top]\\big] \\le nums[i]$. We continue the popping till we encounter a $stack[top]$ satisfying $nums\\big[stack[top]\\big] > nums[i]$. Now, it is obvious that the current $stack[top]$ only can act as the\nNext Greater Element for $nums[i]$(right now, considering only the elements lying to the right of $nums[i]$).\n\nIf no element remains on the top of the stack, it means no larger element than $nums[i]$ exists to its right. Along with this, we also push the index of the element just encountered($nums[i]$), i.e. $i$ over the top of the stack, so that $nums[i]$(or $stack[top]$) now acts as the Next Greater Element for the elements lying to its left.\n\nWe go through two such passes over the complete $nums$ array. This is done so as to complete a circular traversal over the $nums$ array. The first pass could make some wrong entries in the $res$ array since it considers only the elements lying to the right of $nums[i]$, without a circular traversal. But, these entries are corrected in the second pass.  \n\nFurther, to ensure the correctness of the method, let's look at the following cases.\n\nAssume that $nums[j]$ is the correct Next Greater Element for $nums[i]$, such that $i < j ≤ stack[top]$. Now, whenever we encounter $nums[j]$, if $nums[j] > nums\\big[stack[top]\\big]$, it would have already popped the previous $stack[top]$ and $j$ would have become the topmost element. On the other hand, if  $nums[j] < nums\\big[stack[top]\\big]$, it would have become the topmost element by being pushed above the previous $stack[top]$. In both the cases, if $nums[j] > nums[i]$, it will be correctly determined to be the Next Greater Element.\n\nThe following example makes the procedure clear:!?!../Documents/503_Next_Greater2.json:1000,563!?!\n\nAs the animation above depicts, after the first pass, there are a number of wrong entries(marked as $\\text{-1}$) in the $res$ array, because only the elements lying to the corresponding right(non-circular) have been considered till now. But, after the second pass, the correct values are substituted.\n\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity : $O(n)$. Only two traversals of the $nums$ array are done. Further, at most $\\text{2n}$ elements are pushed and popped from the stack.\n\n* Space complexity : $O(n)$. A stack of size $n$ is used. $res$ array of size $n$ is used."
+}

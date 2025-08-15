@@ -1,0 +1,59 @@
+{
+  "title": "Maximum XOR Score Subarray Queries",
+  "problem_id": "3551",
+  "frontend_id": "3277",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-xor-score-subarray-queries",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array nums of n integers, and a 2D integer array queries of size q, where queries[i] = [li, ri].\nFor each query, you must find the maximum XOR score of any subarray of nums[li..ri].\nThe XOR score of an array a is found by repeatedly applying the following operations on a so that only one element remains, that is the score:\nReturn an array answer of size q where answer[i] is the answer to query i.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,8,4,32,16,1], queries = [[0,2],[1,4],[0,5]]\nOutput: [12,60,60]\nExplanation:\nIn the first query, nums[0..2] has 6 subarrays [2] , [8] , [4] , [2, 8] , [8, 4] , and [2, 8, 4] each with a respective XOR score of 2, 8, 4, 10, 12, and 6. The answer for the query is 12, the largest of all XOR scores.\nIn the second query, the subarray of nums[1..4] with the largest XOR score is nums[1..4] with a score of 60.\nIn the third query, the subarray of nums[0..5] with the largest XOR score is nums[1..4] with a score of 60.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,7,3,2,8,5,1], queries = [[0,3],[1,5],[2,4],[2,6],[5,6]]\nOutput: [7,14,11,14,5]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 2000",
+    "0 <= nums[i] <= 231 - 1",
+    "1 <= q == queries.length <= 105",
+    "queries[i].length == 2",
+    "queries[i] = [li, ri]",
+    "0 <= li <= ri <= n - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precompute the XOR score of every subarray.",
+    "Try to find a relationship between XOR score of <code>nums[i..j], nums[i..j + 1], nums[i..j + 2], …</code>. Do you notice any pattern?",
+    "If <code>dp[i][j]</code> is the XOR score of subarray <code>nums[i..j]</code>, <code>dp[i][j] = dp[i - 1][j] XOR dp[i - 1][j + 1]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> maximumSubarrayXor(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maximumSubarrayXor(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumSubarrayXor(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumSubarrayXor(self, nums: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maximumSubarrayXor(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MaximumSubarrayXor(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar maximumSubarrayXor = function(nums, queries) {\n    \n};",
+    "typescript": "function maximumSubarrayXor(nums: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function maximumSubarrayXor($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumSubarrayXor(_ nums: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumSubarrayXor(nums: IntArray, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> maximumSubarrayXor(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func maximumSubarrayXor(nums []int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef maximum_subarray_xor(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def maximumSubarrayXor(nums: Array[Int], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_subarray_xor(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-subarray-xor nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec maximum_subarray_xor(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmaximum_subarray_xor(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_subarray_xor(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def maximum_subarray_xor(nums, queries) do\n    \n  end\nend"
+  }
+}

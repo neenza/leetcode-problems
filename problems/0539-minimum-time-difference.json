@@ -1,0 +1,54 @@
+{
+  "title": "Minimum Time Difference",
+  "problem_id": "539",
+  "frontend_id": "539",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-difference",
+  "topics": [
+    "Array",
+    "Math",
+    "String",
+    "Sorting"
+  ],
+  "description": "Example 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: timePoints = [\"23:59\",\"00:00\"]\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: timePoints = [\"00:00\",\"23:59\",\"00:00\"]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= timePoints.length <= 2 * 104",
+    "timePoints[i] is in the format \"HH:MM\"."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMinDifference(vector<string>& timePoints) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinDifference(List<String> timePoints) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMinDifference(self, timePoints):\n        \"\"\"\n        :type timePoints: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMinDifference(self, timePoints: List[str]) -> int:\n        ",
+    "c": "int findMinDifference(char** timePoints, int timePointsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMinDifference(IList<string> timePoints) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} timePoints\n * @return {number}\n */\nvar findMinDifference = function(timePoints) {\n    \n};",
+    "typescript": "function findMinDifference(timePoints: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $timePoints\n     * @return Integer\n     */\n    function findMinDifference($timePoints) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMinDifference(_ timePoints: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMinDifference(timePoints: List<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMinDifference(List<String> timePoints) {\n    \n  }\n}",
+    "golang": "func findMinDifference(timePoints []string) int {\n    \n}",
+    "ruby": "# @param {String[]} time_points\n# @return {Integer}\ndef find_min_difference(time_points)\n    \nend",
+    "scala": "object Solution {\n    def findMinDifference(timePoints: List[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_min_difference(time_points: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-min-difference timePoints)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec find_min_difference(TimePoints :: [unicode:unicode_binary()]) -> integer().\nfind_min_difference(TimePoints) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_min_difference(time_points :: [String.t]) :: integer\n  def find_min_difference(time_points) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given an array of times, where each time is given in `\"HH:MM\"` string format. We must return the minimum difference in minutes between any pair of times in the array.\n\n### Approach 1: Sort\n\n### Intuition\n\nSince the times are given in `\"HH:MM\"` string format instead of the number of minutes, we can start by parsing the string format of each time and converting it into the total number of minutes passed since `\"00:00\"`.\n\n![Input array converted to minutes](../Figures/539/Input_array_converted_to_minutes.png)\n\nIf this converted array is sorted in ascending order, then the minimum difference must be the difference in an adjacent pair of times. This is because adjacent elements in a sorted array have smaller differences than non-adjacent elements. Thus, we can sort our array and calculate the difference between each adjacent pair of elements, keeping track of the smallest difference. \n\nAn edge case we have to consider is if the smallest difference is between the last and first element, in which case the time loops back to `\"00:00\"`. For example, if the last and first time is `\"22:00\"` and `\"02:00\"`, then the time difference is 4 hours or 240 minutes.\n\nThus, checking the difference between each adjacent pair in the sorted array as well as the difference between the first and last element will give us the minimum time difference.\n\n### Algorithm\n\n1. Initialize an array `minutes` to store the given time points in units of minutes.\n2. For each time `time` in the given `timePoints` array:\n    * Parse the first two characters in `time` to get the hour `h` \n    * Parse the last two characters to get the minutes `m`\n    * Calculate the total number of minutes `h * 60 + m` and store the value in `minutes`\n3. Sort `minutes` in ascending order\n4. Initialize our answer variable `ans = Integer.MAX_VALUE`\n5. Iterate through each adjacent pair of elements `(i, i+1)` in `minutes` to find the minimum time difference:\n    * `ans = min(ans, minutes[i+1] - minutes[i])`\n6. Return the minimum of `ans` and `24 * 60 - minutes[minutes.length - 1] + minutes[0]`, the amount of time between the last and first elements. \n\n\n### Implementation### Complexity Analysis \n\nLet $N$ be the size of the given array `timePoints`. \n\n* Time Complexity: $O(N \\cdot \\log N)$\n\n    Converting the input into minutes and traversing the sorted array to calculate the minimum difference both take $O(N)$ time. However, sorting the array takes $O(N \\cdot \\log N)$ time. Thus, the total time complexity is $O(N \\cdot \\log N)$\n\n* Space Complexity: $O(N)$\n\n    Our array `minutes` to store the converted input takes $O(N)$ space.\n\n### Approach 2: Bucket Sort \n\n### Intuition\n\nIn approach 1, our time complexity was dominated by the time needed for sorting, which was $O(N \\cdot \\log N)$. However, we notice that the values in our array `minutes` can only fall into the range $[0, 24*60 - 1]$. Because we know the range of values for the array we'd like to sort, we can instead use bucket sort, which is a sorting algorithm that can be done in linear time. \n\nBucket sort is typically completed in three steps:\n\n1. We initialize an array `buckets` whose size is equal to the total number of possible values. \n2. We process the input array so that each element `buckets[i]` contains the frequency count of the value `i` in the input array.\n3. We can finally produce the sorted array by iterating through each element/bucket `buckets[i]` in `buckets` and append the value `i` `buckets[i]` times to a new array. \n\nFor our purposes, we can use a modified bucket sort for `minutes` where `minutes[i]` will contain a boolean value for whether or not the input array has value `i`. After, we can iterate through `minutes` in a similar fashion as Approach 1, where we keep track of the difference between adjacent elements, as well as the difference between the last and first elements. \n\n### Algorithm \n\n1. Initialize array `minutes` with a size of $24 * 60$\n2. For each `time` in `timePoints`:\n    * Parse `time` and convert to the total number of minutes `min`\n    * If `minutes[min] == true`, then that means `time` appears more than once in our array, which means the minimum time difference is just $0$ so return $0$\n    * Otherwise, set `minutes[min] == true`\n3. Initialize variable `prevIndex = Integer.MAX_VALUE` to keep track of the previous time to calculate the time difference for adjacent pairs\n4. Initialize variables `firstIndex = Integer.MAX_VALUE` and `lastIndex = Integer.MAX-VALUE` to keep track of the first and last elements in our array\n5. Initialize answer variable `ans = Integer.MAX_VALUE` to maintain the minimum time difference between adjacent pairs\n6. Iterate through values `i` between $[0, 24 * 60 - 1]$:\n    * If `minutes[i]` is true, then the time `i` is present in our array:\n        * If `prevIndex` does not contain the default value `Integer.MAX_VALUE`, then we can find the difference between time `i` and the previous time `prevIndex`: `ans = min(ans, i - prevIndex)`\n        * Update `prevIndex` to `i`\n        * If `firstIndex` contains the default value, then `i` is the first element in our sorted array, so we can set `firstIndex = i`\n        * Update `lastIndex` to `i`\n7. Return the minimum between `ans` and `24 * 60 - lastIndex + firstIndex`\n\n### Implementation### Complexity Analysis\n\nLet $N$ be the size of the given array `timePoints`. \n\n* Time Complexity: $O(N)$\n\n In contrast to Approach 1, our sorting only takes $O(N)$ time.\n\n* Space Complexity: $O(1)$\n\n Our array `minutes` will always have a size of $24 * 60$, so the space complexity is constant."
+}

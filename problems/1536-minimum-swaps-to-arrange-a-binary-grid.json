@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Swaps to Arrange a Binary Grid",
+  "problem_id": "1658",
+  "frontend_id": "1536",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-swaps-to-arrange-a-binary-grid",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Matrix"
+  ],
+  "description": "Given an n x n binary grid, in one step you can choose two adjacent rows of the grid and swap them.\nA grid is said to be valid if all the cells above the main diagonal are zeros.\nReturn the minimum number of steps needed to make the grid valid, or -1 if the grid cannot be valid.\nThe main diagonal of a grid is the diagonal that starts at cell (1, 1) and ends at cell (n, n).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,0,1],[1,1,0],[1,0,0]]\nOutput: 3",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/28/fw.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1,1,0],[0,1,1,0],[0,1,1,0],[0,1,1,0]]\nOutput: -1\nExplanation: All rows are similar, swaps have no effect on the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/16/e2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,0,0],[1,1,0],[1,1,1]]\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/16/e3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "1 <= n <= 200",
+    "grid[i][j] is either 0 or 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each row of the grid calculate the most right 1 in the grid in the array maxRight.",
+    "To check if there exist answer, sort maxRight and check if maxRight[i] ≤ i for all possible i's.",
+    "If there exist an answer, simulate the swaps."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSwaps(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSwaps(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSwaps(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minSwaps(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSwaps(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minSwaps = function(grid) {\n    \n};",
+    "typescript": "function minSwaps(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minSwaps($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwaps(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSwaps(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwaps(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minSwaps(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef min_swaps(grid)\n    \nend",
+    "scala": "object Solution {\n    def minSwaps(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-swaps grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_swaps(Grid :: [[integer()]]) -> integer().\nmin_swaps(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_swaps(grid :: [[integer]]) :: integer\n  def min_swaps(grid) do\n    \n  end\nend"
+  }
+}

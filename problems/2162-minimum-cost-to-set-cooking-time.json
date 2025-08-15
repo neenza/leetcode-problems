@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Cost to Set Cooking Time",
+  "problem_id": "2266",
+  "frontend_id": "2162",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-cost-to-set-cooking-time",
+  "topics": [
+    "Math",
+    "Enumeration"
+  ],
+  "description": "A generic microwave supports cooking times for:\nTo set the cooking time, you push at most four digits. The microwave normalizes what you push as four digits by prepending zeroes. It interprets the first two digits as the minutes and the last two digits as the seconds. It then adds them up as the cooking time. For example,\nYou are given integers startAt, moveCost, pushCost, and targetSeconds. Initially, your finger is on the digit startAt. Moving the finger above any specific digit costs moveCost units of fatigue. Pushing the digit below the finger once costs pushCost units of fatigue.\nThere can be multiple ways to set the microwave to cook for targetSeconds seconds but you are interested in the way with the minimum cost.\nReturn the minimum cost to set targetSeconds seconds of cooking time.\nRemember that one minute consists of 60 seconds.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: startAt = 1, moveCost = 2, pushCost = 1, targetSeconds = 600\nOutput: 6\nExplanation: The following are the possible ways to set the cooking time.\n- 1 0 0 0, interpreted as 10 minutes and 0 seconds.\n  The finger is already on digit 1, pushes 1 (with cost 1), moves to 0 (with cost 2), pushes 0 (with cost 1), pushes 0 (with cost 1), and pushes 0 (with cost 1).\n  The cost is: 1 + 2 + 1 + 1 + 1 = 6. This is the minimum cost.\n- 0 9 6 0, interpreted as 9 minutes and 60 seconds. That is also 600 seconds.\n  The finger moves to 0 (with cost 2), pushes 0 (with cost 1), moves to 9 (with cost 2), pushes 9 (with cost 1), moves to 6 (with cost 2), pushes 6 (with cost 1), moves to 0 (with cost 2), and pushes 0 (with cost 1).\n  The cost is: 2 + 1 + 2 + 1 + 2 + 1 + 2 + 1 = 12.\n- 9 6 0, normalized as 0960 and interpreted as 9 minutes and 60 seconds.\n  The finger moves to 9 (with cost 2), pushes 9 (with cost 1), moves to 6 (with cost 2), pushes 6 (with cost 1), moves to 0 (with cost 2), and pushes 0 (with cost 1).\n  The cost is: 2 + 1 + 2 + 1 + 2 + 1 = 9.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/30/1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: startAt = 0, moveCost = 1, pushCost = 2, targetSeconds = 76\nOutput: 6\nExplanation: The optimal way is to push two digits: 7 6, interpreted as 76 seconds.\nThe finger moves to 7 (with cost 1), pushes 7 (with cost 2), moves to 6 (with cost 1), and pushes 6 (with cost 2). The total cost is: 1 + 2 + 1 + 2 = 6\nNote other possible ways are 0076, 076, 0116, and 116, but none of them produces the minimum cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/30/2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "0 <= startAt <= 9",
+    "1 <= moveCost, pushCost <= 105",
+    "1 <= targetSeconds <= 6039"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Define a separate function Cost(mm, ss) where 0 <= mm <= 99 and 0 <= ss <= 99. This function should calculate the cost of setting the cooking time to mm minutes and ss seconds",
+    "The range of the minutes is small (i.e., [0, 99]), how can you use that?",
+    "For every mm in [0, 99], calculate the needed ss to make mm:ss equal to targetSeconds and minimize the cost of setting the cooking time to mm:ss",
+    "Be careful in some cases when ss is not in the valid range [0, 99]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCostSetTime(self, startAt, moveCost, pushCost, targetSeconds):\n        \"\"\"\n        :type startAt: int\n        :type moveCost: int\n        :type pushCost: int\n        :type targetSeconds: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCostSetTime(self, startAt: int, moveCost: int, pushCost: int, targetSeconds: int) -> int:\n        ",
+    "c": "int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} startAt\n * @param {number} moveCost\n * @param {number} pushCost\n * @param {number} targetSeconds\n * @return {number}\n */\nvar minCostSetTime = function(startAt, moveCost, pushCost, targetSeconds) {\n    \n};",
+    "typescript": "function minCostSetTime(startAt: number, moveCost: number, pushCost: number, targetSeconds: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $startAt\n     * @param Integer $moveCost\n     * @param Integer $pushCost\n     * @param Integer $targetSeconds\n     * @return Integer\n     */\n    function minCostSetTime($startAt, $moveCost, $pushCost, $targetSeconds) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCostSetTime(_ startAt: Int, _ moveCost: Int, _ pushCost: Int, _ targetSeconds: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCostSetTime(startAt: Int, moveCost: Int, pushCost: Int, targetSeconds: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {\n    \n  }\n}",
+    "golang": "func minCostSetTime(startAt int, moveCost int, pushCost int, targetSeconds int) int {\n    \n}",
+    "ruby": "# @param {Integer} start_at\n# @param {Integer} move_cost\n# @param {Integer} push_cost\n# @param {Integer} target_seconds\n# @return {Integer}\ndef min_cost_set_time(start_at, move_cost, push_cost, target_seconds)\n    \nend",
+    "scala": "object Solution {\n    def minCostSetTime(startAt: Int, moveCost: Int, pushCost: Int, targetSeconds: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost_set_time(start_at: i32, move_cost: i32, push_cost: i32, target_seconds: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost-set-time startAt moveCost pushCost targetSeconds)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cost_set_time(StartAt :: integer(), MoveCost :: integer(), PushCost :: integer(), TargetSeconds :: integer()) -> integer().\nmin_cost_set_time(StartAt, MoveCost, PushCost, TargetSeconds) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost_set_time(start_at :: integer, move_cost :: integer, push_cost :: integer, target_seconds :: integer) :: integer\n  def min_cost_set_time(start_at, move_cost, push_cost, target_seconds) do\n    \n  end\nend"
+  }
+}

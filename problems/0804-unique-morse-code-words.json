@@ -1,0 +1,59 @@
+{
+  "title": "Unique Morse Code Words",
+  "problem_id": "822",
+  "frontend_id": "804",
+  "difficulty": "Easy",
+  "problem_slug": "unique-morse-code-words",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:\nFor convenience, the full table for the 26 letters of the English alphabet is given below:\nGiven an array of strings words where each word can be written as a concatenation of the Morse code of each letter.\nReturn the number of different transformations among all words we have.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "[\".-\",\"-...\",\"-.-.\",\"-..\",\".\",\"..-.\",\"--.\",\"....\",\"..\",\".---\",\"-.-\",\".-..\",\"--\",\"-.\",\"---\",\".--.\",\"--.-\",\".-.\",\"...\",\"-\",\"..-\",\"...-\",\".--\",\"-..-\",\"-.--\",\"--..\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"gin\",\"zen\",\"gig\",\"msg\"]\nOutput: 2\nExplanation: The transformation of each word is:\n\"gin\" -> \"--...-.\"\n\"zen\" -> \"--...-.\"\n\"gig\" -> \"--...--.\"\n\"msg\" -> \"--...--.\"\nThere are 2 different transformations: \"--...-.\" and \"--...--.\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"a\"]\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 12",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int uniqueMorseRepresentations(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniqueMorseRepresentations(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def uniqueMorseRepresentations(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def uniqueMorseRepresentations(self, words: List[str]) -> int:\n        ",
+    "c": "int uniqueMorseRepresentations(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int UniqueMorseRepresentations(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar uniqueMorseRepresentations = function(words) {\n    \n};",
+    "typescript": "function uniqueMorseRepresentations(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function uniqueMorseRepresentations($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func uniqueMorseRepresentations(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun uniqueMorseRepresentations(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int uniqueMorseRepresentations(List<String> words) {\n    \n  }\n}",
+    "golang": "func uniqueMorseRepresentations(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef unique_morse_representations(words)\n    \nend",
+    "scala": "object Solution {\n    def uniqueMorseRepresentations(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unique_morse_representations(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (unique-morse-representations words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec unique_morse_representations(Words :: [unicode:unicode_binary()]) -> integer().\nunique_morse_representations(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unique_morse_representations(words :: [String.t]) :: integer\n  def unique_morse_representations(words) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach 1: Hash Set\n\n**Intuition and Algorithm**\n\nWe can transform each `word` into it's Morse Code representation.\n\nAfter, we put all transformations into a set `seen`, and return the size of the set.**Complexity Analysis**\n\n* Time Complexity:  $$O(S)$$, where $$S$$ is the sum of the lengths of words in `words`.  We iterate through each character of each word in `words`.\n\n* Space Complexity: $$O(S)$$."
+}

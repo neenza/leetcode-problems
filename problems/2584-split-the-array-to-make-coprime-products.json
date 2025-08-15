@@ -1,0 +1,61 @@
+{
+  "title": "Split the Array to Make Coprime Products",
+  "problem_id": "2647",
+  "frontend_id": "2584",
+  "difficulty": "Hard",
+  "problem_slug": "split-the-array-to-make-coprime-products",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "You are given a 0-indexed integer array nums of length n.\nA split at an index i where 0 <= i <= n - 2 is called valid if the product of the first i + 1 elements and the product of the remaining elements are coprime.\nReturn the smallest index i at which the array can be split validly or -1 if there is no such split.\nTwo values val1 and val2 are coprime if gcd(val1, val2) == 1 where gcd(val1, val2) is the greatest common divisor of val1 and val2.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,7,8,15,3,5]\nOutput: 2\nExplanation: The table above shows the values of the product of the first i + 1 elements, the remaining elements, and their gcd at each index i.\nThe only valid split is at index 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/14/second.PNG"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,7,15,8,3,5]\nOutput: -1\nExplanation: The table above shows the values of the product of the first i + 1 elements, the remaining elements, and their gcd at each index i.\nThere is no valid split.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/14/capture.PNG"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 104",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Two numbers with GCD equal to 1 have no common prime divisor.",
+    "Find the prime factorization of the left and right sides and check if they share a prime divisor."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findValidSplit(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findValidSplit(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findValidSplit(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findValidSplit(self, nums: List[int]) -> int:\n        ",
+    "c": "int findValidSplit(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindValidSplit(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findValidSplit = function(nums) {\n    \n};",
+    "typescript": "function findValidSplit(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findValidSplit($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findValidSplit(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findValidSplit(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findValidSplit(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findValidSplit(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_valid_split(nums)\n    \nend",
+    "scala": "object Solution {\n    def findValidSplit(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_valid_split(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-valid-split nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_valid_split(Nums :: [integer()]) -> integer().\nfind_valid_split(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_valid_split(nums :: [integer]) :: integer\n  def find_valid_split(nums) do\n    \n  end\nend"
+  }
+}

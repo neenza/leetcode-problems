@@ -1,0 +1,68 @@
+{
+  "title": "Find Sum of Array Product of Magical Sequences",
+  "problem_id": "3851",
+  "frontend_id": "3539",
+  "difficulty": "Hard",
+  "problem_slug": "find-sum-of-array-product-of-magical-sequences",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Combinatorics",
+    "Bitmask"
+  ],
+  "description": "You are given two integers, m and k, and an integer array nums.\nThe array product of this sequence is defined as prod(seq) = (nums[seq[0]] * nums[seq[1]] * ... * nums[seq[m - 1]]).\nReturn the sum of the array products for all valid magical sequences.\nSince the answer may be large, return it modulo 109 + 7.\nA set bit refers to a bit in the binary representation of a number that has a value of 1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 5, k = 5, nums = [1,10,100,10000,1000000]\nOutput: 991600007\nExplanation:\nAll permutations of [0, 1, 2, 3, 4] are magical sequences, each with an array product of 10 13 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 2, k = 2, nums = [5,4,3,2,1]\nOutput: 170\nExplanation:\nThe magical sequences are [0, 1] , [0, 2] , [0, 3] , [0, 4] , [1, 0] , [1, 2] , [1, 3] , [1, 4] , [2, 0] , [2, 1] , [2, 3] , [2, 4] , [3, 0] , [3, 1] , [3, 2] , [3, 4] , [4, 0] , [4, 1] , [4, 2] , and [4, 3] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: m = 1, k = 1, nums = [28]\nOutput: 28\nExplanation:\nThe only magical sequence is [0] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= m <= 30",
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dynamic Programming",
+    "Let <code>dp[i][j][mask]</code> be the state after choosing <code>i</code> numbers (indices)",
+    "The partial sum <code>S = 2^(seq[0]) + 2^(seq[1]) + ... + 2^(seq[i - 1])</code> has produced exactly <code>j</code> set bits once you’ve fully propagated any carries",
+    "The <code>mask</code> represents the \"window\" of lower-order bits from <code>S</code> that have not yet been fully processed (i.e. bits that might later create new set bits when additional terms are added)",
+    "Use combinatorics",
+    "How many ways are there to permute a sequence of entities where some are repetitive?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int magicalSum(int m, int k, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int magicalSum(int m, int k, int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def magicalSum(self, m, k, nums):\n        \"\"\"\n        :type m: int\n        :type k: int\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def magicalSum(self, m: int, k: int, nums: List[int]) -> int:\n        ",
+    "c": "int magicalSum(int m, int k, int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MagicalSum(int m, int k, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} k\n * @param {number[]} nums\n * @return {number}\n */\nvar magicalSum = function(m, k, nums) {\n    \n};",
+    "typescript": "function magicalSum(m: number, k: number, nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $k\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function magicalSum($m, $k, $nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func magicalSum(_ m: Int, _ k: Int, _ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun magicalSum(m: Int, k: Int, nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int magicalSum(int m, int k, List<int> nums) {\n    \n  }\n}",
+    "golang": "func magicalSum(m int, k int, nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} k\n# @param {Integer[]} nums\n# @return {Integer}\ndef magical_sum(m, k, nums)\n    \nend",
+    "scala": "object Solution {\n    def magicalSum(m: Int, k: Int, nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn magical_sum(m: i32, k: i32, nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (magical-sum m k nums)\n  (-> exact-integer? exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec magical_sum(M :: integer(), K :: integer(), Nums :: [integer()]) -> integer().\nmagical_sum(M, K, Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec magical_sum(m :: integer, k :: integer, nums :: [integer]) :: integer\n  def magical_sum(m, k, nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Partition Array Into Three Parts With Equal Sum",
+  "problem_id": "1062",
+  "frontend_id": "1013",
+  "difficulty": "Easy",
+  "problem_slug": "partition-array-into-three-parts-with-equal-sum",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "Given an array of integers arr, return true if we can partition the array into three non-empty parts with equal sums.\nFormally, we can partition the array if we can find indexes i + 1 < j with (arr[0] + arr[1] + ... + arr[i] == arr[i + 1] + arr[i + 2] + ... + arr[j - 1] == arr[j] + arr[j + 1] + ... + arr[arr.length - 1])\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [0,2,1,-6,6,-7,9,1,2,0,1]\nOutput: true\nExplanation: 0 + 2 + 1 = -6 + 6 - 7 + 9 + 1 = 2 + 0 + 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [0,2,1,-6,6,7,9,-1,2,0,1]\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [3,3,6,5,-2,2,5,1,-9,4]\nOutput: true\nExplanation: 3 + 3 = 6 = 5 - 2 + 2 + 5 + 1 - 9 + 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= arr.length <= 5 * 104",
+    "-104 <= arr[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we have three parts with the same sum, what is the sum of each?\r\nIf you can find the first part, can you find the second part?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canThreePartsEqualSum(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canThreePartsEqualSum(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canThreePartsEqualSum(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canThreePartsEqualSum(self, arr: List[int]) -> bool:\n        ",
+    "c": "bool canThreePartsEqualSum(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanThreePartsEqualSum(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {boolean}\n */\nvar canThreePartsEqualSum = function(arr) {\n    \n};",
+    "typescript": "function canThreePartsEqualSum(arr: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Boolean\n     */\n    function canThreePartsEqualSum($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canThreePartsEqualSum(_ arr: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canThreePartsEqualSum(arr: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canThreePartsEqualSum(List<int> arr) {\n    \n  }\n}",
+    "golang": "func canThreePartsEqualSum(arr []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Boolean}\ndef can_three_parts_equal_sum(arr)\n    \nend",
+    "scala": "object Solution {\n    def canThreePartsEqualSum(arr: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_three_parts_equal_sum(arr: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-three-parts-equal-sum arr)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_three_parts_equal_sum(Arr :: [integer()]) -> boolean().\ncan_three_parts_equal_sum(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_three_parts_equal_sum(arr :: [integer]) :: boolean\n  def can_three_parts_equal_sum(arr) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Remove Duplicate Letters",
+  "problem_id": "316",
+  "frontend_id": "316",
+  "difficulty": "Medium",
+  "problem_slug": "remove-duplicate-letters",
+  "topics": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as 1081: https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"bcabc\"\nOutput: \"abc\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cbacdcbc\"\nOutput: \"acdb\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Greedily try to add one missing character. How to check if adding some character will not cause problems ? Use bit-masks to check whether you will be able to complete the sub-sequence if you add the character at some index i."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string removeDuplicateLetters(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String removeDuplicateLetters(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeDuplicateLetters(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeDuplicateLetters(self, s: str) -> str:\n        ",
+    "c": "char* removeDuplicateLetters(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RemoveDuplicateLetters(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar removeDuplicateLetters = function(s) {\n    \n};",
+    "typescript": "function removeDuplicateLetters(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function removeDuplicateLetters($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeDuplicateLetters(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeDuplicateLetters(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String removeDuplicateLetters(String s) {\n    \n  }\n}",
+    "golang": "func removeDuplicateLetters(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef remove_duplicate_letters(s)\n    \nend",
+    "scala": "object Solution {\n    def removeDuplicateLetters(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_duplicate_letters(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (remove-duplicate-letters s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec remove_duplicate_letters(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_duplicate_letters(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_duplicate_letters(s :: String.t) :: String.t\n  def remove_duplicate_letters(s) do\n    \n  end\nend"
+  }
+}

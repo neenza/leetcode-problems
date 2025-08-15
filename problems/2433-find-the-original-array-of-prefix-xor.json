@@ -1,0 +1,55 @@
+{
+  "title": "Find The Original Array of Prefix Xor",
+  "problem_id": "2519",
+  "frontend_id": "2433",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-original-array-of-prefix-xor",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:\nNote that ^ denotes the bitwise-xor operation.\nIt can be proven that the answer is unique.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pref = [5,2,0,3,1]\nOutput: [5,7,2,3,2]\nExplanation: From the array [5,7,2,3,2] we have the following:\n- pref[0] = 5.\n- pref[1] = 5 ^ 7 = 2.\n- pref[2] = 5 ^ 7 ^ 2 = 0.\n- pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.\n- pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pref = [13]\nOutput: [13]\nExplanation: We have pref[0] = arr[0] = 13.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pref.length <= 105",
+    "0 <= pref[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider the following equation: x ^ a = b. How can you find x?",
+    "Notice that arr[i] ^ pref[i-1] = pref[i]. This is the same as the previous equation."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findArray(vector<int>& pref) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findArray(int[] pref) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findArray(self, pref):\n        \"\"\"\n        :type pref: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findArray(self, pref: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findArray(int* pref, int prefSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindArray(int[] pref) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} pref\n * @return {number[]}\n */\nvar findArray = function(pref) {\n    \n};",
+    "typescript": "function findArray(pref: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $pref\n     * @return Integer[]\n     */\n    function findArray($pref) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findArray(_ pref: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findArray(pref: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findArray(List<int> pref) {\n    \n  }\n}",
+    "golang": "func findArray(pref []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} pref\n# @return {Integer[]}\ndef find_array(pref)\n    \nend",
+    "scala": "object Solution {\n    def findArray(pref: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_array(pref: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-array pref)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_array(Pref :: [integer()]) -> [integer()].\nfind_array(Pref) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_array(pref :: [integer]) :: [integer]\n  def find_array(pref) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Using XOR Properties\n\n**Intuition**\n\nThere exists an array `arr` of $N$ integers and we are given another array `pref` in which the `ith` index has the value as `pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]`. We need to return the original array `arr` which will generate the array `pref` using the above XOR operations.\n\nAn important property of XOR that we can use to solve this problem is `a ^ a = 0`, i.e. the `XOR` of two same integers is equal to `0`. The value in the array `pref` at index `i` is equal to `arr[0] ^ arr[1] ^ ... ^ arr[i]`, and the value in the index `i + 1` is equal to `arr[0] ^ arr[1] ^ ... ^ arr[i] ^ arr[i + 1]`. Now, if we perform the `XOR` operation with `pref[i]` and `pref[i + 1]` the expression would be as shown below.\n\n![fig](../Figures/2433/2433A.png)\n\nNote that we have also used the XOR [Associative](https://en.wikipedia.org/wiki/Associative_property) & [Commutative](https://en.wikipedia.org/wiki/Commutative_property) properties while rearranging the expression in the above diagram to come at the result.\n\nIn the above XOR expression, each index has two terms except the `arr[i + 1]`, and hence all other terms will be evaluated to `0`. Thus the final expression will evaluate to `arr[i + 1]`. This happened because the terms `pref[i]` and `pref[i + 1]` have the same value expression except that `pref[i + 1]` has one more extra term which is the only remained term when XOR operation is performed.\n\nTherefore, the $$i-\\text{th}$$ index in the array `arr` can be found by taking the XOR of `pref[i]` and `pref[i - 1]`, also for index `i = 0` the value `arr[0]` will be equal to the `pref[0]` as the value expression for `pref[0]` is equal to `arr[0]` itself.\n\n**Algorithm**\n\n1. Initialize an empty array `arr` of size $N$, this will store the final result.\n2. Assign `arr[0]` as `pref[0]`, because the XOR of all numbers on and before the `0th` index will be the same as the number itself.\n3. Iterate over the indices from `1` to $N - 1$, and for each index `i`:\n    1. Assign `pref[i] ^ pref[i - 1]` to `arr[i]`.\n4. Return `arr`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of elements in the array `pref` or `arr`.\n\n* Time complexity $O(N)$\n\n  We are iterating over each element only once in the array `pref`, the XOR operation takes $O(1)$ and hence the total time complexity is equal to $O(N)$.\n\n* Space complexity $O(N)$\n\n  The only space required is the array `arr` to store the result, although the space to store the result is generally not considered as part of the space complexity. The total space complexity is equal to $O(N)$.---\n\n### Approach 2: Using XOR Properties, Space Optimized\n\n**Intuition**\n\n> Note: This approach requires altering the input which is not recommended in an interview setting, This approach has been added for the completion sake and should only be presented in an interview if explicitly asked.\n\nTo find the value at an index `i` in the array `arr` we need the values at indices `i` and `i - 1` in the array `pref`. In the previous approach, since we were iterating from left to right, we needed a separate array to store the values. This is because when we calculate the value of index `i`, we can't put it directly into the array `pref` to override `pref[i]`, because we need to use the original value of `pref[i]` again when we compute the value of `arr[i + 1]` later.\n\nTherefore, instead of iterating from left to right, we will iterate from right to left and store the answers directly in the array `pref` itself. This way, when we store the value for index `i` in the `pref` using `pref[i] ^ pref[i - 1]` we don't need the value of `pref[i]` again. Because the next value to be calculated is at index `i - 1` which will be calculated as `pref[i - 1] ^ pref[i - 2]`. In this way, we can use the original input array `pref` itself to store the answer.\n\n**Algorithm**\n\n1. Iterate over the array `pref` from the index `N - 1` to `1` and for each index `i`, do:\n    - `pref[i] = pref[i] ^ pref[i - 1]`\n    - We don't need to do anything for index `0` as it will be returned as it is.\n2. Return `pref`.\n\n**Implementation****Complexity Analysis**\n\nHere, $N$ is the number of elements in the array `pref` or `arr`.\n\n* Time complexity $O(N)$\n\n  We are iterating over each element only once in the array `pref`, the XOR operation takes $O(1)$ and hence the total time complexity is equal to $O(N)$.\n\n* Space complexity $O(1)$\n\n  No extra space is required to store the result. Therefore the total space complexity is constant.---"
+}

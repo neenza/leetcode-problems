@@ -1,0 +1,39 @@
+{
+  "title": "Top Travellers",
+  "problem_id": "1541",
+  "frontend_id": "1407",
+  "difficulty": "Easy",
+  "problem_slug": "top-travellers",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Users\nTable: Rides\nWrite a solution to report the distance traveled by each user.\nReturn the result table ordered by travelled_distance in descending order, if two or more users traveled the same distance, order them by their name in ascending order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| name          | varchar |\n+---------------+---------+\nid is the column with unique values for this table.\nname is the name of the user.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| user_id       | int     |\n| distance      | int     |\n+---------------+---------+\nid is the column with unique values for this table.\nuser_id is the id of the user who traveled the distance \"distance\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nUsers table:\n+------+-----------+\n| id   | name      |\n+------+-----------+\n| 1    | Alice     |\n| 2    | Bob       |\n| 3    | Alex      |\n| 4    | Donald    |\n| 7    | Lee       |\n| 13   | Jonathan  |\n| 19   | Elvis     |\n+------+-----------+\nRides table:\n+------+----------+----------+\n| id   | user_id  | distance |\n+------+----------+----------+\n| 1    | 1        | 120      |\n| 2    | 2        | 317      |\n| 3    | 3        | 222      |\n| 4    | 7        | 100      |\n| 5    | 13       | 312      |\n| 6    | 19       | 50       |\n| 7    | 7        | 120      |\n| 8    | 19       | 400      |\n| 9    | 7        | 230      |\n+------+----------+----------+\nOutput: \n+----------+--------------------+\n| name     | travelled_distance |\n+----------+--------------------+\n| Elvis    | 450                |\n| Lee      | 450                |\n| Bob      | 317                |\n| Jonathan | 312                |\n| Alex     | 222                |\n| Alice    | 120                |\n| Donald   | 0                  |\n+----------+--------------------+\nExplanation: \nElvis and Lee traveled 450 miles, Elvis is the top traveler as his name is alphabetically smaller than Lee.\nBob, Jonathan, Alex, and Alice have only one ride and we just order them by the total distances of the ride.\nDonald did not have any rides, the distance traveled by him is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef top_travellers(users: pd.DataFrame, rides: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nThis is the type of question that you might want to slow down and pay attention to the details before writing: \n\n1. Since the question is asking for the distance travelled by each user and there may be users who have not travelled any distance, `LEFT JOIN` is needed so each user from the `Users` table will be included.\n\n2. For those users who have not travelled, functions such as `IFNULL()` or `COALESCE()` are needed to return 0 instead of null for their total distance. The two functions are a little bit different, but for this question, they can be used interchangeably.\n\n[IFNULL()](https://dev.mysql.com/doc/refman/5.7/en/flow-control-functions.html#function_ifnull): takes two arguments and returns the first one if it's not NULL or the second if the first one is NULL.\n\n[COALESCE()](https://dev.mysql.com/doc/refman/5.7/en/comparison-operators.html#function_coalesce): takes two or more parameters and returns the first non-NULL parameter, or NULL if all parameters are NULL.\n\n3. Since users might have the same name and `id` is the primary key for this table (which means the values in this column will be unique). We need to use `id` for `GROUP BY` to get the aggregated distance for each user. \n\n4. Don't forget to check the order required for the final output! This question requires two different types of order. \n\n### Approach: LEFT JOIN\n\n#### Algorithm\n\n1. Select the columns needed for the final output: `name` of the user, and the total `distance`; for users who do not have any rides, use `IFNULL()` or `COALESCE()` to return 0 for their distance\n2. `JOIN` the two tables by user `id`\n3. `GROUP` the result by `id` so each user has only one aggregated total distance. It's important to use `id` instead of `name` so the users with the same names will not be merged\n4. `ORDER` the result by the 2nd column in descending order and the 1st column in ascending order per requested\n\n#### Implementation\n\n##### MySQL\n\n```sql\nSELECT \n    u.name, \n    IFNULL(SUM(distance),0) AS travelled_distance\nFROM \n    Users u\nLEFT JOIN \n    Rides r\nON \n    u.id = r.user_id\nGROUP BY \n    u.id\nORDER BY 2 DESC, 1 ASC\n```\n\n-----"
+}

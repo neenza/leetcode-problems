@@ -1,0 +1,58 @@
+{
+  "title": "Find the Longest Balanced Substring of a Binary String",
+  "problem_id": "2723",
+  "frontend_id": "2609",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-longest-balanced-substring-of-a-binary-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a binary string s consisting only of zeroes and ones.\nA substring of s is considered balanced if all zeroes are before ones and the number of zeroes is equal to the number of ones inside the substring. Notice that the empty substring is considered a balanced substring.\nReturn the length of the longest balanced substring of s.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"01000111\"\nOutput: 6\nExplanation: The longest balanced substring is \"000111\", which has length 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"00111\"\nOutput: 4\nExplanation: The longest balanced substring is \"0011\", which has length 4.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"111\"\nOutput: 0\nExplanation: There is no balanced substring except the empty substring, so the answer is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "'0' <= s[i] <= '1'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider iterating over each subarray and checking if it’s balanced or not.",
+    "Among all balanced subarrays, the answer is the longest one of them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findTheLongestBalancedSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findTheLongestBalancedSubstring(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findTheLongestBalancedSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findTheLongestBalancedSubstring(self, s: str) -> int:\n        ",
+    "c": "int findTheLongestBalancedSubstring(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindTheLongestBalancedSubstring(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar findTheLongestBalancedSubstring = function(s) {\n    \n};",
+    "typescript": "function findTheLongestBalancedSubstring(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function findTheLongestBalancedSubstring($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findTheLongestBalancedSubstring(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findTheLongestBalancedSubstring(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findTheLongestBalancedSubstring(String s) {\n    \n  }\n}",
+    "golang": "func findTheLongestBalancedSubstring(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef find_the_longest_balanced_substring(s)\n    \nend",
+    "scala": "object Solution {\n    def findTheLongestBalancedSubstring(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_the_longest_balanced_substring(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-the-longest-balanced-substring s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec find_the_longest_balanced_substring(S :: unicode:unicode_binary()) -> integer().\nfind_the_longest_balanced_substring(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_the_longest_balanced_substring(s :: String.t) :: integer\n  def find_the_longest_balanced_substring(s) do\n    \n  end\nend"
+  }
+}

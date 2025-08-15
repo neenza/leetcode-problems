@@ -1,0 +1,55 @@
+{
+  "title": "Find the Smallest Divisor Given a Threshold",
+  "problem_id": "1408",
+  "frontend_id": "1283",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-smallest-divisor-given-a-threshold",
+  "topics": [
+    "Array",
+    "Binary Search"
+  ],
+  "description": "Given an array of integers nums and an integer threshold, we will choose a positive integer divisor, divide all the array by it, and sum the division's result. Find the smallest divisor such that the result mentioned above is less than or equal to threshold.\nEach result of the division is rounded to the nearest integer greater than or equal to that element. (For example: 7/3 = 3 and 10/2 = 5).\nThe test cases are generated so that there will be an answer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,5,9], threshold = 6\nOutput: 5\nExplanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. \nIf the divisor is 4 we can get a sum of 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [44,22,33,11,1], threshold = 5\nOutput: 44",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5 * 104",
+    "1 <= nums[i] <= 106",
+    "nums.length <= threshold <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Examine every possible number for solution. Choose the largest of them.",
+    "Use binary search to reduce the time complexity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int smallestDivisor(vector<int>& nums, int threshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestDivisor(int[] nums, int threshold) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestDivisor(self, nums, threshold):\n        \"\"\"\n        :type nums: List[int]\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestDivisor(self, nums: List[int], threshold: int) -> int:\n        ",
+    "c": "int smallestDivisor(int* nums, int numsSize, int threshold) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SmallestDivisor(int[] nums, int threshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} threshold\n * @return {number}\n */\nvar smallestDivisor = function(nums, threshold) {\n    \n};",
+    "typescript": "function smallestDivisor(nums: number[], threshold: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $threshold\n     * @return Integer\n     */\n    function smallestDivisor($nums, $threshold) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestDivisor(_ nums: [Int], _ threshold: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestDivisor(nums: IntArray, threshold: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int smallestDivisor(List<int> nums, int threshold) {\n    \n  }\n}",
+    "golang": "func smallestDivisor(nums []int, threshold int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} threshold\n# @return {Integer}\ndef smallest_divisor(nums, threshold)\n    \nend",
+    "scala": "object Solution {\n    def smallestDivisor(nums: Array[Int], threshold: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_divisor(nums: Vec<i32>, threshold: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-divisor nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec smallest_divisor(Nums :: [integer()], Threshold :: integer()) -> integer().\nsmallest_divisor(Nums, Threshold) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_divisor(nums :: [integer], threshold :: integer) :: integer\n  def smallest_divisor(nums, threshold) do\n    \n  end\nend"
+  }
+}

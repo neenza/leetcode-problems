@@ -1,0 +1,60 @@
+{
+  "title": "Count Number of Homogenous Substrings",
+  "problem_id": "1885",
+  "frontend_id": "1759",
+  "difficulty": "Medium",
+  "problem_slug": "count-number-of-homogenous-substrings",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "Given a string s, return the number of homogenous substrings of s. Since the answer may be too large, return it modulo 109 + 7.\nA string is homogenous if all the characters of the string are the same.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abbcccaa\"\nOutput: 13\nExplanation: The homogenous substrings are listed as below:\n\"a\"   appears 3 times.\n\"aa\"  appears 1 time.\n\"b\"   appears 2 times.\n\"bb\"  appears 1 time.\n\"c\"   appears 3 times.\n\"cc\"  appears 2 times.\n\"ccc\" appears 1 time.\n3 + 1 + 2 + 1 + 3 + 2 + 1 = 13.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"xy\"\nOutput: 2\nExplanation: The homogenous substrings are \"x\" and \"y\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"zzzzz\"\nOutput: 15",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A string of only 'a's of length k contains k + 1 choose 2 homogenous substrings.",
+    "Split the string into substrings where each substring contains only one letter, and apply the formula on each substring's length."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countHomogenous(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countHomogenous(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countHomogenous(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countHomogenous(self, s: str) -> int:\n        ",
+    "c": "int countHomogenous(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountHomogenous(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countHomogenous = function(s) {\n    \n};",
+    "typescript": "function countHomogenous(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countHomogenous($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countHomogenous(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countHomogenous(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countHomogenous(String s) {\n    \n  }\n}",
+    "golang": "func countHomogenous(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_homogenous(s)\n    \nend",
+    "scala": "object Solution {\n    def countHomogenous(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_homogenous(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-homogenous s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_homogenous(S :: unicode:unicode_binary()) -> integer().\ncount_homogenous(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_homogenous(s :: String.t) :: integer\n  def count_homogenous(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Counting Streaks\n\n**Intuition**\n\nTo solve this problem, we will make use of a very common counting trick that shows up in many LeetCode problems. The trick rests on the simple fact:\n\n- In a string of length `n`, there are `n` substrings that **end** with the final character.\n\nWhat do we mean by this? Let's say you had the string `\"abcd\"`. How many substrings **end** with `d`?\n\n1. If we choose `a` as the first character, we have the substring `\"abcd\"`.\n2. If we choose `b` as the first character, we have the substring `\"bcd\"`.\n3. If we choose `c` as the first character, we have the substring `\"cd\"`.\n4. If we choose `d` as the first character, we have the substring `\"d\"`.\n\nIn general, we lock in the final character, and then have `n` choices for the first character. Thus, the answer is always the length of the string.\n\nIn this problem, we need to find the number of substrings where every character is equal. We can start by separating each group of similar characters in the string:\n\n![example](../Figures/1759/1.png)We can consider each group individually and sum up their answers to find the overall answer. Let's take a look at the blue group, `\"bbb\"`:\n\n![example](../Figures/1759/2.png)This group has a length of `3`. If we want to form a substring from this group, we need to decide on two things: the starting index and the ending index.\n\nFor the ending index, we have `3` choices. For each ending index `i`, as we established above, we have `i + 1` choices for the starting index. From the example, you can see that by choosing index `2` as the ending index, we can choose index `0`, `1`, or `2` as the starting index.\n\nThis brings us to our solution. We will iterate over the string `s` and keep track of the current streak of consecutive characters we have seen. Let's say we use a variable `currStreak` to track this.\n\nFor an index `i`, if `s[i] == s[i - 1]`, then we increment `currStreak`. Otherwise, we reset `currStreak = 1` as we have lost our streak and must start a new one with `s[i]`.\n\nNow, at each index, we consider: how many homogenous substrings can **end** at this index? `currStreak` tells us the length of our current group, and since we are treating the current index as the **ending** index, the answer to this question is `currStreak`.\n\nThus, we simply add `currStreak` to our answer at each iteration. Going back to our example with `\"bbb\"`, when we encounter the first `\"b\"`, we have `currStreak = 1` and add `1` to our answer. This is because the only homogenous substring that could end at this character is the substring which is the character itself.\n\nAt the next `\"b\"`, we increase `currStreak` to `2`. Then, we add `2` to our answer. We have two choices for starting indices: the first `\"b\"` and the current `\"b\"`.\n\nLastly, we go to the final `\"b\"` and increase `currStreak` to `3`. Now, we add `3` to our answer as we have three choices for starting indices: the first, second, and current `\"b\"`.\n\n**Algorithm**\n\nNote: to avoid overflow, all arithmetic should be done MOD $$10^9 + 7$$.\n\n1. Initialize:\n    - The answer `ans = 0`.\n    - The current streak `currStreak = 0`.\n    - The modulus `MOD = ` $$10^9 + 7$$.\n2. Iterate `i` over the indices of `s`:\n    - If `i == 0` or `s[i] == s[i - 1]`, increment `currStreak`.\n    - Otherwise, reset `currStreak = 1`.\n    - Add `currStreak` to `ans`.\n3. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$n$$ as the length of `s`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate over each index of `s` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space except for a few integer variables.---"
+}

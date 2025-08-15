@@ -1,0 +1,60 @@
+{
+  "title": "Unit Conversion I",
+  "problem_id": "3729",
+  "frontend_id": "3528",
+  "difficulty": "Medium",
+  "problem_slug": "unit-conversion-i",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph"
+  ],
+  "description": "There are n types of units indexed from 0 to n - 1. You are given a 2D integer array conversions of length n - 1, where conversions[i] = [sourceUniti, targetUniti, conversionFactori]. This indicates that a single unit of type sourceUniti is equivalent to conversionFactori units of type targetUniti.\nReturn an array baseUnitConversion of length n, where baseUnitConversion[i] is the number of units of type i equivalent to a single unit of type 0. Since the answer may be large, return each baseUnitConversion[i] modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: conversions = [[0,1,2],[1,2,3]]\nOutput: [1,2,6]\nExplanation:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/12/example1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: conversions = [[0,1,2],[0,2,3],[1,3,4],[1,4,5],[2,5,2],[4,6,3],[5,7,4]]\nOutput: [1,2,3,8,10,6,30,24]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "conversions.length == n - 1",
+    "0 <= sourceUniti, targetUniti < n",
+    "1 <= conversionFactori <= 109",
+    "It is guaranteed that unit 0 can be converted into any other unit through a unique combination of conversions without using any conversions in the opposite direction."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The input is a weighted directed tree rooted at 0.",
+    "Launch a BFS from node 0 and multiply the weights on the path."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> baseUnitConversions(vector<vector<int>>& conversions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] baseUnitConversions(int[][] conversions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def baseUnitConversions(self, conversions):\n        \"\"\"\n        :type conversions: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def baseUnitConversions(self, conversions: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* baseUnitConversions(int** conversions, int conversionsSize, int* conversionsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] BaseUnitConversions(int[][] conversions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} conversions\n * @return {number[]}\n */\nvar baseUnitConversions = function(conversions) {\n    \n};",
+    "typescript": "function baseUnitConversions(conversions: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $conversions\n     * @return Integer[]\n     */\n    function baseUnitConversions($conversions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func baseUnitConversions(_ conversions: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun baseUnitConversions(conversions: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> baseUnitConversions(List<List<int>> conversions) {\n    \n  }\n}",
+    "golang": "func baseUnitConversions(conversions [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} conversions\n# @return {Integer[]}\ndef base_unit_conversions(conversions)\n    \nend",
+    "scala": "object Solution {\n    def baseUnitConversions(conversions: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn base_unit_conversions(conversions: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (base-unit-conversions conversions)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec base_unit_conversions(Conversions :: [[integer()]]) -> [integer()].\nbase_unit_conversions(Conversions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec base_unit_conversions(conversions :: [[integer]]) :: [integer]\n  def base_unit_conversions(conversions) do\n    \n  end\nend"
+  }
+}

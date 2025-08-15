@@ -1,0 +1,67 @@
+{
+  "title": "Jump Game V",
+  "problem_id": "1466",
+  "frontend_id": "1340",
+  "difficulty": "Hard",
+  "problem_slug": "jump-game-v",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "description": "Given an array of integers arr and an integer d. In one step you can jump from index i to index:\nIn addition, you can only jump from index i to index j if arr[i] > arr[j] and arr[i] > arr[k] for all indices k between i and j (More formally min(i, j) < k < max(i, j)).\nYou can choose any index of the array and start jumping. Return the maximum number of indices you can visit.\nNotice that you can not jump outside of the array at any time.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [6,4,14,6,8,13,9,7,10,6,12], d = 2\nOutput: 4\nExplanation: You can start at index 10. You can jump 10 --> 8 --> 6 --> 7 as shown.\nNote that if you start at index 6 you can only jump to index 7. You cannot jump to index 5 because 13 > 9. You cannot jump to index 4 because index 5 is between index 4 and 6 and 13 > 9.\nSimilarly You cannot jump from index 3 to index 2 or index 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/23/meta-chart.jpeg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [3,3,3,3,3], d = 3\nOutput: 1\nExplanation: You can start at any index. You always cannot jump to any index.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/23/meta-chart.jpeg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [7,6,5,4,3,2,1], d = 1\nOutput: 7\nExplanation: Start at index 0. You can visit all the indicies.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/01/23/meta-chart.jpeg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 1000",
+    "1 <= arr[i] <= 105",
+    "1 <= d <= arr.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming. dp[i] is max jumps you can do starting from index i. Answer is max(dp[i]).",
+    "dp[i] = 1 + max (dp[j]) where j is all indices you can reach from i."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxJumps(vector<int>& arr, int d) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxJumps(int[] arr, int d) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxJumps(self, arr, d):\n        \"\"\"\n        :type arr: List[int]\n        :type d: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxJumps(self, arr: List[int], d: int) -> int:\n        ",
+    "c": "int maxJumps(int* arr, int arrSize, int d) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxJumps(int[] arr, int d) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} d\n * @return {number}\n */\nvar maxJumps = function(arr, d) {\n    \n};",
+    "typescript": "function maxJumps(arr: number[], d: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $d\n     * @return Integer\n     */\n    function maxJumps($arr, $d) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxJumps(_ arr: [Int], _ d: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxJumps(arr: IntArray, d: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxJumps(List<int> arr, int d) {\n    \n  }\n}",
+    "golang": "func maxJumps(arr []int, d int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} d\n# @return {Integer}\ndef max_jumps(arr, d)\n    \nend",
+    "scala": "object Solution {\n    def maxJumps(arr: Array[Int], d: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_jumps(arr: Vec<i32>, d: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-jumps arr d)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_jumps(Arr :: [integer()], D :: integer()) -> integer().\nmax_jumps(Arr, D) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_jumps(arr :: [integer], d :: integer) :: integer\n  def max_jumps(arr, d) do\n    \n  end\nend"
+  }
+}

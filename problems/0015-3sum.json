@@ -1,0 +1,61 @@
+{
+  "title": "3Sum",
+  "problem_id": "15",
+  "frontend_id": "15",
+  "difficulty": "Medium",
+  "problem_slug": "3sum",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\nNotice that the solution set must not contain duplicate triplets.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 3000",
+    "-105 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "So, we essentially need to find three numbers x, y, and z such that they add up to the given value. If we fix one of the numbers say x, we are left with the two-sum problem at hand!",
+    "For the two-sum problem, if we fix one of the numbers, say x, we have to scan the entire array to find the next number y, which is value - x where value is the input parameter. Can we change our array somehow so that this search becomes faster?",
+    "The second train of thought for two-sum is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> threeSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def threeSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def threeSum(self, nums: List[int]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> ThreeSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar threeSum = function(nums) {\n    \n};",
+    "typescript": "function threeSum(nums: number[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[][]\n     */\n    function threeSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func threeSum(_ nums: [Int]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun threeSum(nums: IntArray): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> threeSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func threeSum(nums []int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[][]}\ndef three_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def threeSum(nums: Array[Int]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (three-sum nums)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec three_sum(Nums :: [integer()]) -> [[integer()]].\nthree_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec three_sum(nums :: [integer]) :: [[integer]]\n  def three_sum(nums) do\n    \n  end\nend"
+  }
+}

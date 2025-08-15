@@ -1,0 +1,56 @@
+{
+  "title": "Count of Integers",
+  "problem_id": "2757",
+  "frontend_id": "2719",
+  "difficulty": "Hard",
+  "problem_slug": "count-of-integers",
+  "topics": [
+    "Math",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given two numeric strings num1 and num2 and two integers max_sum and min_sum. We denote an integer x to be good if:\nReturn the number of good integers. Since the answer may be large, return it modulo 109 + 7.\nNote that digit_sum(x) denotes the sum of the digits of x.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num1 = \"1\", num2 = \"12\", min_sum = 1, max_sum = 8\nOutput: 11\nExplanation: There are 11 integers whose sum of digits lies between 1 and 8 are 1,2,3,4,5,6,7,8,10,11, and 12. Thus, we return 11.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num1 = \"1\", num2 = \"5\", min_sum = 1, max_sum = 5\nOutput: 5\nExplanation: The 5 integers whose sum of digits lies between 1 and 5 are 1,2,3,4, and 5. Thus, we return 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num1 <= num2 <= 1022",
+    "1 <= min_sum <= max_sum <= 400"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let f(n, l, r) denotes the number of integers from 1 to n with the sum of digits between l and r.",
+    "The answer is f(num2, min_sum, max_sum) - f(num-1, min_sum, max_sum).",
+    "You can calculate f(n, l, r) using digit dp."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int count(string num1, string num2, int min_sum, int max_sum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int count(String num1, String num2, int min_sum, int max_sum) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def count(self, num1, num2, min_sum, max_sum):\n        \"\"\"\n        :type num1: str\n        :type num2: str\n        :type min_sum: int\n        :type max_sum: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def count(self, num1: str, num2: str, min_sum: int, max_sum: int) -> int:\n        ",
+    "c": "int count(char* num1, char* num2, int min_sum, int max_sum) {\n    \n}",
+    "csharp": "public class Solution {\n    public int Count(string num1, string num2, int min_sum, int max_sum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num1\n * @param {string} num2\n * @param {number} min_sum\n * @param {number} max_sum\n * @return {number}\n */\nvar count = function(num1, num2, min_sum, max_sum) {\n    \n};",
+    "typescript": "function count(num1: string, num2: string, min_sum: number, max_sum: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num1\n     * @param String $num2\n     * @param Integer $min_sum\n     * @param Integer $max_sum\n     * @return Integer\n     */\n    function count($num1, $num2, $min_sum, $max_sum) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func count(_ num1: String, _ num2: String, _ min_sum: Int, _ max_sum: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun count(num1: String, num2: String, min_sum: Int, max_sum: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int count(String num1, String num2, int min_sum, int max_sum) {\n    \n  }\n}",
+    "golang": "func count(num1 string, num2 string, min_sum int, max_sum int) int {\n    \n}",
+    "ruby": "# @param {String} num1\n# @param {String} num2\n# @param {Integer} min_sum\n# @param {Integer} max_sum\n# @return {Integer}\ndef count(num1, num2, min_sum, max_sum)\n    \nend",
+    "scala": "object Solution {\n    def count(num1: String, num2: String, min_sum: Int, max_sum: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count(num1: String, num2: String, min_sum: i32, max_sum: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count num1 num2 min_sum max_sum)\n  (-> string? string? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count(Num1 :: unicode:unicode_binary(), Num2 :: unicode:unicode_binary(), Min_sum :: integer(), Max_sum :: integer()) -> integer().\ncount(Num1, Num2, Min_sum, Max_sum) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count(num1 :: String.t, num2 :: String.t, min_sum :: integer, max_sum :: integer) :: integer\n  def count(num1, num2, min_sum, max_sum) do\n    \n  end\nend"
+  }
+}

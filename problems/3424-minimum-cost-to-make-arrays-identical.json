@@ -1,0 +1,58 @@
+{
+  "title": "Minimum Cost to Make Arrays Identical",
+  "problem_id": "3712",
+  "frontend_id": "3424",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-cost-to-make-arrays-identical",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given two integer arrays arr and brr of length n, and an integer k. You can perform the following operations on arr any number of times:\nReturn the minimum total cost to make arr equal to brr.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [-7,9,5], brr = [7,-2,-5], k = 2\nOutput: 13\nExplanation:\nThe total cost to make the arrays equal is 2 + 2 + 7 + 2 = 13 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [2,1], brr = [2,1], k = 0\nOutput: 0\nExplanation:\nSince the arrays are already equal, no operations are needed, and the total cost is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length == brr.length <= 105",
+    "0 <= k <= 2 * 1010",
+    "-105 <= arr[i] <= 105",
+    "-105 <= brr[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What does Operation 1 (rearranging subarrays) actually accomplish?",
+    "Calculate <code>sum(abs(arr[i] - brr[i]))</code> if you do not use Operation 1.",
+    "Calculate <code>sum(abs(arr[i] - brr[i]))</code> after sorting both arrays if you use Operation 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minCost(vector<int>& arr, vector<int>& brr, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int[] arr, int[] brr, long k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, arr, brr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type brr: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, arr: List[int], brr: List[int], k: int) -> int:\n        ",
+    "c": "long long minCost(int* arr, int arrSize, int* brr, int brrSize, long long k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinCost(int[] arr, int[] brr, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number[]} brr\n * @param {number} k\n * @return {number}\n */\nvar minCost = function(arr, brr, k) {\n    \n};",
+    "typescript": "function minCost(arr: number[], brr: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer[] $brr\n     * @param Integer $k\n     * @return Integer\n     */\n    function minCost($arr, $brr, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ arr: [Int], _ brr: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(arr: IntArray, brr: IntArray, k: Long): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> arr, List<int> brr, int k) {\n    \n  }\n}",
+    "golang": "func minCost(arr []int, brr []int, k int64) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer[]} brr\n# @param {Integer} k\n# @return {Integer}\ndef min_cost(arr, brr, k)\n    \nend",
+    "scala": "object Solution {\n    def minCost(arr: Array[Int], brr: Array[Int], k: Long): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(arr: Vec<i32>, brr: Vec<i32>, k: i64) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost arr brr k)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Arr :: [integer()], Brr :: [integer()], K :: integer()) -> integer().\nmin_cost(Arr, Brr, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(arr :: [integer], brr :: [integer], k :: integer) :: integer\n  def min_cost(arr, brr, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Amount of Time to Fill Cups",
+  "problem_id": "2412",
+  "frontend_id": "2335",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-amount-of-time-to-fill-cups",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You have a water dispenser that can dispense cold, warm, and hot water. Every second, you can either fill up 2 cups with different types of water, or 1 cup of any type of water.\nYou are given a 0-indexed integer array amount of length 3 where amount[0], amount[1], and amount[2] denote the number of cold, warm, and hot water cups you need to fill respectively. Return the minimum number of seconds needed to fill up all the cups.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: amount = [1,4,2]\nOutput: 4\nExplanation: One way to fill up the cups is:\nSecond 1: Fill up a cold cup and a warm cup.\nSecond 2: Fill up a warm cup and a hot cup.\nSecond 3: Fill up a warm cup and a hot cup.\nSecond 4: Fill up a warm cup.\nIt can be proven that 4 is the minimum number of seconds needed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: amount = [5,4,4]\nOutput: 7\nExplanation: One way to fill up the cups is:\nSecond 1: Fill up a cold cup, and a hot cup.\nSecond 2: Fill up a cold cup, and a warm cup.\nSecond 3: Fill up a cold cup, and a warm cup.\nSecond 4: Fill up a warm cup, and a hot cup.\nSecond 5: Fill up a cold cup, and a hot cup.\nSecond 6: Fill up a cold cup, and a warm cup.\nSecond 7: Fill up a hot cup.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: amount = [5,0,0]\nOutput: 5\nExplanation: Every second, we fill up a cold cup.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "amount.length == 3",
+    "0 <= amount[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To minimize the amount of time needed, you want to fill up as many cups as possible in each second. This means that you want to maximize the number of seconds where you are filling up two cups.",
+    "You always want to fill up the two types of water with the most unfilled cups."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int fillCups(vector<int>& amount) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int fillCups(int[] amount) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def fillCups(self, amount):\n        \"\"\"\n        :type amount: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def fillCups(self, amount: List[int]) -> int:\n        ",
+    "c": "int fillCups(int* amount, int amountSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FillCups(int[] amount) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} amount\n * @return {number}\n */\nvar fillCups = function(amount) {\n    \n};",
+    "typescript": "function fillCups(amount: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $amount\n     * @return Integer\n     */\n    function fillCups($amount) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func fillCups(_ amount: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun fillCups(amount: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int fillCups(List<int> amount) {\n    \n  }\n}",
+    "golang": "func fillCups(amount []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} amount\n# @return {Integer}\ndef fill_cups(amount)\n    \nend",
+    "scala": "object Solution {\n    def fillCups(amount: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn fill_cups(amount: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (fill-cups amount)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec fill_cups(Amount :: [integer()]) -> integer().\nfill_cups(Amount) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec fill_cups(amount :: [integer]) :: integer\n  def fill_cups(amount) do\n    \n  end\nend"
+  }
+}

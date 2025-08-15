@@ -1,0 +1,57 @@
+{
+  "title": "Longest Common Prefix Between Adjacent Strings After Removals",
+  "problem_id": "3800",
+  "frontend_id": "3598",
+  "difficulty": "Medium",
+  "problem_slug": "longest-common-prefix-between-adjacent-strings-after-removals",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given an array of strings words. For each index i in the range [0, words.length - 1], perform the following steps:\nReturn an array answer, where answer[i] is the length of the longest common prefix between the adjacent pairs after removing the element at index i. If no adjacent pairs remain or if none share a common prefix, then answer[i] should be 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"jump\",\"run\",\"run\",\"jump\",\"run\"]\nOutput: [3,0,0,3,3]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"dog\",\"racer\",\"car\"]\nOutput: [0,0,0]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 105",
+    "1 <= words[i].length <= 104",
+    "words[i] consists of lowercase English letters.",
+    "The sum of words[i].length is smaller than or equal 105."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Precompute the longest common prefix length for adjacent prefixes and suffixes.",
+    "After deleting <code>words[i]</code>, compute the longest common prefix for <code>words[i - 1]</code> and <code>words[i + 1]</code> (if they exist).",
+    "Use the result of the prefix computation up to <code>i - 1</code> and the suffix computation from <code>i + 1</code> onwards."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> longestCommonPrefix(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestCommonPrefix(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestCommonPrefix(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestCommonPrefix(self, words: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestCommonPrefix(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] LongestCommonPrefix(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[]}\n */\nvar longestCommonPrefix = function(words) {\n    \n};",
+    "typescript": "function longestCommonPrefix(words: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer[]\n     */\n    function longestCommonPrefix($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestCommonPrefix(_ words: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestCommonPrefix(words: Array<String>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> longestCommonPrefix(List<String> words) {\n    \n  }\n}",
+    "golang": "func longestCommonPrefix(words []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer[]}\ndef longest_common_prefix(words)\n    \nend",
+    "scala": "object Solution {\n    def longestCommonPrefix(words: Array[String]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_common_prefix(words: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (longest-common-prefix words)\n  (-> (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec longest_common_prefix(Words :: [unicode:unicode_binary()]) -> [integer()].\nlongest_common_prefix(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_common_prefix(words :: [String.t]) :: [integer]\n  def longest_common_prefix(words) do\n    \n  end\nend"
+  }
+}

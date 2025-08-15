@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Array Sum",
+  "problem_id": "3654",
+  "frontend_id": "3366",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-array-sum",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums and three integers k, op1, and op2.\nYou can perform the following operations on nums:\nNote: Both operations can be applied to the same index, but at most once each.\nReturn the minimum possible sum of all elements in nums after performing any number of operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,8,3,19,3], k = 3, op1 = 1, op2 = 1\nOutput: 23\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,3], k = 3, op1 = 2, op2 = 1\nOutput: 3\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 105",
+    "0 <= k <= 105",
+    "0 <= op1, op2 <= nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of dynamic programming with states to track progress and remaining operations.",
+    "Use <code>dp[index][op1][op2]</code> where each state tracks progress at <code>index</code> with <code>op1</code> and <code>op2</code> operations left.",
+    "At each state, try applying only operation 1, only operation 2, both in sequence, or skip both to find optimal results."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minArraySum(vector<int>& nums, int k, int op1, int op2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minArraySum(int[] nums, int k, int op1, int op2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minArraySum(self, nums, k, op1, op2):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type op1: int\n        :type op2: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minArraySum(self, nums: List[int], k: int, op1: int, op2: int) -> int:\n        ",
+    "c": "int minArraySum(int* nums, int numsSize, int k, int op1, int op2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinArraySum(int[] nums, int k, int op1, int op2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} op1\n * @param {number} op2\n * @return {number}\n */\nvar minArraySum = function(nums, k, op1, op2) {\n    \n};",
+    "typescript": "function minArraySum(nums: number[], k: number, op1: number, op2: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer $op1\n     * @param Integer $op2\n     * @return Integer\n     */\n    function minArraySum($nums, $k, $op1, $op2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minArraySum(_ nums: [Int], _ k: Int, _ op1: Int, _ op2: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minArraySum(nums: IntArray, k: Int, op1: Int, op2: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minArraySum(List<int> nums, int k, int op1, int op2) {\n    \n  }\n}",
+    "golang": "func minArraySum(nums []int, k int, op1 int, op2 int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer} op1\n# @param {Integer} op2\n# @return {Integer}\ndef min_array_sum(nums, k, op1, op2)\n    \nend",
+    "scala": "object Solution {\n    def minArraySum(nums: Array[Int], k: Int, op1: Int, op2: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_array_sum(nums: Vec<i32>, k: i32, op1: i32, op2: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-array-sum nums k op1 op2)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_array_sum(Nums :: [integer()], K :: integer(), Op1 :: integer(), Op2 :: integer()) -> integer().\nmin_array_sum(Nums, K, Op1, Op2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_array_sum(nums :: [integer], k :: integer, op1 :: integer, op2 :: integer) :: integer\n  def min_array_sum(nums, k, op1, op2) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "X of a Kind in a Deck of Cards",
+  "problem_id": "950",
+  "frontend_id": "914",
+  "difficulty": "Easy",
+  "problem_slug": "x-of-a-kind-in-a-deck-of-cards",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array deck where deck[i] represents the number written on the ith card.\nPartition the cards into one or more groups such that:\nReturn true if such partition is possible, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: deck = [1,2,3,4,4,3,2,1]\nOutput: true\nExplanation: Possible partition [1,1],[2,2],[3,3],[4,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: deck = [1,1,1,2,2,2,3,3]\nOutput: false\nExplanation: No possible partition.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= deck.length <= 104",
+    "0 <= deck[i] < 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasGroupsSizeX(vector<int>& deck) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasGroupsSizeX(int[] deck) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasGroupsSizeX(self, deck):\n        \"\"\"\n        :type deck: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasGroupsSizeX(self, deck: List[int]) -> bool:\n        ",
+    "c": "bool hasGroupsSizeX(int* deck, int deckSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasGroupsSizeX(int[] deck) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} deck\n * @return {boolean}\n */\nvar hasGroupsSizeX = function(deck) {\n    \n};",
+    "typescript": "function hasGroupsSizeX(deck: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $deck\n     * @return Boolean\n     */\n    function hasGroupsSizeX($deck) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasGroupsSizeX(_ deck: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasGroupsSizeX(deck: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasGroupsSizeX(List<int> deck) {\n    \n  }\n}",
+    "golang": "func hasGroupsSizeX(deck []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} deck\n# @return {Boolean}\ndef has_groups_size_x(deck)\n    \nend",
+    "scala": "object Solution {\n    def hasGroupsSizeX(deck: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_groups_size_x(deck: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-groups-size-x deck)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec has_groups_size_x(Deck :: [integer()]) -> boolean().\nhas_groups_size_x(Deck) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_groups_size_x(deck :: [integer]) :: boolean\n  def has_groups_size_x(deck) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Brute Force\n\n**Intuition**\n\nWe can try every possible `X`.  \n\n**Algorithm**\n\nSince we divide the deck of `N` cards into say, `K` piles of `X` cards each, we must have `N % X == 0`.\n\nThen, say the deck has `C_i` copies of cards with number `i`.  Each group with number `i` has `X` copies, so we must have `C_i % X == 0`.  These are necessary and sufficient conditions.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2 \\log \\log N)$$, where $$N$$ is the number of cards.  It is outside the scope of this article to prove that the number of divisors of $$N$$ is bounded by $$O(N \\log \\log N)$$.\n\n* Space Complexity:  $$O(N)$$.---\n### Approach 2: Greatest Common Divisor\n\n**Intuition and Algorithm**\n\nAgain, say there are `C_i` cards of number `i`.  These must be broken down into piles of `X` cards each, ie. `C_i % X == 0` for all `i`.\n\nThus, `X` must divide the greatest common divisor of `C_i`.  If this greatest common divisor `g` is greater than `1`, then `X = g` will satisfy.  Otherwise, it won't.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\log^2 N)$$, where $$N$$ is the number of votes.  If there are $$C_i$$ cards with number $$i$$, then each `gcd` operation is naively $$O(\\log^2 C_i)$$.  Better bounds exist, but are outside the scope of this article to develop.\n\n* Space Complexity:  $$O(N)$$."
+}

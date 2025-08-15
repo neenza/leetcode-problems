@@ -1,0 +1,58 @@
+{
+  "title": "Count the Number of Good Subarrays",
+  "problem_id": "2626",
+  "frontend_id": "2537",
+  "difficulty": "Medium",
+  "problem_slug": "count-the-number-of-good-subarrays",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ],
+  "description": "Given an integer array nums and an integer k, return the number of good subarrays of nums.\nA subarray arr is good if there are at least k pairs of indices (i, j) such that i < j and arr[i] == arr[j].\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,1,1,1], k = 10\nOutput: 1\nExplanation: The only good subarray is the array nums itself.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,1,4,3,2,2,4], k = 2\nOutput: 4\nExplanation: There are 4 different good subarrays:\n- [3,1,4,3,2,2] that has 2 pairs.\n- [3,1,4,3,2,2,4] that has 3 pairs.\n- [1,4,3,2,2,4] that has 2 pairs.\n- [4,3,2,2,4] that has 2 pairs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i], k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For a fixed index l, try to find the minimum value of index r, such that the subarray is not good",
+    "When a number is added to a subarray, it increases the number of pairs by its previous appearances.",
+    "When a number is removed from the subarray, it decreases the number of pairs by its remaining appearances.",
+    "Maintain 2-pointers l and r such that we can keep in account the number of equal pairs."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countGood(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countGood(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countGood(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countGood(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long countGood(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountGood(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar countGood = function(nums, k) {\n    \n};",
+    "typescript": "function countGood(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function countGood($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countGood(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countGood(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countGood(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func countGood(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef count_good(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def countGood(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_good(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-good nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_good(Nums :: [integer()], K :: integer()) -> integer().\ncount_good(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_good(nums :: [integer], k :: integer) :: integer\n  def count_good(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Two pointers\n\n#### Intuition\n\nAccording to the definition of **good array** in the question, if $\\textit{nums}[i..j]$ is a good array, then for all $j' > j$, the number of identical values in $\\textit{nums}[i..j']$ will be at least as many, so $\\textit{nums}[i..j']$ is also a good array.\n\nThis suggests that we can use the two pointers method to solve this problem. We enumerate the left pointer $\\textit{left}$ to represent the left boundary of the subarray, with its initial value being $0$, and use the right pointer $\\textit{right}$ to represent the right boundary of the subarray, with its initial value being $-1$. For the currently enumerated $\\textit{left}$, we need to keep moving the $\\textit{right}$ pointer to the right until $\\textit{nums}[\\textit{left}..\\textit{right}]$ is a good array.\n\nDuring the process of moving to the right, we can incrementally calculate the number of identical elements: we can use a hash map $\\textit{cnt}$ to record each element in each subarray and the number of times it appears. When $\\textit{right}$ moves to the right, the number of identical elements increases by $\\textit{cnt}[\\textit{right}]$, and then $\\textit{cnt}[\\textit{right}]$ needs to be increased by $1$. After the $\\textit{right}$ shift is completed, according to the above deduction, the number of good subarrays with $\\textit{left}$ as the left boundary is $n - \\textit{right}$, where $n$ is the length of the array $\\textit{nums}$. We add this value to the final answer.\n\nAfter this, the current left boundary $\\textit{left}$ is enumerated, the number of identical elements will decrease by $\\textit{cnt}[\\textit{left}] - 1$, and then $\\textit{cnt}[\\textit{left}]$ also needs to be reduced by $1$.\n\nAfter all the left boundaries have been enumerated, the final answer can be obtained.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nThe pointers $\\textit{left}$ and $\\textit{right}$ will each traverse the array once.\n\n- Space complexity: $O(n)$.\n\nThe hash map $\\textit{cnt}$ requires $O(n)$ space."
+}

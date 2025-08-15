@@ -1,0 +1,58 @@
+{
+  "title": "Dungeon Game",
+  "problem_id": "174",
+  "frontend_id": "174",
+  "difficulty": "Hard",
+  "problem_slug": "dungeon-game",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "The demons had captured the princess and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of m x n rooms laid out in a 2D grid. Our valiant knight was initially positioned in the top-left room and must fight his way through dungeon to rescue the princess.\nThe knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.\nSome of the rooms are guarded by demons (represented by negative integers), so the knight loses health upon entering these rooms; other rooms are either empty (represented as 0) or contain magic orbs that increase the knight's health (represented by positive integers).\nTo reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.\nReturn the knight's minimum initial health so that he can rescue the princess.\nNote that any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: dungeon = [[-2,-3,3],[-5,-10,1],[10,30,-5]]\nOutput: 7\nExplanation: The initial health of the knight must be at least 7 if he follows the optimal path: RIGHT-> RIGHT -> DOWN -> DOWN.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/13/dungeon-grid-1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: dungeon = [[0]]\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/13/dungeon-grid-1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == dungeon.length",
+    "n == dungeon[i].length",
+    "1 <= m, n <= 200",
+    "-1000 <= dungeon[i][j] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int calculateMinimumHP(vector<vector<int>>& dungeon) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int calculateMinimumHP(int[][] dungeon) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def calculateMinimumHP(self, dungeon):\n        \"\"\"\n        :type dungeon: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:\n        ",
+    "c": "int calculateMinimumHP(int** dungeon, int dungeonSize, int* dungeonColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CalculateMinimumHP(int[][] dungeon) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} dungeon\n * @return {number}\n */\nvar calculateMinimumHP = function(dungeon) {\n    \n};",
+    "typescript": "function calculateMinimumHP(dungeon: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $dungeon\n     * @return Integer\n     */\n    function calculateMinimumHP($dungeon) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func calculateMinimumHP(_ dungeon: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun calculateMinimumHP(dungeon: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int calculateMinimumHP(List<List<int>> dungeon) {\n    \n  }\n}",
+    "golang": "func calculateMinimumHP(dungeon [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} dungeon\n# @return {Integer}\ndef calculate_minimum_hp(dungeon)\n    \nend",
+    "scala": "object Solution {\n    def calculateMinimumHP(dungeon: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn calculate_minimum_hp(dungeon: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (calculate-minimum-hp dungeon)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec calculate_minimum_hp(Dungeon :: [[integer()]]) -> integer().\ncalculate_minimum_hp(Dungeon) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec calculate_minimum_hp(dungeon :: [[integer]]) :: integer\n  def calculate_minimum_hp(dungeon) do\n    \n  end\nend"
+  }
+}

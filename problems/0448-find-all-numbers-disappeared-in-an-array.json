@@ -1,0 +1,58 @@
+{
+  "title": "Find All Numbers Disappeared in an Array",
+  "problem_id": "448",
+  "frontend_id": "448",
+  "difficulty": "Easy",
+  "problem_slug": "find-all-numbers-disappeared-in-an-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.\nExample 1:\nExample 2:\nConstraints:\nFollow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,3,2,7,8,2,3,1]\nOutput: [5,6]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1]\nOutput: [2]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "1 <= nums[i] <= n"
+  ],
+  "follow_ups": [
+    "Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space."
+  ],
+  "hints": [
+    "This is a really easy problem if you decide to use additional memory. For those trying to write an initial solution using additional memory, think <b>counters!</b>",
+    "However, the trick really is to not use any additional space than what is already available to use. Sometimes, multiple passes over the input array help find the solution. However, there's an interesting piece of information in this problem that makes it easy to re-use the input array itself for the solution.",
+    "The problem specifies that the numbers in the array will be in the range [1, n] where n is the number of elements in the array. Can we use this information and modify the array in-place somehow to find what we need?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findDisappearedNumbers(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findDisappearedNumbers(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findDisappearedNumbers(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findDisappearedNumbers(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindDisappearedNumbers(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findDisappearedNumbers = function(nums) {\n    \n};",
+    "typescript": "function findDisappearedNumbers(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function findDisappearedNumbers($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findDisappearedNumbers(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findDisappearedNumbers(nums: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findDisappearedNumbers(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findDisappearedNumbers(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef find_disappeared_numbers(nums)\n    \nend",
+    "scala": "object Solution {\n    def findDisappearedNumbers(nums: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_disappeared_numbers(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-disappeared-numbers nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_disappeared_numbers(Nums :: [integer()]) -> [integer()].\nfind_disappeared_numbers(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_disappeared_numbers(nums :: [integer]) :: [integer]\n  def find_disappeared_numbers(nums) do\n    \n  end\nend"
+  }
+}

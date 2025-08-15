@@ -1,0 +1,57 @@
+{
+  "title": "Count Substrings With K-Frequency Characters I",
+  "problem_id": "3502",
+  "frontend_id": "3325",
+  "difficulty": "Medium",
+  "problem_slug": "count-substrings-with-k-frequency-characters-i",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ],
+  "description": "Given a string s and an integer k, return the total number of substrings of s where at least one character appears at least k times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abacb\", k = 2\nOutput: 4\nExplanation:\nThe valid substrings are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcde\", k = 1\nOutput: 15\nExplanation:\nAll substrings are valid because every character appears at least once.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 3000",
+    "1 <= k <= s.length",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Fix the <code>left</code> index of the substring.",
+    "For the fixed <code>left</code> index, find the first <code>right</code> index for which substring <code>s[left..right]</code> satisfies the condition.",
+    "Every substring that starts at <code>left</code> and ends after <code>right</code> satisfies the condition."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfSubstrings(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSubstrings(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSubstrings(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSubstrings(self, s: str, k: int) -> int:\n        ",
+    "c": "int numberOfSubstrings(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfSubstrings(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar numberOfSubstrings = function(s, k) {\n    \n};",
+    "typescript": "function numberOfSubstrings(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function numberOfSubstrings($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSubstrings(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSubstrings(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSubstrings(String s, int k) {\n    \n  }\n}",
+    "golang": "func numberOfSubstrings(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef number_of_substrings(s, k)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSubstrings(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_substrings(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-substrings s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_substrings(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nnumber_of_substrings(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_substrings(s :: String.t, k :: integer) :: integer\n  def number_of_substrings(s, k) do\n    \n  end\nend"
+  }
+}

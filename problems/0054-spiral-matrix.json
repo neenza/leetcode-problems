@@ -1,0 +1,62 @@
+{
+  "title": "Spiral Matrix",
+  "problem_id": "54",
+  "frontend_id": "54",
+  "difficulty": "Medium",
+  "problem_slug": "spiral-matrix",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "Given an m x n matrix, return all elements of the matrix in spiral order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 10",
+    "-100 <= matrix[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Well for some problems, the best way really is to come up with some algorithms for simulation. Basically, you need to simulate what the problem asks us to do.",
+    "We go boundary by boundary and move inwards. That is the essential operation. First row, last column, last row, first column, and then we move inwards by 1 and repeat. That's all. That is all the simulation that we need.",
+    "Think about when you want to switch the progress on one of the indexes. If you progress on i out of [i, j], you'll shift in the same column. Similarly, by changing values for j, you'd be shifting in the same row.\r\nAlso, keep track of the end of a boundary so that you can move inwards and then keep repeating. It's always best to simulate edge cases like a single column or a single row to see if anything breaks or not."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> spiralOrder(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> spiralOrder(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def spiralOrder(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* spiralOrder(int** matrix, int matrixSize, int* matrixColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> SpiralOrder(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number[]}\n */\nvar spiralOrder = function(matrix) {\n    \n};",
+    "typescript": "function spiralOrder(matrix: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer[]\n     */\n    function spiralOrder($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func spiralOrder(_ matrix: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun spiralOrder(matrix: Array<IntArray>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> spiralOrder(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func spiralOrder(matrix [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer[]}\ndef spiral_order(matrix)\n    \nend",
+    "scala": "object Solution {\n    def spiralOrder(matrix: Array[Array[Int]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (spiral-order matrix)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec spiral_order(Matrix :: [[integer()]]) -> [integer()].\nspiral_order(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec spiral_order(matrix :: [[integer]]) :: [integer]\n  def spiral_order(matrix) do\n    \n  end\nend"
+  }
+}

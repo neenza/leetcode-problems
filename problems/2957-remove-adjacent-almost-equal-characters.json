@@ -1,0 +1,60 @@
+{
+  "title": "Remove Adjacent Almost-Equal Characters",
+  "problem_id": "3230",
+  "frontend_id": "2957",
+  "difficulty": "Medium",
+  "problem_slug": "remove-adjacent-almost-equal-characters",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed string word.\nIn one operation, you can pick any index i of word and change word[i] to any lowercase English letter.\nReturn the minimum number of operations needed to remove all adjacent almost-equal characters from word.\nTwo characters a and b are almost-equal if a == b or a and b are adjacent in the alphabet.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"aaaaa\"\nOutput: 2\nExplanation: We can change word into \"acaca\" which does not have any adjacent almost-equal characters.\nIt can be shown that the minimum number of operations needed to remove all adjacent almost-equal characters from word is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"abddez\"\nOutput: 2\nExplanation: We can change word into \"ybdoez\" which does not have any adjacent almost-equal characters.\nIt can be shown that the minimum number of operations needed to remove all adjacent almost-equal characters from word is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"zyxyxyz\"\nOutput: 3\nExplanation: We can change word into \"zaxaxaz\" which does not have any adjacent almost-equal characters. \nIt can be shown that the minimum number of operations needed to remove all adjacent almost-equal characters from word is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 100",
+    "word consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For <code>i > 0</code>, if <code>word[i]</code> and <code>word[i - 1]</code> are adjacent, we will change <code>word[i]</code> to another character. Which character should we change it to?",
+    "We will change <code>word[i]</code> to some character that is not adjacent to <code>word[i - 1]</code> nor <code>word[i + 1]</code> (if it exists). Such a character always exists. However, since the problem does not ask for the final state of the string, It is enough to prove that the character exists and we do not need to find it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int removeAlmostEqualCharacters(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeAlmostEqualCharacters(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeAlmostEqualCharacters(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeAlmostEqualCharacters(self, word: str) -> int:\n        ",
+    "c": "int removeAlmostEqualCharacters(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RemoveAlmostEqualCharacters(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar removeAlmostEqualCharacters = function(word) {\n    \n};",
+    "typescript": "function removeAlmostEqualCharacters(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function removeAlmostEqualCharacters($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeAlmostEqualCharacters(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeAlmostEqualCharacters(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int removeAlmostEqualCharacters(String word) {\n    \n  }\n}",
+    "golang": "func removeAlmostEqualCharacters(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef remove_almost_equal_characters(word)\n    \nend",
+    "scala": "object Solution {\n    def removeAlmostEqualCharacters(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_almost_equal_characters(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (remove-almost-equal-characters word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec remove_almost_equal_characters(Word :: unicode:unicode_binary()) -> integer().\nremove_almost_equal_characters(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_almost_equal_characters(word :: String.t) :: integer\n  def remove_almost_equal_characters(word) do\n    \n  end\nend"
+  }
+}

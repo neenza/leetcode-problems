@@ -1,0 +1,55 @@
+{
+  "title": "Assign Cookies",
+  "problem_id": "455",
+  "frontend_id": "455",
+  "difficulty": "Easy",
+  "problem_slug": "assign-cookies",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.\nEach child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with; and each cookie j has a size s[j]. If s[j] >= g[i], we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as  2410: Maximum Matching of Players With Trainers.",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: g = [1,2,3], s = [1,1]\nOutput: 1\nExplanation: You have 3 children and 2 cookies. The greed factors of 3 children are 1, 2, 3. \nAnd even though you have 2 cookies, since their size is both 1, you could only make the child whose greed factor is 1 content.\nYou need to output 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: g = [1,2], s = [1,2,3]\nOutput: 2\nExplanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2. \nYou have 3 cookies and their sizes are big enough to gratify all of the children, \nYou need to output 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= g.length <= 3 * 104",
+    "0 <= s.length <= 3 * 104",
+    "1 <= g[i], s[j] <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findContentChildren(vector<int>& g, vector<int>& s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findContentChildren(int[] g, int[] s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findContentChildren(self, g, s):\n        \"\"\"\n        :type g: List[int]\n        :type s: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findContentChildren(self, g: List[int], s: List[int]) -> int:\n        ",
+    "c": "int findContentChildren(int* g, int gSize, int* s, int sSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindContentChildren(int[] g, int[] s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} g\n * @param {number[]} s\n * @return {number}\n */\nvar findContentChildren = function(g, s) {\n    \n};",
+    "typescript": "function findContentChildren(g: number[], s: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $g\n     * @param Integer[] $s\n     * @return Integer\n     */\n    function findContentChildren($g, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findContentChildren(_ g: [Int], _ s: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findContentChildren(g: IntArray, s: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findContentChildren(List<int> g, List<int> s) {\n    \n  }\n}",
+    "golang": "func findContentChildren(g []int, s []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} g\n# @param {Integer[]} s\n# @return {Integer}\ndef find_content_children(g, s)\n    \nend",
+    "scala": "object Solution {\n    def findContentChildren(g: Array[Int], s: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_content_children(g: Vec<i32>, s: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-content-children g s)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_content_children(G :: [integer()], S :: [integer()]) -> integer().\nfind_content_children(G, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_content_children(g :: [integer], s :: [integer]) :: integer\n  def find_content_children(g, s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nOur objective is to determine the maximum number of content children given cookie sizes and greed factors.\n\nEach index `i` in `g` represents a child whose minimum cookie size is `g[i]`.\nEach index `j` in `s` represents a cookie with the size `s[j]`.\n\nA child will be content if their cookie's size `s[j]` meets or exceeds their greed `g[i]`, represented as cookie size `s[j] >= g[i]` \n\nEach child should receive at most one cookie. We must note that we could have many small cookies, but that will not satisfy a greedy child, because they want 1 large cookie. If there are lots of small cookies but no children with small greed, we can't use those cookies.\n\n### Approach: Greedy, Two-Pointer\n\n#### Intuition\n\nGiven the test case 2 `g = [1, 2]` and `s = [1, 2, 3]`, we could attempt a naive approach, iterating through both arrays and assigning cookies to the children in order. \n\nWould this approach work for all cases? With the test case `g = [2, 1]` and `s = [1, 2]` we realize we cannot assign cookies in order because the first cookie isn't large enough for the first child, and if we allocate the second cookie to the second child, we satisfy only one child when we could satisfy two.\n\nWe need to be able to ensure that each child receives the smallest cookie that meets their greed so that larger cookies can be saved for children with more greed. We also want to make sure there are no leftover cookies that could have satisfied children.\n\nThe optimal solution will satisfy these conditions:\n* Every child that receives a cookie receives the smallest cookie that meets their greed so no larger cookies are wasted on children with smaller greed\n* After cookies are assigned, no cookies are remaining that could satisfy the available children's greed\n\nHow do we ensure that we don't waste larger cookies on children with smaller greed? We notice that in the first example, both arrays are sorted in ascending order. We need to sort the cookies and children in ascending order so that we can guarantee that for each child, we always try the currently smallest available cookie.\n\nTo solve the problem, we will start by sorting both arrays. That way we can ensure the children with the smallest greed and the smallest cookies are at the beginning, and the children with the largest greed and the largest cookies are at the end.\n\nNext, we will use a while loop to iterate through our array of cookies, attempting to assign cookies to children.  We will continue while we have more cookies and children. We will create a variable `cookieIndex` that keeps track of which cookies we have assigned or passed. We will store the number of satisfied children in `contentChildren`. If the next cookie meets the current child's greed, we increment `contentChildren` and `cookieIndex` as that cookie is assigned to a child. If the next cookie doesn't meet the current child's greed, we iterate `cookieIndex` to move on to the next cookie, until we find a cookie large enough for the child or we run out of cookies. Finally, we return `contentChildren`.\n\nHow can we be sure this provides the optimal solution?\n\nWith this approach, each child is offered the smallest available cookie first. Since the cookies are offered in order of ascending size, this ensures every child receives the smallest cookie that meets their greed. While assigning cookies to children, the children are sorted in increasing order of greed, which means that when we offer a cookie that doesn't meet the current child's greed, we also know there are no children less greedy than the current child. This means that any leftover cookies will not satisfy any available children. The approach provides an optimal solution.\n\nThis is a greedy approach because the current child always receives the cookie, even if the cookie could have satisfied the next child. This is the locally optimal choice.\n\n\n#### Algorithm\n\n1. Sort arrays `g` and `s` in ascending order.\n2. Initialize variable ` contentChildren = 0` to represent the number of children who receive cookies that meet their greed.\n2. Initialize variable `cookieIndex = 0` to represent the number of cookies that have been assigned or skipped.\n3. while `cookieIndex` is less than the size of `s` and `contentChildren` is less than the size of `g`:\n    - If the current cookie's size is greater than or equal to the current child's greed: \n        - Increment `contentChildren` to allocate the cookie.\n    - Increment `cookieIndex` to move on to the next cookie.\n4. Return `contentChildren`.\n\n\n#### Implementation#### Complexity Analysis\n\n* Time Complexity: $O (n \\cdot \\log n + m \\cdot \\log m)$ where $n$ is the size of the array `g` and $m$ is the size of the array `s`. \n\n    Sorting an array of length $k$ takes $O (k \\cdot\\log k)$, we need to sort two given arrays. The while loop iterates over each cookie and child once, taking $O(m + n)$. To sum up, the overall time complexity is $O (n \\cdot \\log n + m \\cdot \\log m)$\n\n* Space Complexity:  $O(m + n)$ or $O(\\log m + \\log n)$ \n    - Some extra space is used when we sort $s$ and $g$ in place. The space complexity of the sorting algorithm depends on the programming language.\n        - In Python, the `sort` method sorts a list using the Timesort algorithm which is a combination of Merge Sort and Insertion Sort and has $$O(n + m)$$ additional space.\n        - In C++, the sort() function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worse-case space complexity of $$O(\\log n + \\log m)$$.\n        - In Java, Arrays.sort() is implemented using a variant of the Quick Sort algorithm which has a space complexity of $$O(\\log n + \\log m)$$ for sorting two arrays."
+}

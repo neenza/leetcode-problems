@@ -1,0 +1,63 @@
+{
+  "title": "Find Common Elements Between Two Arrays",
+  "problem_id": "3206",
+  "frontend_id": "2956",
+  "difficulty": "Easy",
+  "problem_slug": "find-common-elements-between-two-arrays",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given two integer arrays nums1 and nums2 of sizes n and m, respectively. Calculate the following values:\nReturn [answer1,answer2].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [2,3,2], nums2 = [1,2]\nOutput: [2,1]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/26/3488_find_common_elements_between_two_arrays-t1.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [4,3,2,3,1], nums2 = [2,2,5,2,3,6]\nOutput: [3,4]\nExplanation:\nThe elements at indices 1, 2, and 3 in nums1 exist in nums2 as well. So answer1 is 3.\nThe elements at indices 0, 1, 3, and 4 in nums2 exist in nums1 . So answer2 is 4.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [3,4,2,3], nums2 = [1,5]\nOutput: [0,0]\nExplanation:\nNo numbers are common between nums1 and nums2 , so answer is [0,0].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length",
+    "m == nums2.length",
+    "1 <= n, m <= 100",
+    "1 <= nums1[i], nums2[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since the constraints are small, you can use brute force to solve the problem.",
+    "For each element <code>i</code> in <code>nums1</code>, iterate over all elements of <code>nums2</code> to find if it occurs."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findIntersectionValues(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findIntersectionValues(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findIntersectionValues(self, nums1: List[int], nums2: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findIntersectionValues(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindIntersectionValues(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar findIntersectionValues = function(nums1, nums2) {\n    \n};",
+    "typescript": "function findIntersectionValues(nums1: number[], nums2: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer[]\n     */\n    function findIntersectionValues($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findIntersectionValues(_ nums1: [Int], _ nums2: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findIntersectionValues(nums1: IntArray, nums2: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findIntersectionValues(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func findIntersectionValues(nums1 []int, nums2 []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer[]}\ndef find_intersection_values(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def findIntersectionValues(nums1: Array[Int], nums2: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_intersection_values(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-intersection-values nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec find_intersection_values(Nums1 :: [integer()], Nums2 :: [integer()]) -> [integer()].\nfind_intersection_values(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_intersection_values(nums1 :: [integer], nums2 :: [integer]) :: [integer]\n  def find_intersection_values(nums1, nums2) do\n    \n  end\nend"
+  }
+}

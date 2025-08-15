@@ -1,0 +1,51 @@
+{
+  "title": "Check Divisibility by Digit Sum and Product",
+  "problem_id": "3918",
+  "frontend_id": "3622",
+  "difficulty": "Easy",
+  "problem_slug": "check-divisibility-by-digit-sum-and-product",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given a positive integer n. Determine whether n is divisible by the sum of the following two values:\nReturn true if n is divisible by this sum; otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 99\nOutput: true\nExplanation:\nSince 99 is divisible by the sum (9 + 9 = 18) plus product (9 * 9 = 81) of its digits (total 99), the output is true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 23\nOutput: false\nExplanation:\nSince 23 is not divisible by the sum (2 + 3 = 5) plus product (2 * 3 = 6) of its digits (total 11), the output is false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Compute the digits' sum and product, then check if <code>n % (sum + product) == 0</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkDivisibility(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkDivisibility(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkDivisibility(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkDivisibility(self, n: int) -> bool:\n        ",
+    "c": "bool checkDivisibility(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckDivisibility(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar checkDivisibility = function(n) {\n    \n};",
+    "typescript": "function checkDivisibility(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function checkDivisibility($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkDivisibility(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkDivisibility(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkDivisibility(int n) {\n    \n  }\n}",
+    "golang": "func checkDivisibility(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef check_divisibility(n)\n    \nend",
+    "scala": "object Solution {\n    def checkDivisibility(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_divisibility(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-divisibility n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec check_divisibility(N :: integer()) -> boolean().\ncheck_divisibility(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_divisibility(n :: integer) :: boolean\n  def check_divisibility(n) do\n    \n  end\nend"
+  }
+}

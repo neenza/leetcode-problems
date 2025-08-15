@@ -1,0 +1,54 @@
+{
+  "title": "Maximum Length of Pair Chain",
+  "problem_id": "646",
+  "frontend_id": "646",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-length-of-pair-chain",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an array of n pairs pairs where pairs[i] = [lefti, righti] and lefti < righti.\nA pair p2 = [c, d] follows a pair p1 = [a, b] if b < c. A chain of pairs can be formed in this fashion.\nReturn the length longest chain which can be formed.\nYou do not need to use up all the given intervals. You can select pairs in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pairs = [[1,2],[2,3],[3,4]]\nOutput: 2\nExplanation: The longest chain is [1,2] -> [3,4].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pairs = [[1,2],[7,8],[4,5]]\nOutput: 3\nExplanation: The longest chain is [1,2] -> [4,5] -> [7,8].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == pairs.length",
+    "1 <= n <= 1000",
+    "-1000 <= lefti < righti <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findLongestChain(vector<vector<int>>& pairs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLongestChain(int[][] pairs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLongestChain(self, pairs):\n        \"\"\"\n        :type pairs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLongestChain(self, pairs: List[List[int]]) -> int:\n        ",
+    "c": "int findLongestChain(int** pairs, int pairsSize, int* pairsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindLongestChain(int[][] pairs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} pairs\n * @return {number}\n */\nvar findLongestChain = function(pairs) {\n    \n};",
+    "typescript": "function findLongestChain(pairs: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $pairs\n     * @return Integer\n     */\n    function findLongestChain($pairs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLongestChain(_ pairs: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLongestChain(pairs: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findLongestChain(List<List<int>> pairs) {\n    \n  }\n}",
+    "golang": "func findLongestChain(pairs [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} pairs\n# @return {Integer}\ndef find_longest_chain(pairs)\n    \nend",
+    "scala": "object Solution {\n    def findLongestChain(pairs: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_longest_chain(pairs: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-longest-chain pairs)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_longest_chain(Pairs :: [[integer()]]) -> integer().\nfind_longest_chain(Pairs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_longest_chain(pairs :: [[integer]]) :: integer\n  def find_longest_chain(pairs) do\n    \n  end\nend"
+  }
+}

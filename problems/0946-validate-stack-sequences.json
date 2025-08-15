@@ -1,0 +1,55 @@
+{
+  "title": "Validate Stack Sequences",
+  "problem_id": "983",
+  "frontend_id": "946",
+  "difficulty": "Medium",
+  "problem_slug": "validate-stack-sequences",
+  "topics": [
+    "Array",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1]\nOutput: true\nExplanation: We might do the following sequence:\npush(1), push(2), push(3), push(4),\npop() -> 4,\npush(5),\npop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: pushed = [1,2,3,4,5], popped = [4,3,5,1,2]\nOutput: false\nExplanation: 1 cannot be popped before 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pushed.length <= 1000",
+    "0 <= pushed[i] <= 1000",
+    "All the elements of pushed are unique.",
+    "popped.length == pushed.length",
+    "popped is a permutation of pushed."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validateStackSequences(int[] pushed, int[] popped) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validateStackSequences(self, pushed, popped):\n        \"\"\"\n        :type pushed: List[int]\n        :type popped: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:\n        ",
+    "c": "bool validateStackSequences(int* pushed, int pushedSize, int* popped, int poppedSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ValidateStackSequences(int[] pushed, int[] popped) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} pushed\n * @param {number[]} popped\n * @return {boolean}\n */\nvar validateStackSequences = function(pushed, popped) {\n    \n};",
+    "typescript": "function validateStackSequences(pushed: number[], popped: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $pushed\n     * @param Integer[] $popped\n     * @return Boolean\n     */\n    function validateStackSequences($pushed, $popped) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validateStackSequences(pushed: IntArray, popped: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool validateStackSequences(List<int> pushed, List<int> popped) {\n    \n  }\n}",
+    "golang": "func validateStackSequences(pushed []int, popped []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} pushed\n# @param {Integer[]} popped\n# @return {Boolean}\ndef validate_stack_sequences(pushed, popped)\n    \nend",
+    "scala": "object Solution {\n    def validateStackSequences(pushed: Array[Int], popped: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn validate_stack_sequences(pushed: Vec<i32>, popped: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (validate-stack-sequences pushed popped)\n  (-> (listof exact-integer?) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec validate_stack_sequences(Pushed :: [integer()], Popped :: [integer()]) -> boolean().\nvalidate_stack_sequences(Pushed, Popped) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec validate_stack_sequences(pushed :: [integer], popped :: [integer]) :: boolean\n  def validate_stack_sequences(pushed, popped) do\n    \n  end\nend"
+  }
+}

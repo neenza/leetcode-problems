@@ -1,0 +1,63 @@
+{
+  "title": "Find Minimum Time to Reach Last Room I",
+  "problem_id": "3627",
+  "frontend_id": "3341",
+  "difficulty": "Medium",
+  "problem_slug": "find-minimum-time-to-reach-last-room-i",
+  "topics": [
+    "Array",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Shortest Path"
+  ],
+  "description": "There is a dungeon with n x m rooms arranged as a grid.\nYou are given a 2D array moveTime of size n x m, where moveTime[i][j] represents the minimum time in seconds after which the room opens and can be moved to. You start from the room (0, 0) at time t = 0 and can move to an adjacent room. Moving between adjacent rooms takes exactly one second.\nReturn the minimum time to reach the room (n - 1, m - 1).\nTwo rooms are adjacent if they share a common wall, either horizontally or vertically.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: moveTime = [[0,4],[4,4]]\nOutput: 6\nExplanation:\nThe minimum time required is 6 seconds.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: moveTime = [[0,0,0],[0,0,0]]\nOutput: 3\nExplanation:\nThe minimum time required is 3 seconds.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: moveTime = [[0,1],[1,2]]\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == moveTime.length <= 50",
+    "2 <= m == moveTime[i].length <= 50",
+    "0 <= moveTime[i][j] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use shortest path algorithms."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minTimeToReach(vector<vector<int>>& moveTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minTimeToReach(int[][] moveTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTimeToReach(self, moveTime):\n        \"\"\"\n        :type moveTime: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTimeToReach(self, moveTime: List[List[int]]) -> int:\n        ",
+    "c": "int minTimeToReach(int** moveTime, int moveTimeSize, int* moveTimeColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinTimeToReach(int[][] moveTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} moveTime\n * @return {number}\n */\nvar minTimeToReach = function(moveTime) {\n    \n};",
+    "typescript": "function minTimeToReach(moveTime: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $moveTime\n     * @return Integer\n     */\n    function minTimeToReach($moveTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTimeToReach(_ moveTime: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTimeToReach(moveTime: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTimeToReach(List<List<int>> moveTime) {\n    \n  }\n}",
+    "golang": "func minTimeToReach(moveTime [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} move_time\n# @return {Integer}\ndef min_time_to_reach(move_time)\n    \nend",
+    "scala": "object Solution {\n    def minTimeToReach(moveTime: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_time_to_reach(move_time: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-time-to-reach moveTime)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_time_to_reach(MoveTime :: [[integer()]]) -> integer().\nmin_time_to_reach(MoveTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_time_to_reach(move_time :: [[integer]]) :: integer\n  def min_time_to_reach(move_time) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Shortest Path + Dijkstra\n\n#### Intuition\n\nWe are given a two-dimensional array of size $n \\times m$, and the task is to find the shortest time required to move from position $(0, 0)$ to position $(n - 1, m - 1)$. While moving, one can go to any of the four adjacent positions (up, down, left, right), and each position has an associated earliest move time, meaning one can only move to that position after that time.\n\nTherefore, the two-dimensional array can be regarded as an undirected graph of size $n \\times m$, where the position $(i, j)$ has undirected edges connecting it to $(i - 1, j)$, $(i + 1, j)$, $(i, j - 1)$, and $(i, j + 1)$. We are required to find the shortest path from $(0, 0)$ to $(n - 1, m - 1)$.\n\nThere are many algorithms for finding the shortest path, and here we choose Dijkstra's algorithm. You can refer to the editorial of [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/editorial/) to understand the basic process of Dijkstra's algorithm.\n\nUnlike the standard Dijkstra algorithm, in this problem we define $d[i][j]$ to represent the shortest time required to reach $(i, j)$ from $(0, 0)$. The time to move from $(i, j)$ to an adjacent coordinate $(u, v)$ is given by $\\max(d[i][j], \\textit{moveTime}[u][v]) + 1$. The rest of the process is consistent with Dijkstra's algorithm.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ and $m$ be the number of rows and columns in $\\textit{moveTime}$, respectively.\n\n- Time complexity: $O(nm \\log(nm))$.\n\nThere are $nm$ points and $O(nm)$ edges. We implement Dijkstra's algorithm using a min-heap, performing at most $O(nm)$ insertions and deletions. Each heap operation takes $O(\\log(nm))$ time, so the overall time complexity is $O(nm \\log(nm))$.\n\n- Space complexity: $O(nm)$."
+}

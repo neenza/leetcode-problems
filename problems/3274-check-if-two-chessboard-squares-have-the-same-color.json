@@ -1,0 +1,54 @@
+{
+  "title": "Check if Two Chessboard Squares Have the Same Color",
+  "problem_id": "3553",
+  "frontend_id": "3274",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-two-chessboard-squares-have-the-same-color",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "You are given two strings, coordinate1 and coordinate2, representing the coordinates of a square on an 8 x 8 chessboard.\nBelow is the chessboard for reference.\nReturn true if these two squares have the same color and false otherwise.\nThe coordinate will always represent a valid chessboard square. The coordinate will always have the letter first (indicating its column), and the number second (indicating its row).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coordinate1 = \"a1\", coordinate2 = \"c3\"\nOutput: true\nExplanation:\nBoth squares are black.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coordinate1 = \"a1\", coordinate2 = \"h3\"\nOutput: false\nExplanation:\nSquare \"a1\" is black and \"h3\" is white.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "coordinate1.length == coordinate2.length == 2",
+    "'a' <= coordinate1[0], coordinate2[0] <= 'h'",
+    "'1' <= coordinate1[1], coordinate2[1] <= '8'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The color of the chessboard is black the sum of row coordinates and column coordinates is even. Otherwise, it's white."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkTwoChessboards(string coordinate1, string coordinate2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkTwoChessboards(String coordinate1, String coordinate2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkTwoChessboards(self, coordinate1, coordinate2):\n        \"\"\"\n        :type coordinate1: str\n        :type coordinate2: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkTwoChessboards(self, coordinate1: str, coordinate2: str) -> bool:\n        ",
+    "c": "bool checkTwoChessboards(char* coordinate1, char* coordinate2) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckTwoChessboards(string coordinate1, string coordinate2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} coordinate1\n * @param {string} coordinate2\n * @return {boolean}\n */\nvar checkTwoChessboards = function(coordinate1, coordinate2) {\n    \n};",
+    "typescript": "function checkTwoChessboards(coordinate1: string, coordinate2: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $coordinate1\n     * @param String $coordinate2\n     * @return Boolean\n     */\n    function checkTwoChessboards($coordinate1, $coordinate2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkTwoChessboards(_ coordinate1: String, _ coordinate2: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkTwoChessboards(coordinate1: String, coordinate2: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkTwoChessboards(String coordinate1, String coordinate2) {\n    \n  }\n}",
+    "golang": "func checkTwoChessboards(coordinate1 string, coordinate2 string) bool {\n    \n}",
+    "ruby": "# @param {String} coordinate1\n# @param {String} coordinate2\n# @return {Boolean}\ndef check_two_chessboards(coordinate1, coordinate2)\n    \nend",
+    "scala": "object Solution {\n    def checkTwoChessboards(coordinate1: String, coordinate2: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_two_chessboards(coordinate1: String, coordinate2: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-two-chessboards coordinate1 coordinate2)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec check_two_chessboards(Coordinate1 :: unicode:unicode_binary(), Coordinate2 :: unicode:unicode_binary()) -> boolean().\ncheck_two_chessboards(Coordinate1, Coordinate2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_two_chessboards(coordinate1 :: String.t, coordinate2 :: String.t) :: boolean\n  def check_two_chessboards(coordinate1, coordinate2) do\n    \n  end\nend"
+  }
+}

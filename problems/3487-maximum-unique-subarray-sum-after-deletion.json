@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Unique Subarray Sum After Deletion",
+  "problem_id": "3788",
+  "frontend_id": "3487",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-unique-subarray-sum-after-deletion",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy"
+  ],
+  "description": "You are given an integer array nums.\nYou are allowed to delete any number of elements from nums without making it empty. After performing the deletions, select a subarray of nums such that:\nReturn the maximum sum of such a subarray.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: 15\nExplanation:\nSelect the entire array without deleting any element to obtain the maximum sum.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,0,1,1]\nOutput: 1\nExplanation:\nDelete the element nums[0] == 1 , nums[1] == 1 , nums[2] == 0 , and nums[3] == 1 . Select the entire array [1] to obtain the maximum sum.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,-1,-2,1,0,-1]\nOutput: 3\nExplanation:\nDelete the elements nums[2] == -1 and nums[3] == -2 , and select the subarray [2, 1] from [1, 2, 1, 0, -1] to obtain the maximum sum.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the maximum element in the array is less than zero, the answer is the maximum element.",
+    "Otherwise, the answer is the sum of all unique values that are greater than or equal to zero."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSum(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxSum(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSum = function(nums) {\n    \n};",
+    "typescript": "function maxSum(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSum(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSum(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSum(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxSum(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxSum(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_sum(Nums :: [integer()]) -> integer().\nmax_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum(nums :: [integer]) :: integer\n  def max_sum(nums) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Duplicate Removal for Positive Numbers\n\n#### Intuition\n\nThe problem essentially requires finding a non-empty subsequence of non-repeating elements that gives the maximum sum. To achieve this, we can greedily collect all positive numbers in a hash set to ensure uniqueness and then sum them. If there are no positive numbers, we return the maximum value from the array.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n  \n  We traverse the array exactly once, and each operation on the hash table takes constant time in the average case.\n\n- Space complexity: $O(n)$.\n  \n  This comes mainly from the space used by the hash table to store the positive numbers."
+}

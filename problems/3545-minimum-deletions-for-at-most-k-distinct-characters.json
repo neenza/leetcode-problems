@@ -1,0 +1,65 @@
+{
+  "title": "Minimum Deletions for At Most K Distinct Characters",
+  "problem_id": "3871",
+  "frontend_id": "3545",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-deletions-for-at-most-k-distinct-characters",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters, and an integer k.\nYour task is to delete some (possibly none) of the characters in the string so that the number of distinct characters in the resulting string is at most k.\nReturn the minimum number of deletions required to achieve this.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\", k = 2\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aabb\", k = 2\nOutput: 0\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"yyyzz\", k = 1\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 16",
+    "1 <= k <= 16",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Compute the frequency of each character in <code>s</code> and collect these into a list <code>counts</code>.",
+    "Sort <code>counts</code> in ascending order.",
+    "Let <code>d</code> = (number of distinct characters) – <code>k</code>. If <code>d <= 0</code>, return 0.",
+    "Otherwise, the minimum deletions is the sum of the first <code>d</code> entries in <code>counts</code> (removing the <code>d</code> least-frequent characters)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minDeletion(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDeletion(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDeletion(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDeletion(self, s: str, k: int) -> int:\n        ",
+    "c": "int minDeletion(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinDeletion(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar minDeletion = function(s, k) {\n    \n};",
+    "typescript": "function minDeletion(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function minDeletion($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDeletion(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDeletion(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minDeletion(String s, int k) {\n    \n  }\n}",
+    "golang": "func minDeletion(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef min_deletion(s, k)\n    \nend",
+    "scala": "object Solution {\n    def minDeletion(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_deletion(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-deletion s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_deletion(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmin_deletion(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_deletion(s :: String.t, k :: integer) :: integer\n  def min_deletion(s, k) do\n    \n  end\nend"
+  }
+}

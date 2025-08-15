@@ -1,0 +1,60 @@
+{
+  "title": "Chalkboard XOR Game",
+  "problem_id": "828",
+  "frontend_id": "810",
+  "difficulty": "Hard",
+  "problem_slug": "chalkboard-xor-game",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation",
+    "Brainteaser",
+    "Game Theory"
+  ],
+  "description": "You are given an array of integers nums represents the numbers written on a chalkboard.\nAlice and Bob take turns erasing exactly one number from the chalkboard, with Alice starting first. If erasing a number causes the bitwise XOR of all the elements of the chalkboard to become 0, then that player loses. The bitwise XOR of one element is that element itself, and the bitwise XOR of no elements is 0.\nAlso, if any player starts their turn with the bitwise XOR of all the elements of the chalkboard equal to 0, then that player wins.\nReturn true if and only if Alice wins the game, assuming both players play optimally.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,1,2]\nOutput: false\nExplanation: \nAlice has two choices: erase 1 or erase 2. \nIf she erases 1, the nums array becomes [1, 2]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 2 = 3. Now Bob can remove any element he wants, because Alice will be the one to erase the last element and she will lose. \nIf Alice erases 2 first, now nums become [1, 1]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 1 = 0. Alice will lose.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1]\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3]\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "0 <= nums[i] < 216"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool xorGame(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean xorGame(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def xorGame(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def xorGame(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool xorGame(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool XorGame(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar xorGame = function(nums) {\n    \n};",
+    "typescript": "function xorGame(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function xorGame($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func xorGame(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun xorGame(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool xorGame(List<int> nums) {\n    \n  }\n}",
+    "golang": "func xorGame(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef xor_game(nums)\n    \nend",
+    "scala": "object Solution {\n    def xorGame(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn xor_game(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (xor-game nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec xor_game(Nums :: [integer()]) -> boolean().\nxor_game(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec xor_game(nums :: [integer]) :: boolean\n  def xor_game(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Mathematical [Accepted]\n\n**Intuition and Algorithm**\n\nAs in the problem statement, if the `XOR` of the entire array is `0`, then Alice wins.\n\nIf the `XOR` condition is never triggered, then clearly Alice wins if and only if there are an even number of elements, as every player always has a move.\n\nNow for the big leap in intuition.  Actually, Alice always has a move when there are an even number of elements.  If $$ S = x_1 \\oplus x_2 \\oplus \\cdots x_n \\neq 0 $$, but there are no possible moves ($$ S \\oplus x_i = 0 $$), then $$(S \\oplus x_1) \\oplus (S \\oplus x_2) \\oplus \\cdots \\oplus (S \\oplus x_n) = (S \\oplus \\cdots \\oplus S) \\oplus (x_1 \\oplus x_2 \\oplus \\cdots \\oplus x_n) = 0 \\oplus S \\neq 0$$, a contradiction.\n\nSimilarly, if there are an odd number of elements, then Bob always faces an even number of elements, and has a move.  So the answer is just the parity of the number of elements in the array.\n\nThose that are familiar with the Sprague-Grundy theorem may know that this game is a misère-form game, meaning the theorem does not apply, and giving a big hint that there may exist a simpler solution.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `nums`.\n\n* Space Complexity: $$O(1)$$."
+}

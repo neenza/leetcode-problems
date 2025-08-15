@@ -1,0 +1,42 @@
+{
+  "title": "Chunk Array",
+  "problem_id": "2798",
+  "frontend_id": "2677",
+  "difficulty": "Easy",
+  "problem_slug": "chunk-array",
+  "topics": [],
+  "description": "Given an array arr and a chunk size size, return a chunked array.\nA chunked array contains the original elements in arr, but consists of subarrays each of length size. The length of the last subarray may be less than size if arr.length is not evenly divisible by size.\nPlease solve it without using lodash's _.chunk function.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [1,2,3,4,5], size = 1\nOutput: [[1],[2],[3],[4],[5]]\nExplanation: The arr has been split into subarrays each with 1 element.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [1,9,6,3,2], size = 3\nOutput: [[1,9,6],[3,2]]\nExplanation: The arr has been split into subarrays with 3 elements. However, only two elements are left for the 2nd subarray.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [8,5,3,2,6], size = 6\nOutput: [[8,5,3,2,6]]\nExplanation: Size is greater than arr.length thus all elements are in the first subarray.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: arr = [], size = 1\nOutput: []\nExplanation: There are no elements to be chunked so an empty array is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "arr is a string representing the array.",
+    "2 <= arr.length <= 105",
+    "1 <= size <= arr.length + 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "javascript": "/**\n * @param {Array} arr\n * @param {number} size\n * @return {Array}\n */\nvar chunk = function(arr, size) {\n    \n};\n",
+    "typescript": "type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };\ntype Obj = Record<string, JSONValue> | Array<JSONValue>;\n\nfunction chunk(arr: Obj[], size: number): Obj[][] {\n    \n};\n"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Number of Possible Sets of Closing Branches",
+  "problem_id": "3217",
+  "frontend_id": "2959",
+  "difficulty": "Hard",
+  "problem_slug": "number-of-possible-sets-of-closing-branches",
+  "topics": [
+    "Bit Manipulation",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Enumeration",
+    "Shortest Path"
+  ],
+  "description": "There is a company with n branches across the country, some of which are connected by roads. Initially, all branches are reachable from each other by traveling some roads.\nThe company has realized that they are spending an excessive amount of time traveling between their branches. As a result, they have decided to close down some of these branches (possibly none). However, they want to ensure that the remaining branches have a distance of at most maxDistance from each other.\nThe distance between two branches is the minimum total traveled length needed to reach one branch from another.\nYou are given integers n, maxDistance, and a 0-indexed 2D array roads, where roads[i] = [ui, vi, wi] represents the undirected road between branches ui and vi with length wi.\nReturn the number of possible sets of closing branches, so that any branch has a distance of at most maxDistance from any other.\nNote that, after closing a branch, the company will no longer have access to any roads connected to it.\nNote that, multiple roads are allowed.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, maxDistance = 5, roads = [[0,1,2],[1,2,10],[0,2,10]]\nOutput: 5\nExplanation: The possible sets of closing branches are:\n- The set [2], after closing, active branches are [0,1] and they are reachable to each other within distance 2.\n- The set [0,1], after closing, the active branch is [2].\n- The set [1,2], after closing, the active branch is [0].\n- The set [0,2], after closing, the active branch is [1].\n- The set [0,1,2], after closing, there are no active branches.\nIt can be proven, that there are only 5 possible sets of closing branches.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/08/example11.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, maxDistance = 5, roads = [[0,1,20],[0,1,10],[1,2,2],[0,2,2]]\nOutput: 7\nExplanation: The possible sets of closing branches are:\n- The set [], after closing, active branches are [0,1,2] and they are reachable to each other within distance 4.\n- The set [0], after closing, active branches are [1,2] and they are reachable to each other within distance 2.\n- The set [1], after closing, active branches are [0,2] and they are reachable to each other within distance 2.\n- The set [0,1], after closing, the active branch is [2].\n- The set [1,2], after closing, the active branch is [0].\n- The set [0,2], after closing, the active branch is [1].\n- The set [0,1,2], after closing, there are no active branches.\nIt can be proven, that there are only 7 possible sets of closing branches.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/08/example22.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 1, maxDistance = 10, roads = []\nOutput: 2\nExplanation: The possible sets of closing branches are:\n- The set [], after closing, the active branch is [0].\n- The set [0], after closing, there are no active branches.\nIt can be proven, that there are only 2 possible sets of closing branches.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/11/08/example22.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 10",
+    "1 <= maxDistance <= 105",
+    "0 <= roads.length <= 1000",
+    "roads[i].length == 3",
+    "0 <= ui, vi <= n - 1",
+    "ui != vi",
+    "1 <= wi <= 1000",
+    "All branches are reachable from each other by traveling some roads."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try all the possibilities of closing branches.",
+    "On the vertices that are not closed, use Floyd-Warshall algorithm to find the shortest paths."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfSets(int n, int maxDistance, vector<vector<int>>& roads) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSets(int n, int maxDistance, int[][] roads) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSets(self, n, maxDistance, roads):\n        \"\"\"\n        :type n: int\n        :type maxDistance: int\n        :type roads: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSets(self, n: int, maxDistance: int, roads: List[List[int]]) -> int:\n        ",
+    "c": "int numberOfSets(int n, int maxDistance, int** roads, int roadsSize, int* roadsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfSets(int n, int maxDistance, int[][] roads) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} maxDistance\n * @param {number[][]} roads\n * @return {number}\n */\nvar numberOfSets = function(n, maxDistance, roads) {\n    \n};",
+    "typescript": "function numberOfSets(n: number, maxDistance: number, roads: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $maxDistance\n     * @param Integer[][] $roads\n     * @return Integer\n     */\n    function numberOfSets($n, $maxDistance, $roads) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSets(_ n: Int, _ maxDistance: Int, _ roads: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSets(n: Int, maxDistance: Int, roads: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSets(int n, int maxDistance, List<List<int>> roads) {\n    \n  }\n}",
+    "golang": "func numberOfSets(n int, maxDistance int, roads [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} max_distance\n# @param {Integer[][]} roads\n# @return {Integer}\ndef number_of_sets(n, max_distance, roads)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSets(n: Int, maxDistance: Int, roads: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_sets(n: i32, max_distance: i32, roads: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-sets n maxDistance roads)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec number_of_sets(N :: integer(), MaxDistance :: integer(), Roads :: [[integer()]]) -> integer().\nnumber_of_sets(N, MaxDistance, Roads) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_sets(n :: integer, max_distance :: integer, roads :: [[integer]]) :: integer\n  def number_of_sets(n, max_distance, roads) do\n    \n  end\nend"
+  }
+}

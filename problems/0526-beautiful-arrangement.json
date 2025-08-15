@@ -1,0 +1,54 @@
+{
+  "title": "Beautiful Arrangement",
+  "problem_id": "526",
+  "frontend_id": "526",
+  "difficulty": "Medium",
+  "problem_slug": "beautiful-arrangement",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "Suppose you have n integers labeled 1 through n. A permutation of those n integers perm (1-indexed) is considered a beautiful arrangement if for every i (1 <= i <= n), either of the following is true:\nGiven an integer n, return the number of the beautiful arrangements that you can construct.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: 2\nExplanation: \nThe first beautiful arrangement is [1,2]:\n    - perm[1] = 1 is divisible by i = 1\n    - perm[2] = 2 is divisible by i = 2\nThe second beautiful arrangement is [2,1]:\n    - perm[1] = 2 is divisible by i = 1\n    - i = 2 is divisible by perm[2] = 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: 1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 15"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countArrangement(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countArrangement(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countArrangement(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countArrangement(self, n: int) -> int:\n        ",
+    "c": "int countArrangement(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountArrangement(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countArrangement = function(n) {\n    \n};",
+    "typescript": "function countArrangement(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countArrangement($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countArrangement(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countArrangement(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countArrangement(int n) {\n    \n  }\n}",
+    "golang": "func countArrangement(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_arrangement(n)\n    \nend",
+    "scala": "object Solution {\n    def countArrangement(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_arrangement(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-arrangement n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_arrangement(N :: integer()) -> integer().\ncount_arrangement(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_arrangement(n :: integer) :: integer\n  def count_arrangement(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Brute Force [Time Limit Exceeded]\n\n#### Algorithm\n\nIn the brute force method, we can find out all the arrays that can be formed using the numbers from 1 to N(by creating every possible permutation of the given elements). Then, we iterate over all the elements of every permutation generated and check for the required conditions of divisibility.\n\nIn order to generate all the possible pairings, we make use of a function `permute(nums, current_index)`. This function creates all the possible permutations of the elements of the given array.\n\nTo do so, `permute` takes the index of the current element $$current_index$$ as one of the arguments. Then, it swaps the current element with every other element in the array, lying towards its right, so as to generate a new ordering of the array elements. After the swapping has been done, it makes another call to permute but this time with the index of the next element in the array. While returning back, we reverse the swapping done in the current function call.\n\nThus, when we reach the end of the array, a new ordering of the array's elements is generated. The following animation depicts the process of generating the permutations.\n\n!?!../Documents/561_Array.json:1000,563!?!\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity : $$O(n!)$$. A total of $$n!$$ permutations will be generated for an array of length $$n$$.\n\n* Space complexity : $$O(n)$$. The depth of the recursion tree can go upto $$n$$. $$nums$$ array of size $$n$$ is used.\n\n---\n### Approach #2 Better Brute Force [Accepted]\n\n#### Algorithm\n\nIn the brute force approach, we create the full array for every permutation and then check the array for the given divisibilty conditions. But this method can be optimized to a great extent. To do so, we can keep checking the elements while being added to the permutation array at every step for the divisibility condition and  can stop creating it any further as soon as we find out the element just added to the permutation violates the divisiblity condition. \n\n#### Implementation#### Complexity Analysis\n\n* Time complexity : $$O(k)$$. $$k$$ refers to the number of valid permutations.\n\n* Space complexity : $$O(n)$$. The depth of recursion tree can go upto $$n$$. Further, $$nums$$ array of size $$n$$ is used, where, $$n$$ is the given number.\n\n---\n\n### Approach #3 Backtracking [Accepted]\n\n#### Algorithm\n\n\nThe idea behind this approach is simple. We try to create all the permutations of numbers from 1 to N. We can fix one number at a particular position and check for the divisibility criteria of that number at the particular position. But, we need to keep a track of the numbers which have already been considered earlier so that they aren't reconsidered while generating the permutations. If the current \nnumber doesn't satisfy the divisibility criteria, we can leave all the permutations that can be generated with that number at the particular position. This helps to prune the search space of the permutations to a great extent. We do so by trying to place each of the numbers at each position.\n\n\nWe make use of a visited array of size $$N$$. Here, $$visited[i]$$ refers to the $$i^{th}$$ number being already placed/not placed in the array being formed till now(True indicates that the number has already been placed).\n\nWe make use of a `calculate` function, which puts all the numbers pending numbers from 1 to N(i.e. not placed till now in the array), indicated by a $$False$$ at the corresponding $$visited[i]$$ position, and tries to create all the permutations with those numbers starting from the $$pos$$ index onwards in the current array. While putting the $$pos^{th}$$ number, we check whether the $$i^{th}$$ number satisfies the divisibility criteria on the go i.e. we continue forward with creating the permutations with the number $$i$$ at the $$pos^{th}$$ position only if the number $$i$$ and $$pos$$ satisfy the given criteria. Otherwise, we continue with putting the next numbers at the same position and keep on generating the permutations.\n\nLook at the animation below for a better understanding of the methodology:\n\n!?!../Documents/526_Beautiful.json:1000,563!?!\n\n#### Implementation#### Complexity Analysis\n\n* Time complexity : $$O(k)$$. $$k$$ refers to the number of valid permutations.\n\n* Space complexity : $$O(n)$$. $$visited$$ array of size $$n$$ is used. The depth of recursion tree will also go upto $$n$$. Here, $$n$$ refers to the given integer $$n$$.\n\n---"
+}

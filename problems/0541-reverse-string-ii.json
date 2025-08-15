@@ -1,0 +1,53 @@
+{
+  "title": "Reverse String II",
+  "problem_id": "541",
+  "frontend_id": "541",
+  "difficulty": "Easy",
+  "problem_slug": "reverse-string-ii",
+  "topics": [
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.\nIf there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcdefg\", k = 2\nOutput: \"bacdfeg\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcd\", k = 2\nOutput: \"bacd\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of only lowercase English letters.",
+    "1 <= k <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string reverseStr(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseStr(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reverseStr(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reverseStr(self, s: str, k: int) -> str:\n        ",
+    "c": "char* reverseStr(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ReverseStr(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar reverseStr = function(s, k) {\n    \n};",
+    "typescript": "function reverseStr(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function reverseStr($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reverseStr(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reverseStr(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reverseStr(String s, int k) {\n    \n  }\n}",
+    "golang": "func reverseStr(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef reverse_str(s, k)\n    \nend",
+    "scala": "object Solution {\n    def reverseStr(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reverse_str(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (reverse-str s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec reverse_str(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nreverse_str(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reverse_str(s :: String.t, k :: integer) :: String.t\n  def reverse_str(s, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Direct [Accepted]\n\n**Intuition and Algorithm**\n\nWe will reverse each block of `2k` characters directly.\n\nEach block starts at a multiple of `2k`: for example, `0, 2k, 4k, 6k, ...`. One thing to be careful about is we may not reverse each block if there aren't enough characters.\n\nTo reverse a block of characters from `i` to `j`, we can swap characters in positions `i++` and `j--`.**Complexity Analysis**\n\n* Time Complexity: $$O(N)$$, where $$N$$ is the size of `s`. We build a helper array, plus reverse about half the characters in `s`.\n\n* Space Complexity: $$O(N)$$, the size of `a`."
+}

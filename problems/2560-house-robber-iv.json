@@ -1,0 +1,60 @@
+{
+  "title": "House Robber IV",
+  "problem_id": "2690",
+  "frontend_id": "2560",
+  "difficulty": "Medium",
+  "problem_slug": "house-robber-iv",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "There are several consecutive houses along a street, each of which has some money inside. There is also a robber, who wants to steal money from the homes, but he refuses to steal from adjacent homes.\nThe capability of the robber is the maximum amount of money he steals from one house of all the houses he robbed.\nYou are given an integer array nums representing how much money is stashed in each house. More formally, the ith house from the left has nums[i] dollars.\nYou are also given an integer k, representing the minimum number of houses the robber will steal from. It is always possible to steal at least k houses.\nReturn the minimum capability of the robber out of all the possible ways to steal at least k houses.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,5,9], k = 2\nOutput: 5\nExplanation: \nThere are three ways to rob at least 2 houses:\n- Rob the houses at indices 0 and 2. Capability is max(nums[0], nums[2]) = 5.\n- Rob the houses at indices 0 and 3. Capability is max(nums[0], nums[3]) = 9.\n- Rob the houses at indices 1 and 3. Capability is max(nums[1], nums[3]) = 9.\nTherefore, we return min(5, 9, 9) = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,7,9,3,1], k = 2\nOutput: 2\nExplanation: There are 7 ways to rob the houses. The way which leads to minimum capability is to rob the house at index 0 and 4. Return max(nums[0], nums[4]) = 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= (nums.length + 1)/2"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use binary search to find the minimum value of a non-contiguous subsequence of a given size k?",
+    "Initialize the search range with the minimum and maximum elements of the input array.",
+    "Use a check function to determine if it is possible to select k non-consecutive elements that are less than or equal to the current \"guess\" value.",
+    "Adjust the search range based on the outcome of the check function, until the range converges and the minimum value is found."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCapability(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCapability(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCapability(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCapability(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minCapability(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCapability(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minCapability = function(nums, k) {\n    \n};",
+    "typescript": "function minCapability(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minCapability($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCapability(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCapability(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCapability(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minCapability(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_capability(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minCapability(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_capability(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-capability nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_capability(Nums :: [integer()], K :: integer()) -> integer().\nmin_capability(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_capability(nums :: [integer], k :: integer) :: integer\n  def min_capability(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThis is yet another problem based on the **House Robber** series! This article will assume some prior knowledge of the [original version](https://leetcode.com/problems/house-robber/), so you may want to solve that before this one. So before diving in, let's quickly recall the core idea behind the original problem.\n\nIn the classic House Robber problem, the goal is to maximize the total amount stolen from a row of houses while following one key restriction: the robber cannot rob two consecutive houses. This forces the robber into a branched decision making process that at each house, they must choose whether to rob it or skip it. If they robs it, they must add its value to the best amount stolen from two houses before. If they skips it, they simply takes the best amount stolen from the previous house. This naturally leads to a recursive relationship:\n\n`maxAmount(houseNumber) = max(maxAmount(houseNumber - 1), maxAmount(houseNumber - 2) + amount(houseNumber))`\n\nUsing dynamic programming, we can store these values and efficiently compute the maximum amount the robber can steal.  \n\nIn this current problem, the robber still has to follow the restraint that they cannot steal from two consecutive houses. However, this time, instead of maximizing the total reward, they want to **minimize the maximum amount stolen from any single house** while ensuring that at least `k` houses are robbed.  \n\nSimilar to the original problem, we can think of a recursive relation to solve this. Again, we have two choices:  \n1. Rob the current house (but then we must skip the next house).  \n2. Skip the current house and move forward.  \n\nHowever, unlike the original problem, we need an additional condition—ensuring that we rob at least `k` houses. The dynamic programming solution involves a state `dp[houseIndex][numberOfHousesRobbed]`. Since we iterate over `n` houses and track up to `k` robbed houses, the problem becomes more complex, and solving it with dynamic programming takes $O(n \\cdot k)$ time.\n\nProblems that require **minimizing the maximum** or **maximizing the minimum** often suggest a binary search approach. Instead of searching through indices or subsets directly, we can binary search on the **capability** (i.e., something like the maximum amount stolen from any single house). By determining whether a given capability is achievable, we can efficiently narrow down the possible solutions. If you're unfamiliar with this technique, you can refer to [this guide](https://leetcode.com/explore/learn/card/binary-search/) to learn more about binary search.  \n\n---\n\n### Approach: Binary Search\n\n#### Intuition\n  \nInstead of focusing on maximizing a total sum, we need to guarantee that the **maximum amount stolen from any robbed house** is as **small** as possible while still robbing at least `k` houses. A brute force approach would involve checking every possible way to rob `k` houses while obeying the adjacency constraint, but this would be too slow for large inputs.  \n\nA more efficient way to approach this problem is to recognize that we are trying to minimize the maximum stolen amount while ensuring that at least `k` houses are robbed. This naturally leads to using binary search on the maximum reward that the robber can steal from any single house.  \n\nWe define the search space based on the possible values for this **maximum** reward. The smallest possible value for this maximum reward is `min(nums)` (the lowest value in the house list), and the largest possible value is `max(nums)` (the highest value in the house list). This gives us a range of `[minReward, maxReward]`, where `minReward = min(nums)` or more specifically `1` and `maxReward = max(nums)`.  \n\nWe use binary search to determine the **minimum possible capability** that still allows robbing at least `k` houses. At each step, we take the middle value in our range (`midReward = (minReward + maxReward) / 2`) and check whether it's possible to rob at least `k` houses while ensuring that no single robbed house has a value greater than `midReward`.\n\nTo determine whether a particular `midReward` is feasible, we use a greedy approach. We iterate through the list of house values and greedily select houses that have at most `midReward`. Since we cannot rob consecutive houses, we skip the next house each time we choose one. We keep a count of how many houses have been robbed, and if we reach at least `k` houses, it means the current `midReward` is achievable.\n\n- If it is **possible** to rob at least `k` houses while keeping the \"maximum stolen amount ≤ midReward\", then we try lowering it by moving the binary search range to the left (`maxReward = midReward`).  \n- If it is **not possible**, it means `midReward` is too low, so we increase it by moving the search range to the right (`minReward = midReward + 1`).\n\nBy continuously adjusting our search range, we eventually find the **smallest possible maximum stolen amount** that still allows robbing at least `k` houses.\n\n#### Algorithm\n\n1. Initialize Search Bounds: \n   - Set `left = 1` (minimum possible reward).  \n   - Set `right = maximum value in nums`.  \n   - Determine the total number of houses, `numHouses = houseRewards.size()`.  \n\n2. Perform Binary Search on Maximum Allowed Reward:\n   - While `left < right`:  \n     - Compute `mid = (left + right) / 2`, representing the maximum reward a robber can take from a house.  \n     - Initialize `housesRobbed = 0` to count how many houses can be robbed under this constraint.  \n\n3. Simulate Robbery Under the Current Constraint (`mid`):\n   - Iterate through the `houseRewards` array:  \n     - If `houseRewards[i] <= mid`:  \n       - Rob the house and increment `housesRobbed`.  \n       - Skip the next house (`i++`) since consecutive houses cannot be robbed.  \n\n4. Adjust Search Range:\n   - If `housesRobbed >= housesToRob`, reduce the reward constraint (`right = mid`).  \n   - Otherwise, increase it (`left = mid + 1`).  \n\n5. Return the Minimum Maximum Reward:\n   - Once `left == right`, return `left`, which represents the smallest possible maximum reward that still allows robbing at least `housesToRob` houses.  \n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of `nums` array and $m$ denote the size of range of elements in `nums`.\n\n- Time Complexity: $O(n \\log m)$\n\n    The algorithm uses a binary search approach to determine the minimum reward required to rob at least `k` houses while following the given constraints. The search space for the reward lies between $1$ and $m$, and the binary search reduces this range logarithmically in $O(\\log m)$ iterations.  \n\n    Within each iteration, a greedy approach is applied to traverse the array and count the number of houses that can be robbed without selecting adjacent ones. This traversal takes $O(n)$ time. Since binary search runs for $O(\\log m)$ iterations, the overall time complexity is $O(n \\log m)$.\n\n- Space Complexity: $O(1)$\n\n    The algorithm uses only a few integer variables (`left`, `right`, `mid`, `take`, `n`) to perform binary search and track the number of houses robbed. Since no additional data structures proportional to the input size are used, the space complexity is $O(1)$.\n\n---"
+}

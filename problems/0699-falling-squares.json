@@ -1,0 +1,60 @@
+{
+  "title": "Falling Squares",
+  "problem_id": "699",
+  "frontend_id": "699",
+  "difficulty": "Hard",
+  "problem_slug": "falling-squares",
+  "topics": [
+    "Array",
+    "Segment Tree",
+    "Ordered Set"
+  ],
+  "description": "There are several squares being dropped onto the X-axis of a 2D plane.\nYou are given a 2D integer array positions where positions[i] = [lefti, sideLengthi] represents the ith square with a side length of sideLengthi that is dropped with its left edge aligned with X-coordinate lefti.\nEach square is dropped one at a time from a height above any landed squares. It then falls downward (negative Y direction) until it either lands on the top side of another square or on the X-axis. A square brushing the left/right side of another square does not count as landing on it. Once it lands, it freezes in place and cannot be moved.\nAfter each square is dropped, you must record the height of the current tallest stack of squares.\nReturn an integer array ans where ans[i] represents the height described above after dropping the ith square.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: positions = [[1,2],[2,3],[6,1]]\nOutput: [2,5,5]\nExplanation:\nAfter the first drop, the tallest stack is square 1 with a height of 2.\nAfter the second drop, the tallest stack is squares 1 and 2 with a height of 5.\nAfter the third drop, the tallest stack is still squares 1 and 2 with a height of 5.\nThus, we return an answer of [2, 5, 5].",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/28/fallingsq1-plane.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: positions = [[100,100],[200,100]]\nOutput: [100,100]\nExplanation:\nAfter the first drop, the tallest stack is square 1 with a height of 100.\nAfter the second drop, the tallest stack is either square 1 or square 2, both with heights of 100.\nThus, we return an answer of [100, 100].\nNote that square 2 only brushes the right side of square 1, which does not count as landing on it.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/28/fallingsq1-plane.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= positions.length <= 1000",
+    "1 <= lefti <= 108",
+    "1 <= sideLengthi <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If positions = [[10, 20], [20, 30]], this is the same as [[1, 2], [2, 3]].  Currently, the values of positions are very large.  Can you generalize this approach so as to make the values in positions manageable?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> fallingSquares(vector<vector<int>>& positions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> fallingSquares(int[][] positions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def fallingSquares(self, positions):\n        \"\"\"\n        :type positions: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def fallingSquares(self, positions: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* fallingSquares(int** positions, int positionsSize, int* positionsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FallingSquares(int[][] positions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} positions\n * @return {number[]}\n */\nvar fallingSquares = function(positions) {\n    \n};",
+    "typescript": "function fallingSquares(positions: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $positions\n     * @return Integer[]\n     */\n    function fallingSquares($positions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func fallingSquares(_ positions: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun fallingSquares(positions: Array<IntArray>): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> fallingSquares(List<List<int>> positions) {\n    \n  }\n}",
+    "golang": "func fallingSquares(positions [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} positions\n# @return {Integer[]}\ndef falling_squares(positions)\n    \nend",
+    "scala": "object Solution {\n    def fallingSquares(positions: Array[Array[Int]]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn falling_squares(positions: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (falling-squares positions)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec falling_squares(Positions :: [[integer()]]) -> [integer()].\nfalling_squares(Positions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec falling_squares(positions :: [[integer]]) :: [integer]\n  def falling_squares(positions) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach Framework\n\n**Intuition**\n\nIntuitively, there are two operations: `update`, which updates our notion of the board (number line) after dropping a square; and `query`, which finds the largest height in the current board on some interval. We will work on implementing these operations.\n\n**Coordinate Compression**\n\nIn the below approaches, since there are only up to `2 * len(positions)` critical points, namely the left and right edges of each square, we can use a technique called *coordinate compression* to map these critical points to adjacent integers, as shown in the code snippets below.  \n\nFor brevity, these snippets are omitted from the remaining solutions.---\n### Approach 1: Offline Propagation\n\n**Intuition**\n\nInstead of asking the question \"What squares affect this query?\", let's ask the question \"What queries are affected by this square?\"\n\n**Algorithm**\n\nLet `qans[i]` be the maximum height of the interval specified by `positions[i]`. In the end, we'll return a running max of `qans`.\n\nFor each square `positions[i]`, the maximum height will get higher by the size of the square we drop. Then, for any future squares that intersect the interval `[left, right)` (where `left = positions[i][0], right = positions[i][0] + positions[i][1]`), we'll update the maximum height of that interval.**Complexity Analysis**\n\n* Time Complexity: $$O(N^2)$$, where $$N$$ is the length of `positions`. We use two for-loops, each of complexity $$O(N)$$.\n\n* Space Complexity: $$O(N)$$, the space used by `qans` and `ans`.---\n### Approach 2: Brute Force with Coordinate Compression\n\n**Intuition and Algorithm**\n\nLet `N = len(positions)`. After mapping the board to a board of length at most $$2* N \\leq 2000$$, we can brute force the answer by simulating each square's drop directly.\n\nOur answer is either the current answer or the height of the square that was just dropped, and we'll update it appropriately.**Complexity Analysis**\n\n* Time Complexity: $$O(N^2)$$, where $$N$$ is the length of `positions`. We use two for-loops, each of complexity $$O(N)$$ (because of coordinate compression.)\n\n* Space Complexity: $$O(N)$$, the space used by `heights`.---\n### Approach 3: Block (Square Root) Decomposition\n\n**Intuition**\n\nWhenever we perform operations (like `update` and `query`) on some interval in a domain, we could segment that domain with size $$W$$ into blocks of size $$\\sqrt{W}$$.  \n\nThen, instead of a typical brute force where we update our array `heights` representing the board, we will also hold another array `blocks`, where `blocks[i]` represents the $$B = \\lfloor \\sqrt{W} \\rfloor$$ elements `heights[B*i], heights[B*i + 1], ..., heights[B*i + B-1]`.  This allows us to write to the array in $$O(B)$$ operations.\n\n**Algorithm**\n\nLet's get into the details.  We actually need another array, `blocks_read`. When we update some element `i` in block `b = i / B`, we'll also update `blocks_read[b]`. If later we want to read the entire block, we can read from here (and stuff written to the whole block in `blocks[b]`.)\n\nWhen we write to a block, we'll write in `blocks[b]`. Later, when we want to read from an element `i` in block `b = i / B`, we'll read from `heights[i]` and `blocks[b]`.\n\nOur process for managing `query` and `update` will be similar.  While `left` isn't a multiple of `B`, we'll proceed with a brute-force-like approach, and similarly for `right`. In the end, `[left, right+1)` will represent a series of contiguous blocks: the interval will have a length that is a multiple of `B`, and `left` will also be a multiple of `B`.**Complexity Analysis**\n\n* Time Complexity: $$O(N\\sqrt{N})$$, where $$N$$ is the length of `positions`. Each `query` and `update` has complexity $$O(\\sqrt{N})$$.\n\n* Space Complexity: $$O(N)$$, the space used by `heights`.---\n### Approach 4: Segment Tree with Lazy Propagation\n\n**Intuition**\n\nIf we were familiar with the idea of a segment tree (which supports queries and updates on intervals), we could immediately crack the problem.  \n\n**Algorithm**\n\nSegment trees work by breaking intervals into a disjoint sum of component intervals, whose number is at most `log(width)`. The motivation is that when we change an element, we only need to change `log(width)` of many intervals that aggregate on an interval containing that element.\n\nWhen we want to update an interval all at once, we need to use *lazy propagation* to ensure good run-time complexity. This topic is covered in more depth [here](https://leetcode.com/articles/a-recursive-approach-to-segment-trees-range-sum-queries-lazy-propagation/).\n\nWith such an implementation in hand, the problem falls out immediately.**Complexity Analysis**\n\n* Time Complexity: $$O(N \\log N)$$, where $$N$$ is the length of `positions`. This is the run-time complexity of using a segment tree.\n\n* Space Complexity: $$O(N)$$, the space used by our tree."
+}

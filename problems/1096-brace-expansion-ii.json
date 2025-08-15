@@ -1,0 +1,56 @@
+{
+  "title": "Brace Expansion II",
+  "problem_id": "1188",
+  "frontend_id": "1096",
+  "difficulty": "Hard",
+  "problem_slug": "brace-expansion-ii",
+  "topics": [
+    "String",
+    "Backtracking",
+    "Stack",
+    "Breadth-First Search"
+  ],
+  "description": "Under the grammar given below, strings can represent a set of lowercase words. Let R(expr) denote the set of words the expression represents.\nThe grammar can best be understood through simple examples:\nFormally, the three rules for our grammar:\nGiven an expression representing a set of words under the given grammar, return the sorted list of words that the expression represents.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: expression = \"{a,b}{c,{d,e}}\"\nOutput: [\"ac\",\"ad\",\"ae\",\"bc\",\"bd\",\"be\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: expression = \"{{a,z},a{b,c},{ab,z}}\"\nOutput: [\"a\",\"ab\",\"ac\",\"z\"]\nExplanation: Each distinct word is written only once in the final answer.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= expression.length <= 60",
+    "expression[i] consists of '{', '}', ','or lowercase English letters.",
+    "The given expression represents a set of words based on the grammar given in the description."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can write helper methods to parse the next \"chunk\" of the expression.  If you see eg. \"a\", the answer is just the set {a}.  If you see \"{\", you parse until you complete the \"}\" (the number of { and } seen are equal) and that becomes a chunk that you find where the appropriate commas are, and parse each individual expression between the commas."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> braceExpansionII(string expression) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> braceExpansionII(String expression) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def braceExpansionII(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def braceExpansionII(self, expression: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** braceExpansionII(char* expression, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> BraceExpansionII(string expression) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @return {string[]}\n */\nvar braceExpansionII = function(expression) {\n    \n};",
+    "typescript": "function braceExpansionII(expression: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $expression\n     * @return String[]\n     */\n    function braceExpansionII($expression) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func braceExpansionII(_ expression: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun braceExpansionII(expression: String): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> braceExpansionII(String expression) {\n    \n  }\n}",
+    "golang": "func braceExpansionII(expression string) []string {\n    \n}",
+    "ruby": "# @param {String} expression\n# @return {String[]}\ndef brace_expansion_ii(expression)\n    \nend",
+    "scala": "object Solution {\n    def braceExpansionII(expression: String): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn brace_expansion_ii(expression: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (brace-expansion-ii expression)\n  (-> string? (listof string?))\n  )",
+    "erlang": "-spec brace_expansion_ii(Expression :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nbrace_expansion_ii(Expression) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec brace_expansion_ii(expression :: String.t) :: [String.t]\n  def brace_expansion_ii(expression) do\n    \n  end\nend"
+  }
+}

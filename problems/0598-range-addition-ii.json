@@ -1,0 +1,65 @@
+{
+  "title": "Range Addition II",
+  "problem_id": "598",
+  "frontend_id": "598",
+  "difficulty": "Easy",
+  "problem_slug": "range-addition-ii",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are given an m x n matrix M initialized with all 0's and an array of operations ops, where ops[i] = [ai, bi] means M[x][y] should be incremented by one for all 0 <= x < ai and 0 <= y < bi.\nCount and return the number of maximum integers in the matrix after performing all the operations.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 3, n = 3, ops = [[2,2],[3,3]]\nOutput: 4\nExplanation: The maximum integer in M is 2, and there are four of it in M. So return 4.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/02/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 3, n = 3, ops = [[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3],[2,2],[3,3],[3,3],[3,3]]\nOutput: 4",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/02/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: m = 3, n = 3, ops = []\nOutput: 9",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/10/02/ex1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 4 * 104",
+    "0 <= ops.length <= 104",
+    "ops[i].length == 2",
+    "1 <= ai <= m",
+    "1 <= bi <= n"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxCount(int m, int n, vector<vector<int>>& ops) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxCount(int m, int n, int[][] ops) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxCount(self, m, n, ops):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type ops: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxCount(self, m: int, n: int, ops: List[List[int]]) -> int:\n        ",
+    "c": "int maxCount(int m, int n, int** ops, int opsSize, int* opsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxCount(int m, int n, int[][] ops) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number[][]} ops\n * @return {number}\n */\nvar maxCount = function(m, n, ops) {\n    \n};",
+    "typescript": "function maxCount(m: number, n: number, ops: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $n\n     * @param Integer[][] $ops\n     * @return Integer\n     */\n    function maxCount($m, $n, $ops) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxCount(_ m: Int, _ n: Int, _ ops: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxCount(m: Int, n: Int, ops: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxCount(int m, int n, List<List<int>> ops) {\n    \n  }\n}",
+    "golang": "func maxCount(m int, n int, ops [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} n\n# @param {Integer[][]} ops\n# @return {Integer}\ndef max_count(m, n, ops)\n    \nend",
+    "scala": "object Solution {\n    def maxCount(m: Int, n: Int, ops: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_count(m: i32, n: i32, ops: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-count m n ops)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_count(M :: integer(), N :: integer(), Ops :: [[integer()]]) -> integer().\nmax_count(M, N, Ops) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_count(m :: integer, n :: integer, ops :: [[integer]]) :: integer\n  def max_count(m, n, ops) do\n    \n  end\nend"
+  }
+}

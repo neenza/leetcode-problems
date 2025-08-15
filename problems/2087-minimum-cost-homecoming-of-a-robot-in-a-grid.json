@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Cost Homecoming of a Robot in a Grid",
+  "problem_id": "2192",
+  "frontend_id": "2087",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-cost-homecoming-of-a-robot-in-a-grid",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "There is an m x n grid, where (0, 0) is the top-left cell and (m - 1, n - 1) is the bottom-right cell. You are given an integer array startPos where startPos = [startrow, startcol] indicates that initially, a robot is at the cell (startrow, startcol). You are also given an integer array homePos where homePos = [homerow, homecol] indicates that its home is at the cell (homerow, homecol).\nThe robot needs to go to its home. It can move one cell in four directions: left, right, up, or down, and it can not move outside the boundary. Every move incurs some cost. You are further given two 0-indexed integer arrays: rowCosts of length m and colCosts of length n.\nReturn the minimum total cost for this robot to return home.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: startPos = [1, 0], homePos = [2, 3], rowCosts = [5, 4, 3], colCosts = [8, 2, 6, 7]\nOutput: 18\nExplanation: One optimal path is that:\nStarting from (1, 0)\n-> It goes down to (2, 0). This move costs rowCosts[2] = 3.\n-> It goes right to (2, 1). This move costs colCosts[1] = 2.\n-> It goes right to (2, 2). This move costs colCosts[2] = 6.\n-> It goes right to (2, 3). This move costs colCosts[3] = 7.\nThe total cost is 3 + 2 + 6 + 7 = 18",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/11/eg-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: startPos = [0, 0], homePos = [0, 0], rowCosts = [5], colCosts = [26]\nOutput: 0\nExplanation: The robot is already at its home. Since no moves occur, the total cost is 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/11/eg-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == rowCosts.length",
+    "n == colCosts.length",
+    "1 <= m, n <= 105",
+    "0 <= rowCosts[r], colCosts[c] <= 104",
+    "startPos.length == 2",
+    "homePos.length == 2",
+    "0 <= startrow, homerow < m",
+    "0 <= startcol, homecol < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Irrespective of what path the robot takes, it will have to traverse all the rows between startRow and homeRow and all the columns between startCol and homeCol.",
+    "Hence, making any other move other than traversing the required rows and columns will potentially incur more cost which can be avoided."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCost(vector<int>& startPos, vector<int>& homePos, vector<int>& rowCosts, vector<int>& colCosts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(int[] startPos, int[] homePos, int[] rowCosts, int[] colCosts) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, startPos, homePos, rowCosts, colCosts):\n        \"\"\"\n        :type startPos: List[int]\n        :type homePos: List[int]\n        :type rowCosts: List[int]\n        :type colCosts: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, startPos: List[int], homePos: List[int], rowCosts: List[int], colCosts: List[int]) -> int:\n        ",
+    "c": "int minCost(int* startPos, int startPosSize, int* homePos, int homePosSize, int* rowCosts, int rowCostsSize, int* colCosts, int colCostsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCost(int[] startPos, int[] homePos, int[] rowCosts, int[] colCosts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} startPos\n * @param {number[]} homePos\n * @param {number[]} rowCosts\n * @param {number[]} colCosts\n * @return {number}\n */\nvar minCost = function(startPos, homePos, rowCosts, colCosts) {\n    \n};",
+    "typescript": "function minCost(startPos: number[], homePos: number[], rowCosts: number[], colCosts: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $startPos\n     * @param Integer[] $homePos\n     * @param Integer[] $rowCosts\n     * @param Integer[] $colCosts\n     * @return Integer\n     */\n    function minCost($startPos, $homePos, $rowCosts, $colCosts) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ startPos: [Int], _ homePos: [Int], _ rowCosts: [Int], _ colCosts: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(startPos: IntArray, homePos: IntArray, rowCosts: IntArray, colCosts: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> startPos, List<int> homePos, List<int> rowCosts, List<int> colCosts) {\n    \n  }\n}",
+    "golang": "func minCost(startPos []int, homePos []int, rowCosts []int, colCosts []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} start_pos\n# @param {Integer[]} home_pos\n# @param {Integer[]} row_costs\n# @param {Integer[]} col_costs\n# @return {Integer}\ndef min_cost(start_pos, home_pos, row_costs, col_costs)\n    \nend",
+    "scala": "object Solution {\n    def minCost(startPos: Array[Int], homePos: Array[Int], rowCosts: Array[Int], colCosts: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(start_pos: Vec<i32>, home_pos: Vec<i32>, row_costs: Vec<i32>, col_costs: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost startPos homePos rowCosts colCosts)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_cost(StartPos :: [integer()], HomePos :: [integer()], RowCosts :: [integer()], ColCosts :: [integer()]) -> integer().\nmin_cost(StartPos, HomePos, RowCosts, ColCosts) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(start_pos :: [integer], home_pos :: [integer], row_costs :: [integer], col_costs :: [integer]) :: integer\n  def min_cost(start_pos, home_pos, row_costs, col_costs) do\n    \n  end\nend"
+  }
+}

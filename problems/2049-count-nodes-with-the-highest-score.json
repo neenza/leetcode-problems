@@ -1,0 +1,64 @@
+{
+  "title": "Count Nodes With the Highest Score",
+  "problem_id": "2175",
+  "frontend_id": "2049",
+  "difficulty": "Medium",
+  "problem_slug": "count-nodes-with-the-highest-score",
+  "topics": [
+    "Array",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ],
+  "description": "There is a binary tree rooted at 0 consisting of n nodes. The nodes are labeled from 0 to n - 1. You are given a 0-indexed integer array parents representing the tree, where parents[i] is the parent of node i. Since node 0 is the root, parents[0] == -1.\nEach node has a score. To find the score of a node, consider if the node and the edges connected to it were removed. The tree would become one or more non-empty subtrees. The size of a subtree is the number of the nodes in it. The score of the node is the product of the sizes of all those subtrees.\nReturn the number of nodes that have the highest score.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: parents = [-1,2,0,2,0]\nOutput: 3\nExplanation:\n- The score of node 0 is: 3 * 1 = 3\n- The score of node 1 is: 4 = 4\n- The score of node 2 is: 1 * 1 * 2 = 2\n- The score of node 3 is: 4 = 4\n- The score of node 4 is: 4 = 4\nThe highest score is 4, and three nodes (node 1, node 3, and node 4) have the highest score.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/03/example-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: parents = [-1,2,0]\nOutput: 2\nExplanation:\n- The score of node 0 is: 2 = 2\n- The score of node 1 is: 2 = 2\n- The score of node 2 is: 1 * 1 = 1\nThe highest score is 2, and two nodes (node 0 and node 1) have the highest score.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/03/example-2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == parents.length",
+    "2 <= n <= 105",
+    "parents[0] == -1",
+    "0 <= parents[i] <= n - 1 for i != 0",
+    "parents represents a valid binary tree."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each node, you need to find the sizes of the subtrees rooted in each of its children. Maybe DFS?",
+    "How to determine the number of nodes in the rest of the tree? Can you subtract the size of the subtree rooted at the node from the total number of nodes of the tree?",
+    "Use these values to compute the score of the node. Track the maximum score, and how many nodes achieve such score."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countHighestScoreNodes(vector<int>& parents) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countHighestScoreNodes(int[] parents) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countHighestScoreNodes(self, parents):\n        \"\"\"\n        :type parents: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countHighestScoreNodes(self, parents: List[int]) -> int:\n        ",
+    "c": "int countHighestScoreNodes(int* parents, int parentsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountHighestScoreNodes(int[] parents) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parents\n * @return {number}\n */\nvar countHighestScoreNodes = function(parents) {\n    \n};",
+    "typescript": "function countHighestScoreNodes(parents: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $parents\n     * @return Integer\n     */\n    function countHighestScoreNodes($parents) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countHighestScoreNodes(_ parents: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countHighestScoreNodes(parents: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countHighestScoreNodes(List<int> parents) {\n    \n  }\n}",
+    "golang": "func countHighestScoreNodes(parents []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} parents\n# @return {Integer}\ndef count_highest_score_nodes(parents)\n    \nend",
+    "scala": "object Solution {\n    def countHighestScoreNodes(parents: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_highest_score_nodes(parents: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-highest-score-nodes parents)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_highest_score_nodes(Parents :: [integer()]) -> integer().\ncount_highest_score_nodes(Parents) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_highest_score_nodes(parents :: [integer]) :: integer\n  def count_highest_score_nodes(parents) do\n    \n  end\nend"
+  }
+}

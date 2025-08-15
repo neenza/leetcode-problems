@@ -1,0 +1,61 @@
+{
+  "title": "Count Primes",
+  "problem_id": "204",
+  "frontend_id": "204",
+  "difficulty": "Medium",
+  "problem_slug": "count-primes",
+  "topics": [
+    "Array",
+    "Math",
+    "Enumeration",
+    "Number Theory"
+  ],
+  "description": "Given an integer n, return the number of prime numbers that are strictly less than n.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 10\nOutput: 4\nExplanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 0\nOutput: 0",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 1\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 5 * 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Checking all the integers in the range [1, n - 1] is not efficient. Think about a better approach.",
+    "Since most of the numbers are not primes, we need a fast approach to exclude the non-prime integers.",
+    "Use Sieve of Eratosthenes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPrimes(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPrimes(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPrimes(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPrimes(self, n: int) -> int:\n        ",
+    "c": "int countPrimes(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPrimes(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countPrimes = function(n) {\n    \n};",
+    "typescript": "function countPrimes(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countPrimes($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPrimes(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPrimes(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPrimes(int n) {\n    \n  }\n}",
+    "golang": "func countPrimes(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_primes(n)\n    \nend",
+    "scala": "object Solution {\n    def countPrimes(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_primes(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-primes n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_primes(N :: integer()) -> integer().\ncount_primes(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_primes(n :: integer) :: integer\n  def count_primes(n) do\n    \n  end\nend"
+  }
+}

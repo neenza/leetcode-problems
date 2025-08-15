@@ -1,0 +1,58 @@
+{
+  "title": "Jump Game VII",
+  "problem_id": "2001",
+  "frontend_id": "1871",
+  "difficulty": "Medium",
+  "problem_slug": "jump-game-vii",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed binary string s and two integers minJump and maxJump. In the beginning, you are standing at index 0, which is equal to '0'. You can move from index i to index j if the following conditions are fulfilled:\nReturn true if you can reach index s.length - 1 in s, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"011010\", minJump = 2, maxJump = 3\nOutput: true\nExplanation:\nIn the first step, move from index 0 to index 3. \nIn the second step, move from index 3 to index 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"01101110\", minJump = 2, maxJump = 3\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 105",
+    "s[i] is either '0' or '1'.",
+    "s[0] == '0'",
+    "1 <= minJump <= maxJump < s.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider for each reachable index i the interval [i + a, i + b].",
+    "Use partial sums to mark the intervals as reachable."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canReach(string s, int minJump, int maxJump) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canReach(String s, int minJump, int maxJump) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canReach(self, s, minJump, maxJump):\n        \"\"\"\n        :type s: str\n        :type minJump: int\n        :type maxJump: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canReach(self, s: str, minJump: int, maxJump: int) -> bool:\n        ",
+    "c": "bool canReach(char* s, int minJump, int maxJump) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanReach(string s, int minJump, int maxJump) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} minJump\n * @param {number} maxJump\n * @return {boolean}\n */\nvar canReach = function(s, minJump, maxJump) {\n    \n};",
+    "typescript": "function canReach(s: string, minJump: number, maxJump: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $minJump\n     * @param Integer $maxJump\n     * @return Boolean\n     */\n    function canReach($s, $minJump, $maxJump) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canReach(_ s: String, _ minJump: Int, _ maxJump: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canReach(s: String, minJump: Int, maxJump: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canReach(String s, int minJump, int maxJump) {\n    \n  }\n}",
+    "golang": "func canReach(s string, minJump int, maxJump int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} min_jump\n# @param {Integer} max_jump\n# @return {Boolean}\ndef can_reach(s, min_jump, max_jump)\n    \nend",
+    "scala": "object Solution {\n    def canReach(s: String, minJump: Int, maxJump: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_reach(s: String, min_jump: i32, max_jump: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-reach s minJump maxJump)\n  (-> string? exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_reach(S :: unicode:unicode_binary(), MinJump :: integer(), MaxJump :: integer()) -> boolean().\ncan_reach(S, MinJump, MaxJump) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_reach(s :: String.t, min_jump :: integer, max_jump :: integer) :: boolean\n  def can_reach(s, min_jump, max_jump) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Calculate Money in Leetcode Bank",
+  "problem_id": "1817",
+  "frontend_id": "1716",
+  "difficulty": "Easy",
+  "problem_slug": "calculate-money-in-leetcode-bank",
+  "topics": [
+    "Math"
+  ],
+  "description": "Hercy wants to save money for his first car. He puts money in the Leetcode bank every day.\nHe starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, he will put in $1 more than the day before. On every subsequent Monday, he will put in $1 more than the previous Monday.\nGiven n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4\nOutput: 10\nExplanation: After the 4th day, the total is 1 + 2 + 3 + 4 = 10.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 10\nOutput: 37\nExplanation: After the 10th day, the total is (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4) = 37. Notice that on the 2nd Monday, Hercy only puts in $2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 20\nOutput: 96\nExplanation: After the 20th day, the total is (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4 + 5 + 6 + 7 + 8) + (3 + 4 + 5 + 6 + 7 + 8) = 96.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process by keeping track of how much money Hercy is putting in and which day of the week it is, and use this information to deduce how much money Hercy will put in the next day."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int totalMoney(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalMoney(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def totalMoney(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def totalMoney(self, n: int) -> int:\n        ",
+    "c": "int totalMoney(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int TotalMoney(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar totalMoney = function(n) {\n    \n};",
+    "typescript": "function totalMoney(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function totalMoney($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func totalMoney(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun totalMoney(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int totalMoney(int n) {\n    \n  }\n}",
+    "golang": "func totalMoney(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef total_money(n)\n    \nend",
+    "scala": "object Solution {\n    def totalMoney(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn total_money(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (total-money n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec total_money(N :: integer()) -> integer().\ntotal_money(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec total_money(n :: integer) :: integer\n  def total_money(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Simulate\n\n**Intuition**\n\nThe problem description describes a step-by-step process of how much money we add to the bank every day. We can follow these steps and simulate the process for each of the `n` days.\n\nInitially, it is Monday and we deposit `1` dollar. Each day of the week, we deposit `1` more dollar than the previous. So on the first week, we deposit `1 + 2 + 3 + 4 + 5 + 6 + 7` dollars.\n\nNext week, we deposit `2` dollars on Monday, `3` dollars on Tuesday, and so on. The week after that, we deposit `3` dollars on Monday, `4` on Tuesday, and so on.\n\nLet's handle each week one at a time. Initially, we set a variable `monday = 1` that represents the amount of money we will deposit on Monday. We then iterate over each day of the week. How many days will we deposit money this week? If `n < 7`, we will only deposit money on the first `n` days of this week. If `n >= 7`, we will deposit money on all `7` days of this week. Thus, we will iterate `min(n, 7)` days.\n\nTo iterate over the days of the week, we will use a variable `day` starting from `0`. Monday is the $$0^{th}$$ day. At each iteration, we will add `monday + day` dollars to the answer. This way, we add `monday` dollars on Monday, `monday + 1` dollars on Tuesday, `monday + 2` dollars on Wednesday, and so on.\n\nOnce we have finished adding money for the week, we subtract `7` from `n` and increment `monday`. We then move on to the next week and repeat the process until `n <= 0`.\n\n**Algorithm**\n\n1. Initialize the answer `ans = 0` and `monday = 1`.\n2. While `n > 0`:\n    - Iterate `day` from `0` until `min(n, 7)`:\n        - Add `monday + day` to `ans`.\n    - Subtract `7` from `n`.\n    - Increment `monday`.\n3. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n)$$\n\n    The while loop handles one week per iteration. Thus, the while loop will iterate $$\\dfrac{n}{7}$$ times. In each iteration, we iterate up to $$7$$ times. Thus, we will have $$O(n)$$ iterations. At each step, we perform $$O(1)$$ work.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---\n\n### Approach 2: Math\n\n**Intuition**\n\nThe manner in which we add money is static. Each week we add:\n\n1. `1 + 2 + 3 + 4 + 5 + 6 + 7 = 28`\n2. `2 + 3 + 4 + 5 + 6 + 7 + 8 = 35`\n3. `3 + 4 + 5 + 6 + 7 + 8 + 9 = 42`\n4. and so on...\n\nAs you can see, each week we add `7` more dollars than the previous week. Perhaps we can formulate a mathematical solution to this problem.\n\nWe have `k = n / 7` full weeks. Here, we are performing integer/floor division. These full weeks form an [arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression). An arithmetic sequence is a sequence of numbers such that the difference between every adjacent element is the same. Here, we have a common difference of `7`.\n\nThe sum of an arithmetic sequence can be found very quickly if we know the following information:\n\n1. The first element in the sequence $$F$$.\n2. The final element in the sequence $$L$$.\n3. The number of elements in the sequence $$k$$.\n\nThen, the sum is $$\\dfrac{k \\cdot (F + L)}{2}$$.\n\nWe know the first element in the sequence is `28` and that there are `k` elements in the sequence, since each element represents a week. What is the final element in the sequence? The final element in the sequence represents how much money we add in the final full week, and we know that the value must be `28 + (k - 1) * 7`, since we add `28` dollars on the first week and `7` more dollars each additional week.\n\nLet `F = 28`, `k = n / 7`, `L = 28 + (k - 1) * 7`. We can then plug each of these values into the above equation to get the total money we deposit in all full weeks as `arithmeticSum`.\n\nWhat if `n` is not divisible by `7`? Then, the final week will have less than `7` days. How do we calculate how much money we get from the final week? First, we need to know how many days are in the final week. We can obtain this by taking `n` modulo `7`, i.e. `n % 7`.\n\nNote that we will have `k` full weeks before the final week, therefore, on the Monday of the final week, we will deposit `1 + k` dollars. We can either form another arithmetic sequence for the final week (since we know its first value and how many elements there will be, we can deduce the final value and thus the overall sum), or we could simply iterate over the final week explicitly.\n\nFor the sake of simplicity, we will iterate over the final week explicitly and calculate the money we deposit as `finalWeek`.\n\nFinally, the answer to the problem is `arithmeticSum + finalWeek`.\n\n**Algorithm**\n\n1. Set the following values:\n    - `k = n / 7`.\n    - `F = 28`.\n    - `L = 28 + (k - 1) * 7`.\n2. Calculate `arithmeticSum = k * (F + L) / 2`.\n3. Initialize `monday = 1 + k` and `finalWeek = 0`.\n4. Iterate `day` from `0` until `n % 7`:\n    - Add `monday + day` to `finalWeek`.\n5. Return `arithmeticSum + finalWeek`.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(1)$$\n\n    Assuming we treat arithmetic operations as $$O(1)$$, which is a very standard practice on LeetCode, this algorithm runs in constant time.\n\n    To calculate `arithmeticSum`, we perform a few calculations that do not change with the input size. To calculate `finalWeek`, we never iterate more than `6` times.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space other than a few integers.---"
+}

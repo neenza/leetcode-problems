@@ -1,0 +1,59 @@
+{
+  "title": "Delete Characters to Make Fancy String",
+  "problem_id": "1302",
+  "frontend_id": "1957",
+  "difficulty": "Easy",
+  "problem_slug": "delete-characters-to-make-fancy-string",
+  "topics": [
+    "String"
+  ],
+  "description": "A fancy string is a string where no three consecutive characters are equal.\nGiven a string s, delete the minimum possible number of characters from s to make it fancy.\nReturn the final string after the deletion. It can be shown that the answer will always be unique.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leeetcode\"\nOutput: \"leetcode\"\nExplanation:\nRemove an 'e' from the first group of 'e's to create \"leetcode\".\nNo three consecutive characters are equal, so return \"leetcode\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaabaaaa\"\nOutput: \"aabaa\"\nExplanation:\nRemove an 'a' from the first group of 'a's to create \"aabaaaa\".\nRemove two 'a's from the second group of 'a's to create \"aabaa\".\nNo three consecutive characters are equal, so return \"aabaa\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"aab\"\nOutput: \"aab\"\nExplanation: No three consecutive characters are equal, so return \"aab\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What's the optimal way to delete characters if three or more consecutive characters are equal?",
+    "If three or more consecutive characters are equal, keep two of them and delete the rest."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string makeFancyString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String makeFancyString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeFancyString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeFancyString(self, s: str) -> str:\n        ",
+    "c": "char* makeFancyString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MakeFancyString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar makeFancyString = function(s) {\n    \n};",
+    "typescript": "function makeFancyString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function makeFancyString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeFancyString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeFancyString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String makeFancyString(String s) {\n    \n  }\n}",
+    "golang": "func makeFancyString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef make_fancy_string(s)\n    \nend",
+    "scala": "object Solution {\n    def makeFancyString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_fancy_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (make-fancy-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec make_fancy_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_fancy_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_fancy_string(s :: String.t) :: String.t\n  def make_fancy_string(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Insert characters in a new string\n\n#### Intuition\n\nWe need to modify a string by removing characters so that no three consecutive characters are the same. So, while two identical characters in a row are fine, three or more repeated ones aren't allowed. Our goal is to make the fewest changes possible to achieve this.\n\nThe idea is simple: we go through the string and track how many times each character repeats in a row. If a character repeats fewer than three times, we can leave it as is. But when we hit three or more consecutive identical characters, we need to remove the extra ones—keeping only the first two.\n\nFor example, if we have the string \"aaabbb\", we keep the first two 'a's and remove the third one. Then, we do the same for 'b'. This guarantees that we never have three consecutive identical characters, and we’re only removing characters when it’s absolutely necessary.\n\n#### Algorithm\n\n1. Set `prev` to the first character of the string (`s[0]`), to keep track of the previous character.\n2. Initialize `frequency` to 1, which counts the consecutive occurrences of `prev`.\n3. Create a string `ans` to store the resulting fancy string, and append the first character of `s` to it.\n4. Iterate through the string starting from the second character:\n    - If `s[i]` is the same as `prev`:\n        - Increment `frequency` by 1 (since it's the same as the previous character).\n    - Otherwise:\n        - Update `prev` to the current character `s[i]`.\n        - Reset `frequency` to 1, as a new character is encountered.\n    - If `frequency` < 3, append the current character `s[i]` to `ans`. This ensures that no three consecutive characters are added.\n5. Return `ans`.\n\n#### Implementation#### Complexity Analysis\n\nLet `n` be the length of the string `s`.\n\n- Time complexity: $O(n)$\n\n    The algorithm processes each character in the string exactly once, iterating through the string from the first to the last character. For each character, it performs constant time operations. Since there are `n` characters in the string, the overall time complexity is given by $O(n)$.\n\n- Space complexity: $O(n)$\n\n    The `ans` string stores the resulting string, which in the worst case, could be the same size as the input string `s` (if no deletions are made). Therefore, the space required is $O(n)$.\n\n---\n\n### Approach 2: In-Place Two-Pointer Approach\n\n#### Intuition\n\nCan we avoid using a separate `ans` string to store the final result? If you think about it, the size of the result string (`ans`) is always less than or equal to the size of the original string `s`. So instead of building a new string, we can modify `s` directly by rearranging it in place.\n\nTo do this, we can use two pointers: one pointer, `i`, will go through the string as usual, while another pointer, `j`, will track the position where we place the next valid character. This way, we only make changes to `s` without needing extra space. Refer to [this](https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/) explore card to learn more about the two-pointers algorithm.\n\nAs we iterate, we compare the current character `s[i]` with the two characters right before it, `s[j - 1]` and `s[j - 2]`. If `s[i]` is different from both of these, it’s safe to place it at position `j` because it won't create three identical characters in a row. Once we place it, we move the `j` pointer forward. \n\nAt the end, we resize the string to the length of `j`, since that’s how many valid characters we’ve kept. This way, we solve the problem efficiently without needing any extra space, as all the changes happen directly in the original string.\n\n#### Algorithm\n\n1. If the length of `s` is less than 3, return `s`.\n2. Set an integer variable `j` to 2, which will track the position in the string where the next valid character should be placed.\n3. Iterate through the string starting from the third character (`i` = `2` to `s.size() - 1`):\n    - If `s[i]` is not equal to the characters at positions `s[j - 1]` or `s[j - 2]`, it indicates that adding `s[i]` will not violate the condition of having three consecutive identical characters:\n        - Assign `s[i]` to `s[j]` and increment `j` by 1.\n4. Resize the string `s` till the `j` index. This ensures that the resulting string contains only the valid characters up to index `j - 1`.\n5. Return the modified string `s`.\n\n!?!../Documents/1957/slideshow1.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet `n` be the length of the string `s`.\n\n- Time complexity: $O(n)$\n\n    The algorithm processes each character in the string exactly once, iterating through the string from the first to the last character. For each character, it performs constant time operations. Since there are `n` characters in the string, the overall time complexity is given by $O(n)$.\n\n- Space complexity: $O(1)$ or $O(n)$ depending on the programming language.\n\n    The algorithm modifies the input string `s` in place and only uses integer variables, which do not depend on the length of the input string. Therefore, the space complexity is constant. However, since strings are immutable in both Java and Python, we cannot modify the input string in place and must create a new string to store the result. Consequently, the space complexity is $O(n)$ for Java and Python.\n\n---"
+}

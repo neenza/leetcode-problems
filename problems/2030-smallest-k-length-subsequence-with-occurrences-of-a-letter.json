@@ -1,0 +1,66 @@
+{
+  "title": "Smallest K-Length Subsequence With Occurrences of a Letter",
+  "problem_id": "2157",
+  "frontend_id": "2030",
+  "difficulty": "Hard",
+  "problem_slug": "smallest-k-length-subsequence-with-occurrences-of-a-letter",
+  "topics": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "You are given a string s, an integer k, a letter letter, and an integer repetition.\nReturn the lexicographically smallest subsequence of s of length k that has the letter letter appear at least repetition times. The test cases are generated so that the letter appears in s at least repetition times.\nA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.\nA string a is lexicographically smaller than a string b if in the first position where a and b differ, string a has a letter that appears earlier in the alphabet than the corresponding letter in b.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leet\", k = 3, letter = \"e\", repetition = 1\nOutput: \"eet\"\nExplanation: There are four subsequences of length 3 that have the letter 'e' appear at least 1 time:\n- \"lee\" (from \"leet\")\n- \"let\" (from \"leet\")\n- \"let\" (from \"leet\")\n- \"eet\" (from \"leet\")\nThe lexicographically smallest subsequence among them is \"eet\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leetcode\", k = 4, letter = \"e\", repetition = 2\nOutput: \"ecde\"\nExplanation: \"ecde\" is the lexicographically smallest subsequence of length 4 that has the letter \"e\" appear at least 2 times.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/13/smallest-k-length-subsequence.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bb\", k = 2, letter = \"b\", repetition = 2\nOutput: \"bb\"\nExplanation: \"bb\" is the only subsequence of length 2 that has the letter \"b\" appear at least 2 times.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/13/smallest-k-length-subsequence.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= repetition <= k <= s.length <= 5 * 104",
+    "s consists of lowercase English letters.",
+    "letter is a lowercase English letter, and appears in s at least repetition times."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use stack. For every character to be appended, decide how many character(s) from the stack needs to get popped based on the stack length and the count of the required character.",
+    "Pop the extra characters out from the stack and return the characters in the stack (reversed)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestSubsequence(string s, int k, char letter, int repetition) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestSubsequence(String s, int k, char letter, int repetition) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestSubsequence(self, s, k, letter, repetition):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :type letter: str\n        :type repetition: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestSubsequence(self, s: str, k: int, letter: str, repetition: int) -> str:\n        ",
+    "c": "char* smallestSubsequence(char* s, int k, char letter, int repetition) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestSubsequence(string s, int k, char letter, int repetition) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @param {character} letter\n * @param {number} repetition\n * @return {string}\n */\nvar smallestSubsequence = function(s, k, letter, repetition) {\n    \n};",
+    "typescript": "function smallestSubsequence(s: string, k: number, letter: string, repetition: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @param String $letter\n     * @param Integer $repetition\n     * @return String\n     */\n    function smallestSubsequence($s, $k, $letter, $repetition) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestSubsequence(_ s: String, _ k: Int, _ letter: Character, _ repetition: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestSubsequence(s: String, k: Int, letter: Char, repetition: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestSubsequence(String s, int k, String letter, int repetition) {\n    \n  }\n}",
+    "golang": "func smallestSubsequence(s string, k int, letter byte, repetition int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @param {Character} letter\n# @param {Integer} repetition\n# @return {String}\ndef smallest_subsequence(s, k, letter, repetition)\n    \nend",
+    "scala": "object Solution {\n    def smallestSubsequence(s: String, k: Int, letter: Char, repetition: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_subsequence(s: String, k: i32, letter: char, repetition: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-subsequence s k letter repetition)\n  (-> string? exact-integer? char? exact-integer? string?)\n  )",
+    "erlang": "-spec smallest_subsequence(S :: unicode:unicode_binary(), K :: integer(), Letter :: char(), Repetition :: integer()) -> unicode:unicode_binary().\nsmallest_subsequence(S, K, Letter, Repetition) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_subsequence(s :: String.t, k :: integer, letter :: char, repetition :: integer) :: String.t\n  def smallest_subsequence(s, k, letter, repetition) do\n    \n  end\nend"
+  }
+}

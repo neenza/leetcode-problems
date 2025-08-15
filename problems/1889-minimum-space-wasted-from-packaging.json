@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Space Wasted From Packaging",
+  "problem_id": "2018",
+  "frontend_id": "1889",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-space-wasted-from-packaging",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "You have n packages that you are trying to place in boxes, one package in each box. There are m suppliers that each produce boxes of different sizes (with infinite supply). A package can be placed in a box if the size of the package is less than or equal to the size of the box.\nThe package sizes are given as an integer array packages, where packages[i] is the size of the ith package. The suppliers are given as a 2D integer array boxes, where boxes[j] is an array of box sizes that the jth supplier produces.\nYou want to choose a single supplier and use boxes from them such that the total wasted space is minimized. For each package in a box, we define the space wasted to be size of the box - size of the package. The total wasted space is the sum of the space wasted in all the boxes.\nReturn the minimum total wasted space by choosing the box supplier optimally, or -1 if it is impossible to fit all the packages inside boxes. Since the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: packages = [2,3,5], boxes = [[4,8],[2,8]]\nOutput: 6\nExplanation: It is optimal to choose the first supplier, using two size-4 boxes and one size-8 box.\nThe total waste is (4-2) + (4-3) + (8-5) = 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: packages = [2,3,5], boxes = [[1,4],[2,3],[3,4]]\nOutput: -1\nExplanation: There is no box that the package of size 5 can fit in.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: packages = [3,5,8,10,11,12], boxes = [[12],[11,9],[10,5,14]]\nOutput: 9\nExplanation: It is optimal to choose the third supplier, using two size-5 boxes, two size-10 boxes, and two size-14 boxes.\nThe total waste is (5-3) + (5-5) + (10-8) + (10-10) + (14-11) + (14-12) = 9.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == packages.length",
+    "m == boxes.length",
+    "1 <= n <= 105",
+    "1 <= m <= 105",
+    "1 <= packages[i] <= 105",
+    "1 <= boxes[j].length <= 105",
+    "1 <= boxes[j][k] <= 105",
+    "sum(boxes[j].length) <= 105",
+    "The elements in boxes[j] are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Given a fixed size box, is there a way to quickly query which packages (i.e., count and sizes) should end up in that box size?",
+    "Do we have to order the boxes a certain way to allow us to answer the query quickly?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minWastedSpace(vector<int>& packages, vector<vector<int>>& boxes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minWastedSpace(int[] packages, int[][] boxes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minWastedSpace(self, packages, boxes):\n        \"\"\"\n        :type packages: List[int]\n        :type boxes: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minWastedSpace(self, packages: List[int], boxes: List[List[int]]) -> int:\n        ",
+    "c": "int minWastedSpace(int* packages, int packagesSize, int** boxes, int boxesSize, int* boxesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinWastedSpace(int[] packages, int[][] boxes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} packages\n * @param {number[][]} boxes\n * @return {number}\n */\nvar minWastedSpace = function(packages, boxes) {\n    \n};",
+    "typescript": "function minWastedSpace(packages: number[], boxes: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $packages\n     * @param Integer[][] $boxes\n     * @return Integer\n     */\n    function minWastedSpace($packages, $boxes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minWastedSpace(_ packages: [Int], _ boxes: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minWastedSpace(packages: IntArray, boxes: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minWastedSpace(List<int> packages, List<List<int>> boxes) {\n    \n  }\n}",
+    "golang": "func minWastedSpace(packages []int, boxes [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} packages\n# @param {Integer[][]} boxes\n# @return {Integer}\ndef min_wasted_space(packages, boxes)\n    \nend",
+    "scala": "object Solution {\n    def minWastedSpace(packages: Array[Int], boxes: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_wasted_space(packages: Vec<i32>, boxes: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-wasted-space packages boxes)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_wasted_space(Packages :: [integer()], Boxes :: [[integer()]]) -> integer().\nmin_wasted_space(Packages, Boxes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_wasted_space(packages :: [integer], boxes :: [[integer]]) :: integer\n  def min_wasted_space(packages, boxes) do\n    \n  end\nend"
+  }
+}

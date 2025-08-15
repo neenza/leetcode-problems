@@ -1,0 +1,57 @@
+{
+  "title": "Average of Levels in Binary Tree",
+  "problem_id": "637",
+  "frontend_id": "637",
+  "difficulty": "Easy",
+  "problem_slug": "average-of-levels-in-binary-tree",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
+  "description": "Example 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: root = [3,9,20,null,null,15,7]\nOutput: [3.00000,14.50000,11.00000]\nExplanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.\nHence return [3, 14.5, 11].",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/09/avg1-tree.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: root = [3,9,20,15,7]\nOutput: [3.00000,14.50000,11.00000]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/09/avg2-tree.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "The number of nodes in the tree is in the range [1, 104].",
+    "-231 <= Node.val <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<double> averageOfLevels(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<Double> averageOfLevels(TreeNode root) {\n        \n    }\n}",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def averageOfLevels(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[float]\n        \"\"\"\n        ",
+    "python3": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:\n        ",
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\ndouble* averageOfLevels(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "csharp": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public int val;\n *     public TreeNode left;\n *     public TreeNode right;\n *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\npublic class Solution {\n    public IList<double> AverageOfLevels(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar averageOfLevels = function(root) {\n    \n};",
+    "typescript": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     val: number\n *     left: TreeNode | null\n *     right: TreeNode | null\n *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {\n *         this.val = (val===undefined ? 0 : val)\n *         this.left = (left===undefined ? null : left)\n *         this.right = (right===undefined ? null : right)\n *     }\n * }\n */\n\nfunction averageOfLevels(root: TreeNode | null): number[] {\n    \n};",
+    "php": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *     public $val = null;\n *     public $left = null;\n *     public $right = null;\n *     function __construct($val = 0, $left = null, $right = null) {\n *         $this->val = $val;\n *         $this->left = $left;\n *         $this->right = $right;\n *     }\n * }\n */\nclass Solution {\n\n    /**\n     * @param TreeNode $root\n     * @return Float[]\n     */\n    function averageOfLevels($root) {\n        \n    }\n}",
+    "swift": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     public var val: Int\n *     public var left: TreeNode?\n *     public var right: TreeNode?\n *     public init() { self.val = 0; self.left = nil; self.right = nil; }\n *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }\n *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {\n *         self.val = val\n *         self.left = left\n *         self.right = right\n *     }\n * }\n */\nclass Solution {\n    func averageOfLevels(_ root: TreeNode?) -> [Double] {\n        \n    }\n}",
+    "kotlin": "/**\n * Example:\n * var ti = TreeNode(5)\n * var v = ti.`val`\n * Definition for a binary tree node.\n * class TreeNode(var `val`: Int) {\n *     var left: TreeNode? = null\n *     var right: TreeNode? = null\n * }\n */\nclass Solution {\n    fun averageOfLevels(root: TreeNode?): DoubleArray {\n        \n    }\n}",
+    "dart": "/**\n * Definition for a binary tree node.\n * class TreeNode {\n *   int val;\n *   TreeNode? left;\n *   TreeNode? right;\n *   TreeNode([this.val = 0, this.left, this.right]);\n * }\n */\nclass Solution {\n  List<double> averageOfLevels(TreeNode? root) {\n    \n  }\n}",
+    "golang": "/**\n * Definition for a binary tree node.\n * type TreeNode struct {\n *     Val int\n *     Left *TreeNode\n *     Right *TreeNode\n * }\n */\nfunc averageOfLevels(root *TreeNode) []float64 {\n    \n}",
+    "ruby": "# Definition for a binary tree node.\n# class TreeNode\n#     attr_accessor :val, :left, :right\n#     def initialize(val = 0, left = nil, right = nil)\n#         @val = val\n#         @left = left\n#         @right = right\n#     end\n# end\n# @param {TreeNode} root\n# @return {Float[]}\ndef average_of_levels(root)\n    \nend",
+    "scala": "/**\n * Definition for a binary tree node.\n * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {\n *   var value: Int = _value\n *   var left: TreeNode = _left\n *   var right: TreeNode = _right\n * }\n */\nobject Solution {\n    def averageOfLevels(root: TreeNode): Array[Double] = {\n        \n    }\n}",
+    "rust": "// Definition for a binary tree node.\n// #[derive(Debug, PartialEq, Eq)]\n// pub struct TreeNode {\n//   pub val: i32,\n//   pub left: Option<Rc<RefCell<TreeNode>>>,\n//   pub right: Option<Rc<RefCell<TreeNode>>>,\n// }\n// \n// impl TreeNode {\n//   #[inline]\n//   pub fn new(val: i32) -> Self {\n//     TreeNode {\n//       val,\n//       left: None,\n//       right: None\n//     }\n//   }\n// }\nuse std::rc::Rc;\nuse std::cell::RefCell;\nimpl Solution {\n    pub fn average_of_levels(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<f64> {\n        \n    }\n}",
+    "racket": "; Definition for a binary tree node.\n#|\n\n; val : integer?\n; left : (or/c tree-node? #f)\n; right : (or/c tree-node? #f)\n(struct tree-node\n  (val left right) #:mutable #:transparent)\n\n; constructor\n(define (make-tree-node [val 0])\n  (tree-node val #f #f))\n\n|#\n\n(define/contract (average-of-levels root)\n  (-> (or/c tree-node? #f) (listof flonum?))\n  )",
+    "erlang": "%% Definition for a binary tree node.\n%%\n%% -record(tree_node, {val = 0 :: integer(),\n%%                     left = null  :: 'null' | #tree_node{},\n%%                     right = null :: 'null' | #tree_node{}}).\n\n-spec average_of_levels(Root :: #tree_node{} | null) -> [float()].\naverage_of_levels(Root) ->\n  .",
+    "elixir": "# Definition for a binary tree node.\n#\n# defmodule TreeNode do\n#   @type t :: %__MODULE__{\n#           val: integer,\n#           left: TreeNode.t() | nil,\n#           right: TreeNode.t() | nil\n#         }\n#   defstruct val: 0, left: nil, right: nil\n# end\n\ndefmodule Solution do\n  @spec average_of_levels(root :: TreeNode.t | nil) :: [float]\n  def average_of_levels(root) do\n    \n  end\nend"
+  }
+}

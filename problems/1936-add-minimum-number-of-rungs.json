@@ -1,0 +1,62 @@
+{
+  "title": "Add Minimum Number of Rungs",
+  "problem_id": "2066",
+  "frontend_id": "1936",
+  "difficulty": "Medium",
+  "problem_slug": "add-minimum-number-of-rungs",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given a strictly increasing integer array rungs that represents the height of rungs on a ladder. You are currently on the floor at height 0, and you want to reach the last rung.\nYou are also given an integer dist. You can only climb to the next highest rung if the distance between where you are currently at (the floor or on a rung) and the next rung is at most dist. You are able to insert rungs at any positive integer height if a rung is not already there.\nReturn the minimum number of rungs that must be added to the ladder in order for you to climb to the last rung.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rungs = [1,3,5,10], dist = 2\nOutput: 2\nExplanation:\nYou currently cannot reach the last rung.\nAdd rungs at heights 7 and 8 to climb this ladder. \nThe ladder will now have rungs at [1,3,5,7,8,10].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rungs = [3,6,8,10], dist = 3\nOutput: 0\nExplanation:\nThis ladder can be climbed without adding additional rungs.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: rungs = [3,4,6,7], dist = 2\nOutput: 1\nExplanation:\nYou currently cannot reach the first rung from the ground.\nAdd a rung at height 1 to climb this ladder.\nThe ladder will now have rungs at [1,3,4,6,7].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= rungs.length <= 105",
+    "1 <= rungs[i] <= 109",
+    "1 <= dist <= 109",
+    "rungs is strictly increasing."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Go as far as you can on the available rungs before adding new rungs.",
+    "If you have to add a new rung, add it as high up as possible.",
+    "Try using division to decrease the number of computations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int addRungs(vector<int>& rungs, int dist) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int addRungs(int[] rungs, int dist) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def addRungs(self, rungs, dist):\n        \"\"\"\n        :type rungs: List[int]\n        :type dist: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def addRungs(self, rungs: List[int], dist: int) -> int:\n        ",
+    "c": "int addRungs(int* rungs, int rungsSize, int dist) {\n    \n}",
+    "csharp": "public class Solution {\n    public int AddRungs(int[] rungs, int dist) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} rungs\n * @param {number} dist\n * @return {number}\n */\nvar addRungs = function(rungs, dist) {\n    \n};",
+    "typescript": "function addRungs(rungs: number[], dist: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $rungs\n     * @param Integer $dist\n     * @return Integer\n     */\n    function addRungs($rungs, $dist) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func addRungs(_ rungs: [Int], _ dist: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun addRungs(rungs: IntArray, dist: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int addRungs(List<int> rungs, int dist) {\n    \n  }\n}",
+    "golang": "func addRungs(rungs []int, dist int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} rungs\n# @param {Integer} dist\n# @return {Integer}\ndef add_rungs(rungs, dist)\n    \nend",
+    "scala": "object Solution {\n    def addRungs(rungs: Array[Int], dist: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn add_rungs(rungs: Vec<i32>, dist: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (add-rungs rungs dist)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec add_rungs(Rungs :: [integer()], Dist :: integer()) -> integer().\nadd_rungs(Rungs, Dist) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec add_rungs(rungs :: [integer], dist :: integer) :: integer\n  def add_rungs(rungs, dist) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+  "problem_id": "1445",
+  "frontend_id": "1343",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "Given an array of integers arr and two integers k and threshold, return the number of sub-arrays of size k and average greater than or equal to threshold.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [2,2,2,2,5,5,5,8], k = 3, threshold = 4\nOutput: 3\nExplanation: Sub-arrays [2,5,5],[5,5,5] and [5,5,8] have averages 4, 5 and 6 respectively. All other sub-arrays of size 3 have averages less than 4 (the threshold).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [11,13,17,23,29,31,7,5,2,3], k = 3, threshold = 5\nOutput: 6\nExplanation: The first 6 sub-arrays of size 3 have averages greater than 5. Note that averages are not integers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 105",
+    "1 <= arr[i] <= 104",
+    "1 <= k <= arr.length",
+    "0 <= threshold <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start with a window of size K and test its average against the threshold.",
+    "Keep moving the window by one element maintaining its size k until you cover the whole array. Count the number of windows that have an average greater than or equal to the threshold."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numOfSubarrays(vector<int>& arr, int k, int threshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfSubarrays(int[] arr, int k, int threshold) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfSubarrays(self, arr, k, threshold):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:\n        ",
+    "c": "int numOfSubarrays(int* arr, int arrSize, int k, int threshold) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumOfSubarrays(int[] arr, int k, int threshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} k\n * @param {number} threshold\n * @return {number}\n */\nvar numOfSubarrays = function(arr, k, threshold) {\n    \n};",
+    "typescript": "function numOfSubarrays(arr: number[], k: number, threshold: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $k\n     * @param Integer $threshold\n     * @return Integer\n     */\n    function numOfSubarrays($arr, $k, $threshold) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfSubarrays(_ arr: [Int], _ k: Int, _ threshold: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfSubarrays(arr: IntArray, k: Int, threshold: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfSubarrays(List<int> arr, int k, int threshold) {\n    \n  }\n}",
+    "golang": "func numOfSubarrays(arr []int, k int, threshold int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} k\n# @param {Integer} threshold\n# @return {Integer}\ndef num_of_subarrays(arr, k, threshold)\n    \nend",
+    "scala": "object Solution {\n    def numOfSubarrays(arr: Array[Int], k: Int, threshold: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_subarrays(arr: Vec<i32>, k: i32, threshold: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-subarrays arr k threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_of_subarrays(Arr :: [integer()], K :: integer(), Threshold :: integer()) -> integer().\nnum_of_subarrays(Arr, K, Threshold) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_subarrays(arr :: [integer], k :: integer, threshold :: integer) :: integer\n  def num_of_subarrays(arr, k, threshold) do\n    \n  end\nend"
+  }
+}

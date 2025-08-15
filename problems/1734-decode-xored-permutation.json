@@ -1,0 +1,57 @@
+{
+  "title": "Decode XORed Permutation",
+  "problem_id": "1835",
+  "frontend_id": "1734",
+  "difficulty": "Medium",
+  "problem_slug": "decode-xored-permutation",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "description": "There is an integer array perm that is a permutation of the first n positive integers, where n is always odd.\nIt was encoded into another integer array encoded of length n - 1, such that encoded[i] = perm[i] XOR perm[i + 1]. For example, if perm = [1,3,2], then encoded = [2,1].\nGiven the encoded array, return the original array perm. It is guaranteed that the answer exists and is unique.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: encoded = [3,1]\nOutput: [1,2,3]\nExplanation: If perm = [1,2,3], then encoded = [1 XOR 2,2 XOR 3] = [3,1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: encoded = [6,5,4,6]\nOutput: [2,4,1,5,3]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= n < 105",
+    "n is odd.",
+    "encoded.length == n - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Compute the XOR of the numbers between 1 and n, and think about how it can be used. Let it be x.",
+    "Think why n is odd.",
+    "perm[0] = x XOR encoded[1] XOR encoded[3] XOR encoded[5] ...",
+    "perm[i] = perm[i-1] XOR encoded[i-1]"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> decode(vector<int>& encoded) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] decode(int[] encoded) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def decode(self, encoded):\n        \"\"\"\n        :type encoded: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def decode(self, encoded: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* decode(int* encoded, int encodedSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] Decode(int[] encoded) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} encoded\n * @return {number[]}\n */\nvar decode = function(encoded) {\n    \n};",
+    "typescript": "function decode(encoded: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $encoded\n     * @return Integer[]\n     */\n    function decode($encoded) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func decode(_ encoded: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun decode(encoded: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> decode(List<int> encoded) {\n    \n  }\n}",
+    "golang": "func decode(encoded []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} encoded\n# @return {Integer[]}\ndef decode(encoded)\n    \nend",
+    "scala": "object Solution {\n    def decode(encoded: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn decode(encoded: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (decode encoded)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec decode(Encoded :: [integer()]) -> [integer()].\ndecode(Encoded) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec decode(encoded :: [integer]) :: [integer]\n  def decode(encoded) do\n    \n  end\nend"
+  }
+}

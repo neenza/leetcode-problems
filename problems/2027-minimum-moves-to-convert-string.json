@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Moves to Convert String",
+  "problem_id": "2154",
+  "frontend_id": "2027",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-moves-to-convert-string",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string s consisting of n characters which are either 'X' or 'O'.\nA move is defined as selecting three consecutive characters of s and converting them to 'O'. Note that if a move is applied to the character 'O', it will stay the same.\nReturn the minimum number of moves required so that all the characters of s are converted to 'O'.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"XXX\"\nOutput: 1\nExplanation: XXX -> OOO\nWe select all the 3 characters and convert them in one move.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"XXOX\"\nOutput: 2\nExplanation: XXOX -> OOOX -> OOOO\nWe select the first 3 characters in the first move, and convert them to 'O'.\nThen we select the last 3 characters and convert them so that the final string contains all 'O's.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"OOOO\"\nOutput: 0\nExplanation: There are no 'X's in s to convert.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 1000",
+    "s[i] is either 'X' or 'O'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the smallest substring you need to consider at a time.",
+    "Try delaying a move as long as possible."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumMoves(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumMoves(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumMoves(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumMoves(self, s: str) -> int:\n        ",
+    "c": "int minimumMoves(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumMoves(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumMoves = function(s) {\n    \n};",
+    "typescript": "function minimumMoves(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minimumMoves($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumMoves(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumMoves(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumMoves(String s) {\n    \n  }\n}",
+    "golang": "func minimumMoves(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef minimum_moves(s)\n    \nend",
+    "scala": "object Solution {\n    def minimumMoves(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_moves(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-moves s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_moves(S :: unicode:unicode_binary()) -> integer().\nminimum_moves(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_moves(s :: String.t) :: integer\n  def minimum_moves(s) do\n    \n  end\nend"
+  }
+}

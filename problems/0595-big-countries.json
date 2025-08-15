@@ -1,0 +1,34 @@
+{
+  "title": "Big Countries",
+  "problem_id": "595",
+  "frontend_id": "595",
+  "difficulty": "Easy",
+  "problem_slug": "big-countries",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: World\nA country is big if:\nWrite a solution to find the name, population, and area of the big countries.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| name        | varchar |\n| continent   | varchar |\n| area        | int     |\n| population  | int     |\n| gdp         | bigint  |\n+-------------+---------+\nname is the primary key (column with unique values) for this table.\nEach row of this table gives information about the name of a country, the continent to which it belongs, its area, the population, and its GDP value.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nWorld table:\n+-------------+-----------+---------+------------+--------------+\n| name        | continent | area    | population | gdp          |\n+-------------+-----------+---------+------------+--------------+\n| Afghanistan | Asia      | 652230  | 25500100   | 20343000000  |\n| Albania     | Europe    | 28748   | 2831741    | 12960000000  |\n| Algeria     | Africa    | 2381741 | 37100000   | 188681000000 |\n| Andorra     | Europe    | 468     | 78115      | 3712000000   |\n| Angola      | Africa    | 1246700 | 20609294   | 100990000000 |\n+-------------+-----------+---------+------------+--------------+\nOutput: \n+-------------+------------+---------+\n| name        | population | area    |\n+-------------+------------+---------+\n| Afghanistan | 25500100   | 652230  |\n| Algeria     | 37100000   | 2381741 |\n+-------------+------------+---------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef big_countries(world: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n# Solution\n\n---\n\n## pandas\n\n### Approach: Filtering rows\n\n#### IntuitionnamecontinentareapopulationgdpAfghanistanAsia6522302550010020343000000AlbaniaEurope28748283174112960000000AlgeriaAfrica238174137100000188681000000AndorraEurope468781153712000000AngolaAfrica124670020609294100990000000To determine whether a country is considered `big`, there are two conditions to verify, as stated in the description:\n\n- The country must have an area of at least three million square kilometers, denoted as `area >= 3,000,000`.\n\n- The population of the country should be a minimum of twenty-five million, expressed as `population >= 25,000,000`.\n\n#### Algorithm\n\nFirst, we apply row filtering to identify the countries that satisfy the conditions.\n\n\n```python\n    df = world[(world['area'] >= 3000000) | (world['population'] >= 25000000)]\n```\n\nThis step filters out the rows representing countries that do not meet the conditions, leaving the remaining table as follows.namecontinentareapopulationgdpAfghanistanAsia6522302550010020343000000AlgeriaAfrica238174137100000188681000000Noting that the table has five columns, we need to return three columns according to the requirements of the problem. Thus the next step is returning the three required columns with the relative order as: `name`, `population`, and `area`.\n\n```python\n    df = df[['name', 'population', 'area']]\n```namepopulationareaAfghanistan25500100652230Algeria371000002381741#### Implementation---\n\n## Database### Approach: Filtering rows using `WHERE`#### Algorithm\n\nTo determine whether a country is considered `big`, there are two conditions to verify, as stated in the description:\n\n- The country must have an area of at least three million square kilometers, denoted as `area >= 3,000,000`.\n\n- The population of the country should be a minimum of twenty-five million, expressed as `population >= 25,000,000`.\n\n\n```sql\nSELECT \n    * \nFROM \n    world \nWHERE \n    area >= 3000000 \n    OR population >= 25000000\n```Noting that we need to return three columns according to the requirements of the problem. Thus the next step is selecting the three required columns with the relative order as: `name`, `population`, and `area`. The complete answer is as follows.\n\n```sql\nSELECT\n    name, population, area\nFROM\n    world\nWHERE\n    area >= 3000000 OR population >= 25000000\n;\n```"
+}

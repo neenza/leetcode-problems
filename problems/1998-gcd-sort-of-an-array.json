@@ -1,0 +1,62 @@
+{
+  "title": "GCD Sort of an Array",
+  "problem_id": "2125",
+  "frontend_id": "1998",
+  "difficulty": "Hard",
+  "problem_slug": "gcd-sort-of-an-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Union Find",
+    "Sorting",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums, and you can perform the following operation any number of times on nums:\nReturn true if it is possible to sort nums in non-decreasing order using the above swap method, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,21,3]\nOutput: true\nExplanation: We can sort [7,21,3] by performing the following operations:\n- Swap 7 and 21 because gcd(7,21) = 7. nums = [21,7,3]\n- Swap 21 and 3 because gcd(21,3) = 3. nums = [3,7,21]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,2,6,2]\nOutput: false\nExplanation: It is impossible to sort the array because 5 cannot be swapped with any other element.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [10,5,9,3,15]\nOutput: true\nWe can sort [10,5,9,3,15] by performing the following operations:\n- Swap 10 and 15 because gcd(10,15) = 5. nums = [15,5,9,3,10]\n- Swap 15 and 3 because gcd(15,3) = 3. nums = [3,5,9,15,10]\n- Swap 10 and 15 because gcd(10,15) = 5. nums = [3,5,9,10,15]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 3 * 104",
+    "2 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we build a graph with all the prime numbers and the original array?",
+    "We can use union-find to determine which indices are connected (i.e., which indices can be swapped)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool gcdSort(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean gcdSort(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def gcdSort(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def gcdSort(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool gcdSort(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool GcdSort(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar gcdSort = function(nums) {\n    \n};",
+    "typescript": "function gcdSort(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function gcdSort($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func gcdSort(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun gcdSort(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool gcdSort(List<int> nums) {\n    \n  }\n}",
+    "golang": "func gcdSort(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef gcd_sort(nums)\n    \nend",
+    "scala": "object Solution {\n    def gcdSort(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn gcd_sort(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (gcd-sort nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec gcd_sort(Nums :: [integer()]) -> boolean().\ngcd_sort(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec gcd_sort(nums :: [integer]) :: boolean\n  def gcd_sort(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Find the Encrypted String",
+  "problem_id": "3468",
+  "frontend_id": "3210",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-encrypted-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string s and an integer k. Encrypt the string using the following algorithm:\nReturn the encrypted string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"dart\", k = 3\nOutput: \"tdar\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aaa\", k = 1\nOutput: \"aaa\"\nExplanation:\nAs all the characters are the same, the encrypted string will also be the same.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "1 <= k <= 104",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Make a new string such that for each character in <code>s</code>, character <code>i</code> will correspond to <code>(i + k) % s.length</code> character in the original string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string getEncryptedString(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getEncryptedString(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getEncryptedString(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getEncryptedString(self, s: str, k: int) -> str:\n        ",
+    "c": "char* getEncryptedString(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GetEncryptedString(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar getEncryptedString = function(s, k) {\n    \n};",
+    "typescript": "function getEncryptedString(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function getEncryptedString($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getEncryptedString(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getEncryptedString(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String getEncryptedString(String s, int k) {\n    \n  }\n}",
+    "golang": "func getEncryptedString(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef get_encrypted_string(s, k)\n    \nend",
+    "scala": "object Solution {\n    def getEncryptedString(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_encrypted_string(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (get-encrypted-string s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec get_encrypted_string(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nget_encrypted_string(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_encrypted_string(s :: String.t, k :: integer) :: String.t\n  def get_encrypted_string(s, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Permutation Difference between Two Strings",
+  "problem_id": "3412",
+  "frontend_id": "3146",
+  "difficulty": "Easy",
+  "problem_slug": "permutation-difference-between-two-strings",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "You are given two strings s and t such that every character occurs at most once in s and t is a permutation of s.\nThe permutation difference between s and t is defined as the sum of the absolute difference between the index of the occurrence of each character in s and the index of the occurrence of the same character in t.\nReturn the permutation difference between s and t.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\", t = \"bac\"\nOutput: 2\nExplanation:\nFor s = \"abc\" and t = \"bac\" , the permutation difference of s and t is equal to the sum of:\nThat is, the permutation difference between s and t is equal to |0 - 1| + |1 - 0| + |2 - 2| = 2 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcde\", t = \"edbac\"\nOutput: 12\nExplanation: The permutation difference between s and t is equal to |0 - 3| + |1 - 2| + |2 - 4| + |3 - 1| + |4 - 0| = 12 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 26",
+    "Each character occurs at most once in s.",
+    "t is a permutation of s.",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each character, find the indices of its occurrences in string <code>s</code> then in string <code>t</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findPermutationDifference(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findPermutationDifference(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findPermutationDifference(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findPermutationDifference(self, s: str, t: str) -> int:\n        ",
+    "c": "int findPermutationDifference(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindPermutationDifference(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar findPermutationDifference = function(s, t) {\n    \n};",
+    "typescript": "function findPermutationDifference(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function findPermutationDifference($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findPermutationDifference(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findPermutationDifference(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findPermutationDifference(String s, String t) {\n    \n  }\n}",
+    "golang": "func findPermutationDifference(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef find_permutation_difference(s, t)\n    \nend",
+    "scala": "object Solution {\n    def findPermutationDifference(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_permutation_difference(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-permutation-difference s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec find_permutation_difference(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nfind_permutation_difference(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_permutation_difference(s :: String.t, t :: String.t) :: integer\n  def find_permutation_difference(s, t) do\n    \n  end\nend"
+  }
+}

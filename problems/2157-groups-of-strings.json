@@ -1,0 +1,58 @@
+{
+  "title": "Groups of Strings",
+  "problem_id": "2276",
+  "frontend_id": "2157",
+  "difficulty": "Hard",
+  "problem_slug": "groups-of-strings",
+  "topics": [
+    "String",
+    "Bit Manipulation",
+    "Union Find"
+  ],
+  "description": "You are given a 0-indexed array of strings words. Each string consists of lowercase English letters only. No letter occurs more than once in any string of words.\nTwo strings s1 and s2 are said to be connected if the set of letters of s2 can be obtained from the set of letters of s1 by any one of the following operations:\nThe array words can be divided into one or more non-intersecting groups. A string belongs to a group if any one of the following is true:\nNote that the strings in words should be grouped in such a manner that a string belonging to a group cannot be connected to a string present in any other group. It can be proved that such an arrangement is always unique.\nReturn an array ans of size 2 where:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"a\",\"b\",\"ab\",\"cde\"]\nOutput: [2,3]\nExplanation:\n- words[0] can be used to obtain words[1] (by replacing 'a' with 'b'), and words[2] (by adding 'b'). So words[0] is connected to words[1] and words[2].\n- words[1] can be used to obtain words[0] (by replacing 'b' with 'a'), and words[2] (by adding 'a'). So words[1] is connected to words[0] and words[2].\n- words[2] can be used to obtain words[0] (by deleting 'b'), and words[1] (by deleting 'a'). So words[2] is connected to words[0] and words[1].\n- words[3] is not connected to any string in words.\nThus, words can be divided into 2 groups [\"a\",\"b\",\"ab\"] and [\"cde\"]. The size of the largest group is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"ab\",\"abc\"]\nOutput: [1,3]\nExplanation:\n- words[0] is connected to words[1].\n- words[1] is connected to words[0] and words[2].\n- words[2] is connected to words[1].\nSince all strings are connected to each other, they should be grouped together.\nThus, the size of the largest group is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 2 * 104",
+    "1 <= words[i].length <= 26",
+    "words[i] consists of lowercase English letters only.",
+    "No letter occurs more than once in words[i]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we build a graph from words, where there exists an edge between nodes i and j if words[i] and words[j] are connected?",
+    "The problem now boils down to finding the total number of components and the size of the largest component in the graph.",
+    "How can we use bit masking to reduce the search space while adding edges to node i?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> groupStrings(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] groupStrings(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def groupStrings(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def groupStrings(self, words: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* groupStrings(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GroupStrings(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[]}\n */\nvar groupStrings = function(words) {\n    \n};",
+    "typescript": "function groupStrings(words: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer[]\n     */\n    function groupStrings($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func groupStrings(_ words: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun groupStrings(words: Array<String>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> groupStrings(List<String> words) {\n    \n  }\n}",
+    "golang": "func groupStrings(words []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer[]}\ndef group_strings(words)\n    \nend",
+    "scala": "object Solution {\n    def groupStrings(words: Array[String]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn group_strings(words: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (group-strings words)\n  (-> (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec group_strings(Words :: [unicode:unicode_binary()]) -> [integer()].\ngroup_strings(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec group_strings(words :: [String.t]) :: [integer]\n  def group_strings(words) do\n    \n  end\nend"
+  }
+}

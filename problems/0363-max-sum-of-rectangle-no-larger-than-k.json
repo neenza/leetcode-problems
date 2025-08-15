@@ -1,0 +1,63 @@
+{
+  "title": "Max Sum of Rectangle No Larger Than K",
+  "problem_id": "363",
+  "frontend_id": "363",
+  "difficulty": "Hard",
+  "problem_slug": "max-sum-of-rectangle-no-larger-than-k",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Matrix",
+    "Prefix Sum",
+    "Ordered Set"
+  ],
+  "description": "Given an m x n matrix matrix and an integer k, return the max sum of a rectangle in the matrix such that its sum is no larger than k.\nIt is guaranteed that there will be a rectangle with a sum no larger than k.\nExample 1:\nExample 2:\nConstraints:\nFollow up: What if the number of rows is much larger than the number of columns?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,0,1],[0,-2,3]], k = 2\nOutput: 2\nExplanation: Because the sum of the blue rectangle [[0, 1], [-2, 3]] is 2, and 2 is the max number no larger than k (k = 2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/18/sum-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[2,2,-1]], k = 3\nOutput: 3",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/18/sum-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 100",
+    "-100 <= matrix[i][j] <= 100",
+    "-105 <= k <= 105"
+  ],
+  "follow_ups": [
+    "What if the number of rows is much larger than the number of columns?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSumSubmatrix(vector<vector<int>>& matrix, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSumSubmatrix(int[][] matrix, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSumSubmatrix(self, matrix, k):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:\n        ",
+    "c": "int maxSumSubmatrix(int** matrix, int matrixSize, int* matrixColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSumSubmatrix(int[][] matrix, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} k\n * @return {number}\n */\nvar maxSumSubmatrix = function(matrix, k) {\n    \n};",
+    "typescript": "function maxSumSubmatrix(matrix: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxSumSubmatrix($matrix, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSumSubmatrix(_ matrix: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSumSubmatrix(matrix: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSumSubmatrix(List<List<int>> matrix, int k) {\n    \n  }\n}",
+    "golang": "func maxSumSubmatrix(matrix [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @param {Integer} k\n# @return {Integer}\ndef max_sum_submatrix(matrix, k)\n    \nend",
+    "scala": "object Solution {\n    def maxSumSubmatrix(matrix: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum_submatrix(matrix: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum-submatrix matrix k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_sum_submatrix(Matrix :: [[integer()]], K :: integer()) -> integer().\nmax_sum_submatrix(Matrix, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum_submatrix(matrix :: [[integer]], k :: integer) :: integer\n  def max_sum_submatrix(matrix, k) do\n    \n  end\nend"
+  }
+}

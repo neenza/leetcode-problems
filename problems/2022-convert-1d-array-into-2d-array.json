@@ -1,0 +1,69 @@
+{
+  "title": "Convert 1D Array Into 2D Array",
+  "problem_id": "2132",
+  "frontend_id": "2022",
+  "difficulty": "Easy",
+  "problem_slug": "convert-1d-array-into-2d-array",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed 1-dimensional (1D) integer array original, and two integers, m and n. You are tasked with creating a 2-dimensional (2D) array with  m rows and n columns using all the elements from original.\nThe elements from indices 0 to n - 1 (inclusive) of original should form the first row of the constructed 2D array, the elements from indices n to 2 * n - 1 (inclusive) should form the second row of the constructed 2D array, and so on.\nReturn an m x n 2D array constructed according to the above procedure, or an empty 2D array if it is impossible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: original = [1,2,3,4], m = 2, n = 2\nOutput: [[1,2],[3,4]]\nExplanation: The constructed 2D array should contain 2 rows and 2 columns.\nThe first group of n=2 elements in original, [1,2], becomes the first row in the constructed 2D array.\nThe second group of n=2 elements in original, [3,4], becomes the second row in the constructed 2D array.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/26/image-20210826114243-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: original = [1,2,3], m = 1, n = 3\nOutput: [[1,2,3]]\nExplanation: The constructed 2D array should contain 1 row and 3 columns.\nPut all three elements in original into the first row of the constructed 2D array.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/26/image-20210826114243-1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: original = [1,2], m = 1, n = 1\nOutput: []\nExplanation: There are 2 elements in original.\nIt is impossible to fit 2 elements in a 1x1 2D array, so return an empty 2D array.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/26/image-20210826114243-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= original.length <= 5 * 104",
+    "1 <= original[i] <= 105",
+    "1 <= m, n <= 4 * 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "When is it possible to convert original into a 2D array and when is it impossible?",
+    "It is possible if and only if m * n == original.length",
+    "If it is possible to convert original to a 2D array, keep an index i such that original[i] is the next element to add to the 2D array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> construct2DArray(vector<int>& original, int m, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] construct2DArray(int[] original, int m, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def construct2DArray(self, original, m, n):\n        \"\"\"\n        :type original: List[int]\n        :type m: int\n        :type n: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def construct2DArray(self, original: List[int], m: int, n: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** construct2DArray(int* original, int originalSize, int m, int n, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] Construct2DArray(int[] original, int m, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} original\n * @param {number} m\n * @param {number} n\n * @return {number[][]}\n */\nvar construct2DArray = function(original, m, n) {\n    \n};",
+    "typescript": "function construct2DArray(original: number[], m: number, n: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $original\n     * @param Integer $m\n     * @param Integer $n\n     * @return Integer[][]\n     */\n    function construct2DArray($original, $m, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func construct2DArray(_ original: [Int], _ m: Int, _ n: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun construct2DArray(original: IntArray, m: Int, n: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> construct2DArray(List<int> original, int m, int n) {\n    \n  }\n}",
+    "golang": "func construct2DArray(original []int, m int, n int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[]} original\n# @param {Integer} m\n# @param {Integer} n\n# @return {Integer[][]}\ndef construct2_d_array(original, m, n)\n    \nend",
+    "scala": "object Solution {\n    def construct2DArray(original: Array[Int], m: Int, n: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn construct2_d_array(original: Vec<i32>, m: i32, n: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (construct2-d-array original m n)\n  (-> (listof exact-integer?) exact-integer? exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec construct2_d_array(Original :: [integer()], M :: integer(), N :: integer()) -> [[integer()]].\nconstruct2_d_array(Original, M, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec construct2_d_array(original :: [integer], m :: integer, n :: integer) :: [[integer]]\n  def construct2_d_array(original, m, n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Simulation\n\n#### Intuition\n\nThe problem statement implies that the length of `original` must equal $m \\times n$, the total number of elements required to fill the matrix. So, we'll start by checking if it's possible to construct the array and return an empty array if not. \n\nNext, we'll simulate filling the 2D matrix row by row using nested loops. \n- Row (`i`): The row index `i` is directly controlled by the outer loop, which ranges from `0` to `m-1`. Each time the outer loop increments `i`, it moves to the next row.\n- Column (`j`): The column index `j` is controlled by the inner loop, which ranges from `0` to `n-1`. As the inner loop increments `j`, it moves across the columns of the current row.\n\n#### Algorithm\n\n- Check if the length of the `original` array is equal to `m * n`:\n  - If not, return an empty 2D array.\n- Initialize a 2D array `resultArray` of dimensions $m \\times n$.\n- Create a variable `index` to keep track of the current position in the `original` array.\n- Iterate through each row `i` of `resultArray`:\n  - For each row, iterate through each column `j`:\n    - Assign the element at the current `index` of the `original` array to `resultArray[i][j]`.\n    - Increment `index` to move to the next element in `original`.\n- After filling all elements, return the `resultArray`.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ and $n$ be the number of rows and columns in `resultArray`, respectively.\n\n- Time complexity: $O(m \\times n)$\n\n    The algorithm initializes a 2D array and fills it using nested loops. The outer loop runs $m$ times and the inner loop runs $n$ times. Thus, the total number of iterations is $m \\times n$, which equals a time complexity of $O(m \\times n)$.\n\n- Space complexity: $O(1)$\n\n    The output array has a space complexity of $O(m \\times n)$. However, we do not consider input and output space as part of our space complexity calculations. Thus, the space complexity of the algorithm is constant.  \n\n---\n\n### Approach 2: Math\n\n#### Intuition\n\nLet's look for a pattern we can use to directly map elements from the `original` array to the 2D matrix using one loop instead of two. \n\nWe know that the length of each row is `n`, so the first `n` elements will be in row one, the next `n` elements will be in the row two, and so on. We can use this pattern to efficiently determine the row index for each element using integer division (also known as floor division): the element at index `i` in `original` belongs in row `i / n`. Have a look at the below illustration:\n\n![](../Figures//2022/row_example.png)\n\nTo determine the column position of an element in the 2D matrix, we can use the remainder of its index in the 1D array when divided by the number of elements in each row of the 2D matrix. This method works because the remainder cycles through `0` to `n-1` as you move through the 1D array, matching the columns in each row of the 2D matrix:\n\n![](../Figures//2022/col_example.png)\n\nGiven this mathematical relationship, we can directly populate the matrix by iterating through the `original` array and placing each element at the corresponding `(i / n, i % n)` position in the matrix:\n\n![](../Figures//2022/final_matrix.png)\n\n#### Algorithm\n \n- Check if the length of the `original` array is equal to `m * n`:\n  - If it isn't, return an empty 2D array.\n- Initialize a 2-D array `resultArray` with dimensions $m \\times n$.\n- Loop over each index `i` in `original`:\n  - Set `resultArray[i / n][i % n]` to `original[i]`.\n- Return `resultArray` as our answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ and $n$ be the number of rows and columns in `resultArray`, respectively. \n\n* Time complexity: $O(m \\times n)$\n\n    The algorithm iteratively fills every cell in the `resultArray`, which takes $O(m \\times n)$ time.\n\n* Space complexity: $O(1)$\n\n    The output array takes $O(m \\times n)$ space. However, we do not consider input and output space as part of our space complexity calculations. Thus, the space complexity of the algorithm is constant. \n\n---"
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Count the Number of Inversions",
+  "problem_id": "3460",
+  "frontend_id": "3193",
+  "difficulty": "Hard",
+  "problem_slug": "count-the-number-of-inversions",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer n and a 2D array requirements, where requirements[i] = [endi, cnti] represents the end index and the inversion count of each requirement.\nA pair of indices (i, j) from an integer array nums is called an inversion if:\nReturn the number of permutations perm of [0, 1, 2, ..., n - 1] such that for all requirements[i], perm[0..endi] has exactly cnti inversions.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, requirements = [[2,2],[0,0]]\nOutput: 2\nExplanation:\nThe two permutations are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, requirements = [[2,2],[1,1],[0,0]]\nOutput: 1\nExplanation:\nThe only satisfying permutation is [2, 0, 1] :",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, requirements = [[0,0],[1,0]]\nOutput: 1\nExplanation:\nThe only satisfying permutation is [0, 1] :",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 300",
+    "1 <= requirements.length <= n",
+    "requirements[i] = [endi, cnti]",
+    "0 <= endi <= n - 1",
+    "0 <= cnti <= 400",
+    "The input is generated such that there is at least one i such that endi == n - 1.",
+    "The input is generated such that all endi are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i][j]</code> denote the number of arrays of length <code>i</code> with <code>j</code> inversions.",
+    "<code>dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1] + … + dp[i - 1][0]</code>.",
+    "<code>dp[i][j] = 0</code> if for some <code>x</code>, <code>requirements[x][0] == i</code> and <code>requirements[x][1] != j</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfPermutations(int n, vector<vector<int>>& requirements) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfPermutations(int n, int[][] requirements) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfPermutations(self, n, requirements):\n        \"\"\"\n        :type n: int\n        :type requirements: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfPermutations(self, n: int, requirements: List[List[int]]) -> int:\n        ",
+    "c": "int numberOfPermutations(int n, int** requirements, int requirementsSize, int* requirementsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfPermutations(int n, int[][] requirements) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} requirements\n * @return {number}\n */\nvar numberOfPermutations = function(n, requirements) {\n    \n};",
+    "typescript": "function numberOfPermutations(n: number, requirements: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $requirements\n     * @return Integer\n     */\n    function numberOfPermutations($n, $requirements) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfPermutations(_ n: Int, _ requirements: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfPermutations(n: Int, requirements: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfPermutations(int n, List<List<int>> requirements) {\n    \n  }\n}",
+    "golang": "func numberOfPermutations(n int, requirements [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} requirements\n# @return {Integer}\ndef number_of_permutations(n, requirements)\n    \nend",
+    "scala": "object Solution {\n    def numberOfPermutations(n: Int, requirements: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_permutations(n: i32, requirements: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-permutations n requirements)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec number_of_permutations(N :: integer(), Requirements :: [[integer()]]) -> integer().\nnumber_of_permutations(N, Requirements) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_permutations(n :: integer, requirements :: [[integer]]) :: integer\n  def number_of_permutations(n, requirements) do\n    \n  end\nend"
+  }
+}

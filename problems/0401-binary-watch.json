@@ -1,0 +1,57 @@
+{
+  "title": "Binary Watch",
+  "problem_id": "401",
+  "frontend_id": "401",
+  "difficulty": "Easy",
+  "problem_slug": "binary-watch",
+  "topics": [
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "description": "A binary watch has 4 LEDs on the top to represent the hours (0-11), and 6 LEDs on the bottom to represent the minutes (0-59). Each LED represents a zero or one, with the least significant bit on the right.\nGiven an integer turnedOn which represents the number of LEDs that are currently on (ignoring the PM), return all possible times the watch could represent. You may return the answer in any order.\nThe hour must not contain a leading zero.\nThe minute must consist of two digits and may contain a leading zero.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: turnedOn = 1\nOutput: [\"0:01\",\"0:02\",\"0:04\",\"0:08\",\"0:16\",\"0:32\",\"1:00\",\"2:00\",\"4:00\",\"8:00\"]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/08/binarywatch.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: turnedOn = 9\nOutput: []",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/08/binarywatch.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "0 <= turnedOn <= 10"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simplify by seeking for solutions that involve comparing bit counts.",
+    "Consider calculating all possible times for comparison purposes."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> readBinaryWatch(int turnedOn) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> readBinaryWatch(int turnedOn) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def readBinaryWatch(self, turnedOn):\n        \"\"\"\n        :type turnedOn: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def readBinaryWatch(self, turnedOn: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** readBinaryWatch(int turnedOn, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> ReadBinaryWatch(int turnedOn) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} turnedOn\n * @return {string[]}\n */\nvar readBinaryWatch = function(turnedOn) {\n    \n};",
+    "typescript": "function readBinaryWatch(turnedOn: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $turnedOn\n     * @return String[]\n     */\n    function readBinaryWatch($turnedOn) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func readBinaryWatch(_ turnedOn: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun readBinaryWatch(turnedOn: Int): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> readBinaryWatch(int turnedOn) {\n    \n  }\n}",
+    "golang": "func readBinaryWatch(turnedOn int) []string {\n    \n}",
+    "ruby": "# @param {Integer} turned_on\n# @return {String[]}\ndef read_binary_watch(turned_on)\n    \nend",
+    "scala": "object Solution {\n    def readBinaryWatch(turnedOn: Int): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn read_binary_watch(turned_on: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (read-binary-watch turnedOn)\n  (-> exact-integer? (listof string?))\n  )",
+    "erlang": "-spec read_binary_watch(TurnedOn :: integer()) -> [unicode:unicode_binary()].\nread_binary_watch(TurnedOn) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec read_binary_watch(turned_on :: integer) :: [String.t]\n  def read_binary_watch(turned_on) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Number of Steps to Make Two Strings Anagram II",
+  "problem_id": "2293",
+  "frontend_id": "2186",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-steps-to-make-two-strings-anagram-ii",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given two strings s and t. In one step, you can append any character to either s or t.\nReturn the minimum number of steps to make s and t anagrams of each other.\nAn anagram of a string is a string that contains the same characters with a different (or the same) ordering.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcode\", t = \"coats\"\nOutput: 7\nExplanation: \n- In 2 steps, we can append the letters in \"as\" onto s = \"leetcode\", forming s = \"leetcodeas\".\n- In 5 steps, we can append the letters in \"leede\" onto t = \"coats\", forming t = \"coatsleede\".\n\"leetcodeas\" and \"coatsleede\" are now anagrams of each other.\nWe used a total of 2 + 5 = 7 steps.\nIt can be shown that there is no way to make them anagrams of each other with less than 7 steps.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"night\", t = \"thing\"\nOutput: 0\nExplanation: The given strings are already anagrams of each other. Thus, we do not need any further steps.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 2 * 105",
+    "s and t consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that for anagrams, the order of the letters is irrelevant.",
+    "For each letter, we can count its frequency in s and t.",
+    "For each letter, its contribution to the answer is the absolute difference between its frequency in s and t."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSteps(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSteps(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSteps(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSteps(self, s: str, t: str) -> int:\n        ",
+    "c": "int minSteps(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSteps(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar minSteps = function(s, t) {\n    \n};",
+    "typescript": "function minSteps(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function minSteps($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSteps(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSteps(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSteps(String s, String t) {\n    \n  }\n}",
+    "golang": "func minSteps(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef min_steps(s, t)\n    \nend",
+    "scala": "object Solution {\n    def minSteps(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_steps(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-steps s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec min_steps(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nmin_steps(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_steps(s :: String.t, t :: String.t) :: integer\n  def min_steps(s, t) do\n    \n  end\nend"
+  }
+}

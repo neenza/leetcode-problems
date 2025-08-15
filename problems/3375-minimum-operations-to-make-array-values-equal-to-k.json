@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Operations to Make Array Values Equal to K",
+  "problem_id": "3621",
+  "frontend_id": "3375",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-operations-to-make-array-values-equal-to-k",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nAn integer h is called valid if all values in the array that are strictly greater than h are identical.\nFor example, if nums = [10, 8, 10, 8], a valid integer is h = 9 because all nums[i] > 9 are equal to 10, but 5 is not a valid integer.\nYou are allowed to perform the following operation on nums:\nReturn the minimum number of operations required to make every element in nums equal to k. If it is impossible to make all elements equal to k, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,2,5,4,5], k = 2\nOutput: 2\nExplanation:\nThe operations can be performed in order using valid integers 4 and then 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,2], k = 2\nOutput: -1\nExplanation:\nIt is impossible to make all the values equal to 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [9,7,5,3], k = 1\nOutput: 4\nExplanation:\nThe operations can be performed using valid integers in the order 7, 5, 3, and 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "1 <= k <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Handle the case when the array contains an integer less than <code>k</code>",
+    "Start by performing operations on the highest integer",
+    "You can perform an operation on the highest integer using the second-highest, an operation on the second-highest using the third-highest, and so forth.",
+    "The answer is the number of distinct integers in the array that are larger than <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minOperations = function(nums, k) {\n    \n};",
+    "typescript": "function minOperations(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minOperations($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_operations(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()], K :: integer()) -> integer().\nmin_operations(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], k :: integer) :: integer\n  def min_operations(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Hash map\n\n#### Intuition\n\nAccording to the problem, if the maximum value of the current array is $x$, and the second largest value (if it exists) is $y$, then we can choose an $h$ such that $y \\le h \\lt x$, and replace all occurrences of $x$ in the array with $h$.\n\nTherefore, to minimize the number of operations required to turn all numbers in the array into `k`:\n\n- If there is a number smaller than $k$ in the array, there is no solution.\n- Otherwise, count the number of different numbers greater than $k$ in the array, which is the number of operations.\n\nWe use a hash map to count the numbers greater than $k$ in the array. During the traversal of the array, if we encounter a number smaller than $k$, we directly return $-1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nWe only need to traverse $\\textit{nums}$ once, and the time complexity of adding elements to the hash map is $O(1)$, so the overall time complexity is $O(n)$.\n\n- Space complexity: $O(n)$.\n\nThe space complexity of using a hash map is $O(n)$."
+}

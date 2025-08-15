@@ -1,0 +1,56 @@
+{
+  "title": "Positions of Large Groups",
+  "problem_id": "857",
+  "frontend_id": "830",
+  "difficulty": "Easy",
+  "problem_slug": "positions-of-large-groups",
+  "topics": [
+    "String"
+  ],
+  "description": "In a string s of lowercase letters, these letters form consecutive groups of the same character.\nFor example, a string like s = \"abbxxxxzyy\" has the groups \"a\", \"bb\", \"xxxx\", \"z\", and \"yy\".\nA group is identified by an interval [start, end], where start and end denote the start and end indices (inclusive) of the group. In the above example, \"xxxx\" has the interval [3,6].\nA group is considered large if it has 3 or more characters.\nReturn the intervals of every large group sorted in increasing order by start index.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abbxxxxzzy\"\nOutput: [[3,6]]\nExplanation: \"xxxx\" is the only large group with start index 3 and end index 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abc\"\nOutput: []\nExplanation: We have groups \"a\", \"b\", and \"c\", none of which are large groups.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcdddeeeeaabbbcd\"\nOutput: [[3,5],[6,9],[12,14]]\nExplanation: The large groups are \"ddd\", \"eeee\", and \"bbb\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s contains lowercase English letters only."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> largeGroupPositions(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> largeGroupPositions(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largeGroupPositions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largeGroupPositions(self, s: str) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** largeGroupPositions(char* s, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> LargeGroupPositions(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number[][]}\n */\nvar largeGroupPositions = function(s) {\n    \n};",
+    "typescript": "function largeGroupPositions(s: string): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer[][]\n     */\n    function largeGroupPositions($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largeGroupPositions(_ s: String) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largeGroupPositions(s: String): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> largeGroupPositions(String s) {\n    \n  }\n}",
+    "golang": "func largeGroupPositions(s string) [][]int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer[][]}\ndef large_group_positions(s)\n    \nend",
+    "scala": "object Solution {\n    def largeGroupPositions(s: String): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn large_group_positions(s: String) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (large-group-positions s)\n  (-> string? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec large_group_positions(S :: unicode:unicode_binary()) -> [[integer()]].\nlarge_group_positions(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec large_group_positions(s :: String.t) :: [[integer]]\n  def large_group_positions(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Two Pointer [Accepted]\n\n**Intuition**\n\nWe scan through the string to identify the start and end of each group.  If the size of the group is at least 3, we add it to the answer.\n\n**Algorithm**\n\nMaintain pointers `i, j` with `i <= j`.  The `i` pointer will represent the start of the current group, and we will increment `j` forward until it reaches the end of the group.\n\nWe know that we have reached the end of the group when `j` is at the end of the string, or `S[j] != S[j+1]`.  At this point, we have some group `[i, j]`; and after, we will update `i = j+1`, the start of the next group.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity: $$O(N)$$, the space used by the answer."
+}

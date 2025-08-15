@@ -1,0 +1,63 @@
+{
+  "title": "Grid Teleportation Traversal",
+  "problem_id": "3837",
+  "frontend_id": "3552",
+  "difficulty": "Medium",
+  "problem_slug": "grid-teleportation-traversal",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given a 2D character grid matrix of size m x n, represented as an array of strings, where matrix[i][j] represents the cell at the intersection of the ith row and jth column. Each cell is one of the following:\nYou start at the top-left cell (0, 0), and your goal is to reach the bottom-right cell (m - 1, n - 1). You can move from the current cell to any adjacent cell (up, down, left, right) as long as the destination cell is within the grid bounds and is not an obstacle.\nIf you step on a cell containing a portal letter and you haven't used that portal letter before, you may instantly teleport to any other cell in the grid with the same letter. This teleportation does not count as a move, but each portal letter can be used at most once during your journey.\nReturn the minimum number of moves required to reach the bottom-right cell. If it is not possible to reach the destination, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [\"A..\",\".A.\",\"...\"]\nOutput: 2\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/15/example04140.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [\".#...\",\".#.#.\",\".#.#.\",\"...#.\"]\nOutput: 13\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/15/ezgifcom-animated-gif-maker.gif"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m == matrix.length <= 103",
+    "1 <= n == matrix[i].length <= 103",
+    "matrix[i][j] is either '#', '.', or an uppercase English letter.",
+    "matrix[0][0] is not an obstacle."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Treat all portals with the same letter as connected-like one big super-node.",
+    "Each portal letter is used at most once, but that doesn't affect correctness since we visit each cell only once in the shortest path.",
+    "Use Breadth-First Search to find the minimum number of moves."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMoves(vector<string>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMoves(String[] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMoves(self, matrix):\n        \"\"\"\n        :type matrix: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMoves(self, matrix: List[str]) -> int:\n        ",
+    "c": "int minMoves(char** matrix, int matrixSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMoves(string[] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} matrix\n * @return {number}\n */\nvar minMoves = function(matrix) {\n    \n};",
+    "typescript": "function minMoves(matrix: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $matrix\n     * @return Integer\n     */\n    function minMoves($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMoves(_ matrix: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMoves(matrix: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMoves(List<String> matrix) {\n    \n  }\n}",
+    "golang": "func minMoves(matrix []string) int {\n    \n}",
+    "ruby": "# @param {String[]} matrix\n# @return {Integer}\ndef min_moves(matrix)\n    \nend",
+    "scala": "object Solution {\n    def minMoves(matrix: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_moves(matrix: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-moves matrix)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec min_moves(Matrix :: [unicode:unicode_binary()]) -> integer().\nmin_moves(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_moves(matrix :: [String.t]) :: integer\n  def min_moves(matrix) do\n    \n  end\nend"
+  }
+}

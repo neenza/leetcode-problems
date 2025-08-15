@@ -1,0 +1,60 @@
+{
+  "title": "Longest Common Suffix Queries",
+  "problem_id": "3376",
+  "frontend_id": "3093",
+  "difficulty": "Hard",
+  "problem_slug": "longest-common-suffix-queries",
+  "topics": [
+    "Array",
+    "String",
+    "Trie"
+  ],
+  "description": "You are given two arrays of strings wordsContainer and wordsQuery.\nFor each wordsQuery[i], you need to find a string from wordsContainer that has the longest common suffix with wordsQuery[i]. If there are two or more strings in wordsContainer that share the longest common suffix, find the string that is the smallest in length. If there are two or more such strings that have the same smallest length, find the one that occurred earlier in wordsContainer.\nReturn an array of integers ans, where ans[i] is the index of the string in wordsContainer that has the longest common suffix with wordsQuery[i].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: wordsContainer = [\"abcd\",\"bcd\",\"xbcd\"], wordsQuery = [\"cd\",\"bcd\",\"xyz\"]\nOutput: [1,1,1]\nExplanation:\nLet's look at each wordsQuery[i] separately:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: wordsContainer = [\"abcdefgh\",\"poiuygh\",\"ghghgh\"], wordsQuery = [\"gh\",\"acbfgh\",\"acbfegh\"]\nOutput: [2,0,2]\nExplanation:\nLet's look at each wordsQuery[i] separately:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= wordsContainer.length, wordsQuery.length <= 104",
+    "1 <= wordsContainer[i].length <= 5 * 103",
+    "1 <= wordsQuery[i].length <= 5 * 103",
+    "wordsContainer[i] consists only of lowercase English letters.",
+    "wordsQuery[i] consists only of lowercase English letters.",
+    "Sum of wordsContainer[i].length is at most 5 * 105.",
+    "Sum of wordsQuery[i].length is at most 5 * 105."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we reverse the strings, the problem changes to finding the longest common prefix.",
+    "Build a Trie, each node is a letter and only saves the best word’s index in each node, based on the criteria."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> stringIndices(vector<string>& wordsContainer, vector<string>& wordsQuery) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] stringIndices(String[] wordsContainer, String[] wordsQuery) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stringIndices(self, wordsContainer, wordsQuery):\n        \"\"\"\n        :type wordsContainer: List[str]\n        :type wordsQuery: List[str]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stringIndices(self, wordsContainer: List[str], wordsQuery: List[str]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* stringIndices(char** wordsContainer, int wordsContainerSize, char** wordsQuery, int wordsQuerySize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] StringIndices(string[] wordsContainer, string[] wordsQuery) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} wordsContainer\n * @param {string[]} wordsQuery\n * @return {number[]}\n */\nvar stringIndices = function(wordsContainer, wordsQuery) {\n    \n};",
+    "typescript": "function stringIndices(wordsContainer: string[], wordsQuery: string[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $wordsContainer\n     * @param String[] $wordsQuery\n     * @return Integer[]\n     */\n    function stringIndices($wordsContainer, $wordsQuery) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stringIndices(_ wordsContainer: [String], _ wordsQuery: [String]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stringIndices(wordsContainer: Array<String>, wordsQuery: Array<String>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> stringIndices(List<String> wordsContainer, List<String> wordsQuery) {\n    \n  }\n}",
+    "golang": "func stringIndices(wordsContainer []string, wordsQuery []string) []int {\n    \n}",
+    "ruby": "# @param {String[]} words_container\n# @param {String[]} words_query\n# @return {Integer[]}\ndef string_indices(words_container, words_query)\n    \nend",
+    "scala": "object Solution {\n    def stringIndices(wordsContainer: Array[String], wordsQuery: Array[String]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn string_indices(words_container: Vec<String>, words_query: Vec<String>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (string-indices wordsContainer wordsQuery)\n  (-> (listof string?) (listof string?) (listof exact-integer?))\n  )",
+    "erlang": "-spec string_indices(WordsContainer :: [unicode:unicode_binary()], WordsQuery :: [unicode:unicode_binary()]) -> [integer()].\nstring_indices(WordsContainer, WordsQuery) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec string_indices(words_container :: [String.t], words_query :: [String.t]) :: [integer]\n  def string_indices(words_container, words_query) do\n    \n  end\nend"
+  }
+}

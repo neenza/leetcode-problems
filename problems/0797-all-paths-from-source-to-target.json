@@ -1,0 +1,61 @@
+{
+  "title": "All Paths From Source to Target",
+  "problem_id": "813",
+  "frontend_id": "797",
+  "difficulty": "Medium",
+  "problem_slug": "all-paths-from-source-to-target",
+  "topics": [
+    "Backtracking",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph"
+  ],
+  "description": "Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find all possible paths from node 0 to node n - 1 and return them in any order.\nThe graph is given as follows: graph[i] is a list of all nodes you can visit from node i (i.e., there is a directed edge from node i to node graph[i][j]).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: graph = [[1,2],[3],[3],[]]\nOutput: [[0,1,3],[0,2,3]]\nExplanation: There are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/28/all_1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: graph = [[4,3,1],[3,2,4],[3],[4],[]]\nOutput: [[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/28/all_2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == graph.length",
+    "2 <= n <= 15",
+    "0 <= graph[i][j] < n",
+    "graph[i][j] != i (i.e., there will be no self-loops).",
+    "All the elements of graph[i] are unique.",
+    "The input graph is guaranteed to be a DAG."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def allPathsSourceTarget(self, graph):\n        \"\"\"\n        :type graph: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** allPathsSourceTarget(int** graph, int graphSize, int* graphColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> AllPathsSourceTarget(int[][] graph) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} graph\n * @return {number[][]}\n */\nvar allPathsSourceTarget = function(graph) {\n    \n};",
+    "typescript": "function allPathsSourceTarget(graph: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $graph\n     * @return Integer[][]\n     */\n    function allPathsSourceTarget($graph) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func allPathsSourceTarget(_ graph: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun allPathsSourceTarget(graph: Array<IntArray>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> allPathsSourceTarget(List<List<int>> graph) {\n    \n  }\n}",
+    "golang": "func allPathsSourceTarget(graph [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} graph\n# @return {Integer[][]}\ndef all_paths_source_target(graph)\n    \nend",
+    "scala": "object Solution {\n    def allPathsSourceTarget(graph: Array[Array[Int]]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn all_paths_source_target(graph: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (all-paths-source-target graph)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec all_paths_source_target(Graph :: [[integer()]]) -> [[integer()]].\nall_paths_source_target(Graph) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec all_paths_source_target(graph :: [[integer]]) :: [[integer]]\n  def all_paths_source_target(graph) do\n    \n  end\nend"
+  }
+}

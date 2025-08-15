@@ -1,0 +1,62 @@
+{
+  "title": "Find Edges in Shortest Paths",
+  "problem_id": "3386",
+  "frontend_id": "3123",
+  "difficulty": "Hard",
+  "problem_slug": "find-edges-in-shortest-paths",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Shortest Path"
+  ],
+  "description": "You are given an undirected weighted graph of n nodes numbered from 0 to n - 1. The graph consists of m edges represented by a 2D array edges, where edges[i] = [ai, bi, wi] indicates that there is an edge between nodes ai and bi with weight wi.\nConsider all the shortest paths from node 0 to node n - 1 in the graph. You need to find a boolean array answer where answer[i] is true if the edge edges[i] is part of at least one shortest path. Otherwise, answer[i] is false.\nReturn the array answer.\nNote that the graph may not be connected.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, edges = [[0,1,4],[0,2,1],[1,3,2],[1,4,3],[1,5,1],[2,3,1],[3,5,3],[4,5,2]]\nOutput: [true,true,true,false,true,true,true,false]\nExplanation:\nThe following are all the shortest paths between nodes 0 and 5:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, edges = [[2,0,1],[0,1,1],[0,3,4],[3,2,2]]\nOutput: [true,false,false,true]\nExplanation:\nThere is one shortest path between nodes 0 and 3, which is the path 0 -> 2 -> 3 with the sum of weights 1 + 2 = 3 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 5 * 104",
+    "m == edges.length",
+    "1 <= m <= min(5 * 104, n * (n - 1) / 2)",
+    "0 <= ai, bi < n",
+    "ai != bi",
+    "1 <= wi <= 105",
+    "There are no repeated edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find all the shortest paths starting from nodes 0 and <code>n - 1</code> to all other nodes.",
+    "How to use the above calculated shortest paths to check if an edge is part of at least one shortest path from 0 to <code>n - 1</code>?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> findAnswer(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean[] findAnswer(int n, int[][] edges) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findAnswer(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findAnswer(self, n: int, edges: List[List[int]]) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* findAnswer(int n, int** edges, int edgesSize, int* edgesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool[] FindAnswer(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {boolean[]}\n */\nvar findAnswer = function(n, edges) {\n    \n};",
+    "typescript": "function findAnswer(n: number, edges: number[][]): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @return Boolean[]\n     */\n    function findAnswer($n, $edges) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findAnswer(_ n: Int, _ edges: [[Int]]) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findAnswer(n: Int, edges: Array<IntArray>): BooleanArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> findAnswer(int n, List<List<int>> edges) {\n    \n  }\n}",
+    "golang": "func findAnswer(n int, edges [][]int) []bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @return {Boolean[]}\ndef find_answer(n, edges)\n    \nend",
+    "scala": "object Solution {\n    def findAnswer(n: Int, edges: Array[Array[Int]]): Array[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_answer(n: i32, edges: Vec<Vec<i32>>) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (find-answer n edges)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof boolean?))\n  )",
+    "erlang": "-spec find_answer(N :: integer(), Edges :: [[integer()]]) -> [boolean()].\nfind_answer(N, Edges) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_answer(n :: integer, edges :: [[integer]]) :: [boolean]\n  def find_answer(n, edges) do\n    \n  end\nend"
+  }
+}

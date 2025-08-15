@@ -1,0 +1,61 @@
+{
+  "title": "Continuous Subarray Sum",
+  "problem_id": "523",
+  "frontend_id": "523",
+  "difficulty": "Medium",
+  "problem_slug": "continuous-subarray-sum",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Prefix Sum"
+  ],
+  "description": "Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.\nA good subarray is a subarray where:\nNote that:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [23,2,4,6,7], k = 6\nOutput: true\nExplanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [23,2,6,4,7], k = 6\nOutput: true\nExplanation: [23, 2, 6, 4, 7] is an continuous subarray of size 5 whose elements sum up to 42.\n42 is a multiple of 6 because 42 = 7 * 6 and 7 is an integer.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [23,2,6,4,7], k = 13\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109",
+    "0 <= sum(nums[i]) <= 231 - 1",
+    "1 <= k <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkSubarraySum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkSubarraySum(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkSubarraySum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkSubarraySum(self, nums: List[int], k: int) -> bool:\n        ",
+    "c": "bool checkSubarraySum(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckSubarraySum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar checkSubarraySum = function(nums, k) {\n    \n};",
+    "typescript": "function checkSubarraySum(nums: number[], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Boolean\n     */\n    function checkSubarraySum($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkSubarraySum(_ nums: [Int], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkSubarraySum(nums: IntArray, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkSubarraySum(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func checkSubarraySum(nums []int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Boolean}\ndef check_subarray_sum(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def checkSubarraySum(nums: Array[Int], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_subarray_sum(nums: Vec<i32>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-subarray-sum nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec check_subarray_sum(Nums :: [integer()], K :: integer()) -> boolean().\ncheck_subarray_sum(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_subarray_sum(nums :: [integer], k :: integer) :: boolean\n  def check_subarray_sum(nums, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nThe problem asks us to determine if there exists a subarray in the given integer array `nums` where the sum of its elements is divisible by an integer `k`. \n\n**Key Observations:**\n1. The length of the subarray should be at least two.\n2. The constraints indicate that the problem must be solved in linear or log-linear time complexity, in terms of the size of the given array.\n\n---\n\n### Approach 1: Prefix Sum and Hashing\n\n#### Intuition\n\nOne brute force approach for this problem can be to find out the sum of all subarrays of the array and check if there exists a subarray with a sum divisible by `k`. Since the number of subarrays in an array of size `n` is `n * (n - 1) / 2`, the time complexity to calculate all possible subarrays is $O(n^2)$, and calculating the sum for each subarray takes $O(n)$. Therefore, the total time complexity is $O(n^3)$, which will give a Time Limit Exceeded judgment.\n\nRecall that prefix sums are particularly useful to calculate the sum of subarrays. The sum of the subarray starting at the index `i + 1` and ending at `j` (inclusive) is computed by $prefix_j - prefix_i$ where $prefix_i$ denotes the prefix sum up to index `i`. We can find out if there exists a subarray with a sum divisible by `k`, as shown below:\n\n![prefix sum formula](../Figures/523/Slide1.png)\n\nSince we are only concerned with the modulo of the prefix sum, we start with an integer `prefixMod` to store the remainder of the `prefixSum` with `k` progressively. We can find the longest subarray that satisfies the above conditions by calculating the difference between the current index and the first index with the value `prefixMod`. This is explained with an example shown below:\n\n![prefix sum formula2](../Figures/523/Slide2.png)\n\nA hashmap provides constant lookup and insertion time for the values in the list. Therefore, we initialize a hashmap `modSeen` with `prefixMod` as the key and the first index of each value of `prefixMod` as the value.\n\nWe iterate over all the elements from the beginning of `nums`. We set `prefixMod = (prefixMod + nums[i]) % k` for each element to find the remainder of the prefix sum when divided by `k`. \n\nIf the key `prefixMod` exists in the hashmap and the size of the subarray is at least 1, then we can return `true` as the output. If the key does not exist, we can store the current index in the hashmap with `prefixMod` as the key.\n\n#### Algorithm\n\n1. Initialize an integer `prefixMod = 0` and a hashmap `modSeen`. Initialize `modSeen[0]` with -1 to account for the initial value of prefixMod.\n2. Iterate over all the elements of `nums`:\n   - Compute the `prefixMod` as `prefixMod = (prefixMod + nums[i]) % k`.\n   - If `prefixMod` exists in the hashmap:\n     - If the size of the longest subarray with modulo `k` is at least 2.\n       - Return `true`.  \n   - If `prefixMod` doesn't exist in the hashmap:\n     - Set `modSeen[prefixMod] = i`. \n3. Return `false`.\n\n!?!../Documents/523/slideshow1.json:960,540!?!\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the number of elements in `nums`.\n\n- Time complexity: $O(n)$\n\n We iterate through the array exactly once. In each iteration, we perform a search operation in the hashmap that takes $O(1)$ time. Therefore, the time complexity can be stated as $O(n)$.\n\n- Space complexity: $O(n)$\n\n In each iteration, we insert a key-value pair in the hashmap. The space complexity is $O(n)$ because the size of the hashmap is proportional to the size of the list after $n$ iterations.\n\n---"
+}

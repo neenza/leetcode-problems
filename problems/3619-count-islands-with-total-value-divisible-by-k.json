@@ -1,0 +1,60 @@
+{
+  "title": "Count Islands With Total Value Divisible by K",
+  "problem_id": "3823",
+  "frontend_id": "3619",
+  "difficulty": "Medium",
+  "problem_slug": "count-islands-with-total-value-divisible-by-k",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Matrix"
+  ],
+  "description": "You are given an m x n matrix grid and a positive integer k. An island is a group of positive integers (representing land) that are 4-directionally connected (horizontally or vertically).\nThe total value of an island is the sum of the values of all cells in the island.\nReturn the number of islands with a total value divisible by k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,2,1,0,0],[0,5,0,0,5],[0,0,1,0,0],[0,1,4,7,0],[0,2,0,0,8]], k = 5\nOutput: 2\nExplanation:\nThe grid contains four islands. The islands highlighted in blue have a total value that is divisible by 5, while the islands highlighted in red do not.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[3,0,3,0], [0,3,0,3], [3,0,3,0]], k = 3\nOutput: 6\nExplanation:\nThe grid contains six islands, each with a total value that is divisible by 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 1000",
+    "1 <= m * n <= 105",
+    "0 <= grid[i][j] <= 106",
+    "1 <= k <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a BFS/DFS to find connected components."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countIslands(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countIslands(int[][] grid, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countIslands(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countIslands(self, grid: List[List[int]], k: int) -> int:\n        ",
+    "c": "int countIslands(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountIslands(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar countIslands = function(grid, k) {\n    \n};",
+    "typescript": "function countIslands(grid: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $k\n     * @return Integer\n     */\n    function countIslands($grid, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countIslands(_ grid: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countIslands(grid: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countIslands(List<List<int>> grid, int k) {\n    \n  }\n}",
+    "golang": "func countIslands(grid [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} k\n# @return {Integer}\ndef count_islands(grid, k)\n    \nend",
+    "scala": "object Solution {\n    def countIslands(grid: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_islands(grid: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-islands grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_islands(Grid :: [[integer()]], K :: integer()) -> integer().\ncount_islands(Grid, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_islands(grid :: [[integer]], k :: integer) :: integer\n  def count_islands(grid, k) do\n    \n  end\nend"
+  }
+}

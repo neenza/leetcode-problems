@@ -1,0 +1,61 @@
+{
+  "title": "Mark Elements on Array by Performing Queries",
+  "problem_id": "3306",
+  "frontend_id": "3080",
+  "difficulty": "Medium",
+  "problem_slug": "mark-elements-on-array-by-performing-queries",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed array nums of size n consisting of positive integers.\nYou are also given a 2D array queries of size m where queries[i] = [indexi, ki].\nInitially all elements of the array are unmarked.\nYou need to apply m queries on the array in order, where on the ith query you do the following:\nReturn an array answer of size m where answer[i] is the sum of unmarked elements in the array after the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,2,1,2,3,1], queries = [[1,2],[3,3],[4,2]]\nOutput: [8,3,0]\nExplanation:\nWe do the following queries on the array:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,4,2,3], queries = [[0,1]]\nOutput: [7]\nExplanation: We do one query which is mark the element at index 0 and mark the smallest element among unmarked elements. The marked elements will be nums = [ 1 ,4, 2 ,3] , and the sum of unmarked elements is 4 + 3 = 7 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "m == queries.length",
+    "1 <= m <= n <= 105",
+    "1 <= nums[i] <= 105",
+    "queries[i].length == 2",
+    "0 <= indexi, ki <= n - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use another array to keep track of marked indices.",
+    "Sort the array <code>nums</code> to be able to find the smallest unmarked elements quickly in each query."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> unmarkedSumArray(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] unmarkedSumArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def unmarkedSumArray(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def unmarkedSumArray(self, nums: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* unmarkedSumArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] UnmarkedSumArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar unmarkedSumArray = function(nums, queries) {\n    \n};",
+    "typescript": "function unmarkedSumArray(nums: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function unmarkedSumArray($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func unmarkedSumArray(_ nums: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun unmarkedSumArray(nums: IntArray, queries: Array<IntArray>): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> unmarkedSumArray(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func unmarkedSumArray(nums []int, queries [][]int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef unmarked_sum_array(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def unmarkedSumArray(nums: Array[Int], queries: Array[Array[Int]]): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn unmarked_sum_array(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (unmarked-sum-array nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec unmarked_sum_array(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nunmarked_sum_array(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec unmarked_sum_array(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def unmarked_sum_array(nums, queries) do\n    \n  end\nend"
+  }
+}

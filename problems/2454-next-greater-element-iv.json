@@ -1,0 +1,59 @@
+{
+  "title": "Next Greater Element IV",
+  "problem_id": "2549",
+  "frontend_id": "2454",
+  "difficulty": "Hard",
+  "problem_slug": "next-greater-element-iv",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Stack",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Monotonic Stack"
+  ],
+  "description": "You are given a 0-indexed array of non-negative integers nums. For each integer in nums, you must find its respective second greater integer.\nThe second greater integer of nums[i] is nums[j] such that:\nIf there is no such nums[j], the second greater integer is considered to be -1.\nReturn an integer array answer, where answer[i] is the second greater integer of nums[i].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,0,9,6]\nOutput: [9,6,6,-1,-1]\nExplanation:\n0th index: 4 is the first integer greater than 2, and 9 is the second integer greater than 2, to the right of 2.\n1st index: 9 is the first, and 6 is the second integer greater than 4, to the right of 4.\n2nd index: 9 is the first, and 6 is the second integer greater than 0, to the right of 0.\n3rd index: There is no integer greater than 9 to its right, so the second greater integer is considered to be -1.\n4th index: There is no integer greater than 6 to its right, so the second greater integer is considered to be -1.\nThus, we return [9,6,6,-1,-1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,3]\nOutput: [-1,-1]\nExplanation:\nWe return [-1,-1] since neither integer has any integer greater than it.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Move forward in nums and store the value in a non-increasing stack for the first greater value.",
+    "Move the value in the stack to an ordered data structure for the second greater value.",
+    "Move value from the ordered data structure for the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> secondGreaterElement(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] secondGreaterElement(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def secondGreaterElement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def secondGreaterElement(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* secondGreaterElement(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SecondGreaterElement(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar secondGreaterElement = function(nums) {\n    \n};",
+    "typescript": "function secondGreaterElement(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function secondGreaterElement($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func secondGreaterElement(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun secondGreaterElement(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> secondGreaterElement(List<int> nums) {\n    \n  }\n}",
+    "golang": "func secondGreaterElement(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef second_greater_element(nums)\n    \nend",
+    "scala": "object Solution {\n    def secondGreaterElement(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn second_greater_element(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (second-greater-element nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec second_greater_element(Nums :: [integer()]) -> [integer()].\nsecond_greater_element(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec second_greater_element(nums :: [integer]) :: [integer]\n  def second_greater_element(nums) do\n    \n  end\nend"
+  }
+}

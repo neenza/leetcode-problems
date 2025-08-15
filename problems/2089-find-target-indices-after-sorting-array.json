@@ -1,0 +1,60 @@
+{
+  "title": "Find Target Indices After Sorting Array",
+  "problem_id": "2210",
+  "frontend_id": "2089",
+  "difficulty": "Easy",
+  "problem_slug": "find-target-indices-after-sorting-array",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array nums and a target element target.\nA target index is an index i such that nums[i] == target.\nReturn a list of the target indices of nums after sorting nums in non-decreasing order. If there are no target indices, return an empty list. The returned list must be sorted in increasing order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,5,2,3], target = 2\nOutput: [1,2]\nExplanation: After sorting, nums is [1,2,2,3,5].\nThe indices where nums[i] == 2 are 1 and 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,5,2,3], target = 3\nOutput: [3]\nExplanation: After sorting, nums is [1,2,2,3,5].\nThe index where nums[i] == 3 is 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,5,2,3], target = 5\nOutput: [4]\nExplanation: After sorting, nums is [1,2,2,3,5].\nThe index where nums[i] == 5 is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i], target <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try \"sorting\" the array first.",
+    "Now find all indices in the array whose values are equal to target."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> targetIndices(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> targetIndices(int[] nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def targetIndices(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def targetIndices(self, nums: List[int], target: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* targetIndices(int* nums, int numsSize, int target, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> TargetIndices(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number[]}\n */\nvar targetIndices = function(nums, target) {\n    \n};",
+    "typescript": "function targetIndices(nums: number[], target: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer[]\n     */\n    function targetIndices($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func targetIndices(_ nums: [Int], _ target: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun targetIndices(nums: IntArray, target: Int): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> targetIndices(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func targetIndices(nums []int, target int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer[]}\ndef target_indices(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def targetIndices(nums: Array[Int], target: Int): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn target_indices(nums: Vec<i32>, target: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (target-indices nums target)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec target_indices(Nums :: [integer()], Target :: integer()) -> [integer()].\ntarget_indices(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec target_indices(nums :: [integer], target :: integer) :: [integer]\n  def target_indices(nums, target) do\n    \n  end\nend"
+  }
+}

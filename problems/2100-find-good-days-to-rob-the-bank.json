@@ -1,0 +1,61 @@
+{
+  "title": "Find Good Days to Rob the Bank",
+  "problem_id": "2205",
+  "frontend_id": "2100",
+  "difficulty": "Medium",
+  "problem_slug": "find-good-days-to-rob-the-bank",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "You and a gang of thieves are planning on robbing a bank. You are given a 0-indexed integer array security, where security[i] is the number of guards on duty on the ith day. The days are numbered starting from 0. You are also given an integer time.\nThe ith day is a good day to rob the bank if:\nMore formally, this means day i is a good day to rob the bank if and only if security[i - time] >= security[i - time + 1] >= ... >= security[i] <= ... <= security[i + time - 1] <= security[i + time].\nReturn a list of all days (0-indexed) that are good days to rob the bank. The order that the days are returned in does not matter.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: security = [5,3,3,3,5,6,2], time = 2\nOutput: [2,3]\nExplanation:\nOn day 2, we have security[0] >= security[1] >= security[2] <= security[3] <= security[4].\nOn day 3, we have security[1] >= security[2] >= security[3] <= security[4] <= security[5].\nNo other days satisfy this condition, so days 2 and 3 are the only good days to rob the bank.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: security = [1,1,1,1,1], time = 0\nOutput: [0,1,2,3,4]\nExplanation:\nSince time equals 0, every day is a good day to rob the bank, so return every day.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: security = [1,2,3,4,5,6], time = 2\nOutput: []\nExplanation:\nNo day has 2 days before it that have a non-increasing number of guards.\nThus, no day is a good day to rob the bank, so return an empty list.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= security.length <= 105",
+    "0 <= security[i], time <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The trivial solution is to check the time days before and after each day. There are a lot of repeated operations using this solution. How could we optimize this solution?",
+    "We can use precomputation to make the solution faster.",
+    "Use an array to store the number of days before the i<sup>th</sup> day that is non-increasing, and another array to store the number of days after the i<sup>th</sup> day that is non-decreasing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> goodDaysToRobBank(vector<int>& security, int time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> goodDaysToRobBank(int[] security, int time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def goodDaysToRobBank(self, security, time):\n        \"\"\"\n        :type security: List[int]\n        :type time: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def goodDaysToRobBank(self, security: List[int], time: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* goodDaysToRobBank(int* security, int securitySize, int time, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> GoodDaysToRobBank(int[] security, int time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} security\n * @param {number} time\n * @return {number[]}\n */\nvar goodDaysToRobBank = function(security, time) {\n    \n};",
+    "typescript": "function goodDaysToRobBank(security: number[], time: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $security\n     * @param Integer $time\n     * @return Integer[]\n     */\n    function goodDaysToRobBank($security, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func goodDaysToRobBank(_ security: [Int], _ time: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun goodDaysToRobBank(security: IntArray, time: Int): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> goodDaysToRobBank(List<int> security, int time) {\n    \n  }\n}",
+    "golang": "func goodDaysToRobBank(security []int, time int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} security\n# @param {Integer} time\n# @return {Integer[]}\ndef good_days_to_rob_bank(security, time)\n    \nend",
+    "scala": "object Solution {\n    def goodDaysToRobBank(security: Array[Int], time: Int): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn good_days_to_rob_bank(security: Vec<i32>, time: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (good-days-to-rob-bank security time)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec good_days_to_rob_bank(Security :: [integer()], Time :: integer()) -> [integer()].\ngood_days_to_rob_bank(Security, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec good_days_to_rob_bank(security :: [integer], time :: integer) :: [integer]\n  def good_days_to_rob_bank(security, time) do\n    \n  end\nend"
+  }
+}

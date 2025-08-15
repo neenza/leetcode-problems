@@ -1,0 +1,63 @@
+{
+  "title": "Check if DFS Strings Are Palindromes",
+  "problem_id": "3603",
+  "frontend_id": "3327",
+  "difficulty": "Hard",
+  "problem_slug": "check-if-dfs-strings-are-palindromes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Tree",
+    "Depth-First Search",
+    "Hash Function"
+  ],
+  "description": "You are given a tree rooted at node 0, consisting of n nodes numbered from 0 to n - 1. The tree is represented by an array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\nYou are also given a string s of length n, where s[i] is the character assigned to node i.\nConsider an empty string dfsStr, and define a recursive function dfs(int x) that takes a node x as a parameter and performs the following steps in order:\nNote that dfsStr is shared across all recursive calls of dfs.\nYou need to find a boolean array answer of size n, where for each index i from 0 to n - 1, you do the following:\nReturn the array answer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: parent = [-1,0,0,1,1,2], s = \"aababa\"\nOutput: [true,true,false,true,true,true]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: parent = [-1,0,0,0,0], s = \"aabcb\"\nOutput: [true,true,true,true,true]\nExplanation:\nEvery call on dfs(x) results in a palindrome string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == parent.length == s.length",
+    "1 <= n <= 105",
+    "0 <= parent[i] <= n - 1 for all i >= 1.",
+    "parent[0] == -1",
+    "parent represents a valid tree.",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Perform the dfs described from the root of tree, and store the order in which nodes are visited into an array.",
+    "For any node in the tree, the nodes in its subtree will form a contiguous subarray within the DFS traversal array.",
+    "Use Manacher’s algorithm to compute the answer for each node in constant time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> findAnswer(vector<int>& parent, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean[] findAnswer(int[] parent, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findAnswer(self, parent, s):\n        \"\"\"\n        :type parent: List[int]\n        :type s: str\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findAnswer(self, parent: List[int], s: str) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* findAnswer(int* parent, int parentSize, char* s, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool[] FindAnswer(int[] parent, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parent\n * @param {string} s\n * @return {boolean[]}\n */\nvar findAnswer = function(parent, s) {\n    \n};",
+    "typescript": "function findAnswer(parent: number[], s: string): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $parent\n     * @param String $s\n     * @return Boolean[]\n     */\n    function findAnswer($parent, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findAnswer(_ parent: [Int], _ s: String) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findAnswer(parent: IntArray, s: String): BooleanArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> findAnswer(List<int> parent, String s) {\n    \n  }\n}",
+    "golang": "func findAnswer(parent []int, s string) []bool {\n    \n}",
+    "ruby": "# @param {Integer[]} parent\n# @param {String} s\n# @return {Boolean[]}\ndef find_answer(parent, s)\n    \nend",
+    "scala": "object Solution {\n    def findAnswer(parent: Array[Int], s: String): Array[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_answer(parent: Vec<i32>, s: String) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (find-answer parent s)\n  (-> (listof exact-integer?) string? (listof boolean?))\n  )",
+    "erlang": "-spec find_answer(Parent :: [integer()], S :: unicode:unicode_binary()) -> [boolean()].\nfind_answer(Parent, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_answer(parent :: [integer], s :: String.t) :: [boolean]\n  def find_answer(parent, s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Robot Bounded In Circle",
+  "problem_id": "1119",
+  "frontend_id": "1041",
+  "difficulty": "Medium",
+  "problem_slug": "robot-bounded-in-circle",
+  "topics": [
+    "Math",
+    "String",
+    "Simulation"
+  ],
+  "description": "On an infinite plane, a robot initially stands at (0, 0) and faces north. Note that:\nThe robot can receive one of three instructions:\nThe robot performs the instructions given in order, and repeats them forever.\nReturn true if and only if there exists a circle in the plane such that the robot never leaves the circle.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: instructions = \"GGLLGG\"\nOutput: true\nExplanation: The robot is initially at (0, 0) facing the north direction.\n\"G\": move one step. Position: (0, 1). Direction: North.\n\"G\": move one step. Position: (0, 2). Direction: North.\n\"L\": turn 90 degrees anti-clockwise. Position: (0, 2). Direction: West.\n\"L\": turn 90 degrees anti-clockwise. Position: (0, 2). Direction: South.\n\"G\": move one step. Position: (0, 1). Direction: South.\n\"G\": move one step. Position: (0, 0). Direction: South.\nRepeating the instructions, the robot goes into the cycle: (0, 0) --> (0, 1) --> (0, 2) --> (0, 1) --> (0, 0).\nBased on that, we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: instructions = \"GG\"\nOutput: false\nExplanation: The robot is initially at (0, 0) facing the north direction.\n\"G\": move one step. Position: (0, 1). Direction: North.\n\"G\": move one step. Position: (0, 2). Direction: North.\nRepeating the instructions, keeps advancing in the north direction and does not go into cycles.\nBased on that, we return false.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: instructions = \"GL\"\nOutput: true\nExplanation: The robot is initially at (0, 0) facing the north direction.\n\"G\": move one step. Position: (0, 1). Direction: North.\n\"L\": turn 90 degrees anti-clockwise. Position: (0, 1). Direction: West.\n\"G\": move one step. Position: (-1, 1). Direction: West.\n\"L\": turn 90 degrees anti-clockwise. Position: (-1, 1). Direction: South.\n\"G\": move one step. Position: (-1, 0). Direction: South.\n\"L\": turn 90 degrees anti-clockwise. Position: (-1, 0). Direction: East.\n\"G\": move one step. Position: (0, 0). Direction: East.\n\"L\": turn 90 degrees anti-clockwise. Position: (0, 0). Direction: North.\nRepeating the instructions, the robot goes into the cycle: (0, 0) --> (0, 1) --> (-1, 1) --> (-1, 0) --> (0, 0).\nBased on that, we return true.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= instructions.length <= 100",
+    "instructions[i] is 'G', 'L' or, 'R'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Calculate the final vector of how the robot travels after executing all instructions once - it consists of a change in position plus a change in direction.",
+    "The robot stays in the circle if and only if (looking at the final vector) it changes direction (ie. doesn't stay pointing north), or it moves 0."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isRobotBounded(string instructions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isRobotBounded(String instructions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isRobotBounded(self, instructions):\n        \"\"\"\n        :type instructions: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isRobotBounded(self, instructions: str) -> bool:\n        ",
+    "c": "bool isRobotBounded(char* instructions) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsRobotBounded(string instructions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} instructions\n * @return {boolean}\n */\nvar isRobotBounded = function(instructions) {\n    \n};",
+    "typescript": "function isRobotBounded(instructions: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $instructions\n     * @return Boolean\n     */\n    function isRobotBounded($instructions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isRobotBounded(_ instructions: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isRobotBounded(instructions: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isRobotBounded(String instructions) {\n    \n  }\n}",
+    "golang": "func isRobotBounded(instructions string) bool {\n    \n}",
+    "ruby": "# @param {String} instructions\n# @return {Boolean}\ndef is_robot_bounded(instructions)\n    \nend",
+    "scala": "object Solution {\n    def isRobotBounded(instructions: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_robot_bounded(instructions: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-robot-bounded instructions)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_robot_bounded(Instructions :: unicode:unicode_binary()) -> boolean().\nis_robot_bounded(Instructions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_robot_bounded(instructions :: String.t) :: boolean\n  def is_robot_bounded(instructions) do\n    \n  end\nend"
+  }
+}

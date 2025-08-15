@@ -1,0 +1,59 @@
+{
+  "title": "Longest Substring Of All Vowels in Order",
+  "problem_id": "1967",
+  "frontend_id": "1839",
+  "difficulty": "Medium",
+  "problem_slug": "longest-substring-of-all-vowels-in-order",
+  "topics": [
+    "String",
+    "Sliding Window"
+  ],
+  "description": "A string is considered beautiful if it satisfies the following conditions:\nFor example, strings \"aeiou\" and \"aaaaaaeiiiioou\" are considered beautiful, but \"uaeio\", \"aeoiu\", and \"aaaeeeooo\" are not beautiful.\nGiven a string word consisting of English vowels, return the length of the longest beautiful substring of word. If no such substring exists, return 0.\nA substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"aeiaaioaaaaeiiiiouuuooaauuaeiu\"\nOutput: 13\nExplanation: The longest beautiful substring in word is \"aaaaeiiiiouuu\" of length 13.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"aeeeiiiioooauuuaeiou\"\nOutput: 5\nExplanation: The longest beautiful substring in word is \"aeiou\" of length 5.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"a\"\nOutput: 0\nExplanation: There is no beautiful substring, so return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 5 * 105",
+    "word consists of characters 'a', 'e', 'i', 'o', and 'u'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start from each 'a' and find the longest beautiful substring starting at that index.",
+    "Based on the current character decide if you should include the next character in the beautiful substring."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestBeautifulSubstring(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestBeautifulSubstring(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestBeautifulSubstring(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestBeautifulSubstring(self, word: str) -> int:\n        ",
+    "c": "int longestBeautifulSubstring(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestBeautifulSubstring(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar longestBeautifulSubstring = function(word) {\n    \n};",
+    "typescript": "function longestBeautifulSubstring(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function longestBeautifulSubstring($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestBeautifulSubstring(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestBeautifulSubstring(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestBeautifulSubstring(String word) {\n    \n  }\n}",
+    "golang": "func longestBeautifulSubstring(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef longest_beautiful_substring(word)\n    \nend",
+    "scala": "object Solution {\n    def longestBeautifulSubstring(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_beautiful_substring(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-beautiful-substring word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec longest_beautiful_substring(Word :: unicode:unicode_binary()) -> integer().\nlongest_beautiful_substring(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_beautiful_substring(word :: String.t) :: integer\n  def longest_beautiful_substring(word) do\n    \n  end\nend"
+  }
+}

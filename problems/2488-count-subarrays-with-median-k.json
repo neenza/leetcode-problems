@@ -1,0 +1,58 @@
+{
+  "title": "Count Subarrays With Median K",
+  "problem_id": "2574",
+  "frontend_id": "2488",
+  "difficulty": "Hard",
+  "problem_slug": "count-subarrays-with-median-k",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given an array nums of size n consisting of distinct integers from 1 to n and a positive integer k.\nReturn the number of non-empty subarrays in nums that have a median equal to k.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,1,4,5], k = 4\nOutput: 3\nExplanation: The subarrays that have a median equal to 4 are: [4], [4,5] and [1,4,5].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,1], k = 3\nOutput: 1\nExplanation: [3] is the only subarray that has a median equal to 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "1 <= nums[i], k <= n",
+    "The integers in nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider changing the numbers that are strictly greater than k in the array to 1, the numbers that are strictly smaller than k to -1, and k to 0.",
+    "After the change, what property does a subarray with median k have in the new array?",
+    "An array with median k should have a sum equal to either 0 or 1 in the new array and should contain the element k. How do you count such subarrays?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSubarrays(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubarrays(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubarrays(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubarrays(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int countSubarrays(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSubarrays(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar countSubarrays = function(nums, k) {\n    \n};",
+    "typescript": "function countSubarrays(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function countSubarrays($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubarrays(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubarrays(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubarrays(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func countSubarrays(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef count_subarrays(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def countSubarrays(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_subarrays(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-subarrays nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_subarrays(Nums :: [integer()], K :: integer()) -> integer().\ncount_subarrays(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_subarrays(nums :: [integer], k :: integer) :: integer\n  def count_subarrays(nums, k) do\n    \n  end\nend"
+  }
+}

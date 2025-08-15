@@ -1,0 +1,56 @@
+{
+  "title": "Check if All the Integers in a Range Are Covered",
+  "problem_id": "2005",
+  "frontend_id": "1893",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-all-the-integers-in-a-range-are-covered",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 2D integer array ranges and two integers left and right. Each ranges[i] = [starti, endi] represents an inclusive interval between starti and endi.\nReturn true if each integer in the inclusive range [left, right] is covered by at least one interval in ranges. Return false otherwise.\nAn integer x is covered by an interval ranges[i] = [starti, endi] if starti <= x <= endi.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: ranges = [[1,2],[3,4],[5,6]], left = 2, right = 5\nOutput: true\nExplanation: Every integer between 2 and 5 is covered:\n- 2 is covered by the first range.\n- 3 and 4 are covered by the second range.\n- 5 is covered by the third range.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: ranges = [[1,10],[10,20]], left = 21, right = 21\nOutput: false\nExplanation: 21 is not covered by any range.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= ranges.length <= 50",
+    "1 <= starti <= endi <= 50",
+    "1 <= left <= right <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over every integer point in the range [left, right].",
+    "For each of these points check if it is included in one of the ranges."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isCovered(vector<vector<int>>& ranges, int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isCovered(int[][] ranges, int left, int right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isCovered(self, ranges, left, right):\n        \"\"\"\n        :type ranges: List[List[int]]\n        :type left: int\n        :type right: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isCovered(self, ranges: List[List[int]], left: int, right: int) -> bool:\n        ",
+    "c": "bool isCovered(int** ranges, int rangesSize, int* rangesColSize, int left, int right) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsCovered(int[][] ranges, int left, int right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} ranges\n * @param {number} left\n * @param {number} right\n * @return {boolean}\n */\nvar isCovered = function(ranges, left, right) {\n    \n};",
+    "typescript": "function isCovered(ranges: number[][], left: number, right: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $ranges\n     * @param Integer $left\n     * @param Integer $right\n     * @return Boolean\n     */\n    function isCovered($ranges, $left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isCovered(_ ranges: [[Int]], _ left: Int, _ right: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isCovered(ranges: Array<IntArray>, left: Int, right: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isCovered(List<List<int>> ranges, int left, int right) {\n    \n  }\n}",
+    "golang": "func isCovered(ranges [][]int, left int, right int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} ranges\n# @param {Integer} left\n# @param {Integer} right\n# @return {Boolean}\ndef is_covered(ranges, left, right)\n    \nend",
+    "scala": "object Solution {\n    def isCovered(ranges: Array[Array[Int]], left: Int, right: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_covered(ranges: Vec<Vec<i32>>, left: i32, right: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-covered ranges left right)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec is_covered(Ranges :: [[integer()]], Left :: integer(), Right :: integer()) -> boolean().\nis_covered(Ranges, Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_covered(ranges :: [[integer]], left :: integer, right :: integer) :: boolean\n  def is_covered(ranges, left, right) do\n    \n  end\nend"
+  }
+}

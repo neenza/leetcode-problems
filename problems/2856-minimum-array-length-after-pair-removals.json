@@ -1,0 +1,79 @@
+{
+  "title": "Minimum Array Length After Pair Removals",
+  "problem_id": "3081",
+  "frontend_id": "2856",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-array-length-after-pair-removals",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Binary Search",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "Given an integer array num sorted in non-decreasing order.\nYou can perform the following operation any number of times:\nReturn the minimum length of nums after applying the operation zero or more times.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 0\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/18/tcase1.gif"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,2,2,3,3]\nOutput: 0\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/19/tcase2.gif"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1000000000,1000000000]\nOutput: 2\nExplanation:\nSince both numbers are equal, they cannot be removed.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: nums = [2,3,4,4,4]\nOutput: 1\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/19/tcase3.gif"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "nums is sorted in non-decreasing order."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "To minimize the length of the array, we should maximize the number of operations performed.",
+    "To perform <code>k</code> operations, it is optimal to use the smallest <code>k</code> values and the largest <code>k</code> values in <code>nums</code>.",
+    "What is the best way to make pairs from the smallest <code>k</code> values and the largest <code>k</code> values so it is possible to remove all the pairs?",
+    "If we consider the smallest <code>k</code> values and the largest <code>k</code> values as two separate <strong>sorted 0-indexed</strong> arrays, <code>a</code> and <code>b</code>, It is optimal to pair <code>a[i]</code> and <code>b[i]</code>. So, a <code>k</code> is valid if <code>a[i] < b[i]</code> for all <code>i</code> in the range <code>[0, k - 1]</code>.",
+    "The greatest possible valid <code>k</code> can be found using binary search.",
+    "The answer is <code>nums.length - 2 * k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minLengthAfterRemovals(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minLengthAfterRemovals(List<Integer> nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minLengthAfterRemovals(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minLengthAfterRemovals(self, nums: List[int]) -> int:\n        ",
+    "c": "int minLengthAfterRemovals(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinLengthAfterRemovals(IList<int> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minLengthAfterRemovals = function(nums) {\n    \n};",
+    "typescript": "function minLengthAfterRemovals(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minLengthAfterRemovals($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minLengthAfterRemovals(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minLengthAfterRemovals(nums: List<Int>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minLengthAfterRemovals(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minLengthAfterRemovals(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_length_after_removals(nums)\n    \nend",
+    "scala": "object Solution {\n    def minLengthAfterRemovals(nums: List[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_length_after_removals(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-length-after-removals nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_length_after_removals(Nums :: [integer()]) -> integer().\nmin_length_after_removals(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_length_after_removals(nums :: [integer]) :: integer\n  def min_length_after_removals(nums) do\n    \n  end\nend"
+  }
+}

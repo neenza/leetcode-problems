@@ -1,0 +1,58 @@
+{
+  "title": "Find Players With Zero or One Losses",
+  "problem_id": "1354",
+  "frontend_id": "2225",
+  "difficulty": "Medium",
+  "problem_slug": "find-players-with-zero-or-one-losses",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given an integer array matches where matches[i] = [winneri, loseri] indicates that the player winneri defeated player loseri in a match.\nReturn a list answer of size 2 where:\nThe values in the two lists should be returned in increasing order.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]\nOutput: [[1,2,10],[4,5,7,8]]\nExplanation:\nPlayers 1, 2, and 10 have not lost any matches.\nPlayers 4, 5, 7, and 8 each have lost one match.\nPlayers 3, 6, and 9 each have lost two matches.\nThus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matches = [[2,3],[1,3],[5,4],[6,4]]\nOutput: [[1,2,5,6],[]]\nExplanation:\nPlayers 1, 2, 5, and 6 have not lost any matches.\nPlayers 3 and 4 each have lost two matches.\nThus, answer[0] = [1,2,5,6] and answer[1] = [].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= matches.length <= 105",
+    "matches[i].length == 2",
+    "1 <= winneri, loseri <= 105",
+    "winneri != loseri",
+    "All matches[i] are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the number of times a player loses while iterating through the matches."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> findWinners(vector<vector<int>>& matches) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> findWinners(int[][] matches) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findWinners(self, matches):\n        \"\"\"\n        :type matches: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findWinners(self, matches: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** findWinners(int** matches, int matchesSize, int* matchesColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> FindWinners(int[][] matches) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matches\n * @return {number[][]}\n */\nvar findWinners = function(matches) {\n    \n};",
+    "typescript": "function findWinners(matches: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matches\n     * @return Integer[][]\n     */\n    function findWinners($matches) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findWinners(_ matches: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findWinners(matches: Array<IntArray>): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> findWinners(List<List<int>> matches) {\n    \n  }\n}",
+    "golang": "func findWinners(matches [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matches\n# @return {Integer[][]}\ndef find_winners(matches)\n    \nend",
+    "scala": "object Solution {\n    def findWinners(matches: Array[Array[Int]]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_winners(matches: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (find-winners matches)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec find_winners(Matches :: [[integer()]]) -> [[integer()]].\nfind_winners(Matches) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_winners(matches :: [[integer]]) :: [[integer]]\n  def find_winners(matches) do\n    \n  end\nend"
+  }
+}

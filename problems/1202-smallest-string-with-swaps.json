@@ -1,0 +1,67 @@
+{
+  "title": "Smallest String With Swaps",
+  "problem_id": "1308",
+  "frontend_id": "1202",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-string-with-swaps",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Sorting"
+  ],
+  "description": "You are given a string s, and an array of pairs of indices in the string pairs where pairs[i] = [a, b] indicates 2 indices(0-indexed) of the string.\nYou can swap the characters at any pair of indices in the given pairs any number of times.\nReturn the lexicographically smallest string that s can be changed to after using the swaps.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"dcab\", pairs = [[0,3],[1,2]]\nOutput: \"bacd\"\nExplaination: \nSwap s[0] and s[3], s = \"bcad\"\nSwap s[1] and s[2], s = \"bacd\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"dcab\", pairs = [[0,3],[1,2],[0,2]]\nOutput: \"abcd\"\nExplaination: \nSwap s[0] and s[3], s = \"bcad\"\nSwap s[0] and s[2], s = \"acbd\"\nSwap s[1] and s[2], s = \"abcd\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"cba\", pairs = [[0,1],[1,2]]\nOutput: \"abc\"\nExplaination: \nSwap s[0] and s[1], s = \"bca\"\nSwap s[1] and s[2], s = \"bac\"\nSwap s[0] and s[1], s = \"abc\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 10^5",
+    "0 <= pairs.length <= 10^5",
+    "0 <= pairs[i][0], pairs[i][1] < s.length",
+    "s only contains lower case English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of it as a graph problem.",
+    "Consider the pairs as connected nodes in the graph, what can you do with a connected component of indices ?",
+    "We can sort each connected component alone to get the lexicographically minimum string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestStringWithSwaps(self, s, pairs):\n        \"\"\"\n        :type s: str\n        :type pairs: List[List[int]]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:\n        ",
+    "c": "char* smallestStringWithSwaps(char* s, int** pairs, int pairsSize, int* pairsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestStringWithSwaps(string s, IList<IList<int>> pairs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[][]} pairs\n * @return {string}\n */\nvar smallestStringWithSwaps = function(s, pairs) {\n    \n};",
+    "typescript": "function smallestStringWithSwaps(s: string, pairs: number[][]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[][] $pairs\n     * @return String\n     */\n    function smallestStringWithSwaps($s, $pairs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestStringWithSwaps(_ s: String, _ pairs: [[Int]]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestStringWithSwaps(s: String, pairs: List<List<Int>>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestStringWithSwaps(String s, List<List<int>> pairs) {\n    \n  }\n}",
+    "golang": "func smallestStringWithSwaps(s string, pairs [][]int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[][]} pairs\n# @return {String}\ndef smallest_string_with_swaps(s, pairs)\n    \nend",
+    "scala": "object Solution {\n    def smallestStringWithSwaps(s: String, pairs: List[List[Int]]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_string_with_swaps(s: String, pairs: Vec<Vec<i32>>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-string-with-swaps s pairs)\n  (-> string? (listof (listof exact-integer?)) string?)\n  )",
+    "erlang": "-spec smallest_string_with_swaps(S :: unicode:unicode_binary(), Pairs :: [[integer()]]) -> unicode:unicode_binary().\nsmallest_string_with_swaps(S, Pairs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_string_with_swaps(s :: String.t, pairs :: [[integer]]) :: String.t\n  def smallest_string_with_swaps(s, pairs) do\n    \n  end\nend"
+  }
+}

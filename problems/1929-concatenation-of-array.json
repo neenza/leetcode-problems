@@ -1,0 +1,54 @@
+{
+  "title": "Concatenation of Array",
+  "problem_id": "2058",
+  "frontend_id": "1929",
+  "difficulty": "Easy",
+  "problem_slug": "concatenation-of-array",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "Given an integer array nums of length n, you want to create an array ans of length 2n where ans[i] == nums[i] and ans[i + n] == nums[i] for 0 <= i < n (0-indexed).\nSpecifically, ans is the concatenation of two nums arrays.\nReturn the array ans.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,1]\nOutput: [1,2,1,1,2,1]\nExplanation: The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]\n- ans = [1,2,1,1,2,1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,2,1]\nOutput: [1,3,2,1,1,3,2,1]\nExplanation: The array ans is formed as follows:\n- ans = [nums[0],nums[1],nums[2],nums[3],nums[0],nums[1],nums[2],nums[3]]\n- ans = [1,3,2,1,1,3,2,1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 1000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Build an array of size 2 * n and assign num[i] to ans[i] and ans[i + n]"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> getConcatenation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getConcatenation(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getConcatenation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getConcatenation(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getConcatenation(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] GetConcatenation(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar getConcatenation = function(nums) {\n    \n};",
+    "typescript": "function getConcatenation(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function getConcatenation($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getConcatenation(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getConcatenation(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> getConcatenation(List<int> nums) {\n    \n  }\n}",
+    "golang": "func getConcatenation(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef get_concatenation(nums)\n    \nend",
+    "scala": "object Solution {\n    def getConcatenation(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_concatenation(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (get-concatenation nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec get_concatenation(Nums :: [integer()]) -> [integer()].\nget_concatenation(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_concatenation(nums :: [integer]) :: [integer]\n  def get_concatenation(nums) do\n    \n  end\nend"
+  }
+}

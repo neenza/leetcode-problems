@@ -1,0 +1,57 @@
+{
+  "title": "Distant Barcodes",
+  "problem_id": "1140",
+  "frontend_id": "1054",
+  "difficulty": "Medium",
+  "problem_slug": "distant-barcodes",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Counting"
+  ],
+  "description": "In a warehouse, there is a row of barcodes, where the ith barcode is barcodes[i].\nRearrange the barcodes so that no two adjacent barcodes are equal. You may return any answer, and it is guaranteed an answer exists.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: barcodes = [1,1,1,2,2,2]\nOutput: [2,1,2,1,2,1]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: barcodes = [1,1,1,1,2,2,3,3]\nOutput: [1,3,1,3,1,2,1,2]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= barcodes.length <= 10000",
+    "1 <= barcodes[i] <= 10000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We want to always choose the most common or second most common element to write next.  What data structure allows us to query this effectively?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> rearrangeBarcodes(vector<int>& barcodes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] rearrangeBarcodes(int[] barcodes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rearrangeBarcodes(self, barcodes):\n        \"\"\"\n        :type barcodes: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* rearrangeBarcodes(int* barcodes, int barcodesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RearrangeBarcodes(int[] barcodes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} barcodes\n * @return {number[]}\n */\nvar rearrangeBarcodes = function(barcodes) {\n    \n};",
+    "typescript": "function rearrangeBarcodes(barcodes: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $barcodes\n     * @return Integer[]\n     */\n    function rearrangeBarcodes($barcodes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rearrangeBarcodes(_ barcodes: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rearrangeBarcodes(barcodes: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> rearrangeBarcodes(List<int> barcodes) {\n    \n  }\n}",
+    "golang": "func rearrangeBarcodes(barcodes []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} barcodes\n# @return {Integer[]}\ndef rearrange_barcodes(barcodes)\n    \nend",
+    "scala": "object Solution {\n    def rearrangeBarcodes(barcodes: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn rearrange_barcodes(barcodes: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (rearrange-barcodes barcodes)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec rearrange_barcodes(Barcodes :: [integer()]) -> [integer()].\nrearrange_barcodes(Barcodes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec rearrange_barcodes(barcodes :: [integer]) :: [integer]\n  def rearrange_barcodes(barcodes) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Minimum String Length After Removing Substrings",
+  "problem_id": "2800",
+  "frontend_id": "2696",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-string-length-after-removing-substrings",
+  "topics": [
+    "String",
+    "Stack",
+    "Simulation"
+  ],
+  "description": "You are given a string s consisting only of uppercase English letters.\nYou can apply some operations to this string where, in one operation, you can remove any occurrence of one of the substrings \"AB\" or \"CD\" from s.\nReturn the minimum possible length of the resulting string that you can obtain.\nNote that the string concatenates after removing the substring and could produce new \"AB\" or \"CD\" substrings.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"ABFCACDB\"\nOutput: 2\nExplanation: We can do the following operations:\n- Remove the substring \"ABFCACDB\", so s = \"FCACDB\".\n- Remove the substring \"FCACDB\", so s = \"FCAB\".\n- Remove the substring \"FCAB\", so s = \"FC\".\nSo the resulting length of the string is 2.\nIt can be shown that it is the minimum length that we can obtain.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ACBBD\"\nOutput: 5\nExplanation: We cannot do any operations on the string so the length remains the same.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists only of uppercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use brute force to solve the problem?",
+    "Repeatedly traverse the string to find and remove the substrings “AB” and “CD” until no more occurrences exist.",
+    "Can the solution be optimized using a stack?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minLength(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minLength(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minLength(self, s: str) -> int:\n        ",
+    "c": "int minLength(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinLength(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minLength = function(s) {\n    \n};",
+    "typescript": "function minLength(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function minLength($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minLength(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minLength(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minLength(String s) {\n    \n  }\n}",
+    "golang": "func minLength(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef min_length(s)\n    \nend",
+    "scala": "object Solution {\n    def minLength(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_length(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-length s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec min_length(S :: unicode:unicode_binary()) -> integer().\nmin_length(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_length(s :: String.t) :: integer\n  def min_length(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: String Replace\n\n#### Intuition\n\nThe core issue with this problem is the ripple effect of removing substrings. When we delete one occurrence of \"AB\" or \"CD\", it can create another substring that also needs removal. For example, in \"CABD\", if we remove \"AB\", we are left with \"CD\", which must also be eliminated to minimize the string length.\n\nA brute force approach will be to continuously check the string for \"AB\" and \"CD\" and remove them until none are left. Once the loop ends, the string will have no remaining \"AB\" or \"CD\", and we can return its length. Many programming languages offer built-in functions for finding and removing substrings, which will be helpful here.\n\n> Note: Some programming practices suggest avoiding direct modifications to input data. If this applies, consider making a copy of the input string before you start. It’s a good idea to clarify this with your interviewer before you implement the solution.\n\n#### Algorithm\n\n- Enter a loop that continues while `s` contains either \"AB\" or \"CD\".\n  - Check if `s` contains \"AB\":\n    - If \"AB\" is present, remove all occurrences of \"AB\" from `s`.\n  - If \"AB\" is not present, check if `s` contains \"CD\".\n    - If \"CD\" is present, remove all occurrences of \"CD\" from `s`.\n- After the loop ends, return the length of `s`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input string `s`. \n\n- Time complexity: $O(n^2)$\n\n    The outer while loop can run up to $n/2$ times in the worst case. This occurs when we remove two characters in each iteration (e.g., for a string like \"ABABABAB\"). Inside the loop, the string methods need to scan the entire string, which takes $O(n)$ time.\n\n    Thus, the overall time complexity of the algorithm is $O(n/2 \\cdot n) = O(n^2)$.\n\n- Space complexity: $O(n)$ for Python3 and Java, $O(1)$ for C++\n\n    In Python3 and Java, strings are immutable. So, each string operation creates a new string object. However, at any given time, we only need to store one version of the processed string. So, the space complexity is $O(n)$.\n\n    However, in C++, strings are mutable. So, string operations like `erase()` are performed in place. Thus, the space complexity in C++ is $O(1)$.\n\n---\n\n### Approach 2: Stack\n\n#### Intuition\n\nIn the string removal process, we face two choices for each character:\n\n1. Keep the character if it does not form a removable pattern.\n2. Remove it along with the previous character if it completes a pattern.\n\nUsing a stack simplifies this task. We push characters onto the stack as we read them and pop them off when we find a pattern.\n\nWe read the input string from left to right. For each character, we decide to either add it to the stack or remove a previous character. If the stack is not empty, we compare the current character with the top character on the stack. If they form \"AB\" or \"CD,\" we pop the stack. We do not push the current character, thus removing both characters. If there is no pattern, we push the current character onto the stack.\n\nAfter processing all characters, the remaining elements in the stack represent the minimum length of the string after all possible removals.\n\n#### Algorithm\n \n- Initialize a stack to store the characters from the string.\n- Iterate over each character in the input string `s`. For each character `currentChar`:\n  - If the stack is empty, push `currentChar` onto the stack and continue to the next character.\n  - If the current character is 'B' and the top of the stack is 'A', remove the top element from the stack.\n  - If the current character is 'D' and the top of the stack is 'C', remove the top element from the stack.\n  - If neither of the above conditions is met, push `currentChar` onto the stack.\n- After processing all characters, return the size of the stack.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input string `s`.  \n\n* Time complexity: $O(n)$\n\n    We iterate over each character of `s` exactly once. All stack operations inside the loop take constant time. Thus, the time complexity of the algorithm is $O(n)$.\n\n* Space complexity: $O(n)$\n\n    We use a stack to store characters from the input string. In the worst-case scenario, where no \"AB\" or \"CD\" patterns are found, we would end up storing all $n$ characters in the stack. Thus, the space complexity of the algorithm is $O(n)$.\n\n---\n\n### Approach 3: In Place Modification\n\n#### Intuition\n\nTo optimize space, we can modify the string in place.\n\nWe use two pointers:\n\n1. Read Pointer (`readPtr`): This pointer moves from left to right through the string, checking each character.\n2. Write Pointer (`writePtr`): This pointer tracks where to write the next character we want to keep.\n\nWe start by setting `writePtr` to 0. As we move `readPtr` through the string, we copy the character at `readPtr` to the position indicated by `writePtr`. Next, we check if the last two characters (positions `writePtr-1` and `writePtr`) form a removable pattern, such as \"AB\" or \"CD\". If they do, we decrease `writePtr`, which means we will overwrite this part in the next steps.\n\nIf the last two characters do not form a removable pattern, we increment `writePtr` to point to the next position where we can write a character. This way, we can effectively \"remove\" unwanted characters by overwriting them.\n\nAfter processing all characters, the position of `writePtr` tells us the length of the final string. All the characters we want to keep are now at the beginning of the array, up to the position of `writePtr`.\n\nThe algorithm is visualized below:\n\n!?!../Documents/2696/slideshow.json:802,442!?!\n\n#### Algorithm\n \n- Initialize a variable `writePtr` to 0, which will keep track of the current write position.\n- Iterate over each character in the string using a `readPtr`:\n  - Copy the character at `readPtr` to the position at `writePtr` in the string.\n  - Check if the following conditions are met:\n    - `writePtr` is greater than 0 (ensuring there's a previous character).\n    - The previous character (at `writePtr - 1`) is either 'A' or 'C'.\n    - The current character is exactly one ASCII value higher than the previous character.\n  - If these conditions are met:\n    - Decrement `writePtr` by 1, effectively removing the pair of characters.\n  - Else:\n    - Increment `writePtr` by 1, moving to the next position for writing.\n- Return the value of `writePtr`, which represents the length of the remaining string after all removals.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the input string `s`. \n\n* Time complexity: $O(n)$\n\n    We iterate through the input string exactly once. All operations within the loop take constant time. Thus, the overall time complexity is linear, $O(n)$. \n\n* Space complexity: $O(n)$ for Java and Python3, $O(1)$ for C++\n\n    In Java and Python3, strings are immutable. So, the input string needs to be converted to an array or list to perform in place modifications. Thus, the space complexity remains $O(n)$.\n\n    String are mutable in C++. So, all modifications can be done on the input string itself. No additional data structures are used, so the space complexity is $O(1)$.\n\n---"
+}

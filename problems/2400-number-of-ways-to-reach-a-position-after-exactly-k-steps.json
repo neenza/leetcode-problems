@@ -1,0 +1,55 @@
+{
+  "title": "Number of Ways to Reach a Position After Exactly k Steps",
+  "problem_id": "2477",
+  "frontend_id": "2400",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-ways-to-reach-a-position-after-exactly-k-steps",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Combinatorics"
+  ],
+  "description": "You are given two positive integers startPos and endPos. Initially, you are standing at position startPos on an infinite number line. With one step, you can move either one position to the left, or one position to the right.\nGiven a positive integer k, return the number of different ways to reach the position endPos starting from startPos, such that you perform exactly k steps. Since the answer may be very large, return it modulo 109 + 7.\nTwo ways are considered different if the order of the steps made is not exactly the same.\nNote that the number line includes negative integers.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: startPos = 1, endPos = 2, k = 3\nOutput: 3\nExplanation: We can reach position 2 from 1 in exactly 3 steps in three ways:\n- 1 -> 2 -> 3 -> 2.\n- 1 -> 2 -> 1 -> 2.\n- 1 -> 0 -> 1 -> 2.\nIt can be proven that no other way is possible, so we return 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: startPos = 2, endPos = 5, k = 10\nOutput: 0\nExplanation: It is impossible to reach position 5 from position 2 in exactly 10 steps.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= startPos, endPos, k <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How many steps to the left and to the right do you need to make exactly?",
+    "Does the order of the steps matter?",
+    "Use combinatorics to find the number of ways to order the steps."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(int startPos, int endPos, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(int startPos, int endPos, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWays(self, startPos, endPos, k):\n        \"\"\"\n        :type startPos: int\n        :type endPos: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWays(self, startPos: int, endPos: int, k: int) -> int:\n        ",
+    "c": "int numberOfWays(int startPos, int endPos, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfWays(int startPos, int endPos, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} startPos\n * @param {number} endPos\n * @param {number} k\n * @return {number}\n */\nvar numberOfWays = function(startPos, endPos, k) {\n    \n};",
+    "typescript": "function numberOfWays(startPos: number, endPos: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $startPos\n     * @param Integer $endPos\n     * @param Integer $k\n     * @return Integer\n     */\n    function numberOfWays($startPos, $endPos, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWays(_ startPos: Int, _ endPos: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWays(startPos: Int, endPos: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWays(int startPos, int endPos, int k) {\n    \n  }\n}",
+    "golang": "func numberOfWays(startPos int, endPos int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} start_pos\n# @param {Integer} end_pos\n# @param {Integer} k\n# @return {Integer}\ndef number_of_ways(start_pos, end_pos, k)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWays(startPos: Int, endPos: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_ways(start_pos: i32, end_pos: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-ways startPos endPos k)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_ways(StartPos :: integer(), EndPos :: integer(), K :: integer()) -> integer().\nnumber_of_ways(StartPos, EndPos, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_ways(start_pos :: integer, end_pos :: integer, k :: integer) :: integer\n  def number_of_ways(start_pos, end_pos, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Percentage of Letter in String",
+  "problem_id": "2365",
+  "frontend_id": "2278",
+  "difficulty": "Easy",
+  "problem_slug": "percentage-of-letter-in-string",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string s and a character letter, return the percentage of characters in s that equal letter rounded down to the nearest whole percent.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"foobar\", letter = \"o\"\nOutput: 33\nExplanation:\nThe percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"jjjj\", letter = \"k\"\nOutput: 0\nExplanation:\nThe percentage of characters in s that equal the letter 'k' is 0%, so we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of lowercase English letters.",
+    "letter is a lowercase English letter."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we count the number of occurrences of letter in s?",
+    "Recall that the percentage is calculated as (occurrences / total) * 100."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int percentageLetter(string s, char letter) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int percentageLetter(String s, char letter) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def percentageLetter(self, s, letter):\n        \"\"\"\n        :type s: str\n        :type letter: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def percentageLetter(self, s: str, letter: str) -> int:\n        ",
+    "c": "int percentageLetter(char* s, char letter) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PercentageLetter(string s, char letter) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {character} letter\n * @return {number}\n */\nvar percentageLetter = function(s, letter) {\n    \n};",
+    "typescript": "function percentageLetter(s: string, letter: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $letter\n     * @return Integer\n     */\n    function percentageLetter($s, $letter) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func percentageLetter(_ s: String, _ letter: Character) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun percentageLetter(s: String, letter: Char): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int percentageLetter(String s, String letter) {\n    \n  }\n}",
+    "golang": "func percentageLetter(s string, letter byte) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Character} letter\n# @return {Integer}\ndef percentage_letter(s, letter)\n    \nend",
+    "scala": "object Solution {\n    def percentageLetter(s: String, letter: Char): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn percentage_letter(s: String, letter: char) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (percentage-letter s letter)\n  (-> string? char? exact-integer?)\n  )",
+    "erlang": "-spec percentage_letter(S :: unicode:unicode_binary(), Letter :: char()) -> integer().\npercentage_letter(S, Letter) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec percentage_letter(s :: String.t, letter :: char) :: integer\n  def percentage_letter(s, letter) do\n    \n  end\nend"
+  }
+}

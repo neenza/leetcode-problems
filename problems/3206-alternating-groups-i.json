@@ -1,0 +1,60 @@
+{
+  "title": "Alternating Groups I",
+  "problem_id": "3463",
+  "frontend_id": "3206",
+  "difficulty": "Easy",
+  "problem_slug": "alternating-groups-i",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "There is a circle of red and blue tiles. You are given an array of integers colors. The color of tile i is represented by colors[i]:\nEvery 3 contiguous tiles in the circle with alternating colors (the middle tile has a different color from its left and right tiles) is called an alternating group.\nReturn the number of alternating groups.\nNote that since colors represents a circle, the first and the last tiles are considered to be next to each other.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: colors = [1,1,1]\nOutput: 0\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/16/image_2024-05-16_23-53-171.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: colors = [0,1,0,0,1]\nOutput: 3\nExplanation:\n\nAlternating groups:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/16/image_2024-05-16_23-47-491.png",
+        "https://assets.leetcode.com/uploads/2024/05/16/image_2024-05-16_23-50-441.png",
+        "https://assets.leetcode.com/uploads/2024/05/16/image_2024-05-16_23-48-211.png",
+        "https://assets.leetcode.com/uploads/2024/05/16/image_2024-05-16_23-49-351.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= colors.length <= 100",
+    "0 <= colors[i] <= 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each tile, check that the previous and the next tile have different colors from that tile or not."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfAlternatingGroups(vector<int>& colors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfAlternatingGroups(int[] colors) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfAlternatingGroups(self, colors):\n        \"\"\"\n        :type colors: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfAlternatingGroups(self, colors: List[int]) -> int:\n        ",
+    "c": "int numberOfAlternatingGroups(int* colors, int colorsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfAlternatingGroups(int[] colors) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} colors\n * @return {number}\n */\nvar numberOfAlternatingGroups = function(colors) {\n    \n};",
+    "typescript": "function numberOfAlternatingGroups(colors: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $colors\n     * @return Integer\n     */\n    function numberOfAlternatingGroups($colors) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfAlternatingGroups(_ colors: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfAlternatingGroups(colors: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfAlternatingGroups(List<int> colors) {\n    \n  }\n}",
+    "golang": "func numberOfAlternatingGroups(colors []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} colors\n# @return {Integer}\ndef number_of_alternating_groups(colors)\n    \nend",
+    "scala": "object Solution {\n    def numberOfAlternatingGroups(colors: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_alternating_groups(colors: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-alternating-groups colors)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec number_of_alternating_groups(Colors :: [integer()]) -> integer().\nnumber_of_alternating_groups(Colors) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_alternating_groups(colors :: [integer]) :: integer\n  def number_of_alternating_groups(colors) do\n    \n  end\nend"
+  }
+}

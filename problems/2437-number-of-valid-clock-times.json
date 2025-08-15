@@ -1,0 +1,61 @@
+{
+  "title": "Number of Valid Clock Times",
+  "problem_id": "2528",
+  "frontend_id": "2437",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-valid-clock-times",
+  "topics": [
+    "String",
+    "Enumeration"
+  ],
+  "description": "You are given a string of length 5 called time, representing the current time on a digital clock in the format \"hh:mm\". The earliest possible time is \"00:00\" and the latest possible time is \"23:59\".\nIn the string time, the digits represented by the ? symbol are unknown, and must be replaced with a digit from 0 to 9.\nReturn an integer answer, the number of valid clock times that can be created by replacing every ? with a digit from 0 to 9.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: time = \"?5:00\"\nOutput: 2\nExplanation: We can replace the ? with either a 0 or 1, producing \"05:00\" or \"15:00\". Note that we cannot replace it with a 2, since the time \"25:00\" is invalid. In total, we have two choices.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: time = \"0?:0?\"\nOutput: 100\nExplanation: Each ? can be replaced by any digit from 0 to 9, so we have 100 total choices.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: time = \"??:??\"\nOutput: 1440\nExplanation: There are 24 possible choices for the hours, and 60 possible choices for the minutes. In total, we have 24 * 60 = 1440 choices.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "time is a valid string of length 5 in the format \"hh:mm\".",
+    "\"00\" <= hh <= \"23\"",
+    "\"00\" <= mm <= \"59\"",
+    "Some of the digits might be replaced with '?' and need to be replaced with digits from 0 to 9."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute force all possible clock times.",
+    "Checking if a clock time is valid can be done with Regex."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countTime(string time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTime(String time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countTime(self, time):\n        \"\"\"\n        :type time: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countTime(self, time: str) -> int:\n        ",
+    "c": "int countTime(char* time) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountTime(string time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} time\n * @return {number}\n */\nvar countTime = function(time) {\n    \n};",
+    "typescript": "function countTime(time: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $time\n     * @return Integer\n     */\n    function countTime($time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countTime(_ time: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countTime(time: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countTime(String time) {\n    \n  }\n}",
+    "golang": "func countTime(time string) int {\n    \n}",
+    "ruby": "# @param {String} time\n# @return {Integer}\ndef count_time(time)\n    \nend",
+    "scala": "object Solution {\n    def countTime(time: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_time(time: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-time time)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_time(Time :: unicode:unicode_binary()) -> integer().\ncount_time(Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_time(time :: String.t) :: integer\n  def count_time(time) do\n    \n  end\nend"
+  }
+}

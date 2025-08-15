@@ -1,0 +1,62 @@
+{
+  "title": "Increment Submatrices by One",
+  "problem_id": "2625",
+  "frontend_id": "2536",
+  "difficulty": "Medium",
+  "problem_slug": "increment-submatrices-by-one",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "You are given a positive integer n, indicating that we initially have an n x n 0-indexed integer matrix mat filled with zeroes.\nYou are also given a 2D integer array query. For each query[i] = [row1i, col1i, row2i, col2i], you should do the following operation:\nReturn the matrix mat after performing every query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, queries = [[1,1,2,2],[0,0,1,1]]\nOutput: [[1,1,0],[1,2,1],[0,1,1]]\nExplanation: The diagram above shows the initial matrix, the matrix after the first query, and the matrix after the second query.\n- In the first query, we add 1 to every element in the submatrix with the top left corner (1, 1) and bottom right corner (2, 2).\n- In the second query, we add 1 to every element in the submatrix with the top left corner (0, 0) and bottom right corner (1, 1).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/24/p2example11.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, queries = [[0,0,1,1]]\nOutput: [[1,1],[1,1]]\nExplanation: The diagram above shows the initial matrix and the matrix after the first query.\n- In the first query we add 1 to every element in the matrix.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/24/p2example22.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 500",
+    "1 <= queries.length <= 104",
+    "0 <= row1i <= row2i < n",
+    "0 <= col1i <= col2i < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Imagine each row as a separate array. Instead of updating the whole submatrix together, we can use prefix sum to update each row separately.",
+    "For each query, iterate over the rows i in the range [row1, row2] and add 1 to prefix sum S[i][col1], and subtract 1 from S[i][col2 + 1].",
+    "After doing this operation for all the queries, update each row separately with S[i][j] = S[i][j] + S[i][j - 1]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> rangeAddQueries(int n, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] rangeAddQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def rangeAddQueries(self, n, queries):\n        \"\"\"\n        :type n: int\n        :type queries: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def rangeAddQueries(self, n: int, queries: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** rangeAddQueries(int n, int** queries, int queriesSize, int* queriesColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] RangeAddQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} queries\n * @return {number[][]}\n */\nvar rangeAddQueries = function(n, queries) {\n    \n};",
+    "typescript": "function rangeAddQueries(n: number, queries: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $queries\n     * @return Integer[][]\n     */\n    function rangeAddQueries($n, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func rangeAddQueries(_ n: Int, _ queries: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun rangeAddQueries(n: Int, queries: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> rangeAddQueries(int n, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func rangeAddQueries(n int, queries [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} queries\n# @return {Integer[][]}\ndef range_add_queries(n, queries)\n    \nend",
+    "scala": "object Solution {\n    def rangeAddQueries(n: Int, queries: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn range_add_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (range-add-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec range_add_queries(N :: integer(), Queries :: [[integer()]]) -> [[integer()]].\nrange_add_queries(N, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec range_add_queries(n :: integer, queries :: [[integer]]) :: [[integer]]\n  def range_add_queries(n, queries) do\n    \n  end\nend"
+  }
+}

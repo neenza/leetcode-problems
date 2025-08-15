@@ -1,0 +1,57 @@
+{
+  "title": "Check If String Is a Prefix of Array",
+  "problem_id": "2093",
+  "frontend_id": "1961",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-string-is-a-prefix-of-array",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String"
+  ],
+  "description": "Given a string s and an array of strings words, determine whether s is a prefix string of words.\nA string s is a prefix string of words if s can be made by concatenating the first k strings in words for some positive k no larger than words.length.\nReturn true if s is a prefix string of words, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"iloveleetcode\", words = [\"i\",\"love\",\"leetcode\",\"apples\"]\nOutput: true\nExplanation:\ns can be made by concatenating \"i\", \"love\", and \"leetcode\" together.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"iloveleetcode\", words = [\"apples\",\"i\",\"love\",\"leetcode\"]\nOutput: false\nExplanation:\nIt is impossible to make s using a prefix of arr.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 20",
+    "1 <= s.length <= 1000",
+    "words[i] and s consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are only words.length prefix strings.",
+    "Create all of them and see if s is one of them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPrefixString(string s, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPrefixString(String s, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPrefixString(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPrefixString(self, s: str, words: List[str]) -> bool:\n        ",
+    "c": "bool isPrefixString(char* s, char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPrefixString(string s, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} words\n * @return {boolean}\n */\nvar isPrefixString = function(s, words) {\n    \n};",
+    "typescript": "function isPrefixString(s: string, words: string[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String[] $words\n     * @return Boolean\n     */\n    function isPrefixString($s, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPrefixString(_ s: String, _ words: [String]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPrefixString(s: String, words: Array<String>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPrefixString(String s, List<String> words) {\n    \n  }\n}",
+    "golang": "func isPrefixString(s string, words []string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String[]} words\n# @return {Boolean}\ndef is_prefix_string(s, words)\n    \nend",
+    "scala": "object Solution {\n    def isPrefixString(s: String, words: Array[String]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_prefix_string(s: String, words: Vec<String>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-prefix-string s words)\n  (-> string? (listof string?) boolean?)\n  )",
+    "erlang": "-spec is_prefix_string(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> boolean().\nis_prefix_string(S, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_prefix_string(s :: String.t, words :: [String.t]) :: boolean\n  def is_prefix_string(s, words) do\n    \n  end\nend"
+  }
+}

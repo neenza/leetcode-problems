@@ -1,0 +1,63 @@
+{
+  "title": "Shortest Path in a Grid with Obstacles Elimination",
+  "problem_id": "1414",
+  "frontend_id": "1293",
+  "difficulty": "Hard",
+  "problem_slug": "shortest-path-in-a-grid-with-obstacles-elimination",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "You are given an m x n integer matrix grid where each cell is either 0 (empty) or 1 (obstacle). You can move up, down, left, or right from and to an empty cell in one step.\nReturn the minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1) given that you can eliminate at most k obstacles. If it is not possible to find such walk return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,0,0],[1,1,0],[0,0,0],[0,1,1],[0,0,0]], k = 1\nOutput: 6\nExplanation: \nThe shortest path without eliminating any obstacle is 10.\nThe shortest path with one obstacle elimination at position (3,2) is 6. Such path is (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/30/short1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1,1],[1,1,1],[1,0,0]], k = 1\nOutput: -1\nExplanation: We need to eliminate at least two obstacles to find such a walk.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/30/short2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 40",
+    "1 <= k <= m * n",
+    "grid[i][j] is either 0 or 1.",
+    "grid[0][0] == grid[m - 1][n - 1] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use BFS.",
+    "BFS on (x,y,r) x,y is coordinate, r is remain number of obstacles you can remove."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int shortestPath(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestPath(int[][] grid, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestPath(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestPath(self, grid: List[List[int]], k: int) -> int:\n        ",
+    "c": "int shortestPath(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ShortestPath(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar shortestPath = function(grid, k) {\n    \n};",
+    "typescript": "function shortestPath(grid: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer $k\n     * @return Integer\n     */\n    function shortestPath($grid, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestPath(_ grid: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestPath(grid: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int shortestPath(List<List<int>> grid, int k) {\n    \n  }\n}",
+    "golang": "func shortestPath(grid [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer} k\n# @return {Integer}\ndef shortest_path(grid, k)\n    \nend",
+    "scala": "object Solution {\n    def shortestPath(grid: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_path(grid: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-path grid k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec shortest_path(Grid :: [[integer()]], K :: integer()) -> integer().\nshortest_path(Grid, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_path(grid :: [[integer]], k :: integer) :: integer\n  def shortest_path(grid, k) do\n    \n  end\nend"
+  }
+}

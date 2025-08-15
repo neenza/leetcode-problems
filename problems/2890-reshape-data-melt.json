@@ -1,0 +1,30 @@
+{
+  "title": "Reshape Data: Melt",
+  "problem_id": "3073",
+  "frontend_id": "2890",
+  "difficulty": "Easy",
+  "problem_slug": "reshape-data-melt",
+  "topics": [],
+  "description": "Write a solution to reshape the data so that each row represents sales data for a product in a specific quarter.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame report\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| product     | object |\n| quarter_1   | int    |\n| quarter_2   | int    |\n| quarter_3   | int    |\n| quarter_4   | int    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\n+-------------+-----------+-----------+-----------+-----------+\n| product     | quarter_1 | quarter_2 | quarter_3 | quarter_4 |\n+-------------+-----------+-----------+-----------+-----------+\n| Umbrella    | 417       | 224       | 379       | 611       |\n| SleepingBag | 800       | 936       | 93        | 875       |\n+-------------+-----------+-----------+-----------+-----------+\nOutput:\n+-------------+-----------+-------+\n| product     | quarter   | sales |\n+-------------+-----------+-------+\n| Umbrella    | quarter_1 | 417   |\n| SleepingBag | quarter_1 | 800   |\n| Umbrella    | quarter_2 | 224   |\n| SleepingBag | quarter_2 | 936   |\n| Umbrella    | quarter_3 | 379   |\n| SleepingBag | quarter_3 | 93    |\n| Umbrella    | quarter_4 | 611   |\n| SleepingBag | quarter_4 | 875   |\n+-------------+-----------+-------+\nExplanation:\nThe DataFrame is reshaped from wide to long format. Each row represents the sales of a product in a quarter.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using a built-in function in pandas library to transform the data"
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef meltTable(report: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\n\nThe problem involves reshaping a given DataFrame that captures sales data of products across different quarters. Initially, the data is structured in a wide format, where each product has separate columns for sales of every quarter. The task is to transform this data into a long format, where each row represents sales data for a specific product in a particular quarter, effectively consolidating the multiple quarter columns into two columns: one indicating the quarter and the other detailing the sales for that quarter.\n\n**Key Concepts**:\n1. **`melt` Function**: pandas' `melt` function is used to transform or reshape data. It changes the DataFrame from a wide format, where columns represent multiple variables, to a long format, where each row represents a unique variable. In our case, we want to transform the sales data from having separate columns for each quarter to a format where there's a single column for the quarter and a single column for the sales value.\n\n**`melt` Function Argument Definition:**\n\n1. `id_vars`: This specifies the columns that should remain unchanged. For this problem, only the `product` column remains unchanged because we want every row in the output to be associated with a product.\n\n2. `value_vars`: This specifies the columns that we want to \"melt\" or reshape into rows. In our case, these are the sales data columns for each quarter: `quarter_1`, `quarter_2`, `quarter_3`, and `quarter_4`.\n\n3. `var_name`: This is the name of the new column that will store the header names from the `value_vars`. In our problem, these are the quarter names.\n\n4. `value_name`: This is the name of the new column that will store the values from the `value_vars`. In our problem, this will be the sales figures for each product for each quarter.\n\n### Intuition\n\nUsing the given example:productquarter_1quarter_2quarter_3quarter_4Umbrella417224379611SleepingBag800936938751. The `id_vars=['product']` keeps the `product` column intact.\n2. The `value_vars=['quarter_1', 'quarter_2', 'quarter_3', 'quarter_4']` means we're taking the data from these columns and reshaping it into two new columns.\n3. `var_name='quarter'` will create a new column named `quarter`, and each entry in this column will be the column name from where the sales data was taken (e.g., `quarter_1`, `quarter_2`, etc.).\n4. `value_name='sales'` will create a new column named `sales`, which will store the actual sales values.\n\nBy applying the melt function, the DataFrame is reshaped to the desired long format.\n\n**Using the Solution**\n\n**Visualization of `melt` function**\n\n![fig](../Figures/3317/3317-1.png)\n\nWhen you pass this DataFrame to the function:productquarter_1quarter_2quarter_3quarter_4Umbrella417224379611SleepingBag80093693875It will return:productquartersalesUmbrellaquarter_1417SleepingBagquarter_1800Umbrellaquarter_2224SleepingBagquarter_2936Umbrellaquarter_3379SleepingBagquarter_393Umbrellaquarter_4611SleepingBagquarter_4875### Implementation"
+}

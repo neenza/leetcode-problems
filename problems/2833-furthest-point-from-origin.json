@@ -1,0 +1,59 @@
+{
+  "title": "Furthest Point From Origin",
+  "problem_id": "3019",
+  "frontend_id": "2833",
+  "difficulty": "Easy",
+  "problem_slug": "furthest-point-from-origin",
+  "topics": [
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string moves of length n consisting only of characters 'L', 'R', and '_'. The string represents your movement on a number line starting from the origin 0.\nIn the ith move, you can choose one of the following directions:\nReturn the distance from the origin of the furthest point you can get to after n moves.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: moves = \"L_RL__R\"\nOutput: 3\nExplanation: The furthest point we can reach from the origin 0 is point -3 through the following sequence of moves \"LLRLLLR\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: moves = \"_R__LL_\"\nOutput: 5\nExplanation: The furthest point we can reach from the origin 0 is point -5 through the following sequence of moves \"LRLLLLL\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: moves = \"_______\"\nOutput: 7\nExplanation: The furthest point we can reach from the origin 0 is point 7 through the following sequence of moves \"RRRRRRR\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= moves.length == n <= 50",
+    "moves consists only of characters 'L', 'R' and '_'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">In an optimal answer, all occurrences of <code>'_’</code> will be replaced with the <strong>same</strong> character.</div>",
+    "<div class=\"_1l1MA\">Replace all characters of <code>'_’</code> with the character that occurs the most. </div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int furthestDistanceFromOrigin(string moves) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int furthestDistanceFromOrigin(String moves) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def furthestDistanceFromOrigin(self, moves):\n        \"\"\"\n        :type moves: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def furthestDistanceFromOrigin(self, moves: str) -> int:\n        ",
+    "c": "int furthestDistanceFromOrigin(char* moves) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FurthestDistanceFromOrigin(string moves) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} moves\n * @return {number}\n */\nvar furthestDistanceFromOrigin = function(moves) {\n    \n};",
+    "typescript": "function furthestDistanceFromOrigin(moves: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $moves\n     * @return Integer\n     */\n    function furthestDistanceFromOrigin($moves) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func furthestDistanceFromOrigin(_ moves: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun furthestDistanceFromOrigin(moves: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int furthestDistanceFromOrigin(String moves) {\n    \n  }\n}",
+    "golang": "func furthestDistanceFromOrigin(moves string) int {\n    \n}",
+    "ruby": "# @param {String} moves\n# @return {Integer}\ndef furthest_distance_from_origin(moves)\n    \nend",
+    "scala": "object Solution {\n    def furthestDistanceFromOrigin(moves: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn furthest_distance_from_origin(moves: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (furthest-distance-from-origin moves)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec furthest_distance_from_origin(Moves :: unicode:unicode_binary()) -> integer().\nfurthest_distance_from_origin(Moves) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec furthest_distance_from_origin(moves :: String.t) :: integer\n  def furthest_distance_from_origin(moves) do\n    \n  end\nend"
+  }
+}

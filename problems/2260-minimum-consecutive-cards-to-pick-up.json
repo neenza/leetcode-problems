@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Consecutive Cards to Pick Up",
+  "problem_id": "2338",
+  "frontend_id": "2260",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-consecutive-cards-to-pick-up",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ],
+  "description": "You are given an integer array cards where cards[i] represents the value of the ith card. A pair of cards are matching if the cards have the same value.\nReturn the minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards. If it is impossible to have matching cards, return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cards = [3,4,2,3,4,7]\nOutput: 4\nExplanation: We can pick up the cards [3,4,2,3] which contain a matching pair of cards with value 3. Note that picking up the cards [4,2,3,4] is also optimal.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cards = [1,0,5,3]\nOutput: -1\nExplanation: There is no way to pick up a set of consecutive cards that contain a pair of matching cards.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= cards.length <= 105",
+    "0 <= cards[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate through the cards and store the location of the last occurrence of each number.",
+    "What data structure could you use to get the last occurrence of a number in O(1) or O(log n)?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumCardPickup(vector<int>& cards) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCardPickup(int[] cards) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumCardPickup(self, cards):\n        \"\"\"\n        :type cards: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumCardPickup(self, cards: List[int]) -> int:\n        ",
+    "c": "int minimumCardPickup(int* cards, int cardsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumCardPickup(int[] cards) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cards\n * @return {number}\n */\nvar minimumCardPickup = function(cards) {\n    \n};",
+    "typescript": "function minimumCardPickup(cards: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $cards\n     * @return Integer\n     */\n    function minimumCardPickup($cards) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumCardPickup(_ cards: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumCardPickup(cards: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumCardPickup(List<int> cards) {\n    \n  }\n}",
+    "golang": "func minimumCardPickup(cards []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} cards\n# @return {Integer}\ndef minimum_card_pickup(cards)\n    \nend",
+    "scala": "object Solution {\n    def minimumCardPickup(cards: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_card_pickup(cards: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-card-pickup cards)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_card_pickup(Cards :: [integer()]) -> integer().\nminimum_card_pickup(Cards) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_card_pickup(cards :: [integer]) :: integer\n  def minimum_card_pickup(cards) do\n    \n  end\nend"
+  }
+}

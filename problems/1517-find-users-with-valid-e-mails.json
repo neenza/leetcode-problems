@@ -1,0 +1,33 @@
+{
+  "title": "Find Users With Valid E-Mails",
+  "problem_id": "1664",
+  "frontend_id": "1517",
+  "difficulty": "Easy",
+  "problem_slug": "find-users-with-valid-e-mails",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Users\nWrite a solution to find the users who have valid emails.\nA valid e-mail has a prefix name and a domain where:\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| name          | varchar |\n| mail          | varchar |\n+---------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nThis table contains information of the users signed up in a website. Some e-mails are invalid.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nUsers table:\n+---------+-----------+-------------------------+\n| user_id | name      | mail                    |\n+---------+-----------+-------------------------+\n| 1       | Winston   | winston@leetcode.com    |\n| 2       | Jonathan  | jonathanisgreat         |\n| 3       | Annabelle | bella-@leetcode.com     |\n| 4       | Sally     | sally.come@leetcode.com |\n| 5       | Marwan    | quarz#2020@leetcode.com |\n| 6       | David     | david69@gmail.com       |\n| 7       | Shapiro   | .shapo@leetcode.com     |\n+---------+-----------+-------------------------+\nOutput: \n+---------+-----------+-------------------------+\n| user_id | name      | mail                    |\n+---------+-----------+-------------------------+\n| 1       | Winston   | winston@leetcode.com    |\n| 3       | Annabelle | bella-@leetcode.com     |\n| 4       | Sally     | sally.come@leetcode.com |\n+---------+-----------+-------------------------+\nExplanation: \nThe mail of user 2 does not have a domain.\nThe mail of user 5 has the # sign which is not allowed.\nThe mail of user 6 does not have the leetcode domain.\nThe mail of user 7 starts with a period.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef valid_emails(users: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Number of Pairs of Strings With Concatenation Equal to Target",
+  "problem_id": "2133",
+  "frontend_id": "2023",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "Given an array of digit strings nums and a digit string target, return the number of pairs of indices (i, j) (where i != j) such that the concatenation of nums[i] + nums[j] equals target.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [\"777\",\"7\",\"77\",\"77\"], target = \"7777\"\nOutput: 4\nExplanation: Valid pairs are:\n- (0, 1): \"777\" + \"7\"\n- (1, 0): \"7\" + \"777\"\n- (2, 3): \"77\" + \"77\"\n- (3, 2): \"77\" + \"77\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [\"123\",\"4\",\"12\",\"34\"], target = \"1234\"\nOutput: 2\nExplanation: Valid pairs are:\n- (0, 1): \"123\" + \"4\"\n- (2, 3): \"12\" + \"34\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [\"1\",\"1\",\"1\"], target = \"11\"\nOutput: 6\nExplanation: Valid pairs are:\n- (0, 1): \"1\" + \"1\"\n- (1, 0): \"1\" + \"1\"\n- (0, 2): \"1\" + \"1\"\n- (2, 0): \"1\" + \"1\"\n- (1, 2): \"1\" + \"1\"\n- (2, 1): \"1\" + \"1\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "1 <= nums[i].length <= 100",
+    "2 <= target.length <= 100",
+    "nums[i] and target consist of digits.",
+    "nums[i] and target do not have leading zeros."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to concatenate every two different strings from the list.",
+    "Count the number of pairs with concatenation equals to target."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numOfPairs(vector<string>& nums, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfPairs(String[] nums, String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfPairs(self, nums, target):\n        \"\"\"\n        :type nums: List[str]\n        :type target: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfPairs(self, nums: List[str], target: str) -> int:\n        ",
+    "c": "int numOfPairs(char** nums, int numsSize, char* target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumOfPairs(string[] nums, string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} nums\n * @param {string} target\n * @return {number}\n */\nvar numOfPairs = function(nums, target) {\n    \n};",
+    "typescript": "function numOfPairs(nums: string[], target: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $nums\n     * @param String $target\n     * @return Integer\n     */\n    function numOfPairs($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfPairs(_ nums: [String], _ target: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfPairs(nums: Array<String>, target: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfPairs(List<String> nums, String target) {\n    \n  }\n}",
+    "golang": "func numOfPairs(nums []string, target string) int {\n    \n}",
+    "ruby": "# @param {String[]} nums\n# @param {String} target\n# @return {Integer}\ndef num_of_pairs(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def numOfPairs(nums: Array[String], target: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_pairs(nums: Vec<String>, target: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-pairs nums target)\n  (-> (listof string?) string? exact-integer?)\n  )",
+    "erlang": "-spec num_of_pairs(Nums :: [unicode:unicode_binary()], Target :: unicode:unicode_binary()) -> integer().\nnum_of_pairs(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_pairs(nums :: [String.t], target :: String.t) :: integer\n  def num_of_pairs(nums, target) do\n    \n  end\nend"
+  }
+}

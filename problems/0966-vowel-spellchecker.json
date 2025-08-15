@@ -1,0 +1,54 @@
+{
+  "title": "Vowel Spellchecker",
+  "problem_id": "1006",
+  "frontend_id": "966",
+  "difficulty": "Medium",
+  "problem_slug": "vowel-spellchecker",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.\nFor a given query word, the spell checker handles two categories of spelling mistakes:\nIn addition, the spell checker operates under the following precedence rules:\nGiven some queries, return a list of words answer, where answer[i] is the correct word for query = queries[i].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: wordlist = [\"KiTe\",\"kite\",\"hare\",\"Hare\"], queries = [\"kite\",\"Kite\",\"KiTe\",\"Hare\",\"HARE\",\"Hear\",\"hear\",\"keti\",\"keet\",\"keto\"]\nOutput: [\"kite\",\"KiTe\",\"KiTe\",\"Hare\",\"hare\",\"\",\"\",\"KiTe\",\"\",\"KiTe\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: wordlist = [\"yellow\"], queries = [\"YellOw\"]\nOutput: [\"yellow\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= wordlist.length, queries.length <= 5000",
+    "1 <= wordlist[i].length, queries[i].length <= 7",
+    "wordlist[i] and queries[i] consist only of only English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> spellchecker(vector<string>& wordlist, vector<string>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] spellchecker(String[] wordlist, String[] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def spellchecker(self, wordlist, queries):\n        \"\"\"\n        :type wordlist: List[str]\n        :type queries: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** spellchecker(char** wordlist, int wordlistSize, char** queries, int queriesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] Spellchecker(string[] wordlist, string[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} wordlist\n * @param {string[]} queries\n * @return {string[]}\n */\nvar spellchecker = function(wordlist, queries) {\n    \n};",
+    "typescript": "function spellchecker(wordlist: string[], queries: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $wordlist\n     * @param String[] $queries\n     * @return String[]\n     */\n    function spellchecker($wordlist, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func spellchecker(_ wordlist: [String], _ queries: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun spellchecker(wordlist: Array<String>, queries: Array<String>): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> spellchecker(List<String> wordlist, List<String> queries) {\n    \n  }\n}",
+    "golang": "func spellchecker(wordlist []string, queries []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} wordlist\n# @param {String[]} queries\n# @return {String[]}\ndef spellchecker(wordlist, queries)\n    \nend",
+    "scala": "object Solution {\n    def spellchecker(wordlist: Array[String], queries: Array[String]): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn spellchecker(wordlist: Vec<String>, queries: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (spellchecker wordlist queries)\n  (-> (listof string?) (listof string?) (listof string?))\n  )",
+    "erlang": "-spec spellchecker(Wordlist :: [unicode:unicode_binary()], Queries :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nspellchecker(Wordlist, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec spellchecker(wordlist :: [String.t], queries :: [String.t]) :: [String.t]\n  def spellchecker(wordlist, queries) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: HashMap\n\n**Intuition and Algorithm**\n\nWe analyze the 3 cases that the algorithm needs to consider: when the query is an exact match, when the query is a match up to capitalization, and when the query is a match up to vowel errors.\n\nIn all 3 cases, we can use a hash table to query the answer.\n\n* For the first case (exact match), we hold a set of words to efficiently test whether our query is in the set.\n* For the second case (capitalization), we hold a hash table that converts the word from its lowercase version to the original word (with correct capitalization).\n* For the third case (vowel replacement), we hold a hash table that converts the word from its lowercase version with the vowels masked out, to the original word.\n\nThe rest of the algorithm is careful planning and reading the problem carefully.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\mathcal{C})$$, where $$\\mathcal{C}$$ is the total *content* of `wordlist` and `queries`.\n\n* Space Complexity:  $$O(\\mathcal{C})$$."
+}

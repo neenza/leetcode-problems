@@ -1,0 +1,59 @@
+{
+  "title": "Existence of a Substring in a String and Its Reverse",
+  "problem_id": "3353",
+  "frontend_id": "3083",
+  "difficulty": "Easy",
+  "problem_slug": "existence-of-a-substring-in-a-string-and-its-reverse",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a string s, find any substring of length 2 which is also present in the reverse of s.\nReturn true if such a substring exists, and false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leetcode\"\nOutput: true\nExplanation: Substring \"ee\" is of length 2 which is also present in reverse(s) == \"edocteel\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcba\"\nOutput: true\nExplanation: All of the substrings of length 2 \"ab\" , \"bc\" , \"cb\" , \"ba\" are also present in reverse(s) == \"abcba\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcd\"\nOutput: false\nExplanation: There is no substring of length 2 in s , which is also present in the reverse of s .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Make a new string by reversing the string <code>s</code>.",
+    "For every substring of length <code>2</code> in <code>s</code>, check if there is a corresponding substring in the reverse of <code>s</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isSubstringPresent(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isSubstringPresent(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isSubstringPresent(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isSubstringPresent(self, s: str) -> bool:\n        ",
+    "c": "bool isSubstringPresent(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsSubstringPresent(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isSubstringPresent = function(s) {\n    \n};",
+    "typescript": "function isSubstringPresent(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function isSubstringPresent($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isSubstringPresent(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isSubstringPresent(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isSubstringPresent(String s) {\n    \n  }\n}",
+    "golang": "func isSubstringPresent(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef is_substring_present(s)\n    \nend",
+    "scala": "object Solution {\n    def isSubstringPresent(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_substring_present(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-substring-present s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_substring_present(S :: unicode:unicode_binary()) -> boolean().\nis_substring_present(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_substring_present(s :: String.t) :: boolean\n  def is_substring_present(s) do\n    \n  end\nend"
+  }
+}

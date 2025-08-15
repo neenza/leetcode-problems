@@ -1,0 +1,55 @@
+{
+  "title": "Count Items Matching a Rule",
+  "problem_id": "1899",
+  "frontend_id": "1773",
+  "difficulty": "Easy",
+  "problem_slug": "count-items-matching-a-rule",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given an array items, where each items[i] = [typei, colori, namei] describes the type, color, and name of the ith item. You are also given a rule represented by two strings, ruleKey and ruleValue.\nThe ith item is said to match the rule if one of the following is true:\nReturn the number of items that match the given rule.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"lenovo\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"color\", ruleValue = \"silver\"\nOutput: 1\nExplanation: There is only one item matching the given rule, which is [\"computer\",\"silver\",\"lenovo\"].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"phone\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"type\", ruleValue = \"phone\"\nOutput: 2\nExplanation: There are only two items matching the given rule, which are [\"phone\",\"blue\",\"pixel\"] and [\"phone\",\"gold\",\"iphone\"]. Note that the item [\"computer\",\"silver\",\"phone\"] does not match.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= items.length <= 104",
+    "1 <= typei.length, colori.length, namei.length, ruleValue.length <= 10",
+    "ruleKey is equal to either \"type\", \"color\", or \"name\".",
+    "All strings consist only of lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate on each item, and check if each one matches the rule according to the statement."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countMatches(self, items, ruleKey, ruleValue):\n        \"\"\"\n        :type items: List[List[str]]\n        :type ruleKey: str\n        :type ruleValue: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:\n        ",
+    "c": "int countMatches(char*** items, int itemsSize, int* itemsColSize, char* ruleKey, char* ruleValue) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} items\n * @param {string} ruleKey\n * @param {string} ruleValue\n * @return {number}\n */\nvar countMatches = function(items, ruleKey, ruleValue) {\n    \n};",
+    "typescript": "function countMatches(items: string[][], ruleKey: string, ruleValue: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $items\n     * @param String $ruleKey\n     * @param String $ruleValue\n     * @return Integer\n     */\n    function countMatches($items, $ruleKey, $ruleValue) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countMatches(_ items: [[String]], _ ruleKey: String, _ ruleValue: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countMatches(items: List<List<String>>, ruleKey: String, ruleValue: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {\n    \n  }\n}",
+    "golang": "func countMatches(items [][]string, ruleKey string, ruleValue string) int {\n    \n}",
+    "ruby": "# @param {String[][]} items\n# @param {String} rule_key\n# @param {String} rule_value\n# @return {Integer}\ndef count_matches(items, rule_key, rule_value)\n    \nend",
+    "scala": "object Solution {\n    def countMatches(items: List[List[String]], ruleKey: String, ruleValue: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_matches(items: Vec<Vec<String>>, rule_key: String, rule_value: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-matches items ruleKey ruleValue)\n  (-> (listof (listof string?)) string? string? exact-integer?)\n  )",
+    "erlang": "-spec count_matches(Items :: [[unicode:unicode_binary()]], RuleKey :: unicode:unicode_binary(), RuleValue :: unicode:unicode_binary()) -> integer().\ncount_matches(Items, RuleKey, RuleValue) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_matches(items :: [[String.t]], rule_key :: String.t, rule_value :: String.t) :: integer\n  def count_matches(items, rule_key, rule_value) do\n    \n  end\nend"
+  }
+}

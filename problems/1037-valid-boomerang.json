@@ -1,0 +1,55 @@
+{
+  "title": "Valid Boomerang",
+  "problem_id": "1115",
+  "frontend_id": "1037",
+  "difficulty": "Easy",
+  "problem_slug": "valid-boomerang",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "Given an array points where points[i] = [xi, yi] represents a point on the X-Y plane, return true if these points are a boomerang.\nA boomerang is a set of three points that are all distinct and not in a straight line.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[1,1],[2,3],[3,2]]\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,1],[2,2],[3,3]]\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "points.length == 3",
+    "points[i].length == 2",
+    "0 <= xi, yi <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "3 points form a boomerang if and only if the triangle formed from them has non-zero area."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isBoomerang(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isBoomerang(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isBoomerang(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isBoomerang(self, points: List[List[int]]) -> bool:\n        ",
+    "c": "bool isBoomerang(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsBoomerang(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {boolean}\n */\nvar isBoomerang = function(points) {\n    \n};",
+    "typescript": "function isBoomerang(points: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Boolean\n     */\n    function isBoomerang($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isBoomerang(_ points: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isBoomerang(points: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isBoomerang(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func isBoomerang(points [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Boolean}\ndef is_boomerang(points)\n    \nend",
+    "scala": "object Solution {\n    def isBoomerang(points: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_boomerang(points: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-boomerang points)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec is_boomerang(Points :: [[integer()]]) -> boolean().\nis_boomerang(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_boomerang(points :: [[integer]]) :: boolean\n  def is_boomerang(points) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Sort Items by Groups Respecting Dependencies",
+  "problem_id": "1309",
+  "frontend_id": "1203",
+  "difficulty": "Hard",
+  "problem_slug": "sort-items-by-groups-respecting-dependencies",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort"
+  ],
+  "description": "There are n items each belonging to zero or one of m groups where group[i] is the group that the i-th item belongs to and it's equal to -1 if the i-th item belongs to no group. The items and the groups are zero indexed. A group can have no item belonging to it.\nReturn a sorted list of the items such that:\nReturn any solution if there is more than one solution and return an empty list if there is no solution.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]\nOutput: [6,3,4,1,5,2,0,7]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/11/1359_ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]\nOutput: []\nExplanation: This is the same as example 1 except that 4 needs to be before 6 in the sorted list.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/09/11/1359_ex1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= m <= n <= 3 * 104",
+    "group.length == beforeItems.length == n",
+    "-1 <= group[i] <= m - 1",
+    "0 <= beforeItems[i].length <= n - 1",
+    "0 <= beforeItems[i][j] <= n - 1",
+    "i != beforeItems[i][j]",
+    "beforeItems[i] does not contain duplicates elements."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of it as a graph problem.",
+    "We need to find a topological order on the dependency graph.",
+    "Build two graphs, one for the groups and another for the items."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sortItems(self, n, m, group, beforeItems):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type group: List[int]\n        :type beforeItems: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sortItems(self, n: int, m: int, group: List[int], beforeItems: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* sortItems(int n, int m, int* group, int groupSize, int** beforeItems, int beforeItemsSize, int* beforeItemsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SortItems(int n, int m, int[] group, IList<IList<int>> beforeItems) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @param {number[]} group\n * @param {number[][]} beforeItems\n * @return {number[]}\n */\nvar sortItems = function(n, m, group, beforeItems) {\n    \n};",
+    "typescript": "function sortItems(n: number, m: number, group: number[], beforeItems: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @param Integer[] $group\n     * @param Integer[][] $beforeItems\n     * @return Integer[]\n     */\n    function sortItems($n, $m, $group, $beforeItems) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sortItems(_ n: Int, _ m: Int, _ group: [Int], _ beforeItems: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sortItems(n: Int, m: Int, group: IntArray, beforeItems: List<List<Int>>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sortItems(int n, int m, List<int> group, List<List<int>> beforeItems) {\n    \n  }\n}",
+    "golang": "func sortItems(n int, m int, group []int, beforeItems [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @param {Integer[]} group\n# @param {Integer[][]} before_items\n# @return {Integer[]}\ndef sort_items(n, m, group, before_items)\n    \nend",
+    "scala": "object Solution {\n    def sortItems(n: Int, m: Int, group: Array[Int], beforeItems: List[List[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sort_items(n: i32, m: i32, group: Vec<i32>, before_items: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (sort-items n m group beforeItems)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec sort_items(N :: integer(), M :: integer(), Group :: [integer()], BeforeItems :: [[integer()]]) -> [integer()].\nsort_items(N, M, Group, BeforeItems) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sort_items(n :: integer, m :: integer, group :: [integer], before_items :: [[integer]]) :: [integer]\n  def sort_items(n, m, group, before_items) do\n    \n  end\nend"
+  }
+}

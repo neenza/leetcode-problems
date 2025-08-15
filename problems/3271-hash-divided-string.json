@@ -1,0 +1,57 @@
+{
+  "title": "Hash Divided String",
+  "problem_id": "3540",
+  "frontend_id": "3271",
+  "difficulty": "Medium",
+  "problem_slug": "hash-divided-string",
+  "topics": [
+    "String",
+    "Simulation"
+  ],
+  "description": "You are given a string s of length n and an integer k, where n is a multiple of k. Your task is to hash the string s into a new string called result, which has a length of n / k.\nFirst, divide s into n / k substrings, each with a length of k. Then, initialize result as an empty string.\nFor each substring in order from the beginning:\nReturn result.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcd\", k = 2\nOutput: \"bf\"\nExplanation:\nFirst substring: \"ab\" , 0 + 1 = 1 , 1 % 26 = 1 , result[0] = 'b' .\nSecond substring: \"cd\" , 2 + 3 = 5 , 5 % 26 = 5 , result[1] = 'f' .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"mxz\", k = 3\nOutput: \"i\"\nExplanation:\nThe only substring: \"mxz\" , 12 + 23 + 25 = 60 , 60 % 26 = 8 , result[0] = 'i' .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 100",
+    "k <= s.length <= 1000",
+    "s.length is divisible by k.",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to find each substring.",
+    "Use a for loop to find <code>hashedChar</code> of each substring.",
+    "Find the answer using <code>hashedChar</code> of each substring."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string stringHash(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String stringHash(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stringHash(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stringHash(self, s: str, k: int) -> str:\n        ",
+    "c": "char* stringHash(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string StringHash(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar stringHash = function(s, k) {\n    \n};",
+    "typescript": "function stringHash(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function stringHash($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stringHash(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stringHash(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String stringHash(String s, int k) {\n    \n  }\n}",
+    "golang": "func stringHash(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef string_hash(s, k)\n    \nend",
+    "scala": "object Solution {\n    def stringHash(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn string_hash(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (string-hash s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec string_hash(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nstring_hash(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec string_hash(s :: String.t, k :: integer) :: String.t\n  def string_hash(s, k) do\n    \n  end\nend"
+  }
+}

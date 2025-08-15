@@ -1,0 +1,64 @@
+{
+  "title": "Longest Palindrome by Concatenating Two Letter Words",
+  "problem_id": "2237",
+  "frontend_id": "2131",
+  "difficulty": "Medium",
+  "problem_slug": "longest-palindrome-by-concatenating-two-letter-words",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "You are given an array of strings words. Each element of words consists of two lowercase English letters.\nCreate the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once.\nReturn the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0.\nA palindrome is a string that reads the same forward and backward.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"lc\",\"cl\",\"gg\"]\nOutput: 6\nExplanation: One longest palindrome is \"lc\" + \"gg\" + \"cl\" = \"lcggcl\", of length 6.\nNote that \"clgglc\" is another longest palindrome that can be created.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"ab\",\"ty\",\"yt\",\"lc\",\"cl\",\"ab\"]\nOutput: 8\nExplanation: One longest palindrome is \"ty\" + \"lc\" + \"cl\" + \"yt\" = \"tylcclyt\", of length 8.\nNote that \"lcyttycl\" is another longest palindrome that can be created.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"cc\",\"ll\",\"xx\"]\nOutput: 2\nExplanation: One longest palindrome is \"cc\", of length 2.\nNote that \"ll\" is another longest palindrome that can be created, and so is \"xx\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 105",
+    "words[i].length == 2",
+    "words[i] consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "A palindrome must be mirrored over the center. Suppose we have a palindrome. If we prepend the word \"ab\" on the left, what must we append on the right to keep it a palindrome?",
+    "We must append \"ba\" on the right. The number of times we can do this is the minimum of (occurrences of \"ab\") and (occurrences of \"ba\").",
+    "For words that are already palindromes, e.g. \"aa\", we can prepend and append these in pairs as described in the previous hint. We can also use exactly one in the middle to form an even longer palindrome."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestPalindrome(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestPalindrome(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestPalindrome(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestPalindrome(self, words: List[str]) -> int:\n        ",
+    "c": "int longestPalindrome(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestPalindrome(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar longestPalindrome = function(words) {\n    \n};",
+    "typescript": "function longestPalindrome(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function longestPalindrome($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestPalindrome(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestPalindrome(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestPalindrome(List<String> words) {\n    \n  }\n}",
+    "golang": "func longestPalindrome(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef longest_palindrome(words)\n    \nend",
+    "scala": "object Solution {\n    def longestPalindrome(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_palindrome(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-palindrome words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec longest_palindrome(Words :: [unicode:unicode_binary()]) -> integer().\nlongest_palindrome(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_palindrome(words :: [String.t]) :: integer\n  def longest_palindrome(words) do\n    \n  end\nend"
+  }
+}

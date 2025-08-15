@@ -1,0 +1,59 @@
+{
+  "title": "Adding Two Negabinary Numbers",
+  "problem_id": "1148",
+  "frontend_id": "1073",
+  "difficulty": "Medium",
+  "problem_slug": "adding-two-negabinary-numbers",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "Given two numbers arr1 and arr2 in base -2, return the result of adding them together.\nEach number is given in array format:  as an array of 0s and 1s, from most significant bit to least significant bit.  For example, arr = [1,1,0,1] represents the number (-2)^3 + (-2)^2 + (-2)^0 = -3.  A number arr in array, format is also guaranteed to have no leading zeros: either arr == [0] or arr[0] == 1.\nReturn the result of adding arr1 and arr2 in the same format: as an array of 0s and 1s with no leading zeros.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr1 = [1,1,1,1,1], arr2 = [1,0,1]\nOutput: [1,0,0,0,0]\nExplanation: arr1 represents 11, arr2 represents 5, the output represents 16.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr1 = [0], arr2 = [0]\nOutput: [0]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr1 = [0], arr2 = [1]\nOutput: [1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr1.length, arr2.length <= 1000",
+    "arr1[i] and arr2[i] are 0 or 1",
+    "arr1 and arr2 have no leading zeros"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can try to determine the last digit of the answer, then divide everything by 2 and repeat."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> addNegabinary(vector<int>& arr1, vector<int>& arr2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] addNegabinary(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def addNegabinary(self, arr1, arr2):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def addNegabinary(self, arr1: List[int], arr2: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* addNegabinary(int* arr1, int arr1Size, int* arr2, int arr2Size, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] AddNegabinary(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr1\n * @param {number[]} arr2\n * @return {number[]}\n */\nvar addNegabinary = function(arr1, arr2) {\n    \n};",
+    "typescript": "function addNegabinary(arr1: number[], arr2: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr1\n     * @param Integer[] $arr2\n     * @return Integer[]\n     */\n    function addNegabinary($arr1, $arr2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func addNegabinary(_ arr1: [Int], _ arr2: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun addNegabinary(arr1: IntArray, arr2: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> addNegabinary(List<int> arr1, List<int> arr2) {\n    \n  }\n}",
+    "golang": "func addNegabinary(arr1 []int, arr2 []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr1\n# @param {Integer[]} arr2\n# @return {Integer[]}\ndef add_negabinary(arr1, arr2)\n    \nend",
+    "scala": "object Solution {\n    def addNegabinary(arr1: Array[Int], arr2: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn add_negabinary(arr1: Vec<i32>, arr2: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (add-negabinary arr1 arr2)\n  (-> (listof exact-integer?) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec add_negabinary(Arr1 :: [integer()], Arr2 :: [integer()]) -> [integer()].\nadd_negabinary(Arr1, Arr2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec add_negabinary(arr1 :: [integer], arr2 :: [integer]) :: [integer]\n  def add_negabinary(arr1, arr2) do\n    \n  end\nend"
+  }
+}

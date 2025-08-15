@@ -1,0 +1,58 @@
+{
+  "title": "Destroying Asteroids",
+  "problem_id": "2245",
+  "frontend_id": "2126",
+  "difficulty": "Medium",
+  "problem_slug": "destroying-asteroids",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer mass, which represents the original mass of a planet. You are further given an integer array asteroids, where asteroids[i] is the mass of the ith asteroid.\nYou can arrange for the planet to collide with the asteroids in any arbitrary order. If the mass of the planet is greater than or equal to the mass of the asteroid, the asteroid is destroyed and the planet gains the mass of the asteroid. Otherwise, the planet is destroyed.\nReturn true if all asteroids can be destroyed. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mass = 10, asteroids = [3,9,19,5,21]\nOutput: true\nExplanation: One way to order the asteroids is [9,19,5,3,21]:\n- The planet collides with the asteroid with a mass of 9. New planet mass: 10 + 9 = 19\n- The planet collides with the asteroid with a mass of 19. New planet mass: 19 + 19 = 38\n- The planet collides with the asteroid with a mass of 5. New planet mass: 38 + 5 = 43\n- The planet collides with the asteroid with a mass of 3. New planet mass: 43 + 3 = 46\n- The planet collides with the asteroid with a mass of 21. New planet mass: 46 + 21 = 67\nAll asteroids are destroyed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mass = 5, asteroids = [4,9,23,4]\nOutput: false\nExplanation: \nThe planet cannot ever gain enough mass to destroy the asteroid with a mass of 23.\nAfter the planet destroys the other asteroids, it will have a mass of 5 + 4 + 9 + 4 = 22.\nThis is less than 23, so a collision would not destroy the last asteroid.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= mass <= 105",
+    "1 <= asteroids.length <= 105",
+    "1 <= asteroids[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Choosing the asteroid to collide with can be done greedily.",
+    "If an asteroid will destroy the planet, then every bigger asteroid will also destroy the planet.",
+    "You only need to check the smallest asteroid at each collision. If it will destroy the planet, then every other asteroid will also destroy the planet.",
+    "Sort the asteroids in non-decreasing order by mass, then greedily try to collide with the asteroids in that order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool asteroidsDestroyed(int mass, vector<int>& asteroids) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean asteroidsDestroyed(int mass, int[] asteroids) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def asteroidsDestroyed(self, mass, asteroids):\n        \"\"\"\n        :type mass: int\n        :type asteroids: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:\n        ",
+    "c": "bool asteroidsDestroyed(int mass, int* asteroids, int asteroidsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool AsteroidsDestroyed(int mass, int[] asteroids) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} mass\n * @param {number[]} asteroids\n * @return {boolean}\n */\nvar asteroidsDestroyed = function(mass, asteroids) {\n    \n};",
+    "typescript": "function asteroidsDestroyed(mass: number, asteroids: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $mass\n     * @param Integer[] $asteroids\n     * @return Boolean\n     */\n    function asteroidsDestroyed($mass, $asteroids) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func asteroidsDestroyed(_ mass: Int, _ asteroids: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun asteroidsDestroyed(mass: Int, asteroids: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool asteroidsDestroyed(int mass, List<int> asteroids) {\n    \n  }\n}",
+    "golang": "func asteroidsDestroyed(mass int, asteroids []int) bool {\n    \n}",
+    "ruby": "# @param {Integer} mass\n# @param {Integer[]} asteroids\n# @return {Boolean}\ndef asteroids_destroyed(mass, asteroids)\n    \nend",
+    "scala": "object Solution {\n    def asteroidsDestroyed(mass: Int, asteroids: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn asteroids_destroyed(mass: i32, asteroids: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (asteroids-destroyed mass asteroids)\n  (-> exact-integer? (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec asteroids_destroyed(Mass :: integer(), Asteroids :: [integer()]) -> boolean().\nasteroids_destroyed(Mass, Asteroids) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec asteroids_destroyed(mass :: integer, asteroids :: [integer]) :: boolean\n  def asteroids_destroyed(mass, asteroids) do\n    \n  end\nend"
+  }
+}

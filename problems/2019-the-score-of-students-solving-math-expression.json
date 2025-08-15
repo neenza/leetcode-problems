@@ -1,0 +1,76 @@
+{
+  "title": "The Score of Students Solving Math Expression",
+  "problem_id": "2147",
+  "frontend_id": "2019",
+  "difficulty": "Hard",
+  "problem_slug": "the-score-of-students-solving-math-expression",
+  "topics": [
+    "Array",
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Stack",
+    "Memoization"
+  ],
+  "description": "You are given a string s that contains digits 0-9, addition symbols '+', and multiplication symbols '*' only, representing a valid math expression of single digit numbers (e.g., 3+5*2). This expression was given to n elementary school students. The students were instructed to get the answer of the expression by following this order of operations:\nYou are given an integer array answers of length n, which are the submitted answers of the students in no particular order. You are asked to grade the answers, by following these rules:\nReturn the sum of the points of the students.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"7+3*1*2\", answers = [20,13,42]\nOutput: 7\nExplanation: As illustrated above, the correct answer of the expression is 13, therefore one student is rewarded 5 points: [20,13,42]\nA student might have applied the operators in this wrong order: ((7+3)*1)*2 = 20. Therefore one student is rewarded 2 points: [20,13,42]\nThe points for the students are: [2,5,0]. The sum of the points is 2+5+0=7.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/17/student_solving_math.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"3+5*2\", answers = [13,0,10,13,13,16,16]\nOutput: 19\nExplanation: The correct answer of the expression is 13, therefore three students are rewarded 5 points each: [13,0,10,13,13,16,16]\nA student might have applied the operators in this wrong order: ((3+5)*2 = 16. Therefore two students are rewarded 2 points: [13,0,10,13,13,16,16]\nThe points for the students are: [5,0,0,5,5,2,2]. The sum of the points is 5+0+0+5+5+2+2=19.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/17/student_solving_math.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"6+0*1\", answers = [12,9,6,4,8,6]\nOutput: 10\nExplanation: The correct answer of the expression is 6.\nIf a student had incorrectly done (6+0)*1, the answer would also be 6.\nBy the rules of grading, the students will still be rewarded 5 points (as they got the correct answer), not 2 points.\nThe points for the students are: [0,0,5,0,0,5]. The sum of the points is 10.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/09/17/student_solving_math.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 31",
+    "s represents a valid expression that contains only digits 0-9, '+', and '*' only.",
+    "All the integer operands in the expression are in the inclusive range [0, 9].",
+    "1 <= The count of all operators ('+' and '*') in the math expression <= 15",
+    "Test data are generated such that the correct answer of the expression is in the range of [0, 1000].",
+    "n == answers.length",
+    "1 <= n <= 104",
+    "0 <= answers[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The number of operators in the equation is less. Could you find the right answer then generate all possible answers using different orders of operations?",
+    "Divide the equation into blocks separated by the operators, and use memoization on the results of blocks for optimization.",
+    "Use set and the max limit of the answer for further optimization."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int scoreOfStudents(string s, vector<int>& answers) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int scoreOfStudents(String s, int[] answers) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def scoreOfStudents(self, s, answers):\n        \"\"\"\n        :type s: str\n        :type answers: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def scoreOfStudents(self, s: str, answers: List[int]) -> int:\n        ",
+    "c": "int scoreOfStudents(char* s, int* answers, int answersSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ScoreOfStudents(string s, int[] answers) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} answers\n * @return {number}\n */\nvar scoreOfStudents = function(s, answers) {\n    \n};",
+    "typescript": "function scoreOfStudents(s: string, answers: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $answers\n     * @return Integer\n     */\n    function scoreOfStudents($s, $answers) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func scoreOfStudents(_ s: String, _ answers: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun scoreOfStudents(s: String, answers: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int scoreOfStudents(String s, List<int> answers) {\n    \n  }\n}",
+    "golang": "func scoreOfStudents(s string, answers []int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} answers\n# @return {Integer}\ndef score_of_students(s, answers)\n    \nend",
+    "scala": "object Solution {\n    def scoreOfStudents(s: String, answers: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn score_of_students(s: String, answers: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (score-of-students s answers)\n  (-> string? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec score_of_students(S :: unicode:unicode_binary(), Answers :: [integer()]) -> integer().\nscore_of_students(S, Answers) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec score_of_students(s :: String.t, answers :: [integer]) :: integer\n  def score_of_students(s, answers) do\n    \n  end\nend"
+  }
+}

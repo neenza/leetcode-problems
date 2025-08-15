@@ -1,0 +1,63 @@
+{
+  "title": "Count Connected Components in LCM Graph",
+  "problem_id": "3680",
+  "frontend_id": "3378",
+  "difficulty": "Hard",
+  "problem_slug": "count-connected-components-in-lcm-graph",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Union Find",
+    "Number Theory"
+  ],
+  "description": "You are given an array of integers nums of size n and a positive integer threshold.\nThere is a graph consisting of n nodes with the ith node having a value of nums[i]. Two nodes i and j in the graph are connected via an undirected edge if lcm(nums[i], nums[j]) <= threshold.\nReturn the number of connected components in this graph.\nA connected component is a subgraph of a graph in which there exists a path between any two vertices, and no vertex of the subgraph shares an edge with a vertex outside of the subgraph.\nThe term lcm(a, b) denotes the least common multiple of a and b.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,4,8,3,9], threshold = 5\nOutput: 4\nExplanation:\n\n\nThe four connected components are (2, 4) , (3) , (8) , (9) .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/10/31/example0.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,8,3,9,12], threshold = 10\nOutput: 2\nExplanation:\n\nThe two connected components are (2, 3, 4, 8, 9) , and (12) .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/10/31/example1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "All elements of nums are unique.",
+    "1 <= threshold <= 2 * 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use DSU",
+    "Connect a number to all its multiples less than threshold"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countComponents(vector<int>& nums, int threshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countComponents(int[] nums, int threshold) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countComponents(self, nums, threshold):\n        \"\"\"\n        :type nums: List[int]\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countComponents(self, nums: List[int], threshold: int) -> int:\n        ",
+    "c": "int countComponents(int* nums, int numsSize, int threshold) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountComponents(int[] nums, int threshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} threshold\n * @return {number}\n */\nvar countComponents = function(nums, threshold) {\n    \n};",
+    "typescript": "function countComponents(nums: number[], threshold: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $threshold\n     * @return Integer\n     */\n    function countComponents($nums, $threshold) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countComponents(_ nums: [Int], _ threshold: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countComponents(nums: IntArray, threshold: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countComponents(List<int> nums, int threshold) {\n    \n  }\n}",
+    "golang": "func countComponents(nums []int, threshold int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} threshold\n# @return {Integer}\ndef count_components(nums, threshold)\n    \nend",
+    "scala": "object Solution {\n    def countComponents(nums: Array[Int], threshold: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_components(nums: Vec<i32>, threshold: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-components nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_components(Nums :: [integer()], Threshold :: integer()) -> integer().\ncount_components(Nums, Threshold) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_components(nums :: [integer], threshold :: integer) :: integer\n  def count_components(nums, threshold) do\n    \n  end\nend"
+  }
+}

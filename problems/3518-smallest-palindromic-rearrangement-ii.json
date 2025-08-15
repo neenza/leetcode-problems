@@ -1,0 +1,67 @@
+{
+  "title": "Smallest Palindromic Rearrangement II",
+  "problem_id": "3813",
+  "frontend_id": "3518",
+  "difficulty": "Hard",
+  "problem_slug": "smallest-palindromic-rearrangement-ii",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Combinatorics",
+    "Counting"
+  ],
+  "description": "You are given a palindromic string s and an integer k.\nReturn the k-th lexicographically smallest palindromic permutation of s. If there are fewer than k distinct palindromic permutations, return an empty string.\nNote: Different rearrangements that yield the same palindromic string are considered identical and are counted once.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abba\", k = 2\nOutput: \"baab\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aa\", k = 2\nOutput: \"\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bacab\", k = 1\nOutput: \"abcba\"\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 104",
+    "s consists of lowercase English letters.",
+    "s is guaranteed to be palindromic.",
+    "1 <= k <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Only build <code>floor(n / 2)</code> characters (the rest are determined by symmetry).",
+    "Count character frequencies and use half the counts for construction.",
+    "Incrementally choose each character (from smallest to largest) and calculate how many valid arrangements result if that character is chosen at the current index.",
+    "If the count is at least <code>k</code>, fix that character; otherwise, subtract the count from <code>k</code> and try the next candidate.",
+    "Use combinatorics to compute the number of permutations at each step."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestPalindrome(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestPalindrome(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestPalindrome(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestPalindrome(self, s: str, k: int) -> str:\n        ",
+    "c": "char* smallestPalindrome(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestPalindrome(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar smallestPalindrome = function(s, k) {\n    \n};",
+    "typescript": "function smallestPalindrome(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function smallestPalindrome($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestPalindrome(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestPalindrome(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestPalindrome(String s, int k) {\n    \n  }\n}",
+    "golang": "func smallestPalindrome(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef smallest_palindrome(s, k)\n    \nend",
+    "scala": "object Solution {\n    def smallestPalindrome(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_palindrome(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-palindrome s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec smallest_palindrome(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\nsmallest_palindrome(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_palindrome(s :: String.t, k :: integer) :: String.t\n  def smallest_palindrome(s, k) do\n    \n  end\nend"
+  }
+}

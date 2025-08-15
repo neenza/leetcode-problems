@@ -1,0 +1,70 @@
+{
+  "title": "Longest Increasing Path in a Matrix",
+  "problem_id": "329",
+  "frontend_id": "329",
+  "difficulty": "Hard",
+  "problem_slug": "longest-increasing-path-in-a-matrix",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort",
+    "Memoization",
+    "Matrix"
+  ],
+  "description": "Given an m x n integers matrix, return the length of the longest increasing path in matrix.\nFrom each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]\nOutput: 4\nExplanation: The longest increasing path is [1, 2, 6, 9].",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/05/grid1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[3,4,5],[3,2,6],[2,2,1]]\nOutput: 4\nExplanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/27/tmp-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: matrix = [[1]]\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/01/27/tmp-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= m, n <= 200",
+    "0 <= matrix[i][j] <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestIncreasingPath(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestIncreasingPath(int[][] matrix) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestIncreasingPath(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:\n        ",
+    "c": "int longestIncreasingPath(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestIncreasingPath(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number}\n */\nvar longestIncreasingPath = function(matrix) {\n    \n};",
+    "typescript": "function longestIncreasingPath(matrix: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @return Integer\n     */\n    function longestIncreasingPath($matrix) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestIncreasingPath(_ matrix: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestIncreasingPath(matrix: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestIncreasingPath(List<List<int>> matrix) {\n    \n  }\n}",
+    "golang": "func longestIncreasingPath(matrix [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @return {Integer}\ndef longest_increasing_path(matrix)\n    \nend",
+    "scala": "object Solution {\n    def longestIncreasingPath(matrix: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_increasing_path(matrix: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-increasing-path matrix)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec longest_increasing_path(Matrix :: [[integer()]]) -> integer().\nlongest_increasing_path(Matrix) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_increasing_path(matrix :: [[integer]]) :: integer\n  def longest_increasing_path(matrix) do\n    \n  end\nend"
+  }
+}

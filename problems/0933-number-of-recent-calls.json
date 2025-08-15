@@ -1,0 +1,48 @@
+{
+  "title": "Number of Recent Calls",
+  "problem_id": "969",
+  "frontend_id": "933",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-recent-calls",
+  "topics": [
+    "Design",
+    "Queue",
+    "Data Stream"
+  ],
+  "description": "You have a RecentCounter class which counts the number of recent requests within a certain time frame.\nImplement the RecentCounter class:\nIt is guaranteed that every call to ping uses a strictly larger value of t than the previous call.\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"RecentCounter\", \"ping\", \"ping\", \"ping\", \"ping\"]\n[[], [1], [100], [3001], [3002]]\nOutput\n[null, 1, 2, 3, 3]\n\nExplanation\nRecentCounter recentCounter = new RecentCounter();\nrecentCounter.ping(1);     // requests = [1], range is [-2999,1], return 1\nrecentCounter.ping(100);   // requests = [1, 100], range is [-2900,100], return 2\nrecentCounter.ping(3001);  // requests = [1, 100, 3001], range is [1,3001], return 3\nrecentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002], return 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= t <= 109",
+    "Each test case will call ping with strictly increasing values of t.",
+    "At most 104 calls will be made to ping."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class RecentCounter {\npublic:\n    RecentCounter() {\n        \n    }\n    \n    int ping(int t) {\n        \n    }\n};\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * RecentCounter* obj = new RecentCounter();\n * int param_1 = obj->ping(t);\n */",
+    "java": "class RecentCounter {\n\n    public RecentCounter() {\n        \n    }\n    \n    public int ping(int t) {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * RecentCounter obj = new RecentCounter();\n * int param_1 = obj.ping(t);\n */",
+    "python": "class RecentCounter(object):\n\n    def __init__(self):\n        \n\n    def ping(self, t):\n        \"\"\"\n        :type t: int\n        :rtype: int\n        \"\"\"\n        \n\n\n# Your RecentCounter object will be instantiated and called as such:\n# obj = RecentCounter()\n# param_1 = obj.ping(t)",
+    "python3": "class RecentCounter:\n\n    def __init__(self):\n        \n\n    def ping(self, t: int) -> int:\n        \n\n\n# Your RecentCounter object will be instantiated and called as such:\n# obj = RecentCounter()\n# param_1 = obj.ping(t)",
+    "c": "\n\n\ntypedef struct {\n    \n} RecentCounter;\n\n\nRecentCounter* recentCounterCreate() {\n    \n}\n\nint recentCounterPing(RecentCounter* obj, int t) {\n    \n}\n\nvoid recentCounterFree(RecentCounter* obj) {\n    \n}\n\n/**\n * Your RecentCounter struct will be instantiated and called as such:\n * RecentCounter* obj = recentCounterCreate();\n * int param_1 = recentCounterPing(obj, t);\n \n * recentCounterFree(obj);\n*/",
+    "csharp": "public class RecentCounter {\n\n    public RecentCounter() {\n        \n    }\n    \n    public int Ping(int t) {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * RecentCounter obj = new RecentCounter();\n * int param_1 = obj.Ping(t);\n */",
+    "javascript": "\nvar RecentCounter = function() {\n    \n};\n\n/** \n * @param {number} t\n * @return {number}\n */\nRecentCounter.prototype.ping = function(t) {\n    \n};\n\n/** \n * Your RecentCounter object will be instantiated and called as such:\n * var obj = new RecentCounter()\n * var param_1 = obj.ping(t)\n */",
+    "typescript": "class RecentCounter {\n    constructor() {\n        \n    }\n\n    ping(t: number): number {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * var obj = new RecentCounter()\n * var param_1 = obj.ping(t)\n */",
+    "php": "class RecentCounter {\n    /**\n     */\n    function __construct() {\n        \n    }\n  \n    /**\n     * @param Integer $t\n     * @return Integer\n     */\n    function ping($t) {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * $obj = RecentCounter();\n * $ret_1 = $obj->ping($t);\n */",
+    "swift": "\nclass RecentCounter {\n\n    init() {\n        \n    }\n    \n    func ping(_ t: Int) -> Int {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * let obj = RecentCounter()\n * let ret_1: Int = obj.ping(t)\n */",
+    "kotlin": "class RecentCounter() {\n\n    fun ping(t: Int): Int {\n        \n    }\n\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * var obj = RecentCounter()\n * var param_1 = obj.ping(t)\n */",
+    "dart": "class RecentCounter {\n\n  RecentCounter() {\n    \n  }\n  \n  int ping(int t) {\n    \n  }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * RecentCounter obj = RecentCounter();\n * int param1 = obj.ping(t);\n */",
+    "golang": "type RecentCounter struct {\n    \n}\n\n\nfunc Constructor() RecentCounter {\n    \n}\n\n\nfunc (this *RecentCounter) Ping(t int) int {\n    \n}\n\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * obj := Constructor();\n * param_1 := obj.Ping(t);\n */",
+    "ruby": "class RecentCounter\n    def initialize()\n        \n    end\n\n\n=begin\n    :type t: Integer\n    :rtype: Integer\n=end\n    def ping(t)\n        \n    end\n\n\nend\n\n# Your RecentCounter object will be instantiated and called as such:\n# obj = RecentCounter.new()\n# param_1 = obj.ping(t)",
+    "scala": "class RecentCounter() {\n\n    def ping(t: Int): Int = {\n        \n    }\n\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * val obj = new RecentCounter()\n * val param_1 = obj.ping(t)\n */",
+    "rust": "struct RecentCounter {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl RecentCounter {\n\n    fn new() -> Self {\n        \n    }\n    \n    fn ping(&self, t: i32) -> i32 {\n        \n    }\n}\n\n/**\n * Your RecentCounter object will be instantiated and called as such:\n * let obj = RecentCounter::new();\n * let ret_1: i32 = obj.ping(t);\n */",
+    "racket": "(define recent-counter%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; ping : exact-integer? -> exact-integer?\n    (define/public (ping t)\n      )))\n\n;; Your recent-counter% object will be instantiated and called as such:\n;; (define obj (new recent-counter%))\n;; (define param_1 (send obj ping t))",
+    "erlang": "-spec recent_counter_init_() -> any().\nrecent_counter_init_() ->\n  .\n\n-spec recent_counter_ping(T :: integer()) -> integer().\nrecent_counter_ping(T) ->\n  .\n\n\n%% Your functions will be called as such:\n%% recent_counter_init_(),\n%% Param_1 = recent_counter_ping(T),\n\n%% recent_counter_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule RecentCounter do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec ping(t :: integer) :: integer\n  def ping(t) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# RecentCounter.init_()\n# param_1 = RecentCounter.ping(t)\n\n# RecentCounter.init_ will be called before every test case, in which you can do some necessary initializations."
+  }
+}

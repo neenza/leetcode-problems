@@ -1,0 +1,66 @@
+{
+  "title": "Circular Array Loop",
+  "problem_id": "457",
+  "frontend_id": "457",
+  "difficulty": "Medium",
+  "problem_slug": "circular-array-loop",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers"
+  ],
+  "description": "You are playing a game involving a circular array of non-zero integers nums. Each nums[i] denotes the number of indices forward/backward you must move if you are located at index i:\nSince the array is circular, you may assume that moving forward from the last element puts you on the first element, and moving backwards from the first element puts you on the last element.\nA cycle in the array consists of a sequence of indices seq of length k where:\nReturn true if there is a cycle in nums, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Could you solve it in O(n) time complexity and O(1) extra space complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,-1,1,2,2]\nOutput: true\nExplanation: The graph shows how the indices are connected. White nodes are jumping forward, while red is jumping backward.\nWe can see the cycle 0 --> 2 --> 3 --> 0 --> ..., and all of its nodes are white (jumping in the same direction).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/09/01/img1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,-2,-3,-4,-5,6]\nOutput: false\nExplanation: The graph shows how the indices are connected. White nodes are jumping forward, while red is jumping backward.\nThe only cycle is of size 1, so we return false.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/09/01/img2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,-1,5,1,4]\nOutput: true\nExplanation: The graph shows how the indices are connected. White nodes are jumping forward, while red is jumping backward.\nWe can see the cycle 0 --> 1 --> 0 --> ..., and while it is of size > 1, it has a node jumping forward and a node jumping backward, so it is not a cycle.\nWe can see the cycle 3 --> 4 --> 3 --> ..., and all of its nodes are white (jumping in the same direction).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/09/01/img3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 5000",
+    "-1000 <= nums[i] <= 1000",
+    "nums[i] != 0"
+  ],
+  "follow_ups": [
+    "Could you solve it in O(n) time complexity and O(1) extra space complexity?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool circularArrayLoop(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean circularArrayLoop(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def circularArrayLoop(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def circularArrayLoop(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool circularArrayLoop(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CircularArrayLoop(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar circularArrayLoop = function(nums) {\n    \n};",
+    "typescript": "function circularArrayLoop(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function circularArrayLoop($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func circularArrayLoop(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun circularArrayLoop(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool circularArrayLoop(List<int> nums) {\n    \n  }\n}",
+    "golang": "func circularArrayLoop(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef circular_array_loop(nums)\n    \nend",
+    "scala": "object Solution {\n    def circularArrayLoop(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn circular_array_loop(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (circular-array-loop nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec circular_array_loop(Nums :: [integer()]) -> boolean().\ncircular_array_loop(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec circular_array_loop(nums :: [integer]) :: boolean\n  def circular_array_loop(nums) do\n    \n  end\nend"
+  }
+}

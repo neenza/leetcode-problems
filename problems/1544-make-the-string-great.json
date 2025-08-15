@@ -1,0 +1,59 @@
+{
+  "title": "Make The String Great",
+  "problem_id": "1666",
+  "frontend_id": "1544",
+  "difficulty": "Easy",
+  "problem_slug": "make-the-string-great",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "Given a string s of lower and upper case English letters.\nA good string is a string which doesn't have two adjacent characters s[i] and s[i + 1] where:\nTo make the string good, you can choose two adjacent characters that make the string bad and remove them. You can keep doing this until the string becomes good.\nReturn the string after making it good. The answer is guaranteed to be unique under the given constraints.\nNotice that an empty string is also good.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"leEeetcode\"\nOutput: \"leetcode\"\nExplanation: In the first step, either you choose i = 1 or i = 2, both will result \"leEeetcode\" to be reduced to \"leetcode\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abBAcC\"\nOutput: \"\"\nExplanation: We have many possible scenarios, and all lead to the same answer. For example:\n\"abBAcC\" --> \"aAcC\" --> \"cC\" --> \"\"\n\"abBAcC\" --> \"abBA\" --> \"aA\" --> \"\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"s\"\nOutput: \"s\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s contains only lower and upper case English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The order you choose 2 characters to remove doesn't matter.",
+    "Keep applying the mentioned step to s till the length of the string is not changed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string makeGood(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String makeGood(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeGood(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeGood(self, s: str) -> str:\n        ",
+    "c": "char* makeGood(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MakeGood(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar makeGood = function(s) {\n    \n};",
+    "typescript": "function makeGood(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function makeGood($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeGood(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeGood(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String makeGood(String s) {\n    \n  }\n}",
+    "golang": "func makeGood(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef make_good(s)\n    \nend",
+    "scala": "object Solution {\n    def makeGood(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_good(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (make-good s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec make_good(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_good(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_good(s :: String.t) :: String.t\n  def make_good(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Matrix Similarity After Cyclic Shifts",
+  "problem_id": "3215",
+  "frontend_id": "2946",
+  "difficulty": "Easy",
+  "problem_slug": "matrix-similarity-after-cyclic-shifts",
+  "topics": [
+    "Array",
+    "Math",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given an m x n integer matrix mat and an integer k. The matrix rows are 0-indexed.\nThe following proccess happens k times:\nReturn true if the final modified matrix after k steps is identical to the original matrix, and false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 4\nOutput: false\nExplanation:\nIn each step left shift is applied to rows 0 and 2 (even indices), and right shift to row 1 (odd index).\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/19/t1-2.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[1,2,1,2],[5,5,5,5],[6,3,6,3]], k = 2\nOutput: true\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/19/t1-3.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: mat = [[2,2],[2,2]], k = 3\nOutput: true\nExplanation:\nAs all the values are equal in the matrix, even after performing cyclic shifts the matrix will remain the same.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= mat.length <= 25",
+    "1 <= mat[i].length <= 25",
+    "1 <= mat[i][j] <= 25",
+    "1 <= k <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can reduce <code>k</code> shifts to <code>(k % n)</code> shifts as after <code>n</code> shifts the matrix will become similar to the initial matrix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool areSimilar(vector<vector<int>>& mat, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean areSimilar(int[][] mat, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def areSimilar(self, mat, k):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def areSimilar(self, mat: List[List[int]], k: int) -> bool:\n        ",
+    "c": "bool areSimilar(int** mat, int matSize, int* matColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool AreSimilar(int[][] mat, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} k\n * @return {boolean}\n */\nvar areSimilar = function(mat, k) {\n    \n};",
+    "typescript": "function areSimilar(mat: number[][], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @param Integer $k\n     * @return Boolean\n     */\n    function areSimilar($mat, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func areSimilar(_ mat: [[Int]], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun areSimilar(mat: Array<IntArray>, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool areSimilar(List<List<int>> mat, int k) {\n    \n  }\n}",
+    "golang": "func areSimilar(mat [][]int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @param {Integer} k\n# @return {Boolean}\ndef are_similar(mat, k)\n    \nend",
+    "scala": "object Solution {\n    def areSimilar(mat: Array[Array[Int]], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn are_similar(mat: Vec<Vec<i32>>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (are-similar mat k)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
+    "erlang": "-spec are_similar(Mat :: [[integer()]], K :: integer()) -> boolean().\nare_similar(Mat, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec are_similar(mat :: [[integer]], k :: integer) :: boolean\n  def are_similar(mat, k) do\n    \n  end\nend"
+  }
+}

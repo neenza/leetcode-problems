@@ -1,0 +1,56 @@
+{
+  "title": "Minimum Absolute Difference Queries",
+  "problem_id": "2034",
+  "frontend_id": "1906",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-absolute-difference-queries",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "The minimum absolute difference of an array a is defined as the minimum value of |a[i] - a[j]|, where 0 <= i < j < a.length and a[i] != a[j]. If all elements of a are the same, the minimum absolute difference is -1.\nYou are given an integer array nums and the array queries where queries[i] = [li, ri]. For each query i, compute the minimum absolute difference of the subarray nums[li...ri] containing the elements of nums between the 0-based indices li and ri (inclusive).\nReturn an array ans where ans[i] is the answer to the ith query.\nA subarray is a contiguous sequence of elements in an array.\nThe value of |x| is defined as:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,4,8], queries = [[0,1],[1,2],[2,3],[0,3]]\nOutput: [2,1,4,1]\nExplanation: The queries are processed as follows:\n- queries[0] = [0,1]: The subarray is [1,3] and the minimum absolute difference is |1-3| = 2.\n- queries[1] = [1,2]: The subarray is [3,4] and the minimum absolute difference is |3-4| = 1.\n- queries[2] = [2,3]: The subarray is [4,8] and the minimum absolute difference is |4-8| = 4.\n- queries[3] = [0,3]: The subarray is [1,3,4,8] and the minimum absolute difference is |3-4| = 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,5,2,2,7,10], queries = [[2,3],[0,2],[0,5],[3,5]]\nOutput: [-1,1,1,3]\nExplanation: The queries are processed as follows:\n- queries[0] = [2,3]: The subarray is [2,2] and the minimum absolute difference is -1 because all the\n  elements are the same.\n- queries[1] = [0,2]: The subarray is [4,5,2] and the minimum absolute difference is |4-5| = 1.\n- queries[2] = [0,5]: The subarray is [4,5,2,2,7,10] and the minimum absolute difference is |4-5| = 1.\n- queries[3] = [3,5]: The subarray is [2,7,10] and the minimum absolute difference is |7-10| = 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 105",
+    "1 <= nums[i] <= 100",
+    "1 <= queries.length <= 2 * 104",
+    "0 <= li < ri < nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How does the maximum value being 100 help us?",
+    "How can we tell if a number exists in a given range?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minDifference(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minDifference(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minDifference(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minDifference(self, nums: List[int], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minDifference(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinDifference(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar minDifference = function(nums, queries) {\n    \n};",
+    "typescript": "function minDifference(nums: number[], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function minDifference($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minDifference(_ nums: [Int], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minDifference(nums: IntArray, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minDifference(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func minDifference(nums []int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef min_difference(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def minDifference(nums: Array[Int], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_difference(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (min-difference nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec min_difference(Nums :: [integer()], Queries :: [[integer()]]) -> [integer()].\nmin_difference(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_difference(nums :: [integer], queries :: [[integer]]) :: [integer]\n  def min_difference(nums, queries) do\n    \n  end\nend"
+  }
+}

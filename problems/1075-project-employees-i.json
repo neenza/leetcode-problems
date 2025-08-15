@@ -1,0 +1,39 @@
+{
+  "title": "Project Employees I",
+  "problem_id": "1161",
+  "frontend_id": "1075",
+  "difficulty": "Easy",
+  "problem_slug": "project-employees-i",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Project\nTable: Employee\nWrite an SQL query that reports the average experience years of all the employees for each project, rounded to 2 digits.\nReturn the result table in any order.\nThe query result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| project_id  | int     |\n| employee_id | int     |\n+-------------+---------+\n(project_id, employee_id) is the primary key of this table.\nemployee_id is a foreign key to Employee table.\nEach row of this table indicates that the employee with employee_id is working on the project with project_id.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| employee_id      | int     |\n| name             | varchar |\n| experience_years | int     |\n+------------------+---------+\nemployee_id is the primary key of this table. It's guaranteed that experience_years is not NULL.\nEach row of this table contains information about one employee.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nProject table:\n+-------------+-------------+\n| project_id  | employee_id |\n+-------------+-------------+\n| 1           | 1           |\n| 1           | 2           |\n| 1           | 3           |\n| 2           | 1           |\n| 2           | 4           |\n+-------------+-------------+\nEmployee table:\n+-------------+--------+------------------+\n| employee_id | name   | experience_years |\n+-------------+--------+------------------+\n| 1           | Khaled | 3                |\n| 2           | Ali    | 2                |\n| 3           | John   | 1                |\n| 4           | Doe    | 2                |\n+-------------+--------+------------------+\nOutput: \n+-------------+---------------+\n| project_id  | average_years |\n+-------------+---------------+\n| 1           | 2.00          |\n| 2           | 2.50          |\n+-------------+---------------+\nExplanation: The average experience years for the first project is (3 + 2 + 1) / 3 = 2.00 and for the second project is (3 + 2) / 2 = 2.50",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef project_employees_i(project: pd.DataFrame, employee: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC]\n\n# Solution\n\n---\n\n## pandas\n\n### Approach: Merge and Calculate\n\n#### Intuition\n\nSince the project assignment and employee information are stored in two separate DataFrames, this approach starts by merging them on the shared column `employee_id` so we can later calculate the average experience years for each project. \n\n```python\ndf = project.merge(employee, on='employee_id')\n```\n\nWe now have the information we need to to calculate the average experience years saved in the same DataFrame. \n\n| project_id | employee_id | name   | experience_years |\n| ---------- | ----------- | ------ | ---------------- |\n| 1          | 1           | Khaled | 3                |\n| 2          | 1           | Khaled | 3                |\n| 1          | 2           | Ali    | 2                |\n| 1          | 3           | John   | 1                |\n| 2          | 4           | Doe    | 2                |\n\nWe can now calculate the average `experience_years` for each project using `mean()`. Since more than one employee is working on the same project, the aggregate average is grouped at the `project_id` level using `groupby()`.\n\n```python\ndf = df.groupby('project_id', as_index=False)['experience_years'].mean()\n```\n\nBelow is the output from this step.\n\n| project_id | experience_years |\n| ---------- | ---------------- |\n| 1          | 2                |\n| 2          | 2.5              |\n\nTo get the final output, we need to rename the column from `experience_years` to `average_years` and round the result to 2 decimal places using `round()`.\n\n```python\nreturn df.rename(columns={'experience_years': 'average_years'}).round(2)\n```\n\n#### Implementation---\n\n## Database\n\n### Approach: JOIN and Calculate\n\n#### Intuition\n\nSince the project assignment and employee information are stored in two separate tables, we need to join the table `Project` to `Employee` to calculate the average `experience_years` of all the employees associated with each project. Since multiple employees are working on the same project, the aggregate average `experience_years` is grouped at the `project_id` level. The result is rounded to 2 digits using the function `ROUND()` and renamed as `average_years` for the final output. \n\n#### Implementation\n\n```mysql []\nSELECT \n    project_id,\n    ROUND(AVG(experience_years), 2) AS average_years\nFROM \n    Project p\nJOIN \n    Employee e\nON \n    p.employee_id = e.employee_id\nGROUP BY \n    project_id\n```"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Search a 2D Matrix II",
+  "problem_id": "240",
+  "frontend_id": "240",
+  "difficulty": "Medium",
+  "problem_slug": "search-a-2d-matrix-ii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Matrix"
+  ],
+  "description": "Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/24/searchgrid2.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/24/searchgrid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == matrix.length",
+    "n == matrix[i].length",
+    "1 <= n, m <= 300",
+    "-109 <= matrix[i][j] <= 109",
+    "All the integers in each row are sorted in ascending order.",
+    "All the integers in each column are sorted in ascending order.",
+    "-109 <= target <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:\n        ",
+    "c": "\n\nbool searchMatrix(int** matrix, int matrixSize, int* matrixColSize, int target){\n\n}",
+    "csharp": "public class Solution {\n    public bool SearchMatrix(int[][] matrix, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} target\n * @return {boolean}\n */\nvar searchMatrix = function(matrix, target) {\n    \n};",
+    "typescript": "function searchMatrix(matrix: number[][], target: number): boolean {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $matrix\n     * @param Integer $target\n     * @return Boolean\n     */\n    function searchMatrix($matrix, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {\n        \n    }\n}",
+    "golang": "func searchMatrix(matrix [][]int, target int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} matrix\n# @param {Integer} target\n# @return {Boolean}\ndef search_matrix(matrix, target)\n    \nend",
+    "scala": "object Solution {\n    def searchMatrix(matrix: Array[Array[Int]], target: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {\n        \n    }\n}"
+  }
+}

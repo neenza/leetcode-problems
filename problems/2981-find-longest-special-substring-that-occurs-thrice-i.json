@@ -1,0 +1,63 @@
+{
+  "title": "Find Longest Special Substring That Occurs Thrice I",
+  "problem_id": "3267",
+  "frontend_id": "2981",
+  "difficulty": "Medium",
+  "problem_slug": "find-longest-special-substring-that-occurs-thrice-i",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Sliding Window",
+    "Counting"
+  ],
+  "description": "You are given a string s that consists of lowercase English letters.\nA string is called special if it is made up of only a single character. For example, the string \"abc\" is not special, whereas the strings \"ddd\", \"zz\", and \"f\" are special.\nReturn the length of the longest special substring of s which occurs at least thrice, or -1 if no special substring occurs at least thrice.\nA substring is a contiguous non-empty sequence of characters within a string.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aaaa\"\nOutput: 2\nExplanation: The longest special substring which occurs thrice is \"aa\": substrings \"aaaa\", \"aaaa\", and \"aaaa\".\nIt can be shown that the maximum length achievable is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcdef\"\nOutput: -1\nExplanation: There exists no special substring which occurs at least thrice. Hence return -1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcaba\"\nOutput: 1\nExplanation: The longest special substring which occurs thrice is \"a\": substrings \"abcaba\", \"abcaba\", and \"abcaba\".\nIt can be shown that the maximum length achievable is 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 50",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small.",
+    "Brute force checking all substrings."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumLength(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumLength(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumLength(self, s: str) -> int:\n        ",
+    "c": "int maximumLength(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumLength(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maximumLength = function(s) {\n    \n};",
+    "typescript": "function maximumLength(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function maximumLength($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumLength(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumLength(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumLength(String s) {\n    \n  }\n}",
+    "golang": "func maximumLength(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef maximum_length(s)\n    \nend",
+    "scala": "object Solution {\n    def maximumLength(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_length(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-length s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec maximum_length(S :: unicode:unicode_binary()) -> integer().\nmaximum_length(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_length(s :: String.t) :: integer\n  def maximum_length(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Overview\n\nWe are given a string `s` consisting of lowercase letters. Our task is to return the length of the longest substring of `s` that has at least 3 of the same letters - we'll call this a special substring. If no such special substring exists, we should return -1.\n\n> A substring is a contiguous, non-empty sequence of characters within a string.\n\nThe length of the string `s` can be at most 50. Therefore, we can use brute force techniques to solve this problem. After solving this one, you might want to try the [harder version](https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-ii/description/) of the problem.\n\n---\n\n### Approach 1: Brute-Force Approach\n\n#### Intuition   \n\nA logical approach would be to generate all substrings of the string `s` and check if each substring is special or not.\n\nTo generate all substrings, we can use two loop pointers: `start` and `end`. The `start` pointer indicates the starting index of the substring, and the `end` pointer indicates the ending index. We will loop through all possible values of `start` and `end` where `end` is greater than `start`. For each `start` and `end` grouping, we will extract the substring and store it in a string (say `currString`).\n\nSince appending a character to the end of a list or string takes constant time, we can avoid using another loop to generate the substring. Instead, we will add the character at the `end` index to `currString`. While doing this, we can check if the newly added character maintains the \"special\" property. If the newly added character is not equal to the previous character, we can stop processing this substring further.\n\nFor every valid substring, we will increment its frequency in a map, where the substring is the key and its frequency is the value. After processing all substrings, we can find the longest substring in the map that has a frequency of at least three and return its length as the result.\n\n![fig](../Figures/2981/image1.png)\n\n#### Algorithm\n\n1. Create a map `count` to store the frequency of all substrings.\n2. Iterate over the string `s` using two nested loops:\n    - Outer loop with index `start` from 0 to the length of the string:\n        - Create a string `currString` to store the substrings.\n        - Inner loop with index `end` starting from `start` to the length of the string:\n            - If the current substring is empty or the last character matches the current character, append the character to `currString` and increment its frequency in `count`.\n            - If the current character does not match the last character, stop processing this substring.\n3. Initialize a variable `ans` to store the length of the longest substring with a frequency of at least 3.\n4. Iterate over the map `count`:\n    - For each substring, if its frequency is at least 3 and its length is greater than `ans`, update `ans` with the length of the substring.\n5. If no substring with the required frequency is found, return -1. Otherwise, return `ans`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string `s`.\n\n- Time Complexity: $O(n^3)$\n\n    The algorithm generates all substrings of the input string `s` using two nested loops. The outer loop runs `n` times. For each iteration of the outer loop, the inner loop iterates `n - i` times, where `i` is the index of the outer loop. This means the total number of iterations is the sum of the first `n` natural numbers, which equals $n \\cdot (n+1) / 2$. Therefore, the time complexity for generating all substrings is $O(n^2)$.\n\n    For each substring, the algorithm checks and updates the frequency in a map, which takes $O(size)$ time, where `size` denotes the length of the substring added in the map. \n    \n    Therefore, the overall time complexity of the algorithm is given by O(n^3). \n\n- Space complexity: $O(n^2)$\n\n    The algorithm uses a temporary string, `currString`, to store substrings. The size of `currString` varies, but in the worst case, it can hold the entire string, contributing $O(n)$ additional space. Since the string `currString` is initialized `n` times, the total space is given by $O(n^2)$.\n\n    The algorithm uses a map to store all unique substrings and their frequencies. In the worst case, such as when all characters in the string are identical, the total number of substrings can go up to $n \\cdot (n+1) / 2$. Additionally, each substring requires space proportional to its length, leading to an overall space requirement of $O(n^2)$ in the worst case. \n    \n    Therefore, the total space complexity of the algorithm is $O(n^2)$.\n\n---\n\n### Approach 2: Optimized Hashing \n\n#### Intuition   \n\nIn the previous approach, we stored substrings in a map with their frequency. Since all special substrings consist of equal characters, we can optimize by storing them as a pair `{char character, int substringLength}`.\n\nThis optimization improves the algorithm because adding a string to the map takes `O(substringLength)` time. By storing `{character, substringLength}` as a pair, which behaves like an array of length 2, insertion into the map now takes constant time.\n\nAfter populating the map with these pairs, we find the maximum `substringLength` value for any pair with a frequency of at least 3 and return it as the result.\n\n> Note: A frequency array can also be used in this scenario. It is a good choice as it provides an efficient way to count and track occurrences, particularly when the range of values is limited.\n\n#### Algorithm\n\n1. Create a map `count` of type `map, int>` to store the frequency of substrings, where each key is a pair of a character and the substring length, and the value is its frequency.\n2. Use an outer loop with index `start` from `0` to the length of the string (`s.length()`):\n   - Initialize `substringLength` to `0` to track the length of the current substring of repeated characters.\n   - Store the current character `character = s[start]`.\n3. Use an inner loop with index `end` starting from `start` and iterating to the end of the string (`s.length()`):\n   - If the character `s[end]` matches `character`:\n     - Increment `substringLength`.\n     - Update the frequency of the pair `{character, substringLength}` in the `count` map.\n   - If the character `s[end]` does not match `c`, break the loop.\n4. Initialize a variable `ans` to `-1`.\n5. Iterate over the entries in the `count` map:\n   - For each entry, check if its frequency is at least 3 and its substring length is greater than `ans`. If both conditions are true, update `ans` with the length of the substring.\n6. Return `ans`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string `s`.\n\n- Time Complexity: $O(n^2)$\n\n    The algorithm generates all substrings of the input string `s` using two nested loops. The outer loop runs `n` times. For each iteration of the outer loop, the inner loop iterates `n - end` times, where `end` is the index of the outer loop. This means the total number of iterations is the sum of the first `n` natural numbers, which equals $n \\cdot (n+1) / 2$. Therefore, the time complexity for generating all substrings is $O(n^2)$.\n\n    For each substring, the algorithm checks and updates the frequency of the pair in a map, which takes $O(1)$ time. \n    \n    Therefore, the overall time complexity of the algorithm is given by O(n^2). \n\n- Space complexity: $O(n^2)$\n\n    The algorithm uses a map to store all unique substrings and their frequencies. In the worst case, such as when all characters in the string are identical, the total number of substrings can go up to $n \\cdot (n+1) / 2$. \n    \n    Additionally, each substring requires space proportional to its length, leading to an overall space requirement of $O(n^2)$ in the worst case. \n    \n    Therefore, the total space complexity of the algorithm is $O(n^2)$.\n\n---\n\n### Further Thoughts: \n\nThis problem has solutions with time complexities of $O(n^3)$ and $O(n^2)$, but there is an even more efficient solution that runs in $O(n)$ time.\n\nThe single pass solution will be the focus of the second part of this [problem](https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-ii/), which is designed almost the same but with tighter constraints to encourage further optimization. We now recommend attempting to solve the second part using the single pass approach.\n\n---"
+}

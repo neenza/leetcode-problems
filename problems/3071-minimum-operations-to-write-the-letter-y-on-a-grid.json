@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Operations to Write the Letter Y on a Grid",
+  "problem_id": "3335",
+  "frontend_id": "3071",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-write-the-letter-y-on-a-grid",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Matrix",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed n x n grid where n is odd, and grid[r][c] is 0, 1, or 2.\nWe say that a cell belongs to the Letter Y if it belongs to one of the following:\nThe Letter Y is written on the grid if and only if:\nReturn the minimum number of operations needed to write the letter Y on the grid given that in one operation you can change the value at any cell to 0, 1, or 2.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2,2],[1,1,0],[0,1,0]]\nOutput: 3\nExplanation: We can write Y on the grid by applying the changes highlighted in blue in the image above. After the operations, all cells that belong to Y, denoted in bold, have the same value of 1 while those that do not belong to Y are equal to 0.\nIt can be shown that 3 is the minimum number of operations needed to write Y on the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/22/y2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1,0,1,0],[2,1,0,1,2],[2,2,2,0,1],[2,2,2,2,2],[2,1,2,2,2]]\nOutput: 12\nExplanation: We can write Y on the grid by applying the changes highlighted in blue in the image above. After the operations, all cells that belong to Y, denoted in bold, have the same value of 0 while those that do not belong to Y are equal to 2. \nIt can be shown that 12 is the minimum number of operations needed to write Y on the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/01/22/y3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 49",
+    "n == grid.length == grid[i].length",
+    "0 <= grid[i][j] <= 2",
+    "n is odd."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperationsToWriteY(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperationsToWriteY(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperationsToWriteY(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperationsToWriteY(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumOperationsToWriteY(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperationsToWriteY(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumOperationsToWriteY = function(grid) {\n    \n};",
+    "typescript": "function minimumOperationsToWriteY(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumOperationsToWriteY($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperationsToWriteY(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperationsToWriteY(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperationsToWriteY(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumOperationsToWriteY(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_operations_to_write_y(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperationsToWriteY(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations_to_write_y(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations-to-write-y grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations_to_write_y(Grid :: [[integer()]]) -> integer().\nminimum_operations_to_write_y(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations_to_write_y(grid :: [[integer]]) :: integer\n  def minimum_operations_to_write_y(grid) do\n    \n  end\nend"
+  }
+}

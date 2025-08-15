@@ -1,0 +1,52 @@
+{
+  "title": "Number of Changing Keys",
+  "problem_id": "3312",
+  "frontend_id": "3019",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-changing-keys",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a 0-indexed string s typed by a user. Changing a key is defined as using a key different from the last used key. For example, s = \"ab\" has a change of a key while s = \"bBBb\" does not have any.\nReturn the number of times the user had to change the key.\nNote: Modifiers like shift or caps lock won't be counted in changing the key that is if a user typed the letter 'a' and then the letter 'A' then it will not be considered as a changing of key.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aAbBcC\"\nOutput: 2\nExplanation: \nFrom s[0] = 'a' to s[1] = 'A', there is no change of key as caps lock or shift is not counted.\nFrom s[1] = 'A' to s[2] = 'b', there is a change of key.\nFrom s[2] = 'b' to s[3] = 'B', there is no change of key as caps lock or shift is not counted.\nFrom s[3] = 'B' to s[4] = 'c', there is a change of key.\nFrom s[4] = 'c' to s[5] = 'C', there is no change of key as caps lock or shift is not counted.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"AaAaAaaA\"\nOutput: 0\nExplanation: There is no change of key since only the letters 'a' and 'A' are pressed which does not require change of key.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists of only upper case and lower case English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Change all the characters to lowercase and then return the number of indices where the character does not match with the last index character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countKeyChanges(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countKeyChanges(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countKeyChanges(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countKeyChanges(self, s: str) -> int:\n        ",
+    "c": "int countKeyChanges(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountKeyChanges(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countKeyChanges = function(s) {\n    \n};",
+    "typescript": "function countKeyChanges(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countKeyChanges($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countKeyChanges(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countKeyChanges(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countKeyChanges(String s) {\n    \n  }\n}",
+    "golang": "func countKeyChanges(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_key_changes(s)\n    \nend",
+    "scala": "object Solution {\n    def countKeyChanges(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_key_changes(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-key-changes s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_key_changes(S :: unicode:unicode_binary()) -> integer().\ncount_key_changes(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_key_changes(s :: String.t) :: integer\n  def count_key_changes(s) do\n    \n  end\nend"
+  }
+}

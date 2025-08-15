@@ -1,0 +1,69 @@
+{
+  "title": "Minimum Time to Visit Disappearing Nodes",
+  "problem_id": "3389",
+  "frontend_id": "3112",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-visit-disappearing-nodes",
+  "topics": [
+    "Array",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Shortest Path"
+  ],
+  "description": "There is an undirected graph of n nodes. You are given a 2D array edges, where edges[i] = [ui, vi, lengthi] describes an edge between node ui and node vi with a traversal time of lengthi units.\nAdditionally, you are given an array disappear, where disappear[i] denotes the time when the node i disappears from the graph and you won't be able to visit it.\nNote that the graph might be disconnected and might contain multiple edges.\nReturn the array answer, with answer[i] denoting the minimum units of time required to reach node i from node 0. If node i is unreachable from node 0 then answer[i] is -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1,2],[1,2,1],[0,2,4]], disappear = [1,1,5]\nOutput: [0,-1,4]\nExplanation:\n\nWe are starting our journey from node 0, and our goal is to find the minimum time required to reach each node before it disappears.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/08/11/output-onlinepngtools.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1,2],[1,2,1],[0,2,4]], disappear = [1,3,5]\nOutput: [0,2,3]\nExplanation:\n\nWe are starting our journey from node 0, and our goal is to find the minimum time required to reach each node before it disappears.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/08/11/output-onlinepngtools-1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, edges = [[0,1,1]], disappear = [1,1]\nOutput: [0,-1]\nExplanation:\nExactly when we reach node 1, it disappears.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 5 * 104",
+    "0 <= edges.length <= 105",
+    "edges[i] == [ui, vi, lengthi]",
+    "0 <= ui, vi <= n - 1",
+    "1 <= lengthi <= 105",
+    "disappear.length == n",
+    "1 <= disappear[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use Dijkstra’s algorithm, but only visit nodes if you can reach them before disappearance."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minimumTime(int n, vector<vector<int>>& edges, vector<int>& disappear) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minimumTime(int n, int[][] edges, int[] disappear) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTime(self, n, edges, disappear):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type disappear: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTime(self, n: int, edges: List[List[int]], disappear: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minimumTime(int n, int** edges, int edgesSize, int* edgesColSize, int* disappear, int disappearSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinimumTime(int n, int[][] edges, int[] disappear) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[]} disappear\n * @return {number[]}\n */\nvar minimumTime = function(n, edges, disappear) {\n    \n};",
+    "typescript": "function minimumTime(n: number, edges: number[][], disappear: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[] $disappear\n     * @return Integer[]\n     */\n    function minimumTime($n, $edges, $disappear) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTime(_ n: Int, _ edges: [[Int]], _ disappear: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTime(n: Int, edges: Array<IntArray>, disappear: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minimumTime(int n, List<List<int>> edges, List<int> disappear) {\n    \n  }\n}",
+    "golang": "func minimumTime(n int, edges [][]int, disappear []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[]} disappear\n# @return {Integer[]}\ndef minimum_time(n, edges, disappear)\n    \nend",
+    "scala": "object Solution {\n    def minimumTime(n: Int, edges: Array[Array[Int]], disappear: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_time(n: i32, edges: Vec<Vec<i32>>, disappear: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-time n edges disappear)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec minimum_time(N :: integer(), Edges :: [[integer()]], Disappear :: [integer()]) -> [integer()].\nminimum_time(N, Edges, Disappear) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_time(n :: integer, edges :: [[integer]], disappear :: [integer]) :: [integer]\n  def minimum_time(n, edges, disappear) do\n    \n  end\nend"
+  }
+}

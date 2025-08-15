@@ -1,0 +1,59 @@
+{
+  "title": "Check if Matrix Is X-Matrix",
+  "problem_id": "2398",
+  "frontend_id": "2319",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-matrix-is-x-matrix",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "A square matrix is said to be an X-Matrix if both of the following conditions hold:\nGiven a 2D integer array grid of size n x n representing a square matrix, return true if grid is an X-Matrix. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]\nOutput: true\nExplanation: Refer to the diagram above. \nAn X-Matrix should have the green elements (diagonals) be non-zero and the red elements be 0.\nThus, grid is an X-Matrix.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/05/03/ex1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[5,7,0],[0,3,1],[0,5,0]]\nOutput: false\nExplanation: Refer to the diagram above.\nAn X-Matrix should have the green elements (diagonals) be non-zero and the red elements be 0.\nThus, grid is not an X-Matrix.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/05/03/ex2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "3 <= n <= 100",
+    "0 <= grid[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Assuming a 0-indexed matrix, for a given cell on row i and column j, it is in a diagonal if and only if i == j or i == n - 1 - j.",
+    "We can then iterate through the elements in the matrix to check if all the elements in the diagonals are non-zero and all other elements are zero."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkXMatrix(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkXMatrix(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkXMatrix(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkXMatrix(self, grid: List[List[int]]) -> bool:\n        ",
+    "c": "bool checkXMatrix(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckXMatrix(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar checkXMatrix = function(grid) {\n    \n};",
+    "typescript": "function checkXMatrix(grid: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Boolean\n     */\n    function checkXMatrix($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkXMatrix(_ grid: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkXMatrix(grid: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkXMatrix(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func checkXMatrix(grid [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Boolean}\ndef check_x_matrix(grid)\n    \nend",
+    "scala": "object Solution {\n    def checkXMatrix(grid: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_x_matrix(grid: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-x-matrix grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec check_x_matrix(Grid :: [[integer()]]) -> boolean().\ncheck_x_matrix(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_x_matrix(grid :: [[integer]]) :: boolean\n  def check_x_matrix(grid) do\n    \n  end\nend"
+  }
+}

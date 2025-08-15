@@ -1,0 +1,60 @@
+{
+  "title": "Cherry Pickup II",
+  "problem_id": "1559",
+  "frontend_id": "1463",
+  "difficulty": "Hard",
+  "problem_slug": "cherry-pickup-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given a rows x cols matrix grid representing a field of cherries where grid[i][j] represents the number of cherries that you can collect from the (i, j) cell.\nYou have two robots that can collect cherries for you:\nReturn the maximum number of cherries collection using both robots by following the rules below:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[3,1,1],[2,5,1],[1,5,5],[2,1,1]]\nOutput: 24\nExplanation: Path of robot #1 and #2 are described in color green and blue respectively.\nCherries taken by Robot #1, (3 + 2 + 5 + 2) = 12.\nCherries taken by Robot #2, (1 + 5 + 5 + 1) = 12.\nTotal of cherries: 12 + 12 = 24.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/04/29/sample_1_1802.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]\nOutput: 28\nExplanation: Path of robot #1 and #2 are described in color green and blue respectively.\nCherries taken by Robot #1, (1 + 9 + 5 + 2) = 17.\nCherries taken by Robot #2, (1 + 3 + 4 + 3) = 11.\nTotal of cherries: 17 + 11 = 28.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/04/23/sample_2_1802.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "rows == grid.length",
+    "cols == grid[i].length",
+    "2 <= rows, cols <= 70",
+    "0 <= grid[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming, define DP[i][j][k]: The maximum cherries that both robots can take  starting on the ith row, and column j and k of Robot 1 and 2 respectively."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int cherryPickup(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int cherryPickup(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def cherryPickup(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def cherryPickup(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int cherryPickup(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CherryPickup(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar cherryPickup = function(grid) {\n    \n};",
+    "typescript": "function cherryPickup(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function cherryPickup($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func cherryPickup(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun cherryPickup(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int cherryPickup(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func cherryPickup(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef cherry_pickup(grid)\n    \nend",
+    "scala": "object Solution {\n    def cherryPickup(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn cherry_pickup(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (cherry-pickup grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec cherry_pickup(Grid :: [[integer()]]) -> integer().\ncherry_pickup(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec cherry_pickup(grid :: [[integer]]) :: integer\n  def cherry_pickup(grid) do\n    \n  end\nend"
+  }
+}

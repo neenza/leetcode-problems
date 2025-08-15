@@ -1,0 +1,61 @@
+{
+  "title": "Check if Move is Legal",
+  "problem_id": "2080",
+  "frontend_id": "1958",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-move-is-legal",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ],
+  "description": "You are given a 0-indexed 8 x 8 grid board, where board[r][c] represents the cell (r, c) on a game board. On the board, free cells are represented by '.', white cells are represented by 'W', and black cells are represented by 'B'.\nEach move in this game consists of choosing a free cell and changing it to the color you are playing as (either white or black). However, a move is only legal if, after changing it, the cell becomes the endpoint of a good line (horizontal, vertical, or diagonal).\nA good line is a line of three or more cells (including the endpoints) where the endpoints of the line are one color, and the remaining cells in the middle are the opposite color (no cells in the line are free). You can find examples for good lines in the figure below:\nGiven two integers rMove and cMove and a character color representing the color you are playing as (white or black), return true if changing cell (rMove, cMove) to color color is a legal move, or false if it is not legal.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\".\",\".\",\".\",\"B\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"W\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"W\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"W\",\".\",\".\",\".\",\".\"],[\"W\",\"B\",\"B\",\".\",\"W\",\"W\",\"W\",\"B\"],[\".\",\".\",\".\",\"B\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"B\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"W\",\".\",\".\",\".\",\".\"]], rMove = 4, cMove = 3, color = \"B\"\nOutput: true\nExplanation: '.', 'W', and 'B' are represented by the colors blue, white, and black respectively, and cell (rMove, cMove) is marked with an 'X'.\nThe two good lines with the chosen cell as an endpoint are annotated above with the red rectangles.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/10/grid11.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\"B\",\".\",\".\",\"W\",\".\",\".\",\".\"],[\".\",\".\",\"W\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"W\",\"B\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\"B\",\"W\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\"W\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\"B\"]], rMove = 4, cMove = 4, color = \"W\"\nOutput: false\nExplanation: While there are good lines with the chosen cell as a middle cell, there are no good lines with the chosen cell as an endpoint.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/10/grid2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "board.length == board[r].length == 8",
+    "0 <= rMove, cMove < 8",
+    "board[rMove][cMove] == '.'",
+    "color is either 'B' or 'W'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each line starting at the given cell check if it's a good line",
+    "To do that iterate over all directions horizontal, vertical, and diagonals then check good lines naively"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkMove(vector<vector<char>>& board, int rMove, int cMove, char color) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkMove(char[][] board, int rMove, int cMove, char color) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkMove(self, board, rMove, cMove, color):\n        \"\"\"\n        :type board: List[List[str]]\n        :type rMove: int\n        :type cMove: int\n        :type color: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkMove(self, board: List[List[str]], rMove: int, cMove: int, color: str) -> bool:\n        ",
+    "c": "bool checkMove(char** board, int boardSize, int* boardColSize, int rMove, int cMove, char color) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckMove(char[][] board, int rMove, int cMove, char color) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @param {number} rMove\n * @param {number} cMove\n * @param {character} color\n * @return {boolean}\n */\nvar checkMove = function(board, rMove, cMove, color) {\n    \n};",
+    "typescript": "function checkMove(board: string[][], rMove: number, cMove: number, color: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @param Integer $rMove\n     * @param Integer $cMove\n     * @param String $color\n     * @return Boolean\n     */\n    function checkMove($board, $rMove, $cMove, $color) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkMove(_ board: [[Character]], _ rMove: Int, _ cMove: Int, _ color: Character) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkMove(board: Array<CharArray>, rMove: Int, cMove: Int, color: Char): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkMove(List<List<String>> board, int rMove, int cMove, String color) {\n    \n  }\n}",
+    "golang": "func checkMove(board [][]byte, rMove int, cMove int, color byte) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @param {Integer} r_move\n# @param {Integer} c_move\n# @param {Character} color\n# @return {Boolean}\ndef check_move(board, r_move, c_move, color)\n    \nend",
+    "scala": "object Solution {\n    def checkMove(board: Array[Array[Char]], rMove: Int, cMove: Int, color: Char): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_move(board: Vec<Vec<char>>, r_move: i32, c_move: i32, color: char) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-move board rMove cMove color)\n  (-> (listof (listof char?)) exact-integer? exact-integer? char? boolean?)\n  )",
+    "erlang": "-spec check_move(Board :: [[char()]], RMove :: integer(), CMove :: integer(), Color :: char()) -> boolean().\ncheck_move(Board, RMove, CMove, Color) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_move(board :: [[char]], r_move :: integer, c_move :: integer, color :: char) :: boolean\n  def check_move(board, r_move, c_move, color) do\n    \n  end\nend"
+  }
+}

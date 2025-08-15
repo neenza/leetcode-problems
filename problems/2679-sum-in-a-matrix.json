@@ -1,0 +1,58 @@
+{
+  "title": "Sum in a Matrix",
+  "problem_id": "2728",
+  "frontend_id": "2679",
+  "difficulty": "Medium",
+  "problem_slug": "sum-in-a-matrix",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed 2D integer array nums. Initially, your score is 0. Perform the following operations until the matrix becomes empty:\nReturn the final score.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [[7,2,1],[6,4,2],[6,5,3],[3,2,1]]\nOutput: 15\nExplanation: In the first operation, we remove 7, 6, 6, and 3. We then add 7 to our score. Next, we remove 2, 4, 5, and 2. We add 5 to our score. Lastly, we remove 1, 2, 3, and 1. We add 3 to our score. Thus, our final score is 7 + 5 + 3 = 15.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [[1]]\nOutput: 1\nExplanation: We remove 1 and add it to the answer. We return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 300",
+    "1 <= nums[i].length <= 500",
+    "0 <= nums[i][j] <= 103"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the numbers in each row in decreasing order.",
+    "The answer is the summation of the max number in every column after sorting the rows."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int matrixSum(vector<vector<int>>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int matrixSum(int[][] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matrixSum(self, nums):\n        \"\"\"\n        :type nums: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matrixSum(self, nums: List[List[int]]) -> int:\n        ",
+    "c": "int matrixSum(int** nums, int numsSize, int* numsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MatrixSum(int[][] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} nums\n * @return {number}\n */\nvar matrixSum = function(nums) {\n    \n};",
+    "typescript": "function matrixSum(nums: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $nums\n     * @return Integer\n     */\n    function matrixSum($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matrixSum(_ nums: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matrixSum(nums: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int matrixSum(List<List<int>> nums) {\n    \n  }\n}",
+    "golang": "func matrixSum(nums [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} nums\n# @return {Integer}\ndef matrix_sum(nums)\n    \nend",
+    "scala": "object Solution {\n    def matrixSum(nums: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn matrix_sum(nums: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (matrix-sum nums)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec matrix_sum(Nums :: [[integer()]]) -> integer().\nmatrix_sum(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec matrix_sum(nums :: [[integer]]) :: integer\n  def matrix_sum(nums) do\n    \n  end\nend"
+  }
+}

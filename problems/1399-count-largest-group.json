@@ -1,0 +1,53 @@
+{
+  "title": "Count Largest Group",
+  "problem_id": "1500",
+  "frontend_id": "1399",
+  "difficulty": "Easy",
+  "problem_slug": "count-largest-group",
+  "topics": [
+    "Hash Table",
+    "Math"
+  ],
+  "description": "You are given an integer n.\nWe need to group the numbers from 1 to n according to the sum of its digits. For example, the numbers 14 and 5 belong to the same group, whereas 13 and 3 belong to different groups.\nReturn the number of groups that have the largest size, i.e. the maximum number of elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 13\nOutput: 4\nExplanation: There are 9 groups in total, they are grouped according sum of its digits of numbers from 1 to 13:\n[1,10], [2,11], [3,12], [4,13], [5], [6], [7], [8], [9].\nThere are 4 groups with largest size.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 2\nExplanation: There are 2 groups [1], [2] of size 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the digit sum for each integer in the range and find out the largest groups."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countLargestGroup(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countLargestGroup(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countLargestGroup(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countLargestGroup(self, n: int) -> int:\n        ",
+    "c": "int countLargestGroup(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountLargestGroup(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countLargestGroup = function(n) {\n    \n};",
+    "typescript": "function countLargestGroup(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function countLargestGroup($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countLargestGroup(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countLargestGroup(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countLargestGroup(int n) {\n    \n  }\n}",
+    "golang": "func countLargestGroup(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef count_largest_group(n)\n    \nend",
+    "scala": "object Solution {\n    def countLargestGroup(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_largest_group(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-largest-group n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_largest_group(N :: integer()) -> integer().\ncount_largest_group(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_largest_group(n :: integer) :: integer\n  def count_largest_group(n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Hash Map\n\n#### Intuition\n\nFor each integer $i$ in the interval $[1, n]$, we can calculate its digit sum $s_i$. We establish a hash mapping from the digit sum to the original number. For each number $i$, we increment the value corresponding to the key $s_i$ by one. We then find the maximum value $m$ in the set of values and traverse the hash table to count the number of occurrences of $m$.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(n \\log n)$.\n\nThe time complexity for calculating the sum of digits of $x$ is $O(\\log_{10} x) = O(\\log x)$, so the total time required is $O(n \\log n)$. Selecting the maximum element and traversing the hash table both take $O(n)$ time; therefore, the overall time complexity is $O(n \\log n) + O(n) = O(n \\log n)$.\n\n- Space complexity: $O(\\log n)$.\n  \nUsing a hash map as auxiliary space, the number of digits of $n$ is $O(\\log_{10} n) = O(\\log n)$, and each digit is in the range $[0, 9]$, so the hash map can contain at most $O(10 \\log n) = O(\\log n)$ keys, and the asymptotic space complexity is $O(\\log n)$."
+}

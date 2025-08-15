@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Product After K Increments",
+  "problem_id": "2329",
+  "frontend_id": "2233",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-product-after-k-increments",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an array of non-negative integers nums and an integer k. In one operation, you may choose any element from nums and increment it by 1.\nReturn the maximum product of nums after at most k operations. Since the answer may be very large, return it modulo 109 + 7. Note that you should maximize the product before taking the modulo.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,4], k = 5\nOutput: 20\nExplanation: Increment the first number 5 times.\nNow nums = [5, 4], with a product of 5 * 4 = 20.\nIt can be shown that 20 is maximum product possible, so we return 20.\nNote that there may be other ways to increment nums to have the maximum product.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,3,3,2], k = 2\nOutput: 216\nExplanation: Increment the second number 1 time and increment the fourth number 1 time.\nNow nums = [6, 4, 3, 3], with a product of 6 * 4 * 3 * 3 = 216.\nIt can be shown that 216 is maximum product possible, so we return 216.\nNote that there may be other ways to increment nums to have the maximum product.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length, k <= 105",
+    "0 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If you can increment only once, which number should you increment?",
+    "We should always prioritize the smallest number. What kind of data structure could we use?",
+    "Use a min heap to hold all the numbers. Each time we do an operation, replace the top of the heap x by x + 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumProduct(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumProduct(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumProduct(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumProduct(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maximumProduct(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumProduct(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maximumProduct = function(nums, k) {\n    \n};",
+    "typescript": "function maximumProduct(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximumProduct($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumProduct(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumProduct(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumProduct(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maximumProduct(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef maximum_product(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maximumProduct(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_product(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-product nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_product(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_product(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_product(nums :: [integer], k :: integer) :: integer\n  def maximum_product(nums, k) do\n    \n  end\nend"
+  }
+}

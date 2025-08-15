@@ -1,0 +1,60 @@
+{
+  "title": "Battleships in a Board",
+  "problem_id": "419",
+  "frontend_id": "419",
+  "difficulty": "Medium",
+  "problem_slug": "battleships-in-a-board",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Matrix"
+  ],
+  "description": "Given an m x n matrix board where each cell is a battleship 'X' or empty '.', return the number of the battleships on board.\nBattleships can only be placed horizontally or vertically on board. In other words, they can only be made of the shape 1 x k (1 row, k columns) or k x 1 (k rows, 1 column), where k can be of any size. At least one horizontal or vertical cell separates between two battleships (i.e., there are no adjacent battleships).\nExample 1:\nExample 2:\nConstraints:\nFollow up: Could you do it in one-pass, using only O(1) extra memory and without modifying the values board?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\"X\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/21/image.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\".\"]]\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/21/image.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == board.length",
+    "n == board[i].length",
+    "1 <= m, n <= 200",
+    "board[i][j] is either '.' or 'X'."
+  ],
+  "follow_ups": [
+    "Could you do it in one-pass, using only O(1) extra memory and without modifying the values board?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countBattleships(vector<vector<char>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countBattleships(char[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countBattleships(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countBattleships(self, board: List[List[str]]) -> int:\n        ",
+    "c": "int countBattleships(char** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountBattleships(char[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @return {number}\n */\nvar countBattleships = function(board) {\n    \n};",
+    "typescript": "function countBattleships(board: string[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @return Integer\n     */\n    function countBattleships($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countBattleships(_ board: [[Character]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countBattleships(board: Array<CharArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countBattleships(List<List<String>> board) {\n    \n  }\n}",
+    "golang": "func countBattleships(board [][]byte) int {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @return {Integer}\ndef count_battleships(board)\n    \nend",
+    "scala": "object Solution {\n    def countBattleships(board: Array[Array[Char]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_battleships(board: Vec<Vec<char>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-battleships board)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
+    "erlang": "-spec count_battleships(Board :: [[char()]]) -> integer().\ncount_battleships(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_battleships(board :: [[char]]) :: integer\n  def count_battleships(board) do\n    \n  end\nend"
+  }
+}

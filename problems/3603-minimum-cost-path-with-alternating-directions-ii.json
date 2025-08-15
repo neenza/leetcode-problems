@@ -1,0 +1,65 @@
+{
+  "title": "Minimum Cost Path with Alternating Directions II",
+  "problem_id": "3927",
+  "frontend_id": "3603",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-cost-path-with-alternating-directions-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given two integers m and n representing the number of rows and columns of a grid, respectively.\nThe cost to enter cell (i, j) is defined as (i + 1) * (j + 1).\nYou are also given a 2D integer array waitCost where waitCost[i][j] defines the cost to wait on that cell.\nThe path will always begin by entering cell (0, 0) on move 1 and paying the entrance cost.\nAt each step, you follow an alternating pattern:\nReturn the minimum total cost required to reach (m - 1, n - 1).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: m = 1, n = 2, waitCost = [[1,2]]\nOutput: 3\nExplanation:\nThe optimal path is:\nThus, the total cost is 1 + 2 = 3 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: m = 2, n = 2, waitCost = [[3,5],[2,4]]\nOutput: 9\nExplanation:\nThe optimal path is:\nThus, the total cost is 1 + 2 + 2 + 4 = 9 .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: m = 2, n = 3, waitCost = [[6,1,4],[3,2,5]]\nOutput: 16\nExplanation:\nThe optimal path is:\nThus, the total cost is 1 + 2 + 1 + 4 + 2 + 6 = 16 .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= m, n <= 105",
+    "2 <= m * n <= 105",
+    "waitCost.length == m",
+    "waitCost[0].length == n",
+    "0 <= waitCost[i][j] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming",
+    "Observe that you need to wait at each cell except the first and last",
+    "Transition: <code>dp[i][j]</code> <- min(<code>dp[i‑1][j]</code>, <code>dp[i][j‑1]</code>) + <code>waitCost[i][j]</code> + (<code>i+1</code>)*(<code>j+1</code>)",
+    "The answer is <code>dp[m‑1][n‑1]</code> - <code>waitCost[m‑1][n‑1]</code>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minCost(int m, int n, vector<vector<int>>& waitCost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int m, int n, int[][] waitCost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, m, n, waitCost):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type waitCost: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, m: int, n: int, waitCost: List[List[int]]) -> int:\n        ",
+    "c": "long long minCost(int m, int n, int** waitCost, int waitCostSize, int* waitCostColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinCost(int m, int n, int[][] waitCost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number[][]} waitCost\n * @return {number}\n */\nvar minCost = function(m, n, waitCost) {\n    \n};",
+    "typescript": "function minCost(m: number, n: number, waitCost: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $m\n     * @param Integer $n\n     * @param Integer[][] $waitCost\n     * @return Integer\n     */\n    function minCost($m, $n, $waitCost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ m: Int, _ n: Int, _ waitCost: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(m: Int, n: Int, waitCost: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(int m, int n, List<List<int>> waitCost) {\n    \n  }\n}",
+    "golang": "func minCost(m int, n int, waitCost [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} m\n# @param {Integer} n\n# @param {Integer[][]} wait_cost\n# @return {Integer}\ndef min_cost(m, n, wait_cost)\n    \nend",
+    "scala": "object Solution {\n    def minCost(m: Int, n: Int, waitCost: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(m: i32, n: i32, wait_cost: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost m n waitCost)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_cost(M :: integer(), N :: integer(), WaitCost :: [[integer()]]) -> integer().\nmin_cost(M, N, WaitCost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(m :: integer, n :: integer, wait_cost :: [[integer]]) :: integer\n  def min_cost(m, n, wait_cost) do\n    \n  end\nend"
+  }
+}

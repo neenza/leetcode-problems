@@ -1,0 +1,67 @@
+{
+  "title": "Longest Common Subpath",
+  "problem_id": "2051",
+  "frontend_id": "1923",
+  "difficulty": "Hard",
+  "problem_slug": "longest-common-subpath",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Rolling Hash",
+    "Suffix Array",
+    "Hash Function"
+  ],
+  "description": "There is a country of n cities numbered from 0 to n - 1. In this country, there is a road connecting every pair of cities.\nThere are m friends numbered from 0 to m - 1 who are traveling through the country. Each one of them will take a path consisting of some cities. Each path is represented by an integer array that contains the visited cities in order. The path may contain a city more than once, but the same city will not be listed consecutively.\nGiven an integer n and a 2D integer array paths where paths[i] is an integer array representing the path of the ith friend, return the length of the longest common subpath that is shared by every friend's path, or 0 if there is no common subpath at all.\nA subpath of a path is a contiguous sequence of cities within that path.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, paths = [[0,1,2,3,4],\n                       [2,3,4],\n                       [4,0,1,2,3]]\nOutput: 2\nExplanation: The longest common subpath is [2,3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, paths = [[0],[1],[2]]\nOutput: 0\nExplanation: There is no common subpath shared by the three paths.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, paths = [[0,1,2,3,4],\n                       [4,3,2,1,0]]\nOutput: 1\nExplanation: The possible longest common subpaths are [0], [1], [2], [3], and [4]. All have a length of 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "m == paths.length",
+    "2 <= m <= 105",
+    "sum(paths[i].length) <= 105",
+    "0 <= paths[i][j] < n",
+    "The same city is not listed multiple times consecutively in paths[i]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there is a common path with length x, there is for sure a common path of length y where y < x.",
+    "We can use binary search over the answer with the range [0, min(path[i].length)].",
+    "Using binary search, we want to verify if we have a common path of length m. We can achieve this using hashing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestCommonSubpath(int n, vector<vector<int>>& paths) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestCommonSubpath(int n, int[][] paths) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestCommonSubpath(self, n, paths):\n        \"\"\"\n        :type n: int\n        :type paths: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestCommonSubpath(self, n: int, paths: List[List[int]]) -> int:\n        ",
+    "c": "int longestCommonSubpath(int n, int** paths, int pathsSize, int* pathsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestCommonSubpath(int n, int[][] paths) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} paths\n * @return {number}\n */\nvar longestCommonSubpath = function(n, paths) {\n    \n};",
+    "typescript": "function longestCommonSubpath(n: number, paths: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $paths\n     * @return Integer\n     */\n    function longestCommonSubpath($n, $paths) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestCommonSubpath(_ n: Int, _ paths: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestCommonSubpath(n: Int, paths: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestCommonSubpath(int n, List<List<int>> paths) {\n    \n  }\n}",
+    "golang": "func longestCommonSubpath(n int, paths [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} paths\n# @return {Integer}\ndef longest_common_subpath(n, paths)\n    \nend",
+    "scala": "object Solution {\n    def longestCommonSubpath(n: Int, paths: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_common_subpath(n: i32, paths: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-common-subpath n paths)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec longest_common_subpath(N :: integer(), Paths :: [[integer()]]) -> integer().\nlongest_common_subpath(N, Paths) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_common_subpath(n :: integer, paths :: [[integer]]) :: integer\n  def longest_common_subpath(n, paths) do\n    \n  end\nend"
+  }
+}

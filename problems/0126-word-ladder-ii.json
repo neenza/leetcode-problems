@@ -1,0 +1,59 @@
+{
+  "title": "Word Ladder II",
+  "problem_id": "126",
+  "frontend_id": "126",
+  "difficulty": "Hard",
+  "problem_slug": "word-ladder-ii",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Backtracking",
+    "Breadth-First Search"
+  ],
+  "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\nGiven two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation sequences from beginWord to endWord, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words [beginWord, s1, s2, ..., sk].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: [[\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],[\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]]\nExplanation: There are 2 shortest transformation sequences:\n\"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> \"cog\"\n\"hit\" -> \"hot\" -> \"lot\" -> \"log\" -> \"cog\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\nOutput: []\nExplanation: The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= beginWord.length <= 5",
+    "endWord.length == beginWord.length",
+    "1 <= wordList.length <= 500",
+    "wordList[i].length == beginWord.length",
+    "beginWord, endWord, and wordList[i] consist of lowercase English letters.",
+    "beginWord != endWord",
+    "All the words in wordList are unique.",
+    "The sum of all shortest transformation sequences does not exceed 105."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLadders(self, beginWord, endWord, wordList):\n        \"\"\"\n        :type beginWord: str\n        :type endWord: str\n        :type wordList: List[str]\n        :rtype: List[List[str]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** findLadders(char* beginWord, char* endWord, char** wordList, int wordListSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {string[][]}\n */\nvar findLadders = function(beginWord, endWord, wordList) {\n    \n};",
+    "typescript": "function findLadders(beginWord: string, endWord: string, wordList: string[]): string[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $beginWord\n     * @param String $endWord\n     * @param String[] $wordList\n     * @return String[][]\n     */\n    function findLadders($beginWord, $endWord, $wordList) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLadders(_ beginWord: String, _ endWord: String, _ wordList: [String]) -> [[String]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLadders(beginWord: String, endWord: String, wordList: List<String>): List<List<String>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {\n    \n  }\n}",
+    "golang": "func findLadders(beginWord string, endWord string, wordList []string) [][]string {\n    \n}",
+    "ruby": "# @param {String} begin_word\n# @param {String} end_word\n# @param {String[]} word_list\n# @return {String[][]}\ndef find_ladders(begin_word, end_word, word_list)\n    \nend",
+    "scala": "object Solution {\n    def findLadders(beginWord: String, endWord: String, wordList: List[String]): List[List[String]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_ladders(begin_word: String, end_word: String, word_list: Vec<String>) -> Vec<Vec<String>> {\n        \n    }\n}",
+    "racket": "(define/contract (find-ladders beginWord endWord wordList)\n  (-> string? string? (listof string?) (listof (listof string?)))\n  )",
+    "erlang": "-spec find_ladders(BeginWord :: unicode:unicode_binary(), EndWord :: unicode:unicode_binary(), WordList :: [unicode:unicode_binary()]) -> [[unicode:unicode_binary()]].\nfind_ladders(BeginWord, EndWord, WordList) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_ladders(begin_word :: String.t, end_word :: String.t, word_list :: [String.t]) :: [[String.t]]\n  def find_ladders(begin_word, end_word, word_list) do\n    \n  end\nend"
+  }
+}

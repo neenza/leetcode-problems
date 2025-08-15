@@ -1,0 +1,65 @@
+{
+  "title": "Shortest Distance After Road Addition Queries II",
+  "problem_id": "3514",
+  "frontend_id": "3244",
+  "difficulty": "Hard",
+  "problem_slug": "shortest-distance-after-road-addition-queries-ii",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Graph",
+    "Ordered Set"
+  ],
+  "description": "You are given an integer n and a 2D integer array queries.\nThere are n cities numbered from 0 to n - 1. Initially, there is a unidirectional road from city i to city i + 1 for all 0 <= i < n - 1.\nqueries[i] = [ui, vi] represents the addition of a new unidirectional road from city ui to city vi. After each query, you need to find the length of the shortest path from city 0 to city n - 1.\nThere are no two queries such that queries[i][0] < queries[j][0] < queries[i][1] < queries[j][1].\nReturn an array answer where for each i in the range [0, queries.length - 1], answer[i] is the length of the shortest path from city 0 to city n - 1 after processing the first i + 1 queries.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, queries = [[2,4],[0,2],[0,4]]\nOutput: [3,2,1]\nExplanation:\n\nAfter the addition of the road from 2 to 4, the length of the shortest path from 0 to 4 is 3.\n\nAfter the addition of the road from 0 to 2, the length of the shortest path from 0 to 4 is 2.\n\nAfter the addition of the road from 0 to 4, the length of the shortest path from 0 to 4 is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/28/image8.jpg",
+        "https://assets.leetcode.com/uploads/2024/06/28/image9.jpg",
+        "https://assets.leetcode.com/uploads/2024/06/28/image10.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, queries = [[0,3],[0,2]]\nOutput: [1,1]\nExplanation:\n\nAfter the addition of the road from 0 to 3, the length of the shortest path from 0 to 3 is 1.\n\nAfter the addition of the road from 0 to 2, the length of the shortest path remains 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/28/image11.jpg",
+        "https://assets.leetcode.com/uploads/2024/06/28/image12.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= n <= 105",
+    "1 <= queries.length <= 105",
+    "queries[i].length == 2",
+    "0 <= queries[i][0] < queries[i][1] < n",
+    "1 < queries[i][1] - queries[i][0]",
+    "There are no repeated roads among the queries.",
+    "There are no two queries such that i != j and queries[i][0] < queries[j][0] < queries[i][1] < queries[j][1]."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> shortestDistanceAfterQueries(int n, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] shortestDistanceAfterQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def shortestDistanceAfterQueries(self, n, queries):\n        \"\"\"\n        :type n: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* shortestDistanceAfterQueries(int n, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ShortestDistanceAfterQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar shortestDistanceAfterQueries = function(n, queries) {\n    \n};",
+    "typescript": "function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function shortestDistanceAfterQueries($n, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func shortestDistanceAfterQueries(_ n: Int, _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun shortestDistanceAfterQueries(n: Int, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> shortestDistanceAfterQueries(int n, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func shortestDistanceAfterQueries(n int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef shortest_distance_after_queries(n, queries)\n    \nend",
+    "scala": "object Solution {\n    def shortestDistanceAfterQueries(n: Int, queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn shortest_distance_after_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (shortest-distance-after-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec shortest_distance_after_queries(N :: integer(), Queries :: [[integer()]]) -> [integer()].\nshortest_distance_after_queries(N, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec shortest_distance_after_queries(n :: integer, queries :: [[integer]]) :: [integer]\n  def shortest_distance_after_queries(n, queries) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Minimum Subsequence in Non-Increasing Order",
+  "problem_id": "1519",
+  "frontend_id": "1403",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-subsequence-in-non-increasing-order",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given the array nums, obtain a subsequence of the array whose sum of elements is strictly greater than the sum of the non included elements in such subsequence.\nIf there are multiple solutions, return the subsequence with minimum size and if there still exist multiple solutions, return the subsequence with the maximum total sum of all its elements. A subsequence of an array can be obtained by erasing some (possibly zero) elements from the array.\nNote that the solution with the given constraints is guaranteed to be unique. Also return the answer sorted in non-increasing order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,3,10,9,8]\nOutput: [10,9] \nExplanation: The subsequences [10,9] and [10,8] are minimal such that the sum of their elements is strictly greater than the sum of elements not included. However, the subsequence [10,9] has the maximum total sum of its elements.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,4,7,6,7]\nOutput: [7,7,6] \nExplanation: The subsequence [7,7] has the sum of its elements equal to 14 which is not strictly greater than the sum of elements not included (14 = 4 + 4 + 6). Therefore, the subsequence [7,6,7] is the minimal satisfying the conditions. Note the subsequence has to be returned in non-increasing order.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 500",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort elements and take each element from the largest until accomplish the conditions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minSubsequence(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> minSubsequence(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSubsequence(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSubsequence(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minSubsequence(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> MinSubsequence(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar minSubsequence = function(nums) {\n    \n};",
+    "typescript": "function minSubsequence(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function minSubsequence($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSubsequence(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSubsequence(nums: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minSubsequence(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minSubsequence(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef min_subsequence(nums)\n    \nend",
+    "scala": "object Solution {\n    def minSubsequence(nums: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_subsequence(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (min-subsequence nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec min_subsequence(Nums :: [integer()]) -> [integer()].\nmin_subsequence(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_subsequence(nums :: [integer]) :: [integer]\n  def min_subsequence(nums) do\n    \n  end\nend"
+  }
+}

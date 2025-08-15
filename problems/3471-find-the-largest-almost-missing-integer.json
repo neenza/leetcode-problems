@@ -1,0 +1,62 @@
+{
+  "title": "Find the Largest Almost Missing Integer",
+  "problem_id": "3705",
+  "frontend_id": "3471",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-largest-almost-missing-integer",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,9,2,1,7], k = 3\nOutput: 7\nExplanation:\nWe return 7 since it is the largest integer that appears in exactly one subarray of size k .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,9,7,2,1,7], k = 4\nOutput: 3\nExplanation:\nWe return 3 since it is the largest and only integer that appears in exactly one subarray of size k .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [0,0], k = 1\nOutput: -1\nExplanation:\nThere is no integer that appears in only one subarray of size 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "0 <= nums[i] <= 50",
+    "1 <= k <= nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Solve the problem for three different cases: <code>k = 1</code>, <code>k = n</code>, and <code>1 < k < n</code>",
+    "If <code>k = 1</code>, return the largest element that occurs exactly once in <code>nums</code>",
+    "If <code>k = n</code>, return the largest element in <code>nums</code>",
+    "If <code>1 < k < n</code>, all elements different from <code>nums[0]</code> and <code>nums[n - 1]</code> will occur in more than one subarray of size <code>k</code>. Hence, the answer is the largest of <code>nums[0]</code> and <code>nums[n - 1]</code> if they both occur exactly once in the array. If one of them occurs more than once, return the other. If both of them occur more than once, return -1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestInteger(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestInteger(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestInteger(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestInteger(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int largestInteger(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestInteger(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar largestInteger = function(nums, k) {\n    \n};",
+    "typescript": "function largestInteger(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function largestInteger($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestInteger(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestInteger(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestInteger(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func largestInteger(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef largest_integer(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def largestInteger(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_integer(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-integer nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec largest_integer(Nums :: [integer()], K :: integer()) -> integer().\nlargest_integer(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_integer(nums :: [integer], k :: integer) :: integer\n  def largest_integer(nums, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Number of Pushes to Type Word I",
+  "problem_id": "3275",
+  "frontend_id": "3014",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-number-of-pushes-to-type-word-i",
+  "topics": [
+    "Math",
+    "String",
+    "Greedy"
+  ],
+  "description": "You are given a string word containing distinct lowercase English letters.\nTelephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key 2 is mapped with [\"a\",\"b\",\"c\"], we need to push the key one time to type \"a\", two times to type \"b\", and three times to type \"c\" .\nIt is allowed to remap the keys numbered 2 to 9 to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string word.\nReturn the minimum number of pushes needed to type word after remapping the keys.\nAn example mapping of letters to keys on a telephone keypad is given below. Note that 1, *, #, and 0 do not map to any letters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abcde\"\nOutput: 5\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"a\" -> one push on key 2\n\"b\" -> one push on key 3\n\"c\" -> one push on key 4\n\"d\" -> one push on key 5\n\"e\" -> one push on key 6\nTotal cost is 1 + 1 + 1 + 1 + 1 = 5.\nIt can be shown that no other mapping can provide a lower cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/26/keypadv1e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"xycdefghij\"\nOutput: 12\nExplanation: The remapped keypad given in the image provides the minimum cost.\n\"x\" -> one push on key 2\n\"y\" -> two pushes on key 2\n\"c\" -> one push on key 3\n\"d\" -> two pushes on key 3\n\"e\" -> one push on key 4\n\"f\" -> one push on key 5\n\"g\" -> one push on key 6\n\"h\" -> one push on key 7\n\"i\" -> one push on key 8\n\"j\" -> one push on key 9\nTotal cost is 1 + 2 + 1 + 2 + 1 + 1 + 1 + 1 + 1 + 1 = 12.\nIt can be shown that no other mapping can provide a lower cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/12/26/keypadv1e2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 26",
+    "word consists of lowercase English letters.",
+    "All letters in word are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We have 8 keys in total. We can type 8 characters with one push each, 8 different characters with two pushes each, and so on.",
+    "The optimal way is to map letters to keys evenly."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumPushes(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumPushes(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumPushes(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumPushes(self, word: str) -> int:\n        ",
+    "c": "int minimumPushes(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumPushes(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar minimumPushes = function(word) {\n    \n};",
+    "typescript": "function minimumPushes(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function minimumPushes($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumPushes(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumPushes(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumPushes(String word) {\n    \n  }\n}",
+    "golang": "func minimumPushes(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef minimum_pushes(word)\n    \nend",
+    "scala": "object Solution {\n    def minimumPushes(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_pushes(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-pushes word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_pushes(Word :: unicode:unicode_binary()) -> integer().\nminimum_pushes(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_pushes(word :: String.t) :: integer\n  def minimum_pushes(word) do\n    \n  end\nend"
+  }
+}

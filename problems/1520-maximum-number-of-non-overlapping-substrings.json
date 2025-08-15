@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Number of Non-Overlapping Substrings",
+  "problem_id": "1644",
+  "frontend_id": "1520",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-number-of-non-overlapping-substrings",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "Given a string s of lowercase letters, you need to find the maximum number of non-empty substrings of s that meet the following conditions:\nFind the maximum number of substrings that meet the above conditions. If there are multiple solutions with the same number of substrings, return the one with minimum total length. It can be shown that there exists a unique solution of minimum total length.\nNotice that you can return the substrings in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"adefaddaccc\"\nOutput: [\"e\",\"f\",\"ccc\"]\nExplanation: The following are all the possible substrings that meet the conditions:\n[\n  \"adefaddaccc\"\n  \"adefadda\",\n  \"ef\",\n  \"e\",\n  \"f\",\n  \"ccc\",\n]\nIf we choose the first string, we cannot choose anything else and we'd get only 1. If we choose \"adefadda\", we are left with \"ccc\" which is the only one that doesn't overlap, thus obtaining 2 substrings. Notice also, that it's not optimal to choose \"ef\" since it can be split into two. Therefore, the optimal way is to choose [\"e\",\"f\",\"ccc\"] which gives us 3 substrings. No other solution of the same number of substrings exist.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abbaccd\"\nOutput: [\"d\",\"bb\",\"cc\"]\nExplanation: Notice that while the set of substrings [\"d\",\"abba\",\"cc\"] also has length 3, it's considered incorrect since it has larger total length.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that it's impossible for any two valid substrings to overlap unless one is inside another.",
+    "We can start by finding the starting and ending index for each character.",
+    "From these indices, we can form the substrings by expanding each character's range if necessary (if another character exists in the range with smaller/larger starting/ending index).",
+    "Sort the valid substrings by length and greedily take those with the smallest length, discarding the ones that overlap those we took."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> maxNumOfSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> maxNumOfSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxNumOfSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxNumOfSubstrings(self, s: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** maxNumOfSubstrings(char* s, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> MaxNumOfSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar maxNumOfSubstrings = function(s) {\n    \n};",
+    "typescript": "function maxNumOfSubstrings(s: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String[]\n     */\n    function maxNumOfSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxNumOfSubstrings(_ s: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxNumOfSubstrings(s: String): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> maxNumOfSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func maxNumOfSubstrings(s string) []string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String[]}\ndef max_num_of_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def maxNumOfSubstrings(s: String): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_num_of_substrings(s: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (max-num-of-substrings s)\n  (-> string? (listof string?))\n  )",
+    "erlang": "-spec max_num_of_substrings(S :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nmax_num_of_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_num_of_substrings(s :: String.t) :: [String.t]\n  def max_num_of_substrings(s) do\n    \n  end\nend"
+  }
+}

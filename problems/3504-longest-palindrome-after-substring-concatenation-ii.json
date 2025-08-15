@@ -1,0 +1,68 @@
+{
+  "title": "Longest Palindrome After Substring Concatenation II",
+  "problem_id": "3808",
+  "frontend_id": "3504",
+  "difficulty": "Hard",
+  "problem_slug": "longest-palindrome-after-substring-concatenation-ii",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given two strings, s and t.\nYou can create a new string by selecting a substring from s (possibly empty) and a substring from t (possibly empty), then concatenating them in order.\nReturn the length of the longest palindrome that can be formed this way.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"a\", t = \"a\"\nOutput: 2\nExplanation:\nConcatenating \"a\" from s and \"a\" from t results in \"aa\" , which is a palindrome of length 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abc\", t = \"def\"\nOutput: 1\nExplanation:\nSince all characters are different, the longest palindrome is any single character, so the answer is 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"b\", t = \"aaaa\"\nOutput: 4\nExplanation:\nSelecting \" aaaa \" from t is the longest palindrome, so the answer is 4.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"abcde\", t = \"ecdba\"\nOutput: 5\nExplanation:\nConcatenating \"abc\" from s and \"ba\" from t results in \"abcba\" , which is a palindrome of length 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, t.length <= 1000",
+    "s and t consist of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i][j]</code> be the length of the longest answer if we try starting it with <code>s[i]</code> and ending it with <code>t[j]</code>.",
+    "For <code>s</code>, preprocess the length of the longest palindrome starting at index <code>i</code> as <code>p[i]</code>.",
+    "For <code>t</code>, preprocess the length of the longest palindrome ending at index <code>j</code> as <code>q[j]</code>.",
+    "If <code>s[i] != t[j]</code>, then <code>dp[i][j] = max(p[i], q[j])</code>.",
+    "Otherwise, <code>dp[i][j] = max(p[i], q[j], 2 + dp[i + 1][j - 1])</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestPalindrome(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestPalindrome(String s, String t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestPalindrome(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestPalindrome(self, s: str, t: str) -> int:\n        ",
+    "c": "int longestPalindrome(char* s, char* t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestPalindrome(string s, string t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar longestPalindrome = function(s, t) {\n    \n};",
+    "typescript": "function longestPalindrome(s: string, t: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $t\n     * @return Integer\n     */\n    function longestPalindrome($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestPalindrome(_ s: String, _ t: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestPalindrome(s: String, t: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestPalindrome(String s, String t) {\n    \n  }\n}",
+    "golang": "func longestPalindrome(s string, t string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} t\n# @return {Integer}\ndef longest_palindrome(s, t)\n    \nend",
+    "scala": "object Solution {\n    def longestPalindrome(s: String, t: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_palindrome(s: String, t: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-palindrome s t)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec longest_palindrome(S :: unicode:unicode_binary(), T :: unicode:unicode_binary()) -> integer().\nlongest_palindrome(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_palindrome(s :: String.t, t :: String.t) :: integer\n  def longest_palindrome(s, t) do\n    \n  end\nend"
+  }
+}

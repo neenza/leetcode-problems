@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Number of Food Buckets to Feed the Hamsters",
+  "problem_id": "2191",
+  "frontend_id": "2086",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-food-buckets-to-feed-the-hamsters",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed string hamsters where hamsters[i] is either:\nYou will add some number of food buckets at the empty indices in order to feed the hamsters. A hamster can be fed if there is at least one food bucket to its left or to its right. More formally, a hamster at index i can be fed if you place a food bucket at index i - 1 and/or at index i + 1.\nReturn the minimum number of food buckets you should place at empty indices to feed all the hamsters or -1 if it is impossible to feed all of them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: hamsters = \"H..H\"\nOutput: 2\nExplanation: We place two food buckets at indices 1 and 2.\nIt can be shown that if we place only one food bucket, one of the hamsters will not be fed.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/01/example1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: hamsters = \".H.H.\"\nOutput: 1\nExplanation: We place one food bucket at index 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/01/example2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: hamsters = \".HHH.\"\nOutput: -1\nExplanation: If we place a food bucket at every empty index as shown, the hamster at index 2 will not be able to eat.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/01/example3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= hamsters.length <= 105",
+    "hamsters[i] is either'H' or '.'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "When is it impossible to feed all the hamsters?",
+    "When one or more hamsters do not have an empty space adjacent to it.",
+    "Assuming all previous hamsters are fed. If there is a hamster at index i and you are able to place a bucket at index i - 1 or i + 1, where should you put it?",
+    "It is always better to place a bucket at index i + 1 because it can feed the next hamster as well."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumBuckets(string hamsters) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumBuckets(String hamsters) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumBuckets(self, hamsters):\n        \"\"\"\n        :type hamsters: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumBuckets(self, hamsters: str) -> int:\n        ",
+    "c": "int minimumBuckets(char* hamsters) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumBuckets(string hamsters) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} hamsters\n * @return {number}\n */\nvar minimumBuckets = function(hamsters) {\n    \n};",
+    "typescript": "function minimumBuckets(hamsters: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $hamsters\n     * @return Integer\n     */\n    function minimumBuckets($hamsters) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumBuckets(_ hamsters: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumBuckets(hamsters: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumBuckets(String hamsters) {\n    \n  }\n}",
+    "golang": "func minimumBuckets(hamsters string) int {\n    \n}",
+    "ruby": "# @param {String} hamsters\n# @return {Integer}\ndef minimum_buckets(hamsters)\n    \nend",
+    "scala": "object Solution {\n    def minimumBuckets(hamsters: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_buckets(hamsters: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-buckets hamsters)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec minimum_buckets(Hamsters :: unicode:unicode_binary()) -> integer().\nminimum_buckets(Hamsters) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_buckets(hamsters :: String.t) :: integer\n  def minimum_buckets(hamsters) do\n    \n  end\nend"
+  }
+}

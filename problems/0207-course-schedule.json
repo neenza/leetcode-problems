@@ -1,0 +1,60 @@
+{
+  "title": "Course Schedule",
+  "problem_id": "207",
+  "frontend_id": "207",
+  "difficulty": "Medium",
+  "problem_slug": "course-schedule",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort"
+  ],
+  "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.\nReturn true if you can finish all courses. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numCourses = 2, prerequisites = [[1,0]]\nOutput: true\nExplanation: There are a total of 2 courses to take. \nTo take course 1 you should have finished course 0. So it is possible.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numCourses = 2, prerequisites = [[1,0],[0,1]]\nOutput: false\nExplanation: There are a total of 2 courses to take. \nTo take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= numCourses <= 2000",
+    "0 <= prerequisites.length <= 5000",
+    "prerequisites[i].length == 2",
+    "0 <= ai, bi < numCourses",
+    "All the pairs prerequisites[i] are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "This problem is equivalent to finding if a cycle exists in a directed graph. If a cycle exists, no topological ordering exists and therefore it will be impossible to take all courses.",
+    "<a href=\"https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/03Graphs.pdf\" target=\"_blank\">Topological Sort via DFS</a> - A great tutorial explaining the basic concepts of Topological Sort.",
+    "Topological sort could also be done via <a href=\"http://en.wikipedia.org/wiki/Topological_sorting#Algorithms\" target=\"_blank\">BFS</a>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canFinish(int numCourses, int[][] prerequisites) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canFinish(self, numCourses, prerequisites):\n        \"\"\"\n        :type numCourses: int\n        :type prerequisites: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:\n        ",
+    "c": "bool canFinish(int numCourses, int** prerequisites, int prerequisitesSize, int* prerequisitesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanFinish(int numCourses, int[][] prerequisites) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} numCourses\n * @param {number[][]} prerequisites\n * @return {boolean}\n */\nvar canFinish = function(numCourses, prerequisites) {\n    \n};",
+    "typescript": "function canFinish(numCourses: number, prerequisites: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $numCourses\n     * @param Integer[][] $prerequisites\n     * @return Boolean\n     */\n    function canFinish($numCourses, $prerequisites) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canFinish(_ numCourses: Int, _ prerequisites: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canFinish(int numCourses, List<List<int>> prerequisites) {\n    \n  }\n}",
+    "golang": "func canFinish(numCourses int, prerequisites [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer} num_courses\n# @param {Integer[][]} prerequisites\n# @return {Boolean}\ndef can_finish(num_courses, prerequisites)\n    \nend",
+    "scala": "object Solution {\n    def canFinish(numCourses: Int, prerequisites: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-finish numCourses prerequisites)\n  (-> exact-integer? (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec can_finish(NumCourses :: integer(), Prerequisites :: [[integer()]]) -> boolean().\ncan_finish(NumCourses, Prerequisites) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_finish(num_courses :: integer, prerequisites :: [[integer]]) :: boolean\n  def can_finish(num_courses, prerequisites) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Zero Array Transformation IV",
+  "problem_id": "3795",
+  "frontend_id": "3489",
+  "difficulty": "Medium",
+  "problem_slug": "zero-array-transformation-iv",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums of length n and a 2D array queries, where queries[i] = [li, ri, vali].\nEach queries[i] represents the following action on nums:\nA Zero Array is an array with all its elements equal to 0.\nReturn the minimum possible non-negative value of k, such that after processing the first k queries in sequence, nums becomes a Zero Array. If no such k exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\nOutput: -1\nExplanation:\nIt is impossible to make nums a Zero Array even after all the queries.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,2,1], queries = [[0,1,1],[1,2,1],[2,3,2],[3,4,1],[4,4,1]]\nOutput: 4\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: nums = [1,2,3,2,6], queries = [[0,1,1],[0,2,1],[1,4,2],[4,4,4],[3,4,1],[4,4,5]]\nOutput: 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 10",
+    "0 <= nums[i] <= 1000",
+    "1 <= queries.length <= 1000",
+    "queries[i] = [li, ri, vali]",
+    "0 <= li <= ri < nums.length",
+    "1 <= vali <= 10"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "For each <code>nums[i]</code>, use DP to check whether the <code>queries[.][2]</code> values (i.e., the <code>val</code> values) of the queries that affect it can form a combination with a sum equal to <code>nums[i]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minZeroArray(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minZeroArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minZeroArray(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minZeroArray(self, nums: List[int], queries: List[List[int]]) -> int:\n        ",
+    "c": "int minZeroArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinZeroArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number}\n */\nvar minZeroArray = function(nums, queries) {\n    \n};",
+    "typescript": "function minZeroArray(nums: number[], queries: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer\n     */\n    function minZeroArray($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minZeroArray(_ nums: [Int], _ queries: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minZeroArray(nums: IntArray, queries: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minZeroArray(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func minZeroArray(nums []int, queries [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer}\ndef min_zero_array(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def minZeroArray(nums: Array[Int], queries: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_zero_array(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-zero-array nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_zero_array(Nums :: [integer()], Queries :: [[integer()]]) -> integer().\nmin_zero_array(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_zero_array(nums :: [integer], queries :: [[integer]]) :: integer\n  def min_zero_array(nums, queries) do\n    \n  end\nend"
+  }
+}

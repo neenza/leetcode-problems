@@ -1,0 +1,68 @@
+{
+  "title": "Minimum Time to Make Rope Colorful",
+  "problem_id": "1700",
+  "frontend_id": "1578",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-make-rope-colorful",
+  "topics": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.\nAlice wants the rope to be colorful. She does not want two consecutive balloons to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it colorful. You are given a 0-indexed integer array neededTime where neededTime[i] is the time (in seconds) that Bob needs to remove the ith balloon from the rope.\nReturn the minimum time Bob needs to make the rope colorful.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: colors = \"abaac\", neededTime = [1,2,3,4,5]\nOutput: 3\nExplanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.\nBob can remove the blue balloon at index 2. This takes 3 seconds.\nThere are no longer two consecutive balloons of the same color. Total time = 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/13/ballon1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: colors = \"abc\", neededTime = [1,2,3]\nOutput: 0\nExplanation: The rope is already colorful. Bob does not need to remove any balloons from the rope.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/13/balloon2.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: colors = \"aabaa\", neededTime = [1,2,3,4,1]\nOutput: 2\nExplanation: Bob will remove the balloons at indices 0 and 4. Each balloons takes 1 second to remove.\nThere are no longer two consecutive balloons of the same color. Total time = 1 + 1 = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/12/13/balloon3.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == colors.length == neededTime.length",
+    "1 <= n <= 105",
+    "1 <= neededTime[i] <= 104",
+    "colors contains only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain the running sum and max value for repeated letters."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCost(string colors, vector<int>& neededTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(String colors, int[] neededTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, colors, neededTime):\n        \"\"\"\n        :type colors: str\n        :type neededTime: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, colors: str, neededTime: List[int]) -> int:\n        ",
+    "c": "int minCost(char* colors, int* neededTime, int neededTimeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCost(string colors, int[] neededTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} colors\n * @param {number[]} neededTime\n * @return {number}\n */\nvar minCost = function(colors, neededTime) {\n    \n};",
+    "typescript": "function minCost(colors: string, neededTime: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $colors\n     * @param Integer[] $neededTime\n     * @return Integer\n     */\n    function minCost($colors, $neededTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ colors: String, _ neededTime: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(colors: String, neededTime: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(String colors, List<int> neededTime) {\n    \n  }\n}",
+    "golang": "func minCost(colors string, neededTime []int) int {\n    \n}",
+    "ruby": "# @param {String} colors\n# @param {Integer[]} needed_time\n# @return {Integer}\ndef min_cost(colors, needed_time)\n    \nend",
+    "scala": "object Solution {\n    def minCost(colors: String, neededTime: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(colors: String, needed_time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost colors neededTime)\n  (-> string? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Colors :: unicode:unicode_binary(), NeededTime :: [integer()]) -> integer().\nmin_cost(Colors, NeededTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(colors :: String.t, needed_time :: [integer]) :: integer\n  def min_cost(colors, needed_time) do\n    \n  end\nend"
+  }
+}

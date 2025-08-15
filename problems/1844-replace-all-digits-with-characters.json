@@ -1,0 +1,54 @@
+{
+  "title": "Replace All Digits with Characters",
+  "problem_id": "1954",
+  "frontend_id": "1844",
+  "difficulty": "Easy",
+  "problem_slug": "replace-all-digits-with-characters",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.\nYou must perform an operation shift(c, x), where c is a character and x is a digit, that returns the xth character after c.\nFor every odd index i, you want to replace the digit s[i] with the result of the shift(s[i-1], s[i]) operation.\nReturn s after replacing all digits. It is guaranteed that shift(s[i-1], s[i]) will never exceed 'z'.\nNote that shift(c, x) is not a preloaded function, but an operation to be implemented as part of the solution.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"a1c1e1\"\nOutput: \"abcdef\"\nExplanation: The digits are replaced as follows:\n- s[1] -> shift('a',1) = 'b'\n- s[3] -> shift('c',1) = 'd'\n- s[5] -> shift('e',1) = 'f'",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"a1b2c3d4e\"\nOutput: \"abbdcfdhe\"\nExplanation: The digits are replaced as follows:\n- s[1] -> shift('a',1) = 'b'\n- s[3] -> shift('b',2) = 'd'\n- s[5] -> shift('c',3) = 'f'\n- s[7] -> shift('d',4) = 'h'",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consists only of lowercase English letters and digits.",
+    "shift(s[i-1], s[i]) <= 'z' for all odd indices i."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We just need to replace every even positioned character with the character s[i] positions ahead of the character preceding it",
+    "Get the position of the preceeding character in alphabet then advance it s[i] positions and get the character at that position"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string replaceDigits(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String replaceDigits(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def replaceDigits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def replaceDigits(self, s: str) -> str:\n        ",
+    "c": "char* replaceDigits(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ReplaceDigits(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar replaceDigits = function(s) {\n    \n};",
+    "typescript": "function replaceDigits(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function replaceDigits($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func replaceDigits(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun replaceDigits(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String replaceDigits(String s) {\n    \n  }\n}",
+    "golang": "func replaceDigits(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef replace_digits(s)\n    \nend",
+    "scala": "object Solution {\n    def replaceDigits(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn replace_digits(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (replace-digits s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec replace_digits(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreplace_digits(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec replace_digits(s :: String.t) :: String.t\n  def replace_digits(s) do\n    \n  end\nend"
+  }
+}

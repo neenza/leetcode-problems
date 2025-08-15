@@ -1,0 +1,59 @@
+{
+  "title": "Capitalize the Title",
+  "problem_id": "2235",
+  "frontend_id": "2129",
+  "difficulty": "Easy",
+  "problem_slug": "capitalize-the-title",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string title consisting of one or more words separated by a single space, where each word consists of English letters. Capitalize the string by changing the capitalization of each word such that:\nReturn the capitalized title.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: title = \"capiTalIze tHe titLe\"\nOutput: \"Capitalize The Title\"\nExplanation:\nSince all the words have a length of at least 3, the first letter of each word is uppercase, and the remaining letters are lowercase.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: title = \"First leTTeR of EACH Word\"\nOutput: \"First Letter of Each Word\"\nExplanation:\nThe word \"of\" has length 2, so it is all lowercase.\nThe remaining words have a length of at least 3, so the first letter of each remaining word is uppercase, and the remaining letters are lowercase.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: title = \"i lOve leetcode\"\nOutput: \"i Love Leetcode\"\nExplanation:\nThe word \"i\" has length 1, so it is lowercase.\nThe remaining words have a length of at least 3, so the first letter of each remaining word is uppercase, and the remaining letters are lowercase.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= title.length <= 100",
+    "title consists of words separated by a single space without any leading or trailing spaces.",
+    "Each word consists of uppercase and lowercase English letters and is non-empty."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Firstly, try to find all the words present in the string.",
+    "On the basis of each word's lengths, simulate the process explained in Problem."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string capitalizeTitle(string title) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String capitalizeTitle(String title) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def capitalizeTitle(self, title):\n        \"\"\"\n        :type title: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def capitalizeTitle(self, title: str) -> str:\n        ",
+    "c": "char* capitalizeTitle(char* title) {\n    \n}",
+    "csharp": "public class Solution {\n    public string CapitalizeTitle(string title) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} title\n * @return {string}\n */\nvar capitalizeTitle = function(title) {\n    \n};",
+    "typescript": "function capitalizeTitle(title: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $title\n     * @return String\n     */\n    function capitalizeTitle($title) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func capitalizeTitle(_ title: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun capitalizeTitle(title: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String capitalizeTitle(String title) {\n    \n  }\n}",
+    "golang": "func capitalizeTitle(title string) string {\n    \n}",
+    "ruby": "# @param {String} title\n# @return {String}\ndef capitalize_title(title)\n    \nend",
+    "scala": "object Solution {\n    def capitalizeTitle(title: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn capitalize_title(title: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (capitalize-title title)\n  (-> string? string?)\n  )",
+    "erlang": "-spec capitalize_title(Title :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncapitalize_title(Title) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec capitalize_title(title :: String.t) :: String.t\n  def capitalize_title(title) do\n    \n  end\nend"
+  }
+}

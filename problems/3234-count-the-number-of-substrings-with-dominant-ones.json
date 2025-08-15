@@ -1,0 +1,56 @@
+{
+  "title": "Count the Number of Substrings With Dominant Ones",
+  "problem_id": "3479",
+  "frontend_id": "3234",
+  "difficulty": "Medium",
+  "problem_slug": "count-the-number-of-substrings-with-dominant-ones",
+  "topics": [
+    "String",
+    "Sliding Window",
+    "Enumeration"
+  ],
+  "description": "You are given a binary string s.\nReturn the number of substrings with dominant ones.\nA string has dominant ones if the number of ones in the string is greater than or equal to the square of the number of zeros in the string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"00011\"\nOutput: 5\nExplanation:\nThe substrings with dominant ones are shown in the table below.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"101101\"\nOutput: 16\nExplanation:\nThe substrings with non-dominant ones are shown in the table below.\nSince there are 21 substrings total and 5 of them have non-dominant ones, it follows that there are 16 substrings with dominant ones.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 4 * 104",
+    "s consists only of characters '0' and '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let us fix the starting index <code>l</code> of the substring and count the number of indices <code>r</code> such that <code>l <= r</code> and the substring <code>s[l..r]</code> has dominant ones.",
+    "A substring with dominant ones has at most <code>sqrt(n)</code> zeros.",
+    "We cannot iterate over every <code>r</code> and check if the  <code>s[l..r]</code> has dominant ones. Instead, we iterate over the next <code>sqrt(n)</code> zeros to the left of <code>l</code> and count the number of substrings with dominant ones where the current zero is the rightmost zero of the substring."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSubstrings(self, s: str) -> int:\n        ",
+    "c": "int numberOfSubstrings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numberOfSubstrings = function(s) {\n    \n};",
+    "typescript": "function numberOfSubstrings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numberOfSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSubstrings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSubstrings(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func numberOfSubstrings(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef number_of_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSubstrings(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_substrings(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-substrings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec number_of_substrings(S :: unicode:unicode_binary()) -> integer().\nnumber_of_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_substrings(s :: String.t) :: integer\n  def number_of_substrings(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Find the Middle Index in Array",
+  "problem_id": "2102",
+  "frontend_id": "1991",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-middle-index-in-array",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "Given a 0-indexed integer array nums, find the leftmost middleIndex (i.e., the smallest amongst all the possible ones).\nA middleIndex is an index where nums[0] + nums[1] + ... + nums[middleIndex-1] == nums[middleIndex+1] + nums[middleIndex+2] + ... + nums[nums.length-1].\nIf middleIndex == 0, the left side sum is considered to be 0. Similarly, if middleIndex == nums.length - 1, the right side sum is considered to be 0.\nReturn the leftmost middleIndex that satisfies the condition, or -1 if there is no such index.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nNote: This question is the same as 724: https://leetcode.com/problems/find-pivot-index/",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,-1,8,4]\nOutput: 3\nExplanation: The sum of the numbers before index 3 is: 2 + 3 + -1 = 4\nThe sum of the numbers after index 3 is: 4 = 4",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,-1,4]\nOutput: 2\nExplanation: The sum of the numbers before index 2 is: 1 + -1 = 0\nThe sum of the numbers after index 2 is: 0",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,5]\nOutput: -1\nExplanation: There is no valid middleIndex.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "-1000 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Could we go from left to right and check to see if an index is a middle index?",
+    "Do we need to sum every number to the left and right of an index each time?",
+    "Use a prefix sum array where prefix[i] = nums[0] + nums[1] + ... + nums[i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findMiddleIndex(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMiddleIndex(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findMiddleIndex(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findMiddleIndex(self, nums: List[int]) -> int:\n        ",
+    "c": "int findMiddleIndex(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindMiddleIndex(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findMiddleIndex = function(nums) {\n    \n};",
+    "typescript": "function findMiddleIndex(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findMiddleIndex($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findMiddleIndex(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findMiddleIndex(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findMiddleIndex(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findMiddleIndex(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_middle_index(nums)\n    \nend",
+    "scala": "object Solution {\n    def findMiddleIndex(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_middle_index(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-middle-index nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_middle_index(Nums :: [integer()]) -> integer().\nfind_middle_index(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_middle_index(nums :: [integer]) :: integer\n  def find_middle_index(nums) do\n    \n  end\nend"
+  }
+}

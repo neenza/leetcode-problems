@@ -1,0 +1,54 @@
+{
+  "title": "Find Minimum Operations to Make All Elements Divisible by Three",
+  "problem_id": "3476",
+  "frontend_id": "3190",
+  "difficulty": "Easy",
+  "problem_slug": "find-minimum-operations-to-make-all-elements-divisible-by-three",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "You are given an integer array nums. In one operation, you can add or subtract 1 from any element of nums.\nReturn the minimum number of operations to make all elements of nums divisible by 3.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 3\nExplanation:\nAll array elements can be made divisible by 3 using 3 operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,6,9]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 50",
+    "1 <= nums[i] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If <code>x % 3 != 0</code> we can always increment or decrement <code>x</code> such that we only need 1 operation.",
+    "Add <code>min(nums[i] % 3, 3 - (num[i] % 3))</code> to the count of operations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumOperations = function(nums) {\n    \n};",
+    "typescript": "function minimumOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_operations(Nums :: [integer()]) -> integer().\nminimum_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_operations(nums :: [integer]) :: integer\n  def minimum_operations(nums) do\n    \n  end\nend"
+  }
+}

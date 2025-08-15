@@ -1,0 +1,69 @@
+{
+  "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
+  "problem_id": "3079",
+  "frontend_id": "2846",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-edge-weight-equilibrium-queries-in-a-tree",
+  "topics": [
+    "Array",
+    "Tree",
+    "Graph",
+    "Strongly Connected Component"
+  ],
+  "description": "There is an undirected tree with n nodes labeled from 0 to n - 1. You are given the integer n and a 2D integer array edges of length n - 1, where edges[i] = [ui, vi, wi] indicates that there is an edge between nodes ui and vi with weight wi in the tree.\nYou are also given a 2D integer array queries of length m, where queries[i] = [ai, bi]. For each query, find the minimum number of operations required to make the weight of every edge on the path from ai to bi equal. In one operation, you can choose any edge of the tree and change its weight to any value.\nNote that:\nReturn an array answer of length m where answer[i] is the answer to the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 7, edges = [[0,1,1],[1,2,1],[2,3,1],[3,4,2],[4,5,2],[5,6,2]], queries = [[0,3],[3,6],[2,6],[0,6]]\nOutput: [0,0,1,3]\nExplanation: In the first query, all the edges in the path from 0 to 3 have a weight of 1. Hence, the answer is 0.\nIn the second query, all the edges in the path from 3 to 6 have a weight of 2. Hence, the answer is 0.\nIn the third query, we change the weight of edge [2,3] to 2. After this operation, all the edges in the path from 2 to 6 have a weight of 2. Hence, the answer is 1.\nIn the fourth query, we change the weights of edges [0,1], [1,2] and [2,3] to 2. After these operations, all the edges in the path from 0 to 6 have a weight of 2. Hence, the answer is 3.\nFor each queries[i], it can be shown that answer[i] is the minimum number of operations needed to equalize all the edge weights in the path from ai to bi.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/08/11/graph-6-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 8, edges = [[1,2,6],[1,3,4],[2,4,6],[2,5,3],[3,6,6],[3,0,8],[7,0,2]], queries = [[4,6],[0,4],[6,5],[7,4]]\nOutput: [1,2,2,3]\nExplanation: In the first query, we change the weight of edge [1,3] to 6. After this operation, all the edges in the path from 4 to 6 have a weight of 6. Hence, the answer is 1.\nIn the second query, we change the weight of edges [0,3] and [3,1] to 6. After these operations, all the edges in the path from 0 to 4 have a weight of 6. Hence, the answer is 2.\nIn the third query, we change the weight of edges [1,3] and [5,2] to 6. After these operations, all the edges in the path from 6 to 5 have a weight of 6. Hence, the answer is 2.\nIn the fourth query, we change the weights of edges [0,7], [0,3] and [1,3] to 6. After these operations, all the edges in the path from 7 to 4 have a weight of 6. Hence, the answer is 3.\nFor each queries[i], it can be shown that answer[i] is the minimum number of operations needed to equalize all the edge weights in the path from ai to bi.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/08/11/graph-9-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 104",
+    "edges.length == n - 1",
+    "edges[i].length == 3",
+    "0 <= ui, vi < n",
+    "1 <= wi <= 26",
+    "The input is generated such that edges represents a valid tree.",
+    "1 <= queries.length == m <= 2 * 104",
+    "queries[i].length == 2",
+    "0 <= ai, bi < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Root the tree at any node.",
+    "Define a 2D array <code>freq[node][weight]</code> which saves the frequency of each edge <code>weight</code> on the path from the root to each <code>node</code>.",
+    "The frequency of edge weight <code>w</code> on the path from <code>a</code> to <code>b</code> is equal to <code>freq[a][w] + freq[b][w] - freq[lca(a,b)][w] * 2</code>, where <code>lca(a,b)</code> is the lowest common ancestor of <code>a</code> and <code>b</code> in the tree.",
+    "<code>lca(a,b)</code> can be calculated using binary lifting algorithm or Tarjan algorithm."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minOperationsQueries(int n, vector<vector<int>>& edges, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minOperationsQueries(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperationsQueries(self, n, edges, queries):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperationsQueries(self, n: int, edges: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minOperationsQueries(int n, int** edges, int edgesSize, int* edgesColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinOperationsQueries(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar minOperationsQueries = function(n, edges, queries) {\n    \n};",
+    "typescript": "function minOperationsQueries(n: number, edges: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function minOperationsQueries($n, $edges, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperationsQueries(_ n: Int, _ edges: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperationsQueries(n: Int, edges: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minOperationsQueries(int n, List<List<int>> edges, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func minOperationsQueries(n int, edges [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef min_operations_queries(n, edges, queries)\n    \nend",
+    "scala": "object Solution {\n    def minOperationsQueries(n: Int, edges: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations_queries(n: i32, edges: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations-queries n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec min_operations_queries(N :: integer(), Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\nmin_operations_queries(N, Edges, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations_queries(n :: integer, edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def min_operations_queries(n, edges, queries) do\n    \n  end\nend"
+  }
+}

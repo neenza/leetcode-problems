@@ -1,0 +1,67 @@
+{
+  "title": "Minimum Time to Visit a Cell In a Grid",
+  "problem_id": "2711",
+  "frontend_id": "2577",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-time-to-visit-a-cell-in-a-grid",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Shortest Path"
+  ],
+  "description": "You are given a m x n matrix grid consisting of non-negative integers where grid[row][col] represents the minimum time required to be able to visit the cell (row, col), which means you can visit the cell (row, col) only when the time you visit it is greater than or equal to grid[row][col].\nYou are standing in the top-left cell of the matrix in the 0th second, and you must move to any adjacent cell in the four directions: up, down, left, and right. Each move you make takes 1 second.\nReturn the minimum time required in which you can visit the bottom-right cell of the matrix. If you cannot visit the bottom-right cell, then return -1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]\nOutput: 7\nExplanation: One of the paths that we can take is the following:\n- at t = 0, we are on the cell (0,0).\n- at t = 1, we move to the cell (0,1). It is possible because grid[0][1] <= 1.\n- at t = 2, we move to the cell (1,1). It is possible because grid[1][1] <= 2.\n- at t = 3, we move to the cell (1,2). It is possible because grid[1][2] <= 3.\n- at t = 4, we move to the cell (1,1). It is possible because grid[1][1] <= 4.\n- at t = 5, we move to the cell (1,2). It is possible because grid[1][2] <= 5.\n- at t = 6, we move to the cell (1,3). It is possible because grid[1][3] <= 6.\n- at t = 7, we move to the cell (2,3). It is possible because grid[2][3] <= 7.\nThe final time is 7. It can be shown that it is the minimum time possible.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/02/14/yetgriddrawio-8.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,2,4],[3,2,1],[1,0,4]]\nOutput: -1\nExplanation: There is no path from the top left to the bottom-right cell.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2023/02/14/yetgriddrawio-9.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "2 <= m, n <= 1000",
+    "4 <= m * n <= 105",
+    "0 <= grid[i][j] <= 105",
+    "grid[0][0] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try using some algorithm that can find the shortest paths on a graph.",
+    "Consider the case where you have to go back and forth between two cells of the matrix to unlock some other cells."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumTime(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTime(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTime(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTime(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumTime(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumTime(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumTime = function(grid) {\n    \n};",
+    "typescript": "function minimumTime(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumTime($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTime(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTime(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTime(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumTime(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_time(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumTime(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_time(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-time grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_time(Grid :: [[integer()]]) -> integer().\nminimum_time(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_time(grid :: [[integer]]) :: integer\n  def minimum_time(grid) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Modified Dijkstra's Algorithm\n\n#### Intuition\n\nWe are given a matrix `grid` where each cell contains the minimum time required for that cell to be accessible. In other words, if we begin at the top-left cell and each move takes 1 second, the value in each cell tells us the minimum time after which we can enter it.\n\nThe challenge arises when we find ourselves stuck in a cell, unable to move forward because all neighboring cells are inaccessible, with higher minimum times. In such situations, we must \"waste\" time to move forward. How do we do that? By wandering around! We can move back and forth between the current cell and any previously accessible cells until a neighboring cell becomes accessible.\n\nThe time we need to \"waste\" is determined by the difference between the current cell’s time and the minimum time of an accessible neighboring cell. It’s important to note that each unit of time wasted takes 2 seconds since we travel to a previous cell and return to the current cell. Therefore, if the difference between the current time and the target cell's time is odd, we can step into the target cell exactly when it becomes accessible. Here's a slideshow demonstrating that:\n\n!?!../Documents/2577/odd_slideshow.json:564,822!?!\n\nOn the other hand, if the difference is even, we’ll arrive at the target cell 1 second after it has opened:\n \n!?!../Documents/2577/even_slideshow.json:564,822!?!\n\nNext, let’s discuss the base case. If we are at the top-left corner and all neighboring cells have a minimum time greater than 1, we are stuck. There are no other accessible cells to waste time on, and thus, the solution is not possible. In this case, we return -1.\n\nOtherwise, a solution exists. We can apply Dijkstra’s shortest path algorithm with a priority queue, starting from the top-left cell. Each element in the queue holds the cell’s coordinates and the time taken to reach it, ordered by time in ascending order. We also maintain a `visited` matrix to track the cells we have already processed. For each cell in the queue, we check its neighbors, compute the time required to enter each one, and add any accessible neighbors to the queue, adjusting for the waiting time. When we reach the bottom-right corner, we return the associated time as the final answer.\n\n#### Algorithm\n\n- Check if both initial moves (right and down) in the grid require more than 1 second:\n  - If both `grid[0][1] > 1` and `grid[1][0] > 1`, return `-1` because it’s impossible to proceed.\n\n- Initialize variables:\n  - `rows` and `cols` store the dimensions of the grid.\n  - `directions` array defines the possible moves: down, up, right, and left.\n  - `visited` array keeps track of visited cells.\n  - `pq` is a priority queue that stores `{time, row, col}` tuples, ordered by minimum time to reach each cell.\n\n- Add the starting point (top-left cell) to the priority queue with its initial time (`grid[0][0]`).\n\n- While the priority queue is not empty:\n  - Poll the cell with the minimum time (`time, row, col`).\n  - If the target cell (bottom-right) is reached, return the `time`.\n\n  - Skip the current cell if it has already been visited.\n  - Mark the current cell as visited.\n\n  - For each of the four possible directions:\n    - Calculate the next cell coordinates (`nextRow, nextCol`).\n    - If the cell is valid (within bounds and not visited), calculate the additional wait time for the next cell:\n      - If the difference between the grid value and the current time is even, the additional wait time is `1`.\n      - Otherwise, the wait time is `0`.\n    - Calculate the next possible time based on the grid value and the wait time, and add the new `{nextTime, nextRow, nextCol}` to the priority queue.\n\n- If the loop ends without reaching the target, return `-1` (no path found).\n\n- Helper function `isValid`:\n  - Check if a cell is within bounds and has not been visited.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the number of rows and $n$ be the number of columns in the grid.\n\n- Time complexity: $O(m \\cdot n \\log(m \\cdot n))$\n  \n    In the main loop, the priority queue operations (insertion and deletion) take $O(\\log k)$ time where $k$ is the number of elements in the queue. Since each cell is added to the queue exactly once, the queue size is bounded by $O(m \\cdot n)$. Therefore, with $O(m \\cdot n)$ cells and $O(\\log(m \\cdot n))$ time for each queue operation, the total time complexity is $O(m \\cdot n\\log(m \\cdot n))$.\n\n- Space complexity: $O(m \\cdot n)$\n  \n    The space complexity is determined by two main components: the `visited` boolean matrix and the priority queue, both of which use $O(m \\cdot n)$ space.   \n\n    Thus, the space complexity of the algorithm is $O(m \\cdot n)$.\n\n---"
+}

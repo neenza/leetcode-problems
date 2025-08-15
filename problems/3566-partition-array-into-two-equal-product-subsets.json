@@ -1,0 +1,58 @@
+{
+  "title": "Partition Array into Two Equal Product Subsets",
+  "problem_id": "3843",
+  "frontend_id": "3566",
+  "difficulty": "Medium",
+  "problem_slug": "partition-array-into-two-equal-product-subsets",
+  "topics": [
+    "Array",
+    "Bit Manipulation",
+    "Recursion",
+    "Enumeration"
+  ],
+  "description": "You are given an integer array nums containing distinct positive integers and an integer target.\nDetermine if you can partition nums into two non-empty disjoint subsets, with each element belonging to exactly one subset, such that the product of the elements in each subset is equal to target.\nReturn true if such a partition exists and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,1,6,8,4], target = 24\nOutput: true\nExplanation: The subsets [3, 8] and [1, 6, 4] each have a product of 24. Hence, the output is true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,5,3,7], target = 15\nOutput: false\nExplanation: There is no way to partition nums into two non-empty disjoint subsets such that both subsets have a product of 15. Hence, the output is false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 12",
+    "1 <= target <= 1015",
+    "1 <= nums[i] <= 100",
+    "All elements of nums are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try iterating over all subsets",
+    "Use bitmasks"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkEqualPartitions(vector<int>& nums, long long target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkEqualPartitions(int[] nums, long target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkEqualPartitions(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkEqualPartitions(self, nums: List[int], target: int) -> bool:\n        ",
+    "c": "bool checkEqualPartitions(int* nums, int numsSize, long long target) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckEqualPartitions(int[] nums, long target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {boolean}\n */\nvar checkEqualPartitions = function(nums, target) {\n    \n};",
+    "typescript": "function checkEqualPartitions(nums: number[], target: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Boolean\n     */\n    function checkEqualPartitions($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkEqualPartitions(_ nums: [Int], _ target: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkEqualPartitions(nums: IntArray, target: Long): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkEqualPartitions(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func checkEqualPartitions(nums []int, target int64) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Boolean}\ndef check_equal_partitions(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def checkEqualPartitions(nums: Array[Int], target: Long): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_equal_partitions(nums: Vec<i32>, target: i64) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-equal-partitions nums target)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec check_equal_partitions(Nums :: [integer()], Target :: integer()) -> boolean().\ncheck_equal_partitions(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_equal_partitions(nums :: [integer], target :: integer) :: boolean\n  def check_equal_partitions(nums, target) do\n    \n  end\nend"
+  }
+}

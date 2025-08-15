@@ -1,0 +1,54 @@
+{
+  "title": "Find Occurrences of an Element in an Array",
+  "problem_id": "3420",
+  "frontend_id": "3159",
+  "difficulty": "Medium",
+  "problem_slug": "find-occurrences-of-an-element-in-an-array",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given an integer array nums, an integer array queries, and an integer x.\nFor each queries[i], you need to find the index of the queries[i]th occurrence of x in the nums array. If there are fewer than queries[i] occurrences of x, the answer should be -1 for that query.\nReturn an integer array answer containing the answers to all queries.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,1,7], queries = [1,3,2,4], x = 1\nOutput: [0,-1,2,-1]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3], queries = [10], x = 5\nOutput: [-1]\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length, queries.length <= 105",
+    "1 <= queries[i] <= 105",
+    "1 <= nums[i], x <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Compress the array <code>nums</code> and save all the occurrences of each element in the separate arrays."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> occurrencesOfElement(vector<int>& nums, vector<int>& queries, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] occurrencesOfElement(int[] nums, int[] queries, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def occurrencesOfElement(self, nums, queries, x):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[int]\n        :type x: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* occurrencesOfElement(int* nums, int numsSize, int* queries, int queriesSize, int x, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] OccurrencesOfElement(int[] nums, int[] queries, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} queries\n * @param {number} x\n * @return {number[]}\n */\nvar occurrencesOfElement = function(nums, queries, x) {\n    \n};",
+    "typescript": "function occurrencesOfElement(nums: number[], queries: number[], x: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $queries\n     * @param Integer $x\n     * @return Integer[]\n     */\n    function occurrencesOfElement($nums, $queries, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func occurrencesOfElement(_ nums: [Int], _ queries: [Int], _ x: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun occurrencesOfElement(nums: IntArray, queries: IntArray, x: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> occurrencesOfElement(List<int> nums, List<int> queries, int x) {\n    \n  }\n}",
+    "golang": "func occurrencesOfElement(nums []int, queries []int, x int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} queries\n# @param {Integer} x\n# @return {Integer[]}\ndef occurrences_of_element(nums, queries, x)\n    \nend",
+    "scala": "object Solution {\n    def occurrencesOfElement(nums: Array[Int], queries: Array[Int], x: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn occurrences_of_element(nums: Vec<i32>, queries: Vec<i32>, x: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (occurrences-of-element nums queries x)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec occurrences_of_element(Nums :: [integer()], Queries :: [integer()], X :: integer()) -> [integer()].\noccurrences_of_element(Nums, Queries, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec occurrences_of_element(nums :: [integer], queries :: [integer], x :: integer) :: [integer]\n  def occurrences_of_element(nums, queries, x) do\n    \n  end\nend"
+  }
+}

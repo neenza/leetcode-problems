@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Subarray Min-Product",
+  "problem_id": "1985",
+  "frontend_id": "1856",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-subarray-min-product",
+  "topics": [
+    "Array",
+    "Stack",
+    "Monotonic Stack",
+    "Prefix Sum"
+  ],
+  "description": "The min-product of an array is equal to the minimum value in the array multiplied by the array's sum.\nGiven an array of integers nums, return the maximum min-product of any non-empty subarray of nums. Since the answer may be large, return it modulo 109 + 7.\nNote that the min-product should be maximized before performing the modulo operation. Testcases are generated such that the maximum min-product without modulo will fit in a 64-bit signed integer.\nA subarray is a contiguous part of an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,2]\nOutput: 14\nExplanation: The maximum min-product is achieved with the subarray [2,3,2] (minimum value is 2).\n2 * (2+3+2) = 2 * 7 = 14.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,3,1,2]\nOutput: 18\nExplanation: The maximum min-product is achieved with the subarray [3,3] (minimum value is 3).\n3 * (3+3) = 3 * 6 = 18.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,1,5,6,4,2]\nOutput: 60\nExplanation: The maximum min-product is achieved with the subarray [5,6,4] (minimum value is 4).\n4 * (5+6+4) = 4 * 15 = 60.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is there a way we can sort the elements to simplify the problem?",
+    "Can we find the maximum min-product for every value in the array?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSumMinProduct(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSumMinProduct(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSumMinProduct(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSumMinProduct(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxSumMinProduct(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSumMinProduct(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSumMinProduct = function(nums) {\n    \n};",
+    "typescript": "function maxSumMinProduct(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxSumMinProduct($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSumMinProduct(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSumMinProduct(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSumMinProduct(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxSumMinProduct(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_sum_min_product(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxSumMinProduct(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_sum_min_product(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-sum-min-product nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_sum_min_product(Nums :: [integer()]) -> integer().\nmax_sum_min_product(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_sum_min_product(nums :: [integer]) :: integer\n  def max_sum_min_product(nums) do\n    \n  end\nend"
+  }
+}

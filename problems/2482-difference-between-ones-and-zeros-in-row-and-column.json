@@ -1,0 +1,63 @@
+{
+  "title": "Difference Between Ones and Zeros in Row and Column",
+  "problem_id": "2606",
+  "frontend_id": "2482",
+  "difficulty": "Medium",
+  "problem_slug": "difference-between-ones-and-zeros-in-row-and-column",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given a 0-indexed m x n binary matrix grid.\nA 0-indexed m x n difference matrix diff is created with the following procedure:\nReturn the difference matrix diff.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,1],[1,0,1],[0,0,1]]\nOutput: [[0,0,4],[0,0,4],[-2,-2,2]]\nExplanation:\n- diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 2 + 1 - 1 - 2 = 0 \n- diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 2 + 1 - 1 - 2 = 0 \n- diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 2 + 3 - 1 - 0 = 4 \n- diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 2 + 1 - 1 - 2 = 0 \n- diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 2 + 1 - 1 - 2 = 0 \n- diff[1][2] = onesRow1 + onesCol2 - zerosRow1 - zerosCol2 = 2 + 3 - 1 - 0 = 4 \n- diff[2][0] = onesRow2 + onesCol0 - zerosRow2 - zerosCol0 = 1 + 1 - 2 - 2 = -2\n- diff[2][1] = onesRow2 + onesCol1 - zerosRow2 - zerosCol1 = 1 + 1 - 2 - 2 = -2\n- diff[2][2] = onesRow2 + onesCol2 - zerosRow2 - zerosCol2 = 1 + 3 - 2 - 0 = 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/06/image-20221106171729-5.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[1,1,1]]\nOutput: [[5,5,5],[5,5,5]]\nExplanation:\n- diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 3 + 2 - 0 - 0 = 5\n- diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 3 + 2 - 0 - 0 = 5\n- diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 3 + 2 - 0 - 0 = 5\n- diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 3 + 2 - 0 - 0 = 5\n- diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 3 + 2 - 0 - 0 = 5\n- diff[1][2] = onesRow1 + onesCol2 - zerosRow1 - zerosCol2 = 3 + 2 - 0 - 0 = 5",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/06/image-20221106171747-6.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 105",
+    "1 <= m * n <= 105",
+    "grid[i][j] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You need to reuse information about a row or a column many times. Try storing it to avoid computing it multiple times.",
+    "Use an array to store the number of 1’s in each row and another array to store the number of 1’s in each column. Once you know the number of 1’s in each row or column, you can also easily calculate the number of 0’s."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> onesMinusZeros(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] onesMinusZeros(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def onesMinusZeros(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def onesMinusZeros(self, grid: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** onesMinusZeros(int** grid, int gridSize, int* gridColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] OnesMinusZeros(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number[][]}\n */\nvar onesMinusZeros = function(grid) {\n    \n};",
+    "typescript": "function onesMinusZeros(grid: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer[][]\n     */\n    function onesMinusZeros($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func onesMinusZeros(_ grid: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun onesMinusZeros(grid: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> onesMinusZeros(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func onesMinusZeros(grid [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer[][]}\ndef ones_minus_zeros(grid)\n    \nend",
+    "scala": "object Solution {\n    def onesMinusZeros(grid: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn ones_minus_zeros(grid: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (ones-minus-zeros grid)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec ones_minus_zeros(Grid :: [[integer()]]) -> [[integer()]].\nones_minus_zeros(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec ones_minus_zeros(grid :: [[integer]]) :: [[integer]]\n  def ones_minus_zeros(grid) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Array Counter\n\n**Intuition**\n\nTo build the matrix `diff`, we need to have the count of ones and zeroes in each row and column of the given matrix `grid`. One way is that for each cell `(i, j)` in the matrix `grid`, we can iterate over the `ith` row and `jth` column to find the number of ones and zeroes, and set the value `diff[i][j]` as $onesRow_{i}$ + $onesCol_{j}$ - $zerosRow_{i}$ - $zerosCol_{j}$. However, this approach is inefficient, as for each of the $M \\cdot N$ cells, we will have to iterate over a row and a column of $M + N$ cells to count the number of zeroes and ones, resulting in a complexity of $O(M  \\cdot N  \\cdot (M + N))$.\n\nNote that in the above approach, we are iterating over the cells repeatedly. However, when we iterate over the `ith` row to find the number of ones/zeros of that row, we're also simultaneously finding (and recording, if we can) all the columns of the cell located in the row. For example, when we traverse the first row, we are not only recording the count of ones and zeros in the first row but also the count of ones/zeros in all the cells located in the first row. When we traverse the second row, we also record the count of ones/zeros in all the cells located in the second row. So, when we finish traversing all the rows, we simultaneously obtain the count of ones/zeros for each column. Therefore, we could avoid repeated iteration by precomputing the number of ones/zeroes in each row and column.\n\nWe will keep two arrays `onesRow` of size `M` to store the count of ones in each row and `onesCol` of size `N` to store the ones in each column. We will then iterate over each cell in the matrix `grid` and for each cell, we add the value `grid[i][j]` to `onesRow[i]` and `onesCol[j]`. This is because matrices are binary, and adding `grid[i][j]` essentially increases the number of ones. Specifically, if `grid[i][j] = 1`, adding `grid[i][j]` means increasing the number of ones. If `grid[i][j] = 0`, we can still add `grid[i][j]`, since it means adding 0 so we are not increasing the number of ones.\n\nNote that we don't need to build another two arrays to store the counts of zeroes, this is because the length of each row and column is fixed, and we can get the number of zeroes by subtracting the number of ones from the length of a row/column.\n![fig](../Figures/2482/2482A.png)\n\nSo the value expression for `diff[i]` will be:\n\n```\n diff[i][j] = onesRow[i] + onesCol[j] - (N - onesRow[i]) - (M - onesCol[j])\n            = 2 * onesRow[i] + 2 * onesCol[j] - N - M\n```\n\n**Algorithm**\n\n1. Initialize two arrays `onesRow` and `onesCol` of size `M` and `N` with zeroes.\n2. Iterate over the cells in the matrix `grid` and add the value `grid[i][j]` to `onesRow[i]` and `onesCol[j]`.\n3. Initialize an empty matrix matrix `diff` with size `M * N`.\n4. Iterate over the matrix `grid` and assign `diff[i][j]` as `2 * onesRow[i] + 2 * onesCol[j] - N - M`.\n5. Return `diff`.\n\n**Implementation****Complexity Analysis**\n\nHere, $M$ is the number of rows in the `grid`, and $N$ is the number of columns.\n\n* Time complexity: $O(M * N)$\n\n  Each cell in the matrix is traversed twice, once to find the ones count and store them in `onesRow` and `onesCol`. Then again to find the values in the matrix `diff`. Hence the total time complexity is equal to $O(M * N)$.\n\n* Space complexity: $O(M + N)$\n\n  The only space we required apart from the matrix `diff` which is used to store the answer and is not considered as part of space complexity are the two arrays `onesRow` and `onesCol` to store the count of ones in the rows and columns. Therefore, the total space complexity is equal to $O(M + N)$.---"
+}

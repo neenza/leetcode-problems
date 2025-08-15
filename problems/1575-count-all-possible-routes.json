@@ -1,0 +1,63 @@
+{
+  "title": "Count All Possible Routes",
+  "problem_id": "1680",
+  "frontend_id": "1575",
+  "difficulty": "Hard",
+  "problem_slug": "count-all-possible-routes",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Memoization"
+  ],
+  "description": "You are given an array of distinct positive integers locations where locations[i] represents the position of city i. You are also given integers start, finish and fuel representing the starting city, ending city, and the initial amount of fuel you have, respectively.\nAt each step, if you are at city i, you can pick any city j such that j != i and 0 <= j < locations.length and move to city j. Moving from city i to city j reduces the amount of fuel you have by |locations[i] - locations[j]|. Please notice that |x| denotes the absolute value of x.\nNotice that fuel cannot become negative at any point in time, and that you are allowed to visit any city more than once (including start and finish).\nReturn the count of all possible routes from start to finish. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: locations = [2,3,6,8,4], start = 1, finish = 3, fuel = 5\nOutput: 4\nExplanation: The following are all possible routes, each uses 5 units of fuel:\n1 -> 3\n1 -> 2 -> 3\n1 -> 4 -> 3\n1 -> 4 -> 2 -> 3",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: locations = [4,3,1], start = 1, finish = 0, fuel = 6\nOutput: 5\nExplanation: The following are all possible routes:\n1 -> 0, used fuel = 1\n1 -> 2 -> 0, used fuel = 5\n1 -> 2 -> 1 -> 0, used fuel = 5\n1 -> 0 -> 1 -> 0, used fuel = 3\n1 -> 0 -> 1 -> 0 -> 1 -> 0, used fuel = 5",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: locations = [5,2,1], start = 0, finish = 2, fuel = 3\nOutput: 0\nExplanation: It is impossible to get from 0 to 2 using only 3 units of fuel since the shortest route needs 4 units of fuel.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= locations.length <= 100",
+    "1 <= locations[i] <= 109",
+    "All integers in locations are distinct.",
+    "0 <= start, finish < locations.length",
+    "1 <= fuel <= 200"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to solve this problem with each state defined by the city index and fuel left.",
+    "Since the array contains distinct integers fuel will always be spent in each move and so there can be no cycles."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countRoutes(vector<int>& locations, int start, int finish, int fuel) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countRoutes(int[] locations, int start, int finish, int fuel) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countRoutes(self, locations, start, finish, fuel):\n        \"\"\"\n        :type locations: List[int]\n        :type start: int\n        :type finish: int\n        :type fuel: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:\n        ",
+    "c": "int countRoutes(int* locations, int locationsSize, int start, int finish, int fuel) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountRoutes(int[] locations, int start, int finish, int fuel) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} locations\n * @param {number} start\n * @param {number} finish\n * @param {number} fuel\n * @return {number}\n */\nvar countRoutes = function(locations, start, finish, fuel) {\n    \n};",
+    "typescript": "function countRoutes(locations: number[], start: number, finish: number, fuel: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $locations\n     * @param Integer $start\n     * @param Integer $finish\n     * @param Integer $fuel\n     * @return Integer\n     */\n    function countRoutes($locations, $start, $finish, $fuel) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countRoutes(_ locations: [Int], _ start: Int, _ finish: Int, _ fuel: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countRoutes(locations: IntArray, start: Int, finish: Int, fuel: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countRoutes(List<int> locations, int start, int finish, int fuel) {\n    \n  }\n}",
+    "golang": "func countRoutes(locations []int, start int, finish int, fuel int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} locations\n# @param {Integer} start\n# @param {Integer} finish\n# @param {Integer} fuel\n# @return {Integer}\ndef count_routes(locations, start, finish, fuel)\n    \nend",
+    "scala": "object Solution {\n    def countRoutes(locations: Array[Int], start: Int, finish: Int, fuel: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_routes(locations: Vec<i32>, start: i32, finish: i32, fuel: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-routes locations start finish fuel)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_routes(Locations :: [integer()], Start :: integer(), Finish :: integer(), Fuel :: integer()) -> integer().\ncount_routes(Locations, Start, Finish, Fuel) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_routes(locations :: [integer], start :: integer, finish :: integer, fuel :: integer) :: integer\n  def count_routes(locations, start, finish, fuel) do\n    \n  end\nend"
+  }
+}

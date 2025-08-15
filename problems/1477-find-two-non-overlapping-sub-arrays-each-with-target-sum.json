@@ -1,0 +1,64 @@
+{
+  "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+  "problem_id": "1573",
+  "frontend_id": "1477",
+  "difficulty": "Medium",
+  "problem_slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sliding Window"
+  ],
+  "description": "You are given an array of integers arr and an integer target.\nYou have to find two non-overlapping sub-arrays of arr each with a sum equal target. There can be multiple answers so you have to find an answer where the sum of the lengths of the two sub-arrays is minimum.\nReturn the minimum sum of the lengths of the two required sub-arrays, or return -1 if you cannot find such two sub-arrays.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,2,2,4,3], target = 3\nOutput: 2\nExplanation: Only two sub-arrays have sum = 3 ([3] and [3]). The sum of their lengths is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [7,3,4,7], target = 7\nOutput: 2\nExplanation: Although we have three non-overlapping sub-arrays of sum = 7 ([7], [3,4] and [7]), but we will choose the first and third sub-arrays as the sum of their lengths is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: arr = [4,3,2,6,2,3,4], target = 6\nOutput: -1\nExplanation: We have only one sub-array of sum = 6.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr.length <= 105",
+    "1 <= arr[i] <= 1000",
+    "1 <= target <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let's create two arrays prefix and suffix where prefix[i] is the minimum length of sub-array ends before i and has sum = k, suffix[i] is the minimum length of sub-array starting at or after i and has sum = k.",
+    "The answer we are searching for is min(prefix[i] + suffix[i]) for all values of i from 0 to n-1 where n == arr.length.",
+    "If you are still stuck with how to build prefix and suffix, you can store for each index i the length of the sub-array starts at i and has sum = k or infinity otherwise, and you can use it to build both prefix and suffix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSumOfLengths(vector<int>& arr, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSumOfLengths(int[] arr, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSumOfLengths(self, arr, target):\n        \"\"\"\n        :type arr: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSumOfLengths(self, arr: List[int], target: int) -> int:\n        ",
+    "c": "int minSumOfLengths(int* arr, int arrSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSumOfLengths(int[] arr, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} target\n * @return {number}\n */\nvar minSumOfLengths = function(arr, target) {\n    \n};",
+    "typescript": "function minSumOfLengths(arr: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @param Integer $target\n     * @return Integer\n     */\n    function minSumOfLengths($arr, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSumOfLengths(_ arr: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSumOfLengths(arr: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSumOfLengths(List<int> arr, int target) {\n    \n  }\n}",
+    "golang": "func minSumOfLengths(arr []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @param {Integer} target\n# @return {Integer}\ndef min_sum_of_lengths(arr, target)\n    \nend",
+    "scala": "object Solution {\n    def minSumOfLengths(arr: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_sum_of_lengths(arr: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-sum-of-lengths arr target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_sum_of_lengths(Arr :: [integer()], Target :: integer()) -> integer().\nmin_sum_of_lengths(Arr, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_sum_of_lengths(arr :: [integer], target :: integer) :: integer\n  def min_sum_of_lengths(arr, target) do\n    \n  end\nend"
+  }
+}

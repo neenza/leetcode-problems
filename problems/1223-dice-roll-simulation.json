@@ -1,0 +1,60 @@
+{
+  "title": "Dice Roll Simulation",
+  "problem_id": "1343",
+  "frontend_id": "1223",
+  "difficulty": "Hard",
+  "problem_slug": "dice-roll-simulation",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "A die simulator generates a random number from 1 to 6 for each roll. You introduced a constraint to the generator such that it cannot roll the number i more than rollMax[i] (1-indexed) consecutive times.\nGiven an array of integers rollMax and an integer n, return the number of distinct sequences that can be obtained with exact n rolls. Since the answer may be too large, return it modulo 109 + 7.\nTwo sequences are considered different if at least one element differs from each other.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, rollMax = [1,1,2,2,2,3]\nOutput: 34\nExplanation: There will be 2 rolls of die, if there are no constraints on the die, there are 6 * 6 = 36 possible combinations. In this case, looking at rollMax array, the numbers 1 and 2 appear at most once consecutively, therefore sequences (1,1) and (2,2) cannot occur, so the final answer is 36-2 = 34.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, rollMax = [1,1,1,1,1,1]\nOutput: 30",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, rollMax = [1,1,1,2,2,3]\nOutput: 181",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 5000",
+    "rollMax.length == 6",
+    "1 <= rollMax[i] <= 15"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think on Dynamic Programming.",
+    "DP(pos, last) which means we are at the position pos having as last the last character seen."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int dieSimulator(int n, vector<int>& rollMax) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int dieSimulator(int n, int[] rollMax) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def dieSimulator(self, n, rollMax):\n        \"\"\"\n        :type n: int\n        :type rollMax: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def dieSimulator(self, n: int, rollMax: List[int]) -> int:\n        ",
+    "c": "int dieSimulator(int n, int* rollMax, int rollMaxSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DieSimulator(int n, int[] rollMax) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} rollMax\n * @return {number}\n */\nvar dieSimulator = function(n, rollMax) {\n    \n};",
+    "typescript": "function dieSimulator(n: number, rollMax: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $rollMax\n     * @return Integer\n     */\n    function dieSimulator($n, $rollMax) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func dieSimulator(_ n: Int, _ rollMax: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun dieSimulator(n: Int, rollMax: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int dieSimulator(int n, List<int> rollMax) {\n    \n  }\n}",
+    "golang": "func dieSimulator(n int, rollMax []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} roll_max\n# @return {Integer}\ndef die_simulator(n, roll_max)\n    \nend",
+    "scala": "object Solution {\n    def dieSimulator(n: Int, rollMax: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn die_simulator(n: i32, roll_max: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (die-simulator n rollMax)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec die_simulator(N :: integer(), RollMax :: [integer()]) -> integer().\ndie_simulator(N, RollMax) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec die_simulator(n :: integer, roll_max :: [integer]) :: integer\n  def die_simulator(n, roll_max) do\n    \n  end\nend"
+  }
+}

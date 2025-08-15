@@ -1,0 +1,59 @@
+{
+  "title": "Count Anagrams",
+  "problem_id": "2605",
+  "frontend_id": "2514",
+  "difficulty": "Hard",
+  "problem_slug": "count-anagrams",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Combinatorics",
+    "Counting"
+  ],
+  "description": "You are given a string s containing one or more words. Every consecutive pair of words is separated by a single space ' '.\nA string t is an anagram of string s if the ith word of t is a permutation of the ith word of s.\nReturn the number of distinct anagrams of s. Since the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"too hot\"\nOutput: 18\nExplanation: Some of the anagrams of the given string are \"too hot\", \"oot hot\", \"oto toh\", \"too toh\", and \"too oht\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aa\"\nOutput: 1\nExplanation: There is only one anagram possible for the given string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters and spaces ' '.",
+    "There is single space between consecutive words."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each word, can you count the number of permutations possible if all characters are distinct?",
+    "How to reduce overcounting when letters are repeated?",
+    "The product of the counts of distinct permutations of all words will give the final answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countAnagrams(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countAnagrams(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countAnagrams(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countAnagrams(self, s: str) -> int:\n        ",
+    "c": "int countAnagrams(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountAnagrams(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countAnagrams = function(s) {\n    \n};",
+    "typescript": "function countAnagrams(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countAnagrams($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countAnagrams(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countAnagrams(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countAnagrams(String s) {\n    \n  }\n}",
+    "golang": "func countAnagrams(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_anagrams(s)\n    \nend",
+    "scala": "object Solution {\n    def countAnagrams(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_anagrams(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-anagrams s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_anagrams(S :: unicode:unicode_binary()) -> integer().\ncount_anagrams(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_anagrams(s :: String.t) :: integer\n  def count_anagrams(s) do\n    \n  end\nend"
+  }
+}

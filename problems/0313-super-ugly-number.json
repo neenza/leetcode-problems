@@ -1,0 +1,55 @@
+{
+  "title": "Super Ugly Number",
+  "problem_id": "313",
+  "frontend_id": "313",
+  "difficulty": "Medium",
+  "problem_slug": "super-ugly-number",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming"
+  ],
+  "description": "A super ugly number is a positive integer whose prime factors are in the array primes.\nGiven an integer n and an array of integers primes, return the nth super ugly number.\nThe nth super ugly number is guaranteed to fit in a 32-bit signed integer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 12, primes = [2,7,13,19]\nOutput: 32\nExplanation: [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1, primes = [2,3,5]\nOutput: 1\nExplanation: 1 has no prime factors, therefore all of its prime factors are in the array primes = [2,3,5].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "1 <= primes.length <= 100",
+    "2 <= primes[i] <= 1000",
+    "primes[i] is guaranteed to be a prime number.",
+    "All the values of primes are unique and sorted in ascending order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int nthSuperUglyNumber(int n, vector<int>& primes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nthSuperUglyNumber(int n, int[] primes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nthSuperUglyNumber(self, n, primes):\n        \"\"\"\n        :type n: int\n        :type primes: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nthSuperUglyNumber(self, n: int, primes: List[int]) -> int:\n        ",
+    "c": "int nthSuperUglyNumber(int n, int* primes, int primesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NthSuperUglyNumber(int n, int[] primes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} primes\n * @return {number}\n */\nvar nthSuperUglyNumber = function(n, primes) {\n    \n};",
+    "typescript": "function nthSuperUglyNumber(n: number, primes: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $primes\n     * @return Integer\n     */\n    function nthSuperUglyNumber($n, $primes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nthSuperUglyNumber(_ n: Int, _ primes: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nthSuperUglyNumber(n: Int, primes: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int nthSuperUglyNumber(int n, List<int> primes) {\n    \n  }\n}",
+    "golang": "func nthSuperUglyNumber(n int, primes []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} primes\n# @return {Integer}\ndef nth_super_ugly_number(n, primes)\n    \nend",
+    "scala": "object Solution {\n    def nthSuperUglyNumber(n: Int, primes: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn nth_super_ugly_number(n: i32, primes: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (nth-super-ugly-number n primes)\n  (-> exact-integer? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec nth_super_ugly_number(N :: integer(), Primes :: [integer()]) -> integer().\nnth_super_ugly_number(N, Primes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec nth_super_ugly_number(n :: integer, primes :: [integer]) :: integer\n  def nth_super_ugly_number(n, primes) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Check If It Is a Straight Line",
+  "problem_id": "1349",
+  "frontend_id": "1232",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-it-is-a-straight-line",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these points make a straight line in the XY plane.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/10/15/untitled-diagram-2.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/10/09/untitled-diagram-1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= coordinates.length <= 1000",
+    "coordinates[i].length == 2",
+    "-10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4",
+    "coordinates contains no duplicate point."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there're only 2 points, return true.",
+    "Check if all other points lie on the line defined by the first 2 points.",
+    "Use cross product to check collinearity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkStraightLine(vector<vector<int>>& coordinates) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkStraightLine(int[][] coordinates) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkStraightLine(self, coordinates):\n        \"\"\"\n        :type coordinates: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:\n        ",
+    "c": "bool checkStraightLine(int** coordinates, int coordinatesSize, int* coordinatesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckStraightLine(int[][] coordinates) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} coordinates\n * @return {boolean}\n */\nvar checkStraightLine = function(coordinates) {\n    \n};",
+    "typescript": "function checkStraightLine(coordinates: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $coordinates\n     * @return Boolean\n     */\n    function checkStraightLine($coordinates) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkStraightLine(_ coordinates: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkStraightLine(coordinates: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkStraightLine(List<List<int>> coordinates) {\n    \n  }\n}",
+    "golang": "func checkStraightLine(coordinates [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} coordinates\n# @return {Boolean}\ndef check_straight_line(coordinates)\n    \nend",
+    "scala": "object Solution {\n    def checkStraightLine(coordinates: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_straight_line(coordinates: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-straight-line coordinates)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec check_straight_line(Coordinates :: [[integer()]]) -> boolean().\ncheck_straight_line(Coordinates) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_straight_line(coordinates :: [[integer]]) :: boolean\n  def check_straight_line(coordinates) do\n    \n  end\nend"
+  }
+}

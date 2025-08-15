@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Moves to Reach Target in Grid",
+  "problem_id": "3922",
+  "frontend_id": "3609",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-moves-to-reach-target-in-grid",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given four integers sx, sy, tx, and ty, representing two points (sx, sy) and (tx, ty) on an infinitely large 2D grid.\nYou start at (sx, sy).\nAt any point (x, y), define m = max(x, y). You can either:\nReturn the minimum number of moves required to reach (tx, ty). If it is impossible to reach the target, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: sx = 1, sy = 2, tx = 5, ty = 4\nOutput: 2\nExplanation:\nThe optimal path is:\nThus, the minimum number of moves to reach (5, 4) is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: sx = 0, sy = 1, tx = 2, ty = 3\nOutput: 3\nExplanation:\nThe optimal path is:\nThus, the minimum number of moves to reach (2, 3) is 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: sx = 1, sy = 1, tx = 2, ty = 2\nOutput: -1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= sx <= tx <= 109",
+    "0 <= sy <= ty <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Work backwards from <code>(tx, ty)</code> to <code>(sx, sy)</code>, undoing one move at each step.",
+    "If the larger coordinate >= 2 × (the smaller), undo by halving the larger; otherwise undo by subtracting the smaller from the larger.",
+    "Count these undo-steps until you hit <code>(sx, sy)</code> (return the count), or return -1 if you drop below or get stuck."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minMoves(int sx, int sy, int tx, int ty) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMoves(int sx, int sy, int tx, int ty) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minMoves(self, sx, sy, tx, ty):\n        \"\"\"\n        :type sx: int\n        :type sy: int\n        :type tx: int\n        :type ty: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minMoves(self, sx: int, sy: int, tx: int, ty: int) -> int:\n        ",
+    "c": "int minMoves(int sx, int sy, int tx, int ty) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinMoves(int sx, int sy, int tx, int ty) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} sx\n * @param {number} sy\n * @param {number} tx\n * @param {number} ty\n * @return {number}\n */\nvar minMoves = function(sx, sy, tx, ty) {\n    \n};",
+    "typescript": "function minMoves(sx: number, sy: number, tx: number, ty: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $sx\n     * @param Integer $sy\n     * @param Integer $tx\n     * @param Integer $ty\n     * @return Integer\n     */\n    function minMoves($sx, $sy, $tx, $ty) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minMoves(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minMoves(sx: Int, sy: Int, tx: Int, ty: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minMoves(int sx, int sy, int tx, int ty) {\n    \n  }\n}",
+    "golang": "func minMoves(sx int, sy int, tx int, ty int) int {\n    \n}",
+    "ruby": "# @param {Integer} sx\n# @param {Integer} sy\n# @param {Integer} tx\n# @param {Integer} ty\n# @return {Integer}\ndef min_moves(sx, sy, tx, ty)\n    \nend",
+    "scala": "object Solution {\n    def minMoves(sx: Int, sy: Int, tx: Int, ty: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_moves(sx: i32, sy: i32, tx: i32, ty: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-moves sx sy tx ty)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_moves(Sx :: integer(), Sy :: integer(), Tx :: integer(), Ty :: integer()) -> integer().\nmin_moves(Sx, Sy, Tx, Ty) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_moves(sx :: integer, sy :: integer, tx :: integer, ty :: integer) :: integer\n  def min_moves(sx, sy, tx, ty) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Corporate Flight Bookings",
+  "problem_id": "1206",
+  "frontend_id": "1109",
+  "difficulty": "Medium",
+  "problem_slug": "corporate-flight-bookings",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "There are n flights that are labeled from 1 to n.\nYou are given an array of flight bookings bookings, where bookings[i] = [firsti, lasti, seatsi] represents a booking for flights firsti through lasti (inclusive) with seatsi seats reserved for each flight in the range.\nReturn an array answer of length n, where answer[i] is the total number of seats reserved for flight i.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5\nOutput: [10,55,45,25,25]\nExplanation:\nFlight labels:        1   2   3   4   5\nBooking 1 reserved:  10  10\nBooking 2 reserved:      20  20\nBooking 3 reserved:      25  25  25  25\nTotal seats:         10  55  45  25  25\nHence, answer = [10,55,45,25,25]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: bookings = [[1,2,10],[2,2,15]], n = 2\nOutput: [10,25]\nExplanation:\nFlight labels:        1   2\nBooking 1 reserved:  10  10\nBooking 2 reserved:      15\nTotal seats:         10  25\nHence, answer = [10,25]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2 * 104",
+    "1 <= bookings.length <= 2 * 104",
+    "bookings[i].length == 3",
+    "1 <= firsti <= lasti <= n",
+    "1 <= seatsi <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] corpFlightBookings(int[][] bookings, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def corpFlightBookings(self, bookings, n):\n        \"\"\"\n        :type bookings: List[List[int]]\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* corpFlightBookings(int** bookings, int bookingsSize, int* bookingsColSize, int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CorpFlightBookings(int[][] bookings, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} bookings\n * @param {number} n\n * @return {number[]}\n */\nvar corpFlightBookings = function(bookings, n) {\n    \n};",
+    "typescript": "function corpFlightBookings(bookings: number[][], n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $bookings\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function corpFlightBookings($bookings, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func corpFlightBookings(_ bookings: [[Int]], _ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun corpFlightBookings(bookings: Array<IntArray>, n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> corpFlightBookings(List<List<int>> bookings, int n) {\n    \n  }\n}",
+    "golang": "func corpFlightBookings(bookings [][]int, n int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} bookings\n# @param {Integer} n\n# @return {Integer[]}\ndef corp_flight_bookings(bookings, n)\n    \nend",
+    "scala": "object Solution {\n    def corpFlightBookings(bookings: Array[Array[Int]], n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn corp_flight_bookings(bookings: Vec<Vec<i32>>, n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (corp-flight-bookings bookings n)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec corp_flight_bookings(Bookings :: [[integer()]], N :: integer()) -> [integer()].\ncorp_flight_bookings(Bookings, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec corp_flight_bookings(bookings :: [[integer]], n :: integer) :: [integer]\n  def corp_flight_bookings(bookings, n) do\n    \n  end\nend"
+  }
+}

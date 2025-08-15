@@ -1,0 +1,58 @@
+{
+  "title": "Keyboard Row",
+  "problem_id": "500",
+  "frontend_id": "500",
+  "difficulty": "Easy",
+  "problem_slug": "keyboard-row",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.\nNote that the strings are case-insensitive, both lowercased and uppercased of the same letter are treated as if they are at the same row.\nIn the American keyboard:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"Hello\",\"Alaska\",\"Dad\",\"Peace\"]\nOutput: [\"Alaska\",\"Dad\"]\nExplanation:\nBoth \"a\" and \"A\" are in the 2nd row of the American keyboard due to case insensitivity.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"omk\"]\nOutput: []",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"adsdf\",\"sfd\"]\nOutput: [\"adsdf\",\"sfd\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 20",
+    "1 <= words[i].length <= 100",
+    "words[i] consists of English letters (both lowercase and uppercase)."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> findWords(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] findWords(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findWords(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findWords(self, words: List[str]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findWords(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string[] FindWords(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string[]}\n */\nvar findWords = function(words) {\n    \n};",
+    "typescript": "function findWords(words: string[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return String[]\n     */\n    function findWords($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findWords(_ words: [String]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findWords(words: Array<String>): Array<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> findWords(List<String> words) {\n    \n  }\n}",
+    "golang": "func findWords(words []string) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {String[]}\ndef find_words(words)\n    \nend",
+    "scala": "object Solution {\n    def findWords(words: Array[String]): Array[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_words(words: Vec<String>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (find-words words)\n  (-> (listof string?) (listof string?))\n  )",
+    "erlang": "-spec find_words(Words :: [unicode:unicode_binary()]) -> [unicode:unicode_binary()].\nfind_words(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_words(words :: [String.t]) :: [String.t]\n  def find_words(words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Sign of the Product of an Array",
+  "problem_id": "1950",
+  "frontend_id": "1822",
+  "difficulty": "Easy",
+  "problem_slug": "sign-of-the-product-of-an-array",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "Implement a function signFunc(x) that returns:\nYou are given an integer array nums. Let product be the product of all values in the array nums.\nReturn signFunc(product).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-1,-2,-3,-4,3,2,1]\nOutput: 1\nExplanation: The product of all values in the array is 144, and signFunc(144) = 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,5,0,2,-3]\nOutput: 0\nExplanation: The product of all values in the array is 0, and signFunc(0) = 0",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [-1,1,-1,1,-1]\nOutput: -1\nExplanation: The product of all values in the array is -1, and signFunc(-1) = -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there is a 0 in the array the answer is 0",
+    "To avoid overflow make all the negative numbers -1 and all positive numbers 1 and calculate the prod"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int arraySign(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int arraySign(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def arraySign(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def arraySign(self, nums: List[int]) -> int:\n        ",
+    "c": "int arraySign(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ArraySign(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar arraySign = function(nums) {\n    \n};",
+    "typescript": "function arraySign(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function arraySign($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func arraySign(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun arraySign(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int arraySign(List<int> nums) {\n    \n  }\n}",
+    "golang": "func arraySign(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef array_sign(nums)\n    \nend",
+    "scala": "object Solution {\n    def arraySign(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn array_sign(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (array-sign nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec array_sign(Nums :: [integer()]) -> integer().\narray_sign(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec array_sign(nums :: [integer]) :: integer\n  def array_sign(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given an integer array `nums`. Our task is to return the sign of the product of all values in the array `nums`.\n\n---\n\n### Approach 1: Counting Negative Numbers\n\n#### Intuition\n\nA brute force approach is to multiply all the numbers in `nums` and check the sign of the product. However, this would fail due to integer overflow because the product can reach up to $100^{1000}$, exceeding the integer limit for major languages like `C++` and `Java`.\n\n> Note that since there is no integer limit in `Python`, this could work, but it is still inefficient to store and operate on such large numbers.\n\nWe can concentrate on computing the number of negative numbers in `nums` because we only need the sign of the product of the values.\n\nIf the number of negative numbers is even, the final product will be a positive number because two negative numbers cancel each other out to produce a positive number.\n\nIf the number of negative numbers is odd, the result will be a negative number.\n\nIf there is a `0` in `nums`, we return `0` directly because the product will always be `0`.\n\n#### Algorithm\n\n1. Create an integer `countNegativeNumbers` to count the number of negative numbers in `nums`. Initialize it to `0`.\n2. Iterate over `nums` and for each `num` in `nums`:\n    - If `num == 0`, the final product will be `0`. We return `0`.\n    - If `num < 0`, we increment `countNegativeNumbers` by `1`.\n3. If the number of negative numbers is even, we return `1`. Otherwise, we return `-1`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $n$ is the length of `nums`.\n\n* Time complexity: $O(n)$\n\n    - We iterate over `nums` to get the count of negative numbers.\n\n* Space complexity: $O(1)$\n\n    - Except for a few integers `countNegativeNumbers` and `num` which take constant space, we do not use any other space.\n\n---\n\n### Approach 2: Tracking the Sign of the Product\n\n#### Intuition\n\nAnother method is to keep track of the sign of the product while multiplying the numbers in `nums`.\n\nWe initialize an integer variable `sign = 1` to keep track of the product's sign.\n\nWe flip `sign` to `-1 * sign` whenever we get a negative number while iterating `nums`. After iterating through all of the numbers, we return `sign` unless there is a `0` in `nums`, in which case the answer is `0`.\n\n#### Algorithm\n\n1. Create an integer `sign` that tracks the sign of the current product. Initialize it to `1`.\n2. Iterate over `nums` and for each `num` in `nums`:\n    - If `num == 0`, the final product will be `0`. We return `0`.\n    - If `num < 0`, flip the sign by performing `sign = -1 * sign`.\n3. Return `sign`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $n$ is the length of `nums`.\n\n* Time complexity: $O(n)$\n\n    - We iterate over `nums` to get the sign of the product of numbers.\n\n* Space complexity: $O(1)$\n\n    - Except for a few integers `sign` and `num` which take constant space, we do not use any other space."
+}

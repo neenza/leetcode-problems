@@ -1,0 +1,65 @@
+{
+  "title": "Maximum Number of Removable Characters",
+  "problem_id": "2027",
+  "frontend_id": "1898",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-removable-characters",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "String",
+    "Binary Search"
+  ],
+  "description": "You are given two strings s and p where p is a subsequence of s. You are also given a distinct 0-indexed integer array removable containing a subset of indices of s (s is also 0-indexed).\nYou want to choose an integer k (0 <= k <= removable.length) such that, after removing k characters from s using the first k indices in removable, p is still a subsequence of s. More formally, you will mark the character at s[removable[i]] for each 0 <= i < k, then remove all marked characters and check if p is still a subsequence.\nReturn the maximum k you can choose such that p is still a subsequence of s after the removals.\nA subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcacb\", p = \"ab\", removable = [3,1,0]\nOutput: 2\nExplanation: After removing the characters at indices 3 and 1, \"abcacb\" becomes \"accb\".\n\"ab\" is a subsequence of \"accb\".\nIf we remove the characters at indices 3, 1, and 0, \"abcacb\" becomes \"ccb\", and \"ab\" is no longer a subsequence.\nHence, the maximum k is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcbddddd\", p = \"abcd\", removable = [3,2,1,4,5,6]\nOutput: 1\nExplanation: After removing the character at index 3, \"abcbddddd\" becomes \"abcddddd\".\n\"abcd\" is a subsequence of \"abcddddd\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcab\", p = \"abc\", removable = [0,1,2,3,4]\nOutput: 0\nExplanation: If you remove the first index in the array removable, \"abc\" is no longer a subsequence.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= p.length <= s.length <= 105",
+    "0 <= removable.length < s.length",
+    "0 <= removable[i] < s.length",
+    "p is a subsequence of s.",
+    "s and p both consist of lowercase English letters.",
+    "The elements in removable are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "First, we need to think about solving an easier problem, If we remove a set of indices from the string does P exist in S as a subsequence",
+    "We can binary search the K and check by solving the above problem."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumRemovals(string s, string p, vector<int>& removable) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumRemovals(String s, String p, int[] removable) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumRemovals(self, s, p, removable):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :type removable: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumRemovals(self, s: str, p: str, removable: List[int]) -> int:\n        ",
+    "c": "int maximumRemovals(char* s, char* p, int* removable, int removableSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumRemovals(string s, string p, int[] removable) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @param {number[]} removable\n * @return {number}\n */\nvar maximumRemovals = function(s, p, removable) {\n    \n};",
+    "typescript": "function maximumRemovals(s: string, p: string, removable: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $p\n     * @param Integer[] $removable\n     * @return Integer\n     */\n    function maximumRemovals($s, $p, $removable) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumRemovals(_ s: String, _ p: String, _ removable: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumRemovals(s: String, p: String, removable: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumRemovals(String s, String p, List<int> removable) {\n    \n  }\n}",
+    "golang": "func maximumRemovals(s string, p string, removable []int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} p\n# @param {Integer[]} removable\n# @return {Integer}\ndef maximum_removals(s, p, removable)\n    \nend",
+    "scala": "object Solution {\n    def maximumRemovals(s: String, p: String, removable: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_removals(s: String, p: String, removable: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-removals s p removable)\n  (-> string? string? (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_removals(S :: unicode:unicode_binary(), P :: unicode:unicode_binary(), Removable :: [integer()]) -> integer().\nmaximum_removals(S, P, Removable) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_removals(s :: String.t, p :: String.t, removable :: [integer]) :: integer\n  def maximum_removals(s, p, removable) do\n    \n  end\nend"
+  }
+}

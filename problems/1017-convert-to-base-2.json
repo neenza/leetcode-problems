@@ -1,0 +1,56 @@
+{
+  "title": "Convert to Base -2",
+  "problem_id": "1070",
+  "frontend_id": "1017",
+  "difficulty": "Medium",
+  "problem_slug": "convert-to-base-2",
+  "topics": [
+    "Math"
+  ],
+  "description": "Given an integer n, return a binary string representing its representation in base -2.\nNote that the returned string should not have leading zeros unless the string is \"0\".\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: \"110\"\nExplantion: (-2)2 + (-2)1 = 2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3\nOutput: \"111\"\nExplantion: (-2)2 + (-2)1 + (-2)0 = 3",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4\nOutput: \"100\"\nExplantion: (-2)2 = 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Figure out whether you need the ones digit placed or not, then shift by two."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string baseNeg2(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String baseNeg2(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def baseNeg2(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def baseNeg2(self, n: int) -> str:\n        ",
+    "c": "char* baseNeg2(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public string BaseNeg2(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {string}\n */\nvar baseNeg2 = function(n) {\n    \n};",
+    "typescript": "function baseNeg2(n: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return String\n     */\n    function baseNeg2($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func baseNeg2(_ n: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun baseNeg2(n: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String baseNeg2(int n) {\n    \n  }\n}",
+    "golang": "func baseNeg2(n int) string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {String}\ndef base_neg2(n)\n    \nend",
+    "scala": "object Solution {\n    def baseNeg2(n: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn base_neg2(n: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (base-neg2 n)\n  (-> exact-integer? string?)\n  )",
+    "erlang": "-spec base_neg2(N :: integer()) -> unicode:unicode_binary().\nbase_neg2(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec base_neg2(n :: integer) :: String.t\n  def base_neg2(n) do\n    \n  end\nend"
+  }
+}

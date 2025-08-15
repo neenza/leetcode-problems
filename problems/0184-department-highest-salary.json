@@ -1,0 +1,38 @@
+{
+  "title": "Department Highest Salary",
+  "problem_id": "184",
+  "frontend_id": "184",
+  "difficulty": "Medium",
+  "problem_slug": "department-highest-salary",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employee\nTable: Department\nWrite a solution to find employees who have the highest salary in each of the departments.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| id           | int     |\n| name         | varchar |\n| salary       | int     |\n| departmentId | int     |\n+--------------+---------+\nid is the primary key (column with unique values) for this table.\ndepartmentId is a foreign key (reference columns) of the ID from the Department table.\nEach row of this table indicates the ID, name, and salary of an employee. It also contains the ID of their department.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table. It is guaranteed that department name is not NULL.\nEach row of this table indicates the ID of a department and its name.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nEmployee table:\n+----+-------+--------+--------------+\n| id | name  | salary | departmentId |\n+----+-------+--------+--------------+\n| 1  | Joe   | 70000  | 1            |\n| 2  | Jim   | 90000  | 1            |\n| 3  | Henry | 80000  | 2            |\n| 4  | Sam   | 60000  | 2            |\n| 5  | Max   | 90000  | 1            |\n+----+-------+--------+--------------+\nDepartment table:\n+----+-------+\n| id | name  |\n+----+-------+\n| 1  | IT    |\n| 2  | Sales |\n+----+-------+\nOutput: \n+------------+----------+--------+\n| Department | Employee | Salary |\n+------------+----------+--------+\n| IT         | Jim      | 90000  |\n| Sales      | Henry    | 80000  |\n| IT         | Max      | 90000  |\n+------------+----------+--------+\nExplanation: Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

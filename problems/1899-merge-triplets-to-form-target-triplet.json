@@ -1,0 +1,60 @@
+{
+  "title": "Merge Triplets to Form Target Triplet",
+  "problem_id": "2026",
+  "frontend_id": "1899",
+  "difficulty": "Medium",
+  "problem_slug": "merge-triplets-to-form-target-triplet",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "A triplet is an array of three integers. You are given a 2D integer array triplets, where triplets[i] = [ai, bi, ci] describes the ith triplet. You are also given an integer array target = [x, y, z] that describes the triplet you want to obtain.\nTo obtain target, you may apply the following operation on triplets any number of times (possibly zero):\nReturn true if it is possible to obtain the target triplet [x, y, z] as an element of triplets, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: triplets = [[2,5,3],[1,8,4],[1,7,5]], target = [2,7,5]\nOutput: true\nExplanation: Perform the following operations:\n- Choose the first and last triplets [[2,5,3],[1,8,4],[1,7,5]]. Update the last triplet to be [max(2,1), max(5,7), max(3,5)] = [2,7,5]. triplets = [[2,5,3],[1,8,4],[2,7,5]]\nThe target triplet [2,7,5] is now an element of triplets.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: triplets = [[3,4,5],[4,5,6]], target = [3,2,5]\nOutput: false\nExplanation: It is impossible to have [3,2,5] as an element because there is no 2 in any of the triplets.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: triplets = [[2,5,3],[2,3,4],[1,2,5],[5,2,3]], target = [5,5,5]\nOutput: true\nExplanation: Perform the following operations:\n- Choose the first and third triplets [[2,5,3],[2,3,4],[1,2,5],[5,2,3]]. Update the third triplet to be [max(2,1), max(5,2), max(3,5)] = [2,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,2,3]].\n- Choose the third and fourth triplets [[2,5,3],[2,3,4],[2,5,5],[5,2,3]]. Update the fourth triplet to be [max(2,5), max(5,2), max(5,3)] = [5,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,5,5]].\nThe target triplet [5,5,5] is now an element of triplets.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= triplets.length <= 105",
+    "triplets[i].length == target.length == 3",
+    "1 <= ai, bi, ci, x, y, z <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Which triplets do you actually care about?",
+    "What property of max can you use to solve the problem?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool mergeTriplets(vector<vector<int>>& triplets, vector<int>& target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean mergeTriplets(int[][] triplets, int[] target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mergeTriplets(self, triplets, target):\n        \"\"\"\n        :type triplets: List[List[int]]\n        :type target: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mergeTriplets(self, triplets: List[List[int]], target: List[int]) -> bool:\n        ",
+    "c": "bool mergeTriplets(int** triplets, int tripletsSize, int* tripletsColSize, int* target, int targetSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool MergeTriplets(int[][] triplets, int[] target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} triplets\n * @param {number[]} target\n * @return {boolean}\n */\nvar mergeTriplets = function(triplets, target) {\n    \n};",
+    "typescript": "function mergeTriplets(triplets: number[][], target: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $triplets\n     * @param Integer[] $target\n     * @return Boolean\n     */\n    function mergeTriplets($triplets, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mergeTriplets(_ triplets: [[Int]], _ target: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mergeTriplets(triplets: Array<IntArray>, target: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool mergeTriplets(List<List<int>> triplets, List<int> target) {\n    \n  }\n}",
+    "golang": "func mergeTriplets(triplets [][]int, target []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} triplets\n# @param {Integer[]} target\n# @return {Boolean}\ndef merge_triplets(triplets, target)\n    \nend",
+    "scala": "object Solution {\n    def mergeTriplets(triplets: Array[Array[Int]], target: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn merge_triplets(triplets: Vec<Vec<i32>>, target: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (merge-triplets triplets target)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec merge_triplets(Triplets :: [[integer()]], Target :: [integer()]) -> boolean().\nmerge_triplets(Triplets, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec merge_triplets(triplets :: [[integer]], target :: [integer]) :: boolean\n  def merge_triplets(triplets, target) do\n    \n  end\nend"
+  }
+}

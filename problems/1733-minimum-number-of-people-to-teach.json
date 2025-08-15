@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Number of People to Teach",
+  "problem_id": "1834",
+  "frontend_id": "1733",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-people-to-teach",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy"
+  ],
+  "description": "On a social network consisting of m users and some friendships between users, two users can communicate with each other if they know a common language.\nYou are given an integer n, an array languages, and an array friendships where:\nYou can choose one language and teach it to some users so that all friends can communicate with each other. Return the minimum number of users you need to teach.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, languages = [[1],[2],[1,2]], friendships = [[1,2],[1,3],[2,3]]\nOutput: 1\nExplanation: You can either teach user 1 the second language or user 2 the first language.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, languages = [[2],[1,3],[1,2],[3]], friendships = [[1,4],[1,2],[3,4],[2,3]]\nOutput: 2\nExplanation: Teach the third language to users 1 and 3, yielding two users to teach.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 500",
+    "languages.length == m",
+    "1 <= m <= 500",
+    "1 <= languages[i].length <= n",
+    "1 <= languages[i][j] <= n",
+    "1 <= u​​​​​​i < v​​​​​​i <= languages.length",
+    "1 <= friendships.length <= 500",
+    "All tuples (u​​​​​i, v​​​​​​i) are unique",
+    "languages[i] contains only unique values"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can just use brute force and find out for each language the number of users you need to teach",
+    "Note that a user can appear in multiple friendships but you need to teach that user only once"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumTeachings(int n, vector<vector<int>>& languages, vector<vector<int>>& friendships) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTeachings(int n, int[][] languages, int[][] friendships) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTeachings(self, n, languages, friendships):\n        \"\"\"\n        :type n: int\n        :type languages: List[List[int]]\n        :type friendships: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTeachings(self, n: int, languages: List[List[int]], friendships: List[List[int]]) -> int:\n        ",
+    "c": "int minimumTeachings(int n, int** languages, int languagesSize, int* languagesColSize, int** friendships, int friendshipsSize, int* friendshipsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumTeachings(int n, int[][] languages, int[][] friendships) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} languages\n * @param {number[][]} friendships\n * @return {number}\n */\nvar minimumTeachings = function(n, languages, friendships) {\n    \n};",
+    "typescript": "function minimumTeachings(n: number, languages: number[][], friendships: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $languages\n     * @param Integer[][] $friendships\n     * @return Integer\n     */\n    function minimumTeachings($n, $languages, $friendships) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTeachings(_ n: Int, _ languages: [[Int]], _ friendships: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTeachings(n: Int, languages: Array<IntArray>, friendships: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTeachings(int n, List<List<int>> languages, List<List<int>> friendships) {\n    \n  }\n}",
+    "golang": "func minimumTeachings(n int, languages [][]int, friendships [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} languages\n# @param {Integer[][]} friendships\n# @return {Integer}\ndef minimum_teachings(n, languages, friendships)\n    \nend",
+    "scala": "object Solution {\n    def minimumTeachings(n: Int, languages: Array[Array[Int]], friendships: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_teachings(n: i32, languages: Vec<Vec<i32>>, friendships: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-teachings n languages friendships)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_teachings(N :: integer(), Languages :: [[integer()]], Friendships :: [[integer()]]) -> integer().\nminimum_teachings(N, Languages, Friendships) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_teachings(n :: integer, languages :: [[integer]], friendships :: [[integer]]) :: integer\n  def minimum_teachings(n, languages, friendships) do\n    \n  end\nend"
+  }
+}

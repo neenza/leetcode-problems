@@ -1,0 +1,53 @@
+{
+  "title": "Rearrange Spaces Between Words",
+  "problem_id": "1714",
+  "frontend_id": "1592",
+  "difficulty": "Easy",
+  "problem_slug": "rearrange-spaces-between-words",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string text of words that are placed among some number of spaces. Each word consists of one or more lowercase English letters and are separated by at least one space. It's guaranteed that text contains at least one word.\nRearrange the spaces so that there is an equal number of spaces between every pair of adjacent words and that number is maximized. If you cannot redistribute all the spaces equally, place the extra spaces at the end, meaning the returned string should be the same length as text.\nReturn the string after rearranging the spaces.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: text = \"  this   is  a sentence \"\nOutput: \"this   is   a   sentence\"\nExplanation: There are a total of 9 spaces and 4 words. We can evenly divide the 9 spaces between the words: 9 / (4-1) = 3 spaces.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: text = \" practice   makes   perfect\"\nOutput: \"practice   makes   perfect \"\nExplanation: There are a total of 7 spaces and 3 words. 7 / (3-1) = 3 spaces plus 1 extra space. We place this extra space at the end of the string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= text.length <= 100",
+    "text consists of lowercase English letters and ' '.",
+    "text contains at least one word."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the total number of spaces and words. Then use the integer division to determine the numbers of spaces to add between each word and at the end."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string reorderSpaces(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reorderSpaces(String text) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reorderSpaces(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reorderSpaces(self, text: str) -> str:\n        ",
+    "c": "char* reorderSpaces(char* text) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ReorderSpaces(string text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {string}\n */\nvar reorderSpaces = function(text) {\n    \n};",
+    "typescript": "function reorderSpaces(text: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $text\n     * @return String\n     */\n    function reorderSpaces($text) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reorderSpaces(_ text: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reorderSpaces(text: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String reorderSpaces(String text) {\n    \n  }\n}",
+    "golang": "func reorderSpaces(text string) string {\n    \n}",
+    "ruby": "# @param {String} text\n# @return {String}\ndef reorder_spaces(text)\n    \nend",
+    "scala": "object Solution {\n    def reorderSpaces(text: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reorder_spaces(text: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (reorder-spaces text)\n  (-> string? string?)\n  )",
+    "erlang": "-spec reorder_spaces(Text :: unicode:unicode_binary()) -> unicode:unicode_binary().\nreorder_spaces(Text) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reorder_spaces(text :: String.t) :: String.t\n  def reorder_spaces(text) do\n    \n  end\nend"
+  }
+}

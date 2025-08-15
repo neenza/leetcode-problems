@@ -1,0 +1,57 @@
+{
+  "title": "Maximum OR",
+  "problem_id": "2730",
+  "frontend_id": "2680",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-or",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums of length n and an integer k. In an operation, you can choose an element and multiply it by 2.\nReturn the maximum possible value of nums[0] | nums[1] | ... | nums[n - 1] that can be obtained after applying the operation on nums at most k times.\nNote that a | b denotes the bitwise or between two integers a and b.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [12,9], k = 1\nOutput: 30\nExplanation: If we apply the operation to index 1, our new array nums will be equal to [12,18]. Thus, we return the bitwise or of 12 and 18, which is 30.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [8,1,2], k = 2\nOutput: 35\nExplanation: If we apply the operation twice on index 0, we yield a new array of [32,1,2]. Thus, we return 32|1|2 = 35.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= 15"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The optimal solution should apply all the k operations on a single number.",
+    "Calculate the prefix or and the suffix or and perform k operations over each element, and maximize the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumOr(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumOr(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumOr(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumOr(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long maximumOr(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumOr(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maximumOr = function(nums, k) {\n    \n};",
+    "typescript": "function maximumOr(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maximumOr($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumOr(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumOr(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumOr(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maximumOr(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef maximum_or(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maximumOr(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_or(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-or nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_or(Nums :: [integer()], K :: integer()) -> integer().\nmaximum_or(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_or(nums :: [integer], k :: integer) :: integer\n  def maximum_or(nums, k) do\n    \n  end\nend"
+  }
+}

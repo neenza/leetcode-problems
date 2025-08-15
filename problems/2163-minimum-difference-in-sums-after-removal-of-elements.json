@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Difference in Sums After Removal of Elements",
+  "problem_id": "2267",
+  "frontend_id": "2163",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-difference-in-sums-after-removal-of-elements",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given a 0-indexed integer array nums consisting of 3 * n elements.\nYou are allowed to remove any subsequence of elements of size exactly n from nums. The remaining 2 * n elements will be divided into two equal parts:\nThe difference in sums of the two parts is denoted as sumfirst - sumsecond.\nReturn the minimum difference possible between the sums of the two parts after the removal of n elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,1,2]\nOutput: -1\nExplanation: Here, nums has 3 elements, so n = 1. \nThus we have to remove 1 element from nums and divide the array into two equal parts.\n- If we remove nums[0] = 3, the array will be [1,2]. The difference in sums of the two parts will be 1 - 2 = -1.\n- If we remove nums[1] = 1, the array will be [3,2]. The difference in sums of the two parts will be 3 - 2 = 1.\n- If we remove nums[2] = 2, the array will be [3,1]. The difference in sums of the two parts will be 3 - 1 = 2.\nThe minimum difference between sums of the two parts is min(-1,1,2) = -1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [7,9,5,8,1,3]\nOutput: 1\nExplanation: Here n = 2. So we must remove 2 elements and divide the remaining array into two parts containing two elements each.\nIf we remove nums[2] = 5 and nums[3] = 8, the resultant array will be [7,9,1,3]. The difference in sums will be (7+9) - (1+3) = 12.\nTo obtain the minimum difference, we should remove nums[1] = 9 and nums[4] = 1. The resultant array becomes [7,5,8,3]. The difference in sums of the two parts is (7+5) - (8+3) = 1.\nIt can be shown that it is not possible to obtain a difference smaller than 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "nums.length == 3 * n",
+    "1 <= n <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The lowest possible difference can be obtained when the sum of the first n elements in the resultant array is minimum, and the sum of the next n elements is maximum.",
+    "For every index i, think about how you can find the minimum possible sum of n elements with indices lesser or equal to i, if possible.",
+    "Similarly, for every index i, try to find the maximum possible sum of n elements with indices greater or equal to i, if possible.",
+    "Now for all indices, check if we can consider it as the partitioning index and hence find the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumDifference(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumDifference(self, nums: List[int]) -> int:\n        ",
+    "c": "long long minimumDifference(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDifference = function(nums) {\n    \n};",
+    "typescript": "function minimumDifference(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumDifference($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumDifference(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDifference(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumDifference(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_difference(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumDifference(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_difference(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_difference(Nums :: [integer()]) -> integer().\nminimum_difference(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_difference(nums :: [integer]) :: integer\n  def minimum_difference(nums) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Priority Queue\n\n#### Intuition\n\nThe requirement in the question is equivalent to:\n\n- Choose a positive integer $k$ in the interval $[n, 2n]$.\n\n- The first $k$ numbers of the array $\\textit{nums}$ belong to the first part, but only $n$ of them can be retained.\n\n- The last $3n - k$ numbers of the array $\\textit{nums}$ belong to the second part, but again, only $n$ of them can be retained.\n\n- The goal is to minimize the difference between the sum of the first part and the sum of the second part.\n\nThe reason $k \\in [n, 2n]$ is required is that we must ensure each part has at least $n$ elements.\n\nSince we need to minimize the difference between the sum of the first part and the sum of the second part, we want the first part to be as small as possible and the second part to be as large as possible. In other words:\n\n> We need to select the $n$ smallest elements from the first part and the $n$ largest elements from the second part.\n\nTo do this, we can use a priority queue for selection. For the first part, we start by placing $\\textit{nums}[0 .. n-1]$ into a max heap. Then, for each index $i$ in $[n, 2n)$, we insert $\\textit{nums}[i]$ into the max heap and remove the largest element (i.e., the heap top). The remaining elements in the heap will be the $n$ smallest elements in $\\textit{nums}[0 .. i]$.\n\nFor the second part, we perform a similar process in reverse. We begin by placing $\\textit{nums}[2n .. 3n-1]$ into a min heap, and then iterate through indices $i$ in reverse from $2n-1$ down to $n$. At each step, we insert $\\textit{nums}[i]$ into the heap and remove the smallest element. The heap will then contain the $n$ largest elements in $\\textit{nums}[i .. 3n-1]$.\n\nWhile modifying the heaps, we maintain the sum of the elements currently in each heap. When an element is inserted, we add its value; when the top element is removed, we subtract its value. This lets us compute $\\textit{part}_1[n-1], \\dots, \\textit{part}_1[2n-1]$ and $\\textit{part}_2[n], \\dots, \\textit{part}_2[2n]$, where:\n\n- $\\textit{part}_1[i]$ is the sum of the $n$ smallest elements in $\\textit{nums}[0 .. i]$,\n\n- $\\textit{part}_2[i]$ is the sum of the $n$ largest elements in $\\textit{nums}[i .. 3n-1]$.\n\nThe final answer is the minimum value of all expressions $\\textit{part}_1[i] - \\textit{part}_2[i+1]$ where $i \\in [n-1, 2n)$.\n\nWe can simplify the indexing by subtracting $n-1$ from all subscripts in $\\textit{part}_1$ and $n$ from all subscripts in $\\textit{part}_2$, so that both have index ranges in $[0, n)$. This means we only need two arrays of length $n+1$ to store these values.\n\nFurther, while computing $\\textit{part}_2$, we don’t actually need an array; we can just use a single variable. At index $i$, the relevant value from $\\textit{part}_1$ is $\\textit{part}_1[i - n]$, so we can compute the answer as $\\textit{part}_1[i - n] - \\textit{part}_2$ during the iteration.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(n \\log n)$.\n  \n  The priority queue contains $n$ elements, with a time complexity of $O(\\log n)$ per operation, and a total of $O(n)$ operations.\n\n- Space complexity: $O(n)$.\n  \n  This is the space required for the priority queue and the array $\\textit{part}_1$."
+}

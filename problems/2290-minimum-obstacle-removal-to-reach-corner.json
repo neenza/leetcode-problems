@@ -1,0 +1,67 @@
+{
+  "title": "Minimum Obstacle Removal to Reach Corner",
+  "problem_id": "2375",
+  "frontend_id": "2290",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-obstacle-removal-to-reach-corner",
+  "topics": [
+    "Array",
+    "Breadth-First Search",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Shortest Path"
+  ],
+  "description": "You are given a 0-indexed 2D integer array grid of size m x n. Each cell has one of two values:\nYou can move up, down, left, or right from and to an empty cell.\nReturn the minimum number of obstacles to remove so you can move from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,1],[1,1,0],[1,1,0]]\nOutput: 2\nExplanation: We can remove the obstacles at (0, 1) and (0, 2) to create a path from (0, 0) to (2, 2).\nIt can be shown that we need to remove at least 2 obstacles, so we return 2.\nNote that there may be other ways to remove 2 obstacles to create a path.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/04/06/example1drawio-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1,0,0,0],[0,1,0,1,0],[0,0,0,1,0]]\nOutput: 0\nExplanation: We can move from (0, 0) to (2, 4) without removing any obstacles, so we return 0.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/04/06/example1drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 105",
+    "2 <= m * n <= 105",
+    "grid[i][j] is either 0 or 1.",
+    "grid[0][0] == grid[m - 1][n - 1] == 0"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Model the grid as a graph where cells are nodes and edges are between adjacent cells. Edges to cells with obstacles have a cost of 1 and all other edges have a cost of 0.",
+    "Could you use 0-1 Breadth-First Search or Dijkstra’s algorithm?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumObstacles(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumObstacles(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumObstacles(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumObstacles(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumObstacles(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumObstacles(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumObstacles = function(grid) {\n    \n};",
+    "typescript": "function minimumObstacles(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumObstacles($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumObstacles(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumObstacles(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumObstacles(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumObstacles(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_obstacles(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumObstacles(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_obstacles(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-obstacles grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_obstacles(Grid :: [[integer()]]) -> integer().\nminimum_obstacles(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_obstacles(grid :: [[integer]]) :: integer\n  def minimum_obstacles(grid) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nWe are given a 2-D matrix `grid`, where each cell is either empty or contains an obstacle. We can remove any obstacle, and our goal is to find the minimum number of obstacles that need to be removed to create a path from the top-left corner to the bottom-right corner.\n\n---\n\n### Approach 1: Dijkstra's Algorithm\n\n#### Intuition\n\nWe can frame this problem as a shortest-path problem with a start and end point, and from each cell, we can move in four directions (up, down, left, right). There are two scenarios for movement:\n1. Moving to an empty cell costs nothing (edge weight = 0).\n2. Moving to a cell with an obstacle costs 1 as we must remove it (edge weight = 1).\n\nThis turns our problem into a graph with edges weighted 0 or 1. The goal is to find the shortest path from the start to the destination using Dijkstra's algorithm.\n\nWe’ll implement Dijkstra’s algorithm using a priority queue, where each element contains the cell's coordinates and the number of obstacles removed to reach it. The queue will be sorted by obstacle count in increasing order. For each element, we explore its four neighbors. If a neighbor contains an obstacle, we increment the obstacle count and add it to the queue for further exploration.\n\nAs we explore, we’ll eventually reach the destination cell. Once we do, we return its obstacle count, which is guaranteed to be the minimum, as the queue prioritizes cells with the fewest obstacles.\n\n#### Algorithm\n\n- Initialize a 2D array `directions` containing four pairs of coordinates representing possible movements: right (0,1), left (0,-1), down (1,0), and up (-1,0).\n\nMain method `minimumObstacles`:\n\n- Set dimensions of the grid in variables `m` (rows) and `n` (columns).\n- Initialize a 2D array `minObstacles` of size $m \\times n$ to track minimum obstacles needed to reach each cell.\n  - Set all cells in `minObstacles` to infinity to represent unvisited cells.\n- Set the starting cell `minObstacles[0][0]` to the value of `grid[0][0]`, since this is the initial position.\n- Create a priority queue `pq` that orders elements based on the number of obstacles encountered.\n   - Each element in the queue is an array containing: [obstacles count, row, column]\n- Add the starting position to the priority queue with its obstacle count.\n- Enter a loop that continues while `pq` is not empty:\n  - Extract the cell with minimum obstacles from the queue.\n  - If this cell is the target `(m-1, n-1)`, return the obstacle count.\n  - For each possible direction:\n    - Calculate new position coordinates.\n    - If the new position is valid:\n      - Calculate the new obstacle count by adding the grid value of the new position.\n      - If the new obstacle count is less than the previously recorded count for that cell:\n       - Update the `minObstacles` array with the new count.\n       - Add the new position to `pq`.\n- Return -1 if the main loop completes without finding the target (this shouldn't happen).\n\n\nHelper method `isValid(row, col)`:\n  - Return `true` if the `row` and `col` lie within the grid boundaries.\n  - Return `false` otherwise.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the number of rows and $n$ be the number of columns in the grid.\n\n- Time complexity: $O(m \\cdot n \\log(m \\cdot n))$\n\n    The priority queue can contain up to $O(m \\cdot n)$ elements (all the cells in the grid), making each operation cost $O(\\log(m \\cdot n))$ time. Thus, the time complexity is $O(m \\cdot n \\log(m \\cdot n))$. \n\n- Space complexity: $O(m \\cdot n)$\n\n    The space complexity is dominated by two main components: the `minObstacles` array and the priority queue, both of which have a complexity of $O(m \\cdot n)$. The `directions` array and other variables take constant space. \n    \n    Therefore, the overall space complexity is $O(m \\cdot n)$.  \n\n---\n\n### Approach 2: 0-1 Breadth-First Search (BFS)\n\n#### Intuition\n\nAs stated earlier, moving through cells without obstacles has no cost. Therefore, we prioritize exploring neighboring empty cells first, only moving to cells with obstacles when no free cells are left.\n\nWe perform a BFS using a deque to manage the queue. When exploring neighboring cells, we add empty cells to the front of the deque for immediate exploration, and cells with obstacles to the back, delaying their exploration.\n\nWe maintain a result grid, `minObstacles`, initialized to infinity (indicating they are unvisited), to track the minimum obstacles encountered at each cell. We'll add the top left cell to the deque and begin our exploration. At each step, we'll pop the top cell in the deque and explore its neighbors. All empty neighbors go to the front of the deque, while others go to the bottom with their obstacle count increased by 1. Simultaneously, we'll update the `minObstacles` value for each neighboring position.\n\nOnce all cells are explored, the value at the bottom-right cell of `minObstacles` will give the minimum obstacles encountered on the shortest path.\n\nHere's a brief visualization of how the `minObstacles` matrix is filled up step by step:\n\n!?!../Documents/2290/slideshow.json:702,942!?!\n\n#### Algorithm\n \n- Initialize a 2-D array `directions` containing four pairs of coordinates representing possible movements: right (0,1), left (0,-1), down (1,0), and up (-1,0).\n\nMain method `minimumObstacles`:\n\n- Store the dimensions of the grid in variables `m` (rows) and `n` (columns).\n- Initialize a 2-D array `minObstacles` of size $m \\times n$ to track minimum obstacles needed to reach each cell.\n- Initialize all cells in `minObstacles` with infinity to represent unvisited cells.\n- Set the starting cell `minObstacles[0][0]` to 0, as we start from this position.\n- Create a double-ended queue `deque` to process cells.\n  - Add the starting position to the queue.\n- Loop while the deque is not empty:\n  - Extract the first cell from the queue.\n  - For each possible direction:\n    - Calculate new position coordinates.\n    - If the new position is valid and unvisited (`minObstacles` value is infinity):\n      - If the new cell contains an obstacle (value 1):\n        - Update `minObstacles` with the current obstacle count plus 1.\n        - Add the new position to the back of the deque.\n      - If the new cell is empty (value 0):\n        - Update `minObstacles` with the current obstacle count.\n        - Add a new position to the front of the deque.\n- Return the value in `minObstacles[m-1][n-1]` representing minimum obstacles removed to reach target.\n\nHelper method `isValid(row, col)`:\n  - Return `true` if the `row` and `col` lie within the grid boundaries.\n  - Return `false` otherwise.\n\n#### Implementation#### Complexity Analysis\n\nLet $m$ be the number of rows and $n$ be the number of columns in the grid.\n\n* Time complexity: $O(m \\cdot n)$\n\n    Each of the $m \\cdot n$ cells in the grid is visited exactly once because we only process unvisited cells. The deque operations are all $O(1)$. \n    \n    Thus, the total time complexity is $O(m \\cdot n)$. \n\n* Space complexity: $O(m \\cdot n)$\n\n    The `minObstacles` array and the deque both take $O(m \\cdot n)$ space. All other variables take constant space.\n\n    Thus, the space complexity remains $O(m \\cdot n)$.\n\n---"
+}

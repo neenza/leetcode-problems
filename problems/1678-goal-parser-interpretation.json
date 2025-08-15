@@ -1,0 +1,53 @@
+{
+  "title": "Goal Parser Interpretation",
+  "problem_id": "1797",
+  "frontend_id": "1678",
+  "difficulty": "Easy",
+  "problem_slug": "goal-parser-interpretation",
+  "topics": [
+    "String"
+  ],
+  "description": "You own a Goal Parser that can interpret a string command. The command consists of an alphabet of \"G\", \"()\" and/or \"(al)\" in some order. The Goal Parser will interpret \"G\" as the string \"G\", \"()\" as the string \"o\", and \"(al)\" as the string \"al\". The interpreted strings are then concatenated in the original order.\nGiven the string command, return the Goal Parser's interpretation of command.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: command = \"G()(al)\"\nOutput: \"Goal\"\nExplanation: The Goal Parser interprets the command as follows:\nG -> G\n() -> o\n(al) -> al\nThe final concatenated result is \"Goal\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: command = \"G()()()()(al)\"\nOutput: \"Gooooal\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: command = \"(al)G(al)()()G\"\nOutput: \"alGalooG\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= command.length <= 100",
+    "command consists of \"G\", \"()\", and/or \"(al)\" in some order."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You need to check at most 2 characters to determine which character comes next."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string interpret(string command) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String interpret(String command) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def interpret(self, command):\n        \"\"\"\n        :type command: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def interpret(self, command: str) -> str:\n        ",
+    "c": "\n\nchar * interpret(char * command){\n\n}",
+    "csharp": "public class Solution {\n    public string Interpret(string command) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} command\n * @return {string}\n */\nvar interpret = function(command) {\n    \n};",
+    "typescript": "function interpret(command: string): string {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $command\n     * @return String\n     */\n    function interpret($command) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func interpret(_ command: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun interpret(command: String): String {\n        \n    }\n}",
+    "golang": "func interpret(command string) string {\n    \n}",
+    "ruby": "# @param {String} command\n# @return {String}\ndef interpret(command)\n    \nend",
+    "scala": "object Solution {\n    def interpret(command: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn interpret(command: String) -> String {\n        \n    }\n}"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Broken Calculator",
+  "problem_id": "1033",
+  "frontend_id": "991",
+  "difficulty": "Medium",
+  "problem_slug": "broken-calculator",
+  "topics": [
+    "Math",
+    "Greedy"
+  ],
+  "description": "There is a broken calculator that has the integer startValue on its display initially. In one operation, you can:\nGiven two integers startValue and target, return the minimum number of operations needed to display target on the calculator.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: startValue = 2, target = 3\nOutput: 2\nExplanation: Use double operation and then decrement operation {2 -> 4 -> 3}.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: startValue = 5, target = 8\nOutput: 2\nExplanation: Use decrement and then double {5 -> 4 -> 8}.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: startValue = 3, target = 10\nOutput: 3\nExplanation: Use double, decrement and double {3 -> 6 -> 5 -> 10}.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= startValue, target <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int brokenCalc(int startValue, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int brokenCalc(int startValue, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def brokenCalc(self, startValue, target):\n        \"\"\"\n        :type startValue: int\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def brokenCalc(self, startValue: int, target: int) -> int:\n        ",
+    "c": "int brokenCalc(int startValue, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BrokenCalc(int startValue, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} startValue\n * @param {number} target\n * @return {number}\n */\nvar brokenCalc = function(startValue, target) {\n    \n};",
+    "typescript": "function brokenCalc(startValue: number, target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $startValue\n     * @param Integer $target\n     * @return Integer\n     */\n    function brokenCalc($startValue, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func brokenCalc(_ startValue: Int, _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun brokenCalc(startValue: Int, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int brokenCalc(int startValue, int target) {\n    \n  }\n}",
+    "golang": "func brokenCalc(startValue int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer} start_value\n# @param {Integer} target\n# @return {Integer}\ndef broken_calc(start_value, target)\n    \nend",
+    "scala": "object Solution {\n    def brokenCalc(startValue: Int, target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn broken_calc(start_value: i32, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (broken-calc startValue target)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec broken_calc(StartValue :: integer(), Target :: integer()) -> integer().\nbroken_calc(StartValue, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec broken_calc(start_value :: integer, target :: integer) :: integer\n  def broken_calc(start_value, target) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Work Backwards\n\n**Intuition**\n\nInstead of multiplying by 2 or subtracting 1 from `startValue`, we could divide by 2 (when `target` is even) or add 1 to `target`.\n\nThe motivation for this is that it turns out we always greedily divide by 2:\n\n* If say `target` is even, then if we perform 2 additions and one division, we could instead perform one division and one addition for less operations [`(target + 2) / 2` vs `target / 2 + 1`].\n\n* If say `target` is odd, then if we perform 3 additions and one division, we could instead perform 1 addition, 1 division, and 1 addition for less operations [`(target + 3) / 2` vs `(target + 1) / 2 + 1`].\n\n**Algorithm**\n\nWhile `target` is larger than `startValue`, add 1 if it is odd, else divide by 2.  After, we need to do `startValue - target` additions to reach `startValue`.**Complexity Analysis**\n\n* Time Complexity:  $$O(\\log target)$$.\n\n* Space Complexity:  $$O(1)$$."
+}

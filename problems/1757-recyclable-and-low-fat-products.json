@@ -1,0 +1,34 @@
+{
+  "title": "Recyclable and Low Fat Products",
+  "problem_id": "1908",
+  "frontend_id": "1757",
+  "difficulty": "Easy",
+  "problem_slug": "recyclable-and-low-fat-products",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Products\nWrite a solution to find the ids of products that are both low fat and recyclable.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| product_id  | int     |\n| low_fats    | enum    |\n| recyclable  | enum    |\n+-------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nlow_fats is an ENUM (category) of type ('Y', 'N') where 'Y' means this product is low fat and 'N' means it is not.\nrecyclable is an ENUM (category) of types ('Y', 'N') where 'Y' means this product is recyclable and 'N' means it is not.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nProducts table:\n+-------------+----------+------------+\n| product_id  | low_fats | recyclable |\n+-------------+----------+------------+\n| 0           | Y        | N          |\n| 1           | Y        | Y          |\n| 2           | N        | Y          |\n| 3           | Y        | Y          |\n| 4           | N        | N          |\n+-------------+----------+------------+\nOutput: \n+-------------+\n| product_id  |\n+-------------+\n| 1           |\n| 3           |\n+-------------+\nExplanation: Only products 1 and 3 are both low fat and recyclable.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_products(products: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  },
+  "solution": "[TOC] \n\n# Solution\n\n---\n\n## pandas\n\n### Approach: Selecting rows based on conditions\n#### Algorithm\nWe have the original DataFrame `products` shown below:\n\n| product_id | low_fats | recyclable |\n|------------|----------|------------|\n| 0          | Y        | N          |\n| 1          | Y        | Y          |\n| 2          | N        | Y          |\n| 3          | Y        | Y          |\n| 4          | N        | N          |\n\n\nIn Pandas, boolean indexing allows us to filter the DataFrame by using boolean arrays or conditions. It means that we can use a Series of boolean values or create conditions that evaluate to `True` or `False` for each row in the DataFrame. By applying these boolean values or conditions as an index to the DataFrame, we can selectively extract the rows that satisfy the conditions. \n\nIn this scenario, we should select only the rows where the `low_fats` column has a value of \"Y\" (indicating the product is low fat) and the `recyclable` column has a value of \"Y\" (indicating the product is recyclable), which can be represented as:\n\n```python3\ndf = products[(products['low_fats'] == 'Y') & (products['recyclable'] == 'Y')]\n```\n\nThis filtering creates a new DataFrame `df` containing the products that meet both criteria. Note that the rows with `product_id` equal to 0, 2, and 4 are filtered out.\n\n| product_id | low_fats | recyclable |\n|------------|----------|------------|\n| 1          | Y        | Y          |\n| 3          | Y        | Y          |Next, we need to select only the desired column `product_id` from `df` using double square brackets.\n\n```python3\ndf = df[['product_id']]\n```\n\nThe resulting DataFrame looks like this:\n\n| product_id |\n|------------|\n| 1          |\n| 3          |#### Implementation## Database\n\n### Approach: Selecting rows based on conditions\n\n\n#### Algorithm\nThe keyword `SELECT` is used to specify the columns that we want to retrieve from the table `Products`. In this scenario, we want to retrieve the `product_id` column.\n\nThe keyword `WHERE` is used to filter the rows in the table `Products` based on specific conditions, which the `low_fats` column has the value \"Y\" (indicating low-fat products) and the `recyclable` column has the value \"Y\" (indicating recyclable products). We use the logical operator `AND` to combine both conditions, ensuring that the final result includes only product IDs for products that are both low fat and recyclable.\n\n\n#### Implementation\n\n```sql\nSELECT\n    product_id\nFROM\n    Products\nWHERE\n    low_fats = 'Y' AND recyclable = 'Y'\n```"
+}

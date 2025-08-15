@@ -1,0 +1,57 @@
+{
+  "title": "Distinct Subsequences II",
+  "problem_id": "977",
+  "frontend_id": "940",
+  "difficulty": "Hard",
+  "problem_slug": "distinct-subsequences-ii",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string s, return the number of distinct non-empty subsequences of s. Since the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\"\nOutput: 7\nExplanation: The 7 distinct subsequences are \"a\", \"b\", \"c\", \"ab\", \"ac\", \"bc\", and \"abc\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aba\"\nOutput: 6\nExplanation: The 6 distinct subsequences are \"a\", \"b\", \"ab\", \"aa\", \"ba\", and \"aba\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"aaa\"\nOutput: 3\nExplanation: The 3 distinct subsequences are \"a\", \"aa\" and \"aaa\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 2000",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int distinctSubseqII(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctSubseqII(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def distinctSubseqII(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def distinctSubseqII(self, s: str) -> int:\n        ",
+    "c": "int distinctSubseqII(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DistinctSubseqII(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar distinctSubseqII = function(s) {\n    \n};",
+    "typescript": "function distinctSubseqII(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function distinctSubseqII($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func distinctSubseqII(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun distinctSubseqII(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int distinctSubseqII(String s) {\n    \n  }\n}",
+    "golang": "func distinctSubseqII(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef distinct_subseq_ii(s)\n    \nend",
+    "scala": "object Solution {\n    def distinctSubseqII(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn distinct_subseq_ii(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (distinct-subseq-ii s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec distinct_subseq_ii(S :: unicode:unicode_binary()) -> integer().\ndistinct_subseq_ii(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec distinct_subseq_ii(s :: String.t) :: integer\n  def distinct_subseq_ii(s) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Dynamic Programming\n\n**Intuition and Algorithm**\n\nEven though the final code for this problem is very short, it is not very intuitive to find the answer.  In the solution below, we'll focus on finding all subsequences (including empty ones), and subtract the empty subsequence at the end.\n\nLet's try for a dynamic programming solution.  In order to not repeat work, our goal is to phrase the current problem in terms of the answer to previous problems.  A typical idea will be to try to count the number of states `dp[k]` (distinct subsequences) that use letters `S[0], S[1], ..., S[k]`.\n\nNaively, for say, `S = \"abcx\"`, we have `dp[k] = dp[k-1] * 2`.  This is because for `dp[2]` which counts `(\"\", \"a\", \"b\", \"c\", \"ab\", \"ac\", \"bc\", \"abc\")`, `dp[3]` counts all of those, plus all of those with the `x` ending, like `(\"x\", \"ax\", \"bx\", \"cx\", \"abx\", \"acx\", \"bcx\", \"abcx\")`. Here's a visualization for this string.However, for something like `S = \"abab\"`, let's play around with it.  We have:\n\n* `dp[0] = 2`, as it counts `(\"\", \"a\")`\n* `dp[1] = 4`, as it counts `(\"\", \"a\", \"b\", \"ab\")`;\n* `dp[2] = 7` as it counts `(\"\", \"a\", \"b\", \"aa\", \"ab\", \"ba\", \"aba\")`;\n* `dp[3] = 12`, as it counts `(\"\", \"a\", \"b\", \"aa\", \"ab\", \"ba\", \"bb\", \"aab\", \"aba\", \"abb\", \"bab\", \"abab\")`.\n\nWe have that dp[3]` counts `dp[2]`, plus `(\"b\", \"aa\", \"ab\", \"ba\", \"aba\")` with `\"b\"` added to it.  Notice that `(\"\", \"a\")` are missing from this list, as they get double counted.  In general, the sequences that resulted from putting `\"b\"` the last time (ie. `\"b\", \"ab\"`) will get double counted. Here's a visualization for a string with repeated letters.This insight leads to the recurrence:\n\n`dp[k] = 2 * dp[k-1] - dp[last[S[k]]]`\n\nThe number of distinct subsequences ending at `S[k]`, is twice the distinct subsequences counted by `dp[k-1]` (all of them, plus all of them with S[k] appended), minus the amount we double counted, which is `dp[last[S[k]]]`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N)$$, where $$N$$ is the length of `S`.\n\n* Space Complexity:  $$O(N)$$.  It is possible to adapt this solution to take $$O(1)$$ space."
+}

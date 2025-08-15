@@ -1,0 +1,55 @@
+{
+  "title": "Check if Number Has Equal Digit Count and Digit Value",
+  "problem_id": "2377",
+  "frontend_id": "2283",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-number-has-equal-digit-count-and-digit-value",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed string num of length n consisting of digits.\nReturn true if for every index i in the range 0 <= i < n, the digit i occurs num[i] times in num, otherwise return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"1210\"\nOutput: true\nExplanation:\nnum[0] = '1'. The digit 0 occurs once in num.\nnum[1] = '2'. The digit 1 occurs twice in num.\nnum[2] = '1'. The digit 2 occurs once in num.\nnum[3] = '0'. The digit 3 occurs zero times in num.\nThe condition holds true for every index in \"1210\", so return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"030\"\nOutput: false\nExplanation:\nnum[0] = '0'. The digit 0 should occur zero times, but actually occurs twice in num.\nnum[1] = '3'. The digit 1 should occur three times, but actually occurs zero times in num.\nnum[2] = '0'. The digit 2 occurs zero times in num.\nThe indices 0 and 1 both violate the condition, so return false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == num.length",
+    "1 <= n <= 10",
+    "num consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of each digit in num."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool digitCount(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean digitCount(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def digitCount(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def digitCount(self, num: str) -> bool:\n        ",
+    "c": "bool digitCount(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool DigitCount(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {boolean}\n */\nvar digitCount = function(num) {\n    \n};",
+    "typescript": "function digitCount(num: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return Boolean\n     */\n    function digitCount($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func digitCount(_ num: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun digitCount(num: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool digitCount(String num) {\n    \n  }\n}",
+    "golang": "func digitCount(num string) bool {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {Boolean}\ndef digit_count(num)\n    \nend",
+    "scala": "object Solution {\n    def digitCount(num: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn digit_count(num: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (digit-count num)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec digit_count(Num :: unicode:unicode_binary()) -> boolean().\ndigit_count(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec digit_count(num :: String.t) :: boolean\n  def digit_count(num) do\n    \n  end\nend"
+  }
+}

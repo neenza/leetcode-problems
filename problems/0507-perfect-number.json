@@ -1,0 +1,50 @@
+{
+  "title": "Perfect Number",
+  "problem_id": "507",
+  "frontend_id": "507",
+  "difficulty": "Easy",
+  "problem_slug": "perfect-number",
+  "topics": [
+    "Math"
+  ],
+  "description": "A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.\nGiven an integer n, return true if n is a perfect number, otherwise return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 28\nOutput: true\nExplanation: 28 = 1 + 2 + 4 + 7 + 14\n1, 2, 4, 7, and 14 are all divisors of 28.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 7\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= num <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkPerfectNumber(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPerfectNumber(int num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkPerfectNumber(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkPerfectNumber(self, num: int) -> bool:\n        ",
+    "c": "bool checkPerfectNumber(int num) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckPerfectNumber(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {boolean}\n */\nvar checkPerfectNumber = function(num) {\n    \n};",
+    "typescript": "function checkPerfectNumber(num: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Boolean\n     */\n    function checkPerfectNumber($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkPerfectNumber(_ num: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkPerfectNumber(num: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkPerfectNumber(int num) {\n    \n  }\n}",
+    "golang": "func checkPerfectNumber(num int) bool {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Boolean}\ndef check_perfect_number(num)\n    \nend",
+    "scala": "object Solution {\n    def checkPerfectNumber(num: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_perfect_number(num: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-perfect-number num)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec check_perfect_number(Num :: integer()) -> boolean().\ncheck_perfect_number(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_perfect_number(num :: integer) :: boolean\n  def check_perfect_number(num) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Brute Force [Time Limit Exceeded]\n\n**Algorithm**\n\nIn brute force approach, we consider every possible number to be a divisor of the given number $$num$$, by iterating over all the numbers lesser than $$num$$. Then, we add up all the factors to check if the given number satisfies the Perfect Number property. This approach obviously fails if the number $$num$$ is very large.**Complexity Analysis**\n\n* Time complexity : $$O(n)$$. We iterate over all the numbers lesser than $$n$$.\n\n* Space complexity : $$O(1)$$. Constant extra space is used.\n\n---\n\n### Approach #2 Better Brute Force [Time Limit Exceeded]\n\n**Algorithm**\n\nWe can little optimize the brute force by breaking the loop when the value of $$sum$$ increase the value of $$num$$. In that case, we can directly return $$false$$.**Complexity Analysis**\n\n* Time complexity : $$O(n)$$. In worst case, we iterate over all the numbers lesser than $$n$$.\n\n* Space complexity : $$O(1)$$. Constant extra space is used.\n\n---\n\n### Approach #3 Optimal Solution [Accepted]\n\n**Algorithm**\n\nIn this method, instead of iterating over all the integers to find the factors of $$num$$, we only iterate upto the $$\\sqrt{n}$$. The reasoning behind this can be understood as follows.\n\nConsider the given number $$num$$ which can have $$m$$ distinct factors, namely $$n_1, n_2,..., n_m$$. Now, since the number $$num$$ is divisible by $$n_i$$, it is also divisible by $$n_j=num/n_1$$ i.e. $$n_i*n_j=num$$. Also, the largest number in such a pair can only be up to $$\\sqrt{num}$$ (because $$\\sqrt{num} \\times \\sqrt{num}=num$$). Thus, we can get a significant reduction in the run-time by iterating only upto $$\\sqrt{num}$$ and considering such $$n_i$$'s and $$n_j$$'s in a single pass directly.\n\nFurther, if $$\\sqrt{num}$$ is also a factor, we have to consider the factor only once while checking for the perfect number property.\n\nWe sum up all such factors and check if the given number is a Perfect Number or not. Another point to be observed is that while considering 1 as such a factor, $$num$$ will also be considered as the other factor. Thus, we need to subtract $$num$$ from the $$sum$$.**Complexity Analysis**\n\n* Time complexity : $$O(\\sqrt{n})$$. We iterate only over the range $$1 < i ≤ \\sqrt{num}$$.\n* Space complexity : $$O(1)$$. Constant extra space is used.\n\n---\n\n### Approach #4 Euclid-Euler Theorem [Accepted]\n\n**Algorithm**\n\nEuclid proved that $$2^{p−1}(2^p − 1)$$ is an even perfect number whenever $$2^p − 1$$ is prime, where $$p$$ is prime.\n\nFor example, the first four perfect numbers are generated by the formula $$2^{p−1}(2^p − 1)$$, with $$p$$ a prime number, as follows:\n\n```\nfor p = 2:   21(22 − 1) = 6\nfor p = 3:   22(23 − 1) = 28\nfor p = 5:   24(25 − 1) = 496\nfor p = 7:   26(27 − 1) = 8128.\n```\nPrime numbers of the form $$2^p − 1$$ are known as Mersenne primes. For $$2^p − 1$$ to be prime, it is necessary that $$p$$ itself be prime. However, not all numbers of the form $$2^p − 1$$ with a prime $$p$$ are prime; for example, $$2^{11} − 1 = 2047 = 23 × 89$$ is not a prime number.\n\nYou can see that for small value of $$p$$, its related perfect number goes very high. So, we need to evaluate perfect numbers for some primes $$(2, 3, 5, 7, 13, 17, 19, 31)$$ only, as for bigger prime its perfect number will not fit in 64 bits.**Complexity Analysis**\n\n\n* Time complexity : $$O(\\log{n})$$. Number of primes will be in order $$\\log{num}$$.\n\n* Space complexity : $$O(\\log{n})$$. Space used to store primes."
+}

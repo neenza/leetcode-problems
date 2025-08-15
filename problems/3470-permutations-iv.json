@@ -1,0 +1,63 @@
+{
+  "title": "Permutations IV",
+  "problem_id": "3783",
+  "frontend_id": "3470",
+  "difficulty": "Hard",
+  "problem_slug": "permutations-iv",
+  "topics": [
+    "Array",
+    "Math",
+    "Combinatorics",
+    "Enumeration"
+  ],
+  "description": "Given two integers, n and k, an alternating permutation is a permutation of the first n positive integers such that no two adjacent elements are both odd or both even.\nReturn the k-th alternating permutation sorted in lexicographical order. If there are fewer than k valid alternating permutations, return an empty list.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, k = 6\nOutput: [3,4,1,2]\nExplanation:\nThe lexicographically-sorted alternating permutations of [1, 2, 3, 4] are:\nSince k = 6 , we return [3, 4, 1, 2] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, k = 2\nOutput: [3,2,1]\nExplanation:\nThe lexicographically-sorted alternating permutations of [1, 2, 3] are:\nSince k = 2 , we return [3, 2, 1] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2, k = 3\nOutput: []\nExplanation:\nThe lexicographically-sorted alternating permutations of [1, 2] are:\nThere are only 2 alternating permutations, but k = 3 , which is out of range. Thus, we return an empty list [] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 100",
+    "1 <= k <= 1015"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If <code>n</code> is odd, the first number must be odd.",
+    "If <code>n</code> is even, the first number can be either odd or even.",
+    "From smallest to largest, place each number and subtract the number of permutations from <code>k</code>.",
+    "The number of permutations can be calculated using factorials."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> permute(int n, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] permute(int n, long k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def permute(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def permute(self, n: int, k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* permute(int n, long long k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] Permute(int n, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number[]}\n */\nvar permute = function(n, k) {\n    \n};",
+    "typescript": "function permute(n: number, k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function permute($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func permute(_ n: Int, _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun permute(n: Int, k: Long): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> permute(int n, int k) {\n    \n  }\n}",
+    "golang": "func permute(n int, k int64) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer[]}\ndef permute(n, k)\n    \nend",
+    "scala": "object Solution {\n    def permute(n: Int, k: Long): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn permute(n: i32, k: i64) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (permute n k)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec permute(N :: integer(), K :: integer()) -> [integer()].\npermute(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec permute(n :: integer, k :: integer) :: [integer]\n  def permute(n, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Simplify Path",
+  "problem_id": "71",
+  "frontend_id": "71",
+  "difficulty": "Medium",
+  "problem_slug": "simplify-path",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "You are given an absolute path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its simplified canonical path.\nThe rules of a Unix-style file system are as follows:\nThe simplified canonical path should follow these rules:\nReturn the simplified canonical path.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nExample 5:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: path = \"/home/\"\nOutput: \"/home\"\nExplanation:\nThe trailing slash should be removed.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: path = \"/home//foo/\"\nOutput: \"/home/foo\"\nExplanation:\nMultiple consecutive slashes are replaced by a single one.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: path = \"/home/user/Documents/../Pictures\"\nOutput: \"/home/user/Pictures\"\nExplanation:\nA double period \"..\" refers to the directory up a level (the parent directory).",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: path = \"/../\"\nOutput: \"/\"\nExplanation:\nGoing one level up from the root directory is not possible.",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "Input: path = \"/.../a/../b/c/../d/./\"\nOutput: \"/.../b/d\"\nExplanation:\n\"...\" is a valid name for a directory in this problem.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= path.length <= 3000",
+    "path consists of English letters, digits, period '.', slash '/' or '_'.",
+    "path is a valid absolute Unix path."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string simplifyPath(string path) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String simplifyPath(String path) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def simplifyPath(self, path):\n        \"\"\"\n        :type path: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def simplifyPath(self, path: str) -> str:\n        ",
+    "c": "char* simplifyPath(char* path) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SimplifyPath(string path) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} path\n * @return {string}\n */\nvar simplifyPath = function(path) {\n    \n};",
+    "typescript": "function simplifyPath(path: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $path\n     * @return String\n     */\n    function simplifyPath($path) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func simplifyPath(_ path: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun simplifyPath(path: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String simplifyPath(String path) {\n    \n  }\n}",
+    "golang": "func simplifyPath(path string) string {\n    \n}",
+    "ruby": "# @param {String} path\n# @return {String}\ndef simplify_path(path)\n    \nend",
+    "scala": "object Solution {\n    def simplifyPath(path: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn simplify_path(path: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (simplify-path path)\n  (-> string? string?)\n  )",
+    "erlang": "-spec simplify_path(Path :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsimplify_path(Path) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec simplify_path(path :: String.t) :: String.t\n  def simplify_path(path) do\n    \n  end\nend"
+  }
+}

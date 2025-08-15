@@ -1,0 +1,53 @@
+{
+  "title": "Binary Prefix Divisible By 5",
+  "problem_id": "1071",
+  "frontend_id": "1018",
+  "difficulty": "Easy",
+  "problem_slug": "binary-prefix-divisible-by-5",
+  "topics": [
+    "Array",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a binary array nums (0-indexed).\nWe define xi as the number whose binary representation is the subarray nums[0..i] (from most-significant-bit to least-significant-bit).\nReturn an array of booleans answer where answer[i] is true if xi is divisible by 5.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,1]\nOutput: [true,false,false]\nExplanation: The input numbers in binary are 0, 01, 011; which are 0, 1, and 3 in base-10.\nOnly the first number is divisible by 5, so answer[0] is true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1]\nOutput: [false,false,false]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "nums[i] is either 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If X is the first i digits of the array as a binary number, then 2X + A[i] is the first i+1 digits."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<bool> prefixesDivBy5(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Boolean> prefixesDivBy5(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def prefixesDivBy5(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[bool]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* prefixesDivBy5(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<bool> PrefixesDivBy5(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean[]}\n */\nvar prefixesDivBy5 = function(nums) {\n    \n};",
+    "typescript": "function prefixesDivBy5(nums: number[]): boolean[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean[]\n     */\n    function prefixesDivBy5($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func prefixesDivBy5(_ nums: [Int]) -> [Bool] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun prefixesDivBy5(nums: IntArray): List<Boolean> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<bool> prefixesDivBy5(List<int> nums) {\n    \n  }\n}",
+    "golang": "func prefixesDivBy5(nums []int) []bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean[]}\ndef prefixes_div_by5(nums)\n    \nend",
+    "scala": "object Solution {\n    def prefixesDivBy5(nums: Array[Int]): List[Boolean] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn prefixes_div_by5(nums: Vec<i32>) -> Vec<bool> {\n        \n    }\n}",
+    "racket": "(define/contract (prefixes-div-by5 nums)\n  (-> (listof exact-integer?) (listof boolean?))\n  )",
+    "erlang": "-spec prefixes_div_by5(Nums :: [integer()]) -> [boolean()].\nprefixes_div_by5(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec prefixes_div_by5(nums :: [integer]) :: [boolean]\n  def prefixes_div_by5(nums) do\n    \n  end\nend"
+  }
+}

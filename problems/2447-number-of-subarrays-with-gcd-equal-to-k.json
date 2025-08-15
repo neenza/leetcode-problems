@@ -1,0 +1,55 @@
+{
+  "title": "Number of Subarrays With GCD Equal to K",
+  "problem_id": "2546",
+  "frontend_id": "2447",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-subarrays-with-gcd-equal-to-k",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "Given an integer array nums and an integer k, return the number of subarrays of nums where the greatest common divisor of the subarray's elements is k.\nA subarray is a contiguous non-empty sequence of elements within an array.\nThe greatest common divisor of an array is the largest integer that evenly divides all the array elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [9,3,1,2,6,3], k = 3\nOutput: 4\nExplanation: The subarrays of nums where 3 is the greatest common divisor of all the subarray's elements are:\n- [9,3,1,2,6,3]\n- [9,3,1,2,6,3]\n- [9,3,1,2,6,3]\n- [9,3,1,2,6,3]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4], k = 7\nOutput: 0\nExplanation: There are no subarrays of nums where 7 is the greatest common divisor of all the subarray's elements.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i], k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints on nums.length are small. It is possible to check every subarray.",
+    "To calculate GCD, you can use a built-in function or the Euclidean Algorithm."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int subarrayGCD(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int subarrayGCD(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def subarrayGCD(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def subarrayGCD(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int subarrayGCD(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SubarrayGCD(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar subarrayGCD = function(nums, k) {\n    \n};",
+    "typescript": "function subarrayGCD(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function subarrayGCD($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func subarrayGCD(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun subarrayGCD(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int subarrayGCD(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func subarrayGCD(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef subarray_gcd(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def subarrayGCD(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn subarray_gcd(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (subarray-gcd nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec subarray_gcd(Nums :: [integer()], K :: integer()) -> integer().\nsubarray_gcd(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec subarray_gcd(nums :: [integer], k :: integer) :: integer\n  def subarray_gcd(nums, k) do\n    \n  end\nend"
+  }
+}

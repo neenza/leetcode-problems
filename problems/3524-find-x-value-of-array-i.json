@@ -1,0 +1,62 @@
+{
+  "title": "Find X Value of Array I",
+  "problem_id": "3831",
+  "frontend_id": "3524",
+  "difficulty": "Medium",
+  "problem_slug": "find-x-value-of-array-i",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array of positive integers nums, and a positive integer k.\nYou are allowed to perform an operation once on nums, where in each operation you can remove any non-overlapping prefix and suffix from nums such that nums remains non-empty.\nYou need to find the x-value of nums, which is the number of ways to perform this operation so that the product of the remaining elements leaves a remainder of x when divided by k.\nReturn an array result of size k where result[x] is the x-value of nums for 0 <= x <= k - 1.\nA prefix of an array is a subarray that starts from the beginning of the array and extends to any point within it.\nA suffix of an array is a subarray that starts at any point within the array and extends to the end of the array.\nNote that the prefix and suffix to be chosen for the operation can be empty.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5], k = 3\nOutput: [9,2,4]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,4,8,16,32], k = 4\nOutput: [18,1,2,0]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,2,1,1], k = 2\nOutput: [9,6]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums[i] <= 109",
+    "1 <= nums.length <= 105",
+    "1 <= k <= 5"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "Define <code>dp[i][r]</code> as the count of subarrays ending at index <code>i</code> whose product modulo <code>k</code> equals <code>r</code>.",
+    "Compute <code>dp[i][r]</code> for each index <code>i</code> in <code>nums</code> and sum over all indices to get the final counts for each remainder."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> resultArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] resultArray(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def resultArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def resultArray(self, nums: List[int], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* resultArray(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] ResultArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar resultArray = function(nums, k) {\n    \n};",
+    "typescript": "function resultArray(nums: number[], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function resultArray($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func resultArray(_ nums: [Int], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun resultArray(nums: IntArray, k: Int): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> resultArray(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func resultArray(nums []int, k int) []int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer[]}\ndef result_array(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def resultArray(nums: Array[Int], k: Int): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn result_array(nums: Vec<i32>, k: i32) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (result-array nums k)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec result_array(Nums :: [integer()], K :: integer()) -> [integer()].\nresult_array(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec result_array(nums :: [integer], k :: integer) :: [integer]\n  def result_array(nums, k) do\n    \n  end\nend"
+  }
+}

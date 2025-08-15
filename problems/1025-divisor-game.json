@@ -1,0 +1,54 @@
+{
+  "title": "Divisor Game",
+  "problem_id": "1086",
+  "frontend_id": "1025",
+  "difficulty": "Easy",
+  "problem_slug": "divisor-game",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Brainteaser",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob take turns playing a game, with Alice starting first.\nInitially, there is a number n on the chalkboard. On each player's turn, that player makes a move consisting of:\nAlso, if a player cannot make a move, they lose the game.\nReturn true if and only if Alice wins the game, assuming both players play optimally.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: true\nExplanation: Alice chooses 1, and Bob has no more moves.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3\nOutput: false\nExplanation: Alice chooses 1, Bob chooses 1, and Alice has no more moves.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the current number is even, we can always subtract a 1 to make it odd.  If the current number is odd, we must subtract an odd number to make it even."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool divisorGame(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean divisorGame(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def divisorGame(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def divisorGame(self, n: int) -> bool:\n        ",
+    "c": "bool divisorGame(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool DivisorGame(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar divisorGame = function(n) {\n    \n};",
+    "typescript": "function divisorGame(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function divisorGame($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func divisorGame(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun divisorGame(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool divisorGame(int n) {\n    \n  }\n}",
+    "golang": "func divisorGame(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef divisor_game(n)\n    \nend",
+    "scala": "object Solution {\n    def divisorGame(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn divisor_game(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (divisor-game n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec divisor_game(N :: integer()) -> boolean().\ndivisor_game(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec divisor_game(n :: integer) :: boolean\n  def divisor_game(n) do\n    \n  end\nend"
+  }
+}

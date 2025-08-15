@@ -1,0 +1,61 @@
+{
+  "title": "Find the Original Typed String II",
+  "problem_id": "3618",
+  "frontend_id": "3333",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-original-typed-string-ii",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\nYou are given a string word, which represents the final output displayed on Alice's screen. You are also given a positive integer k.\nReturn the total number of possible original strings that Alice might have intended to type, if she was trying to type a string of size at least k.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"aabbccdd\", k = 7\nOutput: 5\nExplanation:\nThe possible strings are: \"aabbccdd\" , \"aabbccd\" , \"aabbcdd\" , \"aabccdd\" , and \"abbccdd\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"aabbccdd\", k = 8\nOutput: 1\nExplanation:\nThe only possible string is \"aabbccdd\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word = \"aaabbb\", k = 3\nOutput: 8",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 5 * 105",
+    "word consists only of lowercase English letters.",
+    "1 <= k <= 2000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Instead of solving for at least <code>k</code>, can we solve for at most <code>k - 1</code> length?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int possibleStringCount(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int possibleStringCount(String word, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def possibleStringCount(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def possibleStringCount(self, word: str, k: int) -> int:\n        ",
+    "c": "int possibleStringCount(char* word, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int PossibleStringCount(string word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar possibleStringCount = function(word, k) {\n    \n};",
+    "typescript": "function possibleStringCount(word: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @param Integer $k\n     * @return Integer\n     */\n    function possibleStringCount($word, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func possibleStringCount(_ word: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun possibleStringCount(word: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int possibleStringCount(String word, int k) {\n    \n  }\n}",
+    "golang": "func possibleStringCount(word string, k int) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @param {Integer} k\n# @return {Integer}\ndef possible_string_count(word, k)\n    \nend",
+    "scala": "object Solution {\n    def possibleStringCount(word: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn possible_string_count(word: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (possible-string-count word k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec possible_string_count(Word :: unicode:unicode_binary(), K :: integer()) -> integer().\npossible_string_count(Word, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec possible_string_count(word :: String.t, k :: integer) :: integer\n  def possible_string_count(word, k) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Dynamic Programming + Prefix Sum Optimization\n\n#### Intuition\n\nTo obtain a result with a length of at least $k$, we can first calculate the total number of valid results of any length, and then subtract the number of results of lengths $1, 2, \\cdots, k-1$.\n\nFor any result length, we can use the multiplication principle: if a character appears consecutively $p$ times in the string $\\textit{word}$, then Alice may choose to input it $1, 2, \\cdots, p$ times, giving $p$ possible choices. Multiplying all such values of $p$ gives the total number of valid results for all lengths.\n\n> For example, if $\\textit{word} = \\text{abbcccaa}$, then the run lengths $p$ are $[1, 2, 3, 2]$, and the total number of results is $1 \\times 2 \\times 3 \\times 2 = 12$.\n\nTo count the number of results with lengths less than $k$, we use dynamic programming. First, we record all the $p$ values in a frequency array $\\textit{freq}$, and define $f(i, j)$ as the number of ways to construct a string using the first $i+1$ elements of $\\textit{freq}$ such that the total constructed length is $j$.\n          \nFor state transitions, we iterate over the number of times the character corresponding to $\\textit{freq}[i]$ is used, from $1$ to $\\textit{freq}[i]$. If it's used $j'$ times, then we must construct a string of length $j - j'$ using the first $i$ elements. This leads to the recurrence:\n\n$$\nf(i, j) = \\sum_{j'=1}^{\\textit{freq}[i]} f(i-1, j-j')\n$$\n\nThe base case is $f(-1, 0) = 1$, indicating there is one way to construct the empty string.\n\nIf the length of $\\textit{freq}$ is already $\\geq k$, we don’t need this dynamic programming calculation, because the total constructed string length will necessarily be at least $k$.\n          \nThe above DP has time complexity $O(k^3)$ because we iterate over $i$, $j$, and $j'$ — each in $O(k)$ — which is too slow when $k = 2000$.\n\nTo optimize, observe that the summation in the recurrence has consecutive indices, so we can precompute prefix sums. Let $g(i-1, j)$ be the prefix sum:\n\n$$\ng(i-1, j) = \\sum_{j'=0}^j f(i-1, j')\n$$\n\nThen we can compute $f(i, j)$ in $O(1)$ time:\n\n$$\nf(i, j) = g(i-1, j-1) - g(i-1, j-\\textit{freq}[i]-1)\n$$\n\nThis reduces time complexity to $O(k^2)$.\n\nFor space optimization, note that we only need the previous row for state transition, so we can reduce space from $O(k^2)$ to $O(k)$ by using two 1D arrays.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string $\\textit{words}$.\n\n- Time complexity: $O(n + k^2)$.\n\n  We need to traverse the string once, and the subsequent dynamic programming solution requires $O(k^2)$ time.\n\n- Space complexity: $O(k)$."
+}

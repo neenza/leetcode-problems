@@ -1,0 +1,63 @@
+{
+  "title": "Find if Path Exists in Graph",
+  "problem_id": "2121",
+  "frontend_id": "1971",
+  "difficulty": "Easy",
+  "problem_slug": "find-if-path-exists-in-graph",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph"
+  ],
+  "description": "There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.\nYou want to determine if there is a valid path that exists from vertex source to vertex destination.\nGiven edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2\nOutput: true\nExplanation: There are two paths from vertex 0 to vertex 2:\n- 0 → 1 → 2\n- 0 → 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/14/validpath-ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, edges = [[0,1],[0,2],[3,5],[5,4],[4,3]], source = 0, destination = 5\nOutput: false\nExplanation: There is no path from vertex 0 to vertex 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/14/validpath-ex2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2 * 105",
+    "0 <= edges.length <= 2 * 105",
+    "edges[i].length == 2",
+    "0 <= ui, vi <= n - 1",
+    "ui != vi",
+    "0 <= source, destination <= n - 1",
+    "There are no duplicate edges.",
+    "There are no self edges."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validPath(int n, int[][] edges, int source, int destination) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validPath(self, n, edges, source, destination):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type source: int\n        :type destination: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:\n        ",
+    "c": "bool validPath(int n, int** edges, int edgesSize, int* edgesColSize, int source, int destination) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ValidPath(int n, int[][] edges, int source, int destination) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} source\n * @param {number} destination\n * @return {boolean}\n */\nvar validPath = function(n, edges, source, destination) {\n    \n};",
+    "typescript": "function validPath(n: number, edges: number[][], source: number, destination: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer $source\n     * @param Integer $destination\n     * @return Boolean\n     */\n    function validPath($n, $edges, $source, $destination) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validPath(_ n: Int, _ edges: [[Int]], _ source: Int, _ destination: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validPath(n: Int, edges: Array<IntArray>, source: Int, destination: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool validPath(int n, List<List<int>> edges, int source, int destination) {\n    \n  }\n}",
+    "golang": "func validPath(n int, edges [][]int, source int, destination int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer} source\n# @param {Integer} destination\n# @return {Boolean}\ndef valid_path(n, edges, source, destination)\n    \nend",
+    "scala": "object Solution {\n    def validPath(n: Int, edges: Array[Array[Int]], source: Int, destination: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_path(n: i32, edges: Vec<Vec<i32>>, source: i32, destination: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (valid-path n edges source destination)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec valid_path(N :: integer(), Edges :: [[integer()]], Source :: integer(), Destination :: integer()) -> boolean().\nvalid_path(N, Edges, Source, Destination) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_path(n :: integer, edges :: [[integer]], source :: integer, destination :: integer) :: boolean\n  def valid_path(n, edges, source, destination) do\n    \n  end\nend"
+  }
+}

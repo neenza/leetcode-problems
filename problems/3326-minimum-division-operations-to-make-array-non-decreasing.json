@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Division Operations to Make Array Non Decreasing",
+  "problem_id": "3607",
+  "frontend_id": "3326",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-division-operations-to-make-array-non-decreasing",
+  "topics": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums.\nAny positive divisor of a natural number x that is strictly less than x is called a proper divisor of x. For example, 2 is a proper divisor of 4, while 6 is not a proper divisor of 6.\nYou are allowed to perform an operation any number of times on nums, where in each operation you select any one element from nums and divide it by its greatest proper divisor.\nReturn the minimum number of operations required to make the array non-decreasing.\nIf it is not possible to make the array non-decreasing using any number of operations, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [25,7]\nOutput: 1\nExplanation:\nUsing a single operation, 25 gets divided by 5 and nums becomes [5, 7] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [7,7,6]\nOutput: -1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1,1]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate backward from the last index.",
+    "Each number can be divided by its largest proper divisor to yield its smallest prime divisor."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()]) -> integer().\nmin_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer]) :: integer\n  def min_operations(nums) do\n    \n  end\nend"
+  }
+}

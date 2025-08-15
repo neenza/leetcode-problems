@@ -1,0 +1,59 @@
+{
+  "title": "Wildcard Matching",
+  "problem_id": "44",
+  "frontend_id": "44",
+  "difficulty": "Hard",
+  "problem_slug": "wildcard-matching",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Recursion"
+  ],
+  "description": "Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:\nThe matching should cover the entire input string (not partial).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aa\", p = \"a\"\nOutput: false\nExplanation: \"a\" does not match the entire string \"aa\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aa\", p = \"*\"\nOutput: true\nExplanation: '*' matches any sequence.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"cb\", p = \"?a\"\nOutput: false\nExplanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= s.length, p.length <= 2000",
+    "s contains only lowercase English letters.",
+    "p contains only lowercase English letters, '?' or '*'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isMatch(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isMatch(String s, String p) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isMatch(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isMatch(self, s: str, p: str) -> bool:\n        ",
+    "c": "bool isMatch(char* s, char* p) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsMatch(string s, string p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {boolean}\n */\nvar isMatch = function(s, p) {\n    \n};",
+    "typescript": "function isMatch(s: string, p: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $p\n     * @return Boolean\n     */\n    function isMatch($s, $p) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isMatch(_ s: String, _ p: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isMatch(s: String, p: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isMatch(String s, String p) {\n    \n  }\n}",
+    "golang": "func isMatch(s string, p string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} p\n# @return {Boolean}\ndef is_match(s, p)\n    \nend",
+    "scala": "object Solution {\n    def isMatch(s: String, p: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_match(s: String, p: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-match s p)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec is_match(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> boolean().\nis_match(S, P) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_match(s :: String.t, p :: String.t) :: boolean\n  def is_match(s, p) do\n    \n  end\nend"
+  }
+}

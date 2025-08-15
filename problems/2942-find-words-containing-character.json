@@ -1,0 +1,61 @@
+{
+  "title": "Find Words Containing Character",
+  "problem_id": "3194",
+  "frontend_id": "2942",
+  "difficulty": "Easy",
+  "problem_slug": "find-words-containing-character",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given a 0-indexed array of strings words and a character x.\nReturn an array of indices representing the words that contain the character x.\nNote that the returned array may be in any order.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"leet\",\"code\"], x = \"e\"\nOutput: [0,1]\nExplanation: \"e\" occurs in both words: \"leet\", and \"code\". Hence, we return indices 0 and 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"abc\",\"bcd\",\"aaaa\",\"cbc\"], x = \"a\"\nOutput: [0,2]\nExplanation: \"a\" occurs in \"abc\", and \"aaaa\". Hence, we return indices 0 and 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"abc\",\"bcd\",\"aaaa\",\"cbc\"], x = \"z\"\nOutput: []\nExplanation: \"z\" does not occur in any of the words. Hence, we return an empty array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 50",
+    "1 <= words[i].length <= 50",
+    "x is a lowercase English letter.",
+    "words[i] consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use two nested loops."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findWordsContaining(vector<string>& words, char x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findWordsContaining(String[] words, char x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findWordsContaining(self, words, x):\n        \"\"\"\n        :type words: List[str]\n        :type x: str\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findWordsContaining(self, words: List[str], x: str) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findWordsContaining(char** words, int wordsSize, char x, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> FindWordsContaining(string[] words, char x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {character} x\n * @return {number[]}\n */\nvar findWordsContaining = function(words, x) {\n    \n};",
+    "typescript": "function findWordsContaining(words: string[], x: string): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $x\n     * @return Integer[]\n     */\n    function findWordsContaining($words, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findWordsContaining(_ words: [String], _ x: Character) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findWordsContaining(words: Array<String>, x: Char): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findWordsContaining(List<String> words, String x) {\n    \n  }\n}",
+    "golang": "func findWordsContaining(words []string, x byte) []int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Character} x\n# @return {Integer[]}\ndef find_words_containing(words, x)\n    \nend",
+    "scala": "object Solution {\n    def findWordsContaining(words: Array[String], x: Char): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_words_containing(words: Vec<String>, x: char) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (find-words-containing words x)\n  (-> (listof string?) char? (listof exact-integer?))\n  )",
+    "erlang": "-spec find_words_containing(Words :: [unicode:unicode_binary()], X :: char()) -> [integer()].\nfind_words_containing(Words, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_words_containing(words :: [String.t], x :: char) :: [integer]\n  def find_words_containing(words, x) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Simulation\n\n#### Intuition\n\nAccording to the problem, we should simulate the process by traversing each string and checking whether it contains the character $x$. If it does, we add the index of the string to the result array.\n\nFinally, we return the result array.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array and $m$ be the length of the string.\n\n- Time complexity: $O(n * m)$.\n  \n  We traverse each string to check if it contains the character `x`.\n\n- Space complexity: $O(1)$.\n  \n  The space required for the return variable is not included in the calculation."
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Text Justification",
+  "problem_id": "68",
+  "frontend_id": "68",
+  "difficulty": "Hard",
+  "problem_slug": "text-justification",
+  "topics": [
+    "Array",
+    "String",
+    "Simulation"
+  ],
+  "description": "Given an array of strings words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.\nYou should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly maxWidth characters.\nExtra spaces between words should be distributed as evenly as possible. If the number of spaces on a line does not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.\nFor the last line of text, it should be left-justified, and no extra space is inserted between words.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"This\", \"is\", \"an\", \"example\", \"of\", \"text\", \"justification.\"], maxWidth = 16\nOutput:\n[\n   \"This    is    an\",\n   \"example  of text\",\n   \"justification.  \"\n]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"What\",\"must\",\"be\",\"acknowledgment\",\"shall\",\"be\"], maxWidth = 16\nOutput:\n[\n  \"What   must   be\",\n  \"acknowledgment  \",\n  \"shall be        \"\n]\nExplanation: Note that the last line is \"shall be    \" instead of \"shall     be\", because the last line must be left-justified instead of fully-justified.\nNote that the second line is also left-justified because it contains only one word.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"Science\",\"is\",\"what\",\"we\",\"understand\",\"well\",\"enough\",\"to\",\"explain\",\"to\",\"a\",\"computer.\",\"Art\",\"is\",\"everything\",\"else\",\"we\",\"do\"], maxWidth = 20\nOutput:\n[\n  \"Science  is  what we\",\n  \"understand      well\",\n  \"enough to explain to\",\n  \"a  computer.  Art is\",\n  \"everything  else  we\",\n  \"do                  \"\n]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 300",
+    "1 <= words[i].length <= 20",
+    "words[i] consists of only English letters and symbols.",
+    "1 <= maxWidth <= 100",
+    "words[i].length <= maxWidth"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> fullJustify(vector<string>& words, int maxWidth) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> fullJustify(String[] words, int maxWidth) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def fullJustify(self, words, maxWidth):\n        \"\"\"\n        :type words: List[str]\n        :type maxWidth: int\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** fullJustify(char** words, int wordsSize, int maxWidth, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> FullJustify(string[] words, int maxWidth) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number} maxWidth\n * @return {string[]}\n */\nvar fullJustify = function(words, maxWidth) {\n    \n};",
+    "typescript": "function fullJustify(words: string[], maxWidth: number): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer $maxWidth\n     * @return String[]\n     */\n    function fullJustify($words, $maxWidth) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func fullJustify(_ words: [String], _ maxWidth: Int) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun fullJustify(words: Array<String>, maxWidth: Int): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> fullJustify(List<String> words, int maxWidth) {\n    \n  }\n}",
+    "golang": "func fullJustify(words []string, maxWidth int) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer} max_width\n# @return {String[]}\ndef full_justify(words, max_width)\n    \nend",
+    "scala": "object Solution {\n    def fullJustify(words: Array[String], maxWidth: Int): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn full_justify(words: Vec<String>, max_width: i32) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (full-justify words maxWidth)\n  (-> (listof string?) exact-integer? (listof string?))\n  )",
+    "erlang": "-spec full_justify(Words :: [unicode:unicode_binary()], MaxWidth :: integer()) -> [unicode:unicode_binary()].\nfull_justify(Words, MaxWidth) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec full_justify(words :: [String.t], max_width :: integer) :: [String.t]\n  def full_justify(words, max_width) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Short Encoding of Words",
+  "problem_id": "839",
+  "frontend_id": "820",
+  "difficulty": "Medium",
+  "problem_slug": "short-encoding-of-words",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Trie"
+  ],
+  "description": "A valid encoding of an array of words is any reference string s and array of indices indices such that:\nGiven an array of words, return the length of the shortest reference string s possible of any valid encoding of words.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"time\", \"me\", \"bell\"]\nOutput: 10\nExplanation: A valid encoding would be s = \"time#bell#\" and indices = [0, 2, 5].\nwords[0] = \"time\", the substring of s starting from indices[0] = 0 to the next '#' is underlined in \"time#bell#\"\nwords[1] = \"me\", the substring of s starting from indices[1] = 2 to the next '#' is underlined in \"time#bell#\"\nwords[2] = \"bell\", the substring of s starting from indices[2] = 5 to the next '#' is underlined in \"time#bell#\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"t\"]\nOutput: 2\nExplanation: A valid encoding would be s = \"t#\" and indices = [0].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 2000",
+    "1 <= words[i].length <= 7",
+    "words[i] consists of only lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumLengthEncoding(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumLengthEncoding(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumLengthEncoding(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumLengthEncoding(self, words: List[str]) -> int:\n        ",
+    "c": "int minimumLengthEncoding(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumLengthEncoding(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar minimumLengthEncoding = function(words) {\n    \n};",
+    "typescript": "function minimumLengthEncoding(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function minimumLengthEncoding($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumLengthEncoding(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumLengthEncoding(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumLengthEncoding(List<String> words) {\n    \n  }\n}",
+    "golang": "func minimumLengthEncoding(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef minimum_length_encoding(words)\n    \nend",
+    "scala": "object Solution {\n    def minimumLengthEncoding(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_length_encoding(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-length-encoding words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_length_encoding(Words :: [unicode:unicode_binary()]) -> integer().\nminimum_length_encoding(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_length_encoding(words :: [String.t]) :: integer\n  def minimum_length_encoding(words) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Store Prefixes [Accepted]\n\n**Intuition**\n\nFirst, let's remove the duplicate strings since it is not optimal to include two or more of the same string in the final answer. We can do this with a set.\n\nNext, let's handle the suffix relationship.\n\nIn this article, a \"proper suffix\" will refer to a suffix that is not an empty string and not equal to the string itself.\n\nAn observation is that if the word `X` is a proper suffix of `Y`, then it does not need to be considered, as the encoding of `Y` in the reference string will also encode `X`.  For example, if `\"me\"` and `\"time\"` are in `words`, we can discard `\"me\"` without changing the answer.\n\nIf a word `Y` does not have any other word `X` (in the list of `words`) that is a proper suffix of `Y`, then `Y` must be part of the reference string.\n\nThus, the goal is to remove words from the list such that no word is a proper suffix of another.  The final answer would be `sum(word.length + 1 for word in words)`.\n\n**Algorithm**\n\nSince a word has at most 6 proper suffixes (as `words[i].length <= 7`), let's iterate over all of them.  For each proper suffix, we'll try to remove it from our `words` list.  For efficiency, we'll make `words` a set.\n\n**Implementation****Complexity Analysis**\n\n* Time Complexity:  $$O(\\sum w_i^2)$$, where $$w_i$$ is the length of `words[i]`.\n\n* Space Complexity: $$O(\\sum w_i)$$, the space used in storing suffixes.\n\n---\n### Approach #2: Trie [Accepted]\n\n**Intuition**\n\nAs in *Approach #1*, the goal is to remove words that are proper suffixes of another word in the list.\n\n**Algorithm**\n\nTo find whether different words have the same suffix, let's put them backwards into a trie (prefix tree).  For example, if we have `\"time\"` and `\"me\"`, we will put `\"emit\"` and `\"em\"` into our trie.\n\nAfter, the leaves of this trie (nodes with no children) represent words that have no proper suffix, and we will count `sum(word.length + 1 for word in words)`.\n\n**Implementation****Complexity Analysis**\n\n* Time Complexity:  $$O(\\sum w_i)$$, where $$w_i$$ is the length of `words[i]`.\n\n* Space Complexity: $$O(\\sum w_i)$$, the space used by the trie."
+}

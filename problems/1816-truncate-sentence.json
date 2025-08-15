@@ -1,0 +1,62 @@
+{
+  "title": "Truncate Sentence",
+  "problem_id": "1944",
+  "frontend_id": "1816",
+  "difficulty": "Easy",
+  "problem_slug": "truncate-sentence",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "A sentence is a list of words that are separated by a single space with no leading or trailing spaces. Each of the words consists of only uppercase and lowercase English letters (no punctuation).\nYou are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only the first k​​​​​​ words. Return s​​​​​​ after truncating it.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"Hello how are you Contestant\", k = 4\nOutput: \"Hello how are you\"\nExplanation:\nThe words in s are [\"Hello\", \"how\" \"are\", \"you\", \"Contestant\"].\nThe first 4 words are [\"Hello\", \"how\", \"are\", \"you\"].\nHence, you should return \"Hello how are you\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"What is the solution to this problem\", k = 4\nOutput: \"What is the solution\"\nExplanation:\nThe words in s are [\"What\", \"is\" \"the\", \"solution\", \"to\", \"this\", \"problem\"].\nThe first 4 words are [\"What\", \"is\", \"the\", \"solution\"].\nHence, you should return \"What is the solution\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"chopper is not a tanuki\", k = 5\nOutput: \"chopper is not a tanuki\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "k is in the range [1, the number of words in s].",
+    "s consist of only lowercase and uppercase English letters and spaces.",
+    "The words in s are separated by a single space.",
+    "There are no leading or trailing spaces."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "It's easier to solve this problem on an array of strings so parse the string to an array of words",
+    "After return the first k words as a sentence"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string truncateSentence(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String truncateSentence(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def truncateSentence(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def truncateSentence(self, s: str, k: int) -> str:\n        ",
+    "c": "char* truncateSentence(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string TruncateSentence(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar truncateSentence = function(s, k) {\n    \n};",
+    "typescript": "function truncateSentence(s: string, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return String\n     */\n    function truncateSentence($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func truncateSentence(_ s: String, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun truncateSentence(s: String, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String truncateSentence(String s, int k) {\n    \n  }\n}",
+    "golang": "func truncateSentence(s string, k int) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {String}\ndef truncate_sentence(s, k)\n    \nend",
+    "scala": "object Solution {\n    def truncateSentence(s: String, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn truncate_sentence(s: String, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (truncate-sentence s k)\n  (-> string? exact-integer? string?)\n  )",
+    "erlang": "-spec truncate_sentence(S :: unicode:unicode_binary(), K :: integer()) -> unicode:unicode_binary().\ntruncate_sentence(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec truncate_sentence(s :: String.t, k :: integer) :: String.t\n  def truncate_sentence(s, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Detect Cycles in 2D Grid",
+  "problem_id": "1663",
+  "frontend_id": "1559",
+  "difficulty": "Medium",
+  "problem_slug": "detect-cycles-in-2d-grid",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Matrix"
+  ],
+  "description": "Given a 2D array of characters grid of size m x n, you need to find if there exists any cycle consisting of the same value in grid.\nA cycle is a path of length 4 or more in the grid that starts and ends at the same cell. From a given cell, you can move to one of the cells adjacent to it - in one of the four directions (up, down, left, or right), if it has the same value of the current cell.\nAlso, you cannot move to the cell that you visited in your last move. For example, the cycle (1, 1) -> (1, 2) -> (1, 1) is invalid because from (1, 2) we visited (1, 1) which was the last visited cell.\nReturn true if any cycle of the same value exists in grid, otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"a\",\"a\",\"a\",\"a\"],[\"a\",\"b\",\"b\",\"a\"],[\"a\",\"b\",\"b\",\"a\"],[\"a\",\"a\",\"a\",\"a\"]]\nOutput: true\nExplanation: There are two valid cycles shown in different colors in the image below:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/15/1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\"c\",\"c\",\"c\",\"a\"],[\"c\",\"d\",\"c\",\"c\"],[\"c\",\"c\",\"e\",\"c\"],[\"f\",\"c\",\"c\",\"c\"]]\nOutput: true\nExplanation: There is only one valid cycle highlighted in the image below:",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/15/22.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[\"a\",\"b\",\"b\"],[\"b\",\"z\",\"b\"],[\"b\",\"b\",\"a\"]]\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/15/3.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 500",
+    "grid consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of the parent (previous position) to avoid considering an invalid path.",
+    "Use DFS or BFS and keep track of visited cells to see if there is a cycle."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool containsCycle(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean containsCycle(char[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def containsCycle(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def containsCycle(self, grid: List[List[str]]) -> bool:\n        ",
+    "c": "bool containsCycle(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ContainsCycle(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {boolean}\n */\nvar containsCycle = function(grid) {\n    \n};",
+    "typescript": "function containsCycle(grid: string[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @return Boolean\n     */\n    function containsCycle($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func containsCycle(_ grid: [[Character]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun containsCycle(grid: Array<CharArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool containsCycle(List<List<String>> grid) {\n    \n  }\n}",
+    "golang": "func containsCycle(grid [][]byte) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @return {Boolean}\ndef contains_cycle(grid)\n    \nend",
+    "scala": "object Solution {\n    def containsCycle(grid: Array[Array[Char]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn contains_cycle(grid: Vec<Vec<char>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (contains-cycle grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
+    "erlang": "-spec contains_cycle(Grid :: [[char()]]) -> boolean().\ncontains_cycle(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec contains_cycle(grid :: [[char]]) :: boolean\n  def contains_cycle(grid) do\n    \n  end\nend"
+  }
+}

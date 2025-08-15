@@ -1,0 +1,58 @@
+{
+  "title": "Get Maximum in Generated Array",
+  "problem_id": "1769",
+  "frontend_id": "1646",
+  "difficulty": "Easy",
+  "problem_slug": "get-maximum-in-generated-array",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:\nReturn the maximum integer in the array nums​​​.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 7\nOutput: 3\nExplanation: According to the given rules:\n  nums[0] = 0\n  nums[1] = 1\n  nums[(1 * 2) = 2] = nums[1] = 1\n  nums[(1 * 2) + 1 = 3] = nums[1] + nums[2] = 1 + 1 = 2\n  nums[(2 * 2) = 4] = nums[2] = 1\n  nums[(2 * 2) + 1 = 5] = nums[2] + nums[3] = 1 + 2 = 3\n  nums[(3 * 2) = 6] = nums[3] = 2\n  nums[(3 * 2) + 1 = 7] = nums[3] + nums[4] = 2 + 1 = 3\nHence, nums = [0,1,1,2,1,3,2,3], and the maximum is max(0,1,1,2,1,3,2,3) = 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 1\nExplanation: According to the given rules, nums = [0,1,1]. The maximum is max(0,1,1) = 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3\nOutput: 2\nExplanation: According to the given rules, nums = [0,1,1,2]. The maximum is max(0,1,1,2) = 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= n <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try generating the array.",
+    "Make sure not to fall in the base case of 0."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int getMaximumGenerated(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getMaximumGenerated(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getMaximumGenerated(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getMaximumGenerated(self, n: int) -> int:\n        ",
+    "c": "int getMaximumGenerated(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GetMaximumGenerated(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar getMaximumGenerated = function(n) {\n    \n};",
+    "typescript": "function getMaximumGenerated(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function getMaximumGenerated($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getMaximumGenerated(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getMaximumGenerated(n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getMaximumGenerated(int n) {\n    \n  }\n}",
+    "golang": "func getMaximumGenerated(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef get_maximum_generated(n)\n    \nend",
+    "scala": "object Solution {\n    def getMaximumGenerated(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_maximum_generated(n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (get-maximum-generated n)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec get_maximum_generated(N :: integer()) -> integer().\nget_maximum_generated(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_maximum_generated(n :: integer) :: integer\n  def get_maximum_generated(n) do\n    \n  end\nend"
+  }
+}

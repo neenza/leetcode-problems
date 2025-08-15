@@ -1,0 +1,56 @@
+{
+  "title": "Latest Time You Can Obtain After Replacing Characters",
+  "problem_id": "3361",
+  "frontend_id": "3114",
+  "difficulty": "Easy",
+  "problem_slug": "latest-time-you-can-obtain-after-replacing-characters",
+  "topics": [
+    "String",
+    "Enumeration"
+  ],
+  "description": "You are given a string s representing a 12-hour format time where some of the digits (possibly none) are replaced with a \"?\".\n12-hour times are formatted as \"HH:MM\", where HH is between 00 and 11, and MM is between 00 and 59. The earliest 12-hour time is 00:00, and the latest is 11:59.\nYou have to replace all the \"?\" characters in s with digits such that the time we obtain by the resulting string is a valid 12-hour format time and is the latest possible.\nReturn the resulting string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1?:?4\"\nOutput: \"11:54\"\nExplanation: The latest 12-hour format time we can achieve by replacing \"?\" characters is \"11:54\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0?:5?\"\nOutput: \"09:59\"\nExplanation: The latest 12-hour format time we can achieve by replacing \"?\" characters is \"09:59\" .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "s.length == 5",
+    "s[2] is equal to the character \":\".",
+    "All characters except s[2] are digits or \"?\" characters.",
+    "The input is generated such that there is at least one time between \"00:00\" and \"11:59\" that you can obtain after replacing the \"?\" characters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try using a brute force approach.",
+    "Iterate over all possible times that can be generated from the string and find the latest one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string findLatestTime(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findLatestTime(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findLatestTime(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findLatestTime(self, s: str) -> str:\n        ",
+    "c": "char* findLatestTime(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FindLatestTime(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar findLatestTime = function(s) {\n    \n};",
+    "typescript": "function findLatestTime(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function findLatestTime($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findLatestTime(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findLatestTime(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findLatestTime(String s) {\n    \n  }\n}",
+    "golang": "func findLatestTime(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef find_latest_time(s)\n    \nend",
+    "scala": "object Solution {\n    def findLatestTime(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_latest_time(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (find-latest-time s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec find_latest_time(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nfind_latest_time(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_latest_time(s :: String.t) :: String.t\n  def find_latest_time(s) do\n    \n  end\nend"
+  }
+}

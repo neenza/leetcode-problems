@@ -1,0 +1,51 @@
+{
+  "title": "Gray Code",
+  "problem_id": "89",
+  "frontend_id": "89",
+  "difficulty": "Medium",
+  "problem_slug": "gray-code",
+  "topics": [
+    "Math",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "description": "An n-bit gray code sequence is a sequence of 2n integers where:\nGiven an integer n, return any valid n-bit gray code sequence.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2\nOutput: [0,1,3,2]\nExplanation:\nThe binary representation of [0,1,3,2] is [00,01,11,10].\n- 00 and 01 differ by one bit\n- 01 and 11 differ by one bit\n- 11 and 10 differ by one bit\n- 10 and 00 differ by one bit\n[0,2,3,1] is also a valid gray code sequence, whose binary representation is [00,10,11,01].\n- 00 and 10 differ by one bit\n- 10 and 11 differ by one bit\n- 11 and 01 differ by one bit\n- 01 and 00 differ by one bit",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: [0,1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 16"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> grayCode(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> grayCode(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def grayCode(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def grayCode(self, n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* grayCode(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> GrayCode(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar grayCode = function(n) {\n    \n};",
+    "typescript": "function grayCode(n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function grayCode($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func grayCode(_ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun grayCode(n: Int): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> grayCode(int n) {\n    \n  }\n}",
+    "golang": "func grayCode(n int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[]}\ndef gray_code(n)\n    \nend",
+    "scala": "object Solution {\n    def grayCode(n: Int): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn gray_code(n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (gray-code n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec gray_code(N :: integer()) -> [integer()].\ngray_code(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec gray_code(n :: integer) :: [integer]\n  def gray_code(n) do\n    \n  end\nend"
+  }
+}

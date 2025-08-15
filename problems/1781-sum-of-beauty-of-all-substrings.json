@@ -1,0 +1,55 @@
+{
+  "title": "Sum of Beauty of All Substrings",
+  "problem_id": "1890",
+  "frontend_id": "1781",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-beauty-of-all-substrings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ],
+  "description": "The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.\nGiven a string s, return the sum of beauty of all of its substrings.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aabcb\"\nOutput: 5\nExplanation: The substrings with non-zero beauty are [\"aab\",\"aabc\",\"aabcb\",\"abcb\",\"bcb\"], each with beauty equal to 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aabcbaa\"\nOutput: 17",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 500",
+    "s consists of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain a prefix sum for the frequencies of characters.",
+    "You can iterate over all substring then iterate over the alphabet and find which character appears most and which appears least using the prefix sum array"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int beautySum(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int beautySum(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def beautySum(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def beautySum(self, s: str) -> int:\n        ",
+    "c": "int beautySum(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BeautySum(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar beautySum = function(s) {\n    \n};",
+    "typescript": "function beautySum(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function beautySum($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func beautySum(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun beautySum(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int beautySum(String s) {\n    \n  }\n}",
+    "golang": "func beautySum(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef beauty_sum(s)\n    \nend",
+    "scala": "object Solution {\n    def beautySum(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn beauty_sum(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (beauty-sum s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec beauty_sum(S :: unicode:unicode_binary()) -> integer().\nbeauty_sum(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec beauty_sum(s :: String.t) :: integer\n  def beauty_sum(s) do\n    \n  end\nend"
+  }
+}

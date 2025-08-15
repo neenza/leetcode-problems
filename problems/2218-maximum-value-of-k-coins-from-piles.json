@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Value of K Coins From Piles",
+  "problem_id": "1393",
+  "frontend_id": "2218",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-value-of-k-coins-from-piles",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Prefix Sum"
+  ],
+  "description": "There are n piles of coins on a table. Each pile consists of a positive number of coins of assorted denominations.\nIn one move, you can choose any coin on top of any pile, remove it, and add it to your wallet.\nGiven a list piles, where piles[i] is a list of integers denoting the composition of the ith pile from top to bottom, and a positive integer k, return the maximum total value of coins you can have in your wallet if you choose exactly k coins optimally.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: piles = [[1,100,3],[7,8,9]], k = 2\nOutput: 101\nExplanation:\nThe above diagram shows the different ways we can choose k coins.\nThe maximum total we can obtain is 101.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/09/e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: piles = [[100],[100],[100],[100],[100],[100],[1,1,1,1,1,1,700]], k = 7\nOutput: 706\nExplanation:\nThe maximum total can be obtained if we choose all coins from the last pile.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/11/09/e1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == piles.length",
+    "1 <= n <= 1000",
+    "1 <= piles[i][j] <= 105",
+    "1 <= k <= sum(piles[i].length) <= 2000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each pile i, what will be the total value of coins we can collect if we choose the first j coins?",
+    "How can we use dynamic programming to combine the results from different piles to find the most optimal answer?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxValueOfCoins(vector<vector<int>>& piles, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxValueOfCoins(List<List<Integer>> piles, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxValueOfCoins(self, piles, k):\n        \"\"\"\n        :type piles: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:\n        ",
+    "c": "int maxValueOfCoins(int** piles, int pilesSize, int* pilesColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxValueOfCoins(IList<IList<int>> piles, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} piles\n * @param {number} k\n * @return {number}\n */\nvar maxValueOfCoins = function(piles, k) {\n    \n};",
+    "typescript": "function maxValueOfCoins(piles: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $piles\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxValueOfCoins($piles, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxValueOfCoins(_ piles: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxValueOfCoins(piles: List<List<Int>>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxValueOfCoins(List<List<int>> piles, int k) {\n    \n  }\n}",
+    "golang": "func maxValueOfCoins(piles [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} piles\n# @param {Integer} k\n# @return {Integer}\ndef max_value_of_coins(piles, k)\n    \nend",
+    "scala": "object Solution {\n    def maxValueOfCoins(piles: List[List[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_value_of_coins(piles: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-value-of-coins piles k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_value_of_coins(Piles :: [[integer()]], K :: integer()) -> integer().\nmax_value_of_coins(Piles, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_value_of_coins(piles :: [[integer]], k :: integer) :: integer\n  def max_value_of_coins(piles, k) do\n    \n  end\nend"
+  }
+}

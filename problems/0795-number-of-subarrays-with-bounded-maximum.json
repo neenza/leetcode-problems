@@ -1,0 +1,52 @@
+{
+  "title": "Number of Subarrays with Bounded Maximum",
+  "problem_id": "811",
+  "frontend_id": "795",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-subarrays-with-bounded-maximum",
+  "topics": [
+    "Array",
+    "Two Pointers"
+  ],
+  "description": "Given an integer array nums and two integers left and right, return the number of contiguous non-empty subarrays such that the value of the maximum array element in that subarray is in the range [left, right].\nThe test cases are generated so that the answer will fit in a 32-bit integer.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,4,3], left = 2, right = 3\nOutput: 3\nExplanation: There are three subarrays that meet the requirements: [2], [2, 1], [3].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,9,2,5,6], left = 2, right = 8\nOutput: 7",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109",
+    "0 <= left <= right <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numSubarrayBoundedMax(vector<int>& nums, int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSubarrayBoundedMax(int[] nums, int left, int right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numSubarrayBoundedMax(self, nums, left, right):\n        \"\"\"\n        :type nums: List[int]\n        :type left: int\n        :type right: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numSubarrayBoundedMax(self, nums: List[int], left: int, right: int) -> int:\n        ",
+    "c": "int numSubarrayBoundedMax(int* nums, int numsSize, int left, int right) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumSubarrayBoundedMax(int[] nums, int left, int right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} left\n * @param {number} right\n * @return {number}\n */\nvar numSubarrayBoundedMax = function(nums, left, right) {\n    \n};",
+    "typescript": "function numSubarrayBoundedMax(nums: number[], left: number, right: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $left\n     * @param Integer $right\n     * @return Integer\n     */\n    function numSubarrayBoundedMax($nums, $left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numSubarrayBoundedMax(_ nums: [Int], _ left: Int, _ right: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numSubarrayBoundedMax(nums: IntArray, left: Int, right: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numSubarrayBoundedMax(List<int> nums, int left, int right) {\n    \n  }\n}",
+    "golang": "func numSubarrayBoundedMax(nums []int, left int, right int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} left\n# @param {Integer} right\n# @return {Integer}\ndef num_subarray_bounded_max(nums, left, right)\n    \nend",
+    "scala": "object Solution {\n    def numSubarrayBoundedMax(nums: Array[Int], left: Int, right: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_subarray_bounded_max(nums: Vec<i32>, left: i32, right: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-subarray-bounded-max nums left right)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_subarray_bounded_max(Nums :: [integer()], Left :: integer(), Right :: integer()) -> integer().\nnum_subarray_bounded_max(Nums, Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_subarray_bounded_max(nums :: [integer], left :: integer, right :: integer) :: integer\n  def num_subarray_bounded_max(nums, left, right) do\n    \n  end\nend"
+  }
+}

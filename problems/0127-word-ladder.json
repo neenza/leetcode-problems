@@ -1,0 +1,57 @@
+{
+  "title": "Word Ladder",
+  "problem_id": "127",
+  "frontend_id": "127",
+  "difficulty": "Hard",
+  "problem_slug": "word-ladder",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Breadth-First Search"
+  ],
+  "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\nGiven two words, beginWord and endWord, and a dictionary wordList, return the number of words in the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: 5\nExplanation: One shortest transformation sequence is \"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> cog\", which is 5 words long.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\nOutput: 0\nExplanation: The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= beginWord.length <= 10",
+    "endWord.length == beginWord.length",
+    "1 <= wordList.length <= 5000",
+    "wordList[i].length == beginWord.length",
+    "beginWord, endWord, and wordList[i] consist of lowercase English letters.",
+    "beginWord != endWord",
+    "All the words in wordList are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int ladderLength(String beginWord, String endWord, List<String> wordList) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def ladderLength(self, beginWord, endWord, wordList):\n        \"\"\"\n        :type beginWord: str\n        :type endWord: str\n        :type wordList: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:\n        ",
+    "c": "int ladderLength(char* beginWord, char* endWord, char** wordList, int wordListSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LadderLength(string beginWord, string endWord, IList<string> wordList) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {number}\n */\nvar ladderLength = function(beginWord, endWord, wordList) {\n    \n};",
+    "typescript": "function ladderLength(beginWord: string, endWord: string, wordList: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $beginWord\n     * @param String $endWord\n     * @param String[] $wordList\n     * @return Integer\n     */\n    function ladderLength($beginWord, $endWord, $wordList) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func ladderLength(_ beginWord: String, _ endWord: String, _ wordList: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int ladderLength(String beginWord, String endWord, List<String> wordList) {\n    \n  }\n}",
+    "golang": "func ladderLength(beginWord string, endWord string, wordList []string) int {\n    \n}",
+    "ruby": "# @param {String} begin_word\n# @param {String} end_word\n# @param {String[]} word_list\n# @return {Integer}\ndef ladder_length(begin_word, end_word, word_list)\n    \nend",
+    "scala": "object Solution {\n    def ladderLength(beginWord: String, endWord: String, wordList: List[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn ladder_length(begin_word: String, end_word: String, word_list: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (ladder-length beginWord endWord wordList)\n  (-> string? string? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec ladder_length(BeginWord :: unicode:unicode_binary(), EndWord :: unicode:unicode_binary(), WordList :: [unicode:unicode_binary()]) -> integer().\nladder_length(BeginWord, EndWord, WordList) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec ladder_length(begin_word :: String.t, end_word :: String.t, word_list :: [String.t]) :: integer\n  def ladder_length(begin_word, end_word, word_list) do\n    \n  end\nend"
+  }
+}

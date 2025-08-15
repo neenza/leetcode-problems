@@ -1,0 +1,61 @@
+{
+  "title": "Pizza With 3n Slices",
+  "problem_id": "1489",
+  "frontend_id": "1388",
+  "difficulty": "Hard",
+  "problem_slug": "pizza-with-3n-slices",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:\nGiven an integer array slices that represent the sizes of the pizza slices in a clockwise direction, return the maximum possible sum of slice sizes that you can pick.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: slices = [1,2,3,4,5,6]\nOutput: 10\nExplanation: Pick pizza slice of size 4, Alice and Bob will pick slices with size 3 and 5 respectively. Then Pick slices with size 6, finally Alice and Bob will pick slice of size 2 and 1 respectively. Total = 4 + 6.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/18/sample_3_1723.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: slices = [8,9,8,6,1,1]\nOutput: 16\nExplanation: Pick pizza slice of size 8 in each turn. If you pick slice with size 9 your partners will pick slices of size 8.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/18/sample_4_1723.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 * n == slices.length",
+    "1 <= slices.length <= 500",
+    "1 <= slices[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "By studying the pattern of the operations, we can find out that the problem is equivalent to: Given an integer array with size 3N, select N integers with maximum sum and any selected integers are not next to each other in the array.",
+    "The first one in the array is considered next to the last one in the array. Use Dynamic Programming to solve it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSizeSlices(vector<int>& slices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSizeSlices(int[] slices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSizeSlices(self, slices):\n        \"\"\"\n        :type slices: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSizeSlices(self, slices: List[int]) -> int:\n        ",
+    "c": "int maxSizeSlices(int* slices, int slicesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSizeSlices(int[] slices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} slices\n * @return {number}\n */\nvar maxSizeSlices = function(slices) {\n    \n};",
+    "typescript": "function maxSizeSlices(slices: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $slices\n     * @return Integer\n     */\n    function maxSizeSlices($slices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSizeSlices(_ slices: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSizeSlices(slices: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSizeSlices(List<int> slices) {\n    \n  }\n}",
+    "golang": "func maxSizeSlices(slices []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} slices\n# @return {Integer}\ndef max_size_slices(slices)\n    \nend",
+    "scala": "object Solution {\n    def maxSizeSlices(slices: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_size_slices(slices: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-size-slices slices)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_size_slices(Slices :: [integer()]) -> integer().\nmax_size_slices(Slices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_size_slices(slices :: [integer]) :: integer\n  def max_size_slices(slices) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "String Compression III",
+  "problem_id": "3451",
+  "frontend_id": "3163",
+  "difficulty": "Medium",
+  "problem_slug": "string-compression-iii",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string word, compress it using the following algorithm:\nReturn the string comp.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abcde\"\nOutput: \"1a1b1c1d1e\"\nExplanation:\nInitially, comp = \"\" . Apply the operation 5 times, choosing \"a\" , \"b\" , \"c\" , \"d\" , and \"e\" as the prefix in each operation.\nFor each prefix, append \"1\" followed by the character to comp .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"aaaaaaaaaaaaaabb\"\nOutput: \"9a5a2b\"\nExplanation:\nInitially, comp = \"\" . Apply the operation 3 times, choosing \"aaaaaaaaa\" , \"aaaaa\" , and \"bb\" as the prefix in each operation.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 2 * 105",
+    "word consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Each time, just cut the same character in prefix up to at max 9 times. It’s always better to cut a bigger prefix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string compressedString(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String compressedString(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def compressedString(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def compressedString(self, word: str) -> str:\n        ",
+    "c": "char* compressedString(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public string CompressedString(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {string}\n */\nvar compressedString = function(word) {\n    \n};",
+    "typescript": "function compressedString(word: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return String\n     */\n    function compressedString($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func compressedString(_ word: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun compressedString(word: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String compressedString(String word) {\n    \n  }\n}",
+    "golang": "func compressedString(word string) string {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {String}\ndef compressed_string(word)\n    \nend",
+    "scala": "object Solution {\n    def compressedString(word: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn compressed_string(word: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (compressed-string word)\n  (-> string? string?)\n  )",
+    "erlang": "-spec compressed_string(Word :: unicode:unicode_binary()) -> unicode:unicode_binary().\ncompressed_string(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec compressed_string(word :: String.t) :: String.t\n  def compressed_string(word) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview\n\nOur task is to create a new string based on a given string `s` with the format `(frequency)(character)`. For example, \"baaaaa\" becomes \"1b5a\" because 'b' appears 1 time and 'a' appears 5 consecutive times.\n\nHowever, there’s an important constraint: the frequency digit cannot exceed 9. If a character appears more than 9 consecutive times, the encoding must be split. For instance, if 'a' appears 13 consecutive times, we encode it as \"9a4a\" rather than \"13a\".\n    \n---\n\n### Approach: String Manipulation\n\n#### Intuition\n\nWe can solve this problem in a straightforward way by initializing a variable, `comp`, that we will update as we iterate through the given string. For this explanation, consider a \"segment\" to mean one letter of its kind standing alone in the string **or** a consecutive group of letters with the same value occurring 9 or less times in a row. \n\nWe'll use a nested while loop to solve this problem. Our outer loop will initialize the `consecutiveCount` of each new segment (starting at 0), and store the current letter we are tracking as `currentChar`.\n\nThe inner while loop will count the number of characters of each segment by incrementing `consecutiveCount` to count the number of times the current letter occurs in a row, and the counter `pos` to track our position in the given string. We continue in the inner loop until the letter changes, the count of this segment reaches 9, or we reach the end of the given string. Then, we break out into our outer loop where we append both the count and the letter to `comp`. \n\nBy the end of the process, `comp` will hold the compressed version of the string, which we then return.\n\nThe slideshow below demonstrates the algorithm in action:\n\n!?!../Documents/3163/slideshow.json:760,600!?!\n\n#### Algorithm\n\n- Initialize a variable: \n  - `comp` to an empty string to store the final compressed output.\n  - `pos` to 0 to track the current position in the input string.\n- While `pos` is less than the length of the input string `word`:\n  - Initialize a variable :\n    - `consecutiveCount` to 0 to track the count of the current character.\n    - `currentChar` to the character at position `pos` in `word`.\n    - While all these conditions are true:\n      - `pos` is less than the length of `word`\n      - `consecutiveCount` is less than 9\n      - character at position `pos` equals `currentChar`\n        - Increment `consecutiveCount` and `pos` by 1.\n  - Append the string formed by concatenating `consecutiveCount` and `currentChar` to `comp`.\n- Return the final compressed string stored in `comp`.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the given string `word`.\n\n- Time complexity: $O(n)$\n\n    The loop iterates over each character in the string exactly once. All increment and append operations inside the loop take constant time.\n\n    Thus, the time complexity of the algorithm is $O(n)$. \n\n    > Note: The usage of built-in functions like `to_string()` does not significantly affect the overall complexity in this context, as its operation is constant with respect to the number of digits in the count (which is at most 2 for the range of counts allowed)\n\n- Space complexity: $O(n)$ for Java and Python3, $O(1)$ for C++\n\n    The space complexity of this algorithm varies by implementation language. In Java and Python3, we use an additional variable to build the output string, which requires $O(n)$ space. However, the C++ implementation modifies the output string in place, avoiding the need for additional storage. All other variables in the algorithm use only constant space. \n    \n    Thus, the overall space complexity is $O(n)$ for Java and Python3, while remaining $O(1)$ for C++.\n\n---"
+}

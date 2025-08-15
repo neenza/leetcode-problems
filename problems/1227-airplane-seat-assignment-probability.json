@@ -1,0 +1,56 @@
+{
+  "title": "Airplane Seat Assignment Probability",
+  "problem_id": "1362",
+  "frontend_id": "1227",
+  "difficulty": "Medium",
+  "problem_slug": "airplane-seat-assignment-probability",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Brainteaser",
+    "Probability and Statistics"
+  ],
+  "description": "n passengers board an airplane with exactly n seats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of the passengers will:\nReturn the probability that the nth person gets his own seat.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: 1.00000\nExplanation: The first person can only get the first seat.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: 0.50000\nExplanation: The second person has a probability of 0.5 to get the second seat (when first person gets the first seat).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let f(n) denote the probability of the n-th person getting correct seat in n-person case, then:\r\n\r\nf(1) = 1 (base case, trivial)\r\nf(2) = 1/2 (also trivial)",
+    "Try to calculate f(3), f(4), and f(5) using the base cases. What is the value of them?\r\nf(i) for i >= 2 will also be 1/2.",
+    "Try to proof why f(i) = 1/2 for i >= 2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double nthPersonGetsNthSeat(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double nthPersonGetsNthSeat(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nthPersonGetsNthSeat(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nthPersonGetsNthSeat(self, n: int) -> float:\n        ",
+    "c": "double nthPersonGetsNthSeat(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public double NthPersonGetsNthSeat(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthPersonGetsNthSeat = function(n) {\n    \n};",
+    "typescript": "function nthPersonGetsNthSeat(n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Float\n     */\n    function nthPersonGetsNthSeat($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nthPersonGetsNthSeat(_ n: Int) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nthPersonGetsNthSeat(n: Int): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double nthPersonGetsNthSeat(int n) {\n    \n  }\n}",
+    "golang": "func nthPersonGetsNthSeat(n int) float64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Float}\ndef nth_person_gets_nth_seat(n)\n    \nend",
+    "scala": "object Solution {\n    def nthPersonGetsNthSeat(n: Int): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn nth_person_gets_nth_seat(n: i32) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (nth-person-gets-nth-seat n)\n  (-> exact-integer? flonum?)\n  )",
+    "erlang": "-spec nth_person_gets_nth_seat(N :: integer()) -> float().\nnth_person_gets_nth_seat(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec nth_person_gets_nth_seat(n :: integer) :: float\n  def nth_person_gets_nth_seat(n) do\n    \n  end\nend"
+  }
+}

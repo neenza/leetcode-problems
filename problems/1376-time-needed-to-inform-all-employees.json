@@ -1,0 +1,65 @@
+{
+  "title": "Time Needed to Inform All Employees",
+  "problem_id": "1492",
+  "frontend_id": "1376",
+  "difficulty": "Medium",
+  "problem_slug": "time-needed-to-inform-all-employees",
+  "topics": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ],
+  "description": "A company has n employees with a unique ID for each employee from 0 to n - 1. The head of the company is the one with headID.\nEach employee has one direct manager given in the manager array where manager[i] is the direct manager of the i-th employee, manager[headID] = -1. Also, it is guaranteed that the subordination relationships have a tree structure.\nThe head of the company wants to inform all the company employees of an urgent piece of news. He will inform his direct subordinates, and they will inform their subordinates, and so on until all employees know about the urgent news.\nThe i-th employee needs informTime[i] minutes to inform all of his direct subordinates (i.e., After informTime[i] minutes, all his direct subordinates can start spreading the news).\nReturn the number of minutes needed to inform all the employees about the urgent news.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1, headID = 0, manager = [-1], informTime = [0]\nOutput: 0\nExplanation: The head of the company is the only employee in the company.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, headID = 2, manager = [2,2,-1,2,2,2], informTime = [0,0,1,0,0,0]\nOutput: 1\nExplanation: The head of the company with id = 2 is the direct manager of all the employees in the company and needs 1 minute to inform them all.\nThe tree structure of the employees in the company is shown.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/02/27/graph.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "0 <= headID < n",
+    "manager.length == n",
+    "0 <= manager[i] < n",
+    "manager[headID] == -1",
+    "informTime.length == n",
+    "0 <= informTime[i] <= 1000",
+    "informTime[i] == 0 if employee i has no subordinates.",
+    "It is guaranteed that all the employees can be informed."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The company can be represented as a tree, headID is always the root.",
+    "Store for each node the time needed to be informed of the news.",
+    "Answer is the max time a leaf node needs to be informed."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfMinutes(self, n, headID, manager, informTime):\n        \"\"\"\n        :type n: int\n        :type headID: int\n        :type manager: List[int]\n        :type informTime: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:\n        ",
+    "c": "int numOfMinutes(int n, int headID, int* manager, int managerSize, int* informTime, int informTimeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumOfMinutes(int n, int headID, int[] manager, int[] informTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} headID\n * @param {number[]} manager\n * @param {number[]} informTime\n * @return {number}\n */\nvar numOfMinutes = function(n, headID, manager, informTime) {\n    \n};",
+    "typescript": "function numOfMinutes(n: number, headID: number, manager: number[], informTime: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $headID\n     * @param Integer[] $manager\n     * @param Integer[] $informTime\n     * @return Integer\n     */\n    function numOfMinutes($n, $headID, $manager, $informTime) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfMinutes(_ n: Int, _ headID: Int, _ manager: [Int], _ informTime: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfMinutes(n: Int, headID: Int, manager: IntArray, informTime: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfMinutes(int n, int headID, List<int> manager, List<int> informTime) {\n    \n  }\n}",
+    "golang": "func numOfMinutes(n int, headID int, manager []int, informTime []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} head_id\n# @param {Integer[]} manager\n# @param {Integer[]} inform_time\n# @return {Integer}\ndef num_of_minutes(n, head_id, manager, inform_time)\n    \nend",
+    "scala": "object Solution {\n    def numOfMinutes(n: Int, headID: Int, manager: Array[Int], informTime: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_minutes(n: i32, head_id: i32, manager: Vec<i32>, inform_time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-minutes n headID manager informTime)\n  (-> exact-integer? exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_of_minutes(N :: integer(), HeadID :: integer(), Manager :: [integer()], InformTime :: [integer()]) -> integer().\nnum_of_minutes(N, HeadID, Manager, InformTime) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_minutes(n :: integer, head_id :: integer, manager :: [integer], inform_time :: [integer]) :: integer\n  def num_of_minutes(n, head_id, manager, inform_time) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Min Cost to Connect All Points",
+  "problem_id": "1706",
+  "frontend_id": "1584",
+  "difficulty": "Medium",
+  "problem_slug": "min-cost-to-connect-all-points",
+  "topics": [
+    "Array",
+    "Union Find",
+    "Graph",
+    "Minimum Spanning Tree"
+  ],
+  "description": "You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi].\nThe cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.\nReturn the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]\nOutput: 20\nExplanation: \n\nWe can connect the points as shown above to get the minimum cost of 20.\nNotice that there is a unique path between every pair of points.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/26/d.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[3,12],[-2,5],[-4,1]]\nOutput: 18",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/26/c.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 1000",
+    "-106 <= xi, yi <= 106",
+    "All pairs (xi, yi) are distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Connect each pair of points with a weighted edge, the weight being the manhattan distance between those points.",
+    "The problem is now the cost of minimum spanning tree in graph with above edges."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCostConnectPoints(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCostConnectPoints(int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCostConnectPoints(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCostConnectPoints(self, points: List[List[int]]) -> int:\n        ",
+    "c": "int minCostConnectPoints(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCostConnectPoints(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar minCostConnectPoints = function(points) {\n    \n};",
+    "typescript": "function minCostConnectPoints(points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function minCostConnectPoints($points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCostConnectPoints(_ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCostConnectPoints(points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCostConnectPoints(List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func minCostConnectPoints(points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @return {Integer}\ndef min_cost_connect_points(points)\n    \nend",
+    "scala": "object Solution {\n    def minCostConnectPoints(points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost_connect_points(points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost-connect-points points)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_cost_connect_points(Points :: [[integer()]]) -> integer().\nmin_cost_connect_points(Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost_connect_points(points :: [[integer]]) :: integer\n  def min_cost_connect_points(points) do\n    \n  end\nend"
+  }
+}

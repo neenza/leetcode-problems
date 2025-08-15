@@ -1,0 +1,59 @@
+{
+  "title": "Longest Subsequence With Decreasing Adjacent Difference",
+  "problem_id": "3716",
+  "frontend_id": "3409",
+  "difficulty": "Medium",
+  "problem_slug": "longest-subsequence-with-decreasing-adjacent-difference",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an array of integers nums.\nYour task is to find the length of the longest subsequence seq of nums, such that the absolute differences between consecutive elements form a non-increasing sequence of integers. In other words, for a subsequence seq0, seq1, seq2, ..., seqm of nums, |seq1 - seq0| >= |seq2 - seq1| >= ... >= |seqm - seqm - 1|.\nReturn the length of such a subsequence.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [16,6,3]\nOutput: 3\nExplanation:\nThe longest subsequence is [16, 6, 3] with the absolute adjacent differences [10, 3] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [6,5,3,4,2,1]\nOutput: 4\nExplanation:\nThe longest subsequence is [6, 4, 2, 1] with the absolute adjacent differences [2, 2, 1] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [10,20,10,19,10,20]\nOutput: 5\nExplanation:\nThe longest subsequence is [10, 20, 10, 19, 10] with the absolute adjacent differences [10, 10, 9, 9] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 104",
+    "1 <= nums[i] <= 300"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "Store the maximum answer for each index and every possible difference."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestSubsequence(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubsequence(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestSubsequence(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestSubsequence(self, nums: List[int]) -> int:\n        ",
+    "c": "int longestSubsequence(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestSubsequence(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar longestSubsequence = function(nums) {\n    \n};",
+    "typescript": "function longestSubsequence(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function longestSubsequence($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestSubsequence(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestSubsequence(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestSubsequence(List<int> nums) {\n    \n  }\n}",
+    "golang": "func longestSubsequence(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef longest_subsequence(nums)\n    \nend",
+    "scala": "object Solution {\n    def longestSubsequence(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_subsequence(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-subsequence nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec longest_subsequence(Nums :: [integer()]) -> integer().\nlongest_subsequence(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_subsequence(nums :: [integer]) :: integer\n  def longest_subsequence(nums) do\n    \n  end\nend"
+  }
+}

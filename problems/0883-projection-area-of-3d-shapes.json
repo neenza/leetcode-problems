@@ -1,0 +1,66 @@
+{
+  "title": "Projection Area of 3D Shapes",
+  "problem_id": "919",
+  "frontend_id": "883",
+  "difficulty": "Easy",
+  "problem_slug": "projection-area-of-3d-shapes",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry",
+    "Matrix"
+  ],
+  "description": "You are given an n x n grid where we place some 1 x 1 x 1 cubes that are axis-aligned with the x, y, and z axes.\nEach value v = grid[i][j] represents a tower of v cubes placed on top of the cell (i, j).\nWe view the projection of these cubes onto the xy, yz, and zx planes.\nA projection is like a shadow, that maps our 3-dimensional figure to a 2-dimensional plane. We are viewing the \"shadow\" when looking at the cubes from the top, the front, and the side.\nReturn the total area of all three projections.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,2],[3,4]]\nOutput: 17\nExplanation: Here are the three projections (\"shadows\") of the shape made with each axis-aligned plane.",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/02/shadow.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[2]]\nOutput: 5",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/02/shadow.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,0],[0,2]]\nOutput: 8",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/02/shadow.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length == grid[i].length",
+    "1 <= n <= 50",
+    "0 <= grid[i][j] <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int projectionArea(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int projectionArea(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def projectionArea(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def projectionArea(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int projectionArea(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ProjectionArea(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar projectionArea = function(grid) {\n    \n};",
+    "typescript": "function projectionArea(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function projectionArea($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func projectionArea(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun projectionArea(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int projectionArea(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func projectionArea(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef projection_area(grid)\n    \nend",
+    "scala": "object Solution {\n    def projectionArea(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn projection_area(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (projection-area grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec projection_area(Grid :: [[integer()]]) -> integer().\nprojection_area(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec projection_area(grid :: [[integer]]) :: integer\n  def projection_area(grid) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Mathematical\n\n**Intuition and Algorithm**\n\nFrom the top, the shadow made by the shape will be 1 square for each non-zero value.\n\nFrom the side, the shadow made by the shape will be the largest value for each row in the grid.\n\nFrom the front, the shadow made by the shape will be the largest value for each column in the grid.\n\n\n**Example**\n\nWith the example `[[1,2],[3,4]]`:\n\n* The shadow from the top will be 4, since there are four non-zero values in the grid;\n\n* The shadow from the side will be `2 + 4`, since the maximum value of the first row is `2`, and the maximum value of the second row is `4`;\n\n* The shadow from the front will be `3 + 4`, since the maximum value of the first column is `3`, and the maximum value of the second column is `4`.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^2)$$, where $$N$$ is the length of `grid`.\n\n* Space Complexity:  $$O(1)$$."
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Missing Number",
+  "problem_id": "268",
+  "frontend_id": "268",
+  "difficulty": "Easy",
+  "problem_slug": "missing-number",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Binary Search",
+    "Bit Manipulation",
+    "Sorting"
+  ],
+  "description": "Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,0,1]\nOutput: 2\nExplanation:\nn = 3 since there are 3 numbers, so all numbers are in the range [0,3] . 2 is the missing number in the range since it does not appear in nums .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1]\nOutput: 2\nExplanation:\nn = 2 since there are 2 numbers, so all numbers are in the range [0,2] . 2 is the missing number in the range since it does not appear in nums .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [9,6,4,2,3,5,7,0,1]\nOutput: 8\nExplanation:\nn = 9 since there are 9 numbers, so all numbers are in the range [0,9] . 8 is the missing number in the range since it does not appear in nums .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 104",
+    "0 <= nums[i] <= n",
+    "All the numbers of nums are unique."
+  ],
+  "follow_ups": [
+    "Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int missingNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int missingNumber(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def missingNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def missingNumber(self, nums: List[int]) -> int:\n        ",
+    "c": "int missingNumber(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MissingNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar missingNumber = function(nums) {\n    \n};",
+    "typescript": "function missingNumber(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function missingNumber($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func missingNumber(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun missingNumber(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int missingNumber(List<int> nums) {\n    \n  }\n}",
+    "golang": "func missingNumber(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef missing_number(nums)\n    \nend",
+    "scala": "object Solution {\n    def missingNumber(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn missing_number(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (missing-number nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec missing_number(Nums :: [integer()]) -> integer().\nmissing_number(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec missing_number(nums :: [integer]) :: integer\n  def missing_number(nums) do\n    \n  end\nend"
+  }
+}

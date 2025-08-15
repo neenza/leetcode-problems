@@ -1,0 +1,70 @@
+{
+  "title": "Describe the Painting",
+  "problem_id": "2055",
+  "frontend_id": "1943",
+  "difficulty": "Medium",
+  "problem_slug": "describe-the-painting",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "There is a long and thin painting that can be represented by a number line. The painting was painted with multiple overlapping segments where each segment was painted with a unique color. You are given a 2D integer array segments, where segments[i] = [starti, endi, colori] represents the half-closed segment [starti, endi) with colori as the color.\nThe colors in the overlapping segments of the painting were mixed when it was painted. When two or more colors mix, they form a new color that can be represented as a set of mixed colors.\nFor the sake of simplicity, you should only output the sum of the elements in the set rather than the full set.\nYou want to describe the painting with the minimum number of non-overlapping half-closed segments of these mixed colors. These segments can be represented by the 2D array painting where painting[j] = [leftj, rightj, mixj] describes a half-closed segment [leftj, rightj) with the mixed color sum of mixj.\nReturn the 2D array painting describing the finished painting (excluding any parts that are not painted). You may return the segments in any order.\nA half-closed segment [a, b) is the section of the number line between points a and b including point a and not including point b.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: segments = [[1,4,5],[4,7,7],[1,7,9]]\nOutput: [[1,4,14],[4,7,16]]\nExplanation: The painting can be described as follows:\n- [1,4) is colored {5,9} (with a sum of 14) from the first and third segments.\n- [4,7) is colored {7,9} (with a sum of 16) from the second and third segments.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/18/1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: segments = [[1,7,9],[6,8,15],[8,10,7]]\nOutput: [[1,6,9],[6,7,24],[7,8,15],[8,10,7]]\nExplanation: The painting can be described as follows:\n- [1,6) is colored 9 from the first segment.\n- [6,7) is colored {9,15} (with a sum of 24) from the first and second segments.\n- [7,8) is colored 15 from the second segment.\n- [8,10) is colored 7 from the third segment.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/18/2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: segments = [[1,4,5],[1,4,7],[4,7,1],[4,7,11]]\nOutput: [[1,4,12],[4,7,12]]\nExplanation: The painting can be described as follows:\n- [1,4) is colored {5,7} (with a sum of 12) from the first and second segments.\n- [4,7) is colored {1,11} (with a sum of 12) from the third and fourth segments.\nNote that returning a single segment [1,7) is incorrect because the mixed color sets are different.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/07/04/c1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= segments.length <= 2 * 104",
+    "segments[i].length == 3",
+    "1 <= starti < endi <= 105",
+    "1 <= colori <= 109",
+    "Each colori is distinct."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we sort the segments in a way to help solve the problem?",
+    "How can we dynamically keep track of the sum of the current segment(s)?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<long long>> splitPainting(vector<vector<int>>& segments) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Long>> splitPainting(int[][] segments) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitPainting(self, segments):\n        \"\"\"\n        :type segments: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitPainting(self, segments: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nlong long** splitPainting(int** segments, int segmentsSize, int* segmentsColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<long>> SplitPainting(int[][] segments) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} segments\n * @return {number[][]}\n */\nvar splitPainting = function(segments) {\n    \n};",
+    "typescript": "function splitPainting(segments: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $segments\n     * @return Integer[][]\n     */\n    function splitPainting($segments) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitPainting(_ segments: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitPainting(segments: Array<IntArray>): List<List<Long>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> splitPainting(List<List<int>> segments) {\n    \n  }\n}",
+    "golang": "func splitPainting(segments [][]int) [][]int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} segments\n# @return {Integer[][]}\ndef split_painting(segments)\n    \nend",
+    "scala": "object Solution {\n    def splitPainting(segments: Array[Array[Int]]): List[List[Long]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_painting(segments: Vec<Vec<i32>>) -> Vec<Vec<i64>> {\n        \n    }\n}",
+    "racket": "(define/contract (split-painting segments)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec split_painting(Segments :: [[integer()]]) -> [[integer()]].\nsplit_painting(Segments) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_painting(segments :: [[integer]]) :: [[integer]]\n  def split_painting(segments) do\n    \n  end\nend"
+  }
+}

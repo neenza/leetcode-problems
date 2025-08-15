@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Difference Between Increasing Elements",
+  "problem_id": "2144",
+  "frontend_id": "2016",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-difference-between-increasing-elements",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given a 0-indexed integer array nums of size n, find the maximum difference between nums[i] and nums[j] (i.e., nums[j] - nums[i]), such that 0 <= i < j < n and nums[i] < nums[j].\nReturn the maximum difference. If no such i and j exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [7,1,5,4]\nOutput: 4\nExplanation:\nThe maximum difference occurs with i = 1 and j = 2, nums[j] - nums[i] = 5 - 1 = 4.\nNote that with i = 1 and j = 0, the difference nums[j] - nums[i] = 7 - 1 = 6, but i > j, so it is not valid.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [9,4,3,2]\nOutput: -1\nExplanation:\nThere is no i and j such that i < j and nums[i] < nums[j].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,5,2,10]\nOutput: 9\nExplanation:\nThe maximum difference occurs with i = 0 and j = 3, nums[j] - nums[i] = 10 - 1 = 9.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "2 <= n <= 1000",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Could you keep track of the minimum element visited while traversing?",
+    "We have a potential candidate for the answer if the prefix min is lesser than nums[i]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumDifference(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumDifference(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumDifference(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumDifference = function(nums) {\n    \n};",
+    "typescript": "function maximumDifference(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumDifference($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumDifference(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumDifference(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumDifference(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumDifference(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_difference(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumDifference(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_difference(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-difference nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_difference(Nums :: [integer()]) -> integer().\nmaximum_difference(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_difference(nums :: [integer]) :: integer\n  def maximum_difference(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Prefix Minimum Value\n\n#### Intuition\n\nWhen we fix $j$, the chosen index $i$ must satisfy $0 \\leq i < j$ and $\\textit{nums}[i]$ must be the smallest among those indices. Therefore, we can iterate over $j$ while maintaining the prefix minimum of $\\textit{nums}[0..j-1]$, denoted as $\\textit{premin}$. In this way:\n\n- If $\\textit{nums}[j] > \\textit{premin}$, we update the answer with $\\textit{nums}[j] - \\textit{premin}$.\n\n- Otherwise, we update the prefix minimum value $\\textit{premin}$ using $\\textit{nums}[j]$.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array $\\textit{nums}$ once.\n\n- Space complexity: $O(1)$."
+}

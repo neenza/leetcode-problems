@@ -1,0 +1,38 @@
+{
+  "title": "Find Products with Valid Serial Numbers",
+  "problem_id": "3803",
+  "frontend_id": "3465",
+  "difficulty": "Easy",
+  "problem_slug": "find-products-with-valid-serial-numbers",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: products\nWrite a solution to find all products whose description contains a valid serial number pattern. A valid serial number follows these rules:\nReturn the result table ordered by product_id in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+--------------+------------+\n| Column Name  | Type       |\n+--------------+------------+\n| product_id   | int        |\n| product_name | varchar    |\n| description  | varchar    |\n+--------------+------------+\n(product_id) is the unique key for this table.\nEach row in the table represents a product with its unique ID, name, and description.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+------------+--------------+------------------------------------------------------+\n| product_id | product_name | description                                          |\n+------------+--------------+------------------------------------------------------+\n| 1          | Widget A     | This is a sample product with SN1234-5678            |\n| 2          | Widget B     | A product with serial SN9876-1234 in the description |\n| 3          | Widget C     | Product SN1234-56789 is available now                |\n| 4          | Widget D     | No serial number here                                |\n| 5          | Widget E     | Check out SN4321-8765 in this description            |\n+------------+--------------+------------------------------------------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+------------+--------------+------------------------------------------------------+\n| product_id | product_name | description                                          |\n+------------+--------------+------------------------------------------------------+\n| 1          | Widget A     | This is a sample product with SN1234-5678            |\n| 2          | Widget B     | A product with serial SN9876-1234 in the description |\n| 5          | Widget E     | Check out SN4321-8765 in this description            |\n+------------+--------------+------------------------------------------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_valid_serial_products(products: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

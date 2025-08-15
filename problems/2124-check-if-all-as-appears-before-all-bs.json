@@ -1,0 +1,58 @@
+{
+  "title": "Check if All A's Appears Before All B's",
+  "problem_id": "2243",
+  "frontend_id": "2124",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-all-as-appears-before-all-bs",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string s consisting of only the characters 'a' and 'b', return true if every 'a' appears before every 'b' in the string. Otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aaabbb\"\nOutput: true\nExplanation:\nThe 'a's are at indices 0, 1, and 2, while the 'b's are at indices 3, 4, and 5.\nHence, every 'a' appears before every 'b' and we return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abab\"\nOutput: false\nExplanation:\nThere is an 'a' at index 2 and a 'b' at index 1.\nHence, not every 'a' appears before every 'b' and we return false.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bbb\"\nOutput: true\nExplanation:\nThere are no 'a's, hence, every 'a' appears before every 'b' and we return true.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s[i] is either 'a' or 'b'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can check the opposite: check if there is a ‘b’ before an ‘a’. Then, negate and return that answer.",
+    "s should not have any occurrences of “ba” as a substring."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkString(self, s: str) -> bool:\n        ",
+    "c": "bool checkString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkString = function(s) {\n    \n};",
+    "typescript": "function checkString(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function checkString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkString(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkString(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkString(String s) {\n    \n  }\n}",
+    "golang": "func checkString(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef check_string(s)\n    \nend",
+    "scala": "object Solution {\n    def checkString(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_string(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-string s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec check_string(S :: unicode:unicode_binary()) -> boolean().\ncheck_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_string(s :: String.t) :: boolean\n  def check_string(s) do\n    \n  end\nend"
+  }
+}

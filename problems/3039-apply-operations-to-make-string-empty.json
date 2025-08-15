@@ -1,0 +1,56 @@
+{
+  "title": "Apply Operations to Make String Empty",
+  "problem_id": "3308",
+  "frontend_id": "3039",
+  "difficulty": "Medium",
+  "problem_slug": "apply-operations-to-make-string-empty",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "You are given a string s.\nConsider performing the following operation until s becomes empty:\nFor example, let initially s = \"aabcbbca\". We do the following operations:\nReturn the value of the string s right before applying the last operation. In the example above, answer is \"ba\".\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aabcbbca\"\nOutput: \"ba\"\nExplanation: Explained in the statement.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcd\"\nOutput: \"abcd\"\nExplanation: We do the following operation:\n- Remove the underlined characters s = \"abcd\". The resulting string is s = \"\".\nThe string just before the last operation is \"abcd\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 5 * 105",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Before the last operation, only the most frequent characters in the original string will remain.",
+    "Keep only the last occurence of each of the most frequent characters."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string lastNonEmptyString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String lastNonEmptyString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lastNonEmptyString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lastNonEmptyString(self, s: str) -> str:\n        ",
+    "c": "char* lastNonEmptyString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LastNonEmptyString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar lastNonEmptyString = function(s) {\n    \n};",
+    "typescript": "function lastNonEmptyString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function lastNonEmptyString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lastNonEmptyString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lastNonEmptyString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String lastNonEmptyString(String s) {\n    \n  }\n}",
+    "golang": "func lastNonEmptyString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef last_non_empty_string(s)\n    \nend",
+    "scala": "object Solution {\n    def lastNonEmptyString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn last_non_empty_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (last-non-empty-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec last_non_empty_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlast_non_empty_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec last_non_empty_string(s :: String.t) :: String.t\n  def last_non_empty_string(s) do\n    \n  end\nend"
+  }
+}

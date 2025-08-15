@@ -1,0 +1,60 @@
+{
+  "title": "Largest Magic Square",
+  "problem_id": "1311",
+  "frontend_id": "1895",
+  "difficulty": "Medium",
+  "problem_slug": "largest-magic-square",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "A k x k magic square is a k x k grid filled with integers such that every row sum, every column sum, and both diagonal sums are all equal. The integers in the magic square do not have to be distinct. Every 1 x 1 grid is trivially a magic square.\nGiven an m x n integer grid, return the size (i.e., the side length k) of the largest magic square that can be found within this grid.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[7,1,4,5,6],[2,5,1,6,4],[1,5,4,3,2],[1,2,7,3,4]]\nOutput: 3\nExplanation: The largest magic square has a size of 3.\nEvery row sum, column sum, and diagonal sum of this magic square is equal to 12.\n- Row sums: 5+1+6 = 5+4+3 = 2+7+3 = 12\n- Column sums: 5+5+2 = 1+4+7 = 6+3+3 = 12\n- Diagonal sums: 5+4+3 = 6+4+2 = 12",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/29/magicsquare-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[5,1,3,1],[9,3,3,1],[1,3,3,8]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/29/magicsquare2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 50",
+    "1 <= grid[i][j] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check all squares in the matrix and find the largest one."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int largestMagicSquare(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestMagicSquare(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestMagicSquare(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestMagicSquare(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int largestMagicSquare(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LargestMagicSquare(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar largestMagicSquare = function(grid) {\n    \n};",
+    "typescript": "function largestMagicSquare(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function largestMagicSquare($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestMagicSquare(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestMagicSquare(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int largestMagicSquare(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func largestMagicSquare(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef largest_magic_square(grid)\n    \nend",
+    "scala": "object Solution {\n    def largestMagicSquare(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_magic_square(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (largest-magic-square grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec largest_magic_square(Grid :: [[integer()]]) -> integer().\nlargest_magic_square(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_magic_square(grid :: [[integer]]) :: integer\n  def largest_magic_square(grid) do\n    \n  end\nend"
+  }
+}

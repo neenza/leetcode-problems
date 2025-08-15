@@ -1,0 +1,64 @@
+{
+  "title": "Find the Number of Subarrays Where Boundary Elements Are Maximum",
+  "problem_id": "3382",
+  "frontend_id": "3113",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-number-of-subarrays-where-boundary-elements-are-maximum",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Stack",
+    "Monotonic Stack"
+  ],
+  "description": "You are given an array of positive integers nums.\nReturn the number of subarrays of nums, where the first and the last elements of the subarray are equal to the largest element in the subarray.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,4,3,3,2]\nOutput: 6\nExplanation:\nThere are 6 subarrays which have the first and the last elements equal to the largest element of the subarray:\nHence, we return 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,3,3]\nOutput: 6\nExplanation:\nThere are 6 subarrays which have the first and the last elements equal to the largest element of the subarray:\nHence, we return 6.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1]\nOutput: 1\nExplanation:\nThere is a single subarray of nums which is [ 1 ] , with its largest element 1. The first element is 1 and the last element is also 1.\nHence, we return 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each element <code>nums[i]</code>, we can count the number of valid subarrays ending with it.",
+    "For each index <code>i</code>, find the nearest index <code>j</code> on its left <code>(j < i)</code> such that <code>nums[j] < nums[i]</code>. This can be done via a monotonic stack.",
+    "For each index <code>i</code>, find the number of indices <code>k</code> in the window <code>[j + 1, i]</code> such that <code>nums[k] == nums[i]</code>, this is the number of the valid subarrays ending with <code>nums[i]</code>. This can be done by sliding window.",
+    "Sum the answer of all the indices <code>i</code> to get the final result.",
+    "Is it possible to use DSU as an alternate solution?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long numberOfSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSubarrays(self, nums: List[int]) -> int:\n        ",
+    "c": "long long numberOfSubarrays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long NumberOfSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar numberOfSubarrays = function(nums) {\n    \n};",
+    "typescript": "function numberOfSubarrays(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function numberOfSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSubarrays(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSubarrays(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func numberOfSubarrays(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef number_of_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSubarrays(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_subarrays(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec number_of_subarrays(Nums :: [integer()]) -> integer().\nnumber_of_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_subarrays(nums :: [integer]) :: integer\n  def number_of_subarrays(nums) do\n    \n  end\nend"
+  }
+}

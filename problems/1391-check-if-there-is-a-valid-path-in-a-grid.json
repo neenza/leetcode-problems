@@ -1,0 +1,70 @@
+{
+  "title": "Check if There is a Valid Path in a Grid",
+  "problem_id": "1507",
+  "frontend_id": "1391",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-there-is-a-valid-path-in-a-grid",
+  "topics": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Matrix"
+  ],
+  "description": "You are given an m x n grid. Each cell of grid represents a street. The street of grid[i][j] can be:\nYou will initially start at the street of the upper-left cell (0, 0). A valid path in the grid is a path that starts from the upper left cell (0, 0) and ends at the bottom-right cell (m - 1, n - 1). The path should only follow the streets.\nNotice that you are not allowed to change any street.\nReturn true if there is a valid path in the grid or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[2,4,3],[6,5,2]]\nOutput: true\nExplanation: As shown you can start at cell (0, 0) and visit all the cells of the grid to reach (m - 1, n - 1).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/03/05/e1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,2,1],[1,2,1]]\nOutput: false\nExplanation: As shown you the street at cell (0, 0) is not connected with any street of any other cell and you will get stuck at cell (0, 0)",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/03/05/e2.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1,1,2]]\nOutput: false\nExplanation: You will get stuck at cell (0, 1) and you cannot reach cell (0, 2).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/03/05/e2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 300",
+    "1 <= grid[i][j] <= 6"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start DFS from the node (0, 0) and follow the path till you stop.",
+    "When you reach a cell and cannot move anymore check that this cell is (m - 1, n - 1) or not."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasValidPath(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasValidPath(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasValidPath(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasValidPath(self, grid: List[List[int]]) -> bool:\n        ",
+    "c": "bool hasValidPath(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasValidPath(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar hasValidPath = function(grid) {\n    \n};",
+    "typescript": "function hasValidPath(grid: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Boolean\n     */\n    function hasValidPath($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasValidPath(_ grid: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasValidPath(grid: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasValidPath(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func hasValidPath(grid [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Boolean}\ndef has_valid_path(grid)\n    \nend",
+    "scala": "object Solution {\n    def hasValidPath(grid: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_valid_path(grid: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-valid-path grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec has_valid_path(Grid :: [[integer()]]) -> boolean().\nhas_valid_path(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_valid_path(grid :: [[integer]]) :: boolean\n  def has_valid_path(grid) do\n    \n  end\nend"
+  }
+}

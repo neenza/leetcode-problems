@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Size of a Set After Removals",
+  "problem_id": "3228",
+  "frontend_id": "3002",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-size-of-a-set-after-removals",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy"
+  ],
+  "description": "You are given two 0-indexed integer arrays nums1 and nums2 of even length n.\nYou must remove n / 2 elements from nums1 and n / 2 elements from nums2. After the removals, you insert the remaining elements of nums1 and nums2 into a set s.\nReturn the maximum possible size of the set s.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,2,1,2], nums2 = [1,1,1,1]\nOutput: 2\nExplanation: We remove two occurences of 1 from nums1 and nums2. After the removals, the arrays become equal to nums1 = [2,2] and nums2 = [1,1]. Therefore, s = {1,2}.\nIt can be shown that 2 is the maximum possible size of the set s after the removals.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [1,2,3,4,5,6], nums2 = [2,3,2,3,2,3]\nOutput: 5\nExplanation: We remove 2, 3, and 6 from nums1, as well as 2 and two occurrences of 3 from nums2. After the removals, the arrays become equal to nums1 = [1,4,5] and nums2 = [2,3,2]. Therefore, s = {1,2,3,4,5}.\nIt can be shown that 5 is the maximum possible size of the set s after the removals.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums1 = [1,1,2,2,3,3], nums2 = [4,4,5,5,6,6]\nOutput: 6\nExplanation: We remove 1, 2, and 3 from nums1, as well as 4, 5, and 6 from nums2. After the removals, the arrays become equal to nums1 = [1,2,3] and nums2 = [4,5,6]. Therefore, s = {1,2,3,4,5,6}.\nIt can be shown that 6 is the maximum possible size of the set s after the removals.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length == nums2.length",
+    "1 <= n <= 2 * 104",
+    "n is even.",
+    "1 <= nums1[i], nums2[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Removing <code>n / 2</code> elements from each array is the same as keeping <code>n / 2<code> elements in each array.",
+    "Think of a greedy algorithm.",
+    "For each array, we will greedily keep the elements that are only in that array. Once we run out of such elements, we will keep the elements that are common to both arrays."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumSetSize(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumSetSize(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumSetSize(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumSetSize(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int maximumSetSize(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumSetSize(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar maximumSetSize = function(nums1, nums2) {\n    \n};",
+    "typescript": "function maximumSetSize(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function maximumSetSize($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumSetSize(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumSetSize(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumSetSize(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func maximumSetSize(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef maximum_set_size(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def maximumSetSize(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_set_size(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-set-size nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_set_size(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nmaximum_set_size(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_set_size(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def maximum_set_size(nums1, nums2) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Minimum Numbers of Function Calls to Make Target Array",
+  "problem_id": "1662",
+  "frontend_id": "1558",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-numbers-of-function-calls-to-make-target-array",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "description": "You are given an integer array nums. You have an integer array arr of the same length with all values set to 0 initially. You also have the following modify function:\nYou want to use the modify function to convert arr to nums using the minimum number of calls.\nReturn the minimum number of function calls to make nums from arr.\nThe test cases are generated so that the answer fits in a 32-bit signed integer.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,5]\nOutput: 5\nExplanation: Increment by 1 (second element): [0, 0] to get [0, 1] (1 operation).\nDouble all the elements: [0, 1] -> [0, 2] -> [0, 4] (2 operations).\nIncrement by 1 (both elements)  [0, 4] -> [1, 4] -> [1, 5] (2 operations).\nTotal of operations: 1 + 2 + 2 = 5.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/10/sample_2_1887.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,2]\nOutput: 3\nExplanation: Increment by 1 (both elements) [0, 0] -> [0, 1] -> [1, 1] (2 operations).\nDouble all the elements: [1, 1] -> [2, 2] (1 operation).\nTotal of operations: 2 + 1 = 3.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/10/sample_2_1887.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,2,5]\nOutput: 6\nExplanation: (initial)[0,0,0] -> [1,0,0] -> [1,0,1] -> [2,0,2] -> [2,1,2] -> [4,2,4] -> [4,2,5](nums).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/10/sample_2_1887.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Work backwards: try to go from nums to arr.",
+    "You should try to divide by 2 as much as possible, but you can only divide by 2 if everything is even."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()]) -> integer().\nmin_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer]) :: integer\n  def min_operations(nums) do\n    \n  end\nend"
+  }
+}

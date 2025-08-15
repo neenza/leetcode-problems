@@ -1,0 +1,63 @@
+{
+  "title": "Minimum Jumps to Reach Home",
+  "problem_id": "1757",
+  "frontend_id": "1654",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-jumps-to-reach-home",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Breadth-First Search"
+  ],
+  "description": "A certain bug's home is on the x-axis at position x. Help them get there from position 0.\nThe bug jumps according to the following rules:\nThe bug may jump forward beyond its home, but it cannot jump to positions numbered with negative integers.\nGiven an array of integers forbidden, where forbidden[i] means that the bug cannot jump to the position forbidden[i], and integers a, b, and x, return the minimum number of jumps needed for the bug to reach its home. If there is no possible sequence of jumps that lands the bug on position x, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: forbidden = [14,4,18,1,15], a = 3, b = 15, x = 9\nOutput: 3\nExplanation: 3 jumps forward (0 -> 3 -> 6 -> 9) will get the bug home.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: forbidden = [8,3,16,6,12,20], a = 15, b = 13, x = 11\nOutput: -1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: forbidden = [1,6,2,14,5,17,4], a = 16, b = 9, x = 7\nOutput: 2\nExplanation: One jump forward (0 -> 16) then one jump backward (16 -> 7) will get the bug home.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= forbidden.length <= 1000",
+    "1 <= a, b, forbidden[i] <= 2000",
+    "0 <= x <= 2000",
+    "All the elements in forbidden are distinct.",
+    "Position x is not forbidden."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think of the line as a graph",
+    "to handle the no double back jumps condition you can handle it by holding the state of your previous jump"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumJumps(vector<int>& forbidden, int a, int b, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumJumps(int[] forbidden, int a, int b, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumJumps(self, forbidden, a, b, x):\n        \"\"\"\n        :type forbidden: List[int]\n        :type a: int\n        :type b: int\n        :type x: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumJumps(self, forbidden: List[int], a: int, b: int, x: int) -> int:\n        ",
+    "c": "int minimumJumps(int* forbidden, int forbiddenSize, int a, int b, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumJumps(int[] forbidden, int a, int b, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} forbidden\n * @param {number} a\n * @param {number} b\n * @param {number} x\n * @return {number}\n */\nvar minimumJumps = function(forbidden, a, b, x) {\n    \n};",
+    "typescript": "function minimumJumps(forbidden: number[], a: number, b: number, x: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $forbidden\n     * @param Integer $a\n     * @param Integer $b\n     * @param Integer $x\n     * @return Integer\n     */\n    function minimumJumps($forbidden, $a, $b, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumJumps(_ forbidden: [Int], _ a: Int, _ b: Int, _ x: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumJumps(forbidden: IntArray, a: Int, b: Int, x: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumJumps(List<int> forbidden, int a, int b, int x) {\n    \n  }\n}",
+    "golang": "func minimumJumps(forbidden []int, a int, b int, x int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} forbidden\n# @param {Integer} a\n# @param {Integer} b\n# @param {Integer} x\n# @return {Integer}\ndef minimum_jumps(forbidden, a, b, x)\n    \nend",
+    "scala": "object Solution {\n    def minimumJumps(forbidden: Array[Int], a: Int, b: Int, x: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_jumps(forbidden: Vec<i32>, a: i32, b: i32, x: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-jumps forbidden a b x)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec minimum_jumps(Forbidden :: [integer()], A :: integer(), B :: integer(), X :: integer()) -> integer().\nminimum_jumps(Forbidden, A, B, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_jumps(forbidden :: [integer], a :: integer, b :: integer, x :: integer) :: integer\n  def minimum_jumps(forbidden, a, b, x) do\n    \n  end\nend"
+  }
+}

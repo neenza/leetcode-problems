@@ -1,0 +1,58 @@
+{
+  "title": "Solving Questions With Brainpower",
+  "problem_id": "2262",
+  "frontend_id": "2140",
+  "difficulty": "Medium",
+  "problem_slug": "solving-questions-with-brainpower",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a 0-indexed 2D integer array questions where questions[i] = [pointsi, brainpoweri].\nThe array describes the questions of an exam, where you have to process the questions in order (i.e., starting from question 0) and make a decision whether to solve or skip each question. Solving question i will earn you pointsi points but you will be unable to solve each of the next brainpoweri questions. If you skip question i, you get to make the decision on the next question.\nReturn the maximum points you can earn for the exam.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: questions = [[3,2],[4,3],[4,4],[2,5]]\nOutput: 5\nExplanation: The maximum points can be earned by solving questions 0 and 3.\n- Solve question 0: Earn 3 points, will be unable to solve the next 2 questions\n- Unable to solve questions 1 and 2\n- Solve question 3: Earn 2 points\nTotal points earned: 3 + 2 = 5. There is no other way to earn 5 or more points.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: questions = [[1,1],[2,2],[3,3],[4,4],[5,5]]\nOutput: 7\nExplanation: The maximum points can be earned by solving questions 1 and 4.\n- Skip question 0\n- Solve question 1: Earn 2 points, will be unable to solve the next 2 questions\n- Unable to solve questions 2 and 3\n- Solve question 4: Earn 5 points\nTotal points earned: 2 + 5 = 7. There is no other way to earn 7 or more points.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= questions.length <= 105",
+    "questions[i].length == 2",
+    "1 <= pointsi, brainpoweri <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each question, we can either solve it or skip it. How can we use Dynamic Programming to decide the most optimal option for each problem?",
+    "We store for each question the maximum points we can earn if we started the exam on that question.",
+    "If we skip a question, then the answer for it will be the same as the answer for the next question.",
+    "If we solve a question, then the answer for it will be the points of the current question plus the answer for the next solvable question.",
+    "The maximum of these two values will be the answer to the current question."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long mostPoints(vector<vector<int>>& questions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long mostPoints(int[][] questions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostPoints(self, questions):\n        \"\"\"\n        :type questions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostPoints(self, questions: List[List[int]]) -> int:\n        ",
+    "c": "long long mostPoints(int** questions, int questionsSize, int* questionsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MostPoints(int[][] questions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} questions\n * @return {number}\n */\nvar mostPoints = function(questions) {\n    \n};",
+    "typescript": "function mostPoints(questions: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $questions\n     * @return Integer\n     */\n    function mostPoints($questions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostPoints(_ questions: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostPoints(questions: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int mostPoints(List<List<int>> questions) {\n    \n  }\n}",
+    "golang": "func mostPoints(questions [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} questions\n# @return {Integer}\ndef most_points(questions)\n    \nend",
+    "scala": "object Solution {\n    def mostPoints(questions: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_points(questions: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (most-points questions)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec most_points(Questions :: [[integer()]]) -> integer().\nmost_points(Questions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_points(questions :: [[integer]]) :: integer\n  def most_points(questions) do\n    \n  end\nend"
+  }
+}

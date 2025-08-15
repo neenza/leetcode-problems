@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Product of Subsequences With an Alternating Sum Equal to K",
+  "problem_id": "3777",
+  "frontend_id": "3509",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-product-of-subsequences-with-an-alternating-sum-equal-to-k",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums and two integers, k and limit. Your task is to find a non-empty subsequence of nums that:\nReturn the product of the numbers in such a subsequence. If no subsequence satisfies the requirements, return -1.\nThe alternating sum of a 0-indexed array is defined as the sum of the elements at even indices minus the sum of the elements at odd indices.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], k = 2, limit = 10\nOutput: 6\nExplanation:\nThe subsequences with an alternating sum of 2 are:\nThe maximum product within the limit is 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,2,3], k = -5, limit = 12\nOutput: -1\nExplanation:\nA subsequence with an alternating sum of exactly -5 does not exist.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,2,3,3], k = 0, limit = 9\nOutput: 9\nExplanation:\nThe subsequences with an alternating sum of 0 are:\nThe subsequence [2, 2, 3, 3] has the greatest product with an alternating sum equal to k , but 36 > 9 . The next greatest product is 9, which is within the limit.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 150",
+    "0 <= nums[i] <= 12",
+    "-105 <= k <= 105",
+    "1 <= limit <= 5000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "Save all possible products with a particular sum.",
+    "Handle the case where a subsequence has a product of <code>0</code> and an alternating sum of <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxProduct(vector<int>& nums, int k, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProduct(int[] nums, int k, int limit) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProduct(self, nums, k, limit):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProduct(self, nums: List[int], k: int, limit: int) -> int:\n        ",
+    "c": "int maxProduct(int* nums, int numsSize, int k, int limit) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxProduct(int[] nums, int k, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} limit\n * @return {number}\n */\nvar maxProduct = function(nums, k, limit) {\n    \n};",
+    "typescript": "function maxProduct(nums: number[], k: number, limit: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer $limit\n     * @return Integer\n     */\n    function maxProduct($nums, $k, $limit) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProduct(_ nums: [Int], _ k: Int, _ limit: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProduct(nums: IntArray, k: Int, limit: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProduct(List<int> nums, int k, int limit) {\n    \n  }\n}",
+    "golang": "func maxProduct(nums []int, k int, limit int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer} limit\n# @return {Integer}\ndef max_product(nums, k, limit)\n    \nend",
+    "scala": "object Solution {\n    def maxProduct(nums: Array[Int], k: Int, limit: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_product(nums: Vec<i32>, k: i32, limit: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-product nums k limit)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_product(Nums :: [integer()], K :: integer(), Limit :: integer()) -> integer().\nmax_product(Nums, K, Limit) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_product(nums :: [integer], k :: integer, limit :: integer) :: integer\n  def max_product(nums, k, limit) do\n    \n  end\nend"
+  }
+}

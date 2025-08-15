@@ -1,0 +1,56 @@
+{
+  "title": "Moving Stones Until Consecutive II",
+  "problem_id": "1113",
+  "frontend_id": "1040",
+  "difficulty": "Medium",
+  "problem_slug": "moving-stones-until-consecutive-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Sliding Window",
+    "Sorting"
+  ],
+  "description": "There are some stones in different positions on the X-axis. You are given an integer array stones, the positions of the stones.\nCall a stone an endpoint stone if it has the smallest or largest position. In one move, you pick up an endpoint stone and move it to an unoccupied position so that it is no longer an endpoint stone.\nThe game ends when you cannot make any more moves (i.e., the stones are in three consecutive positions).\nReturn an integer array answer of length 2 where:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [7,4,9]\nOutput: [1,2]\nExplanation: We can move 4 -> 8 for one move to finish the game.\nOr, we can move 9 -> 5, 4 -> 6 for two moves to finish the game.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [6,5,4,3,10]\nOutput: [2,3]\nExplanation: We can move 3 -> 8 then 10 -> 7 to finish the game.\nOr, we can move 3 -> 7, 4 -> 8, 5 -> 9 to finish the game.\nNotice we cannot move 10 -> 2 to finish the game, because that would be an illegal move.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= stones.length <= 104",
+    "1 <= stones[i] <= 109",
+    "All the values of stones are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For the minimum, how many stones are already in place?\r\nFor the maximum, we have to lose either the gap A[1] - A[0] or A[N-1] - A[N-2]  (where N = A.length), but every other space can be occupied."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> numMovesStonesII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numMovesStonesII(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numMovesStonesII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numMovesStonesII(self, stones: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numMovesStonesII(int* stones, int stonesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] NumMovesStonesII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number[]}\n */\nvar numMovesStonesII = function(stones) {\n    \n};",
+    "typescript": "function numMovesStonesII(stones: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Integer[]\n     */\n    function numMovesStonesII($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numMovesStonesII(_ stones: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numMovesStonesII(stones: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> numMovesStonesII(List<int> stones) {\n    \n  }\n}",
+    "golang": "func numMovesStonesII(stones []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Integer[]}\ndef num_moves_stones_ii(stones)\n    \nend",
+    "scala": "object Solution {\n    def numMovesStonesII(stones: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_moves_stones_ii(stones: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (num-moves-stones-ii stones)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec num_moves_stones_ii(Stones :: [integer()]) -> [integer()].\nnum_moves_stones_ii(Stones) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_moves_stones_ii(stones :: [integer]) :: [integer]\n  def num_moves_stones_ii(stones) do\n    \n  end\nend"
+  }
+}

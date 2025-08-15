@@ -1,0 +1,59 @@
+{
+  "title": "Find Subarrays With Equal Sum",
+  "problem_id": "2480",
+  "frontend_id": "2395",
+  "difficulty": "Easy",
+  "problem_slug": "find-subarrays-with-equal-sum",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "Given a 0-indexed integer array nums, determine whether there exist two subarrays of length 2 with equal sum. Note that the two subarrays must begin at different indices.\nReturn true if these subarrays exist, and false otherwise.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,2,4]\nOutput: true\nExplanation: The subarrays with elements [4,2] and [2,4] have the same sum of 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,5]\nOutput: false\nExplanation: No two subarrays of size 2 have the same sum.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [0,0,0]\nOutput: true\nExplanation: The subarrays [nums[0],nums[1]] and [nums[1],nums[2]] have the same sum of 0. \nNote that even though the subarrays have the same content, the two subarrays are considered different because they are in different positions in the original array.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 1000",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a counter to keep track of the subarray sums.",
+    "Use a hashset to check if any two sums are equal."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool findSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean findSubarrays(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findSubarrays(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool findSubarrays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool FindSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar findSubarrays = function(nums) {\n    \n};",
+    "typescript": "function findSubarrays(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function findSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findSubarrays(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findSubarrays(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool findSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findSubarrays(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef find_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def findSubarrays(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_subarrays(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (find-subarrays nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec find_subarrays(Nums :: [integer()]) -> boolean().\nfind_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_subarrays(nums :: [integer]) :: boolean\n  def find_subarrays(nums) do\n    \n  end\nend"
+  }
+}

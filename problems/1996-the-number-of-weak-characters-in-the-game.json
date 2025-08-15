@@ -1,0 +1,63 @@
+{
+  "title": "The Number of Weak Characters in the Game",
+  "problem_id": "2123",
+  "frontend_id": "1996",
+  "difficulty": "Medium",
+  "problem_slug": "the-number-of-weak-characters-in-the-game",
+  "topics": [
+    "Array",
+    "Stack",
+    "Greedy",
+    "Sorting",
+    "Monotonic Stack"
+  ],
+  "description": "You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game.\nA character is said to be weak if any other character has both attack and defense levels strictly greater than this character's attack and defense levels. More formally, a character i is said to be weak if there exists another character j where attackj > attacki and defensej > defensei.\nReturn the number of weak characters.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: properties = [[5,5],[6,3],[3,6]]\nOutput: 0\nExplanation: No character has strictly greater attack and defense than the other.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: properties = [[2,2],[3,3]]\nOutput: 1\nExplanation: The first character is weak because the second character has a strictly greater attack and defense.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: properties = [[1,5],[10,4],[4,3]]\nOutput: 1\nExplanation: The third character is weak because the second character has a strictly greater attack and defense.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= properties.length <= 105",
+    "properties[i].length == 2",
+    "1 <= attacki, defensei <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the array on the basis of the attack values and group characters with the same attack together. How can you use these groups?",
+    "Characters in one group will always have a lesser attack value than the characters of the next group. Hence, we will only need to check if there is a higher defense value present in the next groups."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfWeakCharacters(vector<vector<int>>& properties) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWeakCharacters(int[][] properties) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWeakCharacters(self, properties):\n        \"\"\"\n        :type properties: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWeakCharacters(self, properties: List[List[int]]) -> int:\n        ",
+    "c": "int numberOfWeakCharacters(int** properties, int propertiesSize, int* propertiesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfWeakCharacters(int[][] properties) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} properties\n * @return {number}\n */\nvar numberOfWeakCharacters = function(properties) {\n    \n};",
+    "typescript": "function numberOfWeakCharacters(properties: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $properties\n     * @return Integer\n     */\n    function numberOfWeakCharacters($properties) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWeakCharacters(_ properties: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWeakCharacters(properties: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWeakCharacters(List<List<int>> properties) {\n    \n  }\n}",
+    "golang": "func numberOfWeakCharacters(properties [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} properties\n# @return {Integer}\ndef number_of_weak_characters(properties)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWeakCharacters(properties: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_weak_characters(properties: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-weak-characters properties)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec number_of_weak_characters(Properties :: [[integer()]]) -> integer().\nnumber_of_weak_characters(Properties) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_weak_characters(properties :: [[integer]]) :: integer\n  def number_of_weak_characters(properties) do\n    \n  end\nend"
+  }
+}

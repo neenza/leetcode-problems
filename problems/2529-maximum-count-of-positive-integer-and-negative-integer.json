@@ -1,0 +1,64 @@
+{
+  "title": "Maximum Count of Positive Integer and Negative Integer",
+  "problem_id": "2614",
+  "frontend_id": "2529",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-count-of-positive-integer-and-negative-integer",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Counting"
+  ],
+  "description": "Given an array nums sorted in non-decreasing order, return the maximum between the number of positive integers and the number of negative integers.\nNote that 0 is neither positive nor negative.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Can you solve the problem in O(log(n)) time complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-2,-1,-1,1,2,3]\nOutput: 3\nExplanation: There are 3 positive integers and 3 negative integers. The maximum count among them is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-3,-2,-1,0,0,1,2]\nOutput: 3\nExplanation: There are 2 positive integers and 3 negative integers. The maximum count among them is 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,20,66,1314]\nOutput: 4\nExplanation: There are 4 positive integers and 0 negative integers. The maximum count among them is 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2000",
+    "-2000 <= nums[i] <= 2000",
+    "nums is sorted in a non-decreasing order."
+  ],
+  "follow_ups": [
+    "Can you solve the problem in O(log(n)) time complexity?"
+  ],
+  "hints": [
+    "Count how many positive integers and negative integers are in the array.",
+    "Since the array is sorted, can we use the binary search?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumCount(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumCount(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumCount(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumCount(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumCount(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumCount(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumCount = function(nums) {\n    \n};",
+    "typescript": "function maximumCount(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumCount($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumCount(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumCount(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumCount(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumCount(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_count(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumCount(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_count(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-count nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_count(Nums :: [integer()]) -> integer().\nmaximum_count(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_count(nums :: [integer]) :: integer\n  def maximum_count(nums) do\n    \n  end\nend"
+  },
+  "solution": "## Solution\n\n---\n\n### Overview\n\nWe are given an array of $N$ integers, which may contain positive, negative, or zero values. The array is sorted in non-decreasing order. The task is to count the number of positive and negative integers, and then return the greater of the two counts. Note that zero is considered neither a positive nor a negative integer.\n\n---\n\n### Approach 1: Brute Force\n\n#### Intuition\n\nThis is the brute-force approach, where we count the number of positive and negative integers by iterating through each element of the array. During the iteration, we increment `positiveCount` for each integer greater than zero and `negativeCount` for each integer less than zero.\n\nFinally, we return the greater of the two variables, `positiveCount` and `negativeCount`.\n\n#### Algorithm\n\n1. Initialize the variables `positiveCount` and `negativeCount` to `0`.\n2. Iterate over the array `nums` and for each integer `num` do the following:\n\n    - Increment the variable `positiveCount` if `num` is greater than `0`.\n    - Increment the variable `negativeCount` if `num` is less than `0`.\n\n3. Return the max of the two variables `positiveCount` and `negativeCount`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of integers in the array `nums`.\n\n- Time complexity: $O(N)$\n\n  We need to iterate over each integer in the array `nums` and hence the time complexity is equal to $O(N)$.\n\n- Space complexity: $O(1)$\n\n  No extra space is required apart from the two variables, `positiveCount` and `negativeCount`, and hence the total space complexity is constant.\n\n---\n\n### Approach 2: Binary Search\n\n#### Intuition\n\nIn the previous approach, we did not utilize an important property of the problem: the array is sorted in non-decreasing order. One of the typical algorithms that leverages a sorted array is binary search. Let's explore how we can apply binary search to solve this problem.\n\nThe array contains negative, positive, and zero integers, and because it is ordered, the zeros will be positioned in the middle, separating the negative and positive integers. To count the number of negative and positive integers, observe that all the integers before the first zero are negative, and all the integers after the last zero are positive. This observation is key: if we can find the indices of the first and last zeros in the array, we can easily determine the counts of positive and negative integers.\n\nIf the first zero is located at index `x`, then there are `x` negative integers (from index `0` to `x - 1`). Similarly, if the last zero is at index `y`, there are `N - y - 1` positive integers (from index `y + 1` to `N - 1`).\n\nIn languages like C++, we have built-in functions such as `lower_bound()` and `upper_bound()` that can be used to find these indices directly. To improve readability, we will implement these functions ourselves. The `lowerBound()` function will return the first index in the array where the value is greater than or equal to zero, and the `upperBound()` function will return the first index where the value is strictly greater than zero.\n\nThe number of positive integers, `positiveCount,` will be equal to `N - upperBound()`, since `upperBound()` returns the first index where the value is greater than zero. Similarly, the number of negative integers, `negativeCount`, will be equal to `lowerBound()`, as `lowerBound()` returns the first index where the value is greater than or equal to zero.\n\nThe implementations of `lowerBound(nums)` and `upperBound(nums)` are similar. For `lowerBound(nums)`, we perform a binary search with `start = 0` and `end = nums.size - 1`. In each iteration, we calculate the `mid` index as `(start + end) / 2`:\n-    If `nums[mid]` is less than `0`, the first non-negative value must be to the right, so we update `start` to `mid + 1` to search the higher range.\n-    If `nums[mid]` is greater than or equal to `0`, `mid` could be the index we are looking for, so we store it as a candidate answer in `index`. Then, we continue searching to the left by updating `end` to `mid - 1` to check whether there is another non-negative value before `nums[mid]`.\n\nThis process continues until the search space is exhausted. If you want to learn more details, please read the [Binary Search Explore Card](https://leetcode.com/explore/learn/card/binary-search/).\n\nOnce we have determined the counts of positive and negative integers using binary search, we can return the greater of the two counts, as we did in the previous approach.\n\n![fig](../Figures/2529/2529A.png)\n\n#### Algorithm\n\n1. Define `lowerBound(nums)` function to find the first index where the value is equal to or greater than zero.\n\n    - Initialize `start = 0`, `end = nums.size - 1,` and `index = nums.size`.\n    - Perform a binary search:\n        - If the middle element (`nums[mid]`) is negative, move `start `to `mid + 1` to search for non-negative integers in the higher range.\n        - Otherwise, the middle element (`nums[mid]`) is non-negative:\n            -    Move `end` to `mid - 1` to search for the **first** non-negative element in the lower range.\n            -    Update `index` to `mid`.\n    - Return `index`, which represents the first index where a non-negative value appears.\n\n2. Define `upperBound(nums)` function to find the first index where the value is strictly greater than zero.\n    - Initialize `start = 0`, `end = nums.size - 1`, and `index = nums.size`.\n    - Perform a binary search:\n        - If the middle element (`nums[mid]`) is less than or equal to zero, move `start` to `mid + 1` to search for positive values in the higher range.\n        - Otherwise, the middle element (`nums[mid]`) is greater than zero:\n            - Move `end` to `mid - 1`, to search for the **first** positive value in the lower range.\n            - Update `index` to `mid`.\n    - Return `index`, which represents the first index where a positive value appears.\n\n3. Subtract the result of `upperBound(nums)` from the total array size to get the number of positive integers (`positiveCount`).\n4. Call `lowerBound(nums)`, which directly gives the count of negative integers (`negativeCount`).\n5. Return the maximum of `positiveCount` and `negativeCount`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of integers in the array `nums`.\n\n- Time complexity: $O(\\log N)$\n\n  We perform binary search twice to find the lower and upper bounds for `0`. At each step of the binary search, we discard half of the array, narrowing down the search range for the index we are looking for. Hence, the total time complexity is  $O(\\log N)$.\n\n- Space complexity: $O(1)$\n\n  No extra space is required apart from a few variables and hence the total space complexity is constant.\n\n---"
+}

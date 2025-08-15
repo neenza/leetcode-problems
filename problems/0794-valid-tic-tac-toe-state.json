@@ -1,0 +1,63 @@
+{
+  "title": "Valid Tic-Tac-Toe State",
+  "problem_id": "810",
+  "frontend_id": "794",
+  "difficulty": "Medium",
+  "problem_slug": "valid-tic-tac-toe-state",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "Given a Tic-Tac-Toe board as a string array board, return true if and only if it is possible to reach this board position during the course of a valid tic-tac-toe game.\nThe board is a 3 x 3 array that consists of characters ' ', 'X', and 'O'. The ' ' character represents an empty square.\nHere are the rules of Tic-Tac-Toe:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [\"O  \",\"   \",\"   \"]\nOutput: false\nExplanation: The first player always plays \"X\".",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/15/tictactoe1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [\"XOX\",\" X \",\"   \"]\nOutput: false\nExplanation: Players take turns making moves.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/15/tictactoe2-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [\"XOX\",\"O O\",\"XOX\"]\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/05/15/tictactoe4-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "board.length == 3",
+    "board[i].length == 3",
+    "board[i][j] is either 'X', 'O', or ' '."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool validTicTacToe(vector<string>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validTicTacToe(String[] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validTicTacToe(self, board):\n        \"\"\"\n        :type board: List[str]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validTicTacToe(self, board: List[str]) -> bool:\n        ",
+    "c": "bool validTicTacToe(char** board, int boardSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool ValidTicTacToe(string[] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} board\n * @return {boolean}\n */\nvar validTicTacToe = function(board) {\n    \n};",
+    "typescript": "function validTicTacToe(board: string[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $board\n     * @return Boolean\n     */\n    function validTicTacToe($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validTicTacToe(_ board: [String]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validTicTacToe(board: Array<String>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool validTicTacToe(List<String> board) {\n    \n  }\n}",
+    "golang": "func validTicTacToe(board []string) bool {\n    \n}",
+    "ruby": "# @param {String[]} board\n# @return {Boolean}\ndef valid_tic_tac_toe(board)\n    \nend",
+    "scala": "object Solution {\n    def validTicTacToe(board: Array[String]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_tic_tac_toe(board: Vec<String>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (valid-tic-tac-toe board)\n  (-> (listof string?) boolean?)\n  )",
+    "erlang": "-spec valid_tic_tac_toe(Board :: [unicode:unicode_binary()]) -> boolean().\nvalid_tic_tac_toe(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_tic_tac_toe(board :: [String.t]) :: boolean\n  def valid_tic_tac_toe(board) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Bricks Falling When Hit",
+  "problem_id": "821",
+  "frontend_id": "803",
+  "difficulty": "Hard",
+  "problem_slug": "bricks-falling-when-hit",
+  "topics": [
+    "Array",
+    "Union Find",
+    "Matrix"
+  ],
+  "description": "You are given an m x n binary grid, where each 1 represents a brick and 0 represents an empty space. A brick is stable if:\nYou are also given an array hits, which is a sequence of erasures we want to apply. Each time we want to erase the brick at the location hits[i] = (rowi, coli). The brick on that location (if it exists) will disappear. Some other bricks may no longer be stable because of that erasure and will fall. Once a brick falls, it is immediately erased from the grid (i.e., it does not land on other stable bricks).\nReturn an array result, where each result[i] is the number of bricks that will fall after the ith erasure is applied.\nNote that an erasure may refer to a location with no brick, and if it does, no bricks drop.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,0,0],[1,1,1,0]], hits = [[1,0]]\nOutput: [2]\nExplanation: Starting with the grid:\n[[1,0,0,0],\n [1,1,1,0]]\nWe erase the underlined brick at (1,0), resulting in the grid:\n[[1,0,0,0],\n [0,1,1,0]]\nThe two underlined bricks are no longer stable as they are no longer connected to the top nor adjacent to another stable brick, so they will fall. The resulting grid is:\n[[1,0,0,0],\n [0,0,0,0]]\nHence the result is [2].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0,0,0],[1,1,0,0]], hits = [[1,1],[1,0]]\nOutput: [0,0]\nExplanation: Starting with the grid:\n[[1,0,0,0],\n [1,1,0,0]]\nWe erase the underlined brick at (1,1), resulting in the grid:\n[[1,0,0,0],\n [1,0,0,0]]\nAll remaining bricks are still stable, so no bricks fall. The grid remains the same:\n[[1,0,0,0],\n [1,0,0,0]]\nNext, we erase the underlined brick at (1,0), resulting in the grid:\n[[1,0,0,0],\n [0,0,0,0]]\nOnce again, all remaining bricks are still stable, so no bricks fall.\nHence the result is [0,0].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 200",
+    "grid[i][j] is 0 or 1.",
+    "1 <= hits.length <= 4 * 104",
+    "hits[i].length == 2",
+    "0 <= xi <= m - 1",
+    "0 <= yi <= n - 1",
+    "All (xi, yi) are unique."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> hitBricks(vector<vector<int>>& grid, vector<vector<int>>& hits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] hitBricks(int[][] grid, int[][] hits) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hitBricks(self, grid, hits):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type hits: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hitBricks(self, grid: List[List[int]], hits: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* hitBricks(int** grid, int gridSize, int* gridColSize, int** hits, int hitsSize, int* hitsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] HitBricks(int[][] grid, int[][] hits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number[][]} hits\n * @return {number[]}\n */\nvar hitBricks = function(grid, hits) {\n    \n};",
+    "typescript": "function hitBricks(grid: number[][], hits: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer[][] $hits\n     * @return Integer[]\n     */\n    function hitBricks($grid, $hits) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hitBricks(_ grid: [[Int]], _ hits: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hitBricks(grid: Array<IntArray>, hits: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> hitBricks(List<List<int>> grid, List<List<int>> hits) {\n    \n  }\n}",
+    "golang": "func hitBricks(grid [][]int, hits [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer[][]} hits\n# @return {Integer[]}\ndef hit_bricks(grid, hits)\n    \nend",
+    "scala": "object Solution {\n    def hitBricks(grid: Array[Array[Int]], hits: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn hit_bricks(grid: Vec<Vec<i32>>, hits: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (hit-bricks grid hits)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec hit_bricks(Grid :: [[integer()]], Hits :: [[integer()]]) -> [integer()].\nhit_bricks(Grid, Hits) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec hit_bricks(grid :: [[integer]], hits :: [[integer]]) :: [integer]\n  def hit_bricks(grid, hits) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Reverse Time and Union-Find [Accepted]\n\n**Intuition**\n\nThe problem is about knowing information about the connected components of a graph as we cut vertices.  In particular, we'll like to know the size of the \"roof\" (component touching the top edge) between each cut.  Here, a cut refers to the erasure of a vertex.\n\nAs we may know, a useful data structure for joining connected components is a disjoint set union structure.  The key idea in this problem is that we can use this structure if we work in reverse: instead of looking at the graph as a series of sequential cuts, we'll look at the graph after all the cuts, and reverse each cut.\n\n**Algorithm**\n\nWe'll modify our typical disjoint-set-union structure to include a `dsu.size` operation, that tells us the size of this component.  The way we do this is whenever we make a component point to a new parent, we'll also send it's size to that parent.\n\nWe'll also include `dsu.top`, which tells us the size of the \"roof\", or the component connected to the top edge.  We use an *ephemeral* \"source\" node with label `R * C` where all nodes on the top edge (with row number `0`) are connected to the source node.\n\nFor more information on DSU, please look at *Approach #2* in the [article here](https://leetcode.com/articles/redundant-connection/).\n\nNext, we'll introduce `A`, the grid after all the cuts have happened, and initialize our disjoint union structure on the graph induced by `A` (nodes are grid squares with a brick; edges between 4-directionally adjacent nodes).\n\nAfter, if we get an cut at `(r, c)` but the original `grid[r][c]` was always `0`, then we couldn't have had a meaningful cut - the number of dropped bricks is `0`.\n\nOtherwise, we'll look at the size of the new roof after adding this brick at `(r, c)`, and compare them to find the number of dropped bricks.\n\nSince we were working in reverse time order, we should reverse our working answer to arrive at our final answer.**Complexity Analysis**\n\n* Time Complexity:  $$O(N \\cdot \\alpha(N))$$, where $$N = R \\cdot C$$ is the number of grid squares, and $$\\alpha$$ is the [Inverse-Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function#Inverse). We will insert at most $$N$$ nodes into the disjoint-set data structure which will require $$O(N \\cdot \\alpha(N))$$ time.  There will also be at most $$Q$$ hits where we must add a brick into the disjoint-set data structure which will require $$O(Q \\cdot \\alpha(N))$$ time. Since each hit location is unique, $$Q$$ must be less than or equal to $$N$$, so we can simplify the time complexity to $$O(N \\cdot \\alpha(N))$$. \n\n* Space Complexity: $$O(N)$$."
+}

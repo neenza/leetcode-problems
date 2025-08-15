@@ -1,0 +1,54 @@
+{
+  "title": "Find and Replace Pattern",
+  "problem_id": "926",
+  "frontend_id": "890",
+  "difficulty": "Medium",
+  "problem_slug": "find-and-replace-pattern",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order.\nA word matches the pattern if there exists a permutation of letters p so that after replacing every letter x in the pattern with p(x), we get the desired word.\nRecall that a permutation of letters is a bijection from letters to letters: every letter maps to another letter, and no two letters map to the same letter.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abc\",\"deq\",\"mee\",\"aqq\",\"dkd\",\"ccc\"], pattern = \"abb\"\nOutput: [\"mee\",\"aqq\"]\nExplanation: \"mee\" matches the pattern because there is a permutation {a -> m, b -> e, ...}. \n\"ccc\" does not match the pattern because {a -> c, b -> c, ...} is not a permutation, since a and b map to the same letter.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"b\",\"c\"], pattern = \"a\"\nOutput: [\"a\",\"b\",\"c\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pattern.length <= 20",
+    "1 <= words.length <= 50",
+    "words[i].length == pattern.length",
+    "pattern and words[i] are lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> findAndReplacePattern(vector<string>& words, string pattern) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findAndReplacePattern(String[] words, String pattern) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findAndReplacePattern(self, words, pattern):\n        \"\"\"\n        :type words: List[str]\n        :type pattern: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findAndReplacePattern(char** words, int wordsSize, char* pattern, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> FindAndReplacePattern(string[] words, string pattern) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} pattern\n * @return {string[]}\n */\nvar findAndReplacePattern = function(words, pattern) {\n    \n};",
+    "typescript": "function findAndReplacePattern(words: string[], pattern: string): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $pattern\n     * @return String[]\n     */\n    function findAndReplacePattern($words, $pattern) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findAndReplacePattern(_ words: [String], _ pattern: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findAndReplacePattern(words: Array<String>, pattern: String): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> findAndReplacePattern(List<String> words, String pattern) {\n    \n  }\n}",
+    "golang": "func findAndReplacePattern(words []string, pattern string) []string {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} pattern\n# @return {String[]}\ndef find_and_replace_pattern(words, pattern)\n    \nend",
+    "scala": "object Solution {\n    def findAndReplacePattern(words: Array[String], pattern: String): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_and_replace_pattern(words: Vec<String>, pattern: String) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (find-and-replace-pattern words pattern)\n  (-> (listof string?) string? (listof string?))\n  )",
+    "erlang": "-spec find_and_replace_pattern(Words :: [unicode:unicode_binary()], Pattern :: unicode:unicode_binary()) -> [unicode:unicode_binary()].\nfind_and_replace_pattern(Words, Pattern) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_and_replace_pattern(words :: [String.t], pattern :: String.t) :: [String.t]\n  def find_and_replace_pattern(words, pattern) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Find the Longest Valid Obstacle Course at Each Position",
+  "problem_id": "2096",
+  "frontend_id": "1964",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-longest-valid-obstacle-course-at-each-position",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Binary Indexed Tree"
+  ],
+  "description": "You want to build some obstacle courses. You are given a 0-indexed integer array obstacles of length n, where obstacles[i] describes the height of the ith obstacle.\nFor every index i between 0 and n - 1 (inclusive), find the length of the longest obstacle course in obstacles such that:\nReturn an array ans of length n, where ans[i] is the length of the longest obstacle course for index i as described above.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: obstacles = [1,2,3,2]\nOutput: [1,2,3,3]\nExplanation: The longest valid obstacle course at each position is:\n- i = 0: [1], [1] has length 1.\n- i = 1: [1,2], [1,2] has length 2.\n- i = 2: [1,2,3], [1,2,3] has length 3.\n- i = 3: [1,2,3,2], [1,2,2] has length 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: obstacles = [2,2,1]\nOutput: [1,2,1]\nExplanation: The longest valid obstacle course at each position is:\n- i = 0: [2], [2] has length 1.\n- i = 1: [2,2], [2,2] has length 2.\n- i = 2: [2,2,1], [1] has length 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: obstacles = [3,1,5,6,4,2]\nOutput: [1,1,2,3,2,2]\nExplanation: The longest valid obstacle course at each position is:\n- i = 0: [3], [3] has length 1.\n- i = 1: [3,1], [1] has length 1.\n- i = 2: [3,1,5], [3,5] has length 2. [1,5] is also valid.\n- i = 3: [3,1,5,6], [3,5,6] has length 3. [1,5,6] is also valid.\n- i = 4: [3,1,5,6,4], [3,4] has length 2. [1,4] is also valid.\n- i = 5: [3,1,5,6,4,2], [1,2] has length 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == obstacles.length",
+    "1 <= n <= 105",
+    "1 <= obstacles[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you keep track of the minimum height for each obstacle course length?",
+    "You can use binary search to find the longest previous obstacle course length that satisfies the conditions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> longestObstacleCourseAtEachPosition(vector<int>& obstacles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestObstacleCourseAtEachPosition(int[] obstacles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestObstacleCourseAtEachPosition(self, obstacles):\n        \"\"\"\n        :type obstacles: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestObstacleCourseAtEachPosition(self, obstacles: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestObstacleCourseAtEachPosition(int* obstacles, int obstaclesSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] LongestObstacleCourseAtEachPosition(int[] obstacles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} obstacles\n * @return {number[]}\n */\nvar longestObstacleCourseAtEachPosition = function(obstacles) {\n    \n};",
+    "typescript": "function longestObstacleCourseAtEachPosition(obstacles: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $obstacles\n     * @return Integer[]\n     */\n    function longestObstacleCourseAtEachPosition($obstacles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestObstacleCourseAtEachPosition(_ obstacles: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestObstacleCourseAtEachPosition(obstacles: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> longestObstacleCourseAtEachPosition(List<int> obstacles) {\n    \n  }\n}",
+    "golang": "func longestObstacleCourseAtEachPosition(obstacles []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} obstacles\n# @return {Integer[]}\ndef longest_obstacle_course_at_each_position(obstacles)\n    \nend",
+    "scala": "object Solution {\n    def longestObstacleCourseAtEachPosition(obstacles: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_obstacle_course_at_each_position(obstacles: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (longest-obstacle-course-at-each-position obstacles)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec longest_obstacle_course_at_each_position(Obstacles :: [integer()]) -> [integer()].\nlongest_obstacle_course_at_each_position(Obstacles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_obstacle_course_at_each_position(obstacles :: [integer]) :: [integer]\n  def longest_obstacle_course_at_each_position(obstacles) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Count Pairs Whose Sum is Less than Target",
+  "problem_id": "2917",
+  "frontend_id": "2824",
+  "difficulty": "Easy",
+  "problem_slug": "count-pairs-whose-sum-is-less-than-target",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "Example 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [-1,1,2,3,1], target = 2\nOutput: 3\nExplanation: There are 3 pairs of indices that satisfy the conditions in the statement:\n- (0, 1) since 0 < 1 and nums[0] + nums[1] = 0 < target\n- (0, 2) since 0 < 2 and nums[0] + nums[2] = 1 < target \n- (0, 4) since 0 < 4 and nums[0] + nums[4] = 0 < target\nNote that (0, 3) is not counted since nums[0] + nums[3] is not strictly less than the target.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-6,2,5,-2,-7,-1,3], target = -2\nOutput: 10\nExplanation: There are 10 pairs of indices that satisfy the conditions in the statement:\n- (0, 1) since 0 < 1 and nums[0] + nums[1] = -4 < target\n- (0, 3) since 0 < 3 and nums[0] + nums[3] = -8 < target\n- (0, 4) since 0 < 4 and nums[0] + nums[4] = -13 < target\n- (0, 5) since 0 < 5 and nums[0] + nums[5] = -7 < target\n- (0, 6) since 0 < 6 and nums[0] + nums[6] = -3 < target\n- (1, 4) since 1 < 4 and nums[1] + nums[4] = -5 < target\n- (3, 4) since 3 < 4 and nums[3] + nums[4] = -9 < target\n- (3, 5) since 3 < 5 and nums[3] + nums[5] = -3 < target\n- (4, 5) since 4 < 5 and nums[4] + nums[5] = -8 < target\n- (4, 6) since 4 < 6 and nums[4] + nums[6] = -4 < target",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length == n <= 50",
+    "-50 <= nums[i], target <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small enough for a brute-force solution to pass"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPairs(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPairs(List<Integer> nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairs(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairs(self, nums: List[int], target: int) -> int:\n        ",
+    "c": "int countPairs(int* nums, int numsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPairs(IList<int> nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar countPairs = function(nums, target) {\n    \n};",
+    "typescript": "function countPairs(nums: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer\n     */\n    function countPairs($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairs(_ nums: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairs(nums: List<Int>, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPairs(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func countPairs(nums []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer}\ndef count_pairs(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def countPairs(nums: List[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs(nums: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_pairs(Nums :: [integer()], Target :: integer()) -> integer().\ncount_pairs(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pairs(nums :: [integer], target :: integer) :: integer\n  def count_pairs(nums, target) do\n    \n  end\nend"
+  }
+}

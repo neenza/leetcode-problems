@@ -1,0 +1,51 @@
+{
+  "title": "Circular Permutation in Binary Representation",
+  "problem_id": "1359",
+  "frontend_id": "1238",
+  "difficulty": "Medium",
+  "problem_slug": "circular-permutation-in-binary-representation",
+  "topics": [
+    "Math",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
+  "description": "Given 2 integers n and start. Your task is return any permutation p of (0,1,2.....,2^n -1) such that :\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, start = 3\r\nOutput: [3,2,0,1]\r\nExplanation: The binary representation of the permutation is (11,10,00,01). \r\nAll the adjacent element differ by one bit. Another valid permutation is [3,1,0,2]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, start = 2\r\nOutput: [2,6,7,5,4,0,1,3]\r\nExplanation: The binary representation of the permutation is (010,110,111,101,100,000,001,011).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 16",
+    "0 <= start < 2 ^ n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use gray code to generate a n-bit sequence.",
+    "Rotate the sequence such that its first element is start."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\r\npublic:\r\n    vector<int> circularPermutation(int n, int start) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public List<Integer> circularPermutation(int n, int start) {\r\n        \r\n    }\r\n}",
+    "python": "class Solution(object):\r\n    def circularPermutation(self, n, start):\r\n        \"\"\"\r\n        :type n: int\r\n        :type start: int\r\n        :rtype: List[int]\r\n        \"\"\"",
+    "python3": "class Solution:\r\n    def circularPermutation(self, n: int, start: int) -> List[int]:",
+    "c": "/**\r\n * Note: The returned array must be malloced, assume caller calls free().\r\n */\r\nint* circularPermutation(int n, int start, int* returnSize){\r\n\r\n}",
+    "csharp": "public class Solution {\r\n    public IList<int> CircularPermutation(int n, int start) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number} n\r\n * @param {number} start\r\n * @return {number[]}\r\n */\r\nvar circularPermutation = function(n, start) {\r\n    \r\n};",
+    "typescript": "function circularPermutation(n: number, start: number): number[] {\r\n\r\n};",
+    "php": "class Solution {\r\n\r\n    /**\r\n     * @param Integer $n\r\n     * @param Integer $start\r\n     * @return Integer[]\r\n     */\r\n    function circularPermutation($n, $start) {\r\n        \r\n    }\r\n}",
+    "swift": "class Solution {\r\n    func circularPermutation(_ n: Int, _ start: Int) -> [Int] {\r\n        \r\n    }\r\n}",
+    "kotlin": "class Solution {\r\n    fun circularPermutation(n: Int, start: Int): List<Int> {\r\n        \r\n    }\r\n}",
+    "golang": "func circularPermutation(n int, start int) []int {\r\n    \r\n}",
+    "ruby": "# @param {Integer} n\r\n# @param {Integer} start\r\n# @return {Integer[]}\r\ndef circular_permutation(n, start)\r\n    \r\nend",
+    "scala": "object Solution {\r\n    def circularPermutation(n: Int, start: Int): List[Int] = {\r\n        \r\n    }\r\n}",
+    "rust": "impl Solution {\r\n    pub fn circular_permutation(n: i32, start: i32) -> Vec<i32> {\r\n        \r\n    }\r\n}"
+  }
+}

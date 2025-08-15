@@ -1,0 +1,66 @@
+{
+  "title": "Zero Array Transformation III",
+  "problem_id": "3647",
+  "frontend_id": "3362",
+  "difficulty": "Medium",
+  "problem_slug": "zero-array-transformation-iii",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums of length n and a 2D array queries where queries[i] = [li, ri].\nEach queries[i] represents the following action on nums:\nA Zero Array is an array with all its elements equal to 0.\nReturn the maximum number of elements that can be removed from queries, such that nums can still be converted to a zero array using the remaining queries. If it is not possible to convert nums to a zero array, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,0,2], queries = [[0,2],[0,2],[1,1]]\nOutput: 1\nExplanation:\nAfter removing queries[2] , nums can still be converted to a zero array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,1], queries = [[1,3],[0,2],[1,3],[1,2]]\nOutput: 2\nExplanation:\nWe can remove queries[2] and queries[3] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4], queries = [[0,3]]\nOutput: -1\nExplanation:\nnums cannot be converted to a zero array even after using all the queries.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 105",
+    "1 <= queries.length <= 105",
+    "queries[i].length == 2",
+    "0 <= li <= ri < nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the queries.",
+    "We need to greedily pick the queries with farthest ending point first."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxRemoval(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRemoval(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxRemoval(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxRemoval(self, nums: List[int], queries: List[List[int]]) -> int:\n        ",
+    "c": "int maxRemoval(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxRemoval(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number}\n */\nvar maxRemoval = function(nums, queries) {\n    \n};",
+    "typescript": "function maxRemoval(nums: number[], queries: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[][] $queries\n     * @return Integer\n     */\n    function maxRemoval($nums, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxRemoval(_ nums: [Int], _ queries: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxRemoval(nums: IntArray, queries: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxRemoval(List<int> nums, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func maxRemoval(nums []int, queries [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[][]} queries\n# @return {Integer}\ndef max_removal(nums, queries)\n    \nend",
+    "scala": "object Solution {\n    def maxRemoval(nums: Array[Int], queries: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_removal(nums: Vec<i32>, queries: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-removal nums queries)\n  (-> (listof exact-integer?) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_removal(Nums :: [integer()], Queries :: [[integer()]]) -> integer().\nmax_removal(Nums, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_removal(nums :: [integer], queries :: [[integer]]) :: integer\n  def max_removal(nums, queries) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Greedy + Priority Queue\n\n#### Intuition\n\nFirst, we consider the element at index $0$ in $\\textit{nums}$. If $\\textit{nums}[0] > 0$, we must find at least $\\textit{nums}[0]$ elements in $\\textit{queries}$ with left endpoints of $0$ to retain so that $\\textit{nums}[0]$ can be reduced to $0$. Now, which elements of $\\textit{nums}[0]$ should we choose? Greedily, we should select those with the largest right endpoints. After this selection, we move on to $\\textit{nums}[1]$. The elements selected in the previous step may not include index $1$, and we need to remove them. This can be accomplished using the difference array $\\textit{deltaArray}$.\n\nAt this point, the cumulative number of operations may not be enough to reduce $\\textit{nums}[1]$ to $0$, and we need to select elements from $\\textit{queries}$, similar to the previous step. We can select the elements with the largest right endpoints from the portion of unselected elements whose left endpoints are $\\leq 1$ until the number of operations satisfies the condition to reduce $\\textit{nums}[1]$ to $0$. This calculation can be efficiently handled using a priority queue (or $\\textit{heap}$).\n\nAs we traverse $\\textit{nums}$, we continuously insert the right endpoints of the $\\textit{queries}$ corresponding to the left endpoints into the $\\textit{heap}$. When the number of operations is insufficient, we keep extracting the largest right endpoint from the $\\textit{heap}$ until the required number of operations is met. After completing the traversal, the size of the $\\textit{heap}$ represents the number of $\\textit{queries}$ that can be deleted.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of $\\textit{nums}$ and $m$ be the length of $\\textit{queries}$.\n\n- Time complexity: $O(n + m \\times \\log{m})$.\n  \n  Sorting the $\\textit{queries}$ takes $O(m \\log{m})$ time. Each insertion and deletion from the priority queue (which tracks the endpoints) requires $O(\\log{m})$ time.\n\n- Space complexity: $O(n + m)$.\n  \n  We need to store both the difference array and the priority queue, which require $O(n)$ and $O(m)$ space, respectively."
+}

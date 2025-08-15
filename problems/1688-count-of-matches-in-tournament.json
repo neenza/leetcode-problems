@@ -1,0 +1,50 @@
+{
+  "title": "Count of Matches in Tournament",
+  "problem_id": "1806",
+  "frontend_id": "1688",
+  "difficulty": "Easy",
+  "problem_slug": "count-of-matches-in-tournament",
+  "topics": [
+    "Math",
+    "Simulation"
+  ],
+  "description": "You are given an integer n, the number of teams in a tournament that has strange rules:\nReturn the number of matches played in the tournament until a winner is decided.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 7\nOutput: 6\nExplanation: Details of the tournament: \n- 1st Round: Teams = 7, Matches = 3, and 4 teams advance.\n- 2nd Round: Teams = 4, Matches = 2, and 2 teams advance.\n- 3rd Round: Teams = 2, Matches = 1, and 1 team is declared the winner.\nTotal number of matches = 3 + 2 + 1 = 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 14\nOutput: 13\nExplanation: Details of the tournament:\n- 1st Round: Teams = 14, Matches = 7, and 7 teams advance.\n- 2nd Round: Teams = 7, Matches = 3, and 4 teams advance.\n- 3rd Round: Teams = 4, Matches = 2, and 2 teams advance.\n- 4th Round: Teams = 2, Matches = 1, and 1 team is declared the winner.\nTotal number of matches = 7 + 3 + 2 + 1 = 13.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 200"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the tournament as given in the statement.",
+    "Be careful when handling odd integers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfMatches(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfMatches(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfMatches(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfMatches(self, n: int) -> int:\n        ",
+    "c": "\n\nint numberOfMatches(int n){\n\n}",
+    "csharp": "public class Solution {\n    public int NumberOfMatches(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar numberOfMatches = function(n) {\n    \n};",
+    "typescript": "function numberOfMatches(n: number): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer\n     */\n    function numberOfMatches($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfMatches(_ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfMatches(n: Int): Int {\n        \n    }\n}",
+    "golang": "func numberOfMatches(n int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer}\ndef number_of_matches(n)\n    \nend",
+    "scala": "object Solution {\n    def numberOfMatches(n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_matches(n: i32) -> i32 {\n        \n    }\n}"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Simulate\n\n**Intuition**\n\nThe problem description describes what happens at each round:\n\n- If `n` is even, `n / 2` matches are played and `n / 2` teams play next round.\n- If `n` is odd, `(n - 1) / 2` matches are played and `(n - 1) / 2 + 1` teams play next round.\n\nWe can simply simulate the tournament according to the rules. We create a while loop that runs until `n = 1`.\n\nAt each iteration, we check if `n` is even or odd. If `n % 2 = 0`, then `n` is even. Otherwise, `n % 2 = 1` and `n` is odd. Here, `%` is the modulus operator.\n\nIf `n` is even, we add `n / 2` to our answer and set `n = n / 2`.\n\nIf `n` is odd, we add `(n - 1) / 2` to our answer and set `n = (n - 1) / 2 + 1`.\n\n**Algorithm**\n\n1. Initialize the answer `ans = 0`.\n2. While `n > 1`:\n    - If `n % 2 == 0`:\n        - Add `n / 2` to `ans`.\n        - Set `n` to `n / 2`.\n    - Else:\n        - Add `(n - 1) / 2` to `ans`.\n        - Set `n` to `(n - 1) / 2 + 1`.\n3. Return `ans`.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(\\log{}n)$$\n\n    At each step in the while loop, we divide `n` or `n - 1` by two. `n` will reach `1` in approximately $$\\log_2{n}$$ steps. We perform $$O(1)$$ work at each step.\n\n* Space complexity: $$O(1)$$\n\n    We aren't using any extra space.---\n\n### Approach 2: Logic\n\n**Intuition**\n\nInstead of simulating the entire tournament, here we will directly consider the beginning and end of the tournament.\n\nIn this tournament, when a team loses, they are eliminated and will no longer play any matches.\n\nThere are `n` teams, and `1` winner. Thus, `n - 1` teams will be eliminated.\n\nEach match is played between two teams. One team wins, one team loses. Thus, each match eliminates exactly one team.\n\nAs `n - 1` teams will be eliminated, there will be `n - 1` matches played, with each match eliminating a team.\n\n**Algorithm**\n\n1. Return `n - 1`.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(1)$$\n\n* Space complexity: $$O(1)$$---"
+}

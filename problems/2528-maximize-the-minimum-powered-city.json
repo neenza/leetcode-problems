@@ -1,0 +1,61 @@
+{
+  "title": "Maximize the Minimum Powered City",
+  "problem_id": "2618",
+  "frontend_id": "2528",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-the-minimum-powered-city",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Queue",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array stations of length n, where stations[i] represents the number of power stations in the ith city.\nEach power station can provide power to every city in a fixed range. In other words, if the range is denoted by r, then a power station at city i can provide power to all cities j such that |i - j| <= r and 0 <= i, j <= n - 1.\nThe power of a city is the total number of power stations it is being provided power from.\nThe government has sanctioned building k more power stations, each of which can be built in any city, and have the same range as the pre-existing ones.\nGiven the two integers r and k, return the maximum possible minimum power of a city, if the additional power stations are built optimally.\nNote that you can build the k power stations in multiple cities.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stations = [1,2,4,5,0], r = 1, k = 2\nOutput: 5\nExplanation: \nOne of the optimal ways is to install both the power stations at city 1. \nSo stations will become [1,4,4,5,0].\n- City 0 is provided by 1 + 4 = 5 power stations.\n- City 1 is provided by 1 + 4 + 4 = 9 power stations.\n- City 2 is provided by 4 + 4 + 5 = 13 power stations.\n- City 3 is provided by 5 + 4 = 9 power stations.\n- City 4 is provided by 5 + 0 = 5 power stations.\nSo the minimum power of a city is 5.\nSince it is not possible to obtain a larger power, we return 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stations = [4,4,4,4], r = 0, k = 3\nOutput: 4\nExplanation: \nIt can be proved that we cannot make the minimum power of a city greater than 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == stations.length",
+    "1 <= n <= 105",
+    "0 <= stations[i] <= 105",
+    "0 <= r <= n - 1",
+    "0 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Pre calculate the number of stations on each city using Line Sweep.",
+    "Use binary search to maximize the minimum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxPower(vector<int>& stations, int r, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxPower(int[] stations, int r, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPower(self, stations, r, k):\n        \"\"\"\n        :type stations: List[int]\n        :type r: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPower(self, stations: List[int], r: int, k: int) -> int:\n        ",
+    "c": "long long maxPower(int* stations, int stationsSize, int r, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxPower(int[] stations, int r, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stations\n * @param {number} r\n * @param {number} k\n * @return {number}\n */\nvar maxPower = function(stations, r, k) {\n    \n};",
+    "typescript": "function maxPower(stations: number[], r: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stations\n     * @param Integer $r\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxPower($stations, $r, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPower(_ stations: [Int], _ r: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPower(stations: IntArray, r: Int, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPower(List<int> stations, int r, int k) {\n    \n  }\n}",
+    "golang": "func maxPower(stations []int, r int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} stations\n# @param {Integer} r\n# @param {Integer} k\n# @return {Integer}\ndef max_power(stations, r, k)\n    \nend",
+    "scala": "object Solution {\n    def maxPower(stations: Array[Int], r: Int, k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_power(stations: Vec<i32>, r: i32, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-power stations r k)\n  (-> (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_power(Stations :: [integer()], R :: integer(), K :: integer()) -> integer().\nmax_power(Stations, R, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_power(stations :: [integer], r :: integer, k :: integer) :: integer\n  def max_power(stations, r, k) do\n    \n  end\nend"
+  }
+}

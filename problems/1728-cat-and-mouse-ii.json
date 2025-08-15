@@ -1,0 +1,74 @@
+{
+  "title": "Cat and Mouse II",
+  "problem_id": "1727",
+  "frontend_id": "1728",
+  "difficulty": "Hard",
+  "problem_slug": "cat-and-mouse-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Graph",
+    "Topological Sort",
+    "Memoization",
+    "Matrix",
+    "Game Theory"
+  ],
+  "description": "A game is played by a cat and a mouse named Cat and Mouse.\nThe environment is represented by a grid of size rows x cols, where each element is a wall, floor, player (Cat, Mouse), or food.\nMouse and Cat play according to the following rules:\nThe game can end in 4 ways:\nGiven a rows x cols matrix grid and two integers catJump and mouseJump, return true if Mouse can win the game if both Cat and Mouse play optimally, otherwise return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [\"####F\",\"#C...\",\"M....\"], catJump = 1, mouseJump = 2\nOutput: true\nExplanation: Cat cannot catch Mouse on its turn nor can it get the food before Mouse.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/12/sample_111_1955.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [\"M.C...F\"], catJump = 1, mouseJump = 4\nOutput: true",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/12/sample_2_1955.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [\"M.C...F\"], catJump = 1, mouseJump = 3\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/09/12/sample_2_1955.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "rows == grid.length",
+    "cols = grid[i].length",
+    "1 <= rows, cols <= 8",
+    "grid[i][j] consist only of characters 'C', 'M', 'F', '.', and '#'.",
+    "There is only one of each character 'C', 'M', and 'F' in grid.",
+    "1 <= catJump, mouseJump <= 8"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try working backward: consider all trivial states you know to be winning or losing, and work backward to determine which other states can be labeled as winning or losing."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canMouseWin(String[] grid, int catJump, int mouseJump) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canMouseWin(self, grid, catJump, mouseJump):\n        \"\"\"\n        :type grid: List[str]\n        :type catJump: int\n        :type mouseJump: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canMouseWin(self, grid: List[str], catJump: int, mouseJump: int) -> bool:\n        ",
+    "c": "bool canMouseWin(char** grid, int gridSize, int catJump, int mouseJump) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanMouseWin(string[] grid, int catJump, int mouseJump) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} grid\n * @param {number} catJump\n * @param {number} mouseJump\n * @return {boolean}\n */\nvar canMouseWin = function(grid, catJump, mouseJump) {\n    \n};",
+    "typescript": "function canMouseWin(grid: string[], catJump: number, mouseJump: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $grid\n     * @param Integer $catJump\n     * @param Integer $mouseJump\n     * @return Boolean\n     */\n    function canMouseWin($grid, $catJump, $mouseJump) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canMouseWin(_ grid: [String], _ catJump: Int, _ mouseJump: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canMouseWin(grid: Array<String>, catJump: Int, mouseJump: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canMouseWin(List<String> grid, int catJump, int mouseJump) {\n    \n  }\n}",
+    "golang": "func canMouseWin(grid []string, catJump int, mouseJump int) bool {\n    \n}",
+    "ruby": "# @param {String[]} grid\n# @param {Integer} cat_jump\n# @param {Integer} mouse_jump\n# @return {Boolean}\ndef can_mouse_win(grid, cat_jump, mouse_jump)\n    \nend",
+    "scala": "object Solution {\n    def canMouseWin(grid: Array[String], catJump: Int, mouseJump: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_mouse_win(grid: Vec<String>, cat_jump: i32, mouse_jump: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-mouse-win grid catJump mouseJump)\n  (-> (listof string?) exact-integer? exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_mouse_win(Grid :: [unicode:unicode_binary()], CatJump :: integer(), MouseJump :: integer()) -> boolean().\ncan_mouse_win(Grid, CatJump, MouseJump) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_mouse_win(grid :: [String.t], cat_jump :: integer, mouse_jump :: integer) :: boolean\n  def can_mouse_win(grid, cat_jump, mouse_jump) do\n    \n  end\nend"
+  }
+}

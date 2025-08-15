@@ -1,0 +1,68 @@
+{
+  "title": "Find X Value of Array II",
+  "problem_id": "3840",
+  "frontend_id": "3525",
+  "difficulty": "Hard",
+  "problem_slug": "find-x-value-of-array-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Segment Tree"
+  ],
+  "description": "You are given an array of positive integers nums and a positive integer k. You are also given a 2D array queries, where queries[i] = [indexi, valuei, starti, xi].\nYou are allowed to perform an operation once on nums, where you can remove any suffix from nums such that nums remains non-empty.\nThe x-value of nums for a given x is defined as the number of ways to perform this operation so that the product of the remaining elements leaves a remainder of x modulo k.\nFor each query in queries you need to determine the x-value of nums for xi after performing the following actions:\nReturn an array result of size queries.length where result[i] is the answer for the ith query.\nA prefix of an array is a subarray that starts from the beginning of the array and extends to any point within it.\nA suffix of an array is a subarray that starts at any point within the array and extends to the end of the array.\nNote that the prefix and suffix to be chosen for the operation can be empty.\nNote that x-value has a different definition in this version.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5], k = 3, queries = [[2,2,0,2],[3,3,3,0],[0,1,0,1]]\nOutput: [2,2,2]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,4,8,16,32], k = 4, queries = [[0,2,0,2],[0,2,0,1]]\nOutput: [1,0]\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,2,1,1], k = 2, queries = [[2,1,0,1]]\nOutput: [5]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums[i] <= 109",
+    "1 <= nums.length <= 105",
+    "1 <= k <= 5",
+    "1 <= queries.length <= 2 * 104",
+    "queries[i] == [indexi, valuei, starti, xi]",
+    "0 <= indexi <= nums.length - 1",
+    "1 <= valuei <= 109",
+    "0 <= starti <= nums.length - 1",
+    "0 <= xi <= k - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a segment tree to efficiently maintain and merge product prefix information for the array <code>nums</code>.",
+    "In each segment tree node, store a frequency count of prefix product remainders for every <code>x</code> in the range [0, k - 1].",
+    "For each query, update <code>nums[index]</code> to <code>value</code>, then merge the segments corresponding to <code>nums[start..n - 1]</code> to compute the <code>x-value</code> for <code>xi</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> resultArray(vector<int>& nums, int k, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] resultArray(int[] nums, int k, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def resultArray(self, nums, k, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def resultArray(self, nums: List[int], k: int, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* resultArray(int* nums, int numsSize, int k, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ResultArray(int[] nums, int k, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar resultArray = function(nums, k, queries) {\n    \n};",
+    "typescript": "function resultArray(nums: number[], k: number, queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function resultArray($nums, $k, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func resultArray(_ nums: [Int], _ k: Int, _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun resultArray(nums: IntArray, k: Int, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> resultArray(List<int> nums, int k, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func resultArray(nums []int, k int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef result_array(nums, k, queries)\n    \nend",
+    "scala": "object Solution {\n    def resultArray(nums: Array[Int], k: Int, queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn result_array(nums: Vec<i32>, k: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (result-array nums k queries)\n  (-> (listof exact-integer?) exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec result_array(Nums :: [integer()], K :: integer(), Queries :: [[integer()]]) -> [integer()].\nresult_array(Nums, K, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec result_array(nums :: [integer], k :: integer, queries :: [[integer]]) :: [integer]\n  def result_array(nums, k, queries) do\n    \n  end\nend"
+  }
+}

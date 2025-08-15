@@ -1,0 +1,38 @@
+{
+  "title": "Find Valid Emails",
+  "problem_id": "3782",
+  "frontend_id": "3436",
+  "difficulty": "Easy",
+  "problem_slug": "find-valid-emails",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Users\nWrite a solution to find all the valid email addresses. A valid email address meets the following criteria:\nReturn the result table ordered by user_id in ascending order.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-----------------+---------+\n| Column Name     | Type    |\n+-----------------+---------+\n| user_id         | int     |\n| email           | varchar |\n+-----------------+---------+\n(user_id) is the unique key for this table.\nEach row contains a user's unique ID and email address.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------+---------------------+\n| user_id | email               |\n+---------+---------------------+\n| 1       | alice@example.com   |\n| 2       | bob_at_example.com  |\n| 3       | charlie@example.net |\n| 4       | david@domain.com    |\n| 5       | eve@invalid         |\n+---------+---------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------+-------------------+\n| user_id | email             |\n+---------+-------------------+\n| 1       | alice@example.com |\n| 4       | david@domain.com  |\n+---------+-------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_valid_emails(users: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

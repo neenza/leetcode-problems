@@ -1,0 +1,58 @@
+{
+  "title": "Longer Contiguous Segments of Ones than Zeros",
+  "problem_id": "1999",
+  "frontend_id": "1869",
+  "difficulty": "Easy",
+  "problem_slug": "longer-contiguous-segments-of-ones-than-zeros",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a binary string s, return true if the longest contiguous segment of 1's is strictly longer than the longest contiguous segment of 0's in s, or return false otherwise.\nNote that if there are no 0's, then the longest continuous segment of 0's is considered to have a length 0. The same applies if there is no 1's.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"1101\"\nOutput: true\nExplanation:\nThe longest contiguous segment of 1s has length 2: \"1101\"\nThe longest contiguous segment of 0s has length 1: \"1101\"\nThe segment of 1s is longer, so return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"111000\"\nOutput: false\nExplanation:\nThe longest contiguous segment of 1s has length 3: \"111000\"\nThe longest contiguous segment of 0s has length 3: \"111000\"\nThe segment of 1s is not longer, so return false.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"110100010\"\nOutput: false\nExplanation:\nThe longest contiguous segment of 1s has length 2: \"110100010\"\nThe longest contiguous segment of 0s has length 3: \"110100010\"\nThe segment of 1s is not longer, so return false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s[i] is either '0' or '1'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check every possible segment of 0s and 1s.",
+    "Is there a way to iterate through the string to keep track of the current character and its count?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkZeroOnes(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkZeroOnes(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkZeroOnes(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkZeroOnes(self, s: str) -> bool:\n        ",
+    "c": "bool checkZeroOnes(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckZeroOnes(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkZeroOnes = function(s) {\n    \n};",
+    "typescript": "function checkZeroOnes(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function checkZeroOnes($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkZeroOnes(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkZeroOnes(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkZeroOnes(String s) {\n    \n  }\n}",
+    "golang": "func checkZeroOnes(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef check_zero_ones(s)\n    \nend",
+    "scala": "object Solution {\n    def checkZeroOnes(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_zero_ones(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-zero-ones s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec check_zero_ones(S :: unicode:unicode_binary()) -> boolean().\ncheck_zero_ones(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_zero_ones(s :: String.t) :: boolean\n  def check_zero_ones(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Print Words Vertically",
+  "problem_id": "1449",
+  "frontend_id": "1324",
+  "difficulty": "Medium",
+  "problem_slug": "print-words-vertically",
+  "topics": [
+    "Array",
+    "String",
+    "Simulation"
+  ],
+  "description": "Given a string s. Return all the words vertically in the same order in which they appear in s.\r\nWords are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed).\r\nEach word would be put on only one column and that in one column there will be only one word.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"HOW ARE YOU\"\r\nOutput: [\"HAY\",\"ORO\",\"WEU\"]\r\nExplanation: Each word is printed vertically. \r\n \"HAY\"\r\n \"ORO\"\r\n \"WEU\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"TO BE OR NOT TO BE\"\r\nOutput: [\"TBONTB\",\"OEROOE\",\"   T\"]\r\nExplanation: Trailing spaces is not allowed. \r\n\"TBONTB\"\r\n\"OEROOE\"\r\n\"   T\"",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"CONTEST IS COMING\"\r\nOutput: [\"CIC\",\"OSO\",\"N M\",\"T I\",\"E N\",\"S G\",\"T\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 200",
+    "s contains only upper case English letters.",
+    "It's guaranteed that there is only one space between 2 words."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use the maximum length of words to determine the length of the returned answer. However, don't forget to remove trailing spaces."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> printVertically(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> printVertically(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def printVertically(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def printVertically(self, s: str) -> List[str]:\n        ",
+    "c": "\n\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar ** printVertically(char * s, int* returnSize){\n\n}",
+    "csharp": "public class Solution {\n    public IList<string> PrintVertically(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar printVertically = function(s) {\n    \n};",
+    "typescript": "function printVertically(s: string): string[] {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String[]\n     */\n    function printVertically($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func printVertically(_ s: String) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun printVertically(s: String): List<String> {\n        \n    }\n}",
+    "golang": "func printVertically(s string) []string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String[]}\ndef print_vertically(s)\n    \nend",
+    "scala": "object Solution {\n    def printVertically(s: String): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn print_vertically(s: String) -> Vec<String> {\n        \n    }\n}"
+  }
+}

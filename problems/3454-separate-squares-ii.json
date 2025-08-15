@@ -1,0 +1,64 @@
+{
+  "title": "Separate Squares II",
+  "problem_id": "3775",
+  "frontend_id": "3454",
+  "difficulty": "Hard",
+  "problem_slug": "separate-squares-ii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Segment Tree",
+    "Line Sweep"
+  ],
+  "description": "You are given a 2D integer array squares. Each squares[i] = [xi, yi, li] represents the coordinates of the bottom-left point and the side length of a square parallel to the x-axis.\nFind the minimum y-coordinate value of a horizontal line such that the total area covered by squares above the line equals the total area covered by squares below the line.\nAnswers within 10-5 of the actual answer will be accepted.\nNote: Squares may overlap. Overlapping areas should be counted only once in this version.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: squares = [[0,0,1],[2,2,1]]\nOutput: 1.00000\nExplanation:\n\nAny horizontal line between y = 1 and y = 2 results in an equal split, with 1 square unit above and 1 square unit below. The minimum y-value is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/15/4065example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: squares = [[0,0,2],[1,1,1]]\nOutput: 1.00000\nExplanation:\n\nSince the blue square overlaps with the red square, it will not be counted again. Thus, the line y = 1 splits the squares into two equal parts.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/15/4065example2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= squares.length <= 5 * 104",
+    "squares[i] = [xi, yi, li]",
+    "squares[i].length == 3",
+    "0 <= xi, yi <= 109",
+    "1 <= li <= 109",
+    "The total area of all the squares will not exceed 1015."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use a line sweep and a segment tree.",
+    "The line must lie in one of the squares."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    double separateSquares(vector<vector<int>>& squares) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double separateSquares(int[][] squares) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def separateSquares(self, squares):\n        \"\"\"\n        :type squares: List[List[int]]\n        :rtype: float\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def separateSquares(self, squares: List[List[int]]) -> float:\n        ",
+    "c": "double separateSquares(int** squares, int squaresSize, int* squaresColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public double SeparateSquares(int[][] squares) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} squares\n * @return {number}\n */\nvar separateSquares = function(squares) {\n    \n};",
+    "typescript": "function separateSquares(squares: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $squares\n     * @return Float\n     */\n    function separateSquares($squares) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func separateSquares(_ squares: [[Int]]) -> Double {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun separateSquares(squares: Array<IntArray>): Double {\n        \n    }\n}",
+    "dart": "class Solution {\n  double separateSquares(List<List<int>> squares) {\n    \n  }\n}",
+    "golang": "func separateSquares(squares [][]int) float64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} squares\n# @return {Float}\ndef separate_squares(squares)\n    \nend",
+    "scala": "object Solution {\n    def separateSquares(squares: Array[Array[Int]]): Double = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn separate_squares(squares: Vec<Vec<i32>>) -> f64 {\n        \n    }\n}",
+    "racket": "(define/contract (separate-squares squares)\n  (-> (listof (listof exact-integer?)) flonum?)\n  )",
+    "erlang": "-spec separate_squares(Squares :: [[integer()]]) -> float().\nseparate_squares(Squares) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec separate_squares(squares :: [[integer]]) :: float\n  def separate_squares(squares) do\n    \n  end\nend"
+  }
+}

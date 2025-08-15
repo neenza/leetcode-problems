@@ -1,0 +1,66 @@
+{
+  "title": "Recover the Original Array",
+  "problem_id": "2241",
+  "frontend_id": "2122",
+  "difficulty": "Hard",
+  "problem_slug": "recover-the-original-array",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Sorting",
+    "Enumeration"
+  ],
+  "description": "Alice had a 0-indexed array arr consisting of n positive integers. She chose an arbitrary positive integer k and created two new 0-indexed integer arrays lower and higher in the following manner:\nUnfortunately, Alice lost all three arrays. However, she remembers the integers that were present in the arrays lower and higher, but not the array each integer belonged to. Help Alice and recover the original array.\nGiven an array nums consisting of 2n integers, where exactly n of the integers were present in lower and the remaining in higher, return the original array arr. In case the answer is not unique, return any valid array.\nNote: The test cases are generated such that there exists at least one valid array arr.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,10,6,4,8,12]\nOutput: [3,7,11]\nExplanation:\nIf arr = [3,7,11] and k = 1, we get lower = [2,6,10] and higher = [4,8,12].\nCombining lower and higher gives us [2,6,10,4,8,12], which is a permutation of nums.\nAnother valid possibility is that arr = [5,7,9] and k = 3. In that case, lower = [2,4,6] and higher = [8,10,12].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,3,3]\nOutput: [2,2]\nExplanation:\nIf arr = [2,2] and k = 1, we get lower = [1,1] and higher = [3,3].\nCombining lower and higher gives us [1,1,3,3], which is equal to nums.\nNote that arr cannot be [1,3] because in that case, the only possible way to obtain [1,1,3,3] is with k = 0.\nThis is invalid since k must be positive.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [5,435]\nOutput: [220]\nExplanation:\nThe only possible combination is arr = [220] and k = 215. Using them, we get lower = [5] and higher = [435].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 * n == nums.length",
+    "1 <= n <= 1000",
+    "1 <= nums[i] <= 109",
+    "The test cases are generated such that there exists at least one valid array arr."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If we fix the value of k, how can we check if an original array exists for the fixed k?",
+    "The smallest value of nums is obtained by subtracting k from the smallest value of the original array. How can we use this to reduce the search space for finding a valid k?",
+    "You can compute every possible k by using the smallest value of nums (as lower[i]) against every other value in nums (as the corresponding higher[i]).",
+    "For every computed k, greedily pair up the values in nums. This can be done sorting nums, then using a map to store previous values and searching that map for a corresponding lower[i] for the current nums[j] (as higher[i])."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> recoverArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] recoverArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def recoverArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def recoverArray(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* recoverArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] RecoverArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar recoverArray = function(nums) {\n    \n};",
+    "typescript": "function recoverArray(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function recoverArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func recoverArray(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun recoverArray(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> recoverArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func recoverArray(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef recover_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def recoverArray(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn recover_array(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (recover-array nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec recover_array(Nums :: [integer()]) -> [integer()].\nrecover_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec recover_array(nums :: [integer]) :: [integer]\n  def recover_array(nums) do\n    \n  end\nend"
+  }
+}

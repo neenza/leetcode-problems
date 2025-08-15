@@ -1,0 +1,72 @@
+{
+  "title": "Maximize Spanning Tree Stability with Upgrades",
+  "problem_id": "3902",
+  "frontend_id": "3600",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-spanning-tree-stability-with-upgrades",
+  "topics": [
+    "Binary Search",
+    "Greedy",
+    "Union Find",
+    "Graph",
+    "Minimum Spanning Tree"
+  ],
+  "description": "You are given an integer n, representing n nodes numbered from 0 to n - 1 and a list of edges, where edges[i] = [ui, vi, si, musti]:\nYou are also given an integer k, the maximum number of upgrades you can perform. Each upgrade doubles the strength of an edge, and each eligible edge (with musti == 0) can be upgraded at most once.\nThe stability of a spanning tree is defined as the minimum strength score among all edges included in it.\nReturn the maximum possible stability of any valid spanning tree. If it is impossible to connect all nodes, return -1.\nNote: A spanning tree of a graph with n nodes is a subset of the edges that connects all nodes together (i.e. the graph is connected) without forming any cycles, and uses exactly n - 1 edges.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, edges = [[0,1,2,1],[1,2,3,0]], k = 1\nOutput: 2\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1,4,0],[1,2,3,0],[0,2,1,0]], k = 2\nOutput: 6\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, edges = [[0,1,1,1],[1,2,1,1],[2,0,1,1]], k = 0\nOutput: -1\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= edges.length <= 105",
+    "edges[i] = [ui, vi, si, musti]",
+    "0 <= ui, vi < n",
+    "ui != vi",
+    "1 <= si <= 105",
+    "musti is either 0 or 1.",
+    "0 <= k <= n",
+    "There are no duplicate edges."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the <code>edges</code> array in descending order of weights.",
+    "Try using binary search on <code>ans</code>.",
+    "Implement a <code>chk</code> function which first adds all the edges with <code>must = 1</code>, and then adds the edges with <code>must = 0</code>, using any remaining upgrades greedily.",
+    "Use a <code>DSU</code> with path compression and union by size/rank to maintain connected components.",
+    "Don't forget the case where you cannot form an MST because more than one component remains after processing all edges."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxStability(int n, vector<vector<int>>& edges, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxStability(int n, int[][] edges, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxStability(self, n, edges, k):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxStability(self, n: int, edges: List[List[int]], k: int) -> int:\n        ",
+    "c": "int maxStability(int n, int** edges, int edgesSize, int* edgesColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxStability(int n, int[][] edges, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} k\n * @return {number}\n */\nvar maxStability = function(n, edges, k) {\n    \n};",
+    "typescript": "function maxStability(n: number, edges: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxStability($n, $edges, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxStability(_ n: Int, _ edges: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxStability(n: Int, edges: Array<IntArray>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxStability(int n, List<List<int>> edges, int k) {\n    \n  }\n}",
+    "golang": "func maxStability(n int, edges [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer} k\n# @return {Integer}\ndef max_stability(n, edges, k)\n    \nend",
+    "scala": "object Solution {\n    def maxStability(n: Int, edges: Array[Array[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_stability(n: i32, edges: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-stability n edges k)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_stability(N :: integer(), Edges :: [[integer()]], K :: integer()) -> integer().\nmax_stability(N, Edges, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_stability(n :: integer, edges :: [[integer]], k :: integer) :: integer\n  def max_stability(n, edges, k) do\n    \n  end\nend"
+  }
+}

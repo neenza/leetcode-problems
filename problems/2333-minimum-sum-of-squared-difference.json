@@ -1,0 +1,60 @@
+{
+  "title": "Minimum Sum of Squared Difference",
+  "problem_id": "2418",
+  "frontend_id": "2333",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-sum-of-squared-difference",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two positive 0-indexed integer arrays nums1 and nums2, both of length n.\nThe sum of squared difference of arrays nums1 and nums2 is defined as the sum of (nums1[i] - nums2[i])2 for each 0 <= i < n.\nYou are also given two positive integers k1 and k2. You can modify any of the elements of nums1 by +1 or -1 at most k1 times. Similarly, you can modify any of the elements of nums2 by +1 or -1 at most k2 times.\nReturn the minimum sum of squared difference after modifying array nums1 at most k1 times and modifying array nums2 at most k2 times.\nNote: You are allowed to modify the array elements to become negative integers.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,2,3,4], nums2 = [2,10,20,19], k1 = 0, k2 = 0\nOutput: 579\nExplanation: The elements in nums1 and nums2 cannot be modified because k1 = 0 and k2 = 0. \nThe sum of square difference will be: (1 - 2)2 + (2 - 10)2 + (3 - 20)2 + (4 - 19)2 = 579.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [1,4,10,12], nums2 = [5,8,6,9], k1 = 1, k2 = 1\nOutput: 43\nExplanation: One way to obtain the minimum sum of square difference is: \n- Increase nums1[0] once.\n- Increase nums2[2] once.\nThe minimum of the sum of square difference will be: \n(2 - 5)2 + (4 - 8)2 + (10 - 7)2 + (12 - 9)2 = 43.\nNote that, there are other ways to obtain the minimum of the sum of square difference, but there is no way to obtain a sum smaller than 43.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length == nums2.length",
+    "1 <= n <= 105",
+    "0 <= nums1[i], nums2[i] <= 105",
+    "0 <= k1, k2 <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There is no difference between the purpose of k1 and k2. Adding +1 to one element in nums1 is same as performing -1 to one element in nums2, and vice versa.",
+    "Reduce the sum of squared difference greedily. One operation of k should use the index that has the current maximum difference.",
+    "Binary search the maximum difference for the final result."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minSumSquareDiff(vector<int>& nums1, vector<int>& nums2, int k1, int k2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minSumSquareDiff(int[] nums1, int[] nums2, int k1, int k2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSumSquareDiff(self, nums1, nums2, k1, k2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k1: int\n        :type k2: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSumSquareDiff(self, nums1: List[int], nums2: List[int], k1: int, k2: int) -> int:\n        ",
+    "c": "long long minSumSquareDiff(int* nums1, int nums1Size, int* nums2, int nums2Size, int k1, int k2) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinSumSquareDiff(int[] nums1, int[] nums2, int k1, int k2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} k1\n * @param {number} k2\n * @return {number}\n */\nvar minSumSquareDiff = function(nums1, nums2, k1, k2) {\n    \n};",
+    "typescript": "function minSumSquareDiff(nums1: number[], nums2: number[], k1: number, k2: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @param Integer $k1\n     * @param Integer $k2\n     * @return Integer\n     */\n    function minSumSquareDiff($nums1, $nums2, $k1, $k2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSumSquareDiff(_ nums1: [Int], _ nums2: [Int], _ k1: Int, _ k2: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSumSquareDiff(nums1: IntArray, nums2: IntArray, k1: Int, k2: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSumSquareDiff(List<int> nums1, List<int> nums2, int k1, int k2) {\n    \n  }\n}",
+    "golang": "func minSumSquareDiff(nums1 []int, nums2 []int, k1 int, k2 int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @param {Integer} k1\n# @param {Integer} k2\n# @return {Integer}\ndef min_sum_square_diff(nums1, nums2, k1, k2)\n    \nend",
+    "scala": "object Solution {\n    def minSumSquareDiff(nums1: Array[Int], nums2: Array[Int], k1: Int, k2: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_sum_square_diff(nums1: Vec<i32>, nums2: Vec<i32>, k1: i32, k2: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-sum-square-diff nums1 nums2 k1 k2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_sum_square_diff(Nums1 :: [integer()], Nums2 :: [integer()], K1 :: integer(), K2 :: integer()) -> integer().\nmin_sum_square_diff(Nums1, Nums2, K1, K2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_sum_square_diff(nums1 :: [integer], nums2 :: [integer], k1 :: integer, k2 :: integer) :: integer\n  def min_sum_square_diff(nums1, nums2, k1, k2) do\n    \n  end\nend"
+  }
+}

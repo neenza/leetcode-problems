@@ -1,0 +1,67 @@
+{
+  "title": "Count Prefix and Suffix Pairs II",
+  "problem_id": "3305",
+  "frontend_id": "3045",
+  "difficulty": "Hard",
+  "problem_slug": "count-prefix-and-suffix-pairs-ii",
+  "topics": [
+    "Array",
+    "String",
+    "Trie",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ],
+  "description": "You are given a 0-indexed string array words.\nLet's define a boolean function isPrefixAndSuffix that takes two strings, str1 and str2:\nFor example, isPrefixAndSuffix(\"aba\", \"ababa\") is true because \"aba\" is a prefix of \"ababa\" and also a suffix, but isPrefixAndSuffix(\"abc\", \"abcd\") is false.\nReturn an integer denoting the number of index pairs (i, j) such that i < j, and isPrefixAndSuffix(words[i], words[j]) is true.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"a\",\"aba\",\"ababa\",\"aa\"]\nOutput: 4\nExplanation: In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"a\", \"aba\") is true.\ni = 0 and j = 2 because isPrefixAndSuffix(\"a\", \"ababa\") is true.\ni = 0 and j = 3 because isPrefixAndSuffix(\"a\", \"aa\") is true.\ni = 1 and j = 2 because isPrefixAndSuffix(\"aba\", \"ababa\") is true.\nTherefore, the answer is 4.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"pa\",\"papa\",\"ma\",\"mama\"]\nOutput: 2\nExplanation: In this example, the counted index pairs are:\ni = 0 and j = 1 because isPrefixAndSuffix(\"pa\", \"papa\") is true.\ni = 2 and j = 3 because isPrefixAndSuffix(\"ma\", \"mama\") is true.\nTherefore, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"abab\",\"ab\"]\nOutput: 0\nExplanation: In this example, the only valid index pair is i = 0 and j = 1, and isPrefixAndSuffix(\"abab\", \"ab\") is false.\nTherefore, the answer is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 105",
+    "1 <= words[i].length <= 105",
+    "words[i] consists only of lowercase English letters.",
+    "The sum of the lengths of all words[i] does not exceed 5 * 105."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can use a trie to solve it.",
+    "Process all <code>words[i]</code> from left to right. The trie stores the pair <code>(words[i][j], words[i][words[i].length - j - 1])</code> as a single character; we process all the words in this way.",
+    "During insertion, keep a counter in each trie node, as in a normal trie. If the current node is the end of a word (namely, the pair on that node is <code>(words[i][words[i].length - 1], words[i][0])</code>), increase the node's counter by <code>1</code>.",
+    "From left to right, insert each word into the trie, and increase our final result by each node's counter when going down the trie during insertion. This means there was at least one word that is both a prefix and a suffix of the current word before."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countPrefixSuffixPairs(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countPrefixSuffixPairs(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPrefixSuffixPairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPrefixSuffixPairs(self, words: List[str]) -> int:\n        ",
+    "c": "long long countPrefixSuffixPairs(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountPrefixSuffixPairs(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar countPrefixSuffixPairs = function(words) {\n    \n};",
+    "typescript": "function countPrefixSuffixPairs(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function countPrefixSuffixPairs($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPrefixSuffixPairs(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPrefixSuffixPairs(words: Array<String>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPrefixSuffixPairs(List<String> words) {\n    \n  }\n}",
+    "golang": "func countPrefixSuffixPairs(words []string) int64 {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef count_prefix_suffix_pairs(words)\n    \nend",
+    "scala": "object Solution {\n    def countPrefixSuffixPairs(words: Array[String]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_prefix_suffix_pairs(words: Vec<String>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-prefix-suffix-pairs words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec count_prefix_suffix_pairs(Words :: [unicode:unicode_binary()]) -> integer().\ncount_prefix_suffix_pairs(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_prefix_suffix_pairs(words :: [String.t]) :: integer\n  def count_prefix_suffix_pairs(words) do\n    \n  end\nend"
+  }
+}

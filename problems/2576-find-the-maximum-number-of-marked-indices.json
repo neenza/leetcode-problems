@@ -1,0 +1,64 @@
+{
+  "title": "Find the Maximum Number of Marked Indices",
+  "problem_id": "2712",
+  "frontend_id": "2576",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-maximum-number-of-marked-indices",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed integer array nums.\nInitially, all of the indices are unmarked. You are allowed to make this operation any number of times:\nReturn the maximum possible number of marked indices in nums using the above operation any number of times.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,5,2,4]\nOutput: 2\nExplanation: In the first operation: pick i = 2 and j = 1, the operation is allowed because 2 * nums[2] <= nums[1]. Then mark index 2 and 1.\nIt can be shown that there's no other valid operation so the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [9,2,5,4]\nOutput: 4\nExplanation: In the first operation: pick i = 3 and j = 0, the operation is allowed because 2 * nums[3] <= nums[0]. Then mark index 3 and 0.\nIn the second operation: pick i = 1 and j = 2, the operation is allowed because 2 * nums[1] <= nums[2]. Then mark index 1 and 2.\nSince there is no other operation, the answer is 4.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [7,6,8]\nOutput: 0\nExplanation: There is no valid operation to do, so the answer is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about how to check that performing k operations is possible.",
+    "To perform k operations, it’s optimal to use the smallest k elements and the largest k elements and think about how to match them.",
+    "It’s optimal to match the ith smallest number with the k-i + 1 largest number.",
+    "Now we need to binary search on the answer and find the greatest possible valid k."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxNumOfMarkedIndices(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxNumOfMarkedIndices(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxNumOfMarkedIndices(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxNumOfMarkedIndices(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxNumOfMarkedIndices(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxNumOfMarkedIndices(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxNumOfMarkedIndices = function(nums) {\n    \n};",
+    "typescript": "function maxNumOfMarkedIndices(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxNumOfMarkedIndices($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxNumOfMarkedIndices(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxNumOfMarkedIndices(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxNumOfMarkedIndices(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxNumOfMarkedIndices(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_num_of_marked_indices(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxNumOfMarkedIndices(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_num_of_marked_indices(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-num-of-marked-indices nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_num_of_marked_indices(Nums :: [integer()]) -> integer().\nmax_num_of_marked_indices(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_num_of_marked_indices(nums :: [integer]) :: integer\n  def max_num_of_marked_indices(nums) do\n    \n  end\nend"
+  }
+}

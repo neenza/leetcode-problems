@@ -1,0 +1,61 @@
+{
+  "title": "Queens That Can Attack the King",
+  "problem_id": "1342",
+  "frontend_id": "1222",
+  "difficulty": "Medium",
+  "problem_slug": "queens-that-can-attack-the-king",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "On a 0-indexed 8 x 8 chessboard, there can be multiple black queens and one white king.\nYou are given a 2D integer array queens where queens[i] = [xQueeni, yQueeni] represents the position of the ith black queen on the chessboard. You are also given an integer array king of length 2 where king = [xKing, yKing] represents the position of the white king.\nReturn the coordinates of the black queens that can directly attack the king. You may return the answer in any order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: queens = [[0,1],[1,0],[4,0],[0,4],[3,3],[2,4]], king = [0,0]\nOutput: [[0,1],[1,0],[3,3]]\nExplanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/21/chess1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: queens = [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]], king = [3,3]\nOutput: [[2,2],[3,4],[4,4]]\nExplanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/21/chess2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= queens.length < 64",
+    "queens[i].length == king.length == 2",
+    "0 <= xQueeni, yQueeni, xKing, yKing < 8",
+    "All the given positions are unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check 8 directions around the King.",
+    "Find the nearest queen in each direction."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> queensAttacktheKing(vector<vector<int>>& queens, vector<int>& king) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def queensAttacktheKing(self, queens, king):\n        \"\"\"\n        :type queens: List[List[int]]\n        :type king: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def queensAttacktheKing(self, queens: List[List[int]], king: List[int]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** queensAttacktheKing(int** queens, int queensSize, int* queensColSize, int* king, int kingSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<IList<int>> QueensAttacktheKing(int[][] queens, int[] king) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queens\n * @param {number[]} king\n * @return {number[][]}\n */\nvar queensAttacktheKing = function(queens, king) {\n    \n};",
+    "typescript": "function queensAttacktheKing(queens: number[][], king: number[]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $queens\n     * @param Integer[] $king\n     * @return Integer[][]\n     */\n    function queensAttacktheKing($queens, $king) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func queensAttacktheKing(_ queens: [[Int]], _ king: [Int]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun queensAttacktheKing(queens: Array<IntArray>, king: IntArray): List<List<Int>> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> queensAttacktheKing(List<List<int>> queens, List<int> king) {\n    \n  }\n}",
+    "golang": "func queensAttacktheKing(queens [][]int, king []int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} queens\n# @param {Integer[]} king\n# @return {Integer[][]}\ndef queens_attackthe_king(queens, king)\n    \nend",
+    "scala": "object Solution {\n    def queensAttacktheKing(queens: Array[Array[Int]], king: Array[Int]): List[List[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn queens_attackthe_king(queens: Vec<Vec<i32>>, king: Vec<i32>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (queens-attackthe-king queens king)\n  (-> (listof (listof exact-integer?)) (listof exact-integer?) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec queens_attackthe_king(Queens :: [[integer()]], King :: [integer()]) -> [[integer()]].\nqueens_attackthe_king(Queens, King) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec queens_attackthe_king(queens :: [[integer]], king :: [integer]) :: [[integer]]\n  def queens_attackthe_king(queens, king) do\n    \n  end\nend"
+  }
+}

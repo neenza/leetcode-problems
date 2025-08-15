@@ -1,0 +1,64 @@
+{
+  "title": "Cat and Mouse",
+  "problem_id": "949",
+  "frontend_id": "913",
+  "difficulty": "Hard",
+  "problem_slug": "cat-and-mouse",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Graph",
+    "Topological Sort",
+    "Memoization",
+    "Game Theory"
+  ],
+  "description": "A game on an undirected graph is played by two players, Mouse and Cat, who alternate turns.\nThe graph is given as follows: graph[a] is a list of all nodes b such that ab is an edge of the graph.\nThe mouse starts at node 1 and goes first, the cat starts at node 2 and goes second, and there is a hole at node 0.\nDuring each player's turn, they must travel along one edge of the graph that meets where they are.  For example, if the Mouse is at node 1, it must travel to any node in graph[1].\nAdditionally, it is not allowed for the Cat to travel to the Hole (node 0).\nThen, the game can end in three ways:\nGiven a graph, and assuming both players play optimally, return\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: graph = [[2,5],[3],[0,4,5],[1,4,5],[2,3],[0,2,3]]\nOutput: 0",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/17/cat1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: graph = [[1,3],[0],[3],[0,2]]\nOutput: 1",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/11/17/cat2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "3 <= graph.length <= 50",
+    "1 <= graph[i].length < graph.length",
+    "0 <= graph[i][j] < graph.length",
+    "graph[i][j] != i",
+    "graph[i] is unique.",
+    "The mouse and the cat can always move."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int catMouseGame(vector<vector<int>>& graph) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int catMouseGame(int[][] graph) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def catMouseGame(self, graph):\n        \"\"\"\n        :type graph: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def catMouseGame(self, graph: List[List[int]]) -> int:\n        ",
+    "c": "int catMouseGame(int** graph, int graphSize, int* graphColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CatMouseGame(int[][] graph) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} graph\n * @return {number}\n */\nvar catMouseGame = function(graph) {\n    \n};",
+    "typescript": "function catMouseGame(graph: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $graph\n     * @return Integer\n     */\n    function catMouseGame($graph) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func catMouseGame(_ graph: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun catMouseGame(graph: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int catMouseGame(List<List<int>> graph) {\n    \n  }\n}",
+    "golang": "func catMouseGame(graph [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} graph\n# @return {Integer}\ndef cat_mouse_game(graph)\n    \nend",
+    "scala": "object Solution {\n    def catMouseGame(graph: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn cat_mouse_game(graph: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (cat-mouse-game graph)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec cat_mouse_game(Graph :: [[integer()]]) -> integer().\ncat_mouse_game(Graph) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec cat_mouse_game(graph :: [[integer]]) :: integer\n  def cat_mouse_game(graph) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n---\n### Approach 1: Minimax / Percolate from Resolved States\n\n**Intuition**\n\nThe state of the game can be represented as `(m, c, t)` where `m` is the location of the mouse, `c` is the location of the cat, and `t` is `1` if it is the mouse's move, else `2`.  Let's call these states *nodes*.  These states form a directed graph: the player whose turn it is has various moves which can be considered as outgoing edges from this node to other nodes.\n\nSome of these nodes are already resolved: if the mouse is at the hole `(m = 0)`, then the mouse wins; if the cat is where the mouse is `(c = m)`, then the cat wins.  Let's say that nodes will either be colored $$\\small\\text{MOUSE}$$, $$\\small\\text{CAT}$$, or $$\\small\\text{DRAW}$$ depending on which player is assured victory.\n\nAs in a standard minimax algorithm, the Mouse player will prefer $$\\small\\text{MOUSE}$$ nodes first, $$\\small\\text{DRAW}$$ nodes second, and $$\\small\\text{CAT}$$ nodes last, and the Cat player prefers these nodes in the opposite order.\n\n**Algorithm**\n\nWe will color each `node` marked $$\\small\\text{DRAW}$$ according to the following rule.  (We'll suppose the `node` has `node.turn = Mouse`: the other case is similar.)\n\n* (\"Immediate coloring\"):  If there is a child that is colored $$\\small\\text{MOUSE}$$, then this node will also be colored $$\\small\\text{MOUSE}$$.\n\n* (\"Eventual coloring\"):  If all children are colored $$\\small\\text{CAT}$$, then this node will also be colored $$\\small\\text{CAT}$$.\n\nWe will repeatedly do this kind of coloring until no `node` satisfies the above conditions.  To perform this coloring efficiently, we will use a queue and perform a *bottom-up percolation*:\n\n* Enqueue any node initially colored (because the Mouse is at the Hole, or the Cat is at the Mouse.)\n\n* For every `node` in the queue, for each `parent` of that `node`:\n\n  * Do an immediate coloring of `parent` if you can.\n\n  * If you can't, then decrement the side-count of the number of children marked $$\\small\\text{DRAW}$$.  If it becomes zero, then do an \"eventual coloring\" of this parent.\n\n  * All `parents` that were colored in this manner get enqueued to the queue.\n\n**Proof of Correctness**\n\nOur proof is similar to a proof that minimax works.\n\nSay we cannot color any nodes any more, and say from any node colored $$\\small\\text{CAT}$$ or $$\\small\\text{MOUSE}$$ we need at most $$K$$ moves to win.  If say, some node marked $$\\small\\text{DRAW}$$ is actually a win for Mouse, it must have been with $$> K$$ moves.  Then, a path along optimal play (that tries to prolong the loss as long as possible) must arrive at a node colored $$\\small\\text{MOUSE}$$ (as eventually the Mouse reaches the Hole.)  Thus, there must have been some transition $$\\small\\text{DRAW} \\rightarrow \\small\\text{MOUSE}$$ along this path.\n\nIf this transition occurred at a `node` with `node.turn = Mouse`, then it breaks our immediate coloring rule.  If it occured with `node.turn = Cat`, and all children of `node` have color $$\\small\\text{MOUSE}$$, then it breaks our eventual coloring rule.  If some child has color $$\\small\\text{CAT}$$, then it breaks our immediate coloring rule.  Thus, in this case `node` will have some child with $$\\small\\text{DRAW}$$, which breaks our optimal play assumption, as moving to this child ends the game in $$> K$$ moves, whereas moving to the colored neighbor ends the game in $$\\leq K$$ moves.**Complexity Analysis**\n\n* Time Complexity:  $$O(N^3)$$, where $$N$$ is the number of nodes in the graph.  There are $$O(N^2)$$ states, and each state has an outdegree of $$N$$, as there are at most $$N$$ different moves.\n\n* Space Complexity:  $$O(N^2)$$."
+}

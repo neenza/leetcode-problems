@@ -1,0 +1,53 @@
+{
+  "title": "Adjacent Increasing Subarrays Detection I",
+  "problem_id": "3612",
+  "frontend_id": "3349",
+  "difficulty": "Easy",
+  "problem_slug": "adjacent-increasing-subarrays-detection-i",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an array nums of n integers and an integer k, determine whether there exist two adjacent subarrays of length k such that both subarrays are strictly increasing. Specifically, check if there are two subarrays starting at indices a and b (a < b), where:\nReturn true if it is possible to find two such subarrays, and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,7,8,9,2,3,4,3,1], k = 3\nOutput: true\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3,4,4,4,4,5,6,7], k = 5\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 100",
+    "1 < 2 * k <= nums.length",
+    "-1000 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Store the longest decreasing subarray starting and ending at an index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasIncreasingSubarrays(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasIncreasingSubarrays(List<Integer> nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasIncreasingSubarrays(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasIncreasingSubarrays(self, nums: List[int], k: int) -> bool:\n        ",
+    "c": "bool hasIncreasingSubarrays(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasIncreasingSubarrays(IList<int> nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar hasIncreasingSubarrays = function(nums, k) {\n    \n};",
+    "typescript": "function hasIncreasingSubarrays(nums: number[], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Boolean\n     */\n    function hasIncreasingSubarrays($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasIncreasingSubarrays(_ nums: [Int], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasIncreasingSubarrays(nums: List<Int>, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasIncreasingSubarrays(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func hasIncreasingSubarrays(nums []int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Boolean}\ndef has_increasing_subarrays(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def hasIncreasingSubarrays(nums: List[Int], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_increasing_subarrays(nums: Vec<i32>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-increasing-subarrays nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec has_increasing_subarrays(Nums :: [integer()], K :: integer()) -> boolean().\nhas_increasing_subarrays(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_increasing_subarrays(nums :: [integer], k :: integer) :: boolean\n  def has_increasing_subarrays(nums, k) do\n    \n  end\nend"
+  }
+}

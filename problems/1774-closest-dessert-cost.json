@@ -1,0 +1,62 @@
+{
+  "title": "Closest Dessert Cost",
+  "problem_id": "1900",
+  "frontend_id": "1774",
+  "difficulty": "Medium",
+  "problem_slug": "closest-dessert-cost",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking"
+  ],
+  "description": "You would like to make dessert and are preparing to buy the ingredients. You have n ice cream base flavors and m types of toppings to choose from. You must follow these rules when making your dessert:\nYou are given three inputs:\nYou want to make a dessert with a total cost as close to target as possible.\nReturn the closest possible cost of the dessert to target. If there are multiple, return the lower one.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: baseCosts = [1,7], toppingCosts = [3,4], target = 10\nOutput: 10\nExplanation: Consider the following combination (all 0-indexed):\n- Choose base 1: cost 7\n- Take 1 of topping 0: cost 1 x 3 = 3\n- Take 0 of topping 1: cost 0 x 4 = 0\nTotal: 7 + 3 + 0 = 10.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: baseCosts = [2,3], toppingCosts = [4,5,100], target = 18\nOutput: 17\nExplanation: Consider the following combination (all 0-indexed):\n- Choose base 1: cost 3\n- Take 1 of topping 0: cost 1 x 4 = 4\n- Take 2 of topping 1: cost 2 x 5 = 10\n- Take 0 of topping 2: cost 0 x 100 = 0\nTotal: 3 + 4 + 10 + 0 = 17. You cannot make a dessert with a total cost of 18.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: baseCosts = [3,10], toppingCosts = [2,5], target = 9\nOutput: 8\nExplanation: It is possible to make desserts with cost 8 and 10. Return 8 as it is the lower cost.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == baseCosts.length",
+    "m == toppingCosts.length",
+    "1 <= n, m <= 10",
+    "1 <= baseCosts[i], toppingCosts[i] <= 104",
+    "1 <= target <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "As the constraints are not large, you can brute force and enumerate all the possibilities."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int closestCost(int[] baseCosts, int[] toppingCosts, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def closestCost(self, baseCosts, toppingCosts, target):\n        \"\"\"\n        :type baseCosts: List[int]\n        :type toppingCosts: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def closestCost(self, baseCosts: List[int], toppingCosts: List[int], target: int) -> int:\n        ",
+    "c": "int closestCost(int* baseCosts, int baseCostsSize, int* toppingCosts, int toppingCostsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ClosestCost(int[] baseCosts, int[] toppingCosts, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} baseCosts\n * @param {number[]} toppingCosts\n * @param {number} target\n * @return {number}\n */\nvar closestCost = function(baseCosts, toppingCosts, target) {\n    \n};",
+    "typescript": "function closestCost(baseCosts: number[], toppingCosts: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $baseCosts\n     * @param Integer[] $toppingCosts\n     * @param Integer $target\n     * @return Integer\n     */\n    function closestCost($baseCosts, $toppingCosts, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func closestCost(_ baseCosts: [Int], _ toppingCosts: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun closestCost(baseCosts: IntArray, toppingCosts: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int closestCost(List<int> baseCosts, List<int> toppingCosts, int target) {\n    \n  }\n}",
+    "golang": "func closestCost(baseCosts []int, toppingCosts []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} base_costs\n# @param {Integer[]} topping_costs\n# @param {Integer} target\n# @return {Integer}\ndef closest_cost(base_costs, topping_costs, target)\n    \nend",
+    "scala": "object Solution {\n    def closestCost(baseCosts: Array[Int], toppingCosts: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn closest_cost(base_costs: Vec<i32>, topping_costs: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (closest-cost baseCosts toppingCosts target)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec closest_cost(BaseCosts :: [integer()], ToppingCosts :: [integer()], Target :: integer()) -> integer().\nclosest_cost(BaseCosts, ToppingCosts, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec closest_cost(base_costs :: [integer], topping_costs :: [integer], target :: integer) :: integer\n  def closest_cost(base_costs, topping_costs, target) do\n    \n  end\nend"
+  }
+}

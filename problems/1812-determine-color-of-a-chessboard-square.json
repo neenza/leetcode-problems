@@ -1,0 +1,66 @@
+{
+  "title": "Determine Color of a Chessboard Square",
+  "problem_id": "1920",
+  "frontend_id": "1812",
+  "difficulty": "Easy",
+  "problem_slug": "determine-color-of-a-chessboard-square",
+  "topics": [
+    "Math",
+    "String"
+  ],
+  "description": "You are given coordinates, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.\nReturn true if the square is white, and false if the square is black.\nThe coordinate will always represent a valid chessboard square. The coordinate will always have the letter first, and the number second.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coordinates = \"a1\"\nOutput: false\nExplanation: From the chessboard above, the square with coordinates \"a1\" is black, so return false.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/19/screenshot-2021-02-20-at-22159-pm.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coordinates = \"h3\"\nOutput: true\nExplanation: From the chessboard above, the square with coordinates \"h3\" is white, so return true.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/19/screenshot-2021-02-20-at-22159-pm.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: coordinates = \"c7\"\nOutput: false",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/02/19/screenshot-2021-02-20-at-22159-pm.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "coordinates.length == 2",
+    "'a' <= coordinates[0] <= 'h'",
+    "'1' <= coordinates[1] <= '8'"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Convert the coordinates to (x, y) - that is, \"a1\" is (1, 1), \"d7\" is (4, 7).",
+    "Try add the numbers together and look for a pattern."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool squareIsWhite(string coordinates) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean squareIsWhite(String coordinates) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def squareIsWhite(self, coordinates):\n        \"\"\"\n        :type coordinates: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def squareIsWhite(self, coordinates: str) -> bool:\n        ",
+    "c": "bool squareIsWhite(char* coordinates) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool SquareIsWhite(string coordinates) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} coordinates\n * @return {boolean}\n */\nvar squareIsWhite = function(coordinates) {\n    \n};",
+    "typescript": "function squareIsWhite(coordinates: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $coordinates\n     * @return Boolean\n     */\n    function squareIsWhite($coordinates) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func squareIsWhite(_ coordinates: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun squareIsWhite(coordinates: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool squareIsWhite(String coordinates) {\n    \n  }\n}",
+    "golang": "func squareIsWhite(coordinates string) bool {\n    \n}",
+    "ruby": "# @param {String} coordinates\n# @return {Boolean}\ndef square_is_white(coordinates)\n    \nend",
+    "scala": "object Solution {\n    def squareIsWhite(coordinates: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn square_is_white(coordinates: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (square-is-white coordinates)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec square_is_white(Coordinates :: unicode:unicode_binary()) -> boolean().\nsquare_is_white(Coordinates) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec square_is_white(coordinates :: String.t) :: boolean\n  def square_is_white(coordinates) do\n    \n  end\nend"
+  }
+}

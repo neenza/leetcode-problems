@@ -1,0 +1,53 @@
+{
+  "title": "Find the Losers of the Circular Game",
+  "problem_id": "2791",
+  "frontend_id": "2682",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-losers-of-the-circular-game",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Simulation"
+  ],
+  "description": "There are n friends that are playing a game. The friends are sitting in a circle and are numbered from 1 to n in clockwise order. More formally, moving clockwise from the ith friend brings you to the (i+1)th friend for 1 <= i < n, and moving clockwise from the nth friend brings you to the 1st friend.\nThe rules of the game are as follows:\n1st friend receives the ball.\nIn other words, on the ith turn, the friend holding the ball should pass it to the friend who is i * k steps away from them in the clockwise direction.\nThe game is finished when some friend receives the ball for the second time.\nThe losers of the game are friends who did not receive the ball in the entire game.\nGiven the number of friends, n, and an integer k, return the array answer, which contains the losers of the game in the ascending order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, k = 2\nOutput: [4,5]\nExplanation: The game goes as follows:\n1) Start at 1st friend and pass the ball to the friend who is 2 steps away from them - 3rd friend.\n2) 3rd friend passes the ball to the friend who is 4 steps away from them - 2nd friend.\n3) 2nd friend passes the ball to the friend who is 6 steps away from them  - 3rd friend.\n4) The game ends as 3rd friend receives the ball for the second time.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, k = 4\nOutput: [2,3,4]\nExplanation: The game goes as follows:\n1) Start at the 1st friend and pass the ball to the friend who is 4 steps away from them - 1st friend.\n2) The game ends as 1st friend receives the ball for the second time.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= n <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the whole game until a player receives the ball for the second time."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> circularGameLosers(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] circularGameLosers(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def circularGameLosers(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def circularGameLosers(self, n: int, k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* circularGameLosers(int n, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CircularGameLosers(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number[]}\n */\nvar circularGameLosers = function(n, k) {\n    \n};",
+    "typescript": "function circularGameLosers(n: number, k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function circularGameLosers($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func circularGameLosers(_ n: Int, _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun circularGameLosers(n: Int, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> circularGameLosers(int n, int k) {\n    \n  }\n}",
+    "golang": "func circularGameLosers(n int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer[]}\ndef circular_game_losers(n, k)\n    \nend",
+    "scala": "object Solution {\n    def circularGameLosers(n: Int, k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn circular_game_losers(n: i32, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (circular-game-losers n k)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec circular_game_losers(N :: integer(), K :: integer()) -> [integer()].\ncircular_game_losers(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec circular_game_losers(n :: integer, k :: integer) :: [integer]\n  def circular_game_losers(n, k) do\n    \n  end\nend"
+  }
+}

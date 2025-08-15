@@ -1,0 +1,61 @@
+{
+  "title": "Regular Expression Matching",
+  "problem_id": "10",
+  "frontend_id": "10",
+  "difficulty": "Hard",
+  "problem_slug": "regular-expression-matching",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Recursion"
+  ],
+  "description": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:\nThe matching should cover the entire input string (not partial).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"aa\", p = \"a\"\nOutput: false\nExplanation: \"a\" does not match the entire string \"aa\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"aa\", p = \"a*\"\nOutput: true\nExplanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes \"aa\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"ab\", p = \".*\"\nOutput: true\nExplanation: \".*\" means \"zero or more (*) of any character (.)\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 20",
+    "1 <= p.length <= 20",
+    "s contains only lowercase English letters.",
+    "p contains only lowercase English letters, '.', and '*'.",
+    "It is guaranteed for each appearance of the character '*', there will be a previous valid character to match."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isMatch(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isMatch(String s, String p) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isMatch(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isMatch(self, s: str, p: str) -> bool:\n        ",
+    "c": "bool isMatch(char* s, char* p) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsMatch(string s, string p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {boolean}\n */\nvar isMatch = function(s, p) {\n    \n};",
+    "typescript": "function isMatch(s: string, p: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $p\n     * @return Boolean\n     */\n    function isMatch($s, $p) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isMatch(_ s: String, _ p: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isMatch(s: String, p: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isMatch(String s, String p) {\n    \n  }\n}",
+    "golang": "func isMatch(s string, p string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} p\n# @return {Boolean}\ndef is_match(s, p)\n    \nend",
+    "scala": "object Solution {\n    def isMatch(s: String, p: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_match(s: String, p: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-match s p)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec is_match(S :: unicode:unicode_binary(), P :: unicode:unicode_binary()) -> boolean().\nis_match(S, P) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_match(s :: String.t, p :: String.t) :: boolean\n  def is_match(s, p) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach 1: Recursion\n\n**Intuition**\n\nIf there were no Kleene stars (the `*` wildcard character for regular expressions), the problem would be easier - we simply check from left to right if each character of the text matches the pattern.\n\nWhen a star is present, we may need to check many different suffixes of the text and see if they match the rest of the pattern.  A recursive solution is a straightforward way to represent this relationship.\n\n**Algorithm**\n\nWithout a Kleene star, our solution would look like this:If a star is present in the pattern, it will be in the second position $$\\text{pattern[1]}$$.  Then, we may ignore this part of the pattern, or delete a matching character in the text.  If we have a match on the remaining strings after any of these operations, then the initial inputs matched.**Complexity Analysis**\n\n* Time Complexity: Let $$T, P$$ be the lengths of the text and the pattern respectively.  In the worst case, a call to `match(text[i:], pattern[2j:])` will be made $$\\binom{i+j}{i}$$ times, and strings of the order $$O(T - i)$$ and $$O(P - 2*j)$$ will be made.  Thus, the complexity has the order $$\\sum_{i = 0}^T \\sum_{j = 0}^{P/2} \\binom{i+j}{i} O(T+P-i-2j)$$.  With some effort outside the scope of this article, we can show this is bounded by $$O\\big((T+P)2^{T + \\frac{P}{2}}\\big)$$.\n\n* Space Complexity:  For every call to `match`, we will create those strings as described above, possibly creating duplicates.  If memory is not freed, this will also take a total of $$O\\big((T+P)2^{T + \\frac{P}{2}}\\big)$$ space, even though there are only order $$O(T^2 + P^2)$$ unique suffixes of $$P$$ and  $$T$$ that are actually required.---\n\n### Approach 2: Dynamic Programming\n\n**Intuition**\n\nAs the problem has an **optimal substructure**, it is natural to cache intermediate results.  We ask the question $$\\text{dp(i, j)}$$: does $$\\text{text[i:]}$$ and $$\\text{pattern[j:]}$$ match?  We can describe our answer in terms of answers to questions involving smaller strings.\n\n**Algorithm**\n\nWe proceed with the same recursion as in [Approach 1](#approach-1-recursion), except because calls will only ever be made to `match(text[i:], pattern[j:])`, we use $$\\text{dp(i, j)}$$ to handle those calls instead, saving us expensive string-building operations and allowing us to cache the intermediate results.\n\n\n*Top-Down Variation**Bottom-Up Variation***Complexity Analysis**\n\n* Time Complexity: Let $$T, P$$ be the lengths of the text and the pattern respectively.  The work for every call to `dp(i, j)` for $$i=0, ... ,T$$; $$j=0, ... ,P$$ is done once, and it is $$O(1)$$ work.  Hence, the time complexity is $$O(TP)$$.\n\n* Space Complexity:  The only memory we use is the $$O(TP)$$ boolean entries in our cache.  Hence, the space complexity is $$O(TP)$$."
+}

@@ -1,0 +1,58 @@
+{
+  "title": "The kth Factor of n",
+  "problem_id": "1585",
+  "frontend_id": "1492",
+  "difficulty": "Medium",
+  "problem_slug": "the-kth-factor-of-n",
+  "topics": [
+    "Math",
+    "Number Theory"
+  ],
+  "description": "You are given two positive integers n and k. A factor of an integer n is defined as an integer i where n % i == 0.\nConsider a list of all factors of n sorted in ascending order, return the kth factor in this list or return -1 if n has less than k factors.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up:\nCould you solve this problem in less than O(n) complexity?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 12, k = 3\nOutput: 3\nExplanation: Factors list is [1, 2, 3, 4, 6, 12], the 3rd factor is 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 7, k = 2\nOutput: 7\nExplanation: Factors list is [1, 7], the 2nd factor is 7.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, k = 4\nOutput: -1\nExplanation: Factors list is [1, 2, 4], there is only 3 factors. We should return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The factors of n will be always in the range [1, n].",
+    "Keep a list of all factors sorted.  Loop i from 1 to n and add i if n % i == 0. Return the kth factor if it exist in this list."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int kthFactor(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kthFactor(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kthFactor(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kthFactor(self, n: int, k: int) -> int:\n        ",
+    "c": "int kthFactor(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int KthFactor(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar kthFactor = function(n, k) {\n    \n};",
+    "typescript": "function kthFactor(n: number, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer\n     */\n    function kthFactor($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kthFactor(_ n: Int, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kthFactor(n: Int, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int kthFactor(int n, int k) {\n    \n  }\n}",
+    "golang": "func kthFactor(n int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer}\ndef kth_factor(n, k)\n    \nend",
+    "scala": "object Solution {\n    def kthFactor(n: Int, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn kth_factor(n: i32, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (kth-factor n k)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec kth_factor(N :: integer(), K :: integer()) -> integer().\nkth_factor(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec kth_factor(n :: integer, k :: integer) :: integer\n  def kth_factor(n, k) do\n    \n  end\nend"
+  }
+}

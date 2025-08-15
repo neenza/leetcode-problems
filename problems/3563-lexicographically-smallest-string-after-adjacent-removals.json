@@ -1,0 +1,61 @@
+{
+  "title": "Lexicographically Smallest String After Adjacent Removals",
+  "problem_id": "3867",
+  "frontend_id": "3563",
+  "difficulty": "Hard",
+  "problem_slug": "lexicographically-smallest-string-after-adjacent-removals",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string s consisting of lowercase English letters.\nYou can perform the following operation any number of times (including zero):\nReturn the lexicographically smallest string that can be obtained after performing the operations optimally.\nNote: Consider the alphabet as circular, thus 'a' and 'z' are consecutive.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\"\nOutput: \"a\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"bcda\"\nOutput: \"\"\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"zdce\"\nOutput: \"zdce\"\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 250",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "As a result of the operation, some of the substrings can be removed",
+    "Find out using DP, which substrings can we remove",
+    "Now, try to build the ans using this DP",
+    "Define ans[i] = lex smallest string that can be made in [i, n - 1], then ans[i] = lex_smallest of { choose one char s[j] in [i, n - 1] + ans[j + 1] }"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string lexicographicallySmallestString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String lexicographicallySmallestString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lexicographicallySmallestString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lexicographicallySmallestString(self, s: str) -> str:\n        ",
+    "c": "char* lexicographicallySmallestString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LexicographicallySmallestString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar lexicographicallySmallestString = function(s) {\n    \n};",
+    "typescript": "function lexicographicallySmallestString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function lexicographicallySmallestString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lexicographicallySmallestString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lexicographicallySmallestString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String lexicographicallySmallestString(String s) {\n    \n  }\n}",
+    "golang": "func lexicographicallySmallestString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef lexicographically_smallest_string(s)\n    \nend",
+    "scala": "object Solution {\n    def lexicographicallySmallestString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn lexicographically_smallest_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (lexicographically-smallest-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec lexicographically_smallest_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlexicographically_smallest_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec lexicographically_smallest_string(s :: String.t) :: String.t\n  def lexicographically_smallest_string(s) do\n    \n  end\nend"
+  }
+}

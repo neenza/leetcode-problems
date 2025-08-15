@@ -1,0 +1,54 @@
+{
+  "title": "Design an ATM Machine",
+  "problem_id": "2352",
+  "frontend_id": "2241",
+  "difficulty": "Medium",
+  "problem_slug": "design-an-atm-machine",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Design"
+  ],
+  "description": "There is an ATM machine that stores banknotes of 5 denominations: 20, 50, 100, 200, and 500 dollars. Initially the ATM is empty. The user can use the machine to deposit or withdraw any amount of money.\nWhen withdrawing, the machine prioritizes using banknotes of larger values.\nImplement the ATM class:\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"ATM\", \"deposit\", \"withdraw\", \"deposit\", \"withdraw\", \"withdraw\"]\n[[], [[0,0,1,2,1]], [600], [[0,1,0,1,1]], [600], [550]]\nOutput\n[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]\n\nExplanation\nATM atm = new ATM();\natm.deposit([0,0,1,2,1]); // Deposits 1 $100 banknote, 2 $200 banknotes,\n                          // and 1 $500 banknote.\natm.withdraw(600);        // Returns [0,0,1,0,1]. The machine uses 1 $100 banknote\n                          // and 1 $500 banknote. The banknotes left over in the\n                          // machine are [0,0,0,2,0].\natm.deposit([0,1,0,1,1]); // Deposits 1 $50, $200, and $500 banknote.\n                          // The banknotes in the machine are now [0,1,0,3,1].\natm.withdraw(600);        // Returns [-1]. The machine will try to use a $500 banknote\n                          // and then be unable to complete the remaining $100,\n                          // so the withdraw request will be rejected.\n                          // Since the request is rejected, the number of banknotes\n                          // in the machine is not modified.\natm.withdraw(550);        // Returns [0,1,0,0,1]. The machine uses 1 $50 banknote\n                          // and 1 $500 banknote.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "banknotesCount.length == 5",
+    "0 <= banknotesCount[i] <= 109",
+    "1 <= amount <= 109",
+    "At most 5000 calls in total will be made to withdraw and deposit.",
+    "At least one call will be made to each function withdraw and deposit.",
+    "Sum of banknotesCount[i] in all deposits doesn't exceed 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Store the number of banknotes of each denomination.",
+    "Can you use math to quickly evaluate a withdrawal request?"
+  ],
+  "code_snippets": {
+    "cpp": "class ATM {\npublic:\n    ATM() {\n        \n    }\n    \n    void deposit(vector<int> banknotesCount) {\n        \n    }\n    \n    vector<int> withdraw(int amount) {\n        \n    }\n};\n\n/**\n * Your ATM object will be instantiated and called as such:\n * ATM* obj = new ATM();\n * obj->deposit(banknotesCount);\n * vector<int> param_2 = obj->withdraw(amount);\n */",
+    "java": "class ATM {\n\n    public ATM() {\n        \n    }\n    \n    public void deposit(int[] banknotesCount) {\n        \n    }\n    \n    public int[] withdraw(int amount) {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * ATM obj = new ATM();\n * obj.deposit(banknotesCount);\n * int[] param_2 = obj.withdraw(amount);\n */",
+    "python": "class ATM(object):\n\n    def __init__(self):\n        \n\n    def deposit(self, banknotesCount):\n        \"\"\"\n        :type banknotesCount: List[int]\n        :rtype: None\n        \"\"\"\n        \n\n    def withdraw(self, amount):\n        \"\"\"\n        :type amount: int\n        :rtype: List[int]\n        \"\"\"\n        \n\n\n# Your ATM object will be instantiated and called as such:\n# obj = ATM()\n# obj.deposit(banknotesCount)\n# param_2 = obj.withdraw(amount)",
+    "python3": "class ATM:\n\n    def __init__(self):\n        \n\n    def deposit(self, banknotesCount: List[int]) -> None:\n        \n\n    def withdraw(self, amount: int) -> List[int]:\n        \n\n\n# Your ATM object will be instantiated and called as such:\n# obj = ATM()\n# obj.deposit(banknotesCount)\n# param_2 = obj.withdraw(amount)",
+    "c": "\n\n\ntypedef struct {\n    \n} ATM;\n\n\nATM* aTMCreate() {\n    \n}\n\nvoid aTMDeposit(ATM* obj, int* banknotesCount, int banknotesCountSize) {\n    \n}\n\nint* aTMWithdraw(ATM* obj, int amount, int* retSize) {\n    \n}\n\nvoid aTMFree(ATM* obj) {\n    \n}\n\n/**\n * Your ATM struct will be instantiated and called as such:\n * ATM* obj = aTMCreate();\n * aTMDeposit(obj, banknotesCount, banknotesCountSize);\n \n * int* param_2 = aTMWithdraw(obj, amount, retSize);\n \n * aTMFree(obj);\n*/",
+    "csharp": "public class ATM {\n\n    public ATM() {\n        \n    }\n    \n    public void Deposit(int[] banknotesCount) {\n        \n    }\n    \n    public int[] Withdraw(int amount) {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * ATM obj = new ATM();\n * obj.Deposit(banknotesCount);\n * int[] param_2 = obj.Withdraw(amount);\n */",
+    "javascript": "\nvar ATM = function() {\n    \n};\n\n/** \n * @param {number[]} banknotesCount\n * @return {void}\n */\nATM.prototype.deposit = function(banknotesCount) {\n    \n};\n\n/** \n * @param {number} amount\n * @return {number[]}\n */\nATM.prototype.withdraw = function(amount) {\n    \n};\n\n/** \n * Your ATM object will be instantiated and called as such:\n * var obj = new ATM()\n * obj.deposit(banknotesCount)\n * var param_2 = obj.withdraw(amount)\n */",
+    "typescript": "class ATM {\n    constructor() {\n        \n    }\n\n    deposit(banknotesCount: number[]): void {\n        \n    }\n\n    withdraw(amount: number): number[] {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * var obj = new ATM()\n * obj.deposit(banknotesCount)\n * var param_2 = obj.withdraw(amount)\n */",
+    "php": "class ATM {\n    /**\n     */\n    function __construct() {\n        \n    }\n  \n    /**\n     * @param Integer[] $banknotesCount\n     * @return NULL\n     */\n    function deposit($banknotesCount) {\n        \n    }\n  \n    /**\n     * @param Integer $amount\n     * @return Integer[]\n     */\n    function withdraw($amount) {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * $obj = ATM();\n * $obj->deposit($banknotesCount);\n * $ret_2 = $obj->withdraw($amount);\n */",
+    "swift": "\nclass ATM {\n\n    init() {\n        \n    }\n    \n    func deposit(_ banknotesCount: [Int]) {\n        \n    }\n    \n    func withdraw(_ amount: Int) -> [Int] {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * let obj = ATM()\n * obj.deposit(banknotesCount)\n * let ret_2: [Int] = obj.withdraw(amount)\n */",
+    "kotlin": "class ATM() {\n\n    fun deposit(banknotesCount: IntArray) {\n        \n    }\n\n    fun withdraw(amount: Int): IntArray {\n        \n    }\n\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * var obj = ATM()\n * obj.deposit(banknotesCount)\n * var param_2 = obj.withdraw(amount)\n */",
+    "dart": "class ATM {\n\n  ATM() {\n    \n  }\n  \n  void deposit(List<int> banknotesCount) {\n    \n  }\n  \n  List<int> withdraw(int amount) {\n    \n  }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * ATM obj = ATM();\n * obj.deposit(banknotesCount);\n * List<int> param2 = obj.withdraw(amount);\n */",
+    "golang": "type ATM struct {\n    \n}\n\n\nfunc Constructor() ATM {\n    \n}\n\n\nfunc (this *ATM) Deposit(banknotesCount []int)  {\n    \n}\n\n\nfunc (this *ATM) Withdraw(amount int) []int {\n    \n}\n\n\n/**\n * Your ATM object will be instantiated and called as such:\n * obj := Constructor();\n * obj.Deposit(banknotesCount);\n * param_2 := obj.Withdraw(amount);\n */",
+    "ruby": "class ATM\n    def initialize()\n        \n    end\n\n\n=begin\n    :type banknotes_count: Integer[]\n    :rtype: Void\n=end\n    def deposit(banknotes_count)\n        \n    end\n\n\n=begin\n    :type amount: Integer\n    :rtype: Integer[]\n=end\n    def withdraw(amount)\n        \n    end\n\n\nend\n\n# Your ATM object will be instantiated and called as such:\n# obj = ATM.new()\n# obj.deposit(banknotes_count)\n# param_2 = obj.withdraw(amount)",
+    "scala": "class ATM() {\n\n    def deposit(banknotesCount: Array[Int]): Unit = {\n        \n    }\n\n    def withdraw(amount: Int): Array[Int] = {\n        \n    }\n\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * val obj = new ATM()\n * obj.deposit(banknotesCount)\n * val param_2 = obj.withdraw(amount)\n */",
+    "rust": "struct ATM {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl ATM {\n\n    fn new() -> Self {\n        \n    }\n    \n    fn deposit(&self, banknotes_count: Vec<i32>) {\n        \n    }\n    \n    fn withdraw(&self, amount: i32) -> Vec<i32> {\n        \n    }\n}\n\n/**\n * Your ATM object will be instantiated and called as such:\n * let obj = ATM::new();\n * obj.deposit(banknotesCount);\n * let ret_2: Vec<i32> = obj.withdraw(amount);\n */",
+    "racket": "(define atm%\n  (class object%\n    (super-new)\n    \n    (init-field)\n    \n    ; deposit : (listof exact-integer?) -> void?\n    (define/public (deposit banknotes-count)\n      )\n    ; withdraw : exact-integer? -> (listof exact-integer?)\n    (define/public (withdraw amount)\n      )))\n\n;; Your atm% object will be instantiated and called as such:\n;; (define obj (new atm%))\n;; (send obj deposit banknotes-count)\n;; (define param_2 (send obj withdraw amount))",
+    "erlang": "-spec atm_init_() -> any().\natm_init_() ->\n  .\n\n-spec atm_deposit(BanknotesCount :: [integer()]) -> any().\natm_deposit(BanknotesCount) ->\n  .\n\n-spec atm_withdraw(Amount :: integer()) -> [integer()].\natm_withdraw(Amount) ->\n  .\n\n\n%% Your functions will be called as such:\n%% atm_init_(),\n%% atm_deposit(BanknotesCount),\n%% Param_2 = atm_withdraw(Amount),\n\n%% atm_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule ATM do\n  @spec init_() :: any\n  def init_() do\n    \n  end\n\n  @spec deposit(banknotes_count :: [integer]) :: any\n  def deposit(banknotes_count) do\n    \n  end\n\n  @spec withdraw(amount :: integer) :: [integer]\n  def withdraw(amount) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# ATM.init_()\n# ATM.deposit(banknotes_count)\n# param_2 = ATM.withdraw(amount)\n\n# ATM.init_ will be called before every test case, in which you can do some necessary initializations."
+  }
+}

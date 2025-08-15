@@ -1,0 +1,65 @@
+{
+  "title": "Find the Occurrence of First Almost Equal Substring",
+  "problem_id": "3580",
+  "frontend_id": "3303",
+  "difficulty": "Hard",
+  "problem_slug": "find-the-occurrence-of-first-almost-equal-substring",
+  "topics": [
+    "String",
+    "String Matching"
+  ],
+  "description": "You are given two strings s and pattern.\nA string x is called almost equal to y if you can change at most one character in x to make it identical to y.\nReturn the smallest starting index of a substring in s that is almost equal to pattern. If no such index exists, return -1.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcdefg\", pattern = \"bcdffg\"\nOutput: 1\nExplanation:\nThe substring s[1..6] == \"bcdefg\" can be converted to \"bcdffg\" by changing s[4] to \"f\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ababbababa\", pattern = \"bacaba\"\nOutput: 4\nExplanation:\nThe substring s[4..9] == \"bababa\" can be converted to \"bacaba\" by changing s[6] to \"c\" .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abcd\", pattern = \"dba\"\nOutput: -1",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: s = \"dde\", pattern = \"d\"\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= pattern.length < s.length <= 105",
+    "s and pattern consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp1[i]</code> represent the maximum length of a substring of <code>s</code> starting at index <code>i</code> that is also a prefix of <code>pattern</code>.",
+    "Let <code>dp2[i]</code> represent the maximum length of a substring of <code>s</code> ending at index <code>i</code> that is also a suffix of <code>pattern</code>.",
+    "Consider a window of size <code>pattern.length</code>. If <code>dp1[i] + i == i + pattern.length - 1 - dp2[i + pattern.length - 1]</code>, what does this signify?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minStartingIndex(string s, string pattern) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minStartingIndex(String s, String pattern) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minStartingIndex(self, s, pattern):\n        \"\"\"\n        :type s: str\n        :type pattern: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minStartingIndex(self, s: str, pattern: str) -> int:\n        ",
+    "c": "int minStartingIndex(char* s, char* pattern) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinStartingIndex(string s, string pattern) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} pattern\n * @return {number}\n */\nvar minStartingIndex = function(s, pattern) {\n    \n};",
+    "typescript": "function minStartingIndex(s: string, pattern: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String $pattern\n     * @return Integer\n     */\n    function minStartingIndex($s, $pattern) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minStartingIndex(_ s: String, _ pattern: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minStartingIndex(s: String, pattern: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minStartingIndex(String s, String pattern) {\n    \n  }\n}",
+    "golang": "func minStartingIndex(s string, pattern string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String} pattern\n# @return {Integer}\ndef min_starting_index(s, pattern)\n    \nend",
+    "scala": "object Solution {\n    def minStartingIndex(s: String, pattern: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_starting_index(s: String, pattern: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-starting-index s pattern)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec min_starting_index(S :: unicode:unicode_binary(), Pattern :: unicode:unicode_binary()) -> integer().\nmin_starting_index(S, Pattern) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_starting_index(s :: String.t, pattern :: String.t) :: integer\n  def min_starting_index(s, pattern) do\n    \n  end\nend"
+  }
+}

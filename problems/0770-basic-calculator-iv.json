@@ -1,0 +1,68 @@
+{
+  "title": "Basic Calculator IV",
+  "problem_id": "781",
+  "frontend_id": "770",
+  "difficulty": "Hard",
+  "problem_slug": "basic-calculator-iv",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Stack",
+    "Recursion"
+  ],
+  "description": "Given an expression such as expression = \"e + 8 - a + 5\" and an evaluation map such as {\"e\": 1} (given in terms of evalvars = [\"e\"] and evalints = [1]), return a list of tokens representing the simplified expression, such as [\"-1*a\",\"14\"]\nExpressions are evaluated in the usual order: brackets first, then multiplication, then addition and subtraction.\nThe format of the output is as follows:\nNote: You may assume that the given expression is always valid. All intermediate results will be in the range of [-231, 231 - 1].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: expression = \"e + 8 - a + 5\", evalvars = [\"e\"], evalints = [1]\nOutput: [\"-1*a\",\"14\"]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: expression = \"e - 8 + temperature - pressure\", evalvars = [\"e\", \"temperature\"], evalints = [1, 12]\nOutput: [\"-1*pressure\",\"5\"]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: expression = \"(e + 8) * (e - 8)\", evalvars = [], evalints = []\nOutput: [\"1*e*e\",\"-64\"]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= expression.length <= 250",
+    "expression consists of lowercase English letters, digits, '+', '-', '*', '(', ')', ' '.",
+    "expression does not contain any leading or trailing spaces.",
+    "All the tokens in expression are separated by a single space.",
+    "0 <= evalvars.length <= 100",
+    "1 <= evalvars[i].length <= 20",
+    "evalvars[i] consists of lowercase English letters.",
+    "evalints.length == evalvars.length",
+    "-100 <= evalints[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "One way is with a Polynomial class.  For example,\r\n\r\n* `Poly:add(this, that)` returns the result of `this + that`.\r\n* `Poly:sub(this, that)` returns the result of `this - that`.\r\n* `Poly:mul(this, that)` returns the result of `this * that`.\r\n* `Poly:evaluate(this, evalmap)` returns the polynomial after replacing all free variables with constants as specified by `evalmap`.\r\n* `Poly:toList(this)` returns the polynomial in the correct output format.\r\n\r\n* `Solution::combine(left, right, symbol)` returns the result of applying the binary operator represented by `symbol` to `left` and `right`.\r\n* `Solution::make(expr)` makes a new `Poly` represented by either the constant or free variable specified by `expr`.\r\n* `Solution::parse(expr)` parses an expression into a new `Poly`."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<string> basicCalculatorIV(string expression, vector<string>& evalvars, vector<int>& evalints) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> basicCalculatorIV(String expression, String[] evalvars, int[] evalints) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def basicCalculatorIV(self, expression, evalvars, evalints):\n        \"\"\"\n        :type expression: str\n        :type evalvars: List[str]\n        :type evalints: List[int]\n        :rtype: List[str]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def basicCalculatorIV(self, expression: str, evalvars: List[str], evalints: List[int]) -> List[str]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** basicCalculatorIV(char* expression, char** evalvars, int evalvarsSize, int* evalints, int evalintsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<string> BasicCalculatorIV(string expression, string[] evalvars, int[] evalints) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @param {string[]} evalvars\n * @param {number[]} evalints\n * @return {string[]}\n */\nvar basicCalculatorIV = function(expression, evalvars, evalints) {\n    \n};",
+    "typescript": "function basicCalculatorIV(expression: string, evalvars: string[], evalints: number[]): string[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $expression\n     * @param String[] $evalvars\n     * @param Integer[] $evalints\n     * @return String[]\n     */\n    function basicCalculatorIV($expression, $evalvars, $evalints) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func basicCalculatorIV(_ expression: String, _ evalvars: [String], _ evalints: [Int]) -> [String] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun basicCalculatorIV(expression: String, evalvars: Array<String>, evalints: IntArray): List<String> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<String> basicCalculatorIV(String expression, List<String> evalvars, List<int> evalints) {\n    \n  }\n}",
+    "golang": "func basicCalculatorIV(expression string, evalvars []string, evalints []int) []string {\n    \n}",
+    "ruby": "# @param {String} expression\n# @param {String[]} evalvars\n# @param {Integer[]} evalints\n# @return {String[]}\ndef basic_calculator_iv(expression, evalvars, evalints)\n    \nend",
+    "scala": "object Solution {\n    def basicCalculatorIV(expression: String, evalvars: Array[String], evalints: Array[Int]): List[String] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn basic_calculator_iv(expression: String, evalvars: Vec<String>, evalints: Vec<i32>) -> Vec<String> {\n        \n    }\n}",
+    "racket": "(define/contract (basic-calculator-iv expression evalvars evalints)\n  (-> string? (listof string?) (listof exact-integer?) (listof string?))\n  )",
+    "erlang": "-spec basic_calculator_iv(Expression :: unicode:unicode_binary(), Evalvars :: [unicode:unicode_binary()], Evalints :: [integer()]) -> [unicode:unicode_binary()].\nbasic_calculator_iv(Expression, Evalvars, Evalints) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec basic_calculator_iv(expression :: String.t, evalvars :: [String.t], evalints :: [integer]) :: [String.t]\n  def basic_calculator_iv(expression, evalvars, evalints) do\n    \n  end\nend"
+  }
+}

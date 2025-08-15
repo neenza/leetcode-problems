@@ -1,0 +1,58 @@
+{
+  "title": "Keep Multiplying Found Values by Two",
+  "problem_id": "2274",
+  "frontend_id": "2154",
+  "difficulty": "Easy",
+  "problem_slug": "keep-multiplying-found-values-by-two",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Simulation"
+  ],
+  "description": "You are given an array of integers nums. You are also given an integer original which is the first number that needs to be searched for in nums.\nYou then do the following steps:\nReturn the final value of original.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [5,3,6,1,12], original = 3\nOutput: 24\nExplanation: \n- 3 is found in nums. 3 is multiplied by 2 to obtain 6.\n- 6 is found in nums. 6 is multiplied by 2 to obtain 12.\n- 12 is found in nums. 12 is multiplied by 2 to obtain 24.\n- 24 is not found in nums. Thus, 24 is returned.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,7,9], original = 4\nOutput: 4\nExplanation:\n- 4 is not found in nums. Thus, 4 is returned.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i], original <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Repeatedly iterate through the array and check if the current value of original is in the array.",
+    "If original is not found, stop and return its current value.",
+    "Otherwise, multiply original by 2 and repeat the process.",
+    "Use set data structure to check the existence faster."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findFinalValue(vector<int>& nums, int original) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findFinalValue(int[] nums, int original) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findFinalValue(self, nums, original):\n        \"\"\"\n        :type nums: List[int]\n        :type original: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findFinalValue(self, nums: List[int], original: int) -> int:\n        ",
+    "c": "int findFinalValue(int* nums, int numsSize, int original) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindFinalValue(int[] nums, int original) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} original\n * @return {number}\n */\nvar findFinalValue = function(nums, original) {\n    \n};",
+    "typescript": "function findFinalValue(nums: number[], original: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $original\n     * @return Integer\n     */\n    function findFinalValue($nums, $original) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findFinalValue(_ nums: [Int], _ original: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findFinalValue(nums: IntArray, original: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findFinalValue(List<int> nums, int original) {\n    \n  }\n}",
+    "golang": "func findFinalValue(nums []int, original int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} original\n# @return {Integer}\ndef find_final_value(nums, original)\n    \nend",
+    "scala": "object Solution {\n    def findFinalValue(nums: Array[Int], original: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_final_value(nums: Vec<i32>, original: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-final-value nums original)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec find_final_value(Nums :: [integer()], Original :: integer()) -> integer().\nfind_final_value(Nums, Original) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_final_value(nums :: [integer], original :: integer) :: integer\n  def find_final_value(nums, original) do\n    \n  end\nend"
+  }
+}

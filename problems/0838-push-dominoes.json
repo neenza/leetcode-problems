@@ -1,0 +1,56 @@
+{
+  "title": "Push Dominoes",
+  "problem_id": "868",
+  "frontend_id": "838",
+  "difficulty": "Medium",
+  "problem_slug": "push-dominoes",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "There are n dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.\nAfter each second, each domino that is falling to the left pushes the adjacent domino on the left. Similarly, the dominoes falling to the right push their adjacent dominoes standing on the right.\nWhen a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.\nFor the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.\nYou are given a string dominoes representing the initial state where:\nReturn a string representing the final state.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: dominoes = \"RR.L\"\nOutput: \"RR.L\"\nExplanation: The first domino expends no additional force on the second domino.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: dominoes = \".L.R...LR..L..\"\nOutput: \"LL.RR.LLRRLL..\"",
+      "images": [
+        "https://s3-lc-upload.s3.amazonaws.com/uploads/2018/05/18/domino.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == dominoes.length",
+    "1 <= n <= 105",
+    "dominoes[i] is either 'L', 'R', or '.'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string pushDominoes(string dominoes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String pushDominoes(String dominoes) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def pushDominoes(self, dominoes):\n        \"\"\"\n        :type dominoes: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def pushDominoes(self, dominoes: str) -> str:\n        ",
+    "c": "char* pushDominoes(char* dominoes) {\n    \n}",
+    "csharp": "public class Solution {\n    public string PushDominoes(string dominoes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} dominoes\n * @return {string}\n */\nvar pushDominoes = function(dominoes) {\n    \n};",
+    "typescript": "function pushDominoes(dominoes: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $dominoes\n     * @return String\n     */\n    function pushDominoes($dominoes) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func pushDominoes(_ dominoes: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun pushDominoes(dominoes: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String pushDominoes(String dominoes) {\n    \n  }\n}",
+    "golang": "func pushDominoes(dominoes string) string {\n    \n}",
+    "ruby": "# @param {String} dominoes\n# @return {String}\ndef push_dominoes(dominoes)\n    \nend",
+    "scala": "object Solution {\n    def pushDominoes(dominoes: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn push_dominoes(dominoes: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (push-dominoes dominoes)\n  (-> string? string?)\n  )",
+    "erlang": "-spec push_dominoes(Dominoes :: unicode:unicode_binary()) -> unicode:unicode_binary().\npush_dominoes(Dominoes) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec push_dominoes(dominoes :: String.t) :: String.t\n  def push_dominoes(dominoes) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n---\n### Approach #1: Adjacent Symbols [Accepted]\n\n**Intuition**\n\nBetween every group of vertical dominoes (`'.'`), we have up to two non-vertical dominoes bordering this group.  Since additional dominoes outside this group do not affect the outcome, we can analyze these situations individually: there are 9 of them (as the border could be empty). Actually, if we border the dominoes by `'L'` and `'R'`, there are only 4 cases.  We'll write new letters between these symbols depending on each case.\n\n**Algorithm**\n\nContinuing our explanation, we analyze cases:\n\n* If we have say `\"A....B\"`, where A = B, then we should write `\"AAAAAA\"`.\n\n* If we have `\"R....L\"`, then we will write `\"RRRLLL\"`, or `\"RRR.LLL\"` if we have an odd number of dots.  If the initial symbols are at positions `i` and `j`, we can check our distance `k-i` and `j-k` to decide at position `k` whether to write `'L'`, `'R'`, or `'.'`.\n\n* (If we have `\"L....R\"` we don't do anything.  We can skip this case.)**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(N)$$, where $$N$$ is the length of `dominoes`.\n\n---\n### Approach #2: Calculate Force [Accepted]\n\n**Intuition**\n\nWe can calculate the net force applied on every domino.  The forces we care about are how close a domino is to a leftward `'R'`, and to a rightward `'L'`: the closer we are, the stronger the force.\n\n**Algorithm**\n\nScanning from left to right, our force decays by 1 every iteration, and resets to `N` if we meet an `'R'`, so that `force[i]` is higher (than `force[j]`) if and only if `dominoes[i]` is closer (looking leftward) to `'R'` (than `dominoes[j]`).\n\nSimilarly, scanning from right to left, we can find the force going rightward (closeness to `'L'`).\n\nFor some domino `answer[i]`, if the forces are equal, then the answer is `'.'`.  Otherwise, the answer is implied by whichever force is stronger.\n\n**Example**\n\nHere is a worked example on the string `S = 'R.R...L'`:  We find the force going from left to right is `[7, 6, 7, 6, 5, 4, 0]`.  The force going from right to left is `[0, 0, 0, -4, -5, -6, -7]`.  Combining them (taking their vector addition), the combined force is `[7, 6, 7, 2, 0, -2, -7]`, for a final answer of `RRRR.LL`.**Complexity Analysis**\n\n* Time and Space Complexity:  $$O(N)$$."
+}

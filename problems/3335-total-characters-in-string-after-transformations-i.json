@@ -1,0 +1,58 @@
+{
+  "title": "Total Characters in String After Transformations I",
+  "problem_id": "3629",
+  "frontend_id": "3335",
+  "difficulty": "Medium",
+  "problem_slug": "total-characters-in-string-after-transformations-i",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Dynamic Programming",
+    "Counting"
+  ],
+  "description": "You are given a string s and an integer t, representing the number of transformations to perform. In one transformation, every character in s is replaced according to the following rules:\nReturn the length of the resulting string after exactly t transformations.\nSince the answer may be very large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcyy\", t = 2\nOutput: 7\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"azbk\", t = 1\nOutput: 5\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists only of lowercase English letters.",
+    "1 <= t <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain the frequency of each character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int lengthAfterTransformations(string s, int t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthAfterTransformations(String s, int t) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lengthAfterTransformations(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lengthAfterTransformations(self, s: str, t: int) -> int:\n        ",
+    "c": "int lengthAfterTransformations(char* s, int t) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LengthAfterTransformations(string s, int t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} t\n * @return {number}\n */\nvar lengthAfterTransformations = function(s, t) {\n    \n};",
+    "typescript": "function lengthAfterTransformations(s: string, t: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $t\n     * @return Integer\n     */\n    function lengthAfterTransformations($s, $t) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lengthAfterTransformations(_ s: String, _ t: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lengthAfterTransformations(s: String, t: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int lengthAfterTransformations(String s, int t) {\n    \n  }\n}",
+    "golang": "func lengthAfterTransformations(s string, t int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} t\n# @return {Integer}\ndef length_after_transformations(s, t)\n    \nend",
+    "scala": "object Solution {\n    def lengthAfterTransformations(s: String, t: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn length_after_transformations(s: String, t: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (length-after-transformations s t)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec length_after_transformations(S :: unicode:unicode_binary(), T :: integer()) -> integer().\nlength_after_transformations(S, T) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec length_after_transformations(s :: String.t, t :: integer) :: integer\n  def length_after_transformations(s, t) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: Recurrence\n\n#### Intuition\n\nWe define $f(i, c)$ as the number of occurrences of the character $c$ in the string after $i$ transformations. For sake of clarity and ease of notation, we let $c$ = $[0, 26)$, which corresponds to the 26 characters from $a$ to $z$ in sequence.\n\nInitially, each $f(0, c)$ represents the number of occurrences of $c$ in the given string $s$. As we iterate from $f(i-1, \\cdots)$ to $f(i, \\cdots)$:\n\n- If $c = 0$, corresponding to $a$, it can be converted from $z$, therefore:\n    $$\n    f(i, 0) = f(i - 1, 25)\n    $$\n- If $c = 1$, corresponding to $b$, it can be converted from $z$ or $a$, therefore:\n    $$\n    f(i, 1) = f(i - 1, 25) + f(i - 1, 0)\n    $$\n- If $c \\geq 2$, it can come from the last character conversion, therefore:\n    $$\n    f(i, c) = f(i - 1, c - 1)\n    $$\n\nSo we obtain the recursive formula, which can be calculated from $f(1, \\cdots)$ all the way to $f(t, \\cdots)$. The sum of all $f(t, c)$ is the final answer.\n\n#### Optimize\n\nNotice that in this recurrence formula, the calculation of $f(i, \\cdots)$ only depends on the value of $f(i - 1, \\cdots)$, therefore we can use two one-dimensional arrays instead of the entire two-dimensional array $f$ for recursion, as can be seen in the arrays $\\textit{cnt}$ and $\\textit{nxt}$ in the following code.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the string $s$, and let $|\\Sigma|$ be the size of the character set, which is 26 in this question.\n\n- Time complexity: $O(n + t|\\Sigma|)$.\n  \n  We first traverse the string to obtain the count of all characters, and then use the recurrence formula to calculate the count of each character over $t$ transformations.\n\n- Space complexity: $O(|\\Sigma|)$.\n  \n  This is the space required for two one-dimensional arrays in the recursion."
+}

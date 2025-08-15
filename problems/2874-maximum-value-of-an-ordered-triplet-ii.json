@@ -1,0 +1,60 @@
+{
+  "title": "Maximum Value of an Ordered Triplet II",
+  "problem_id": "3152",
+  "frontend_id": "2874",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-value-of-an-ordered-triplet-ii",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a 0-indexed integer array nums.\nReturn the maximum value over all triplets of indices (i, j, k) such that i < j < k. If all such triplets have a negative value, return 0.\nThe value of a triplet of indices (i, j, k) is equal to (nums[i] - nums[j]) * nums[k].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [12,6,1,2,7]\nOutput: 77\nExplanation: The value of the triplet (0, 2, 4) is (nums[0] - nums[2]) * nums[4] = 77.\nIt can be shown that there are no ordered triplets of indices with a value greater than 77.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,10,3,4,19]\nOutput: 133\nExplanation: The value of the triplet (1, 2, 4) is (nums[1] - nums[2]) * nums[4] = 133.\nIt can be shown that there are no ordered triplets of indices with a value greater than 133.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 0\nExplanation: The only ordered triplet of indices (0, 1, 2) has a negative value of (nums[0] - nums[1]) * nums[2] = -3. Hence, the answer would be 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 105",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Preprocess the prefix maximum array, <code>prefix_max[i] = max(nums[0], nums[1], …, nums[i])</code> and the suffix maximum array, <code>suffix_max[i] = max(nums[i], nums[i + 1], …, nums[n - 1])</code>.",
+    "For each index <code>j</code>, find two indices <code>i</code> and <code>k</code> such that <code>i < j < k</code> and <code>(nums[i] - nums[j]) * nums[k]</code> is the maximum, using the prefix and suffix maximum arrays.",
+    "For index <code>j</code>, the maximum triplet value is <code>(prefix_max[j - 1] - nums[j]) * suffix_max[j + 1]</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maximumTripletValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumTripletValue(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumTripletValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumTripletValue(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maximumTripletValue(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaximumTripletValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumTripletValue = function(nums) {\n    \n};",
+    "typescript": "function maximumTripletValue(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumTripletValue($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumTripletValue(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumTripletValue(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumTripletValue(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumTripletValue(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_triplet_value(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumTripletValue(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_triplet_value(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-triplet-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_triplet_value(Nums :: [integer()]) -> integer().\nmaximum_triplet_value(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_triplet_value(nums :: [integer]) :: integer\n  def maximum_triplet_value(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Greedy + Prefix Suffix Array\n\n#### Intuition\n\nLet the length of the array $\\textit{nums}$ be $n$. According to the value formula $(\\textit{nums}[i] - \\textit{nums}[j]) \\times \\textit{nums}[k]$, it can be known that when $j$ is fixed, the maximum value of the triplet is achieved when $\\textit{nums}[i]$ and $\\textit{nums}[k]$ respectively take the maximum values from $[0, j)$ and $[j + 1, n)$. We use $\\textit{leftMax}[j]$ and $\\textit{rightMax}[j]$ to maintain the maximum value of the prefix $[0, j)$ and the maximum value of the suffix $[j + 1, n)$, respectively, and enumerate $j$ in order, calculate the value $(\\textit{leftMax}[j] - \\textit{nums}[j]) \\times \\textit{rightMax}[j]$, and return the maximum value (if all values are negative, return $0$).\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nDuring the traversal of the array, the prefix and suffix arrays can be maintained, thus achieving a single traversal.\n\n- Space complexity: $O(n)$.\n\nTwo arrays are needed to maintain the maximum and minimum values of the prefixes and suffixes.\n\n### Approach 2: Greedy\n\n#### Intuition\n\nSimilar to approach 1, if we fix $k$, then the value of the triplet is maximized when $\\textit{nums}[i] - \\textit{nums}[j]$ takes the maximum value. We can use $\\textit{imax}$ to maintain the maximum value of $\\textit{nums}[i]$, and $\\textit{dmax}$ to maintain the maximum value of $\\textit{nums}[i] - \\textit{nums}[j]$. During the enumeration of $k$, update $\\textit{dmax}$ and $\\textit{imax}$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\nSimilar to approach 1, in the process of a single traversal, the maximum and minimum values can be maintained.\n\n- Space complexity: $O(1)$.\n\nWe only need two variables to maintain the maximum and minimum values.\n\n---"
+}

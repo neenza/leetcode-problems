@@ -1,0 +1,69 @@
+{
+  "title": "Parallel Courses III",
+  "problem_id": "2176",
+  "frontend_id": "2050",
+  "difficulty": "Hard",
+  "problem_slug": "parallel-courses-iii",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Graph",
+    "Topological Sort"
+  ],
+  "description": "You are given an integer n, which indicates that there are n courses labeled from 1 to n. You are also given a 2D integer array relations where relations[j] = [prevCoursej, nextCoursej] denotes that course prevCoursej has to be completed before course nextCoursej (prerequisite relationship). Furthermore, you are given a 0-indexed integer array time where time[i] denotes how many months it takes to complete the (i+1)th course.\nYou must find the minimum number of months needed to complete all the courses following these rules:\nReturn the minimum number of months needed to complete all the courses.\nNote: The test cases are generated such that it is possible to complete every course (i.e., the graph is a directed acyclic graph).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, relations = [[1,3],[2,3]], time = [3,2,5]\nOutput: 8\nExplanation: The figure above represents the given graph and the time required to complete each course. \nWe start course 1 and course 2 simultaneously at month 0.\nCourse 1 takes 3 months and course 2 takes 2 months to complete respectively.\nThus, the earliest time we can start course 3 is at month 3, and the total time required is 3 + 5 = 8 months.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/07/ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, relations = [[1,5],[2,5],[3,5],[3,4],[4,5]], time = [1,2,3,4,5]\nOutput: 12\nExplanation: The figure above represents the given graph and the time required to complete each course.\nYou can start courses 1, 2, and 3 at month 0.\nYou can complete them after 1, 2, and 3 months respectively.\nCourse 4 can be taken only after course 3 is completed, i.e., after 3 months. It is completed after 3 + 4 = 7 months.\nCourse 5 can be taken only after courses 1, 2, 3, and 4 have been completed, i.e., after max(1,2,3,7) = 7 months.\nThus, the minimum time needed to complete all the courses is 7 + 5 = 12 months.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/07/ex2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 5 * 104",
+    "0 <= relations.length <= min(n * (n - 1) / 2, 5 * 104)",
+    "relations[j].length == 2",
+    "1 <= prevCoursej, nextCoursej <= n",
+    "prevCoursej != nextCoursej",
+    "All the pairs [prevCoursej, nextCoursej] are unique.",
+    "time.length == n",
+    "1 <= time[i] <= 104",
+    "The given graph is a directed acyclic graph."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the earliest time a course can be taken?",
+    "How would you solve the problem if all courses take equal time?",
+    "How would you generalize this approach?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumTime(int n, vector<vector<int>>& relations, vector<int>& time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTime(int n, int[][] relations, int[] time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTime(self, n, relations, time):\n        \"\"\"\n        :type n: int\n        :type relations: List[List[int]]\n        :type time: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:\n        ",
+    "c": "int minimumTime(int n, int** relations, int relationsSize, int* relationsColSize, int* time, int timeSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumTime(int n, int[][] relations, int[] time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} relations\n * @param {number[]} time\n * @return {number}\n */\nvar minimumTime = function(n, relations, time) {\n    \n};",
+    "typescript": "function minimumTime(n: number, relations: number[][], time: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $relations\n     * @param Integer[] $time\n     * @return Integer\n     */\n    function minimumTime($n, $relations, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTime(_ n: Int, _ relations: [[Int]], _ time: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTime(n: Int, relations: Array<IntArray>, time: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTime(int n, List<List<int>> relations, List<int> time) {\n    \n  }\n}",
+    "golang": "func minimumTime(n int, relations [][]int, time []int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} relations\n# @param {Integer[]} time\n# @return {Integer}\ndef minimum_time(n, relations, time)\n    \nend",
+    "scala": "object Solution {\n    def minimumTime(n: Int, relations: Array[Array[Int]], time: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_time(n: i32, relations: Vec<Vec<i32>>, time: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-time n relations time)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_time(N :: integer(), Relations :: [[integer()]], Time :: [integer()]) -> integer().\nminimum_time(N, Relations, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_time(n :: integer, relations :: [[integer]], time :: [integer]) :: integer\n  def minimum_time(n, relations, time) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Topological Sort, Kahn's Algorithm\n\n**Intuition**\n\n> If you are not familiar with topological sorting, please refer to our explore cards [Topological Sorting Explore Card](https://leetcode.com/explore/learn/card/graph/623/kahns-algorithm-for-topological-sorting/). We will focus on the usage in this article and not the underlying principles or implementation details.\n\nWe can think of each course as a node in a graph, with the prerequisites being directed edges. Each node has a value, given in `time`. The problem tells us two things:\n\n1. We can start taking a course as soon as the prerequisites are met\n2. We can take any number of courses simultaneously\n\nTake a look at the following graph.\n\n![example](../Figures/2050/1.png)Before we can start the course in green, we must finish the three other prerequisite courses first. However, only the completion time of the course in blue matters. Because of the 2nd rule, we can take all of them simultaneously. The course in blue requires the longest completion time, so by the time we take 4 months to finish it, the other two courses will have already been completed. Thus, we can complete the course in green after 4 + 5 = 9 months.\n\nLet's extend the graph.\n\n![example](../Figures/2050/2.png)The nodes in green are the same ones from the first image. We already established that it takes 9 months to complete those courses. Thus, to start the red course, the other two nodes with values 7 and 8 are irrelevant because, by the time we take 9 months to finish the green nodes, they will already have been completed. To finish the red course, we need 9 + 5 = 14 months.\n\n![example](../Figures/2050/3.png)Without loss of generality, we can consider all the green nodes as a single node with value 9. If we were to extend the graph further, then we could consider the entire previous graph as a single node with value 14.\n\n![example](../Figures/2050/4.png)The takeaway from these examples is that we don't need to worry about the order in which the courses are taken. The only thing that matters for the completion time of each course is the latest prerequisite to be completed.\n\nThis simplifies the problem: let's define the **value** of a path as the sum of values for each node on the path. Consider all paths starting from nodes without any prerequisites. The answer to the problem is the maximum value of all such paths.\n\nWe can topologically sort the courses using Kahn's algorithm to solve this problem by simulating the process we talked about in the above example.\n\nConsider an array `maxTime`. Let `maxTime[node]` represent the maximum value of all paths **ending** at `node`. Essentially, this array represents the simplifications from the above examples.\n\n![example](../Figures/2050/5.png)We initially consider all nodes with an indegree of 0 (no prerequisites). For each node, we iterate over each `neighbor` and try to update `maxTime[neighbor]` with a larger value. We also decrease the indegree of `neighbor`, and if it becomes 0, we push `neighbor` to our queue. In the end, the answer is the maximum value in `maxTime`.\n\n**Algorithm**\n\n1. Initialize the following data structures: \n    - A `graph` from `relations`. For convenience, we will change the nodes to be 0-indexed.\n    - An array `indegree` of length `n`, representing the indegree of each node.\n    - A `queue` to perform Kahn's algorithm.\n    - An array `maxTime` of length `n`, representing the maximum value of all paths ending at certain nodes.\n2. For all nodes with `indegree[node] = 0`, push them to the queue and initialize `maxTime[node] = time[node]`.\n3. While `queue` is not empty:\n    - Pop a `node`.\n    - Iterate over `graph[node]`. For each `neighbor`:\n        - Update `maxTime[neighbor]` with `maxTime[node] + time[neighbor]` if it is larger.\n        - Decrement `indegree[neighbor]`.\n        - If `indegree[neighbor] == 0`, push `neighbor` to `queue`.\n4. Return `max(maxTime)`.\n\n**Implementation****Complexity Analysis**\n\nGiven $$e$$ as the length of `relations`,\n\n* Time complexity: $$O(n + e)$$\n\n    It costs $$O(e)$$ to build `graph` and $$O(n)$$ to initialize `maxTime`, `queue`, and `indegree`.\n\n    During Kahn's algorithm, each node is pushed and popped to `queue` once, costing $$O(n)$$. We have a for loop inside the while loop, but this for loop is iterating over edges. Because we only visit each node once, each edge in the input can only be iterated over once as well. This means all for loop iterations across the algorithm will cost $$O(e)$$.\n\n* Space complexity: $$O(n + e)$$\n\n    `graph` takes $$O(n + e)$$ space, the `queue` can take up to $$O(n)$$ space, `maxTime` and `indegree` both take $$O(n)$$ space.---\n\n### Approach 2: DFS + Memoization (Top-Down DP)\n\n**Intuition**\n\nWe can also use DFS to solve this problem in the other direction. Let's define `dfs(node)` as the maximum value of all paths starting with `node`. If `node` is not a prerequisite to any courses, then we can simply return the value of `node` since the only path starting at `node` is `node` itself.\n\nOtherwise, we iterate over each `neighbor` of `node` and call `dfs(neighbor)`. We take the maximum value of all these calls, add the value of `node` to it, and return that as `dfs(node)`. The answer to the original problem is the maximum value of `dfs` across all nodes. Because `dfs(node)` may be called many times, we will memoize our function to improve performance.\n\n> This approach is very similar to the first one. In the first approach, for each `node`, we consider all paths ending at `node`, and we update `maxTime[node]` using the prerequisites of `node`.\n>\n> In this approach, for each `node`, we consider all paths starting at `node`, and we update `dfs(node)` using the courses that `node` is a prerequisite of.\n>\n> Due to the nature of recursion, we do not need to worry about the order in which we visit nodes, and thus a simple DFS works - we don't need to topologically sort.\n\n**Algorithm**\n\n1. Create a `graph` from `relations`. For convenience, we will change the nodes to be 0-indexed.\n2. Define a memoized function `dfs(node)`:\n    - If `node` has no outgoing edges, return `time[node]`.\n    - Initialize `ans = 0`.\n    - Iterate over `graph[node]`. For each `neighbor`, set `ans = max(ans, dfs(neighbor))`.\n    - Return `time[node] + ans`.\n3. Call `dfs(node)` for all nodes and return the maximum value.\n\n**Implementation****Complexity Analysis**\n\nGiven $$e$$ as the length of `relations`,\n\n* Time complexity: $$O(n + e)$$\n\n    It costs $$O(e)$$ to build `graph`.\n\n    Because we memoized `dfs`, we never calculate `dfs` for a given `node` more than once. In `dfs`, we have a for loop. This for loop will iterate $$O(e)$$ times across all iterations, since we can never iterate over an edge more than once. Thus, the total time for all `dfs` calls is $$O(n + e)$$.\n\n* Space complexity: $$O(n + e)$$\n\n    `graph` takes $$O(n + e)$$ space, `memo` takes $$O(n)$$ space, and the recursion call stack can take up to $$O(n)$$ space in the worst-case scenario (when this directed graph degenerates into a linked list.)---"
+}

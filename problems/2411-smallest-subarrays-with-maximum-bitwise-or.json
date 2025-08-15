@@ -1,0 +1,60 @@
+{
+  "title": "Smallest Subarrays With Maximum Bitwise OR",
+  "problem_id": "2498",
+  "frontend_id": "2411",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-subarrays-with-maximum-bitwise-or",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Bit Manipulation",
+    "Sliding Window"
+  ],
+  "description": "You are given a 0-indexed array nums of length n, consisting of non-negative integers. For each index i from 0 to n - 1, you must determine the size of the minimum sized non-empty subarray of nums starting at i (inclusive) that has the maximum possible bitwise OR.\nThe bitwise OR of an array is the bitwise OR of all the numbers in it.\nReturn an integer array answer of size n where answer[i] is the length of the minimum sized subarray starting at i with maximum bitwise OR.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,0,2,1,3]\nOutput: [3,3,2,2,1]\nExplanation:\nThe maximum possible bitwise OR starting at any index is 3. \n- Starting at index 0, the shortest subarray that yields it is [1,0,2].\n- Starting at index 1, the shortest subarray that yields the maximum bitwise OR is [0,2,1].\n- Starting at index 2, the shortest subarray that yields the maximum bitwise OR is [2,1].\n- Starting at index 3, the shortest subarray that yields the maximum bitwise OR is [1,3].\n- Starting at index 4, the shortest subarray that yields the maximum bitwise OR is [3].\nTherefore, we return [3,3,2,2,1].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2]\nOutput: [2,1]\nExplanation:\nStarting at index 0, the shortest subarray that yields the maximum bitwise OR is of length 2.\nStarting at index 1, the shortest subarray that yields the maximum bitwise OR is of length 1.\nTherefore, we return [2,1].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= n <= 105",
+    "0 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Consider trying to solve the problem for each bit position separately.",
+    "For each bit position, find the position of the next number that has a 1 in that position, if any.",
+    "Take the maximum distance to such a number, including the current number.",
+    "Iterate backwards to achieve a linear complexity."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> smallestSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] smallestSubarrays(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestSubarrays(self, nums: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* smallestSubarrays(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] SmallestSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar smallestSubarrays = function(nums) {\n    \n};",
+    "typescript": "function smallestSubarrays(nums: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer[]\n     */\n    function smallestSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestSubarrays(_ nums: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestSubarrays(nums: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> smallestSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func smallestSubarrays(nums []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer[]}\ndef smallest_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def smallestSubarrays(nums: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_subarrays(nums: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-subarrays nums)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec smallest_subarrays(Nums :: [integer()]) -> [integer()].\nsmallest_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_subarrays(nums :: [integer]) :: [integer]\n  def smallest_subarrays(nums) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Enumeration\n\n#### Intuition\n\nFor the elements $\\textit{nums}[i]$ in the array, their range is $[0, 10^9]$, and they can contain up to $31$ binary bits.\n\nFor the $\\textit{bit}$-th binary digit:\n\n- If it is $1$, then after performing a bitwise OR operation with any number, this binary bit remains $1$, so it has no effect.\n\n- If it is $0$, then we need to find the smallest $j$ such that $j > i$ and the $\\textit{bit}$-th binary digit of $\\textit{nums}[j]$ is $1$. This way, we can achieve the maximum value through bitwise OR operations. Note that such a $j$ may not exist.\n\nTherefore, we can traverse the array $\\textit{nums}$ in descending order of index, while using an array $\\textit{pos}$ to record the most recent position where each binary bit was set to $1$ (if no such position exists, it is initialized to $-1$). When we reach $\\textit{nums}[i]$, for its $\\textit{bit}$-th binary digit:\n\n- If it is $1$, we update $\\textit{pos}[\\textit{bit}]$ to $i$.\n\n- If it is $0$ and $\\textit{pos}[\\textit{bit}]$ is not $-1$, then to obtain the maximum bitwise OR value with $i$ as the left boundary, the right boundary must be at least $\\textit{pos}[\\textit{bit}]$.\n\nIn this way, we can sequentially determine the minimum right boundary for each $i$ as the left boundary, and thus obtain the minimum length of the subarray.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$, and let $C$ be the range of elements in the array $\\textit{nums}$.\n\n- Time complexity: $O(n \\times \\log C)$.\n  \n  We enumerate the binary bits of each element, and each element has $\\log C$ binary bits.\n\n- Space complexity: $O(\\log C)$\n  \n  This is the space required for the array $\\textit{pos}$."
+}

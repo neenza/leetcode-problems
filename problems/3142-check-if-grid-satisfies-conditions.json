@@ -1,0 +1,65 @@
+{
+  "title": "Check if Grid Satisfies Conditions",
+  "problem_id": "3415",
+  "frontend_id": "3142",
+  "difficulty": "Easy",
+  "problem_slug": "check-if-grid-satisfies-conditions",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "You are given a 2D matrix grid of size m x n. You need to check if each cell grid[i][j] is:\nReturn true if all the cells satisfy these conditions, otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[1,0,2],[1,0,2]]\nOutput: true\nExplanation:\n\nAll the cells in the grid satisfy the conditions.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/04/15/examplechanged.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,1,1],[0,0,0]]\nOutput: false\nExplanation:\n\nAll cells in the first row are equal.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/03/27/example21.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[1],[2],[3]]\nOutput: false\nExplanation:\n\nCells in the first column have different values.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/03/31/changed.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n, m <= 10",
+    "0 <= grid[i][j] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check if each column has same value in each cell.",
+    "If the previous condition is satisfied, we can simply check the first cells in adjacent columns."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool satisfiesConditions(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean satisfiesConditions(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def satisfiesConditions(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def satisfiesConditions(self, grid: List[List[int]]) -> bool:\n        ",
+    "c": "bool satisfiesConditions(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool SatisfiesConditions(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar satisfiesConditions = function(grid) {\n    \n};",
+    "typescript": "function satisfiesConditions(grid: number[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Boolean\n     */\n    function satisfiesConditions($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func satisfiesConditions(_ grid: [[Int]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun satisfiesConditions(grid: Array<IntArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool satisfiesConditions(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func satisfiesConditions(grid [][]int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Boolean}\ndef satisfies_conditions(grid)\n    \nend",
+    "scala": "object Solution {\n    def satisfiesConditions(grid: Array[Array[Int]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn satisfies_conditions(grid: Vec<Vec<i32>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (satisfies-conditions grid)\n  (-> (listof (listof exact-integer?)) boolean?)\n  )",
+    "erlang": "-spec satisfies_conditions(Grid :: [[integer()]]) -> boolean().\nsatisfies_conditions(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec satisfies_conditions(grid :: [[integer]]) :: boolean\n  def satisfies_conditions(grid) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Determine if Two Strings Are Close",
+  "problem_id": "1777",
+  "frontend_id": "1657",
+  "difficulty": "Medium",
+  "problem_slug": "determine-if-two-strings-are-close",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Sorting",
+    "Counting"
+  ],
+  "description": "Two strings are considered close if you can attain one from the other using the following operations:\nYou can use the operations on either string as many times as necessary.\nGiven two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word1 = \"abc\", word2 = \"bca\"\nOutput: true\nExplanation: You can attain word2 from word1 in 2 operations.\nApply Operation 1: \"abc\" -> \"acb\"\nApply Operation 1: \"acb\" -> \"bca\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word1 = \"a\", word2 = \"aa\"\nOutput: false\nExplanation: It is impossible to attain word2 from word1, or vice versa, in any number of operations.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word1 = \"cabbba\", word2 = \"abbccc\"\nOutput: true\nExplanation: You can attain word2 from word1 in 3 operations.\nApply Operation 1: \"cabbba\" -> \"caabbb\"\nApply Operation 2: \"caabbb\" -> \"baaccc\"\nApply Operation 2: \"baaccc\" -> \"abbccc\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word1.length, word2.length <= 105",
+    "word1 and word2 contain only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Operation 1 allows you to freely reorder the string.",
+    "Operation 2 allows you to freely reassign the letters' frequencies."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool closeStrings(string word1, string word2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean closeStrings(String word1, String word2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def closeStrings(self, word1, word2):\n        \"\"\"\n        :type word1: str\n        :type word2: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def closeStrings(self, word1: str, word2: str) -> bool:\n        ",
+    "c": "bool closeStrings(char* word1, char* word2) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CloseStrings(string word1, string word2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word1\n * @param {string} word2\n * @return {boolean}\n */\nvar closeStrings = function(word1, word2) {\n    \n};",
+    "typescript": "function closeStrings(word1: string, word2: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word1\n     * @param String $word2\n     * @return Boolean\n     */\n    function closeStrings($word1, $word2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func closeStrings(_ word1: String, _ word2: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun closeStrings(word1: String, word2: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool closeStrings(String word1, String word2) {\n    \n  }\n}",
+    "golang": "func closeStrings(word1 string, word2 string) bool {\n    \n}",
+    "ruby": "# @param {String} word1\n# @param {String} word2\n# @return {Boolean}\ndef close_strings(word1, word2)\n    \nend",
+    "scala": "object Solution {\n    def closeStrings(word1: String, word2: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn close_strings(word1: String, word2: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (close-strings word1 word2)\n  (-> string? string? boolean?)\n  )",
+    "erlang": "-spec close_strings(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> boolean().\nclose_strings(Word1, Word2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec close_strings(word1 :: String.t, word2 :: String.t) :: boolean\n  def close_strings(word1, word2) do\n    \n  end\nend"
+  }
+}

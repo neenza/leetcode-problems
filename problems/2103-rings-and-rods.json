@@ -1,0 +1,67 @@
+{
+  "title": "Rings and Rods",
+  "problem_id": "2226",
+  "frontend_id": "2103",
+  "difficulty": "Easy",
+  "problem_slug": "rings-and-rods",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "There are n rings and each ring is either red, green, or blue. The rings are distributed across ten rods labeled from 0 to 9.\nYou are given a string rings of length 2n that describes the n rings that are placed onto the rods. Every two characters in rings forms a color-position pair that is used to describe each ring where:\nFor example, \"R3G2B1\" describes n == 3 rings: a red ring placed onto the rod labeled 3, a green ring placed onto the rod labeled 2, and a blue ring placed onto the rod labeled 1.\nReturn the number of rods that have all three colors of rings on them.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: rings = \"B0B6G0R6R0R6G9\"\nOutput: 1\nExplanation: \n- The rod labeled 0 holds 3 rings with all colors: red, green, and blue.\n- The rod labeled 6 holds 3 rings, but it only has red and blue.\n- The rod labeled 9 holds only a green ring.\nThus, the number of rods with all three colors is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/23/ex1final.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: rings = \"B0R0G0R9R0B0G0\"\nOutput: 1\nExplanation: \n- The rod labeled 0 holds 6 rings with all colors: red, green, and blue.\n- The rod labeled 9 holds only a red ring.\nThus, the number of rods with all three colors is 1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/23/ex2final.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: rings = \"G4\"\nOutput: 0\nExplanation: \nOnly one ring is given. Thus, no rods have all three colors.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/11/23/ex2final.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "rings.length == 2 * n",
+    "1 <= n <= 100",
+    "rings[i] where i is even is either 'R', 'G', or 'B' (0-indexed).",
+    "rings[i] where i is odd is a digit from '0' to '9' (0-indexed)."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For every rod, look through ‘rings’ to see if the rod contains all colors.",
+    "Create 3 booleans, 1 for each color, to store if that color is present for the current rod. If all 3 are true after looking through the string, then the rod contains all the colors."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPoints(string rings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPoints(String rings) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPoints(self, rings):\n        \"\"\"\n        :type rings: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPoints(self, rings: str) -> int:\n        ",
+    "c": "int countPoints(char* rings) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPoints(string rings) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} rings\n * @return {number}\n */\nvar countPoints = function(rings) {\n    \n};",
+    "typescript": "function countPoints(rings: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $rings\n     * @return Integer\n     */\n    function countPoints($rings) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPoints(_ rings: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPoints(rings: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPoints(String rings) {\n    \n  }\n}",
+    "golang": "func countPoints(rings string) int {\n    \n}",
+    "ruby": "# @param {String} rings\n# @return {Integer}\ndef count_points(rings)\n    \nend",
+    "scala": "object Solution {\n    def countPoints(rings: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_points(rings: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-points rings)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_points(Rings :: unicode:unicode_binary()) -> integer().\ncount_points(Rings) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_points(rings :: String.t) :: integer\n  def count_points(rings) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Determine if String Halves Are Alike",
+  "problem_id": "1823",
+  "frontend_id": "1704",
+  "difficulty": "Easy",
+  "problem_slug": "determine-if-string-halves-are-alike",
+  "topics": [
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.\nTwo strings are alike if they have the same number of vowels ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'). Notice that s contains uppercase and lowercase letters.\nReturn true if a and b are alike. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"book\"\nOutput: true\nExplanation: a = \"bo\" and b = \"ok\". a has 1 vowel and b has 1 vowel. Therefore, they are alike.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"textbook\"\nOutput: false\nExplanation: a = \"text\" and b = \"book\". a has 1 vowel whereas b has 2. Therefore, they are not alike.\nNotice that the vowel o is counted twice.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= s.length <= 1000",
+    "s.length is even.",
+    "s consists of uppercase and lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Create a function that checks if a character is a vowel, either uppercase or lowercase."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool halvesAreAlike(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean halvesAreAlike(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def halvesAreAlike(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def halvesAreAlike(self, s: str) -> bool:\n        ",
+    "c": "bool halvesAreAlike(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HalvesAreAlike(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar halvesAreAlike = function(s) {\n    \n};",
+    "typescript": "function halvesAreAlike(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function halvesAreAlike($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func halvesAreAlike(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun halvesAreAlike(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool halvesAreAlike(String s) {\n    \n  }\n}",
+    "golang": "func halvesAreAlike(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef halves_are_alike(s)\n    \nend",
+    "scala": "object Solution {\n    def halvesAreAlike(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn halves_are_alike(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (halves-are-alike s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec halves_are_alike(S :: unicode:unicode_binary()) -> boolean().\nhalves_are_alike(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec halves_are_alike(s :: String.t) :: boolean\n  def halves_are_alike(s) do\n    \n  end\nend"
+  }
+}

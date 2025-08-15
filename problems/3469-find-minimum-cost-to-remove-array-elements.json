@@ -1,0 +1,55 @@
+{
+  "title": "Find Minimum Cost to Remove Array Elements",
+  "problem_id": "3776",
+  "frontend_id": "3469",
+  "difficulty": "Medium",
+  "problem_slug": "find-minimum-cost-to-remove-array-elements",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums. Your task is to remove all elements from the array by performing one of the following operations at each step until nums is empty:\nReturn the minimum cost required to remove all the elements.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [6,2,8,4]\nOutput: 12\nExplanation:\nInitially, nums = [6, 2, 8, 4] .\nThe cost to remove all elements is 8 + 4 = 12 . This is the minimum cost to remove all elements in nums . Hence, the output is 12.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,3,3]\nOutput: 5\nExplanation:\nInitially, nums = [2, 1, 3, 3] .\nThe cost to remove all elements is 2 + 3 = 5 . This is the minimum cost to remove all elements in nums . Hence, the output is 5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use dynamic programming here?",
+    "Use dynamic programming. The process guarantees that the remaining elements form a prefix of the array with at most one previous element.",
+    "Define the state as <code>dp[i][j]</code>, where <code>i</code> represents the last remaining element and <code>j</code> represents the starting index of the current prefix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minCost(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCost(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCost(self, nums: List[int]) -> int:\n        ",
+    "c": "int minCost(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinCost(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minCost = function(nums) {\n    \n};",
+    "typescript": "function minCost(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minCost($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCost(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCost(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minCost(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minCost(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_cost(nums)\n    \nend",
+    "scala": "object Solution {\n    def minCost(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_cost(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-cost nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_cost(Nums :: [integer()]) -> integer().\nmin_cost(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_cost(nums :: [integer]) :: integer\n  def min_cost(nums) do\n    \n  end\nend"
+  }
+}

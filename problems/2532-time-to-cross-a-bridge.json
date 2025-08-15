@@ -1,0 +1,57 @@
+{
+  "title": "Time to Cross a Bridge",
+  "problem_id": "2642",
+  "frontend_id": "2532",
+  "difficulty": "Hard",
+  "problem_slug": "time-to-cross-a-bridge",
+  "topics": [
+    "Array",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ],
+  "description": "There are k workers who want to move n boxes from the right (old) warehouse to the left (new) warehouse. You are given the two integers n and k, and a 2D integer array time of size k x 4 where time[i] = [righti, picki, lefti, puti].\nThe warehouses are separated by a river and connected by a bridge. Initially, all k workers are waiting on the left side of the bridge. To move the boxes, the ith worker can do the following:\nThe ith worker is less efficient than the jth worker if either condition is met:\nThe following rules regulate the movement of the workers through the bridge:\nReturn the elapsed minutes at which the last box reaches the left side of the bridge.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "From 0 to 1 minutes: worker 2 crosses the bridge to the right.\nFrom 1 to 2 minutes: worker 2 picks up a box from the right warehouse.\nFrom 2 to 6 minutes: worker 2 crosses the bridge to the left.\nFrom 6 to 7 minutes: worker 2 puts a box at the left warehouse.\nThe whole process ends after 7 minutes. We return 6 because the problem asks for the instance of time at which the last worker reaches the left side of the bridge.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, k <= 104",
+    "time.length == k",
+    "time[i].length == 4",
+    "1 <= lefti, picki, righti, puti <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try simulating this process.",
+    "We can use a priority queue to query over the least efficient worker."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findCrossingTime(int n, int k, vector<vector<int>>& time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findCrossingTime(int n, int k, int[][] time) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findCrossingTime(self, n, k, time):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :type time: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findCrossingTime(self, n: int, k: int, time: List[List[int]]) -> int:\n        ",
+    "c": "int findCrossingTime(int n, int k, int** time, int timeSize, int* timeColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindCrossingTime(int n, int k, int[][] time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @param {number[][]} time\n * @return {number}\n */\nvar findCrossingTime = function(n, k, time) {\n    \n};",
+    "typescript": "function findCrossingTime(n: number, k: number, time: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @param Integer[][] $time\n     * @return Integer\n     */\n    function findCrossingTime($n, $k, $time) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findCrossingTime(_ n: Int, _ k: Int, _ time: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findCrossingTime(n: Int, k: Int, time: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findCrossingTime(int n, int k, List<List<int>> time) {\n    \n  }\n}",
+    "golang": "func findCrossingTime(n int, k int, time [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @param {Integer[][]} time\n# @return {Integer}\ndef find_crossing_time(n, k, time)\n    \nend",
+    "scala": "object Solution {\n    def findCrossingTime(n: Int, k: Int, time: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_crossing_time(n: i32, k: i32, time: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-crossing-time n k time)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec find_crossing_time(N :: integer(), K :: integer(), Time :: [[integer()]]) -> integer().\nfind_crossing_time(N, K, Time) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_crossing_time(n :: integer, k :: integer, time :: [[integer]]) :: integer\n  def find_crossing_time(n, k, time) do\n    \n  end\nend"
+  }
+}

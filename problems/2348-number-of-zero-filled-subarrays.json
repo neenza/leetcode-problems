@@ -1,0 +1,59 @@
+{
+  "title": "Number of Zero-Filled Subarrays",
+  "problem_id": "2432",
+  "frontend_id": "2348",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-zero-filled-subarrays",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "Given an integer array nums, return the number of subarrays filled with 0.\nA subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,3,0,0,2,0,0,4]\nOutput: 6\nExplanation: \nThere are 4 occurrences of [0] as a subarray.\nThere are 2 occurrences of [0,0] as a subarray.\nThere is no occurrence of a subarray with a size more than 2 filled with 0. Therefore, we return 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,0,0,2,0,0]\nOutput: 9\nExplanation:\nThere are 5 occurrences of [0] as a subarray.\nThere are 3 occurrences of [0,0] as a subarray.\nThere is 1 occurrence of [0,0,0] as a subarray.\nThere is no occurrence of a subarray with a size more than 3 filled with 0. Therefore, we return 9.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,10,2019]\nOutput: 0\nExplanation: There is no subarray filled with 0. Therefore, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each zero, you can calculate the number of zero-filled subarrays that end on that index, which is the number of consecutive zeros behind the current element + 1.",
+    "Maintain the number of consecutive zeros behind the current element, count the number of zero-filled subarrays that end on each index, sum it up to get the answer."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long zeroFilledSubarray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long zeroFilledSubarray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def zeroFilledSubarray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def zeroFilledSubarray(self, nums: List[int]) -> int:\n        ",
+    "c": "long long zeroFilledSubarray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long ZeroFilledSubarray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar zeroFilledSubarray = function(nums) {\n    \n};",
+    "typescript": "function zeroFilledSubarray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function zeroFilledSubarray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func zeroFilledSubarray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun zeroFilledSubarray(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int zeroFilledSubarray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func zeroFilledSubarray(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef zero_filled_subarray(nums)\n    \nend",
+    "scala": "object Solution {\n    def zeroFilledSubarray(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn zero_filled_subarray(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (zero-filled-subarray nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec zero_filled_subarray(Nums :: [integer()]) -> integer().\nzero_filled_subarray(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec zero_filled_subarray(nums :: [integer]) :: integer\n  def zero_filled_subarray(nums) do\n    \n  end\nend"
+  }
+}

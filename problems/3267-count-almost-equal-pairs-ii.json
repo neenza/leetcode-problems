@@ -1,0 +1,57 @@
+{
+  "title": "Count Almost Equal Pairs II",
+  "problem_id": "3544",
+  "frontend_id": "3267",
+  "difficulty": "Hard",
+  "problem_slug": "count-almost-equal-pairs-ii",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting",
+    "Enumeration"
+  ],
+  "description": "Attention: In this version, the number of operations that can be performed, has been increased to twice.\nYou are given an array nums consisting of positive integers.\nWe call two integers x and y almost equal if both integers can become equal after performing the following operation at most twice:\nReturn the number of indices i and j in nums where i < j such that nums[i] and nums[j] are almost equal.\nNote that it is allowed for an integer to have leading zeros after performing an operation.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1023,2310,2130,213]\nOutput: 4\nExplanation:\nThe almost equal pairs of elements are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,10,100]\nOutput: 3\nExplanation:\nThe almost equal pairs of elements are:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 5000",
+    "1 <= nums[i] < 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each element, find all possible integers we can get by applying the operations.",
+    "Store the frequencies of all the integers in a hashmap."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPairs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPairs(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairs(self, nums: List[int]) -> int:\n        ",
+    "c": "int countPairs(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPairs(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countPairs = function(nums) {\n    \n};",
+    "typescript": "function countPairs(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countPairs($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairs(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairs(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPairs(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countPairs(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_pairs(nums)\n    \nend",
+    "scala": "object Solution {\n    def countPairs(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_pairs(Nums :: [integer()]) -> integer().\ncount_pairs(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pairs(nums :: [integer]) :: integer\n  def count_pairs(nums) do\n    \n  end\nend"
+  }
+}

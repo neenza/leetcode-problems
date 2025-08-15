@@ -1,0 +1,64 @@
+{
+  "title": "Cycle Length Queries in a Tree",
+  "problem_id": "2597",
+  "frontend_id": "2509",
+  "difficulty": "Hard",
+  "problem_slug": "cycle-length-queries-in-a-tree",
+  "topics": [
+    "Array",
+    "Tree",
+    "Binary Tree"
+  ],
+  "description": "You are given an integer n. There is a complete binary tree with 2n - 1 nodes. The root of that tree is the node with the value 1, and every node with a value val in the range [1, 2n - 1 - 1] has two children where:\nYou are also given a 2D integer array queries of length m, where queries[i] = [ai, bi]. For each query, solve the following problem:\nNote that:\nReturn an array answer of length m where answer[i] is the answer to the ith query.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, queries = [[5,3],[4,7],[2,3]]\nOutput: [4,5,3]\nExplanation: The diagrams above show the tree of 23 - 1 nodes. Nodes colored in red describe the nodes in the cycle after adding the edge.\n- After adding the edge between nodes 3 and 5, the graph contains a cycle of nodes [5,2,1,3]. Thus answer to the first query is 4. We delete the added edge and process the next query.\n- After adding the edge between nodes 4 and 7, the graph contains a cycle of nodes [4,2,1,3,7]. Thus answer to the second query is 5. We delete the added edge and process the next query.\n- After adding the edge between nodes 2 and 3, the graph contains a cycle of nodes [2,1,3]. Thus answer to the third query is 3. We delete the added edge.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/25/bexample1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, queries = [[1,2]]\nOutput: [2]\nExplanation: The diagram above shows the tree of 22 - 1 nodes. Nodes colored in red describe the nodes in the cycle after adding the edge.\n- After adding the edge between nodes 1 and 2, the graph contains a cycle of nodes [2,1]. Thus answer for the first query is 2. We delete the added edge.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/25/aexample2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 30",
+    "m == queries.length",
+    "1 <= m <= 105",
+    "queries[i].length == 2",
+    "1 <= ai, bi <= 2n - 1",
+    "ai != bi"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the distance between nodes “a” and “b”.",
+    "distance(a, b) = depth(a) + depth(b) - 2 * depth(LCA(a, b)). Where depth(a) denotes depth from root to node “a” and LCA(a, b) denotes the lowest common ancestor of nodes “a” and “b”.",
+    "To find LCA(a, b), iterate over all ancestors of node “a” and check if it is the ancestor of node “b” too. If so, take the one with maximum depth."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> cycleLengthQueries(int n, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] cycleLengthQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def cycleLengthQueries(self, n, queries):\n        \"\"\"\n        :type n: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def cycleLengthQueries(self, n: int, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* cycleLengthQueries(int n, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CycleLengthQueries(int n, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar cycleLengthQueries = function(n, queries) {\n    \n};",
+    "typescript": "function cycleLengthQueries(n: number, queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function cycleLengthQueries($n, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func cycleLengthQueries(_ n: Int, _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun cycleLengthQueries(n: Int, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> cycleLengthQueries(int n, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func cycleLengthQueries(n int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef cycle_length_queries(n, queries)\n    \nend",
+    "scala": "object Solution {\n    def cycleLengthQueries(n: Int, queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn cycle_length_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (cycle-length-queries n queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec cycle_length_queries(N :: integer(), Queries :: [[integer()]]) -> [integer()].\ncycle_length_queries(N, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec cycle_length_queries(n :: integer, queries :: [[integer]]) :: [integer]\n  def cycle_length_queries(n, queries) do\n    \n  end\nend"
+  }
+}

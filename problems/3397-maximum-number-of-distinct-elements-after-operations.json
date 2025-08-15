@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Number of Distinct Elements After Operations",
+  "problem_id": "3620",
+  "frontend_id": "3397",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-number-of-distinct-elements-after-operations",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nYou are allowed to perform the following operation on each element of the array at most once:\nReturn the maximum possible number of distinct elements in nums after performing the operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,2,3,3,4], k = 2\nOutput: 6\nExplanation:\nnums changes to [-1, 0, 1, 2, 3, 4] after performing operations on the first four elements.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,4,4,4], k = 1\nOutput: 3\nExplanation:\nBy adding -1 to nums[0] and 1 to nums[1] , nums changes to [3, 5, 4, 4] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "0 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use sorting here?",
+    "Find the minimum element which is not used for each element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistinctElements(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistinctElements(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistinctElements(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistinctElements(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int maxDistinctElements(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistinctElements(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxDistinctElements = function(nums, k) {\n    \n};",
+    "typescript": "function maxDistinctElements(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxDistinctElements($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistinctElements(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistinctElements(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistinctElements(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func maxDistinctElements(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef max_distinct_elements(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def maxDistinctElements(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distinct_elements(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distinct-elements nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_distinct_elements(Nums :: [integer()], K :: integer()) -> integer().\nmax_distinct_elements(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distinct_elements(nums :: [integer], k :: integer) :: integer\n  def max_distinct_elements(nums, k) do\n    \n  end\nend"
+  }
+}

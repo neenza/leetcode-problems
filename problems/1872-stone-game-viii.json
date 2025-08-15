@@ -1,0 +1,60 @@
+{
+  "title": "Stone Game VIII",
+  "problem_id": "2002",
+  "frontend_id": "1872",
+  "difficulty": "Hard",
+  "problem_slug": "stone-game-viii",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Prefix Sum",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob take turns playing a game, with Alice starting first.\nThere are n stones arranged in a row. On each player's turn, while the number of stones is more than one, they will do the following:\nThe game stops when only one stone is left in the row.\nThe score difference between Alice and Bob is (Alice's score - Bob's score). Alice's goal is to maximize the score difference, and Bob's goal is the minimize the score difference.\nGiven an integer array stones of length n where stones[i] represents the value of the ith stone from the left, return the score difference between Alice and Bob if they both play optimally.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: stones = [-1,2,-3,4,-5]\r\nOutput: 5\r\nExplanation:\r\n- Alice removes the first 4 stones, adds (-1) + 2 + (-3) + 4 = 2 to her score, and places a stone of\r\n  value 2 on the left. stones = [2,-5].\r\n- Bob removes the first 2 stones, adds 2 + (-5) = -3 to his score, and places a stone of value -3 on\r\n  the left. stones = [-3].\r\nThe difference between their scores is 2 - (-3) = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: stones = [7,-6,5,10,5,-2,-6]\r\nOutput: 13\r\nExplanation:\r\n- Alice removes all stones, adds 7 + (-6) + 5 + 10 + 5 + (-2) + (-6) = 13 to her score, and places a\r\n  stone of value 13 on the left. stones = [13].\r\nThe difference between their scores is 13 - 0 = 13.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: stones = [-10,-12]\r\nOutput: -22\r\nExplanation:\r\n- Alice can only make one move, which is to remove both stones. She adds (-10) + (-12) = -22 to her\r\n  score and places a stone of value -22 on the left. stones = [-22].\r\nThe difference between their scores is (-22) - 0 = -22.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == stones.length",
+    "2 <= n <= 105",
+    "-104 <= stones[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let's note that the only thing that matters is how many stones were removed so we can maintain dp[numberOfRemovedStones]",
+    "dp[x] = max(sum of all elements up to y - dp[y]) for all y > x"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int stoneGameVIII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int stoneGameVIII(int[] stones) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGameVIII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGameVIII(self, stones: List[int]) -> int:\n        ",
+    "c": "\n\nint stoneGameVIII(int* stones, int stonesSize){\n\n}",
+    "csharp": "public class Solution {\n    public int StoneGameVIII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number}\n */\nvar stoneGameVIII = function(stones) {\n    \n};",
+    "typescript": "function stoneGameVIII(stones: number[]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $stones\n     * @return Integer\n     */\n    function stoneGameVIII($stones) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGameVIII(_ stones: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGameVIII(stones: IntArray): Int {\n        \n    }\n}",
+    "golang": "func stoneGameVIII(stones []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} stones\n# @return {Integer}\ndef stone_game_viii(stones)\n    \nend",
+    "scala": "object Solution {\n    def stoneGameVIII(stones: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game_viii(stones: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (stone-game-viii stones)\n  (-> (listof exact-integer?) exact-integer?)\n\n  )"
+  }
+}

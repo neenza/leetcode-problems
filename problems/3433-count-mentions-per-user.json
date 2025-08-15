@@ -1,0 +1,67 @@
+{
+  "title": "Count Mentions Per User",
+  "problem_id": "3721",
+  "frontend_id": "3433",
+  "difficulty": "Medium",
+  "problem_slug": "count-mentions-per-user",
+  "topics": [
+    "Array",
+    "Math",
+    "Sorting",
+    "Simulation"
+  ],
+  "description": "You are given an integer numberOfUsers representing the total number of users and an array events of size n x 3.\nEach events[i] can be either of the following two types:\nReturn an array mentions where mentions[i] represents the number of mentions the user with id i has across all MESSAGE events.\nAll users are initially online, and if a user goes offline or comes back online, their status change is processed before handling any message event that occurs at the same timestamp.\nNote that a user can be mentioned multiple times in a single message event, and each mention should be counted separately.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numberOfUsers = 2, events = [[\"MESSAGE\",\"10\",\"id1 id0\"],[\"OFFLINE\",\"11\",\"0\"],[\"MESSAGE\",\"71\",\"HERE\"]]\nOutput: [2,2]\nExplanation:\nInitially, all users are online.\nAt timestamp 10, id1 and id0 are mentioned. mentions = [1,1]\nAt timestamp 11, id0 goes offline.\nAt timestamp 71, id0 comes back online and \"HERE\" is mentioned. mentions = [2,2]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numberOfUsers = 2, events = [[\"MESSAGE\",\"10\",\"id1 id0\"],[\"OFFLINE\",\"11\",\"0\"],[\"MESSAGE\",\"12\",\"ALL\"]]\nOutput: [2,2]\nExplanation:\nInitially, all users are online.\nAt timestamp 10, id1 and id0 are mentioned. mentions = [1,1]\nAt timestamp 11, id0 goes offline.\nAt timestamp 12, \"ALL\" is mentioned. This includes offline users, so both id0 and id1 are mentioned. mentions = [2,2]",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: numberOfUsers = 2, events = [[\"OFFLINE\",\"10\",\"0\"],[\"MESSAGE\",\"12\",\"HERE\"]]\nOutput: [0,1]\nExplanation:\nInitially, all users are online.\nAt timestamp 10, id0 goes offline.\nAt timestamp 12, \"HERE\" is mentioned. Because id0 is still offline, they will not be mentioned. mentions = [0,1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= numberOfUsers <= 100",
+    "1 <= events.length <= 100",
+    "events[i].length == 3",
+    "events[i][0] will be one of MESSAGE or OFFLINE.",
+    "1 <= int(events[i][1]) <= 105",
+    "The number of id<number> mentions in any \"MESSAGE\" event is between 1 and 100.",
+    "0 <= <number> <= numberOfUsers - 1",
+    "It is guaranteed that the user id referenced in the OFFLINE event is online at the time the event occurs."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort events by timestamp and then process each event.",
+    "Maintain two sets for offline and online user IDs."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countMentions(int numberOfUsers, vector<vector<string>>& events) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countMentions(int numberOfUsers, List<List<String>> events) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countMentions(self, numberOfUsers, events):\n        \"\"\"\n        :type numberOfUsers: int\n        :type events: List[List[str]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countMentions(self, numberOfUsers: int, events: List[List[str]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countMentions(int numberOfUsers, char*** events, int eventsSize, int* eventsColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountMentions(int numberOfUsers, IList<IList<string>> events) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} numberOfUsers\n * @param {string[][]} events\n * @return {number[]}\n */\nvar countMentions = function(numberOfUsers, events) {\n    \n};",
+    "typescript": "function countMentions(numberOfUsers: number, events: string[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $numberOfUsers\n     * @param String[][] $events\n     * @return Integer[]\n     */\n    function countMentions($numberOfUsers, $events) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countMentions(_ numberOfUsers: Int, _ events: [[String]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countMentions(numberOfUsers: Int, events: List<List<String>>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countMentions(int numberOfUsers, List<List<String>> events) {\n    \n  }\n}",
+    "golang": "func countMentions(numberOfUsers int, events [][]string) []int {\n    \n}",
+    "ruby": "# @param {Integer} number_of_users\n# @param {String[][]} events\n# @return {Integer[]}\ndef count_mentions(number_of_users, events)\n    \nend",
+    "scala": "object Solution {\n    def countMentions(numberOfUsers: Int, events: List[List[String]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_mentions(number_of_users: i32, events: Vec<Vec<String>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-mentions numberOfUsers events)\n  (-> exact-integer? (listof (listof string?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec count_mentions(NumberOfUsers :: integer(), Events :: [[unicode:unicode_binary()]]) -> [integer()].\ncount_mentions(NumberOfUsers, Events) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_mentions(number_of_users :: integer, events :: [[String.t]]) :: [integer]\n  def count_mentions(number_of_users, events) do\n    \n  end\nend"
+  }
+}

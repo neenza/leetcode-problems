@@ -1,0 +1,56 @@
+{
+  "title": "Count the Number of Vowel Strings in Range",
+  "problem_id": "2654",
+  "frontend_id": "2586",
+  "difficulty": "Easy",
+  "problem_slug": "count-the-number-of-vowel-strings-in-range",
+  "topics": [
+    "Array",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed array of string words and two integers left and right.\nA string is called a vowel string if it starts with a vowel character and ends with a vowel character where vowel characters are 'a', 'e', 'i', 'o', and 'u'.\nReturn the number of vowel strings words[i] where i belongs to the inclusive range [left, right].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"are\",\"amy\",\"u\"], left = 0, right = 2\nOutput: 2\nExplanation: \n- \"are\" is a vowel string because it starts with 'a' and ends with 'e'.\n- \"amy\" is not a vowel string because it does not end with a vowel.\n- \"u\" is a vowel string because it starts with 'u' and ends with 'u'.\nThe number of vowel strings in the mentioned range is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"hey\",\"aeo\",\"mu\",\"ooo\",\"artro\"], left = 1, right = 4\nOutput: 3\nExplanation: \n- \"aeo\" is a vowel string because it starts with 'a' and ends with 'o'.\n- \"mu\" is not a vowel string because it does not start with a vowel.\n- \"ooo\" is a vowel string because it starts with 'o' and ends with 'o'.\n- \"artro\" is a vowel string because it starts with 'a' and ends with 'o'.\nThe number of vowel strings in the mentioned range is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 1000",
+    "1 <= words[i].length <= 10",
+    "words[i] consists of only lowercase English letters.",
+    "0 <= left <= right < words.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "consider iterating over all strings from left to right and use an if condition to check if the first character and last character are vowels."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int vowelStrings(vector<string>& words, int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int vowelStrings(String[] words, int left, int right) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def vowelStrings(self, words, left, right):\n        \"\"\"\n        :type words: List[str]\n        :type left: int\n        :type right: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def vowelStrings(self, words: List[str], left: int, right: int) -> int:\n        ",
+    "c": "int vowelStrings(char** words, int wordsSize, int left, int right) {\n    \n}",
+    "csharp": "public class Solution {\n    public int VowelStrings(string[] words, int left, int right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number} left\n * @param {number} right\n * @return {number}\n */\nvar vowelStrings = function(words, left, right) {\n    \n};",
+    "typescript": "function vowelStrings(words: string[], left: number, right: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param Integer $left\n     * @param Integer $right\n     * @return Integer\n     */\n    function vowelStrings($words, $left, $right) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func vowelStrings(_ words: [String], _ left: Int, _ right: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun vowelStrings(words: Array<String>, left: Int, right: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int vowelStrings(List<String> words, int left, int right) {\n    \n  }\n}",
+    "golang": "func vowelStrings(words []string, left int, right int) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {Integer} left\n# @param {Integer} right\n# @return {Integer}\ndef vowel_strings(words, left, right)\n    \nend",
+    "scala": "object Solution {\n    def vowelStrings(words: Array[String], left: Int, right: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn vowel_strings(words: Vec<String>, left: i32, right: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (vowel-strings words left right)\n  (-> (listof string?) exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec vowel_strings(Words :: [unicode:unicode_binary()], Left :: integer(), Right :: integer()) -> integer().\nvowel_strings(Words, Left, Right) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec vowel_strings(words :: [String.t], left :: integer, right :: integer) :: integer\n  def vowel_strings(words, left, right) do\n    \n  end\nend"
+  }
+}

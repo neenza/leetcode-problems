@@ -1,0 +1,65 @@
+{
+  "title": "Maximize Score After N Operations",
+  "problem_id": "1906",
+  "frontend_id": "1799",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-score-after-n-operations",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Number Theory",
+    "Bitmask"
+  ],
+  "description": "You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.\nIn the ith operation (1-indexed), you will:\nReturn the maximum score you can receive after performing n operations.\nThe function gcd(x, y) is the greatest common divisor of x and y.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2]\nOutput: 1\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 2)) = 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,4,6,8]\nOutput: 11\nExplanation: The optimal choice of operations is:\n(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4,5,6]\nOutput: 14\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 7",
+    "nums.length == 2 * n",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find every way to split the array until n groups of 2. Brute force recursion is acceptable.",
+    "Calculate the gcd of every pair and greedily multiply the largest gcds."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxScore(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "typescript": "function maxScore(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxScore($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxScore(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_score(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_score(Nums :: [integer()]) -> integer().\nmax_score(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer]) :: integer\n  def max_score(nums) do\n    \n  end\nend"
+  }
+}

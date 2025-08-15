@@ -1,0 +1,53 @@
+{
+  "title": "Maximize Number of Nice Divisors",
+  "problem_id": "1936",
+  "frontend_id": "1808",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-number-of-nice-divisors",
+  "topics": [
+    "Math",
+    "Recursion",
+    "Number Theory"
+  ],
+  "description": "You are given a positive integer primeFactors. You are asked to construct a positive integer n that satisfies the following conditions:\nReturn the number of nice divisors of n. Since that number can be too large, return it modulo 109 + 7.\nNote that a prime number is a natural number greater than 1 that is not a product of two smaller natural numbers. The prime factors of a number n is a list of prime numbers such that their product equals n.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: primeFactors = 5\r\nOutput: 6\r\nExplanation: 200 is a valid value of n.\r\nIt has 5 prime factors: [2,2,2,5,5], and it has 6 nice divisors: [10,20,40,50,100,200].\r\nThere is not other value of n that has at most 5 prime factors and more nice divisors.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: primeFactors = 8\r\nOutput: 18",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= primeFactors <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The number of nice divisors is equal to the product of the count of each prime factor. Then the problem is reduced to: given n, find a sequence of numbers whose sum equals n and whose product is maximized.",
+    "This sequence can have no numbers that are larger than 4. Proof: if it contains a number x that is larger than 4, then you can replace x with floor(x/2) and ceil(x/2), and floor(x/2) * ceil(x/2) > x. You can also replace 4s with two 2s. Hence, there will always be optimal solutions with only 2s and 3s.",
+    "If there are three 2s, you can replace them with two 3s to get a better product. Hence, you'll never have more than two 2s.",
+    "Keep adding 3s as long as n ≥ 5."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxNiceDivisors(int primeFactors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxNiceDivisors(int primeFactors) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxNiceDivisors(self, primeFactors):\n        \"\"\"\n        :type primeFactors: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxNiceDivisors(self, primeFactors: int) -> int:\n        ",
+    "c": "\n\nint maxNiceDivisors(int primeFactors){\n\n}",
+    "csharp": "public class Solution {\n    public int MaxNiceDivisors(int primeFactors) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} primeFactors\n * @return {number}\n */\nvar maxNiceDivisors = function(primeFactors) {\n    \n};",
+    "typescript": "function maxNiceDivisors(primeFactors: number): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $primeFactors\n     * @return Integer\n     */\n    function maxNiceDivisors($primeFactors) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxNiceDivisors(_ primeFactors: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxNiceDivisors(primeFactors: Int): Int {\n        \n    }\n}",
+    "golang": "func maxNiceDivisors(primeFactors int) int {\n    \n}",
+    "ruby": "# @param {Integer} prime_factors\n# @return {Integer}\ndef max_nice_divisors(prime_factors)\n    \nend",
+    "scala": "object Solution {\n    def maxNiceDivisors(primeFactors: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_nice_divisors(prime_factors: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-nice-divisors primeFactors)\n  (-> exact-integer? exact-integer?)\n\n  )"
+  }
+}

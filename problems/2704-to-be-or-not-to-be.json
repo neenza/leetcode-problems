@@ -1,0 +1,33 @@
+{
+  "title": "To Be Or Not To Be",
+  "problem_id": "2813",
+  "frontend_id": "2704",
+  "difficulty": "Easy",
+  "problem_slug": "to-be-or-not-to-be",
+  "topics": [],
+  "description": "Write a function expect that helps developers test their code. It should take in any value val and return an object with the following two functions.\nExample 1:\nExample 2:\nExample 3:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: func = () => expect(5).toBe(5)\nOutput: {\"value\": true}\nExplanation: 5 === 5 so this expression returns true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: func = () => expect(5).toBe(null)\nOutput: {\"error\": \"Not Equal\"}\nExplanation: 5 !== null so this expression throw the error \"Not Equal\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: func = () => expect(5).notToBe(null)\nOutput: {\"value\": true}\nExplanation: 5 !== null so this expression returns true.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "javascript": "/**\n * @param {string} val\n * @return {Object}\n */\nvar expect = function(val) {\n    \n};\n\n/**\n * expect(5).toBe(5); // true\n * expect(5).notToBe(5); // throws \"Equal\"\n */",
+    "typescript": "type ToBeOrNotToBe = {\n    toBe: (val: any) => boolean;\n    notToBe: (val: any) => boolean;\n};\n\nfunction expect(val: any): ToBeOrNotToBe {\n    \n};\n\n/**\n * expect(5).toBe(5); // true\n * expect(5).notToBe(5); // throws \"Equal\"\n */"
+  }
+}

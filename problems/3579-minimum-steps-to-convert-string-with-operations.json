@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Steps to Convert String with Operations",
+  "problem_id": "3866",
+  "frontend_id": "3579",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-steps-to-convert-string-with-operations",
+  "topics": [
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given two strings, word1 and word2, of equal length. You need to transform word1 into word2.\nFor this, divide word1 into one or more contiguous substrings. For each substring substr you can perform the following operations:\nEach of these counts as one operation and each character of each substring can be used in each type of operation at most once (i.e. no single index may be involved in more than one replace, one swap, or one reverse).\nReturn the minimum number of operations required to transform word1 into word2.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word1 = \"abcdf\", word2 = \"dacbe\"\nOutput: 4\nExplanation:\nDivide word1 into \"ab\" , \"c\" , and \"df\" . The operations are:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word1 = \"abceded\", word2 = \"baecfef\"\nOutput: 4\nExplanation:\nDivide word1 into \"ab\" , \"ce\" , and \"ded\" . The operations are:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word1 = \"abcdef\", word2 = \"fedabc\"\nOutput: 2\nExplanation:\nDivide word1 into \"abcdef\" . The operations are:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word1.length == word2.length <= 100",
+    "word1 and word2 consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming",
+    "Do DP on disjoint substrings of <code>word1</code>. For the DP, we try both the substring and its reversed version (just add one extra operation)",
+    "First we swap pairs like (<code>word1[i]</code>, <code>word2[i]</code>) and (<code>word1[j]</code>, <code>word2[j]</code>) where <code>word1[i] == word2[j]</code> and <code>word2[i] == word1[j]</code>",
+    "For the remaining characters, we use replace operations"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(string word1, string word2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(String word1, String word2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, word1, word2):\n        \"\"\"\n        :type word1: str\n        :type word2: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, word1: str, word2: str) -> int:\n        ",
+    "c": "int minOperations(char* word1, char* word2) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(string word1, string word2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word1\n * @param {string} word2\n * @return {number}\n */\nvar minOperations = function(word1, word2) {\n    \n};",
+    "typescript": "function minOperations(word1: string, word2: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word1\n     * @param String $word2\n     * @return Integer\n     */\n    function minOperations($word1, $word2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ word1: String, _ word2: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(word1: String, word2: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(String word1, String word2) {\n    \n  }\n}",
+    "golang": "func minOperations(word1 string, word2 string) int {\n    \n}",
+    "ruby": "# @param {String} word1\n# @param {String} word2\n# @return {Integer}\ndef min_operations(word1, word2)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(word1: String, word2: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(word1: String, word2: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations word1 word2)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> integer().\nmin_operations(Word1, Word2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(word1 :: String.t, word2 :: String.t) :: integer\n  def min_operations(word1, word2) do\n    \n  end\nend"
+  }
+}

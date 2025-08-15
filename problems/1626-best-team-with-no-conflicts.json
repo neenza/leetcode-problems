@@ -1,0 +1,62 @@
+{
+  "title": "Best Team With No Conflicts",
+  "problem_id": "1748",
+  "frontend_id": "1626",
+  "difficulty": "Medium",
+  "problem_slug": "best-team-with-no-conflicts",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "description": "You are the manager of a basketball team. For the upcoming tournament, you want to choose the team with the highest overall score. The score of the team is the sum of scores of all the players in the team.\nHowever, the basketball team is not allowed to have conflicts. A conflict exists if a younger player has a strictly higher score than an older player. A conflict does not occur between players of the same age.\nGiven two lists, scores and ages, where each scores[i] and ages[i] represents the score and age of the ith player, respectively, return the highest overall score of all possible basketball teams.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: scores = [1,3,5,10,15], ages = [1,2,3,4,5]\nOutput: 34\nExplanation: You can choose all the players.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: scores = [4,5,6,5], ages = [2,1,2,1]\nOutput: 16\nExplanation: It is best to choose the last 3 players. Notice that you are allowed to choose multiple people of the same age.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: scores = [1,2,3,5], ages = [8,9,10,1]\nOutput: 6\nExplanation: It is best to choose the first 3 players.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= scores.length, ages.length <= 1000",
+    "scores.length == ages.length",
+    "1 <= scores[i] <= 106",
+    "1 <= ages[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "First, sort players by age and break ties by their score. You can now consider the players from left to right.",
+    "If you choose to include a player, you must only choose players with at least that score later on."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int bestTeamScore(vector<int>& scores, vector<int>& ages) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bestTeamScore(int[] scores, int[] ages) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def bestTeamScore(self, scores, ages):\n        \"\"\"\n        :type scores: List[int]\n        :type ages: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:\n        ",
+    "c": "int bestTeamScore(int* scores, int scoresSize, int* ages, int agesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BestTeamScore(int[] scores, int[] ages) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} scores\n * @param {number[]} ages\n * @return {number}\n */\nvar bestTeamScore = function(scores, ages) {\n    \n};",
+    "typescript": "function bestTeamScore(scores: number[], ages: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $scores\n     * @param Integer[] $ages\n     * @return Integer\n     */\n    function bestTeamScore($scores, $ages) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func bestTeamScore(_ scores: [Int], _ ages: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun bestTeamScore(scores: IntArray, ages: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int bestTeamScore(List<int> scores, List<int> ages) {\n    \n  }\n}",
+    "golang": "func bestTeamScore(scores []int, ages []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} scores\n# @param {Integer[]} ages\n# @return {Integer}\ndef best_team_score(scores, ages)\n    \nend",
+    "scala": "object Solution {\n    def bestTeamScore(scores: Array[Int], ages: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn best_team_score(scores: Vec<i32>, ages: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (best-team-score scores ages)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec best_team_score(Scores :: [integer()], Ages :: [integer()]) -> integer().\nbest_team_score(Scores, Ages) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec best_team_score(scores :: [integer], ages :: [integer]) :: integer\n  def best_team_score(scores, ages) do\n    \n  end\nend"
+  }
+}

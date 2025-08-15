@@ -1,0 +1,57 @@
+{
+  "title": "Longest Well-Performing Interval",
+  "problem_id": "1219",
+  "frontend_id": "1124",
+  "difficulty": "Medium",
+  "problem_slug": "longest-well-performing-interval",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Stack",
+    "Monotonic Stack",
+    "Prefix Sum"
+  ],
+  "description": "We are given hours, a list of the number of hours worked per day for a given employee.\nA day is considered to be a tiring day if and only if the number of hours worked is (strictly) greater than 8.\nA well-performing interval is an interval of days for which the number of tiring days is strictly larger than the number of non-tiring days.\nReturn the length of the longest well-performing interval.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: hours = [9,9,6,0,6,6,9]\nOutput: 3\nExplanation: The longest well-performing interval is [9,9,6].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: hours = [6,6,6]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= hours.length <= 104",
+    "0 <= hours[i] <= 16"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Make a new array A of +1/-1s corresponding to if hours[i] is > 8 or not. The goal is to find the longest subarray with positive sum.",
+    "Using prefix sums (PrefixSum[i+1] = A[0] + A[1] + ... + A[i]), you need to find for each j, the smallest i < j with PrefixSum[i] + 1 == PrefixSum[j]."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestWPI(vector<int>& hours) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestWPI(int[] hours) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestWPI(self, hours):\n        \"\"\"\n        :type hours: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestWPI(self, hours: List[int]) -> int:\n        ",
+    "c": "int longestWPI(int* hours, int hoursSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestWPI(int[] hours) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} hours\n * @return {number}\n */\nvar longestWPI = function(hours) {\n    \n};",
+    "typescript": "function longestWPI(hours: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $hours\n     * @return Integer\n     */\n    function longestWPI($hours) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestWPI(_ hours: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestWPI(hours: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestWPI(List<int> hours) {\n    \n  }\n}",
+    "golang": "func longestWPI(hours []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} hours\n# @return {Integer}\ndef longest_wpi(hours)\n    \nend",
+    "scala": "object Solution {\n    def longestWPI(hours: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_wpi(hours: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-wpi hours)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec longest_wpi(Hours :: [integer()]) -> integer().\nlongest_wpi(Hours) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_wpi(hours :: [integer]) :: integer\n  def longest_wpi(hours) do\n    \n  end\nend"
+  }
+}

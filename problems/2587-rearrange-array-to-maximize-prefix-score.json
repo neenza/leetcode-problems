@@ -1,0 +1,56 @@
+{
+  "title": "Rearrange Array to Maximize Prefix Score",
+  "problem_id": "2655",
+  "frontend_id": "2587",
+  "difficulty": "Medium",
+  "problem_slug": "rearrange-array-to-maximize-prefix-score",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed integer array nums. You can rearrange the elements of nums to any order (including the given order).\nLet prefix be the array containing the prefix sums of nums after rearranging it. In other words, prefix[i] is the sum of the elements from 0 to i in nums after rearranging it. The score of nums is the number of positive integers in the array prefix.\nReturn the maximum score you can achieve.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,-1,0,1,-3,3,-3]\nOutput: 6\nExplanation: We can rearrange the array into nums = [2,3,1,-1,-3,0,-3].\nprefix = [2,5,6,5,2,2,-1], so the score is 6.\nIt can be shown that 6 is the maximum score we can obtain.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-2,-3,0]\nOutput: 0\nExplanation: Any rearrangement of the array will result in a score of 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-106 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The best order of the array is in decreasing order.",
+    "Sort the array in decreasing order and count the number of positive values in the prefix sum array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, nums: List[int]) -> int:\n        ",
+    "c": "int maxScore(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "typescript": "function maxScore(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxScore($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxScore(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_score(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_score(Nums :: [integer()]) -> integer().\nmax_score(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(nums :: [integer]) :: integer\n  def max_score(nums) do\n    \n  end\nend"
+  }
+}

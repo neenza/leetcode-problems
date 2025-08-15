@@ -1,0 +1,48 @@
+{
+  "title": "Find Books with No Available Copies",
+  "problem_id": "3910",
+  "frontend_id": "3570",
+  "difficulty": "Easy",
+  "problem_slug": "find-books-with-no-available-copies",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: library_books\nTable: borrowing_records\nWrite a solution to find all books that are currently borrowed (not returned) and have zero copies available in the library.\nReturn the result table ordered by current borrowers in descending order, then by book title in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| book_id          | int     |\n| title            | varchar |\n| author           | varchar |\n| genre            | varchar |\n| publication_year | int     |\n| total_copies     | int     |\n+------------------+---------+\nbook_id is the unique identifier for this table.\nEach row contains information about a book in the library, including the total number of copies owned by the library.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| record_id     | int     |\n| book_id       | int     |\n| borrower_name | varchar |\n| borrow_date   | date    |\n| return_date   | date    |\n+---------------+---------+\nrecord_id is the unique identifier for this table.\nEach row represents a borrowing transaction and return_date is NULL if the book is currently borrowed and hasn't been returned yet.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+---------+------------------------+------------------+----------+------------------+--------------+\n| book_id | title                  | author           | genre    | publication_year | total_copies |\n+---------+------------------------+------------------+----------+------------------+--------------+\n| 1       | The Great Gatsby       | F. Scott         | Fiction  | 1925             | 3            |\n| 2       | To Kill a Mockingbird  | Harper Lee       | Fiction  | 1960             | 3            |\n| 3       | 1984                   | George Orwell    | Dystopian| 1949             | 1            |\n| 4       | Pride and Prejudice    | Jane Austen      | Romance  | 1813             | 2            |\n| 5       | The Catcher in the Rye | J.D. Salinger    | Fiction  | 1951             | 1            |\n| 6       | Brave New World        | Aldous Huxley    | Dystopian| 1932             | 4            |\n+---------+------------------------+------------------+----------+------------------+--------------+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+-----------+---------+---------------+-------------+-------------+\n| record_id | book_id | borrower_name | borrow_date | return_date |\n+-----------+---------+---------------+-------------+-------------+\n| 1         | 1       | Alice Smith   | 2024-01-15  | NULL        |\n| 2         | 1       | Bob Johnson   | 2024-01-20  | NULL        |\n| 3         | 2       | Carol White   | 2024-01-10  | 2024-01-25  |\n| 4         | 3       | David Brown   | 2024-02-01  | NULL        |\n| 5         | 4       | Emma Wilson   | 2024-01-05  | NULL        |\n| 6         | 5       | Frank Davis   | 2024-01-18  | 2024-02-10  |\n| 7         | 1       | Grace Miller  | 2024-02-05  | NULL        |\n| 8         | 6       | Henry Taylor  | 2024-01-12  | NULL        |\n| 9         | 2       | Ivan Clark    | 2024-02-12  | NULL        |\n| 10        | 2       | Jane Adams    | 2024-02-15  | NULL        |\n+-----------+---------+---------------+-------------+-------------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+---------+------------------+---------------+-----------+------------------+-------------------+\n| book_id | title            | author        | genre     | publication_year | current_borrowers |\n+---------+------------------+---------------+-----------+------------------+-------------------+\n| 1       | The Great Gatsby | F. Scott      | Fiction   | 1925             | 3                 | \n| 3       | 1984             | George Orwell | Dystopian | 1949             | 1                 |\n+---------+------------------+---------------+-----------+------------------+-------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_books_with_no_available_copies(library_books: pd.DataFrame, borrowing_records: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

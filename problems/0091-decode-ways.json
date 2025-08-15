@@ -1,0 +1,56 @@
+{
+  "title": "Decode Ways",
+  "problem_id": "91",
+  "frontend_id": "91",
+  "difficulty": "Medium",
+  "problem_slug": "decode-ways",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You have intercepted a secret message encoded as a string of numbers. The message is decoded via the following mapping:\n\"1\" -> 'A'\n\"2\" -> 'B'\n...\n\"25\" -> 'Y'\n\"26\" -> 'Z'\nHowever, while decoding the message, you realize that there are many different ways you can decode the message because some codes are contained in other codes (\"2\" and \"5\" vs \"25\").\nFor example, \"11106\" can be decoded into:\nNote: there may be strings that are impossible to decode.\n\nGiven a string s containing only digits, return the number of ways to decode it. If the entire string cannot be decoded in any valid way, return 0.\nThe test cases are generated so that the answer fits in a 32-bit integer.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"12\"\nOutput: 2\nExplanation:\n\"12\" could be decoded as \"AB\" (1 2) or \"L\" (12).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"226\"\nOutput: 3\nExplanation:\n\"226\" could be decoded as \"BZ\" (2 26), \"VF\" (22 6), or \"BBF\" (2 2 6).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"06\"\nOutput: 0\nExplanation:\n\"06\" cannot be mapped to \"F\" because of the leading zero (\"6\" is different from \"06\"). In this case, the string is not a valid encoding, so return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s contains only digits and may contain leading zero(s)."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numDecodings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numDecodings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numDecodings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numDecodings(self, s: str) -> int:\n        ",
+    "c": "int numDecodings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumDecodings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numDecodings = function(s) {\n    \n};",
+    "typescript": "function numDecodings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function numDecodings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numDecodings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numDecodings(s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numDecodings(String s) {\n    \n  }\n}",
+    "golang": "func numDecodings(s string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef num_decodings(s)\n    \nend",
+    "scala": "object Solution {\n    def numDecodings(s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_decodings(s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-decodings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec num_decodings(S :: unicode:unicode_binary()) -> integer().\nnum_decodings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_decodings(s :: String.t) :: integer\n  def num_decodings(s) do\n    \n  end\nend"
+  }
+}

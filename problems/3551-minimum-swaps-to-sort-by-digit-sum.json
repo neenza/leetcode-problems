@@ -1,0 +1,61 @@
+{
+  "title": "Minimum Swaps to Sort by Digit Sum",
+  "problem_id": "3847",
+  "frontend_id": "3551",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-swaps-to-sort-by-digit-sum",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
+  "description": "You are given an array nums of distinct positive integers. You need to sort the array in increasing order based on the sum of the digits of each number. If two numbers have the same digit sum, the smaller number appears first in the sorted order.\nReturn the minimum number of swaps required to rearrange nums into this sorted order.\nA swap is defined as exchanging the values at two distinct positions in the array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [37,100]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [22,14,33,7]\nOutput: 0\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [18,43,34,16]\nOutput: 2\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 109",
+    "nums consists of distinct positive integers."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "First, sort the array based on digit sum (and value as a tiebreaker). Then, map each original value to its index in the sorted array.",
+    "Now, the problem reduces to finding the minimum number of swaps to sort this mapped array. The answer is <code>n - number_of_cycles</code> in the permutation."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSwaps(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSwaps(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSwaps(self, nums: List[int]) -> int:\n        ",
+    "c": "int minSwaps(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSwaps(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minSwaps = function(nums) {\n    \n};",
+    "typescript": "function minSwaps(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minSwaps($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSwaps(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSwaps(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSwaps(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minSwaps(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_swaps(nums)\n    \nend",
+    "scala": "object Solution {\n    def minSwaps(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_swaps(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-swaps nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_swaps(Nums :: [integer()]) -> integer().\nmin_swaps(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_swaps(nums :: [integer]) :: integer\n  def min_swaps(nums) do\n    \n  end\nend"
+  }
+}

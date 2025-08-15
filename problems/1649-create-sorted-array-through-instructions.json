@@ -1,0 +1,60 @@
+{
+  "title": "Create Sorted Array through Instructions",
+  "problem_id": "1772",
+  "frontend_id": "1649",
+  "difficulty": "Hard",
+  "problem_slug": "create-sorted-array-through-instructions",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Merge Sort",
+    "Ordered Set"
+  ],
+  "description": "Given an integer array instructions, you are asked to create a sorted array from the elements in instructions. You start with an empty container nums. For each element from left to right in instructions, insert it into nums. The cost of each insertion is the minimum of the following:\nFor example, if inserting element 3 into nums = [1,2,3,5], the cost of insertion is min(2, 1) (elements 1 and 2 are less than 3, element 5 is greater than 3) and nums will become [1,2,3,3,5].\nReturn the total cost to insert all elements from instructions into nums. Since the answer may be large, return it modulo 109 + 7\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: instructions = [1,5,6,2]\r\nOutput: 1\r\nExplanation: Begin with nums = [].\r\nInsert 1 with cost min(0, 0) = 0, now nums = [1].\r\nInsert 5 with cost min(1, 0) = 0, now nums = [1,5].\r\nInsert 6 with cost min(2, 0) = 0, now nums = [1,5,6].\r\nInsert 2 with cost min(1, 2) = 1, now nums = [1,2,5,6].\r\nThe total cost is 0 + 0 + 0 + 1 = 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: instructions = [1,2,3,6,5,4]\r\nOutput: 3\r\nExplanation: Begin with nums = [].\r\nInsert 1 with cost min(0, 0) = 0, now nums = [1].\r\nInsert 2 with cost min(1, 0) = 0, now nums = [1,2].\r\nInsert 3 with cost min(2, 0) = 0, now nums = [1,2,3].\r\nInsert 6 with cost min(3, 0) = 0, now nums = [1,2,3,6].\r\nInsert 5 with cost min(3, 1) = 1, now nums = [1,2,3,5,6].\r\nInsert 4 with cost min(3, 2) = 2, now nums = [1,2,3,4,5,6].\r\nThe total cost is 0 + 0 + 0 + 0 + 1 + 2 = 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: instructions = [1,3,3,3,2,4,2,1,2]\r\nOutput: 4\r\nExplanation: Begin with nums = [].\r\nInsert 1 with cost min(0, 0) = 0, now nums = [1].\r\nInsert 3 with cost min(1, 0) = 0, now nums = [1,3].\r\nInsert 3 with cost min(1, 0) = 0, now nums = [1,3,3].\r\nInsert 3 with cost min(1, 0) = 0, now nums = [1,3,3,3].\r\nInsert 2 with cost min(1, 3) = 1, now nums = [1,2,3,3,3].\r\nInsert 4 with cost min(5, 0) = 0, now nums = [1,2,3,3,3,4].\r\n​​​​​​​Insert 2 with cost min(1, 4) = 1, now nums = [1,2,2,3,3,3,4].\r\n​​​​​​​Insert 1 with cost min(0, 6) = 0, now nums = [1,1,2,2,3,3,3,4].\r\n​​​​​​​Insert 2 with cost min(2, 4) = 2, now nums = [1,1,2,2,2,3,3,3,4].\r\nThe total cost is 0 + 0 + 0 + 0 + 1 + 0 + 1 + 0 + 2 = 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= instructions.length <= 105",
+    "1 <= instructions[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "This problem is closely related to finding the number of inversions in an array",
+    "if i know the position in which i will insert the i-th element in I can find the minimum cost to insert it"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int createSortedArray(vector<int>& instructions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int createSortedArray(int[] instructions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def createSortedArray(self, instructions):\n        \"\"\"\n        :type instructions: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def createSortedArray(self, instructions: List[int]) -> int:\n        ",
+    "c": "\n\nint createSortedArray(int* instructions, int instructionsSize){\n\n}",
+    "csharp": "public class Solution {\n    public int CreateSortedArray(int[] instructions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} instructions\n * @return {number}\n */\nvar createSortedArray = function(instructions) {\n    \n};",
+    "typescript": "function createSortedArray(instructions: number[]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $instructions\n     * @return Integer\n     */\n    function createSortedArray($instructions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func createSortedArray(_ instructions: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun createSortedArray(instructions: IntArray): Int {\n        \n    }\n}",
+    "golang": "func createSortedArray(instructions []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} instructions\n# @return {Integer}\ndef create_sorted_array(instructions)\n    \nend",
+    "scala": "object Solution {\n    def createSortedArray(instructions: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn create_sorted_array(instructions: Vec<i32>) -> i32 {\n        \n    }\n}"
+  }
+}

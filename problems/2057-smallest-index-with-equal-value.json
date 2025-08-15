@@ -1,0 +1,57 @@
+{
+  "title": "Smallest Index With Equal Value",
+  "problem_id": "2181",
+  "frontend_id": "2057",
+  "difficulty": "Easy",
+  "problem_slug": "smallest-index-with-equal-value",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given a 0-indexed integer array nums, return the smallest index i of nums such that i mod 10 == nums[i], or -1 if such index does not exist.\nx mod y denotes the remainder when x is divided by y.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,2]\nOutput: 0\nExplanation: \ni=0: 0 mod 10 = 0 == nums[0].\ni=1: 1 mod 10 = 1 == nums[1].\ni=2: 2 mod 10 = 2 == nums[2].\nAll indices have i mod 10 == nums[i], so we return the smallest index 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,3,2,1]\nOutput: 2\nExplanation: \ni=0: 0 mod 10 = 0 != nums[0].\ni=1: 1 mod 10 = 1 != nums[1].\ni=2: 2 mod 10 = 2 == nums[2].\ni=3: 3 mod 10 = 3 != nums[3].\n2 is the only index which has i mod 10 == nums[i].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4,5,6,7,8,9,0]\nOutput: -1\nExplanation: No index satisfies i mod 10 == nums[i].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "0 <= nums[i] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Starting with i=0, check the condition for each index. The first one you find to be true is the smallest index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int smallestEqual(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestEqual(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestEqual(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestEqual(self, nums: List[int]) -> int:\n        ",
+    "c": "int smallestEqual(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SmallestEqual(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar smallestEqual = function(nums) {\n    \n};",
+    "typescript": "function smallestEqual(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function smallestEqual($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestEqual(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestEqual(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int smallestEqual(List<int> nums) {\n    \n  }\n}",
+    "golang": "func smallestEqual(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef smallest_equal(nums)\n    \nend",
+    "scala": "object Solution {\n    def smallestEqual(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_equal(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-equal nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec smallest_equal(Nums :: [integer()]) -> integer().\nsmallest_equal(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_equal(nums :: [integer]) :: integer\n  def smallest_equal(nums) do\n    \n  end\nend"
+  }
+}

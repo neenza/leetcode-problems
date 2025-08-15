@@ -1,0 +1,59 @@
+{
+  "title": "Longest Even Odd Subarray With Threshold",
+  "problem_id": "2866",
+  "frontend_id": "2760",
+  "difficulty": "Easy",
+  "problem_slug": "longest-even-odd-subarray-with-threshold",
+  "topics": [
+    "Array",
+    "Sliding Window"
+  ],
+  "description": "You are given a 0-indexed integer array nums and an integer threshold.\nFind the length of the longest subarray of nums starting at index l and ending at index r (0 <= l <= r < nums.length) that satisfies the following conditions:\nReturn an integer denoting the length of the longest such subarray.\nNote: A subarray is a contiguous non-empty sequence of elements within an array.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,5,4], threshold = 5\nOutput: 3\nExplanation: In this example, we can select the subarray that starts at l = 1 and ends at r = 3 => [2,5,4]. This subarray satisfies the conditions.\nHence, the answer is the length of the subarray, 3. We can show that 3 is the maximum possible achievable length.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2], threshold = 2\nOutput: 1\nExplanation: In this example, we can select the subarray that starts at l = 1 and ends at r = 1 => [2]. \nIt satisfies all the conditions and we can show that 1 is the maximum possible achievable length.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,3,4,5], threshold = 4\nOutput: 3\nExplanation: In this example, we can select the subarray that starts at l = 0 and ends at r = 2 => [2,3,4]. \nIt satisfies all the conditions.\nHence, the answer is the length of the subarray, 3. We can show that 3 is the maximum possible achievable length.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100",
+    "1 <= threshold <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Brute force all the possible subarrays and find the longest that satisfies the conditions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int longestAlternatingSubarray(vector<int>& nums, int threshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestAlternatingSubarray(int[] nums, int threshold) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def longestAlternatingSubarray(self, nums, threshold):\n        \"\"\"\n        :type nums: List[int]\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def longestAlternatingSubarray(self, nums: List[int], threshold: int) -> int:\n        ",
+    "c": "int longestAlternatingSubarray(int* nums, int numsSize, int threshold) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LongestAlternatingSubarray(int[] nums, int threshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} threshold\n * @return {number}\n */\nvar longestAlternatingSubarray = function(nums, threshold) {\n    \n};",
+    "typescript": "function longestAlternatingSubarray(nums: number[], threshold: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $threshold\n     * @return Integer\n     */\n    function longestAlternatingSubarray($nums, $threshold) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func longestAlternatingSubarray(_ nums: [Int], _ threshold: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun longestAlternatingSubarray(nums: IntArray, threshold: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int longestAlternatingSubarray(List<int> nums, int threshold) {\n    \n  }\n}",
+    "golang": "func longestAlternatingSubarray(nums []int, threshold int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} threshold\n# @return {Integer}\ndef longest_alternating_subarray(nums, threshold)\n    \nend",
+    "scala": "object Solution {\n    def longestAlternatingSubarray(nums: Array[Int], threshold: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn longest_alternating_subarray(nums: Vec<i32>, threshold: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (longest-alternating-subarray nums threshold)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec longest_alternating_subarray(Nums :: [integer()], Threshold :: integer()) -> integer().\nlongest_alternating_subarray(Nums, Threshold) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec longest_alternating_subarray(nums :: [integer], threshold :: integer) :: integer\n  def longest_alternating_subarray(nums, threshold) do\n    \n  end\nend"
+  }
+}

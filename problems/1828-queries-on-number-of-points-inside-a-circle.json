@@ -1,0 +1,67 @@
+{
+  "title": "Queries on Number of Points Inside a Circle",
+  "problem_id": "1939",
+  "frontend_id": "1828",
+  "difficulty": "Medium",
+  "problem_slug": "queries-on-number-of-points-inside-a-circle",
+  "topics": [
+    "Array",
+    "Math",
+    "Geometry"
+  ],
+  "description": "You are given an array points where points[i] = [xi, yi] is the coordinates of the ith point on a 2D plane. Multiple points can have the same coordinates.\nYou are also given an array queries where queries[j] = [xj, yj, rj] describes a circle centered at (xj, yj) with a radius of rj.\nFor each query queries[j], compute the number of points inside the jth circle. Points on the border of the circle are considered inside.\nReturn an array answer, where answer[j] is the answer to the jth query.\nExample 1:\nExample 2:\nConstraints:\nFollow up: Could you find the answer for each query in better complexity than O(n)?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[1,3],[3,3],[5,3],[2,2]], queries = [[2,3,1],[4,3,1],[1,1,2]]\nOutput: [3,2,2]\nExplanation: The points and circles are shown above.\nqueries[0] is the green circle, queries[1] is the red circle, and queries[2] is the blue circle.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/25/chrome_2021-03-25_22-34-16.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,1],[2,2],[3,3],[4,4],[5,5]], queries = [[1,2,2],[2,2,2],[4,3,2],[4,3,3]]\nOutput: [2,3,2,4]\nExplanation: The points and circles are shown above.\nqueries[0] is green, queries[1] is red, queries[2] is blue, and queries[3] is purple.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/03/25/chrome_2021-03-25_22-42-07.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 500",
+    "points[i].length == 2",
+    "0 <= x​​​​​​i, y​​​​​​i <= 500",
+    "1 <= queries.length <= 500",
+    "queries[j].length == 3",
+    "0 <= xj, yj <= 500",
+    "1 <= rj <= 500",
+    "All coordinates are integers."
+  ],
+  "follow_ups": [
+    "Could you find the answer for each query in better complexity than O(n)?"
+  ],
+  "hints": [
+    "For a point to be inside a circle, the euclidean distance between it and the circle's center needs to be less than or equal to the radius.",
+    "Brute force for each circle and iterate overall points and find those inside it."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> countPoints(vector<vector<int>>& points, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countPoints(int[][] points, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPoints(self, points, queries):\n        \"\"\"\n        :type points: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPoints(self, points: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countPoints(int** points, int pointsSize, int* pointsColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] CountPoints(int[][] points, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar countPoints = function(points, queries) {\n    \n};",
+    "typescript": "function countPoints(points: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function countPoints($points, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPoints(_ points: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPoints(points: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> countPoints(List<List<int>> points, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func countPoints(points [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef count_points(points, queries)\n    \nend",
+    "scala": "object Solution {\n    def countPoints(points: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_points(points: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (count-points points queries)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec count_points(Points :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\ncount_points(Points, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_points(points :: [[integer]], queries :: [[integer]]) :: [integer]\n  def count_points(points, queries) do\n    \n  end\nend"
+  }
+}

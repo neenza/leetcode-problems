@@ -1,0 +1,59 @@
+{
+  "title": "Reduce Array Size to The Half",
+  "problem_id": "1464",
+  "frontend_id": "1338",
+  "difficulty": "Medium",
+  "problem_slug": "reduce-array-size-to-the-half",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given an integer array arr. You can choose a set of integers and remove all the occurrences of these integers in the array.\nReturn the minimum size of the set so that at least half of the integers of the array are removed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [3,3,3,3,5,5,5,2,2,7]\nOutput: 2\nExplanation: Choosing {3,7} will make the new array [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the old array).\nPossible sets of size 2 are {3,5},{3,2},{5,2}.\nChoosing set {2,7} is not possible as it will make the new array [3,3,3,3,5,5,5] which has a size greater than half of the size of the old array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [7,7,7,7,7,7]\nOutput: 1\nExplanation: The only possible set you can choose is {7}. This will make the new array empty.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= arr.length <= 105",
+    "arr.length is even.",
+    "1 <= arr[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Count the frequency of each integer in the array.",
+    "Start with an empty set, add to the set the integer with the maximum frequency.",
+    "Keep Adding the integer with the max frequency until you remove at least half of the integers."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minSetSize(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSetSize(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minSetSize(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minSetSize(self, arr: List[int]) -> int:\n        ",
+    "c": "int minSetSize(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinSetSize(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar minSetSize = function(arr) {\n    \n};",
+    "typescript": "function minSetSize(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function minSetSize($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minSetSize(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minSetSize(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minSetSize(List<int> arr) {\n    \n  }\n}",
+    "golang": "func minSetSize(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef min_set_size(arr)\n    \nend",
+    "scala": "object Solution {\n    def minSetSize(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_set_size(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-set-size arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_set_size(Arr :: [integer()]) -> integer().\nmin_set_size(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_set_size(arr :: [integer]) :: integer\n  def min_set_size(arr) do\n    \n  end\nend"
+  }
+}

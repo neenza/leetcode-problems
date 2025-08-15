@@ -1,0 +1,68 @@
+{
+  "title": "Most Visited Sector in  a Circular Track",
+  "problem_id": "1682",
+  "frontend_id": "1560",
+  "difficulty": "Easy",
+  "problem_slug": "most-visited-sector-in-a-circular-track",
+  "topics": [
+    "Array",
+    "Simulation"
+  ],
+  "description": "Given an integer n and an integer array rounds. We have a circular track which consists of n sectors labeled from 1 to n. A marathon will be held on this track, the marathon consists of m rounds. The ith round starts at sector rounds[i - 1] and ends at sector rounds[i]. For example, round 1 starts at sector rounds[0] and ends at sector rounds[1]\nReturn an array of the most visited sectors sorted in ascending order.\nNotice that you circulate the track in ascending order of sector numbers in the counter-clockwise direction (See the first example).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, rounds = [1,3,1,2]\nOutput: [1,2]\nExplanation: The marathon starts at sector 1. The order of the visited sectors is as follows:\n1 --> 2 --> 3 (end of round 1) --> 4 --> 1 (end of round 2) --> 2 (end of round 3 and the marathon)\nWe can see that both sectors 1 and 2 are visited twice and they are the most visited sectors. Sectors 3 and 4 are visited only once.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/14/tmp.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, rounds = [2,1,2,1,2,1,2,1,2]\nOutput: [2]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/14/tmp.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 7, rounds = [1,3,5,7]\nOutput: [1,2,3,4,5,6,7]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/08/14/tmp.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 100",
+    "1 <= m <= 100",
+    "rounds.length == m + 1",
+    "1 <= rounds[i] <= n",
+    "rounds[i] != rounds[i + 1] for 0 <= i < m"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each round increment the visits of the sectors visited during the marathon with 1.",
+    "Determine the max number of visits, and return any sector visited the max number of visits."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> mostVisited(int n, vector<int>& rounds) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> mostVisited(int n, int[] rounds) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostVisited(self, n, rounds):\n        \"\"\"\n        :type n: int\n        :type rounds: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostVisited(self, n: int, rounds: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* mostVisited(int n, int* rounds, int roundsSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public IList<int> MostVisited(int n, int[] rounds) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} rounds\n * @return {number[]}\n */\nvar mostVisited = function(n, rounds) {\n    \n};",
+    "typescript": "function mostVisited(n: number, rounds: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $rounds\n     * @return Integer[]\n     */\n    function mostVisited($n, $rounds) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostVisited(_ n: Int, _ rounds: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostVisited(n: Int, rounds: IntArray): List<Int> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> mostVisited(int n, List<int> rounds) {\n    \n  }\n}",
+    "golang": "func mostVisited(n int, rounds []int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} rounds\n# @return {Integer[]}\ndef most_visited(n, rounds)\n    \nend",
+    "scala": "object Solution {\n    def mostVisited(n: Int, rounds: Array[Int]): List[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_visited(n: i32, rounds: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (most-visited n rounds)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec most_visited(N :: integer(), Rounds :: [integer()]) -> [integer()].\nmost_visited(N, Rounds) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_visited(n :: integer, rounds :: [integer]) :: [integer]\n  def most_visited(n, rounds) do\n    \n  end\nend"
+  }
+}

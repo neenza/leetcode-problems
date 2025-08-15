@@ -1,0 +1,54 @@
+{
+  "title": "Can Place Flowers",
+  "problem_id": "605",
+  "frontend_id": "605",
+  "difficulty": "Easy",
+  "problem_slug": "can-place-flowers",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.\nGiven an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: flowerbed = [1,0,0,0,1], n = 1\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: flowerbed = [1,0,0,0,1], n = 2\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= flowerbed.length <= 2 * 104",
+    "flowerbed[i] is 0 or 1.",
+    "There are no two adjacent flowers in flowerbed.",
+    "0 <= n <= flowerbed.length"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canPlaceFlowers(vector<int>& flowerbed, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPlaceFlowers(int[] flowerbed, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canPlaceFlowers(self, flowerbed, n):\n        \"\"\"\n        :type flowerbed: List[int]\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:\n        ",
+    "c": "bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanPlaceFlowers(int[] flowerbed, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} flowerbed\n * @param {number} n\n * @return {boolean}\n */\nvar canPlaceFlowers = function(flowerbed, n) {\n    \n};",
+    "typescript": "function canPlaceFlowers(flowerbed: number[], n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $flowerbed\n     * @param Integer $n\n     * @return Boolean\n     */\n    function canPlaceFlowers($flowerbed, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canPlaceFlowers(_ flowerbed: [Int], _ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canPlaceFlowers(List<int> flowerbed, int n) {\n    \n  }\n}",
+    "golang": "func canPlaceFlowers(flowerbed []int, n int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} flowerbed\n# @param {Integer} n\n# @return {Boolean}\ndef can_place_flowers(flowerbed, n)\n    \nend",
+    "scala": "object Solution {\n    def canPlaceFlowers(flowerbed: Array[Int], n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_place_flowers(flowerbed: Vec<i32>, n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-place-flowers flowerbed n)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_place_flowers(Flowerbed :: [integer()], N :: integer()) -> boolean().\ncan_place_flowers(Flowerbed, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_place_flowers(flowerbed :: [integer], n :: integer) :: boolean\n  def can_place_flowers(flowerbed, n) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1 Single Scan [Accepted]\n\nThe solution is very simple. We can find out the extra maximum number of flowers, $$count$$, that can be planted for the given $$flowerbed$$ arrangement. To do so, we can traverse over all the elements of the $$flowerbed$$ and find out those elements which are 0(implying an empty position). For every such element, we check if its both adjacent positions are also empty. If so, we can plant a flower at the current position without violating the no-adjacent-flowers-rule. For the first and last elements, we need not check the previous and the next adjacent positions respectively.\n\nIf the $$count$$ obtained is greater than or equal to $$n$$, the required number of flowers to be planted, we can plant $$n$$ flowers in the empty spaces, otherwise not.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n)$$. A single scan of the $$flowerbed$$ array of size $$n$$ is done.\n\n* Space complexity: $$O(1)$$. Constant extra space is used.\n\n---\n### Approach #2 Optimized [Accepted]\n\n**Algorithm**\n\nInstead of finding the maximum value of $$count$$ that can be obtained, as done in the last approach, we can stop the process of checking the positions for planting the flowers as soon as $$count$$ becomes equal to $$n$$. Doing this leads to an optimization of the first approach. If $$count$$ never becomes equal to $$n$$, $$n$$ flowers can't be planted at the empty positions.\n\n**Implementation****Complexity Analysis**\n\n* Time complexity: $$O(n)$$. A single scan of the $$flowerbed$$ array of size $$n$$ is done.\n\n* Space complexity: $$O(1)$$. Constant extra space is used."
+}

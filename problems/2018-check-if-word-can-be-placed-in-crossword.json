@@ -1,0 +1,70 @@
+{
+  "title": "Check if Word Can Be Placed In Crossword",
+  "problem_id": "2146",
+  "frontend_id": "2018",
+  "difficulty": "Medium",
+  "problem_slug": "check-if-word-can-be-placed-in-crossword",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ],
+  "description": "You are given an m x n matrix board, representing the current state of a crossword puzzle. The crossword contains lowercase English letters (from solved words), ' ' to represent any empty cells, and '#' to represent any blocked cells.\nA word can be placed horizontally (left to right or right to left) or vertically (top to bottom or bottom to top) in the board if:\nGiven a string word, return true if word can be placed in board, or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\"#\", \" \", \"#\"], [\" \", \" \", \"#\"], [\"#\", \"c\", \" \"]], word = \"abc\"\nOutput: true\nExplanation: The word \"abc\" can be placed as shown above (top to bottom).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/04/crossword-ex1-1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\" \", \"#\", \"a\"], [\" \", \"#\", \"c\"], [\" \", \"#\", \"a\"]], word = \"ac\"\nOutput: false\nExplanation: It is impossible to place the word because there will always be a space/letter above or below it.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/04/crossword-ex2-1.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [[\"#\", \" \", \"#\"], [\" \", \" \", \"#\"], [\"#\", \" \", \"c\"]], word = \"ca\"\nOutput: true\nExplanation: The word \"ca\" can be placed as shown above (right to left).",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/10/04/crossword-ex3-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == board.length",
+    "n == board[i].length",
+    "1 <= m * n <= 2 * 105",
+    "board[i][j] will be ' ', '#', or a lowercase English letter.",
+    "1 <= word.length <= max(m, n)",
+    "word will contain only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Check all possible placements for the word.",
+    "There is a limited number of places where a word can start."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool placeWordInCrossword(vector<vector<char>>& board, string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean placeWordInCrossword(char[][] board, String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def placeWordInCrossword(self, board, word):\n        \"\"\"\n        :type board: List[List[str]]\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def placeWordInCrossword(self, board: List[List[str]], word: str) -> bool:\n        ",
+    "c": "bool placeWordInCrossword(char** board, int boardSize, int* boardColSize, char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool PlaceWordInCrossword(char[][] board, string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @param {string} word\n * @return {boolean}\n */\nvar placeWordInCrossword = function(board, word) {\n    \n};",
+    "typescript": "function placeWordInCrossword(board: string[][], word: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @param String $word\n     * @return Boolean\n     */\n    function placeWordInCrossword($board, $word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func placeWordInCrossword(_ board: [[Character]], _ word: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun placeWordInCrossword(board: Array<CharArray>, word: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool placeWordInCrossword(List<List<String>> board, String word) {\n    \n  }\n}",
+    "golang": "func placeWordInCrossword(board [][]byte, word string) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @param {String} word\n# @return {Boolean}\ndef place_word_in_crossword(board, word)\n    \nend",
+    "scala": "object Solution {\n    def placeWordInCrossword(board: Array[Array[Char]], word: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn place_word_in_crossword(board: Vec<Vec<char>>, word: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (place-word-in-crossword board word)\n  (-> (listof (listof char?)) string? boolean?)\n  )",
+    "erlang": "-spec place_word_in_crossword(Board :: [[char()]], Word :: unicode:unicode_binary()) -> boolean().\nplace_word_in_crossword(Board, Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec place_word_in_crossword(board :: [[char]], word :: String.t) :: boolean\n  def place_word_in_crossword(board, word) do\n    \n  end\nend"
+  }
+}

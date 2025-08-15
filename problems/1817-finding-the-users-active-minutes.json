@@ -1,0 +1,56 @@
+{
+  "title": "Finding the Users Active Minutes",
+  "problem_id": "1945",
+  "frontend_id": "1817",
+  "difficulty": "Medium",
+  "problem_slug": "finding-the-users-active-minutes",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "You are given the logs for users' actions on LeetCode, and an integer k. The logs are represented by a 2D integer array logs where each logs[i] = [IDi, timei] indicates that the user with IDi performed an action at the minute timei.\nMultiple users can perform actions simultaneously, and a single user can perform multiple actions in the same minute.\nThe user active minutes (UAM) for a given user is defined as the number of unique minutes in which the user performed an action on LeetCode. A minute can only be counted once, even if multiple actions occur during it.\nYou are to calculate a 1-indexed array answer of size k such that, for each j (1 <= j <= k), answer[j] is the number of users whose UAM equals j.\nReturn the array answer as described above.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: logs = [[0,5],[1,2],[0,2],[0,5],[1,3]], k = 5\nOutput: [0,2,0,0,0]\nExplanation:\nThe user with ID=0 performed actions at minutes 5, 2, and 5 again. Hence, they have a UAM of 2 (minute 5 is only counted once).\nThe user with ID=1 performed actions at minutes 2 and 3. Hence, they have a UAM of 2.\nSince both users have a UAM of 2, answer[2] is 2, and the remaining answer[j] values are 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: logs = [[1,1],[2,2],[2,3]], k = 4\nOutput: [1,1,0,0]\nExplanation:\nThe user with ID=1 performed a single action at minute 1. Hence, they have a UAM of 1.\nThe user with ID=2 performed actions at minutes 2 and 3. Hence, they have a UAM of 2.\nThere is one user with a UAM of 1 and one with a UAM of 2.\nHence, answer[1] = 1, answer[2] = 1, and the remaining values are 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= logs.length <= 104",
+    "0 <= IDi <= 109",
+    "1 <= timei <= 105",
+    "k is in the range [The maximum UAM for a user, 105]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to find the number of different minutes when action happened for each user.",
+    "For each user increase the value of the answer array index which matches the UAM for this user."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> findingUsersActiveMinutes(vector<vector<int>>& logs, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findingUsersActiveMinutes(int[][] logs, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findingUsersActiveMinutes(self, logs, k):\n        \"\"\"\n        :type logs: List[List[int]]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findingUsersActiveMinutes(self, logs: List[List[int]], k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findingUsersActiveMinutes(int** logs, int logsSize, int* logsColSize, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] FindingUsersActiveMinutes(int[][] logs, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} logs\n * @param {number} k\n * @return {number[]}\n */\nvar findingUsersActiveMinutes = function(logs, k) {\n    \n};",
+    "typescript": "function findingUsersActiveMinutes(logs: number[][], k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $logs\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function findingUsersActiveMinutes($logs, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findingUsersActiveMinutes(_ logs: [[Int]], _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findingUsersActiveMinutes(logs: Array<IntArray>, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> findingUsersActiveMinutes(List<List<int>> logs, int k) {\n    \n  }\n}",
+    "golang": "func findingUsersActiveMinutes(logs [][]int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer[][]} logs\n# @param {Integer} k\n# @return {Integer[]}\ndef finding_users_active_minutes(logs, k)\n    \nend",
+    "scala": "object Solution {\n    def findingUsersActiveMinutes(logs: Array[Array[Int]], k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn finding_users_active_minutes(logs: Vec<Vec<i32>>, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (finding-users-active-minutes logs k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec finding_users_active_minutes(Logs :: [[integer()]], K :: integer()) -> [integer()].\nfinding_users_active_minutes(Logs, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec finding_users_active_minutes(logs :: [[integer]], k :: integer) :: [integer]\n  def finding_users_active_minutes(logs, k) do\n    \n  end\nend"
+  }
+}

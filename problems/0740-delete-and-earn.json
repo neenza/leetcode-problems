@@ -1,0 +1,54 @@
+{
+  "title": "Delete and Earn",
+  "problem_id": "740",
+  "frontend_id": "740",
+  "difficulty": "Medium",
+  "problem_slug": "delete-and-earn",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming"
+  ],
+  "description": "You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times:\nReturn the maximum number of points you can earn by applying the above operation some number of times.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,4,2]\nOutput: 6\nExplanation: You can perform the following operations:\n- Delete 4 to earn 4 points. Consequently, 3 is also deleted. nums = [2].\n- Delete 2 to earn 2 points. nums = [].\nYou earn a total of 6 points.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,2,3,3,3,4]\nOutput: 9\nExplanation: You can perform the following operations:\n- Delete a 3 to earn 3 points. All 2's and 4's are also deleted. nums = [3,3].\n- Delete a 3 again to earn 3 points. nums = [3].\n- Delete a 3 once more to earn 3 points. nums = [].\nYou earn a total of 9 points.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2 * 104",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If you take a number, you might as well take them all.  Keep track of what the value is of the subset of the input with maximum M when you either take or don't take M."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int deleteAndEarn(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int deleteAndEarn(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def deleteAndEarn(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def deleteAndEarn(self, nums: List[int]) -> int:\n        ",
+    "c": "int deleteAndEarn(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DeleteAndEarn(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar deleteAndEarn = function(nums) {\n    \n};",
+    "typescript": "function deleteAndEarn(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function deleteAndEarn($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func deleteAndEarn(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun deleteAndEarn(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int deleteAndEarn(List<int> nums) {\n    \n  }\n}",
+    "golang": "func deleteAndEarn(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef delete_and_earn(nums)\n    \nend",
+    "scala": "object Solution {\n    def deleteAndEarn(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn delete_and_earn(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (delete-and-earn nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec delete_and_earn(Nums :: [integer()]) -> integer().\ndelete_and_earn(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec delete_and_earn(nums :: [integer]) :: integer\n  def delete_and_earn(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Cost Tree From Leaf Values",
+  "problem_id": "1228",
+  "frontend_id": "1130",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-cost-tree-from-leaf-values",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "Given an array arr of positive integers, consider all binary trees such that:\nAmong all possible binary trees considered, return the smallest possible sum of the values of each non-leaf node. It is guaranteed this sum fits into a 32-bit integer.\nA node is a leaf if and only if it has zero children.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr = [6,2,4]\nOutput: 32\nExplanation: There are two possible trees shown.\nThe first has a non-leaf node sum 36, and the second has non-leaf node sum 32.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/10/tree1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr = [4,11]\nOutput: 44",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/08/10/tree2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= arr.length <= 40",
+    "1 <= arr[i] <= 15",
+    "It is guaranteed that the answer fits into a 32-bit signed integer (i.e., it is less than 231)."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Do a DP, where dp(i, j) is the answer for the subarray arr[i]..arr[j].",
+    "For each possible way to partition the subarray i <= k < j, the answer is max(arr[i]..arr[k]) * max(arr[k+1]..arr[j]) + dp(i, k) + dp(k+1, j)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int mctFromLeafValues(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mctFromLeafValues(int[] arr) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mctFromLeafValues(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mctFromLeafValues(self, arr: List[int]) -> int:\n        ",
+    "c": "int mctFromLeafValues(int* arr, int arrSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MctFromLeafValues(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar mctFromLeafValues = function(arr) {\n    \n};",
+    "typescript": "function mctFromLeafValues(arr: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr\n     * @return Integer\n     */\n    function mctFromLeafValues($arr) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mctFromLeafValues(_ arr: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mctFromLeafValues(arr: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int mctFromLeafValues(List<int> arr) {\n    \n  }\n}",
+    "golang": "func mctFromLeafValues(arr []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr\n# @return {Integer}\ndef mct_from_leaf_values(arr)\n    \nend",
+    "scala": "object Solution {\n    def mctFromLeafValues(arr: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn mct_from_leaf_values(arr: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (mct-from-leaf-values arr)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec mct_from_leaf_values(Arr :: [integer()]) -> integer().\nmct_from_leaf_values(Arr) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec mct_from_leaf_values(arr :: [integer]) :: integer\n  def mct_from_leaf_values(arr) do\n    \n  end\nend"
+  }
+}

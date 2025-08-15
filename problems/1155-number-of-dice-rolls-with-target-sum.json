@@ -1,0 +1,57 @@
+{
+  "title": "Number of Dice Rolls With Target Sum",
+  "problem_id": "1263",
+  "frontend_id": "1155",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-dice-rolls-with-target-sum",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "description": "You have n dice, and each dice has k faces numbered from 1 to k.\nGiven three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1, k = 6, target = 3\nOutput: 1\nExplanation: You throw one die with 6 faces.\nThere is only one way to get a sum of 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, k = 6, target = 7\nOutput: 6\nExplanation: You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 30, k = 30, target = 500\nOutput: 222616187\nExplanation: The answer must be returned modulo 109 + 7.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, k <= 30",
+    "1 <= target <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.  The states are how many dice are remaining, and what sum total you have rolled so far."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numRollsToTarget(int n, int k, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numRollsToTarget(int n, int k, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numRollsToTarget(self, n, k, target):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        ",
+    "c": "int numRollsToTarget(int n, int k, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumRollsToTarget(int n, int k, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @param {number} target\n * @return {number}\n */\nvar numRollsToTarget = function(n, k, target) {\n    \n};",
+    "typescript": "function numRollsToTarget(n: number, k: number, target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @param Integer $target\n     * @return Integer\n     */\n    function numRollsToTarget($n, $k, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numRollsToTarget(_ n: Int, _ k: Int, _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numRollsToTarget(n: Int, k: Int, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numRollsToTarget(int n, int k, int target) {\n    \n  }\n}",
+    "golang": "func numRollsToTarget(n int, k int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @param {Integer} target\n# @return {Integer}\ndef num_rolls_to_target(n, k, target)\n    \nend",
+    "scala": "object Solution {\n    def numRollsToTarget(n: Int, k: Int, target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_rolls_to_target(n: i32, k: i32, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-rolls-to-target n k target)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_rolls_to_target(N :: integer(), K :: integer(), Target :: integer()) -> integer().\nnum_rolls_to_target(N, K, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_rolls_to_target(n :: integer, k :: integer, target :: integer) :: integer\n  def num_rolls_to_target(n, k, target) do\n    \n  end\nend"
+  }
+}

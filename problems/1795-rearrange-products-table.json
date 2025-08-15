@@ -1,0 +1,33 @@
+{
+  "title": "Rearrange Products Table",
+  "problem_id": "1948",
+  "frontend_id": "1795",
+  "difficulty": "Easy",
+  "problem_slug": "rearrange-products-table",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Products\nWrite a solution to rearrange the Products table so that each row has (product_id, store, price). If a product is not available in a store, do not include a row with that product_id and store combination in the result table.\nReturn the result table in any order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| product_id  | int     |\n| store1      | int     |\n| store2      | int     |\n| store3      | int     |\n+-------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nEach row in this table indicates the product's price in 3 different stores: store1, store2, and store3.\nIf the product is not available in a store, the price will be null in that store's column.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nProducts table:\n+------------+--------+--------+--------+\n| product_id | store1 | store2 | store3 |\n+------------+--------+--------+--------+\n| 0          | 95     | 100    | 105    |\n| 1          | 70     | null   | 80     |\n+------------+--------+--------+--------+\nOutput: \n+------------+--------+-------+\n| product_id | store  | price |\n+------------+--------+-------+\n| 0          | store1 | 95    |\n| 0          | store2 | 100   |\n| 0          | store3 | 105   |\n| 1          | store1 | 70    |\n| 1          | store3 | 80    |\n+------------+--------+-------+\nExplanation: \nProduct 0 is available in all three stores with prices 95, 100, and 105 respectively.\nProduct 1 is available in store1 with price 70 and store3 with price 80. The product is not available in store2.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

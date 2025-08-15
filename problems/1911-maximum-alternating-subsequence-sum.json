@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Alternating Subsequence Sum",
+  "problem_id": "2022",
+  "frontend_id": "1911",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-alternating-subsequence-sum",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "The alternating sum of a 0-indexed array is defined as the sum of the elements at even indices minus the sum of the elements at odd indices.\nGiven an array nums, return the maximum alternating sum of any subsequence of nums (after reindexing the elements of the subsequence).\nA subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the remaining elements' relative order. For example, [2,7,4] is a subsequence of [4,2,3,7,2,1,4] (the underlined elements), while [2,4,2] is not.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,2,5,3]\r\nOutput: 7\r\nExplanation: It is optimal to choose the subsequence [4,2,5] with alternating sum (4 + 5) - 2 = 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,6,7,8]\r\nOutput: 8\r\nExplanation: It is optimal to choose the subsequence [8] with alternating sum 8.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [6,2,1,2,4,5]\r\nOutput: 10\r\nExplanation: It is optimal to choose the subsequence [6,1,5] with alternating sum (6 + 5) - 1 = 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Is only tracking a single sum enough to solve the problem?",
+    "How does tracking an odd sum and an even sum reduce the number of states?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\r\npublic:\r\n    long long maxAlternatingSum(vector<int>& nums) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public long maxAlternatingSum(int[] nums) {\r\n        \r\n    }\r\n}",
+    "python": "class Solution(object):\r\n    def maxAlternatingSum(self, nums):\r\n        \"\"\"\r\n        :type nums: List[int]\r\n        :rtype: int\r\n        \"\"\"",
+    "python3": "class Solution:\r\n    def maxAlternatingSum(self, nums: List[int]) -> int:",
+    "c": "long long maxAlternatingSum(int* nums, int numsSize){\r\n\r\n}",
+    "csharp": "public class Solution {\r\n    public long MaxAlternatingSum(int[] nums) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[]} nums\r\n * @return {number}\r\n */\r\nvar maxAlternatingSum = function(nums) {\r\n    \r\n};",
+    "typescript": "function maxAlternatingSum(nums: number[]): number {\r\n\r\n};",
+    "php": "class Solution {\r\n\r\n    /**\r\n     * @param Integer[] $nums\r\n     * @return Integer\r\n     */\r\n    function maxAlternatingSum($nums) {\r\n        \r\n    }\r\n}",
+    "swift": "class Solution {\r\n    func maxAlternatingSum(_ nums: [Int]) -> Int {\r\n        \r\n    }\r\n}",
+    "kotlin": "class Solution {\r\n    fun maxAlternatingSum(nums: IntArray): Long {\r\n        \r\n    }\r\n}",
+    "golang": "func maxAlternatingSum(nums []int) int64 {\r\n    \r\n}",
+    "ruby": "# @param {Integer[]} nums\r\n# @return {Integer}\r\ndef max_alternating_sum(nums)\r\n    \r\nend",
+    "scala": "object Solution {\r\n    def maxAlternatingSum(nums: Array[Int]): Long = {\r\n        \r\n    }\r\n}",
+    "rust": "impl Solution {\r\n    pub fn max_alternating_sum(nums: Vec<i32>) -> i64 {\r\n        \r\n    }\r\n}",
+    "racket": "(define/contract (max-alternating-sum nums)\r\n  (-> (listof exact-integer?) exact-integer?)\r\n\r\n  )"
+  }
+}

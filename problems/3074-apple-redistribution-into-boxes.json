@@ -1,0 +1,57 @@
+{
+  "title": "Apple Redistribution into Boxes",
+  "problem_id": "3334",
+  "frontend_id": "3074",
+  "difficulty": "Easy",
+  "problem_slug": "apple-redistribution-into-boxes",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an array apple of size n and an array capacity of size m.\nThere are n packs where the ith pack contains apple[i] apples. There are m boxes as well, and the ith box has a capacity of capacity[i] apples.\nReturn the minimum number of boxes you need to select to redistribute these n packs of apples into boxes.\nNote that, apples from the same pack can be distributed into different boxes.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: apple = [1,3,2], capacity = [4,3,1,5,2]\nOutput: 2\nExplanation: We will use boxes with capacities 4 and 5.\nIt is possible to distribute the apples as the total capacity is greater than or equal to the total number of apples.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: apple = [5,5,5], capacity = [2,4,2,7]\nOutput: 4\nExplanation: We will need to use all the boxes.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == apple.length <= 50",
+    "1 <= m == capacity.length <= 50",
+    "1 <= apple[i], capacity[i] <= 50",
+    "The input is generated such that it's possible to redistribute packs of apples into boxes."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort array <code>capacity</code> in non-decreasing order.",
+    "Greedily select boxes with the largest capacities to redistribute apples optimally."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumBoxes(vector<int>& apple, vector<int>& capacity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumBoxes(int[] apple, int[] capacity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumBoxes(self, apple, capacity):\n        \"\"\"\n        :type apple: List[int]\n        :type capacity: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumBoxes(self, apple: List[int], capacity: List[int]) -> int:\n        ",
+    "c": "int minimumBoxes(int* apple, int appleSize, int* capacity, int capacitySize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumBoxes(int[] apple, int[] capacity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} apple\n * @param {number[]} capacity\n * @return {number}\n */\nvar minimumBoxes = function(apple, capacity) {\n    \n};",
+    "typescript": "function minimumBoxes(apple: number[], capacity: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $apple\n     * @param Integer[] $capacity\n     * @return Integer\n     */\n    function minimumBoxes($apple, $capacity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumBoxes(_ apple: [Int], _ capacity: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumBoxes(apple: IntArray, capacity: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumBoxes(List<int> apple, List<int> capacity) {\n    \n  }\n}",
+    "golang": "func minimumBoxes(apple []int, capacity []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} apple\n# @param {Integer[]} capacity\n# @return {Integer}\ndef minimum_boxes(apple, capacity)\n    \nend",
+    "scala": "object Solution {\n    def minimumBoxes(apple: Array[Int], capacity: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_boxes(apple: Vec<i32>, capacity: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-boxes apple capacity)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_boxes(Apple :: [integer()], Capacity :: [integer()]) -> integer().\nminimum_boxes(Apple, Capacity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_boxes(apple :: [integer], capacity :: [integer]) :: integer\n  def minimum_boxes(apple, capacity) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Smallest Subsequence of Distinct Characters",
+  "problem_id": "1159",
+  "frontend_id": "1081",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-subsequence-of-distinct-characters",
+  "topics": [
+    "String",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "Given a string s, return the lexicographically smallest subsequence of s that contains all the distinct characters of s exactly once.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"bcabc\"\nOutput: \"abc\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cbacdcbc\"\nOutput: \"acdb\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s consists of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Greedily try to add one missing character. How to check if adding some character will not cause problems ? Use bit-masks to check whether you will be able to complete the sub-sequence if you add the character at some index i."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string smallestSubsequence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestSubsequence(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def smallestSubsequence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def smallestSubsequence(self, s: str) -> str:\n        ",
+    "c": "char* smallestSubsequence(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string SmallestSubsequence(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar smallestSubsequence = function(s) {\n    \n};",
+    "typescript": "function smallestSubsequence(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function smallestSubsequence($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func smallestSubsequence(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun smallestSubsequence(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String smallestSubsequence(String s) {\n    \n  }\n}",
+    "golang": "func smallestSubsequence(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef smallest_subsequence(s)\n    \nend",
+    "scala": "object Solution {\n    def smallestSubsequence(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn smallest_subsequence(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (smallest-subsequence s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec smallest_subsequence(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nsmallest_subsequence(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec smallest_subsequence(s :: String.t) :: String.t\n  def smallest_subsequence(s) do\n    \n  end\nend"
+  }
+}

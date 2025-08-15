@@ -1,0 +1,54 @@
+{
+  "title": "Remove Duplicates from Sorted Array II",
+  "problem_id": "80",
+  "frontend_id": "80",
+  "difficulty": "Medium",
+  "problem_slug": "remove-duplicates-from-sorted-array-ii",
+  "topics": [
+    "Array",
+    "Two Pointers"
+  ],
+  "description": "Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.\nSince it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.\nReturn k after placing the final result in the first k slots of nums.\nDo not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.\nCustom Judge:\nThe judge will test your solution with the following code:\nIf all assertions pass, then your solution will be accepted.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "int[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1,2,2,3]\nOutput: 5, nums = [1,1,2,2,3,_]\nExplanation: Your function should return k = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [0,0,1,1,1,1,2,3,3]\nOutput: 7, nums = [0,0,1,1,2,3,3,_,_]\nExplanation: Your function should return k = 7, with the first seven elements of nums being 0, 0, 1, 1, 2, 3 and 3 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 3 * 104",
+    "-104 <= nums[i] <= 104",
+    "nums is sorted in non-decreasing order."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int removeDuplicates(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeDuplicates(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeDuplicates(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeDuplicates(self, nums: List[int]) -> int:\n        ",
+    "c": "int removeDuplicates(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int RemoveDuplicates(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar removeDuplicates = function(nums) {\n    \n};",
+    "typescript": "function removeDuplicates(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function removeDuplicates(&$nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeDuplicates(_ nums: inout [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeDuplicates(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int removeDuplicates(List<int> nums) {\n    \n  }\n}",
+    "golang": "func removeDuplicates(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef remove_duplicates(nums)\n    \nend",
+    "scala": "object Solution {\n    def removeDuplicates(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {\n        \n    }\n}"
+  }
+}

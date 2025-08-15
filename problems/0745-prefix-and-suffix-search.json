@@ -1,0 +1,57 @@
+{
+  "title": "Prefix and Suffix Search",
+  "problem_id": "746",
+  "frontend_id": "745",
+  "difficulty": "Hard",
+  "problem_slug": "prefix-and-suffix-search",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Design",
+    "Trie"
+  ],
+  "description": "Design a special dictionary that searches the words in it by a prefix and a suffix.\nImplement the WordFilter class:\nExample 1:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input\n[\"WordFilter\", \"f\"]\n[[[\"apple\"]], [\"a\", \"e\"]]\nOutput\n[null, 0]\nExplanation\nWordFilter wordFilter = new WordFilter([\"apple\"]);\nwordFilter.f(\"a\", \"e\"); // return 0, because the word at index 0 has prefix = \"a\" and suffix = \"e\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 104",
+    "1 <= words[i].length <= 7",
+    "1 <= pref.length, suff.length <= 7",
+    "words[i], pref and suff consist of lowercase English letters only.",
+    "At most 104 calls will be made to the function f."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Take \"apple\" as an example, we will insert add \"apple{apple\", \"pple{apple\", \"ple{apple\", \"le{apple\", \"e{apple\", \"{apple\" into the Trie Tree.",
+    "If the query is: prefix = \"app\", suffix = \"le\", we can find it by querying our trie for\r\n\"le { app\".",
+    "We use '{' because in ASCii Table, '{' is next to 'z', so we just need to create new TrieNode[27] instead of 26. Also, compared with traditional Trie, we add the attribute weight in class TrieNode.\r\nYou can still choose any different character."
+  ],
+  "code_snippets": {
+    "cpp": "class WordFilter {\npublic:\n    WordFilter(vector<string>& words) {\n        \n    }\n    \n    int f(string pref, string suff) {\n        \n    }\n};\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * WordFilter* obj = new WordFilter(words);\n * int param_1 = obj->f(pref,suff);\n */",
+    "java": "class WordFilter {\n\n    public WordFilter(String[] words) {\n        \n    }\n    \n    public int f(String pref, String suff) {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * WordFilter obj = new WordFilter(words);\n * int param_1 = obj.f(pref,suff);\n */",
+    "python": "class WordFilter(object):\n\n    def __init__(self, words):\n        \"\"\"\n        :type words: List[str]\n        \"\"\"\n        \n\n    def f(self, pref, suff):\n        \"\"\"\n        :type pref: str\n        :type suff: str\n        :rtype: int\n        \"\"\"\n        \n\n\n# Your WordFilter object will be instantiated and called as such:\n# obj = WordFilter(words)\n# param_1 = obj.f(pref,suff)",
+    "python3": "class WordFilter:\n\n    def __init__(self, words: List[str]):\n        \n\n    def f(self, pref: str, suff: str) -> int:\n        \n\n\n# Your WordFilter object will be instantiated and called as such:\n# obj = WordFilter(words)\n# param_1 = obj.f(pref,suff)",
+    "c": "\n\n\ntypedef struct {\n    \n} WordFilter;\n\n\nWordFilter* wordFilterCreate(char** words, int wordsSize) {\n    \n}\n\nint wordFilterF(WordFilter* obj, char* pref, char* suff) {\n    \n}\n\nvoid wordFilterFree(WordFilter* obj) {\n    \n}\n\n/**\n * Your WordFilter struct will be instantiated and called as such:\n * WordFilter* obj = wordFilterCreate(words, wordsSize);\n * int param_1 = wordFilterF(obj, pref, suff);\n \n * wordFilterFree(obj);\n*/",
+    "csharp": "public class WordFilter {\n\n    public WordFilter(string[] words) {\n        \n    }\n    \n    public int F(string pref, string suff) {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * WordFilter obj = new WordFilter(words);\n * int param_1 = obj.F(pref,suff);\n */",
+    "javascript": "/**\n * @param {string[]} words\n */\nvar WordFilter = function(words) {\n    \n};\n\n/** \n * @param {string} pref \n * @param {string} suff\n * @return {number}\n */\nWordFilter.prototype.f = function(pref, suff) {\n    \n};\n\n/** \n * Your WordFilter object will be instantiated and called as such:\n * var obj = new WordFilter(words)\n * var param_1 = obj.f(pref,suff)\n */",
+    "typescript": "class WordFilter {\n    constructor(words: string[]) {\n        \n    }\n\n    f(pref: string, suff: string): number {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * var obj = new WordFilter(words)\n * var param_1 = obj.f(pref,suff)\n */",
+    "php": "class WordFilter {\n    /**\n     * @param String[] $words\n     */\n    function __construct($words) {\n        \n    }\n  \n    /**\n     * @param String $pref\n     * @param String $suff\n     * @return Integer\n     */\n    function f($pref, $suff) {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * $obj = WordFilter($words);\n * $ret_1 = $obj->f($pref, $suff);\n */",
+    "swift": "\nclass WordFilter {\n\n    init(_ words: [String]) {\n        \n    }\n    \n    func f(_ pref: String, _ suff: String) -> Int {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * let obj = WordFilter(words)\n * let ret_1: Int = obj.f(pref, suff)\n */",
+    "kotlin": "class WordFilter(words: Array<String>) {\n\n    fun f(pref: String, suff: String): Int {\n        \n    }\n\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * var obj = WordFilter(words)\n * var param_1 = obj.f(pref,suff)\n */",
+    "dart": "class WordFilter {\n\n  WordFilter(List<String> words) {\n    \n  }\n  \n  int f(String pref, String suff) {\n    \n  }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * WordFilter obj = WordFilter(words);\n * int param1 = obj.f(pref,suff);\n */",
+    "golang": "type WordFilter struct {\n    \n}\n\n\nfunc Constructor(words []string) WordFilter {\n    \n}\n\n\nfunc (this *WordFilter) F(pref string, suff string) int {\n    \n}\n\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * obj := Constructor(words);\n * param_1 := obj.F(pref,suff);\n */",
+    "ruby": "class WordFilter\n\n=begin\n    :type words: String[]\n=end\n    def initialize(words)\n        \n    end\n\n\n=begin\n    :type pref: String\n    :type suff: String\n    :rtype: Integer\n=end\n    def f(pref, suff)\n        \n    end\n\n\nend\n\n# Your WordFilter object will be instantiated and called as such:\n# obj = WordFilter.new(words)\n# param_1 = obj.f(pref, suff)",
+    "scala": "class WordFilter(_words: Array[String]) {\n\n    def f(pref: String, suff: String): Int = {\n        \n    }\n\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * val obj = new WordFilter(words)\n * val param_1 = obj.f(pref,suff)\n */",
+    "rust": "struct WordFilter {\n\n}\n\n\n/** \n * `&self` means the method takes an immutable reference.\n * If you need a mutable reference, change it to `&mut self` instead.\n */\nimpl WordFilter {\n\n    fn new(words: Vec<String>) -> Self {\n        \n    }\n    \n    fn f(&self, pref: String, suff: String) -> i32 {\n        \n    }\n}\n\n/**\n * Your WordFilter object will be instantiated and called as such:\n * let obj = WordFilter::new(words);\n * let ret_1: i32 = obj.f(pref, suff);\n */",
+    "racket": "(define word-filter%\n  (class object%\n    (super-new)\n    \n    ; words : (listof string?)\n    (init-field\n      words)\n    \n    ; f : string? string? -> exact-integer?\n    (define/public (f pref suff)\n      )))\n\n;; Your word-filter% object will be instantiated and called as such:\n;; (define obj (new word-filter% [words words]))\n;; (define param_1 (send obj f pref suff))",
+    "erlang": "-spec word_filter_init_(Words :: [unicode:unicode_binary()]) -> any().\nword_filter_init_(Words) ->\n  .\n\n-spec word_filter_f(Pref :: unicode:unicode_binary(), Suff :: unicode:unicode_binary()) -> integer().\nword_filter_f(Pref, Suff) ->\n  .\n\n\n%% Your functions will be called as such:\n%% word_filter_init_(Words),\n%% Param_1 = word_filter_f(Pref, Suff),\n\n%% word_filter_init_ will be called before every test case, in which you can do some necessary initializations.",
+    "elixir": "defmodule WordFilter do\n  @spec init_(words :: [String.t]) :: any\n  def init_(words) do\n    \n  end\n\n  @spec f(pref :: String.t, suff :: String.t) :: integer\n  def f(pref, suff) do\n    \n  end\nend\n\n# Your functions will be called as such:\n# WordFilter.init_(words)\n# param_1 = WordFilter.f(pref, suff)\n\n# WordFilter.init_ will be called before every test case, in which you can do some necessary initializations."
+  },
+  "solution": "[TOC]\n\n### Approach #1: Trie + Set Intersection [Time Limit Exceeded]\n\n**Intuition and Algorithm**\n\nWe use two tries to separately find all words that match the prefix, plus all words that match the suffix. Then, we try to find the highest-weight element in the intersection of these sets.\n\nOf course, these sets could still be large, so we might TLE if we aren't careful.**Complexity Analysis**\n\n* Time Complexity: $$O(NK + Q(N+K))$$ where $$N$$ is the number of words, $$K$$ is the maximum length of a word, and $$Q$$ is the number of queries. If we use memoization in our solution, we could produce tighter bounds for this complexity, as the complex queries are somewhat disjoint.\n\n* Space Complexity: $$O(NK)$$, the size of the tries.\n\n---\n### Approach #2: Paired Trie [Accepted]\n\n**Intuition and Algorithm**\n\nSay we are inserting the word `apple`.  We could insert `('a', 'e'), ('p', 'l'), ('p', 'p'), ('l', 'p'), ('e', 'a')` into our trie. Then, if we had equal length queries like `prefix = \"ap\", suffix = \"le\"`, we could find the node `trie['a', 'e']['p', 'l']` in our trie.  This seems promising.\n\nWhat about queries that aren't equal?  We should just insert them like normal. For example, to capture a case like `prefix = \"app\", suffix = \"e\"`, we could create nodes `trie['a', 'e']['p', None]['p', None]`.\n\nAfter inserting these pairs into our trie, our searches are straightforward.**Complexity Analysis**\n\n* Time Complexity: $$O(NK^2 + QK)$$ where $$N$$ is the number of words, $$K$$ is the maximum length of a word, and $$Q$$ is the number of queries.\n\n* Space Complexity: $$O(NK^2)$$, the size of the trie.\n\n---\n### Approach #3: Trie of Suffix Wrapped Words [Accepted]\n\n**Intuition and Algorithm**\n\nConsider the word `'apple'`. For each suffix of the word, we could insert that suffix, followed by `'#'`, followed by the word, all into the trie.\n\nFor example, we will insert `'#apple', 'e#apple', 'le#apple', 'ple#apple', 'pple#apple', 'apple#apple'` into the trie.  Then for a query like `prefix = \"ap\", suffix = \"le\"`, we can find it by querying our trie for `le#ap`.**Complexity Analysis**\n\n* Time Complexity: $$O(NK^2 + QK)$$ where $$N$$ is the number of words, $$K$$ is the maximum length of a word, and $$Q$$ is the number of queries.\n\n* Space Complexity: $$O(NK^2)$$, the size of the trie."
+}

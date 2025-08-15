@@ -1,0 +1,56 @@
+{
+  "title": "Maximum Number of Words Found in Sentences",
+  "problem_id": "2219",
+  "frontend_id": "2114",
+  "difficulty": "Easy",
+  "problem_slug": "maximum-number-of-words-found-in-sentences",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "A sentence is a list of words that are separated by a single space with no leading or trailing spaces.\nYou are given an array of strings sentences, where each sentences[i] represents a single sentence.\nReturn the maximum number of words that appear in a single sentence.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: sentences = [\"alice and bob love leetcode\", \"i think so too\", \"this is great thanks very much\"]\nOutput: 6\nExplanation: \n- The first sentence, \"alice and bob love leetcode\", has 5 words in total.\n- The second sentence, \"i think so too\", has 4 words in total.\n- The third sentence, \"this is great thanks very much\", has 6 words in total.\nThus, the maximum number of words in a single sentence comes from the third sentence, which has 6 words.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: sentences = [\"please wait\", \"continue to fight\", \"continue to win\"]\nOutput: 3\nExplanation: It is possible that multiple sentences contain the same number of words. \nIn this example, the second and third sentences (underlined) have the same number of words.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= sentences.length <= 100",
+    "1 <= sentences[i].length <= 100",
+    "sentences[i] consists only of lowercase English letters and ' ' only.",
+    "sentences[i] does not have leading or trailing spaces.",
+    "All the words in sentences[i] are separated by a single space."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Process each sentence separately and count the number of words by looking for the number of space characters in the sentence and adding it by 1."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int mostWordsFound(vector<string>& sentences) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mostWordsFound(String[] sentences) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostWordsFound(self, sentences):\n        \"\"\"\n        :type sentences: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostWordsFound(self, sentences: List[str]) -> int:\n        ",
+    "c": "int mostWordsFound(char** sentences, int sentencesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MostWordsFound(string[] sentences) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} sentences\n * @return {number}\n */\nvar mostWordsFound = function(sentences) {\n    \n};",
+    "typescript": "function mostWordsFound(sentences: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $sentences\n     * @return Integer\n     */\n    function mostWordsFound($sentences) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostWordsFound(_ sentences: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostWordsFound(sentences: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int mostWordsFound(List<String> sentences) {\n    \n  }\n}",
+    "golang": "func mostWordsFound(sentences []string) int {\n    \n}",
+    "ruby": "# @param {String[]} sentences\n# @return {Integer}\ndef most_words_found(sentences)\n    \nend",
+    "scala": "object Solution {\n    def mostWordsFound(sentences: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_words_found(sentences: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (most-words-found sentences)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec most_words_found(Sentences :: [unicode:unicode_binary()]) -> integer().\nmost_words_found(Sentences) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_words_found(sentences :: [String.t]) :: integer\n  def most_words_found(sentences) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Earliest Second to Mark Indices II",
+  "problem_id": "3289",
+  "frontend_id": "3049",
+  "difficulty": "Hard",
+  "problem_slug": "earliest-second-to-mark-indices-ii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two 1-indexed integer arrays, nums and, changeIndices, having lengths n and m, respectively.\nInitially, all indices in nums are unmarked. Your task is to mark all indices in nums.\nIn each second, s, in order from 1 to m (inclusive), you can perform one of the following operations:\nReturn an integer denoting the earliest second in the range [1, m] when all indices in nums can be marked by choosing operations optimally, or -1 if it is impossible.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,2,3], changeIndices = [1,3,2,2,2,2,3]\nOutput: 6\nExplanation: In this example, we have 7 seconds. The following operations can be performed to mark all indices:\nSecond 1: Set nums[changeIndices[1]] to 0. nums becomes [0,2,3].\nSecond 2: Set nums[changeIndices[2]] to 0. nums becomes [0,2,0].\nSecond 3: Set nums[changeIndices[3]] to 0. nums becomes [0,0,0].\nSecond 4: Mark index 1, since nums[1] is equal to 0.\nSecond 5: Mark index 2, since nums[2] is equal to 0.\nSecond 6: Mark index 3, since nums[3] is equal to 0.\nNow all indices have been marked.\nIt can be shown that it is not possible to mark all indices earlier than the 6th second.\nHence, the answer is 6.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,0,1,2], changeIndices = [1,2,1,2,1,2,1,2]\nOutput: 7\nExplanation: In this example, we have 8 seconds. The following operations can be performed to mark all indices:\nSecond 1: Mark index 1, since nums[1] is equal to 0.\nSecond 2: Mark index 2, since nums[2] is equal to 0.\nSecond 3: Decrement index 4 by one. nums becomes [0,0,1,1].\nSecond 4: Decrement index 4 by one. nums becomes [0,0,1,0].\nSecond 5: Decrement index 3 by one. nums becomes [0,0,0,0].\nSecond 6: Mark index 3, since nums[3] is equal to 0.\nSecond 7: Mark index 4, since nums[4] is equal to 0.\nNow all indices have been marked.\nIt can be shown that it is not possible to mark all indices earlier than the 7th second.\nHence, the answer is 7.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3], changeIndices = [1,2,3]\nOutput: -1\nExplanation: In this example, it can be shown that it is impossible to mark all indices, as we don't have enough seconds. \nHence, the answer is -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 5000",
+    "0 <= nums[i] <= 109",
+    "1 <= m == changeIndices.length <= 5000",
+    "1 <= changeIndices[i] <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We need at least <code>n</code> seconds, and at most <code>sum(nums[i]) + n</code> seconds.",
+    "We can binary search the earliest second where all indices can be marked.",
+    "If there is an operation where we change <code>nums[changeIndices[i]]</code> to a non-negative value, it is best for it to satisfy the following constraints:<ul>\r\n<li><code>nums[changeIndices[i]]</code> should not be equal to <code>0</code>.</li>\r\n<li><code>nums[changeIndices[i]]</code> should be changed to <code>0</code>.</li>\r\n<li>It should be the first position where <code>changeIndices[i]</code> occurs in <code>changeIndices</code>.</li>\r\n<li>There should be another second, <code>j</code>, where <code>changeIndices[i]</code> will be marked. <code>j</code> is in the range <code>[i + 1, m]</code>.</li>\r\n</ul>",
+    "Let <code>time_needed = sum(nums[i]) + n</code>. To check if we can mark all indices at some second <code>x</code>, we need to make <code>time_needed <= x</code>, using non-negative change operations as described previously.",
+    "Using a non-negative change operation on some <code>nums[changeIndices[i]]</code> that satisfies the constraints described previously reduces <code>time_needed</code> by <code>nums[changeIndices[i]] - 1</code>. So, we need to maximize the sum of <code>(nums[changeIndices[i]] - 1)</code> while ensuring that the non-negative change operations still satisfy the constraints.",
+    "Maximizing the sum of <code>(nums[changeIndices[i]] - 1)</code> can be done greedily using a min-priority queue and going in reverse starting from second <code>x</code> to second <code>1</code>, maximizing the sum of the values in the priority queue and ensuring that for every non-negative change operation on <code>nums[changeIndices[i]]</code> chosen, there is another second <code>j</code> in the range <code>[i + 1, x]</code> where <code>changeIndices[i]</code> can be marked.",
+    "The answer is the first value of <code>x</code> in the range <code>[1, m]</code> where it is possible to make <code>time_needed <= x</code>, or <code>-1</code> if there is no such second."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int earliestSecondToMarkIndices(vector<int>& nums, vector<int>& changeIndices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int earliestSecondToMarkIndices(int[] nums, int[] changeIndices) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def earliestSecondToMarkIndices(self, nums, changeIndices):\n        \"\"\"\n        :type nums: List[int]\n        :type changeIndices: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def earliestSecondToMarkIndices(self, nums: List[int], changeIndices: List[int]) -> int:\n        ",
+    "c": "int earliestSecondToMarkIndices(int* nums, int numsSize, int* changeIndices, int changeIndicesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int EarliestSecondToMarkIndices(int[] nums, int[] changeIndices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} changeIndices\n * @return {number}\n */\nvar earliestSecondToMarkIndices = function(nums, changeIndices) {\n    \n};",
+    "typescript": "function earliestSecondToMarkIndices(nums: number[], changeIndices: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer[] $changeIndices\n     * @return Integer\n     */\n    function earliestSecondToMarkIndices($nums, $changeIndices) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func earliestSecondToMarkIndices(_ nums: [Int], _ changeIndices: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun earliestSecondToMarkIndices(nums: IntArray, changeIndices: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int earliestSecondToMarkIndices(List<int> nums, List<int> changeIndices) {\n    \n  }\n}",
+    "golang": "func earliestSecondToMarkIndices(nums []int, changeIndices []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer[]} change_indices\n# @return {Integer}\ndef earliest_second_to_mark_indices(nums, change_indices)\n    \nend",
+    "scala": "object Solution {\n    def earliestSecondToMarkIndices(nums: Array[Int], changeIndices: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn earliest_second_to_mark_indices(nums: Vec<i32>, change_indices: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (earliest-second-to-mark-indices nums changeIndices)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec earliest_second_to_mark_indices(Nums :: [integer()], ChangeIndices :: [integer()]) -> integer().\nearliest_second_to_mark_indices(Nums, ChangeIndices) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec earliest_second_to_mark_indices(nums :: [integer], change_indices :: [integer]) :: integer\n  def earliest_second_to_mark_indices(nums, change_indices) do\n    \n  end\nend"
+  }
+}

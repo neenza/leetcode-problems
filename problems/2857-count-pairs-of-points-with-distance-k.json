@@ -1,0 +1,57 @@
+{
+  "title": "Count Pairs of Points With Distance k",
+  "problem_id": "2953",
+  "frontend_id": "2857",
+  "difficulty": "Medium",
+  "problem_slug": "count-pairs-of-points-with-distance-k",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a 2D integer array coordinates and an integer k, where coordinates[i] = [xi, yi] are the coordinates of the ith point in a 2D plane.\nWe define the distance between two points (x1, y1) and (x2, y2) as (x1 XOR x2) + (y1 XOR y2) where XOR is the bitwise XOR operation.\nReturn the number of pairs (i, j) such that i < j and the distance between points i and j is equal to k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: coordinates = [[1,2],[4,2],[1,3],[5,2]], k = 5\nOutput: 2\nExplanation: We can choose the following pairs:\n- (0,1): Because we have (1 XOR 4) + (2 XOR 2) = 5.\n- (2,3): Because we have (1 XOR 5) + (3 XOR 2) = 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: coordinates = [[1,3],[1,3],[1,3],[1,3],[1,3]], k = 0\nOutput: 10\nExplanation: Any two chosen pairs will have a distance of 0. There are 10 ways to choose two pairs.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= coordinates.length <= 50000",
+    "0 <= xi, yi <= 106",
+    "0 <= k <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">Suppose that <code>x = x<sub>1</sub> XOR x<sub>2</sub></code> and y = y<sub>1</sub> XOR y<sub>2</sub> then we can get <code>x<sub>2</sub> = x XOR x<sub>1</sub></code> and <code>y<sub>2</sub> = y XOR y<sub>1</sub></code>.</div>",
+    "<div class=\"_1l1MA\">We are supposed to have k = x + y so we can get <code>x<sub>2</sub> = x XOR x<sub>1</sub></code> and <code>y<sub>2</sub> = (k - x) XOR y<sub>1</sub></code>.</div>",
+    "<div class=\"_1l1MA\">We can iterate over all possible values of <code>x</code> and count the number of points <code>(x<sub>1</sub>, x<sub>2</sub>)</code> and <code>(x<sub>2</sub>, y<sub>2</sub>)</code>.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countPairs(vector<vector<int>>& coordinates, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPairs(List<List<Integer>> coordinates, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countPairs(self, coordinates, k):\n        \"\"\"\n        :type coordinates: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countPairs(self, coordinates: List[List[int]], k: int) -> int:\n        ",
+    "c": "int countPairs(int** coordinates, int coordinatesSize, int* coordinatesColSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountPairs(IList<IList<int>> coordinates, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} coordinates\n * @param {number} k\n * @return {number}\n */\nvar countPairs = function(coordinates, k) {\n    \n};",
+    "typescript": "function countPairs(coordinates: number[][], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $coordinates\n     * @param Integer $k\n     * @return Integer\n     */\n    function countPairs($coordinates, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countPairs(_ coordinates: [[Int]], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countPairs(coordinates: List<List<Int>>, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countPairs(List<List<int>> coordinates, int k) {\n    \n  }\n}",
+    "golang": "func countPairs(coordinates [][]int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} coordinates\n# @param {Integer} k\n# @return {Integer}\ndef count_pairs(coordinates, k)\n    \nend",
+    "scala": "object Solution {\n    def countPairs(coordinates: List[List[Int]], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_pairs(coordinates: Vec<Vec<i32>>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-pairs coordinates k)\n  (-> (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec count_pairs(Coordinates :: [[integer()]], K :: integer()) -> integer().\ncount_pairs(Coordinates, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_pairs(coordinates :: [[integer]], k :: integer) :: integer\n  def count_pairs(coordinates, k) do\n    \n  end\nend"
+  }
+}

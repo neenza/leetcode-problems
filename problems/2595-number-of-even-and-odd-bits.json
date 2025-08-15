@@ -1,0 +1,52 @@
+{
+  "title": "Number of Even and Odd Bits",
+  "problem_id": "2659",
+  "frontend_id": "2595",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-even-and-odd-bits",
+  "topics": [
+    "Bit Manipulation"
+  ],
+  "description": "You are given a positive integer n.\nLet even denote the number of even indices in the binary representation of n with value 1.\nLet odd denote the number of odd indices in the binary representation of n with value 1.\nNote that bits are indexed from right to left in the binary representation of a number.\nReturn the array [even, odd].\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 50\nOutput: [1,2]\nExplanation:\nThe binary representation of 50 is 110010 .\nIt contains 1 on indices 1, 4, and 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: [0,1]\nExplanation:\nThe binary representation of 2 is 10 .\nIt contains 1 only on index 1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain two integer variables, even and odd, to count the number of even and odd indices in the binary representation of integer n.",
+    "Divide n by 2 while n is positive, and if n modulo 2 is 1, add 1 to its corresponding variable."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> evenOddBit(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] evenOddBit(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def evenOddBit(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def evenOddBit(self, n: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* evenOddBit(int n, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] EvenOddBit(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar evenOddBit = function(n) {\n    \n};",
+    "typescript": "function evenOddBit(n: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Integer[]\n     */\n    function evenOddBit($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func evenOddBit(_ n: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun evenOddBit(n: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> evenOddBit(int n) {\n    \n  }\n}",
+    "golang": "func evenOddBit(n int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Integer[]}\ndef even_odd_bit(n)\n    \nend",
+    "scala": "object Solution {\n    def evenOddBit(n: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn even_odd_bit(n: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (even-odd-bit n)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec even_odd_bit(N :: integer()) -> [integer()].\neven_odd_bit(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec even_odd_bit(n :: integer) :: [integer]\n  def even_odd_bit(n) do\n    \n  end\nend"
+  }
+}

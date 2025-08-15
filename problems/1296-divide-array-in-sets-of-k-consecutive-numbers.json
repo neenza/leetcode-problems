@@ -1,0 +1,62 @@
+{
+  "title": "Divide Array in Sets of K Consecutive Numbers",
+  "problem_id": "1422",
+  "frontend_id": "1296",
+  "difficulty": "Medium",
+  "problem_slug": "divide-array-in-sets-of-k-consecutive-numbers",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given an array of integers nums and a positive integer k, check whether it is possible to divide this array into sets of k consecutive numbers.\nReturn true if it is possible. Otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,3,4,4,5,6], k = 4\nOutput: true\nExplanation: Array can be divided into [1,2,3,4] and [3,4,5,6].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [3,2,1,2,3,4,3,4,5,9,10,11], k = 3\nOutput: true\nExplanation: Array can be divided into [1,2,3] , [2,3,4] , [3,4,5] and [9,10,11].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4], k = 3\nOutput: false\nExplanation: Each array should be divided in subarrays of size 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= nums.length <= 105",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the smallest number in the possible-to-split array is V, then numbers V+1, V+2, ... V+k-1 must contain there as well.",
+    "You can iteratively find k sets and remove them from array until it becomes empty.",
+    "Failure to do so would mean that array is unsplittable."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPossibleDivide(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPossibleDivide(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPossibleDivide(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPossibleDivide(self, nums: List[int], k: int) -> bool:\n        ",
+    "c": "bool isPossibleDivide(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPossibleDivide(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar isPossibleDivide = function(nums, k) {\n    \n};",
+    "typescript": "function isPossibleDivide(nums: number[], k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Boolean\n     */\n    function isPossibleDivide($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPossibleDivide(_ nums: [Int], _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPossibleDivide(nums: IntArray, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPossibleDivide(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func isPossibleDivide(nums []int, k int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Boolean}\ndef is_possible_divide(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def isPossibleDivide(nums: Array[Int], k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_possible_divide(nums: Vec<i32>, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-possible-divide nums k)\n  (-> (listof exact-integer?) exact-integer? boolean?)\n  )",
+    "erlang": "-spec is_possible_divide(Nums :: [integer()], K :: integer()) -> boolean().\nis_possible_divide(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_possible_divide(nums :: [integer], k :: integer) :: boolean\n  def is_possible_divide(nums, k) do\n    \n  end\nend"
+  }
+}

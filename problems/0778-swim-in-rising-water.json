@@ -1,0 +1,65 @@
+{
+  "title": "Swim in Rising Water",
+  "problem_id": "794",
+  "frontend_id": "778",
+  "difficulty": "Hard",
+  "problem_slug": "swim-in-rising-water",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ],
+  "description": "You are given an n x n integer matrix grid where each value grid[i][j] represents the elevation at that point (i, j).\nIt starts raining, and water gradually rises over time. At time t, the water level is t, meaning any cell with elevation less than equal to t is submerged or reachable.\nYou can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distances in zero time. Of course, you must stay within the boundaries of the grid during your swim.\nReturn the minimum time until you can reach the bottom right square (n - 1, n - 1) if you start at the top left square (0, 0).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,2],[1,3]]\nOutput: 3\nExplanation:\nAt time 0, you are in grid location (0, 0).\nYou cannot go anywhere else because 4-directionally adjacent neighbors have a higher elevation than t = 0.\nYou cannot reach point (1, 1) until time 3.\nWhen the depth of water is 3, we can swim anywhere inside the grid.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/swim1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]\nOutput: 16\nExplanation: The final route is shown.\nWe need to wait until time 16 so that (0, 0) and (4, 4) are connected.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/29/swim2-grid-1.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == grid.length",
+    "n == grid[i].length",
+    "1 <= n <= 50",
+    "0 <= grid[i][j] < n2",
+    "Each value grid[i][j] is unique."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use either Dijkstra's, or binary search for the best time T for which you can reach the end if you only step on squares at most T."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int swimInWater(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int swimInWater(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def swimInWater(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def swimInWater(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int swimInWater(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SwimInWater(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar swimInWater = function(grid) {\n    \n};",
+    "typescript": "function swimInWater(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function swimInWater($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func swimInWater(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun swimInWater(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int swimInWater(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func swimInWater(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef swim_in_water(grid)\n    \nend",
+    "scala": "object Solution {\n    def swimInWater(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn swim_in_water(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (swim-in-water grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec swim_in_water(Grid :: [[integer()]]) -> integer().\nswim_in_water(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec swim_in_water(grid :: [[integer]]) :: integer\n  def swim_in_water(grid) do\n    \n  end\nend"
+  }
+}

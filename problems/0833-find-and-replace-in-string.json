@@ -1,0 +1,62 @@
+{
+  "title": "Find And Replace in String",
+  "problem_id": "862",
+  "frontend_id": "833",
+  "difficulty": "Medium",
+  "problem_slug": "find-and-replace-in-string",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed string s that you must perform k replacement operations on. The replacement operations are given as three 0-indexed parallel arrays, indices, sources, and targets, all of length k.\nTo complete the ith replacement operation:\nFor example, if s = \"abcd\", indices[i] = 0, sources[i] = \"ab\", and targets[i] = \"eee\", then the result of this replacement will be \"eeecd\".\nAll replacement operations must occur simultaneously, meaning the replacement operations should not affect the indexing of each other. The testcases will be generated such that the replacements will not overlap.\nReturn the resulting string after performing all replacement operations on s.\nA substring is a contiguous sequence of characters in a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcd\", indices = [0, 2], sources = [\"a\", \"cd\"], targets = [\"eee\", \"ffff\"]\nOutput: \"eeebffff\"\nExplanation:\n\"a\" occurs at index 0 in s, so we replace it with \"eee\".\n\"cd\" occurs at index 2 in s, so we replace it with \"ffff\".",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/12/833-ex1.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abcd\", indices = [0, 2], sources = [\"ab\",\"ec\"], targets = [\"eee\",\"ffff\"]\nOutput: \"eeecd\"\nExplanation:\n\"ab\" occurs at index 0 in s, so we replace it with \"eee\".\n\"ec\" does not occur at index 2 in s, so we do nothing.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/06/12/833-ex2-1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "k == indices.length == sources.length == targets.length",
+    "1 <= k <= 100",
+    "0 <= indexes[i] < s.length",
+    "1 <= sources[i].length, targets[i].length <= 50",
+    "s consists of only lowercase English letters.",
+    "sources[i] and targets[i] consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string findReplaceString(string s, vector<int>& indices, vector<string>& sources, vector<string>& targets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findReplaceString(self, s, indices, sources, targets):\n        \"\"\"\n        :type s: str\n        :type indices: List[int]\n        :type sources: List[str]\n        :type targets: List[str]\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findReplaceString(self, s: str, indices: List[int], sources: List[str], targets: List[str]) -> str:\n        ",
+    "c": "char* findReplaceString(char* s, int* indices, int indicesSize, char** sources, int sourcesSize, char** targets, int targetsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public string FindReplaceString(string s, int[] indices, string[] sources, string[] targets) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} indices\n * @param {string[]} sources\n * @param {string[]} targets\n * @return {string}\n */\nvar findReplaceString = function(s, indices, sources, targets) {\n    \n};",
+    "typescript": "function findReplaceString(s: string, indices: number[], sources: string[], targets: string[]): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $indices\n     * @param String[] $sources\n     * @param String[] $targets\n     * @return String\n     */\n    function findReplaceString($s, $indices, $sources, $targets) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findReplaceString(_ s: String, _ indices: [Int], _ sources: [String], _ targets: [String]) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findReplaceString(s: String, indices: IntArray, sources: Array<String>, targets: Array<String>): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String findReplaceString(String s, List<int> indices, List<String> sources, List<String> targets) {\n    \n  }\n}",
+    "golang": "func findReplaceString(s string, indices []int, sources []string, targets []string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} indices\n# @param {String[]} sources\n# @param {String[]} targets\n# @return {String}\ndef find_replace_string(s, indices, sources, targets)\n    \nend",
+    "scala": "object Solution {\n    def findReplaceString(s: String, indices: Array[Int], sources: Array[String], targets: Array[String]): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_replace_string(s: String, indices: Vec<i32>, sources: Vec<String>, targets: Vec<String>) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (find-replace-string s indices sources targets)\n  (-> string? (listof exact-integer?) (listof string?) (listof string?) string?)\n  )",
+    "erlang": "-spec find_replace_string(S :: unicode:unicode_binary(), Indices :: [integer()], Sources :: [unicode:unicode_binary()], Targets :: [unicode:unicode_binary()]) -> unicode:unicode_binary().\nfind_replace_string(S, Indices, Sources, Targets) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_replace_string(s :: String.t, indices :: [integer], sources :: [String.t], targets :: [String.t]) :: String.t\n  def find_replace_string(s, indices, sources, targets) do\n    \n  end\nend"
+  }
+}

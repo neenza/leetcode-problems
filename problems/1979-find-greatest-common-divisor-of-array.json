@@ -1,0 +1,60 @@
+{
+  "title": "Find Greatest Common Divisor of Array",
+  "problem_id": "2106",
+  "frontend_id": "1979",
+  "difficulty": "Easy",
+  "problem_slug": "find-greatest-common-divisor-of-array",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "Given an integer array nums, return the greatest common divisor of the smallest number and largest number in nums.\nThe greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,6,9,10]\nOutput: 2\nExplanation:\nThe smallest number in nums is 2.\nThe largest number in nums is 10.\nThe greatest common divisor of 2 and 10 is 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [7,5,6,8,3]\nOutput: 1\nExplanation:\nThe smallest number in nums is 3.\nThe largest number in nums is 8.\nThe greatest common divisor of 3 and 8 is 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,3]\nOutput: 3\nExplanation:\nThe smallest number in nums is 3.\nThe largest number in nums is 3.\nThe greatest common divisor of 3 and 3 is 3.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 1000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the minimum and maximum in one iteration. Let them be mn and mx.",
+    "Try all the numbers in the range [1, mn] and check the largest number which divides both of them."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int findGCD(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findGCD(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def findGCD(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def findGCD(self, nums: List[int]) -> int:\n        ",
+    "c": "int findGCD(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FindGCD(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findGCD = function(nums) {\n    \n};",
+    "typescript": "function findGCD(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function findGCD($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func findGCD(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun findGCD(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int findGCD(List<int> nums) {\n    \n  }\n}",
+    "golang": "func findGCD(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef find_gcd(nums)\n    \nend",
+    "scala": "object Solution {\n    def findGCD(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn find_gcd(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (find-gcd nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec find_gcd(Nums :: [integer()]) -> integer().\nfind_gcd(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec find_gcd(nums :: [integer]) :: integer\n  def find_gcd(nums) do\n    \n  end\nend"
+  }
+}

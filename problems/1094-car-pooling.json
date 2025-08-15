@@ -1,0 +1,59 @@
+{
+  "title": "Car Pooling",
+  "problem_id": "1184",
+  "frontend_id": "1094",
+  "difficulty": "Medium",
+  "problem_slug": "car-pooling",
+  "topics": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Simulation",
+    "Prefix Sum"
+  ],
+  "description": "There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).\nYou are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.\nReturn true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: trips = [[2,1,5],[3,3,7]], capacity = 4\nOutput: false",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: trips = [[2,1,5],[3,3,7]], capacity = 5\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= trips.length <= 1000",
+    "trips[i].length == 3",
+    "1 <= numPassengersi <= 100",
+    "0 <= fromi < toi <= 1000",
+    "1 <= capacity <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the pickup and dropoff events by location, then process them in order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool carPooling(vector<vector<int>>& trips, int capacity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean carPooling(int[][] trips, int capacity) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def carPooling(self, trips, capacity):\n        \"\"\"\n        :type trips: List[List[int]]\n        :type capacity: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def carPooling(self, trips: List[List[int]], capacity: int) -> bool:\n        ",
+    "c": "bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CarPooling(int[][] trips, int capacity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} trips\n * @param {number} capacity\n * @return {boolean}\n */\nvar carPooling = function(trips, capacity) {\n    \n};",
+    "typescript": "function carPooling(trips: number[][], capacity: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $trips\n     * @param Integer $capacity\n     * @return Boolean\n     */\n    function carPooling($trips, $capacity) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func carPooling(_ trips: [[Int]], _ capacity: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun carPooling(trips: Array<IntArray>, capacity: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool carPooling(List<List<int>> trips, int capacity) {\n    \n  }\n}",
+    "golang": "func carPooling(trips [][]int, capacity int) bool {\n    \n}",
+    "ruby": "# @param {Integer[][]} trips\n# @param {Integer} capacity\n# @return {Boolean}\ndef car_pooling(trips, capacity)\n    \nend",
+    "scala": "object Solution {\n    def carPooling(trips: Array[Array[Int]], capacity: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn car_pooling(trips: Vec<Vec<i32>>, capacity: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (car-pooling trips capacity)\n  (-> (listof (listof exact-integer?)) exact-integer? boolean?)\n  )",
+    "erlang": "-spec car_pooling(Trips :: [[integer()]], Capacity :: integer()) -> boolean().\ncar_pooling(Trips, Capacity) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec car_pooling(trips :: [[integer]], capacity :: integer) :: boolean\n  def car_pooling(trips, capacity) do\n    \n  end\nend"
+  }
+}

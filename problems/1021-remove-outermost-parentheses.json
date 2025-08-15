@@ -1,0 +1,59 @@
+{
+  "title": "Remove Outermost Parentheses",
+  "problem_id": "1078",
+  "frontend_id": "1021",
+  "difficulty": "Easy",
+  "problem_slug": "remove-outermost-parentheses",
+  "topics": [
+    "String",
+    "Stack"
+  ],
+  "description": "A valid parentheses string is either empty \"\", \"(\" + A + \")\", or A + B, where A and B are valid parentheses strings, and + represents string concatenation.\nA valid parentheses string s is primitive if it is nonempty, and there does not exist a way to split it into s = A + B, with A and B nonempty valid parentheses strings.\nGiven a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.\nReturn s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"(()())(())\"\nOutput: \"()()()\"\nExplanation: \nThe input string is \"(()())(())\", with primitive decomposition \"(()())\" + \"(())\".\nAfter removing outer parentheses of each part, this is \"()()\" + \"()\" = \"()()()\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"(()())(())(()(()))\"\nOutput: \"()()()()(())\"\nExplanation: \nThe input string is \"(()())(())(()(()))\", with primitive decomposition \"(()())\" + \"(())\" + \"(()(()))\".\nAfter removing outer parentheses of each part, this is \"()()\" + \"()\" + \"()(())\" = \"()()()()(())\".",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"()()\"\nOutput: \"\"\nExplanation: \nThe input string is \"()()\", with primitive decomposition \"()\" + \"()\".\nAfter removing outer parentheses of each part, this is \"\" + \"\" = \"\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s[i] is either '(' or ')'.",
+    "s is a valid parentheses string."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you find the primitive decomposition?  The number of ( and ) characters must be equal."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string removeOuterParentheses(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String removeOuterParentheses(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def removeOuterParentheses(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def removeOuterParentheses(self, s: str) -> str:\n        ",
+    "c": "char* removeOuterParentheses(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string RemoveOuterParentheses(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar removeOuterParentheses = function(s) {\n    \n};",
+    "typescript": "function removeOuterParentheses(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function removeOuterParentheses($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func removeOuterParentheses(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun removeOuterParentheses(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String removeOuterParentheses(String s) {\n    \n  }\n}",
+    "golang": "func removeOuterParentheses(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef remove_outer_parentheses(s)\n    \nend",
+    "scala": "object Solution {\n    def removeOuterParentheses(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn remove_outer_parentheses(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (remove-outer-parentheses s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec remove_outer_parentheses(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nremove_outer_parentheses(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec remove_outer_parentheses(s :: String.t) :: String.t\n  def remove_outer_parentheses(s) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Maximum Performance of a Team",
+  "problem_id": "1499",
+  "frontend_id": "1383",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-performance-of-a-team",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "You are given two integers n and k and two integer arrays speed and efficiency both of length n. There are n engineers numbered from 1 to n. speed[i] and efficiency[i] represent the speed and efficiency of the ith engineer respectively.\nChoose at most k different engineers out of the n engineers to form a team with the maximum performance.\nThe performance of a team is the sum of its engineers' speeds multiplied by the minimum efficiency among its engineers.\nReturn the maximum performance of this team. Since the answer can be a huge number, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2\nOutput: 60\nExplanation: \nWe have the maximum performance of the team by selecting engineer 2 (with speed=10 and efficiency=4) and engineer 5 (with speed=5 and efficiency=7). That is, performance = (10 + 5) * min(4, 7) = 60.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 3\nOutput: 68\nExplanation:\nThis is the same example as the first but k = 3. We can select engineer 1, engineer 2 and engineer 5 to get the maximum performance of the team. That is, performance = (2 + 10 + 5) * min(5, 4, 7) = 68.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 4\nOutput: 72",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= n <= 105",
+    "speed.length == n",
+    "efficiency.length == n",
+    "1 <= speed[i] <= 105",
+    "1 <= efficiency[i] <= 108"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Keep track of the engineers by their efficiency in decreasing order.",
+    "Starting from one engineer, to build a team, it suffices to bring K-1 more engineers who have higher efficiencies as well as high speeds."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPerformance(int n, int[] speed, int[] efficiency, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPerformance(self, n, speed, efficiency, k):\n        \"\"\"\n        :type n: int\n        :type speed: List[int]\n        :type efficiency: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:\n        ",
+    "c": "int maxPerformance(int n, int* speed, int speedSize, int* efficiency, int efficiencySize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPerformance(int n, int[] speed, int[] efficiency, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} speed\n * @param {number[]} efficiency\n * @param {number} k\n * @return {number}\n */\nvar maxPerformance = function(n, speed, efficiency, k) {\n    \n};",
+    "typescript": "function maxPerformance(n: number, speed: number[], efficiency: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $speed\n     * @param Integer[] $efficiency\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxPerformance($n, $speed, $efficiency, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPerformance(_ n: Int, _ speed: [Int], _ efficiency: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPerformance(n: Int, speed: IntArray, efficiency: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPerformance(int n, List<int> speed, List<int> efficiency, int k) {\n    \n  }\n}",
+    "golang": "func maxPerformance(n int, speed []int, efficiency []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} speed\n# @param {Integer[]} efficiency\n# @param {Integer} k\n# @return {Integer}\ndef max_performance(n, speed, efficiency, k)\n    \nend",
+    "scala": "object Solution {\n    def maxPerformance(n: Int, speed: Array[Int], efficiency: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_performance(n: i32, speed: Vec<i32>, efficiency: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-performance n speed efficiency k)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_performance(N :: integer(), Speed :: [integer()], Efficiency :: [integer()], K :: integer()) -> integer().\nmax_performance(N, Speed, Efficiency, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_performance(n :: integer, speed :: [integer], efficiency :: [integer], k :: integer) :: integer\n  def max_performance(n, speed, efficiency, k) do\n    \n  end\nend"
+  }
+}

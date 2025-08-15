@@ -1,0 +1,61 @@
+{
+  "title": "Count Substrings Divisible By Last Digit",
+  "problem_id": "3696",
+  "frontend_id": "3448",
+  "difficulty": "Hard",
+  "problem_slug": "count-substrings-divisible-by-last-digit",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "You are given a string s consisting of digits.\nReturn the number of substrings of s divisible by their non-zero last digit.\nNote: A substring may contain leading zeros.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"12936\"\nOutput: 11\nExplanation:\nSubstrings \"29\" , \"129\" , \"293\" and \"2936\" are not divisible by their last digit. There are 15 substrings in total, so the answer is 15 - 4 = 11 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"5701283\"\nOutput: 18\nExplanation:\nSubstrings \"01\" , \"12\" , \"701\" , \"012\" , \"128\" , \"5701\" , \"7012\" , \"0128\" , \"57012\" , \"70128\" , \"570128\" , and \"701283\" are all divisible by their last digit. Additionally, all substrings that are just 1 non-zero digit are divisible by themselves. Since there are 6 such digits, the answer is 12 + 6 = 18 .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"1010101010\"\nOutput: 25\nExplanation:\nOnly substrings that end with digit '1' are divisible by their last digit. There are 25 such substrings.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of digits only."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[index][i][j]</code> be the number of subarrays <code>s[start...index]</code> such that  <code>s[start...index] % i == j</code>.",
+    "For every pair <code>(i, j)</code>, add <code>dp[index - 1][i][j]</code> to <code>dp[index][i][(j  * 10 + x)%i)]</code>.",
+    "You should optimize this solution so that it can fit into the memory limit.",
+    "In order to find <code>dp[index][i][j]</code> we use values from <code>dp[index - 1][i][j]</code>. Hence, we can keep only <code>dp[index][i][j]</code> and <code>dp[index - 1][i][j]</code> at every iteration of the loop."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long countSubstrings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countSubstrings(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubstrings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubstrings(self, s: str) -> int:\n        ",
+    "c": "long long countSubstrings(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public long CountSubstrings(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countSubstrings = function(s) {\n    \n};",
+    "typescript": "function countSubstrings(s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Integer\n     */\n    function countSubstrings($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubstrings(_ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubstrings(s: String): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubstrings(String s) {\n    \n  }\n}",
+    "golang": "func countSubstrings(s string) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Integer}\ndef count_substrings(s)\n    \nend",
+    "scala": "object Solution {\n    def countSubstrings(s: String): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_substrings(s: String) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (count-substrings s)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec count_substrings(S :: unicode:unicode_binary()) -> integer().\ncount_substrings(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_substrings(s :: String.t) :: integer\n  def count_substrings(s) do\n    \n  end\nend"
+  }
+}

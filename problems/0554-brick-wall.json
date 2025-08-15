@@ -1,0 +1,59 @@
+{
+  "title": "Brick Wall",
+  "problem_id": "554",
+  "frontend_id": "554",
+  "difficulty": "Medium",
+  "problem_slug": "brick-wall",
+  "topics": [
+    "Array",
+    "Hash Table"
+  ],
+  "description": "There is a rectangular brick wall in front of you with n rows of bricks. The ith row has some number of bricks each of the same height (i.e., one unit) but they can be of different widths. The total width of each row is the same.\nDraw a vertical line from the top to the bottom and cross the least bricks. If your line goes through the edge of a brick, then the brick is not considered as crossed. You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.\nGiven the 2D array wall that contains the information about the wall, return the minimum number of crossed bricks after drawing such a vertical line.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: wall = [[1,2,2,1],[3,1,2],[1,3,2],[2,4],[3,1,2],[1,3,1,1]]\nOutput: 2",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/17/a.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: wall = [[1],[1],[1]]\nOutput: 3",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/01/17/a.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == wall.length",
+    "1 <= n <= 104",
+    "1 <= wall[i].length <= 104",
+    "1 <= sum(wall[i].length) <= 2 * 104",
+    "sum(wall[i]) is the same for each row i.",
+    "1 <= wall[i][j] <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int leastBricks(vector<vector<int>>& wall) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int leastBricks(List<List<Integer>> wall) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def leastBricks(self, wall):\n        \"\"\"\n        :type wall: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def leastBricks(self, wall: List[List[int]]) -> int:\n        ",
+    "c": "int leastBricks(int** wall, int wallSize, int* wallColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int LeastBricks(IList<IList<int>> wall) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} wall\n * @return {number}\n */\nvar leastBricks = function(wall) {\n    \n};",
+    "typescript": "function leastBricks(wall: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $wall\n     * @return Integer\n     */\n    function leastBricks($wall) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func leastBricks(_ wall: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun leastBricks(wall: List<List<Int>>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int leastBricks(List<List<int>> wall) {\n    \n  }\n}",
+    "golang": "func leastBricks(wall [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} wall\n# @return {Integer}\ndef least_bricks(wall)\n    \nend",
+    "scala": "object Solution {\n    def leastBricks(wall: List[List[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn least_bricks(wall: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (least-bricks wall)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec least_bricks(Wall :: [[integer()]]) -> integer().\nleast_bricks(Wall) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec least_bricks(wall :: [[integer]]) :: integer\n  def least_bricks(wall) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "title": "Fruits Into Baskets III",
+  "problem_id": "3791",
+  "frontend_id": "3479",
+  "difficulty": "Medium",
+  "problem_slug": "fruits-into-baskets-iii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Segment Tree",
+    "Ordered Set"
+  ],
+  "description": "You are given two arrays of integers, fruits and baskets, each of length n, where fruits[i] represents the quantity of the ith type of fruit, and baskets[j] represents the capacity of the jth basket.\nFrom left to right, place the fruits according to these rules:\nReturn the number of fruit types that remain unplaced after all possible allocations are made.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: fruits = [4,2,5], baskets = [3,5,4]\nOutput: 1\nExplanation:\nSince one fruit type remains unplaced, we return 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: fruits = [3,6,1], baskets = [6,4,7]\nOutput: 0\nExplanation:\nSince all fruits are successfully placed, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == fruits.length == baskets.length",
+    "1 <= n <= 105",
+    "1 <= fruits[i], baskets[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the baskets by the pair of <code>(basket[i], i)</code> in the array.",
+    "For each fruit from left to right, use binary search to find the first index in the sorted array such that <code>basket[i] >= fruit</code>.",
+    "Use a segment tree to maintain the smallest original indices where <code>basket[i] >= fruit</code>.",
+    "When a valid index is found, set the corresponding point to infinity to mark it as used."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numOfUnplacedFruits(vector<int>& fruits, vector<int>& baskets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfUnplacedFruits(int[] fruits, int[] baskets) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numOfUnplacedFruits(self, fruits, baskets):\n        \"\"\"\n        :type fruits: List[int]\n        :type baskets: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numOfUnplacedFruits(self, fruits: List[int], baskets: List[int]) -> int:\n        ",
+    "c": "int numOfUnplacedFruits(int* fruits, int fruitsSize, int* baskets, int basketsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumOfUnplacedFruits(int[] fruits, int[] baskets) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} fruits\n * @param {number[]} baskets\n * @return {number}\n */\nvar numOfUnplacedFruits = function(fruits, baskets) {\n    \n};",
+    "typescript": "function numOfUnplacedFruits(fruits: number[], baskets: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $fruits\n     * @param Integer[] $baskets\n     * @return Integer\n     */\n    function numOfUnplacedFruits($fruits, $baskets) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numOfUnplacedFruits(_ fruits: [Int], _ baskets: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numOfUnplacedFruits(fruits: IntArray, baskets: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numOfUnplacedFruits(List<int> fruits, List<int> baskets) {\n    \n  }\n}",
+    "golang": "func numOfUnplacedFruits(fruits []int, baskets []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} fruits\n# @param {Integer[]} baskets\n# @return {Integer}\ndef num_of_unplaced_fruits(fruits, baskets)\n    \nend",
+    "scala": "object Solution {\n    def numOfUnplacedFruits(fruits: Array[Int], baskets: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-of-unplaced-fruits fruits baskets)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec num_of_unplaced_fruits(Fruits :: [integer()], Baskets :: [integer()]) -> integer().\nnum_of_unplaced_fruits(Fruits, Baskets) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_of_unplaced_fruits(fruits :: [integer], baskets :: [integer]) :: integer\n  def num_of_unplaced_fruits(fruits, baskets) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Square Root Decomposition\n\n#### Intuition\n\nThis problem is similar to [3479. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/description/), but the difference lies in the **larger input size**, making a direct simulation inefficient.\n\nTo optimize, we apply a **square root decomposition** approach.\n\nWe divide the `baskets` array into $\\sqrt{n}$ blocks, each of size $m = \\sqrt{n}$ (approximately). For each block, we maintain the **maximum value** in that block in an auxiliary array `maxV`.\n\nFor each fruit, we scan these blocks **block by block**. There are two possibilities for a given block:\n\n1. If the maximum basket capacity in the current block is **less than** the fruit’s quantity, we **skip** this block entirely.\n2. If the block contains a basket that can hold the fruit (`maxV[sec] >= fruit`), we scan that block to find the **leftmost** basket that can hold the fruit, place it (set it to 0), and update the block’s maximum value.\n\nIf no such basket is found after scanning all blocks, we increment the count of **unplaced fruits**.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\times \\sqrt{n}) = O(n^{\\frac32})$.\n  \n  Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and traversing each block takes $O(\\sqrt{n})$ time.\n\n- Space complexity: $O(\\sqrt{n})$.\n  \n  We need to maintain the maximum capacity of the baskets in each block.\n\n---\n\n### Approach 2: Segment Tree + Binary Search\n\n#### Intuition\n\nThis is a template problem for a segment tree, where we can use a segment tree to maintain the maximum value of the $\\textit{baskets}$ array over intervals, and then use binary search to find the first basket that meets the condition. The specific method is as follows:\n\n1. First, establish a tree where the content maintained at initialization is the maximum value of each interval.\n2. Then, enumerate the fruits in $\\textit{fruits}$, and use the segment tree to find the maximum value in the interval during the binary search process to locate the first basket that meets the condition. If such a basket is found, use the segment tree to perform a single-point update on that basket, setting its value to $0$. Otherwise, increment the counter $\\textit{count}$.\n3. The process of binary search is as follows: If the maximum value in the left interval is greater than the current number of fruits, continue the binary search in the left interval. If the maximum value in the left interval is less than the current number of fruits and the maximum value in the right interval is greater than or equal to the current number of fruits, continue the binary search in the right interval. Otherwise, there is no interval that meets the condition in the current range.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{baskets}$.\n\n- Time complexity: $O(n \\log n)$.\n  \n  Constructing the segment tree takes $O(n)$ time. Enumerating the fruits in $\\textit{fruits}$ requires $O(n)$ time, and each binary search, segment tree query, and update operation takes $O(\\log n)$ time.\n\n- Space complexity: $O(n)$.\n  \n  It requires $O(n)$ space to store the segment tree.\n  \n---"
+}

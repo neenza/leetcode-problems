@@ -1,0 +1,54 @@
+{
+  "title": "Palindrome Partitioning IV",
+  "problem_id": "1871",
+  "frontend_id": "1745",
+  "difficulty": "Hard",
+  "problem_slug": "palindrome-partitioning-iv",
+  "topics": [
+    "String",
+    "Dynamic Programming"
+  ],
+  "description": "Given a string s, return true if it is possible to split the string s into three non-empty palindromic substrings. Otherwise, return false.​​​​​\nA string is said to be palindrome if it the same string when reversed.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcbdd\"\nOutput: true\nExplanation: \"abcbdd\" = \"a\" + \"bcb\" + \"dd\", and all three substrings are palindromes.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"bcbddxy\"\nOutput: false\nExplanation: s cannot be split into 3 palindromes.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= s.length <= 2000",
+    "s​​​​​​ consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Preprocess checking palindromes in O(1)",
+    "Note that one string is a prefix and another one is a suffix you can try brute forcing the rest"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkPartitioning(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPartitioning(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkPartitioning(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkPartitioning(self, s: str) -> bool:\n        ",
+    "c": "bool checkPartitioning(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckPartitioning(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkPartitioning = function(s) {\n    \n};",
+    "typescript": "function checkPartitioning(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function checkPartitioning($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkPartitioning(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkPartitioning(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkPartitioning(String s) {\n    \n  }\n}",
+    "golang": "func checkPartitioning(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef check_partitioning(s)\n    \nend",
+    "scala": "object Solution {\n    def checkPartitioning(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_partitioning(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-partitioning s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec check_partitioning(S :: unicode:unicode_binary()) -> boolean().\ncheck_partitioning(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_partitioning(s :: String.t) :: boolean\n  def check_partitioning(s) do\n    \n  end\nend"
+  }
+}

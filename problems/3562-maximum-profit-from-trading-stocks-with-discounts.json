@@ -1,0 +1,87 @@
+{
+  "title": "Maximum Profit from Trading Stocks with Discounts",
+  "problem_id": "3854",
+  "frontend_id": "3562",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-profit-from-trading-stocks-with-discounts",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "You are given an integer n, representing the number of employees in a company. Each employee is assigned a unique ID from 1 to n, and employee 1 is the CEO. You are given two 1-based integer arrays, present and future, each of length n, where:\nThe company's hierarchy is represented by a 2D integer array hierarchy, where hierarchy[i] = [ui, vi] means that employee ui is the direct boss of employee vi.\nAdditionally, you have an integer budget representing the total funds available for investment.\nHowever, the company has a discount policy: if an employee's direct boss purchases their own stock, then the employee can buy their stock at half the original price (floor(present[v] / 2)).\nReturn the maximum profit that can be achieved without exceeding the given budget.\nNote:\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, present = [1,2], future = [4,3], hierarchy = [[1,2]], budget = 3\nOutput: 5\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-053641.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, present = [3,4], future = [5,8], hierarchy = [[1,2]], budget = 4\nOutput: 4\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-053641.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, present = [4,6,8], future = [7,9,11], hierarchy = [[1,2],[1,3]], budget = 10\nOutput: 10\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/image.png"
+      ]
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: n = 3, present = [5,2,3], future = [8,5,6], hierarchy = [[1,2],[2,3]], budget = 7\nOutput: 12\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/04/09/screenshot-2025-04-10-at-054114.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 160",
+    "present.length, future.length == n",
+    "1 <= present[i], future[i] <= 50",
+    "hierarchy.length == n - 1",
+    "hierarchy[i] == [ui, vi]",
+    "1 <= ui, vi <= n",
+    "ui != vi",
+    "1 <= budget <= 160",
+    "There are no duplicate edges.",
+    "Employee 1 is the direct or indirect boss of every employee.",
+    "The input graph hierarchy is guaranteed to have no cycles."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "- Compute <code>max_profit[u]</code> and <code>max_profit1[u]</code> for each node <code>u</code>",
+    "- <code>max_profit[u]</code> = maximum profit in the subtree of <code>u</code> assuming the parent of <code>u</code> has not bought the stock",
+    "- <code>max_profit1[u]</code> = maximum profit in the subtree of <code>u</code> assuming the parent of <code>u</code> has bought the stock",
+    "For each node <code>u</code>, consider two cases:",
+    "Buy the stock for <code>u</code> (at <code>present[u]</code> price if parent did not buy, or at <code>floor(present[u]/2)</code> if parent bought), then add the best <code>max_profit1</code> values of its children",
+    "Skip buying for <code>u</code>, then add the best <code>max_profit</code> values of its children"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxProfit(int n, vector<int>& present, vector<int>& future, vector<vector<int>>& hierarchy, int budget) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProfit(int n, int[] present, int[] future, int[][] hierarchy, int budget) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxProfit(self, n, present, future, hierarchy, budget):\n        \"\"\"\n        :type n: int\n        :type present: List[int]\n        :type future: List[int]\n        :type hierarchy: List[List[int]]\n        :type budget: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxProfit(self, n: int, present: List[int], future: List[int], hierarchy: List[List[int]], budget: int) -> int:\n        ",
+    "c": "int maxProfit(int n, int* present, int presentSize, int* future, int futureSize, int** hierarchy, int hierarchySize, int* hierarchyColSize, int budget) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxProfit(int n, int[] present, int[] future, int[][] hierarchy, int budget) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} present\n * @param {number[]} future\n * @param {number[][]} hierarchy\n * @param {number} budget\n * @return {number}\n */\nvar maxProfit = function(n, present, future, hierarchy, budget) {\n    \n};",
+    "typescript": "function maxProfit(n: number, present: number[], future: number[], hierarchy: number[][], budget: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $present\n     * @param Integer[] $future\n     * @param Integer[][] $hierarchy\n     * @param Integer $budget\n     * @return Integer\n     */\n    function maxProfit($n, $present, $future, $hierarchy, $budget) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxProfit(_ n: Int, _ present: [Int], _ future: [Int], _ hierarchy: [[Int]], _ budget: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxProfit(n: Int, present: IntArray, future: IntArray, hierarchy: Array<IntArray>, budget: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxProfit(int n, List<int> present, List<int> future, List<List<int>> hierarchy, int budget) {\n    \n  }\n}",
+    "golang": "func maxProfit(n int, present []int, future []int, hierarchy [][]int, budget int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} present\n# @param {Integer[]} future\n# @param {Integer[][]} hierarchy\n# @param {Integer} budget\n# @return {Integer}\ndef max_profit(n, present, future, hierarchy, budget)\n    \nend",
+    "scala": "object Solution {\n    def maxProfit(n: Int, present: Array[Int], future: Array[Int], hierarchy: Array[Array[Int]], budget: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_profit(n: i32, present: Vec<i32>, future: Vec<i32>, hierarchy: Vec<Vec<i32>>, budget: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-profit n present future hierarchy budget)\n  (-> exact-integer? (listof exact-integer?) (listof exact-integer?) (listof (listof exact-integer?)) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_profit(N :: integer(), Present :: [integer()], Future :: [integer()], Hierarchy :: [[integer()]], Budget :: integer()) -> integer().\nmax_profit(N, Present, Future, Hierarchy, Budget) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_profit(n :: integer, present :: [integer], future :: [integer], hierarchy :: [[integer]], budget :: integer) :: integer\n  def max_profit(n, present, future, hierarchy, budget) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "Nth Highest Salary",
+  "problem_id": "177",
+  "frontend_id": "177",
+  "difficulty": "Medium",
+  "problem_slug": "nth-highest-salary",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Employee\nWrite a solution to find the nth highest distinct salary from the Employee table. If there are less than n distinct salaries, return null.\nThe result format is in the following example.\nExample 1:\nExample 2:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| salary      | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains information about the salary of an employee.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nEmployee table:\n+----+--------+\n| id | salary |\n+----+--------+\n| 1  | 100    |\n| 2  | 200    |\n| 3  | 300    |\n+----+--------+\nn = 2\nOutput: \n+------------------------+\n| getNthHighestSalary(2) |\n+------------------------+\n| 200                    |\n+------------------------+",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: \nEmployee table:\n+----+--------+\n| id | salary |\n+----+--------+\n| 1  | 100    |\n+----+--------+\nn = 2\nOutput: \n+------------------------+\n| getNthHighestSalary(2) |\n+------------------------+\n| null                   |\n+------------------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT\nBEGIN\n  RETURN (\n      # Write your MySQL query statement below.\n\n  );\nEND",
+    "mssql": "CREATE FUNCTION getNthHighestSalary(@N INT) RETURNS INT AS\nBEGIN\n    RETURN (\n        /* Write your T-SQL query statement below. */\n\n    );\nEND",
+    "oraclesql": "CREATE FUNCTION getNthHighestSalary(N IN NUMBER) RETURN NUMBER IS\nresult NUMBER;\nBEGIN\n    /* Write your PL/SQL query statement below */\n\n    RETURN result;\nEND;",
+    "pythondata": "import pandas as pd\n\ndef nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:",
+    "postgresql": "CREATE OR REPLACE FUNCTION NthHighestSalary(N INT) RETURNS TABLE (Salary INT) AS $$\nBEGIN\n  RETURN QUERY (\n    -- Write your PostgreSQL query statement below.\n    \n      \n  );\nEND;\n$$ LANGUAGE plpgsql;"
+  }
+}

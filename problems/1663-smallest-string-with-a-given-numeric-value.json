@@ -1,0 +1,54 @@
+{
+  "title": "Smallest String With A Given Numeric Value",
+  "problem_id": "1782",
+  "frontend_id": "1663",
+  "difficulty": "Medium",
+  "problem_slug": "smallest-string-with-a-given-numeric-value",
+  "topics": [
+    "String",
+    "Greedy"
+  ],
+  "description": "The numeric value of a lowercase character is defined as its position (1-indexed) in the alphabet, so the numeric value of a is 1, the numeric value of b is 2, the numeric value of c is 3, and so on.\nThe numeric value of a string consisting of lowercase characters is defined as the sum of its characters' numeric values. For example, the numeric value of the string \"abe\" is equal to 1 + 2 + 5 = 8.\nYou are given two integers n and k. Return the lexicographically smallest string with length equal to n and numeric value equal to k.\nNote that a string x is lexicographically smaller than string y if x comes before y in dictionary order, that is, either x is a prefix of y, or if i is the first position such that x[i] != y[i], then x[i] comes before y[i] in alphabetic order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, k = 27\nOutput: \"aay\"\nExplanation: The numeric value of the string is 1 + 1 + 25 = 27, and it is the smallest string with such a value and length equal to 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, k = 73\nOutput: \"aaszz\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "n <= k <= 26 * n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think greedily.",
+    "If you build the string from the end to the beginning, it will always be optimal to put the highest possible character at the current index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string getSmallestString(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getSmallestString(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getSmallestString(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getSmallestString(self, n: int, k: int) -> str:\n        ",
+    "c": "char* getSmallestString(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string GetSmallestString(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {string}\n */\nvar getSmallestString = function(n, k) {\n    \n};",
+    "typescript": "function getSmallestString(n: number, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return String\n     */\n    function getSmallestString($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getSmallestString(_ n: Int, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getSmallestString(n: Int, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String getSmallestString(int n, int k) {\n    \n  }\n}",
+    "golang": "func getSmallestString(n int, k int) string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {String}\ndef get_smallest_string(n, k)\n    \nend",
+    "scala": "object Solution {\n    def getSmallestString(n: Int, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_smallest_string(n: i32, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (get-smallest-string n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec get_smallest_string(N :: integer(), K :: integer()) -> unicode:unicode_binary().\nget_smallest_string(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_smallest_string(n :: integer, k :: integer) :: String.t\n  def get_smallest_string(n, k) do\n    \n  end\nend"
+  }
+}

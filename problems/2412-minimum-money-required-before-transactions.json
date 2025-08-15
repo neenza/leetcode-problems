@@ -1,0 +1,57 @@
+{
+  "title": "Minimum Money Required Before Transactions",
+  "problem_id": "2499",
+  "frontend_id": "2412",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-money-required-before-transactions",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given a 0-indexed 2D integer array transactions, where transactions[i] = [costi, cashbacki].\nThe array describes transactions, where each transaction must be completed exactly once in some order. At any given moment, you have a certain amount of money. In order to complete transaction i, money >= costi must hold true. After performing a transaction, money becomes money - costi + cashbacki.\nReturn the minimum amount of money required before any transaction so that all of the transactions can be completed regardless of the order of the transactions.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: transactions = [[2,1],[5,0],[4,2]]\nOutput: 10\nExplanation:\nStarting with money = 10, the transactions can be performed in any order.\nIt can be shown that starting with money < 10 will fail to complete all transactions in some order.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: transactions = [[3,0],[0,3]]\nOutput: 3\nExplanation:\n- If transactions are in the order [[3,0],[0,3]], the minimum money required to complete the transactions is 3.\n- If transactions are in the order [[0,3],[3,0]], the minimum money required to complete the transactions is 0.\nThus, starting with money = 3, the transactions can be performed in any order.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= transactions.length <= 105",
+    "transactions[i].length == 2",
+    "0 <= costi, cashbacki <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Split transactions that have cashback greater or equal to cost apart from transactions that have cashback less than cost. You will always <strong>earn</strong> money in the first scenario.",
+    "For transactions that have cashback greater or equal to cost, sort them by cost in descending order.",
+    "For transactions that have cashback less than cost, sort them by cashback in ascending order."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minimumMoney(vector<vector<int>>& transactions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumMoney(int[][] transactions) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumMoney(self, transactions):\n        \"\"\"\n        :type transactions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumMoney(self, transactions: List[List[int]]) -> int:\n        ",
+    "c": "long long minimumMoney(int** transactions, int transactionsSize, int* transactionsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinimumMoney(int[][] transactions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} transactions\n * @return {number}\n */\nvar minimumMoney = function(transactions) {\n    \n};",
+    "typescript": "function minimumMoney(transactions: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $transactions\n     * @return Integer\n     */\n    function minimumMoney($transactions) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumMoney(_ transactions: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumMoney(transactions: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumMoney(List<List<int>> transactions) {\n    \n  }\n}",
+    "golang": "func minimumMoney(transactions [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[][]} transactions\n# @return {Integer}\ndef minimum_money(transactions)\n    \nend",
+    "scala": "object Solution {\n    def minimumMoney(transactions: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_money(transactions: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-money transactions)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_money(Transactions :: [[integer()]]) -> integer().\nminimum_money(Transactions) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_money(transactions :: [[integer]]) :: integer\n  def minimum_money(transactions) do\n    \n  end\nend"
+  }
+}

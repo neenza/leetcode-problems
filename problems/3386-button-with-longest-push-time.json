@@ -1,0 +1,52 @@
+{
+  "title": "Button with Longest Push Time",
+  "problem_id": "3632",
+  "frontend_id": "3386",
+  "difficulty": "Easy",
+  "problem_slug": "button-with-longest-push-time",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a 2D array events which represents a sequence of events where a child pushes a series of buttons on a keyboard.\nEach events[i] = [indexi, timei] indicates that the button at index indexi was pressed at time timei.\nReturn the index of the button that took the longest time to push. If multiple buttons have the same longest time, return the button with the smallest index.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: events = [[1,2],[2,5],[3,9],[1,15]]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: events = [[10,5],[1,7]]\nOutput: 10\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= events.length <= 1000",
+    "events[i] == [indexi, timei]",
+    "1 <= indexi, timei <= 105",
+    "The input is generated such that events is sorted in increasing order of timei."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int buttonWithLongestTime(vector<vector<int>>& events) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int buttonWithLongestTime(int[][] events) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def buttonWithLongestTime(self, events):\n        \"\"\"\n        :type events: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def buttonWithLongestTime(self, events: List[List[int]]) -> int:\n        ",
+    "c": "int buttonWithLongestTime(int** events, int eventsSize, int* eventsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ButtonWithLongestTime(int[][] events) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} events\n * @return {number}\n */\nvar buttonWithLongestTime = function(events) {\n    \n};",
+    "typescript": "function buttonWithLongestTime(events: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $events\n     * @return Integer\n     */\n    function buttonWithLongestTime($events) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func buttonWithLongestTime(_ events: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun buttonWithLongestTime(events: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int buttonWithLongestTime(List<List<int>> events) {\n    \n  }\n}",
+    "golang": "func buttonWithLongestTime(events [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} events\n# @return {Integer}\ndef button_with_longest_time(events)\n    \nend",
+    "scala": "object Solution {\n    def buttonWithLongestTime(events: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn button_with_longest_time(events: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (button-with-longest-time events)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec button_with_longest_time(Events :: [[integer()]]) -> integer().\nbutton_with_longest_time(Events) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec button_with_longest_time(events :: [[integer]]) :: integer\n  def button_with_longest_time(events) do\n    \n  end\nend"
+  }
+}

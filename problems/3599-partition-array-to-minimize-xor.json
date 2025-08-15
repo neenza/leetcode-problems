@@ -1,0 +1,64 @@
+{
+  "title": "Partition Array to Minimize XOR",
+  "problem_id": "3913",
+  "frontend_id": "3599",
+  "difficulty": "Medium",
+  "problem_slug": "partition-array-to-minimize-xor",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums and an integer k.\nYour task is to partition nums into k non-empty subarrays. For each subarray, compute the bitwise XOR of all its elements.\nReturn the minimum possible value of the maximum XOR among these k subarrays.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3], k = 2\nOutput: 1\nExplanation:\nThe optimal partition is [1] and [2, 3] .\nThe maximum XOR among the subarrays is 1, which is the minimum possible.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,3,2], k = 3\nOutput: 2\nExplanation:\nThe optimal partition is [2] , [3, 3] , and [2] .\nThe maximum XOR among the subarrays is 2, which is the minimum possible.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,2,3,1], k = 2\nOutput: 0\nExplanation:\nThe optimal partition is [1, 1] and [2, 3, 1] .\nThe maximum XOR among the subarrays is 0, which is the minimum possible.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 250",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming.",
+    "Precompute <code>pre[i] = nums[0] ^ … ^ nums[i-1]</code> so any subarray XOR is <code>pre[r] ^ pre[l]</code>.",
+    "Define <code>dp[i][j]</code> = minimum possible “max‑XOR” when splitting the first <code>i</code> elements into <code>j</code> parts.",
+    "For each <code>dp[i][j]</code>, try all splits <code>t < i</code> and take the minimum over <code>max(dp[t][j-1], pre[i] ^ pre[t])</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minXor(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minXor(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minXor(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minXor(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "int minXor(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinXor(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minXor = function(nums, k) {\n    \n};",
+    "typescript": "function minXor(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minXor($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minXor(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minXor(nums: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minXor(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minXor(nums []int, k int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_xor(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minXor(nums: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_xor(nums: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-xor nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_xor(Nums :: [integer()], K :: integer()) -> integer().\nmin_xor(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_xor(nums :: [integer], k :: integer) :: integer\n  def min_xor(nums, k) do\n    \n  end\nend"
+  }
+}

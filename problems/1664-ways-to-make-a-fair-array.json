@@ -1,0 +1,59 @@
+{
+  "title": "Ways to Make a Fair Array",
+  "problem_id": "1783",
+  "frontend_id": "1664",
+  "difficulty": "Medium",
+  "problem_slug": "ways-to-make-a-fair-array",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer array nums. You can choose exactly one index (0-indexed) and remove the element. Notice that the index of the elements may change after the removal.\nFor example, if nums = [6,1,7,4,1]:\nAn array is fair if the sum of the odd-indexed values equals the sum of the even-indexed values.\nReturn the number of indices that you could choose such that after the removal, nums is fair.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,1,6,4]\nOutput: 1\nExplanation:\nRemove index 0: [1,6,4] -> Even sum: 1 + 4 = 5. Odd sum: 6. Not fair.\nRemove index 1: [2,6,4] -> Even sum: 2 + 4 = 6. Odd sum: 6. Fair.\nRemove index 2: [2,1,4] -> Even sum: 2 + 4 = 6. Odd sum: 1. Not fair.\nRemove index 3: [2,1,6] -> Even sum: 2 + 6 = 8. Odd sum: 1. Not fair.\nThere is 1 index that you can remove to make nums fair.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1]\nOutput: 3\nExplanation: You can remove any index and the remaining array is fair.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 0\nExplanation: You cannot make a fair array after removing any index.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The parity of the indices after the removed element changes.",
+    "Calculate prefix sums for even and odd indices separately to calculate for each index in O(1)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int waysToMakeFair(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int waysToMakeFair(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def waysToMakeFair(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def waysToMakeFair(self, nums: List[int]) -> int:\n        ",
+    "c": "int waysToMakeFair(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int WaysToMakeFair(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar waysToMakeFair = function(nums) {\n    \n};",
+    "typescript": "function waysToMakeFair(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function waysToMakeFair($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func waysToMakeFair(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun waysToMakeFair(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int waysToMakeFair(List<int> nums) {\n    \n  }\n}",
+    "golang": "func waysToMakeFair(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef ways_to_make_fair(nums)\n    \nend",
+    "scala": "object Solution {\n    def waysToMakeFair(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn ways_to_make_fair(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (ways-to-make-fair nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec ways_to_make_fair(Nums :: [integer()]) -> integer().\nways_to_make_fair(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec ways_to_make_fair(nums :: [integer]) :: integer\n  def ways_to_make_fair(nums) do\n    \n  end\nend"
+  }
+}

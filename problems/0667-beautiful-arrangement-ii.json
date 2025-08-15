@@ -1,0 +1,51 @@
+{
+  "title": "Beautiful Arrangement II",
+  "problem_id": "667",
+  "frontend_id": "667",
+  "difficulty": "Medium",
+  "problem_slug": "beautiful-arrangement-ii",
+  "topics": [
+    "Array",
+    "Math"
+  ],
+  "description": "Given two integers n and k, construct a list answer that contains n different positive integers ranging from 1 to n and obeys the following requirement:\nReturn the list answer. If there multiple valid answers, return any of them.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 3, k = 1\nOutput: [1,2,3]\nExplanation: The [1,2,3] has three different positive integers ranging from 1 to 3, and the [1,1] has exactly 1 distinct integer: 1",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, k = 2\nOutput: [1,3,2]\nExplanation: The [1,3,2] has three different positive integers ranging from 1 to 3, and the [2,1] has exactly 2 distinct integers: 1 and 2.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k < n <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> constructArray(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] constructArray(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def constructArray(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def constructArray(self, n: int, k: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* constructArray(int n, int k, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ConstructArray(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number[]}\n */\nvar constructArray = function(n, k) {\n    \n};",
+    "typescript": "function constructArray(n: number, k: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return Integer[]\n     */\n    function constructArray($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func constructArray(_ n: Int, _ k: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun constructArray(n: Int, k: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> constructArray(int n, int k) {\n    \n  }\n}",
+    "golang": "func constructArray(n int, k int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {Integer[]}\ndef construct_array(n, k)\n    \nend",
+    "scala": "object Solution {\n    def constructArray(n: Int, k: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn construct_array(n: i32, k: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (construct-array n k)\n  (-> exact-integer? exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec construct_array(N :: integer(), K :: integer()) -> [integer()].\nconstruct_array(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec construct_array(n :: integer, k :: integer) :: [integer]\n  def construct_array(n, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n### Approach #1: Brute Force [Time Limit Exceeded]\n\n#### Intuition\n\nFor each permutation of $$\\text{[1, 2, ..., n]}$$, let's look at the set of differences of the adjacent elements.\n\n#### Algorithm\n\nFor each permutation, we find the number of unique differences of adjacent elements. If it is the desired number, we'll return that permutation.\n\nTo enumerate each permutation without using library functions, we use a recursive algorithm, where `permute` is responsible for permuting the indexes of $$\\text{nums}$$ in the interval $$\\text{[start, nums.length)}$$.#### Complexity Analysis\n\n* Time Complexity: $$O(n!)$$ to generate every permutation in the outer loop, then $$O(n)$$ work to check differences. In total taking $$O(n* n!)$$ time.\n\n* Space Complexity: $$O(n)$$. We use $$\\text{seen}$$ to store whether we've seen the differences, and each generated permutation has a length equal to $$\\text{n}$$.\n\n---\n\n### Approach #2: Construction [Accepted]\n\n#### Intuition\n\nWhen $$\\text{k = n-1}$$, a valid construction is $$\\text{[1, n, 2, n-1, 3, n-2, ....]}$$. One way to see this is that we need to have a difference of $$\\text{n-1}$$, which means we need $$\\text{1}$$ and $$\\text{n}$$ adjacent; then, we need a difference of $$\\text{n-2}$$, etc.\n\nAlso, when $$\\text{k = 1}$$, a valid construction is $$\\text{[1, 2, 3, ..., n]}$$. So we have a construction when $$\\text{n-k}$$ is tiny, and when it is large.  This leads to the idea that we can stitch together these two constructions: we can put $$\\text{[1, 2, ..., n-k-1]}$$ first so that $$\\text{n}$$ is effectively $$\\text{k+1}$$, and then finish the construction with the first $$\\text{\"k = n-1\"}$$ method.\n\nFor example, when $$\\text{n = 6}$$ and $$\\text{k = 3}$$, we will construct the array as $$\\text{[1, 2, 3, 6, 4, 5]}$$. This consists of two parts: a construction of $$\\text{[1, 2]}$$ and a construction of $$\\text{[1, 4, 2, 3]}$$ where every element had $$\\text{2}$$ added to it (i.e. $$\\text{[3, 6, 4, 5]}$$).\n\n#### Algorithm\n\nAs before, write $$\\text{[1, 2, ..., n-k-1]}$$ first.  The remaining $$\\text{k+1}$$ elements to be written are $$\\text{[n-k, n-k+1, ..., n]}$$, and we'll write them in alternating head and tail order.\n\nWhen we are writing the $$i^{th}$$ element from the remaining $$\\text{k+1}$$, every even $$i$$ is going to be chosen from the head, and will have value $$\\text{n-k + i//2}$$.  Every odd $$i$$ is going to be chosen from the tail and will have value $$\\text{n - i//2}$$.#### Complexity Analysis\n\nLet $n$ be the size of the array to be constructed, and let $k$ be the number of distinct absolute differences required.\n\n- Time complexity: $O(n)$\n\n    The algorithm consists of two loops:\n    1. The first loop runs for $(n - k - 1)$ iterations, assigning values from $1$ to $(n - k - 1)$ to the array.\n    2. The second loop runs for $(k + 1)$ iterations, assigning values in a specific pattern to create $k$ distinct absolute differences.\n\n    Since both loops run in linear time with respect to $n$, the overall time complexity is $O(n)$.\n\n* Space complexity: $O(1)$\n    \n    The algorithm uses a constant amount of extra space, including variables like `c`, `v`, and `i`. No additional data structures are used that scale with $n$. Therefore, the space complexity is $O(1)$ (excluding the output array). \n\n---"
+}

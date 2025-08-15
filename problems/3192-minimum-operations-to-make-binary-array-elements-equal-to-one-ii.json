@@ -1,0 +1,55 @@
+{
+  "title": "Minimum Operations to Make Binary Array Elements Equal to One II",
+  "problem_id": "3477",
+  "frontend_id": "3192",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-make-binary-array-elements-equal-to-one-ii",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a binary array nums.\nYou can do the following operation on the array any number of times (possibly zero):\nFlipping an element means changing its value from 0 to 1, and from 1 to 0.\nReturn the minimum number of operations required to make all elements in nums equal to 1.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [0,1,1,0,1]\nOutput: 4\nExplanation: We can do the following operations:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,0,0,0]\nOutput: 1\nExplanation: We can do the following operation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] <= 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The only way to change <code>nums[0]</code> to 1 is by performing an operation with index <code>i = 0</code>.",
+    "Iterate from left to right and perform an operation at each index i where nums[i] is 0, and keep track of how many operations are currently performed on the suffix."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int]) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "typescript": "function minOperations(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minOperations($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef min_operations(nums)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()]) -> integer().\nmin_operations(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer]) :: integer\n  def min_operations(nums) do\n    \n  end\nend"
+  }
+}

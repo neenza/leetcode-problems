@@ -1,0 +1,53 @@
+{
+  "title": "Triangle",
+  "problem_id": "120",
+  "frontend_id": "120",
+  "difficulty": "Medium",
+  "problem_slug": "triangle",
+  "topics": [
+    "Array",
+    "Dynamic Programming"
+  ],
+  "description": "Given a triangle array, return the minimum path sum from top to bottom.\nFor each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]\nOutput: 11\nExplanation: The triangle looks like:\n   2\n  3 4\n 6 5 7\n4 1 8 3\nThe minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: triangle = [[-10]]\nOutput: -10",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= triangle.length <= 200",
+    "triangle[0].length == 1",
+    "triangle[i].length == triangle[i - 1].length + 1",
+    "-104 <= triangle[i][j] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumTotal(vector<vector<int>>& triangle) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTotal(List<List<Integer>> triangle) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumTotal(self, triangle):\n        \"\"\"\n        :type triangle: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumTotal(self, triangle: List[List[int]]) -> int:\n        ",
+    "c": "int minimumTotal(int** triangle, int triangleSize, int* triangleColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumTotal(IList<IList<int>> triangle) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} triangle\n * @return {number}\n */\nvar minimumTotal = function(triangle) {\n    \n};",
+    "typescript": "function minimumTotal(triangle: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $triangle\n     * @return Integer\n     */\n    function minimumTotal($triangle) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumTotal(_ triangle: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumTotal(triangle: List<List<Int>>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumTotal(List<List<int>> triangle) {\n    \n  }\n}",
+    "golang": "func minimumTotal(triangle [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} triangle\n# @return {Integer}\ndef minimum_total(triangle)\n    \nend",
+    "scala": "object Solution {\n    def minimumTotal(triangle: List[List[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_total(triangle: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-total triangle)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_total(Triangle :: [[integer()]]) -> integer().\nminimum_total(Triangle) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_total(triangle :: [[integer]]) :: integer\n  def minimum_total(triangle) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Make Array Non-decreasing",
+  "problem_id": "3738",
+  "frontend_id": "3523",
+  "difficulty": "Medium",
+  "problem_slug": "make-array-non-decreasing",
+  "topics": [
+    "Array",
+    "Stack",
+    "Greedy",
+    "Monotonic Stack"
+  ],
+  "description": "You are given an integer array nums. In one operation, you can select a subarray and replace it with a single element equal to its maximum value.\nReturn the maximum possible size of the array after performing zero or more operations such that the resulting array is non-decreasing.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,2,5,3,5]\nOutput: 3\nExplanation:\nOne way to achieve the maximum size is:\nThe final array [4, 5, 5] is non-decreasing with size 3.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 3\nExplanation:\nNo operation is needed as the array [1,2,3] is already non-decreasing.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2 * 105",
+    "1 <= nums[i] <= 2 * 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate backwards.",
+    "Can you remove the largest element in the array? Is that ever helpful?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumPossibleSize(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumPossibleSize(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumPossibleSize(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumPossibleSize(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumPossibleSize(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumPossibleSize(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumPossibleSize = function(nums) {\n    \n};",
+    "typescript": "function maximumPossibleSize(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumPossibleSize($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumPossibleSize(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumPossibleSize(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumPossibleSize(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumPossibleSize(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_possible_size(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumPossibleSize(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_possible_size(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-possible-size nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_possible_size(Nums :: [integer()]) -> integer().\nmaximum_possible_size(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_possible_size(nums :: [integer]) :: integer\n  def maximum_possible_size(nums) do\n    \n  end\nend"
+  }
+}

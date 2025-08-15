@@ -1,0 +1,58 @@
+{
+  "title": "Find Nearest Point That Has the Same X or Y Coordinate",
+  "problem_id": "1888",
+  "frontend_id": "1779",
+  "difficulty": "Easy",
+  "problem_slug": "find-nearest-point-that-has-the-same-x-or-y-coordinate",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.\nReturn the index (0-indexed) of the valid point with the smallest Manhattan distance from your current location. If there are multiple, return the valid point with the smallest index. If there are no valid points, return -1.\nThe Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: x = 3, y = 4, points = [[1,2],[3,1],[2,4],[2,3],[4,4]]\nOutput: 2\nExplanation: Of all the points, only [3,1], [2,4] and [4,4] are valid. Of the valid points, [2,4] and [4,4] have the smallest Manhattan distance from your current location, with a distance of 1. [2,4] has the smallest index, so return 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: x = 3, y = 4, points = [[3,4]]\nOutput: 0\nExplanation: The answer is allowed to be on the same location as your current location.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: x = 3, y = 4, points = [[2,3]]\nOutput: -1\nExplanation: There are no valid points.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= points.length <= 104",
+    "points[i].length == 2",
+    "1 <= x, y, ai, bi <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate through each point, and keep track of the current point with the smallest Manhattan distance from your current location."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int nearestValidPoint(int x, int y, vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nearestValidPoint(int x, int y, int[][] points) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def nearestValidPoint(self, x, y, points):\n        \"\"\"\n        :type x: int\n        :type y: int\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:\n        ",
+    "c": "int nearestValidPoint(int x, int y, int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NearestValidPoint(int x, int y, int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} x\n * @param {number} y\n * @param {number[][]} points\n * @return {number}\n */\nvar nearestValidPoint = function(x, y, points) {\n    \n};",
+    "typescript": "function nearestValidPoint(x: number, y: number, points: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $x\n     * @param Integer $y\n     * @param Integer[][] $points\n     * @return Integer\n     */\n    function nearestValidPoint($x, $y, $points) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func nearestValidPoint(_ x: Int, _ y: Int, _ points: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun nearestValidPoint(x: Int, y: Int, points: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int nearestValidPoint(int x, int y, List<List<int>> points) {\n    \n  }\n}",
+    "golang": "func nearestValidPoint(x int, y int, points [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} x\n# @param {Integer} y\n# @param {Integer[][]} points\n# @return {Integer}\ndef nearest_valid_point(x, y, points)\n    \nend",
+    "scala": "object Solution {\n    def nearestValidPoint(x: Int, y: Int, points: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn nearest_valid_point(x: i32, y: i32, points: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (nearest-valid-point x y points)\n  (-> exact-integer? exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec nearest_valid_point(X :: integer(), Y :: integer(), Points :: [[integer()]]) -> integer().\nnearest_valid_point(X, Y, Points) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec nearest_valid_point(x :: integer, y :: integer, points :: [[integer]]) :: integer\n  def nearest_valid_point(x, y, points) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Find XOR Sum of All Pairs Bitwise AND",
+  "problem_id": "1963",
+  "frontend_id": "1835",
+  "difficulty": "Hard",
+  "problem_slug": "find-xor-sum-of-all-pairs-bitwise-and",
+  "topics": [
+    "Array",
+    "Math",
+    "Bit Manipulation"
+  ],
+  "description": "The XOR sum of a list is the bitwise XOR of all its elements. If the list only contains one element, then its XOR sum will be equal to this element.\nYou are given two 0-indexed arrays arr1 and arr2 that consist only of non-negative integers.\nConsider the list containing the result of arr1[i] AND arr2[j] (bitwise AND) for every (i, j) pair where 0 <= i < arr1.length and 0 <= j < arr2.length.\nReturn the XOR sum of the aforementioned list.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arr1 = [1,2,3], arr2 = [6,5]\nOutput: 0\nExplanation: The list = [1 AND 6, 1 AND 5, 2 AND 6, 2 AND 5, 3 AND 6, 3 AND 5] = [0,1,2,0,2,1].\nThe XOR sum = 0 XOR 1 XOR 2 XOR 0 XOR 2 XOR 1 = 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arr1 = [12], arr2 = [4]\nOutput: 4\nExplanation: The list = [12 AND 4] = [4]. The XOR sum = 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= arr1.length, arr2.length <= 105",
+    "0 <= arr1[i], arr2[j] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Think about (a&b) ^ (a&c). Can you simplify this expression?",
+    "It is equal to a&(b^c). Then, (arr1[i]&arr2[0])^(arr1[i]&arr2[1]).. = arr1[i]&(arr2[0]^arr2[1]^arr[2]...).",
+    "Let arr2XorSum = (arr2[0]^arr2[1]^arr2[2]...), arr1XorSum = (arr1[0]^arr1[1]^arr1[2]...) so the final answer is (arr2XorSum&arr1[0]) ^ (arr2XorSum&arr1[1]) ^ (arr2XorSum&arr1[2]) ^ ... = arr2XorSum & arr1XorSum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int getXORSum(vector<int>& arr1, vector<int>& arr2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getXORSum(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def getXORSum(self, arr1, arr2):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def getXORSum(self, arr1: List[int], arr2: List[int]) -> int:\n        ",
+    "c": "int getXORSum(int* arr1, int arr1Size, int* arr2, int arr2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int GetXORSum(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr1\n * @param {number[]} arr2\n * @return {number}\n */\nvar getXORSum = function(arr1, arr2) {\n    \n};",
+    "typescript": "function getXORSum(arr1: number[], arr2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $arr1\n     * @param Integer[] $arr2\n     * @return Integer\n     */\n    function getXORSum($arr1, $arr2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func getXORSum(_ arr1: [Int], _ arr2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun getXORSum(arr1: IntArray, arr2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int getXORSum(List<int> arr1, List<int> arr2) {\n    \n  }\n}",
+    "golang": "func getXORSum(arr1 []int, arr2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} arr1\n# @param {Integer[]} arr2\n# @return {Integer}\ndef get_xor_sum(arr1, arr2)\n    \nend",
+    "scala": "object Solution {\n    def getXORSum(arr1: Array[Int], arr2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn get_xor_sum(arr1: Vec<i32>, arr2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (get-xor-sum arr1 arr2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec get_xor_sum(Arr1 :: [integer()], Arr2 :: [integer()]) -> integer().\nget_xor_sum(Arr1, Arr2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec get_xor_sum(arr1 :: [integer], arr2 :: [integer]) :: integer\n  def get_xor_sum(arr1, arr2) do\n    \n  end\nend"
+  }
+}

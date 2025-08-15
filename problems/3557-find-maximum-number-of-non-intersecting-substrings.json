@@ -1,0 +1,58 @@
+{
+  "title": "Find Maximum Number of Non Intersecting Substrings",
+  "problem_id": "3857",
+  "frontend_id": "3557",
+  "difficulty": "Medium",
+  "problem_slug": "find-maximum-number-of-non-intersecting-substrings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given a string word.\nReturn the maximum number of non-intersecting substrings of word that are at least four characters long and start and end with the same letter.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word = \"abcdeafdef\"\nOutput: 2\nExplanation:\nThe two substrings are \"abcdea\" and \"fdef\" .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word = \"bcdaaaab\"\nOutput: 1\nExplanation:\nThe only substring is \"aaaa\" . Note that we cannot also choose \"bcdaaaab\" since it intersects with the other substring.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word.length <= 2 * 105",
+    "word consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we solve the problem using Dynamic Programming?",
+    "For each character <code>c</code>, store all occurrence indices in order",
+    "At each position <code>i</code>, let <code>j</code> be the first index of <code>word[i]</code>; if <code>i - j >= 3</code>, we can form substring <code>[j, i]</code>",
+    "For each index, also store the maximum for <b>any</b> substring ending before that index in the dp."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSubstrings(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSubstrings(String word) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubstrings(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubstrings(self, word: str) -> int:\n        ",
+    "c": "int maxSubstrings(char* word) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSubstrings(string word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar maxSubstrings = function(word) {\n    \n};",
+    "typescript": "function maxSubstrings(word: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word\n     * @return Integer\n     */\n    function maxSubstrings($word) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubstrings(_ word: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubstrings(word: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSubstrings(String word) {\n    \n  }\n}",
+    "golang": "func maxSubstrings(word string) int {\n    \n}",
+    "ruby": "# @param {String} word\n# @return {Integer}\ndef max_substrings(word)\n    \nend",
+    "scala": "object Solution {\n    def maxSubstrings(word: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_substrings(word: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-substrings word)\n  (-> string? exact-integer?)\n  )",
+    "erlang": "-spec max_substrings(Word :: unicode:unicode_binary()) -> integer().\nmax_substrings(Word) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_substrings(word :: String.t) :: integer\n  def max_substrings(word) do\n    \n  end\nend"
+  }
+}

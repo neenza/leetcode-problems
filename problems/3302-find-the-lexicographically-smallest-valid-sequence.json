@@ -1,0 +1,67 @@
+{
+  "title": "Find the Lexicographically Smallest Valid Sequence",
+  "problem_id": "3584",
+  "frontend_id": "3302",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-lexicographically-smallest-valid-sequence",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "You are given two strings word1 and word2.\nA string x is called almost equal to y if you can change at most one character in x to make it identical to y.\nA sequence of indices seq is called valid if:\nReturn an array of size word2.length representing the lexicographically smallest valid sequence of indices. If no such sequence of indices exists, return an empty array.\nNote that the answer must represent the lexicographically smallest array, not the corresponding string formed by those indices.\nExample 1:\nExample 2:\nExample 3:\nExample 4:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: word1 = \"vbcca\", word2 = \"abc\"\nOutput: [0,1,2]\nExplanation:\nThe lexicographically smallest valid sequence of indices is [0, 1, 2] :",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: word1 = \"bacdc\", word2 = \"abc\"\nOutput: [1,2,4]\nExplanation:\nThe lexicographically smallest valid sequence of indices is [1, 2, 4] :",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: word1 = \"aaaaaa\", word2 = \"aaabc\"\nOutput: []\nExplanation:\nThere is no valid sequence of indices.",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "Input: word1 = \"abc\", word2 = \"ab\"\nOutput: [0,1]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= word2.length < word1.length <= 3 * 105",
+    "word1 and word2 consist only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i]</code> be the longest suffix of <code>word2</code> that exists as a subsequence of suffix of the substring of <code>word1</code> starting at index <code>i</code>.",
+    "If <code>dp[i + 1] < m</code> and <code>word1[i] == word2[m - dp[i + 1] - 1]</code>,<code>dp[i] =  dp[i + 1] + 1</code>. Otherwise, <code>dp[i] =  dp[i + 1]</code>.",
+    "For each index <code>i</code>, greedily select characters using the <code>dp</code> array to know whether a solution exists."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> validSequence(string word1, string word2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] validSequence(String word1, String word2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def validSequence(self, word1, word2):\n        \"\"\"\n        :type word1: str\n        :type word2: str\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def validSequence(self, word1: str, word2: str) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* validSequence(char* word1, char* word2, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] ValidSequence(string word1, string word2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word1\n * @param {string} word2\n * @return {number[]}\n */\nvar validSequence = function(word1, word2) {\n    \n};",
+    "typescript": "function validSequence(word1: string, word2: string): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $word1\n     * @param String $word2\n     * @return Integer[]\n     */\n    function validSequence($word1, $word2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func validSequence(_ word1: String, _ word2: String) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun validSequence(word1: String, word2: String): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> validSequence(String word1, String word2) {\n    \n  }\n}",
+    "golang": "func validSequence(word1 string, word2 string) []int {\n    \n}",
+    "ruby": "# @param {String} word1\n# @param {String} word2\n# @return {Integer[]}\ndef valid_sequence(word1, word2)\n    \nend",
+    "scala": "object Solution {\n    def validSequence(word1: String, word2: String): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn valid_sequence(word1: String, word2: String) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (valid-sequence word1 word2)\n  (-> string? string? (listof exact-integer?))\n  )",
+    "erlang": "-spec valid_sequence(Word1 :: unicode:unicode_binary(), Word2 :: unicode:unicode_binary()) -> [integer()].\nvalid_sequence(Word1, Word2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec valid_sequence(word1 :: String.t, word2 :: String.t) :: [integer]\n  def valid_sequence(word1, word2) do\n    \n  end\nend"
+  }
+}

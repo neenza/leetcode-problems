@@ -1,0 +1,33 @@
+{
+  "title": "Exchange Seats",
+  "problem_id": "626",
+  "frontend_id": "626",
+  "difficulty": "Medium",
+  "problem_slug": "exchange-seats",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Seat\nWrite a solution to swap the seat id of every two consecutive students. If the number of students is odd, the id of the last student is not swapped.\nReturn the result table ordered by id in ascending order.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| student     | varchar |\n+-------------+---------+\nid is the primary key (unique value) column for this table.\nEach row of this table indicates the name and the ID of a student.\nThe ID sequence always starts from 1 and increments continuously.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nSeat table:\n+----+---------+\n| id | student |\n+----+---------+\n| 1  | Abbot   |\n| 2  | Doris   |\n| 3  | Emerson |\n| 4  | Green   |\n| 5  | Jeames  |\n+----+---------+\nOutput: \n+----+---------+\n| id | student |\n+----+---------+\n| 1  | Doris   |\n| 2  | Abbot   |\n| 3  | Green   |\n| 4  | Emerson |\n| 5  | Jeames  |\n+----+---------+\nExplanation: \nNote that if the number of students is odd, there is no need to change the last one's seat.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef exchange_seats(seat: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Replace All ?'s to Avoid Consecutive Repeating Characters",
+  "problem_id": "1698",
+  "frontend_id": "1576",
+  "difficulty": "Easy",
+  "problem_slug": "replace-all-s-to-avoid-consecutive-repeating-characters",
+  "topics": [
+    "String"
+  ],
+  "description": "Given a string s containing only lowercase English letters and the '?' character, convert all the '?' characters into lowercase letters such that the final string does not contain any consecutive repeating characters. You cannot modify the non '?' characters.\nIt is guaranteed that there are no consecutive repeating characters in the given string except for '?'.\nReturn the final string after all the conversions (possibly zero) have been made. If there is more than one solution, return any of them. It can be shown that an answer is always possible with the given constraints.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"?zs\"\nOutput: \"azs\"\nExplanation: There are 25 solutions for this problem. From \"azs\" to \"yzs\", all are valid. Only \"z\" is an invalid modification as the string will consist of consecutive repeating characters in \"zzs\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"ubv?w\"\nOutput: \"ubvaw\"\nExplanation: There are 24 solutions for this problem. Only \"v\" and \"w\" are invalid modifications as the strings will consist of consecutive repeating characters in \"ubvvw\" and \"ubvww\".",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 100",
+    "s consist of lowercase English letters and '?'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Processing string from left to right, whenever you get a ‘?’, check left character and right character, and select a character not equal to either of them",
+    "Do take care to compare with replaced occurrence of ‘?’ when checking the left character."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string modifyString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String modifyString(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def modifyString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def modifyString(self, s: str) -> str:\n        ",
+    "c": "char* modifyString(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string ModifyString(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar modifyString = function(s) {\n    \n};",
+    "typescript": "function modifyString(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function modifyString($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func modifyString(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun modifyString(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String modifyString(String s) {\n    \n  }\n}",
+    "golang": "func modifyString(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef modify_string(s)\n    \nend",
+    "scala": "object Solution {\n    def modifyString(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn modify_string(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (modify-string s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec modify_string(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmodify_string(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec modify_string(s :: String.t) :: String.t\n  def modify_string(s) do\n    \n  end\nend"
+  }
+}

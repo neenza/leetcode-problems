@@ -1,0 +1,61 @@
+{
+  "title": "Course Schedule III",
+  "problem_id": "630",
+  "frontend_id": "630",
+  "difficulty": "Hard",
+  "problem_slug": "course-schedule-iii",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ],
+  "description": "There are n different online courses numbered from 1 to n. You are given an array courses where courses[i] = [durationi, lastDayi] indicate that the ith course should be taken continuously for durationi days and must be finished before or on lastDayi.\nYou will start on the 1st day and you cannot take two or more courses simultaneously.\nReturn the maximum number of courses that you can take.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: courses = [[100,200],[200,1300],[1000,1250],[2000,3200]]\nOutput: 3\nExplanation: \nThere are totally 4 courses, but you can take 3 courses at most:\nFirst, take the 1st course, it costs 100 days so you will finish it on the 100th day, and ready to take the next course on the 101st day.\nSecond, take the 3rd course, it costs 1000 days so you will finish it on the 1100th day, and ready to take the next course on the 1101st day. \nThird, take the 2nd course, it costs 200 days so you will finish it on the 1300th day. \nThe 4th course cannot be taken now, since you will finish it on the 3300th day, which exceeds the closed date.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: courses = [[1,2]]\nOutput: 1",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: courses = [[3,2],[4,3]]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= courses.length <= 104",
+    "1 <= durationi, lastDayi <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "During iteration, say I want to add the current course, currentTotalTime being total time of all courses taken till now, but adding the current course might exceed my deadline or it doesn’t.</br></br>\r\n\r\n1. If it doesn’t, then I have added one new course. Increment the currentTotalTime with duration of current course.",
+    "2. If it exceeds deadline, I can swap current course with current courses that has biggest duration.</br>\r\n* No harm done and I might have just reduced the currentTotalTime, right? </br>\r\n* What preprocessing do I need to do on my course processing order so that this swap is always legal?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int scheduleCourse(vector<vector<int>>& courses) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int scheduleCourse(int[][] courses) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def scheduleCourse(self, courses):\n        \"\"\"\n        :type courses: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def scheduleCourse(self, courses: List[List[int]]) -> int:\n        ",
+    "c": "int scheduleCourse(int** courses, int coursesSize, int* coursesColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ScheduleCourse(int[][] courses) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} courses\n * @return {number}\n */\nvar scheduleCourse = function(courses) {\n    \n};",
+    "typescript": "function scheduleCourse(courses: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $courses\n     * @return Integer\n     */\n    function scheduleCourse($courses) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func scheduleCourse(_ courses: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun scheduleCourse(courses: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int scheduleCourse(List<List<int>> courses) {\n    \n  }\n}",
+    "golang": "func scheduleCourse(courses [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} courses\n# @return {Integer}\ndef schedule_course(courses)\n    \nend",
+    "scala": "object Solution {\n    def scheduleCourse(courses: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn schedule_course(courses: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (schedule-course courses)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec schedule_course(Courses :: [[integer()]]) -> integer().\nschedule_course(Courses) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec schedule_course(courses :: [[integer]]) :: integer\n  def schedule_course(courses) do\n    \n  end\nend"
+  }
+}

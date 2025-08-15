@@ -1,0 +1,61 @@
+{
+  "title": "01 Matrix",
+  "problem_id": "542",
+  "frontend_id": "542",
+  "difficulty": "Medium",
+  "problem_slug": "01-matrix",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Breadth-First Search",
+    "Matrix"
+  ],
+  "description": "Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.\nThe distance between two cells sharing a common edge is 1.\nExample 1:\nExample 2:\nConstraints:\nNote: This question is the same as 1765: https://leetcode.com/problems/map-of-highest-peak/",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[0,0,0],[0,1,0],[0,0,0]]\nOutput: [[0,0,0],[0,1,0],[0,0,0]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/01-1-grid.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[0,0,0],[0,1,0],[1,1,1]]\nOutput: [[0,0,0],[0,1,0],[1,2,1]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2021/04/24/01-2-grid.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 104",
+    "1 <= m * n <= 104",
+    "mat[i][j] is either 0 or 1.",
+    "There is at least one 0 in mat."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] updateMatrix(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def updateMatrix(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** updateMatrix(int** mat, int matSize, int* matColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] UpdateMatrix(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number[][]}\n */\nvar updateMatrix = function(mat) {\n    \n};",
+    "typescript": "function updateMatrix(mat: number[][]): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer[][]\n     */\n    function updateMatrix($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func updateMatrix(_ mat: [[Int]]) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun updateMatrix(mat: Array<IntArray>): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> updateMatrix(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func updateMatrix(mat [][]int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer[][]}\ndef update_matrix(mat)\n    \nend",
+    "scala": "object Solution {\n    def updateMatrix(mat: Array[Array[Int]]): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn update_matrix(mat: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (update-matrix mat)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec update_matrix(Mat :: [[integer()]]) -> [[integer()]].\nupdate_matrix(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec update_matrix(mat :: [[integer]]) :: [[integer]]\n  def update_matrix(mat) do\n    \n  end\nend"
+  }
+}

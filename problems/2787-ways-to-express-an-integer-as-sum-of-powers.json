@@ -1,0 +1,54 @@
+{
+  "title": "Ways to Express an Integer as Sum of Powers",
+  "problem_id": "2882",
+  "frontend_id": "2787",
+  "difficulty": "Medium",
+  "problem_slug": "ways-to-express-an-integer-as-sum-of-powers",
+  "topics": [
+    "Dynamic Programming"
+  ],
+  "description": "Given two positive integers n and x.\nReturn the number of ways n can be expressed as the sum of the xth power of unique positive integers, in other words, the number of sets of unique integers [n1, n2, ..., nk] where n = n1x + n2x + ... + nkx.\nSince the result can be very large, return it modulo 109 + 7.\nFor example, if n = 160 and x = 3, one way to express n is n = 23 + 33 + 53.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 10, x = 2\nOutput: 1\nExplanation: We can express n as the following: n = 32 + 12 = 10.\nIt can be shown that it is the only way to express 10 as the sum of the 2nd power of unique integers.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, x = 1\nOutput: 2\nExplanation: We can express n in the following ways:\n- n = 41 = 4.\n- n = 31 + 11 = 4.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 300",
+    "1 <= x <= 5"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You can use dynamic programming, where dp[k][j] represents the number of ways to express k as the sum of the x-th power of unique positive integers such that the biggest possible number we use is j.",
+    "To calculate dp[k][j], you can iterate over the numbers smaller than j and try to use each one as a power of x to make our sum k."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(int n, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(int n, int x) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfWays(self, n, x):\n        \"\"\"\n        :type n: int\n        :type x: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfWays(self, n: int, x: int) -> int:\n        ",
+    "c": "int numberOfWays(int n, int x) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfWays(int n, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} x\n * @return {number}\n */\nvar numberOfWays = function(n, x) {\n    \n};",
+    "typescript": "function numberOfWays(n: number, x: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $x\n     * @return Integer\n     */\n    function numberOfWays($n, $x) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfWays(_ n: Int, _ x: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfWays(n: Int, x: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfWays(int n, int x) {\n    \n  }\n}",
+    "golang": "func numberOfWays(n int, x int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} x\n# @return {Integer}\ndef number_of_ways(n, x)\n    \nend",
+    "scala": "object Solution {\n    def numberOfWays(n: Int, x: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_ways(n: i32, x: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-ways n x)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_ways(N :: integer(), X :: integer()) -> integer().\nnumber_of_ways(N, X) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_ways(n :: integer, x :: integer) :: integer\n  def number_of_ways(n, x) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Dynamic Programming\n\n#### Intuition\n\nGiven a number $n$, the task is to return the number of sets of distinct integers $[n_1, n_2, \\cdots, n_k]$ such that:\n\n$$\nn = n_1^x + n_2^x + \\cdots + n_k^x.\n$$\n\nWe can think of $n$ as the capacity of a backpack, and the values $[1^x, 2^x, 3^x, \\cdots]$ as items. The essence of the problem is a 0-1 knapsack problem. We define $\\textit{dp}[i][j]$ as the number of ways to choose distinct integers from the first $i$ integers such that the sum of their $x$-th powers is $j$.\n\nStarting from $1$, we enumerate all integers. Suppose the current enumerated number is $i$ and the target sum is $j$. Then we consider two cases:\n- Case 1: Do not select $i$\n\nThis is equivalent to selecting a subset from the first $i - 1$ numbers whose $x$-th powers sum to $j$. So,\n  $$\n  \\textit{dp}[i][j] = \\textit{dp}[i - 1][j].\n  $$\n\n- Case 2: Select $i$\n\nThe $x$-th power of $i$ is $i^x$. This is only valid if $i^x \\le j$. In this case, we must select distinct numbers from the first $i - 1$ numbers such that their $x$-th powers sum to $j - i^x$. We then add $i^x$ to reach $j$. So,\n  $$\n  \\textit{dp}[i][j] = \\textit{dp}[i - 1][j - i^x].\n  $$\nPutting both cases together, the state transition formula becomes:\n\n- If $j < i^x$, then\n  $$\n  \\textit{dp}[i][j] = \\textit{dp}[i - 1][j].\n  $$\n \n- If $j \\geq i^x$, then\n  $$\n  \\textit{dp}[i][j] = \\textit{dp}[i - 1][j] + \\textit{dp}[i - 1][j - i^x].\n  $$\n\nTo compute the result, we iterate over all $i$ from $1$ to $n$, and for each $i$, we iterate $j$ from $0$ to $n$, filling in each subproblem $\\textit{dp}[i][j]$ using the above recurrence. The final answer is $\\textit{dp}[n][n]$.\n\n#### Implementation**Space Optimization**\n\nAccording to the knapsack principle, the space complexity can be optimized by reducing the dimensionality of the DP array. Let $\\textit{dp}[j]$ represent the number of combinations of distinct integers whose $x$-th powers sum up to $j$. To compute this efficiently, we iterate over $j$ in reverse order (from $n$ down to $0$) to avoid overcounting combinations that reuse the same number.\n\nWhen considering whether to include the number $i$, the update rules are as follows:\n\n- If $j < i^x$, then $\\textit{dp}[j]$ remains unchanged because $i^x$ is too large to contribute to the current sum.\n- If $j \\geq i^x$, then we update:\n  $$\n  \\textit{dp}[j] = \\textit{dp}[j] + \\textit{dp}[j - i^x].\n  $$\n\nThis reflects the idea that any way to form the sum $j - i^x$ can be extended by adding $i^x$ to reach $j$.\n\nAfter processing all valid $i$ values, the final answer is given by $\\textit{dp}[n]$.#### Complexity Analysis\n\nLet $n$ and $x$ be the given numbers.\n\n- Time complexity: $O(n\\sqrt[x]{n})$. \n  \n  We traverse $i$ from small to large. Since $i^x$ must not exceed $n$, the maximum value of $i$ is at most $\\sqrt[x]{n}$. The dynamic programming needs to compute at most $n\\sqrt[x]{n}$ substates, and the time to compute each substate is $O(1)$. Therefore, the total time complexity is $O(n\\sqrt[x]{n})$.\n\n- Space complexity: $O(n)$.\n  \n  After space optimization, we only need to store $n$ states, which requires $O(n)$ space.\n  \n---"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Stone Game IV",
+  "problem_id": "1617",
+  "frontend_id": "1510",
+  "difficulty": "Hard",
+  "problem_slug": "stone-game-iv",
+  "topics": [
+    "Math",
+    "Dynamic Programming",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob take turns playing a game, with Alice starting first.\nInitially, there are n stones in a pile. On each player's turn, that player makes a move consisting of removing any non-zero square number of stones in the pile.\nAlso, if a player cannot make a move, he/she loses the game.\nGiven a positive integer n, return true if and only if Alice wins the game otherwise return false, assuming both players play optimally.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1\nOutput: true\nExplanation: Alice can remove 1 stone winning the game because Bob doesn't have any moves.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2\nOutput: false\nExplanation: Alice can only remove 1 stone, after that Bob removes the last one winning the game (2 -> 1 -> 0).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4\nOutput: true\nExplanation: n is already a perfect square, Alice can win with one move, removing 4 stones (4 -> 0).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to keep track of winning and losing states. Given some number of stones, Alice can win if she can force Bob onto a losing state."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool winnerSquareGame(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean winnerSquareGame(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def winnerSquareGame(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def winnerSquareGame(self, n: int) -> bool:\n        ",
+    "c": "bool winnerSquareGame(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool WinnerSquareGame(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar winnerSquareGame = function(n) {\n    \n};",
+    "typescript": "function winnerSquareGame(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function winnerSquareGame($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func winnerSquareGame(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun winnerSquareGame(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool winnerSquareGame(int n) {\n    \n  }\n}",
+    "golang": "func winnerSquareGame(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef winner_square_game(n)\n    \nend",
+    "scala": "object Solution {\n    def winnerSquareGame(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn winner_square_game(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (winner-square-game n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec winner_square_game(N :: integer()) -> boolean().\nwinner_square_game(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec winner_square_game(n :: integer) :: boolean\n  def winner_square_game(n) do\n    \n  end\nend"
+  }
+}

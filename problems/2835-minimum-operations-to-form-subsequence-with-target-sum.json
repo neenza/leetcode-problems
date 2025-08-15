@@ -1,0 +1,65 @@
+{
+  "title": "Minimum Operations to Form Subsequence With Target Sum",
+  "problem_id": "3025",
+  "frontend_id": "2835",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-operations-to-form-subsequence-with-target-sum",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "description": "You are given a 0-indexed array nums consisting of non-negative powers of 2, and an integer target.\nIn one operation, you must apply the following changes to the array:\nReturn the minimum number of operations you need to perform so that nums contains a subsequence whose elements sum to target. If it is impossible to obtain such a subsequence, return -1.\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,8], target = 7\nOutput: 1\nExplanation: In the first operation, we choose element nums[2]. The array becomes equal to nums = [1,2,4,4].\nAt this stage, nums contains the subsequence [1,2,4] which sums up to 7.\nIt can be shown that there is no shorter sequence of operations that results in a subsequnce that sums up to 7.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,32,1,2], target = 12\nOutput: 2\nExplanation: In the first operation, we choose element nums[1]. The array becomes equal to nums = [1,1,2,16,16].\nIn the second operation, we choose element nums[3]. The array becomes equal to nums = [1,1,2,16,8,8]\nAt this stage, nums contains the subsequence [1,1,2,8] which sums up to 12.\nIt can be shown that there is no shorter sequence of operations that results in a subsequence that sums up to 12.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,32,1], target = 35\nOutput: -1\nExplanation: It can be shown that no sequence of operations results in a subsequence that sums up to 35.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "1 <= nums[i] <= 230",
+    "nums consists only of non-negative powers of two.",
+    "1 <= target < 231"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "<div class=\"_1l1MA\">if <code>target > sum(nums[i]) </code>, return <code>-1</code>. Otherwise, an answer exists</div>",
+    "<div class=\"_1l1MA\">Solve the problem for each set bit of <code>target</code>, independently, from least significant to most significant bit. </div>",
+    "<div class=\"_1l1MA\">For each set <code>bit</code> of <code>target</code> from least to most significant, let <code>X = sum(nums[i])</code> for <code>nums[i] <= 2^bit</code>.</div>",
+    "<div class=\"_1l1MA\">\r\nif <code>X >= 2^bit</code>, repeatedly select the maximum <code>nums[i]</code> such that <code>nums[i]<=2^bit</code> that has not been selected yet, until the sum of selected elements equals <code>2^bit</code>. The selected <code>nums[i]</code> will be part of the subsequence whose elements sum to target, so those elements can not be selected again.\r\n</div>",
+    "<div class=\"_1l1MA\">Otherwise, select the smallest <code>nums[i]</code> such that <code>nums[i] > 2^bit</code>, delete <code>nums[i]</code> and add two occurences of <code>nums[i]/2</code>. Without moving to the next <code>bit</code>, go back to the step in hint 3.</div>"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(List<Integer> nums, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperations(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperations(self, nums: List[int], target: int) -> int:\n        ",
+    "c": "int minOperations(int* nums, int numsSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinOperations(IList<int> nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar minOperations = function(nums, target) {\n    \n};",
+    "typescript": "function minOperations(nums: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $target\n     * @return Integer\n     */\n    function minOperations($nums, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperations(_ nums: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperations(nums: List<Int>, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperations(List<int> nums, int target) {\n    \n  }\n}",
+    "golang": "func minOperations(nums []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} target\n# @return {Integer}\ndef min_operations(nums, target)\n    \nend",
+    "scala": "object Solution {\n    def minOperations(nums: List[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations(nums: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations nums target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations(Nums :: [integer()], Target :: integer()) -> integer().\nmin_operations(Nums, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations(nums :: [integer], target :: integer) :: integer\n  def min_operations(nums, target) do\n    \n  end\nend"
+  }
+}

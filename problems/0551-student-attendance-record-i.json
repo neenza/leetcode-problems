@@ -1,0 +1,50 @@
+{
+  "title": "Student Attendance Record I",
+  "problem_id": "551",
+  "frontend_id": "551",
+  "difficulty": "Easy",
+  "problem_slug": "student-attendance-record-i",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string s representing an attendance record for a student where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:\nThe student is eligible for an attendance award if they meet both of the following criteria:\nReturn true if the student is eligible for an attendance award, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"PPALLP\"\nOutput: true\nExplanation: The student has fewer than 2 absences and was never late 3 or more consecutive days.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"PPALLL\"\nOutput: false\nExplanation: The student was late 3 consecutive days in the last 3 days, so is not eligible for the award.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either 'A', 'L', or 'P'."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool checkRecord(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkRecord(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def checkRecord(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def checkRecord(self, s: str) -> bool:\n        ",
+    "c": "bool checkRecord(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CheckRecord(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkRecord = function(s) {\n    \n};",
+    "typescript": "function checkRecord(s: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return Boolean\n     */\n    function checkRecord($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func checkRecord(_ s: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun checkRecord(s: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool checkRecord(String s) {\n    \n  }\n}",
+    "golang": "func checkRecord(s string) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {Boolean}\ndef check_record(s)\n    \nend",
+    "scala": "object Solution {\n    def checkRecord(s: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn check_record(s: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (check-record s)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec check_record(S :: unicode:unicode_binary()) -> boolean().\ncheck_record(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec check_record(s :: String.t) :: boolean\n  def check_record(s) do\n    \n  end\nend"
+  }
+}

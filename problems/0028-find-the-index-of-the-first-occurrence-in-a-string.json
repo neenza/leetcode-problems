@@ -1,0 +1,52 @@
+{
+  "title": "Find the Index of the First Occurrence in a String",
+  "problem_id": "28",
+  "frontend_id": "28",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-index-of-the-first-occurrence-in-a-string",
+  "topics": [
+    "Two Pointers",
+    "String",
+    "String Matching"
+  ],
+  "description": "Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: haystack = \"leetcode\", needle = \"leeto\"\nOutput: -1\nExplanation: \"leeto\" did not occur in \"leetcode\", so we return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= haystack.length, needle.length <= 104",
+    "haystack and needle consist of only lowercase English characters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int strStr(string haystack, string needle) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int strStr(String haystack, String needle) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def strStr(self, haystack, needle):\n        \"\"\"\n        :type haystack: str\n        :type needle: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def strStr(self, haystack: str, needle: str) -> int:\n        ",
+    "c": "int strStr(char* haystack, char* needle) {\n    \n}",
+    "csharp": "public class Solution {\n    public int StrStr(string haystack, string needle) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\nvar strStr = function(haystack, needle) {\n    \n};",
+    "typescript": "function strStr(haystack: string, needle: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $haystack\n     * @param String $needle\n     * @return Integer\n     */\n    function strStr($haystack, $needle) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func strStr(_ haystack: String, _ needle: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun strStr(haystack: String, needle: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int strStr(String haystack, String needle) {\n    \n  }\n}",
+    "golang": "func strStr(haystack string, needle string) int {\n    \n}",
+    "ruby": "# @param {String} haystack\n# @param {String} needle\n# @return {Integer}\ndef str_str(haystack, needle)\n    \nend",
+    "scala": "object Solution {\n    def strStr(haystack: String, needle: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn str_str(haystack: String, needle: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (str-str haystack needle)\n  (-> string? string? exact-integer?)\n  )",
+    "erlang": "-spec str_str(Haystack :: unicode:unicode_binary(), Needle :: unicode:unicode_binary()) -> integer().\nstr_str(Haystack, Needle) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec str_str(haystack :: String.t, needle :: String.t) :: integer\n  def str_str(haystack, needle) do\n    \n  end\nend"
+  }
+}

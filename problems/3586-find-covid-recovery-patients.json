@@ -1,0 +1,48 @@
+{
+  "title": "Find COVID Recovery Patients",
+  "problem_id": "3932",
+  "frontend_id": "3586",
+  "difficulty": "Medium",
+  "problem_slug": "find-covid-recovery-patients",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: patients\nTable: covid_tests\nWrite a solution to find patients who have recovered from COVID - patients who tested positive but later tested negative.\nReturn the result table ordered by recovery_time in ascending order, then by patient_name in ascending order.\nThe result format is in the following example.\nExample:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| patient_id  | int     |\n| patient_name| varchar |\n| age         | int     |\n+-------------+---------+\npatient_id is the unique identifier for this table.\nEach row contains information about a patient.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| test_id     | int     |\n| patient_id  | int     |\n| test_date   | date    |\n| result      | varchar |\n+-------------+---------+\ntest_id is the unique identifier for this table.\nEach row represents a COVID test result. The result can be Positive, Negative, or Inconclusive.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "+------------+--------------+-----+\n| patient_id | patient_name | age |\n+------------+--------------+-----+\n| 1          | Alice Smith  | 28  |\n| 2          | Bob Johnson  | 35  |\n| 3          | Carol Davis  | 42  |\n| 4          | David Wilson | 31  |\n| 5          | Emma Brown   | 29  |\n+------------+--------------+-----+",
+      "images": []
+    },
+    {
+      "example_num": 4,
+      "example_text": "+---------+------------+------------+--------------+\n| test_id | patient_id | test_date  | result       |\n+---------+------------+------------+--------------+\n| 1       | 1          | 2023-01-15 | Positive     |\n| 2       | 1          | 2023-01-25 | Negative     |\n| 3       | 2          | 2023-02-01 | Positive     |\n| 4       | 2          | 2023-02-05 | Inconclusive |\n| 5       | 2          | 2023-02-12 | Negative     |\n| 6       | 3          | 2023-01-20 | Negative     |\n| 7       | 3          | 2023-02-10 | Positive     |\n| 8       | 3          | 2023-02-20 | Negative     |\n| 9       | 4          | 2023-01-10 | Positive     |\n| 10      | 4          | 2023-01-18 | Positive     |\n| 11      | 5          | 2023-02-15 | Negative     |\n| 12      | 5          | 2023-02-20 | Negative     |\n+---------+------------+------------+--------------+",
+      "images": []
+    },
+    {
+      "example_num": 5,
+      "example_text": "+------------+--------------+-----+---------------+\n| patient_id | patient_name | age | recovery_time |\n+------------+--------------+-----+---------------+\n| 1          | Alice Smith  | 28  | 10            |\n| 3          | Carol Davis  | 42  | 10            |\n| 2          | Bob Johnson  | 35  | 11            |\n+------------+--------------+-----+---------------+",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef find_covid_recovery_patients(patients: pd.DataFrame, covid_tests: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

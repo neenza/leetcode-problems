@@ -1,0 +1,59 @@
+{
+  "title": "Sum of Beauty in the Array",
+  "problem_id": "2138",
+  "frontend_id": "2012",
+  "difficulty": "Medium",
+  "problem_slug": "sum-of-beauty-in-the-array",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given a 0-indexed integer array nums. For each index i (1 <= i <= nums.length - 2) the beauty of nums[i] equals:\nReturn the sum of beauty of all nums[i] where 1 <= i <= nums.length - 2.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3]\nOutput: 2\nExplanation: For each index i in the range 1 <= i <= 1:\n- The beauty of nums[1] equals 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,4,6,4]\nOutput: 1\nExplanation: For each index i in the range 1 <= i <= 2:\n- The beauty of nums[1] equals 1.\n- The beauty of nums[2] equals 0.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [3,2,1]\nOutput: 0\nExplanation: For each index i in the range 1 <= i <= 1:\n- The beauty of nums[1] equals 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 105",
+    "1 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use suffix/prefix arrays.",
+    "prefix[i] records the maximum value in range (0, i - 1) inclusive.",
+    "suffix[i] records the minimum value in range (i + 1, n - 1) inclusive."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int sumOfBeauties(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfBeauties(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfBeauties(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfBeauties(self, nums: List[int]) -> int:\n        ",
+    "c": "int sumOfBeauties(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SumOfBeauties(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumOfBeauties = function(nums) {\n    \n};",
+    "typescript": "function sumOfBeauties(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function sumOfBeauties($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfBeauties(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfBeauties(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int sumOfBeauties(List<int> nums) {\n    \n  }\n}",
+    "golang": "func sumOfBeauties(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef sum_of_beauties(nums)\n    \nend",
+    "scala": "object Solution {\n    def sumOfBeauties(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_beauties(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-beauties nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec sum_of_beauties(Nums :: [integer()]) -> integer().\nsum_of_beauties(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_beauties(nums :: [integer]) :: integer\n  def sum_of_beauties(nums) do\n    \n  end\nend"
+  }
+}

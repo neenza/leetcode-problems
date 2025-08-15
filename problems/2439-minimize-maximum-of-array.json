@@ -1,0 +1,59 @@
+{
+  "title": "Minimize Maximum of Array",
+  "problem_id": "2530",
+  "frontend_id": "2439",
+  "difficulty": "Medium",
+  "problem_slug": "minimize-maximum-of-array",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Dynamic Programming",
+    "Greedy",
+    "Prefix Sum"
+  ],
+  "description": "You are given a 0-indexed array nums comprising of n non-negative integers.\nIn one operation, you must:\nReturn the minimum possible value of the maximum integer of nums after performing any number of operations.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [3,7,1,6]\nOutput: 5\nExplanation:\nOne set of optimal operations is as follows:\n1. Choose i = 1, and nums becomes [4,6,1,6].\n2. Choose i = 3, and nums becomes [4,6,2,5].\n3. Choose i = 1, and nums becomes [5,5,2,5].\nThe maximum integer of nums is 5. It can be shown that the maximum number cannot be less than 5.\nTherefore, we return 5.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [10,1]\nOutput: 10\nExplanation:\nIt is optimal to leave nums as is, and since 10 is the maximum value, we return 10.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "2 <= n <= 105",
+    "0 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try a binary search approach.",
+    "Perform a binary search over the minimum value that can be achieved for the maximum number of the array.",
+    "In each binary search iteration, iterate through the array backwards, greedily decreasing the current element until it is within the limit."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimizeArrayValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimizeArrayValue(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimizeArrayValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimizeArrayValue(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimizeArrayValue(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimizeArrayValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimizeArrayValue = function(nums) {\n    \n};",
+    "typescript": "function minimizeArrayValue(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimizeArrayValue($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimizeArrayValue(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimizeArrayValue(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimizeArrayValue(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimizeArrayValue(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimize_array_value(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimizeArrayValue(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimize_array_value(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimize-array-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimize_array_value(Nums :: [integer()]) -> integer().\nminimize_array_value(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimize_array_value(nums :: [integer]) :: integer\n  def minimize_array_value(nums) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Number of Unique Subjects Taught by Each Teacher",
+  "problem_id": "2495",
+  "frontend_id": "2356",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-unique-subjects-taught-by-each-teacher",
+  "topics": [
+    "Database"
+  ],
+  "description": "Table: Teacher\nWrite a solution to calculate the number of unique subjects each teacher teaches in the university.\nReturn the result table in any order.\nThe result format is shown in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| teacher_id  | int  |\n| subject_id  | int  |\n| dept_id     | int  |\n+-------------+------+\n(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.\nEach row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: \nTeacher table:\n+------------+------------+---------+\n| teacher_id | subject_id | dept_id |\n+------------+------------+---------+\n| 1          | 2          | 3       |\n| 1          | 2          | 4       |\n| 1          | 3          | 3       |\n| 2          | 1          | 1       |\n| 2          | 2          | 1       |\n| 2          | 3          | 1       |\n| 2          | 4          | 1       |\n+------------+------------+---------+\nOutput:  \n+------------+-----+\n| teacher_id | cnt |\n+------------+-----+\n| 1          | 2   |\n| 2          | 4   |\n+------------+-----+\nExplanation: \nTeacher 1:\n  - They teach subject 2 in departments 3 and 4.\n  - They teach subject 3 in department 3.\nTeacher 2:\n  - They teach subject 1 in department 1.\n  - They teach subject 2 in department 1.\n  - They teach subject 3 in department 1.\n  - They teach subject 4 in department 1.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "mysql": "# Write your MySQL query statement below\n",
+    "mssql": "/* Write your T-SQL query statement below */\n",
+    "oraclesql": "/* Write your PL/SQL query statement below */\n",
+    "pythondata": "import pandas as pd\n\ndef count_unique_subjects(teacher: pd.DataFrame) -> pd.DataFrame:\n    ",
+    "postgresql": "-- Write your PostgreSQL query statement below\n"
+  }
+}

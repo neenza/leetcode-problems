@@ -1,0 +1,56 @@
+{
+  "title": "Special Permutations",
+  "problem_id": "2848",
+  "frontend_id": "2741",
+  "difficulty": "Medium",
+  "problem_slug": "special-permutations",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given a 0-indexed integer array nums containing n distinct positive integers. A permutation of nums is called special if:\nReturn the total number of special permutations. As the answer could be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,6]\nOutput: 2\nExplanation: [3,6,2] and [2,6,3] are the two special permutations of nums.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,4,3]\nOutput: 2\nExplanation: [3,1,4] and [4,1,3] are the two special permutations of nums.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 14",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we solve this problem using DP with bit masking?",
+    "You just need two states in DP which are last_ind in the permutation and the mask of numbers already used."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int specialPerm(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int specialPerm(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def specialPerm(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def specialPerm(self, nums: List[int]) -> int:\n        ",
+    "c": "int specialPerm(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SpecialPerm(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar specialPerm = function(nums) {\n    \n};",
+    "typescript": "function specialPerm(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function specialPerm($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func specialPerm(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun specialPerm(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int specialPerm(List<int> nums) {\n    \n  }\n}",
+    "golang": "func specialPerm(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef special_perm(nums)\n    \nend",
+    "scala": "object Solution {\n    def specialPerm(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn special_perm(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (special-perm nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec special_perm(Nums :: [integer()]) -> integer().\nspecial_perm(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec special_perm(nums :: [integer]) :: integer\n  def special_perm(nums) do\n    \n  end\nend"
+  }
+}

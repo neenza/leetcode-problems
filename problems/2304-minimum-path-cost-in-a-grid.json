@@ -1,0 +1,64 @@
+{
+  "title": "Minimum Path Cost in a Grid",
+  "problem_id": "1394",
+  "frontend_id": "2304",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-path-cost-in-a-grid",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "You are given a 0-indexed m x n integer matrix grid consisting of distinct integers from 0 to m * n - 1. You can move in this matrix from a cell to any other cell in the next row. That is, if you are in cell (x, y) such that x < m - 1, you can move to any of the cells (x + 1, 0), (x + 1, 1), ..., (x + 1, n - 1). Note that it is not possible to move from cells in the last row.\nEach possible move has a cost given by a 0-indexed 2D array moveCost of size (m * n) x n, where moveCost[i][j] is the cost of moving from a cell with value i to a cell in column j of the next row. The cost of moving from cells in the last row of grid can be ignored.\nThe cost of a path in grid is the sum of all values of cells visited plus the sum of costs of all the moves made. Return the minimum cost of a path that starts from any cell in the first row and ends at any cell in the last row.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[5,3],[4,0],[2,1]], moveCost = [[9,8],[1,5],[10,12],[18,6],[2,4],[14,3]]\nOutput: 17\nExplanation: The path with the minimum possible cost is the path 5 -> 0 -> 1.\n- The sum of the values of cells visited is 5 + 0 + 1 = 6.\n- The cost of moving from 5 to 0 is 3.\n- The cost of moving from 0 to 1 is 8.\nSo the total cost of the path is 6 + 3 + 8 = 17.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/04/28/griddrawio-2.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[5,1,2],[4,0,3]], moveCost = [[12,10,15],[20,23,8],[21,7,1],[8,1,13],[9,10,25],[5,3,2]]\nOutput: 6\nExplanation: The path with the minimum possible cost is the path 2 -> 3.\n- The sum of the values of cells visited is 2 + 3 = 5.\n- The cost of moving from 2 to 3 is 1.\nSo the total cost of this path is 5 + 1 = 6.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/04/28/griddrawio-2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "2 <= m, n <= 50",
+    "grid consists of distinct integers from 0 to m * n - 1.",
+    "moveCost.length == m * n",
+    "moveCost[i].length == n",
+    "1 <= moveCost[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What is the optimal cost to get to each of the cells in the second row? What about the third row?",
+    "Use dynamic programming to compute the optimal cost to get to each cell."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minPathCost(int[][] grid, int[][] moveCost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minPathCost(self, grid, moveCost):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type moveCost: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minPathCost(self, grid: List[List[int]], moveCost: List[List[int]]) -> int:\n        ",
+    "c": "int minPathCost(int** grid, int gridSize, int* gridColSize, int** moveCost, int moveCostSize, int* moveCostColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinPathCost(int[][] grid, int[][] moveCost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number[][]} moveCost\n * @return {number}\n */\nvar minPathCost = function(grid, moveCost) {\n    \n};",
+    "typescript": "function minPathCost(grid: number[][], moveCost: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @param Integer[][] $moveCost\n     * @return Integer\n     */\n    function minPathCost($grid, $moveCost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minPathCost(_ grid: [[Int]], _ moveCost: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minPathCost(grid: Array<IntArray>, moveCost: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minPathCost(List<List<int>> grid, List<List<int>> moveCost) {\n    \n  }\n}",
+    "golang": "func minPathCost(grid [][]int, moveCost [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @param {Integer[][]} move_cost\n# @return {Integer}\ndef min_path_cost(grid, move_cost)\n    \nend",
+    "scala": "object Solution {\n    def minPathCost(grid: Array[Array[Int]], moveCost: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_path_cost(grid: Vec<Vec<i32>>, move_cost: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-path-cost grid moveCost)\n  (-> (listof (listof exact-integer?)) (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_path_cost(Grid :: [[integer()]], MoveCost :: [[integer()]]) -> integer().\nmin_path_cost(Grid, MoveCost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_path_cost(grid :: [[integer]], move_cost :: [[integer]]) :: integer\n  def min_path_cost(grid, move_cost) do\n    \n  end\nend"
+  }
+}

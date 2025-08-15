@@ -1,0 +1,66 @@
+{
+  "title": "Maximum Points Inside the Square",
+  "problem_id": "3419",
+  "frontend_id": "3143",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-points-inside-the-square",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Sorting"
+  ],
+  "description": "You are given a 2D array points and a string s where, points[i] represents the coordinates of point i, and s[i] represents the tag of point i.\nA valid square is a square centered at the origin (0, 0), has edges parallel to the axes, and does not contain two points with the same tag.\nReturn the maximum number of points contained in a valid square.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [[2,2],[-1,-2],[-4,4],[-3,1],[3,-3]], s = \"abdca\"\nOutput: 2\nExplanation:\nThe square of side length 4 covers two points points[0] and points[1] .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [[1,1],[-2,-2],[-2,2]], s = \"abb\"\nOutput: 1\nExplanation:\nThe square of side length 2 covers one point, which is points[0] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: points = [[1,1],[-1,-1],[2,-2]], s = \"ccd\"\nOutput: 0\nExplanation:\nIt's impossible to make any valid squares centered at the origin such that it covers only one point among points[0] and points[1] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length, points.length <= 105",
+    "points[i].length == 2",
+    "-109 <= points[i][0], points[i][1] <= 109",
+    "s.length == points.length",
+    "points consists of distinct coordinates.",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The smallest edge length of a square to include point <code>(x, y)</code> is <code>max(abs(x), abs(y)) * 2</code>.",
+    "Sort the points by <code>max(abs(x), abs(y))</code> and try each edge length, check the included point tags."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxPointsInsideSquare(vector<vector<int>>& points, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPointsInsideSquare(int[][] points, String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxPointsInsideSquare(self, points, s):\n        \"\"\"\n        :type points: List[List[int]]\n        :type s: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxPointsInsideSquare(self, points: List[List[int]], s: str) -> int:\n        ",
+    "c": "int maxPointsInsideSquare(int** points, int pointsSize, int* pointsColSize, char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxPointsInsideSquare(int[][] points, string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @param {string} s\n * @return {number}\n */\nvar maxPointsInsideSquare = function(points, s) {\n    \n};",
+    "typescript": "function maxPointsInsideSquare(points: number[][], s: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $points\n     * @param String $s\n     * @return Integer\n     */\n    function maxPointsInsideSquare($points, $s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxPointsInsideSquare(_ points: [[Int]], _ s: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxPointsInsideSquare(points: Array<IntArray>, s: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxPointsInsideSquare(List<List<int>> points, String s) {\n    \n  }\n}",
+    "golang": "func maxPointsInsideSquare(points [][]int, s string) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} points\n# @param {String} s\n# @return {Integer}\ndef max_points_inside_square(points, s)\n    \nend",
+    "scala": "object Solution {\n    def maxPointsInsideSquare(points: Array[Array[Int]], s: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_points_inside_square(points: Vec<Vec<i32>>, s: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-points-inside-square points s)\n  (-> (listof (listof exact-integer?)) string? exact-integer?)\n  )",
+    "erlang": "-spec max_points_inside_square(Points :: [[integer()]], S :: unicode:unicode_binary()) -> integer().\nmax_points_inside_square(Points, S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_points_inside_square(points :: [[integer]], s :: String.t) :: integer\n  def max_points_inside_square(points, s) do\n    \n  end\nend"
+  }
+}

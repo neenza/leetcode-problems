@@ -1,0 +1,58 @@
+{
+  "title": "Number of Matching Subsequences",
+  "problem_id": "808",
+  "frontend_id": "792",
+  "difficulty": "Medium",
+  "problem_slug": "number-of-matching-subsequences",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Dynamic Programming",
+    "Trie",
+    "Sorting"
+  ],
+  "description": "Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s.\nA subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcde\", words = [\"a\",\"bb\",\"acd\",\"ace\"]\nOutput: 3\nExplanation: There are three strings in words that are a subsequence of s: \"a\", \"acd\", \"ace\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"dsahjpjauf\", words = [\"ahjpjau\",\"ja\",\"ahbwzgqnuk\",\"tnmlanowax\"]\nOutput: 2",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 5 * 104",
+    "1 <= words.length <= 5000",
+    "1 <= words[i].length <= 50",
+    "s and words[i] consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numMatchingSubseq(string s, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numMatchingSubseq(String s, String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numMatchingSubseq(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numMatchingSubseq(self, s: str, words: List[str]) -> int:\n        ",
+    "c": "int numMatchingSubseq(char* s, char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumMatchingSubseq(string s, string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} words\n * @return {number}\n */\nvar numMatchingSubseq = function(s, words) {\n    \n};",
+    "typescript": "function numMatchingSubseq(s: string, words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param String[] $words\n     * @return Integer\n     */\n    function numMatchingSubseq($s, $words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numMatchingSubseq(_ s: String, _ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numMatchingSubseq(s: String, words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numMatchingSubseq(String s, List<String> words) {\n    \n  }\n}",
+    "golang": "func numMatchingSubseq(s string, words []string) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {String[]} words\n# @return {Integer}\ndef num_matching_subseq(s, words)\n    \nend",
+    "scala": "object Solution {\n    def numMatchingSubseq(s: String, words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_matching_subseq(s: String, words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-matching-subseq s words)\n  (-> string? (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec num_matching_subseq(S :: unicode:unicode_binary(), Words :: [unicode:unicode_binary()]) -> integer().\nnum_matching_subseq(S, Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_matching_subseq(s :: String.t, words :: [String.t]) :: integer\n  def num_matching_subseq(s, words) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Erasure Value",
+  "problem_id": "1813",
+  "frontend_id": "1695",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-erasure-value",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ],
+  "description": "You are given an array of positive integers nums and want to erase a subarray containing unique elements. The score you get by erasing the subarray is equal to the sum of its elements.\nReturn the maximum score you can get by erasing exactly one subarray.\nAn array b is called to be a subarray of a if it forms a contiguous subsequence of a, that is, if it is equal to a[l],a[l+1],...,a[r] for some (l,r).\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [4,2,4,5,6]\nOutput: 17\nExplanation: The optimal subarray here is [2,4,5,6].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,2,1,2,5,2,1,2,5]\nOutput: 8\nExplanation: The optimal subarray here is [5,2,1] or [1,2,5].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The main point here is for the subarray to contain unique elements for each index. Only the first subarrays starting from that index have unique elements.",
+    "This can be solved using the two pointers technique"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumUniqueSubarray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumUniqueSubarray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumUniqueSubarray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumUniqueSubarray(self, nums: List[int]) -> int:\n        ",
+    "c": "int maximumUniqueSubarray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumUniqueSubarray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumUniqueSubarray = function(nums) {\n    \n};",
+    "typescript": "function maximumUniqueSubarray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maximumUniqueSubarray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumUniqueSubarray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumUniqueSubarray(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumUniqueSubarray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maximumUniqueSubarray(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef maximum_unique_subarray(nums)\n    \nend",
+    "scala": "object Solution {\n    def maximumUniqueSubarray(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_unique_subarray(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-unique-subarray nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec maximum_unique_subarray(Nums :: [integer()]) -> integer().\nmaximum_unique_subarray(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_unique_subarray(nums :: [integer]) :: integer\n  def maximum_unique_subarray(nums) do\n    \n  end\nend"
+  }
+}

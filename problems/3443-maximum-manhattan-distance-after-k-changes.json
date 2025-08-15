@@ -1,0 +1,58 @@
+{
+  "title": "Maximum Manhattan Distance After K Changes",
+  "problem_id": "3754",
+  "frontend_id": "3443",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-manhattan-distance-after-k-changes",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Counting"
+  ],
+  "description": "You are given a string s consisting of the characters 'N', 'S', 'E', and 'W', where s[i] indicates movements in an infinite grid:\nInitially, you are at the origin (0, 0). You can change at most k characters to any of the four directions.\nFind the maximum Manhattan distance from the origin that can be achieved at any time while performing the movements in order.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"NWSE\", k = 1\nOutput: 3\nExplanation:\nChange s[2] from 'S' to 'N' . The string s becomes \"NWNE\" .\nThe maximum Manhattan distance from the origin that can be achieved is 3. Hence, 3 is the output.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"NSWWEW\", k = 3\nOutput: 6\nExplanation:\nChange s[1] from 'S' to 'N' , and s[4] from 'E' to 'W' . The string s becomes \"NNWWWW\" .\nThe maximum Manhattan distance from the origin that can be achieved is 6. Hence, 6 is the output.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "0 <= k <= s.length",
+    "s consists of only 'N', 'S', 'E', and 'W'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can brute force all the possible directions (NE, NW, SE, SW).",
+    "Change up to <code>k</code> characters to maximize the distance in the chosen direction."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, s: str, k: int) -> int:\n        ",
+    "c": "int maxDistance(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxDistance = function(s, k) {\n    \n};",
+    "typescript": "function maxDistance(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function maxDistance($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(s: String, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxDistance(s string, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef max_distance(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(s: String, k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(s: String, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_distance(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nmax_distance(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(s :: String.t, k :: integer) :: integer\n  def max_distance(s, k) do\n    \n  end\nend"
+  },
+  "solution": "### Approach 1: Step-by-step Solution\n\n#### Intuition\n\nFor any given string, we can calculate the Manhattan distance using the formula:\n\n$$\n|\\textit{sum}_N - \\textit{sum}_S| + |\\textit{sum}_E - \\textit{sum}_W|\n$$\n\nHere, $\\textit{sum}_N$, $\\textit{sum}_S$, $\\textit{sum}_E$, and $\\textit{sum}_W$ respectively represent the number of occurrences of $\\text{'N'}$, $\\text{'S'}$, $\\text{'E'}$, $\\text{'W'}$ in the string.\n\nWhen we try to modify the letters in the string, there are three possible cases:\n\n1. Modifying the letters that appear less frequently (but are not zero) in either the horizontal or vertical direction increases the Manhattan distance by 2.\n2. Modifying the letters that appear more frequently in either direction decreases the Manhattan distance by 2.\n3. If no modifications are made, the Manhattan distance remains unchanged.\n\nIt's easy to see that only the first case causes an increase in the Manhattan distance. Therefore, we divide the modification process into two steps:\n\n- Step 1: Modify the letters with fewer occurrences in the vertical direction. If the number of such letters exceeds $k$, then modify only $k$ of them, and set the remaining modification count to $t = 0$. If the number of such letters is less than or equal to $k$, then modify all of them and set the remaining modification count to $t$.\n\n- Step 2: Modify the letters with fewer occurrences in the horizontal direction. If the number of such letters exceeds $t$, then modify only $t$ of them; otherwise, modify all of them.\n\nSince the question asks for the maximum Manhattan distance from the origin at any moment during the execution of all movement operations in order, these steps must be carried out during a traversal of the string, and we must track and return the maximum value encountered.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string.\n\n- Time complexity: $O(n)$.\n  \n  We need to traverse the string only once.\n\n- Space complexity: $O(1)$.\n  \n  We need only a few additional variables.\n\n### Approach 2: Overall Solution\n\n#### Intuition\n\nFrom the analysis in Approach 1, we can observe that the optimal strategy is to modify the less frequent letters in both directions whenever possible.\n\nTherefore, if we treat the less frequent letters in both the vertical and horizontal directions as a single group, we can reason as follows:\n- If the total number of such letters is greater than $k$, then modifying any $k$ of them increases the Manhattan distance by $2 \\times k$.\n- If the total number is less than or equal to $k$, then all the less frequent letters in both directions will be modified, and no further modifications are necessary. In this case, the Manhattan distance becomes equal to the length of the string.\n\n#### Implementation#### Complexity analysis\n\nLet $n$ be the length of the string.\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the string once.\n\n- Space complexity: $O(1)$.\n  \n  We only need a few additional variables."
+}

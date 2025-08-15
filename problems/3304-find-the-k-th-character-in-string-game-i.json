@@ -1,0 +1,55 @@
+{
+  "title": "Find the K-th Character in String Game I",
+  "problem_id": "3600",
+  "frontend_id": "3304",
+  "difficulty": "Easy",
+  "problem_slug": "find-the-k-th-character-in-string-game-i",
+  "topics": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion",
+    "Simulation"
+  ],
+  "description": "Alice and Bob are playing a game. Initially, Alice has a string word = \"a\".\nYou are given a positive integer k.\nNow Bob will ask Alice to perform the following operation forever:\nFor example, performing the operation on \"c\" generates \"cd\" and performing the operation on \"zb\" generates \"zbac\".\nReturn the value of the kth character in word, after enough operations have been done for word to have at least k characters.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: k = 5\nOutput: \"b\"\nExplanation:\nInitially, word = \"a\" . We need to do the operation three times:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: k = 10\nOutput: \"c\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= k <= 500"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small. Construct the string by simulating the operations."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    char kthCharacter(int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char kthCharacter(int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def kthCharacter(self, k):\n        \"\"\"\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def kthCharacter(self, k: int) -> str:\n        ",
+    "c": "char kthCharacter(int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public char KthCharacter(int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @return {character}\n */\nvar kthCharacter = function(k) {\n    \n};",
+    "typescript": "function kthCharacter(k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $k\n     * @return String\n     */\n    function kthCharacter($k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func kthCharacter(_ k: Int) -> Character {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun kthCharacter(k: Int): Char {\n        \n    }\n}",
+    "dart": "class Solution {\n  String kthCharacter(int k) {\n    \n  }\n}",
+    "golang": "func kthCharacter(k int) byte {\n    \n}",
+    "ruby": "# @param {Integer} k\n# @return {Character}\ndef kth_character(k)\n    \nend",
+    "scala": "object Solution {\n    def kthCharacter(k: Int): Char = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn kth_character(k: i32) -> char {\n        \n    }\n}",
+    "racket": "(define/contract (kth-character k)\n  (-> exact-integer? char?)\n  )",
+    "erlang": "-spec kth_character(K :: integer()) -> char().\nkth_character(K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec kth_character(k :: integer) :: char\n  def kth_character(k) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Iteration\n\n#### Intuition\n\nInitially, there is a string $\\text{\"a\"}$ of length $1$. In each operation, every character in the current string is changed to the next character in the alphabet, and the modified string is appended to the original string.\n\nIt is easy to observe that after each operation, the length of the string doubles. Each character in the appended half is formed by applying a \"+1 modulo 26\" operation on the corresponding character in the original string.\n\nOur goal is to find the character at the $k$-th position. To do this, we ask: which character in the previous version of the string (let's call this position $k'$) contributed to the character at position $k$?\n\nLet $k = 2^t + a$ (i.e., find the largest power of $2 \\leq k$).\n\n- If $a = 0$, then $k$ lies in the $t$-th operation, and we set $k' = k - 2^{t + 1}$.\n- If $a \\ne 0$, then $k$ lies in the $(t + 1)$-th operation, and we set $k' = k - 2^t = a$.\n\nBy iterating this process, we eventually reduce $k'$ to $1$, which corresponds to the $0$-th operation where the character is $\\text{\"a\"}$.\n\nEach iteration represents a single \"+1\" transformation, so we only need to count how many such steps are taken.\n\nSince the constraint is $1 \\leq k \\leq 500$, we don't need to worry about performing modulus 26 operations explicitly.\n\n#### Implementation#### Complexity analysis\n\n- Time complexity: $O(\\log k)$.\n  \n  It only depends on the binary digits of $k$.\n\n- Space complexity: $O(1)$."
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Number of Employees Who Met the Target",
+  "problem_id": "2876",
+  "frontend_id": "2798",
+  "difficulty": "Easy",
+  "problem_slug": "number-of-employees-who-met-the-target",
+  "topics": [
+    "Array"
+  ],
+  "description": "There are n employees in a company, numbered from 0 to n - 1. Each employee i has worked for hours[i] hours in the company.\nThe company requires each employee to work for at least target hours.\nYou are given a 0-indexed array of non-negative integers hours of length n and a non-negative integer target.\nReturn the integer denoting the number of employees who worked at least target hours.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: hours = [0,1,2,3,4], target = 2\nOutput: 3\nExplanation: The company wants each employee to work for at least 2 hours.\n- Employee 0 worked for 0 hours and didn't meet the target.\n- Employee 1 worked for 1 hours and didn't meet the target.\n- Employee 2 worked for 2 hours and met the target.\n- Employee 3 worked for 3 hours and met the target.\n- Employee 4 worked for 4 hours and met the target.\nThere are 3 employees who met the target.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: hours = [5,1,4,2,2], target = 6\nOutput: 0\nExplanation: The company wants each employee to work for at least 6 hours.\nThere are 0 employees who met the target.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == hours.length <= 50",
+    "0 <= hours[i], target <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over the elements of array hours and check if the value is greater than or equal to target."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfEmployeesWhoMetTarget(vector<int>& hours, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfEmployeesWhoMetTarget(self, hours, target):\n        \"\"\"\n        :type hours: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:\n        ",
+    "c": "int numberOfEmployeesWhoMetTarget(int* hours, int hoursSize, int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfEmployeesWhoMetTarget(int[] hours, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} hours\n * @param {number} target\n * @return {number}\n */\nvar numberOfEmployeesWhoMetTarget = function(hours, target) {\n    \n};",
+    "typescript": "function numberOfEmployeesWhoMetTarget(hours: number[], target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $hours\n     * @param Integer $target\n     * @return Integer\n     */\n    function numberOfEmployeesWhoMetTarget($hours, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfEmployeesWhoMetTarget(_ hours: [Int], _ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfEmployeesWhoMetTarget(hours: IntArray, target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfEmployeesWhoMetTarget(List<int> hours, int target) {\n    \n  }\n}",
+    "golang": "func numberOfEmployeesWhoMetTarget(hours []int, target int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} hours\n# @param {Integer} target\n# @return {Integer}\ndef number_of_employees_who_met_target(hours, target)\n    \nend",
+    "scala": "object Solution {\n    def numberOfEmployeesWhoMetTarget(hours: Array[Int], target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_employees_who_met_target(hours: Vec<i32>, target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-employees-who-met-target hours target)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec number_of_employees_who_met_target(Hours :: [integer()], Target :: integer()) -> integer().\nnumber_of_employees_who_met_target(Hours, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_employees_who_met_target(hours :: [integer], target :: integer) :: integer\n  def number_of_employees_who_met_target(hours, target) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Count Submatrices With Equal Frequency of X and Y",
+  "problem_id": "3492",
+  "frontend_id": "3212",
+  "difficulty": "Medium",
+  "problem_slug": "count-submatrices-with-equal-frequency-of-x-and-y",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "Given a 2D character matrix grid, where grid[i][j] is either 'X', 'Y', or '.', return the number of submatrices that contain:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"X\",\"Y\",\".\"],[\"Y\",\".\",\".\"]]\nOutput: 3\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/06/07/examplems.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\"X\",\"X\"],[\"X\",\"Y\"]]\nOutput: 0\nExplanation:\nNo submatrix has an equal frequency of 'X' and 'Y' .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: grid = [[\".\",\".\"],[\".\",\".\"]]\nOutput: 0\nExplanation:\nNo submatrix has at least one 'X' .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 1000",
+    "grid[i][j] is either 'X', 'Y', or '.'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Replace <code>’X’</code> with 1, <code>’Y’</code> with -1 and <code>’.’</code> with 0.",
+    "You need to find how many submatrices <code>grid[0..x][0..y]</code> have a sum of 0 and at least one <code>’X’</code>.",
+    "Use prefix sum to calculate submatrices sum."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numberOfSubmatrices(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSubmatrices(char[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numberOfSubmatrices(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numberOfSubmatrices(self, grid: List[List[str]]) -> int:\n        ",
+    "c": "int numberOfSubmatrices(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumberOfSubmatrices(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {number}\n */\nvar numberOfSubmatrices = function(grid) {\n    \n};",
+    "typescript": "function numberOfSubmatrices(grid: string[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @return Integer\n     */\n    function numberOfSubmatrices($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numberOfSubmatrices(_ grid: [[Character]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numberOfSubmatrices(grid: Array<CharArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numberOfSubmatrices(List<List<String>> grid) {\n    \n  }\n}",
+    "golang": "func numberOfSubmatrices(grid [][]byte) int {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @return {Integer}\ndef number_of_submatrices(grid)\n    \nend",
+    "scala": "object Solution {\n    def numberOfSubmatrices(grid: Array[Array[Char]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn number_of_submatrices(grid: Vec<Vec<char>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (number-of-submatrices grid)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
+    "erlang": "-spec number_of_submatrices(Grid :: [[char()]]) -> integer().\nnumber_of_submatrices(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec number_of_submatrices(grid :: [[char]]) :: integer\n  def number_of_submatrices(grid) do\n    \n  end\nend"
+  }
+}

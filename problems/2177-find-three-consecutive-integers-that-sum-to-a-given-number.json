@@ -1,0 +1,53 @@
+{
+  "title": "Find Three Consecutive Integers That Sum to a Given Number",
+  "problem_id": "2278",
+  "frontend_id": "2177",
+  "difficulty": "Medium",
+  "problem_slug": "find-three-consecutive-integers-that-sum-to-a-given-number",
+  "topics": [
+    "Math",
+    "Simulation"
+  ],
+  "description": "Given an integer num, return three consecutive integers (as a sorted array) that sum to num. If num cannot be expressed as the sum of three consecutive integers, return an empty array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = 33\nOutput: [10,11,12]\nExplanation: 33 can be expressed as 10 + 11 + 12 = 33.\n10, 11, 12 are 3 consecutive integers, so we return [10, 11, 12].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = 4\nOutput: []\nExplanation: There is no way to express 4 as the sum of 3 consecutive integers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= num <= 1015"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Notice that if a solution exists, we can represent them as x-1, x, x+1. What does this tell us about the number?",
+    "Notice the sum of the numbers will be 3x. Can you solve for x?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<long long> sumOfThree(long long num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] sumOfThree(long num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def sumOfThree(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def sumOfThree(self, num: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* sumOfThree(long long num, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long[] SumOfThree(long num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number[]}\n */\nvar sumOfThree = function(num) {\n    \n};",
+    "typescript": "function sumOfThree(num: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $num\n     * @return Integer[]\n     */\n    function sumOfThree($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func sumOfThree(_ num: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun sumOfThree(num: Long): LongArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> sumOfThree(int num) {\n    \n  }\n}",
+    "golang": "func sumOfThree(num int64) []int64 {\n    \n}",
+    "ruby": "# @param {Integer} num\n# @return {Integer[]}\ndef sum_of_three(num)\n    \nend",
+    "scala": "object Solution {\n    def sumOfThree(num: Long): Array[Long] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn sum_of_three(num: i64) -> Vec<i64> {\n        \n    }\n}",
+    "racket": "(define/contract (sum-of-three num)\n  (-> exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec sum_of_three(Num :: integer()) -> [integer()].\nsum_of_three(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec sum_of_three(num :: integer) :: [integer]\n  def sum_of_three(num) do\n    \n  end\nend"
+  }
+}

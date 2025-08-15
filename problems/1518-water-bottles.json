@@ -1,0 +1,58 @@
+{
+  "title": "Water Bottles",
+  "problem_id": "1642",
+  "frontend_id": "1518",
+  "difficulty": "Easy",
+  "problem_slug": "water-bottles",
+  "topics": [
+    "Math",
+    "Simulation"
+  ],
+  "description": "There are numBottles water bottles that are initially full of water. You can exchange numExchange empty water bottles from the market with one full water bottle.\nThe operation of drinking a full water bottle turns it into an empty bottle.\nGiven the two integers numBottles and numExchange, return the maximum number of water bottles you can drink.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numBottles = 9, numExchange = 3\nOutput: 13\nExplanation: You can exchange 3 empty bottles to get 1 full water bottle.\nNumber of water bottles you can drink: 9 + 3 + 1 = 13.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/01/sample_1_1875.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numBottles = 15, numExchange = 4\nOutput: 19\nExplanation: You can exchange 4 empty bottles to get 1 full water bottle. \nNumber of water bottles you can drink: 15 + 3 + 1 = 19.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/07/01/sample_2_1875.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= numBottles <= 100",
+    "2 <= numExchange <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process until there are not enough empty bottles for even one full bottle of water."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numWaterBottles(int numBottles, int numExchange) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numWaterBottles(int numBottles, int numExchange) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numWaterBottles(self, numBottles, numExchange):\n        \"\"\"\n        :type numBottles: int\n        :type numExchange: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:\n        ",
+    "c": "int numWaterBottles(int numBottles, int numExchange) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumWaterBottles(int numBottles, int numExchange) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} numBottles\n * @param {number} numExchange\n * @return {number}\n */\nvar numWaterBottles = function(numBottles, numExchange) {\n    \n};",
+    "typescript": "function numWaterBottles(numBottles: number, numExchange: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $numBottles\n     * @param Integer $numExchange\n     * @return Integer\n     */\n    function numWaterBottles($numBottles, $numExchange) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numWaterBottles(_ numBottles: Int, _ numExchange: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numWaterBottles(numBottles: Int, numExchange: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numWaterBottles(int numBottles, int numExchange) {\n    \n  }\n}",
+    "golang": "func numWaterBottles(numBottles int, numExchange int) int {\n    \n}",
+    "ruby": "# @param {Integer} num_bottles\n# @param {Integer} num_exchange\n# @return {Integer}\ndef num_water_bottles(num_bottles, num_exchange)\n    \nend",
+    "scala": "object Solution {\n    def numWaterBottles(numBottles: Int, numExchange: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_water_bottles(num_bottles: i32, num_exchange: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-water-bottles numBottles numExchange)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec num_water_bottles(NumBottles :: integer(), NumExchange :: integer()) -> integer().\nnum_water_bottles(NumBottles, NumExchange) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_water_bottles(num_bottles :: integer, num_exchange :: integer) :: integer\n  def num_water_bottles(num_bottles, num_exchange) do\n    \n  end\nend"
+  },
+  "solution": "## Solution\n\n---\n\n### Approach 1: Simulation\n\n#### Intuition\n\nWe are given two integers, `numBottles` and `numExchange`. `numBottles` represents the number of full water bottles, and `numExchange` is the number of empty bottles needed to exchange for one full bottle. We need to determine the total number of water bottles we can drink. For example, if `numBottles` is 3 and `numExchange` is 3, we can drink 4 bottles of water: first drinking all 3 full bottles and then exchanging the 3 empty bottles for 1 more full bottle. Note that `numExchange` must be greater than 1 because if `numExchange = 1`, we would get one full bottle for each empty one, resulting in an infinite number of bottles.\n\nThe key observation here is that once you have the `numExchange` number of empty bottles you can exchange them with one full bottle at that point. It's equivalent to keeping the empty bottles and exchanging them at some later point. This is because the number of full bottles you will get from them won't change. This observation also clarifies that the decision we make doesn't depend on the previous decision we have made and it's not a dynamic programming problem.\n\nIn this approach, we simulate the process to find the number of bottles we can drink. We keep consuming bottles until we have consumed `numExchange` bottles, then exchange them for one full bottle. We repeat this until the number of full bottles is less than `numExchange` and can no longer be exchanged. Finally, we consume the remaining bottles until we have none left.\n\nNote that while we have more than `numExchange` full bottles, we can consume them in batches of `numExchange` instead of one by one, because we can only get one full bottle after exchanging `numExchange` empty bottles. In the end, we will add the remaining `numBottles` (which would be less than `numExchange`) to our answer.\n\n#### Algorithm\n\n1. Initialize the answer variable `consumedBottles` to `0`.\n2. Keep doing the following until we have less `numBottles` than the `numExchange`:\n\n    - Consume the `numExchange` number of full bottles, i.e. add `numExchange` to `consumedBottles`.\n    - Decrement `numExchange`  from the available full bottles `numBottles`.\n    - Exchange the empty bottles with one full bottle, i.e., increment `numBottles` by one.\n3. Return `consumedBottles + numBottles`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of initial full bottles.\n\n* Time complexity: $O(N)$.\n\n  The maximum number of operations in the while loop will be when the value of `numExchange` is minimum, i.e., `2`. In this case, we will keep consuming the `2` bottles and add `1` as an exchange. Hence, the `numBottles` will be decreased by one after each iteration. Hence, the time complexity is equal to $O(N)$.\n\n* Space complexity: $O(1)$.\n\n  No extra space is required apart from a few variables, hence the space complexity is constant.\n---\n\n### Approach 2: Optimized Simulation\n\n#### Intuition\n\nIn the previous approach, we consumed `numExchange` bottles in each iteration. By using math operations, we can do this more efficiently. We can consume `numExchange * K` bottles in one go, where $K$ is the largest integer such that `numExchange * K < numBottles`. $K$ is calculated as integer division `numBottles / numExchange`. After consuming `numExchange * K` bottles, we exchange them for $K$ full bottles (one for each set of `numExchange` empty bottles).\n\nThe key difference from the previous approach is that instead of consuming `numExchange` bottles and then exchanging them, we first consume the maximum possible number of bottles and then exchange them. This method remains optimal as the order of exchanging empty bottles doesn't matter. As in the previous approach, we still need to add the remaining full bottles that are less than `numExchange` at the end.\n\n![fig](../Figures/1518/1518A.png)\n\n#### Algorithm\n\n1. Initialize the answer variable `consumedBottles` to `0`.\n2. Keep doing the following until we have less `numBottles` than the `numExchange`:\n\n    - Find `K` as `numBottles / numExchange`.\n    - Consume `numExchange * K` number of full bottles, i.e. add `numExchange * K` to `consumedBottles`.\n    - Decrement `numExchange * K`  from the available full bottles `numBottles`.\n    - Exchange the empty bottles with `K` full bottle, i.e., increment `numBottles` by `K`\n3. Return `consumedBottles + numBottles`.\n\n#### Implementation#### Complexity Analysis\n\nHere, $N$ is the number of initial full bottles, and $M$ is equal to `numExchange`.\n\n* Time complexity: $O(\\log_{M} N)$.\n\n  We divide the number of full bottles `numBottles` by `numExchange` at each iteration. Hence, the time complexity is equal to  $O(\\log N)$.\n\n* Space complexity: $O(1)$.\n\n  No extra space is required apart from a few variables, hence the space complexity is constant.\n---"
+}

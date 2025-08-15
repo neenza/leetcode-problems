@@ -1,0 +1,56 @@
+{
+  "title": "Stone Game II",
+  "problem_id": "1240",
+  "frontend_id": "1140",
+  "difficulty": "Medium",
+  "problem_slug": "stone-game-ii",
+  "topics": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Prefix Sum",
+    "Game Theory"
+  ],
+  "description": "Alice and Bob continue their games with piles of stones. There are a number of piles arranged in a row, and each pile has a positive integer number of stones piles[i]. The objective of the game is to end with the most stones.\nAlice and Bob take turns, with Alice starting first.\nOn each player's turn, that player can take all the stones in the first X remaining piles, where 1 <= X <= 2M. Then, we set M = max(M, X). Initially, M = 1.\nThe game continues until all the stones have been taken.\nAssuming Alice and Bob play optimally, return the maximum number of stones Alice can get.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: piles = [2,7,9,4,4]\nOutput: 10\nExplanation:\nSo we return 10 since it's larger.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: piles = [1,2,3,4,5,100]\nOutput: 104",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= piles.length <= 100",
+    "1 <= piles[i] <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming: the states are (i, m) for the answer of piles[i:] and that given m."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int stoneGameII(vector<int>& piles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int stoneGameII(int[] piles) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def stoneGameII(self, piles):\n        \"\"\"\n        :type piles: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def stoneGameII(self, piles: List[int]) -> int:\n        ",
+    "c": "int stoneGameII(int* piles, int pilesSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int StoneGameII(int[] piles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} piles\n * @return {number}\n */\nvar stoneGameII = function(piles) {\n    \n};",
+    "typescript": "function stoneGameII(piles: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $piles\n     * @return Integer\n     */\n    function stoneGameII($piles) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func stoneGameII(_ piles: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun stoneGameII(piles: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int stoneGameII(List<int> piles) {\n    \n  }\n}",
+    "golang": "func stoneGameII(piles []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} piles\n# @return {Integer}\ndef stone_game_ii(piles)\n    \nend",
+    "scala": "object Solution {\n    def stoneGameII(piles: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn stone_game_ii(piles: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (stone-game-ii piles)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec stone_game_ii(Piles :: [integer()]) -> integer().\nstone_game_ii(Piles) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec stone_game_ii(piles :: [integer]) :: integer\n  def stone_game_ii(piles) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Difference Between Maximum and Minimum Price Sum",
+  "problem_id": "2627",
+  "frontend_id": "2538",
+  "difficulty": "Hard",
+  "problem_slug": "difference-between-maximum-and-minimum-price-sum",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Tree",
+    "Depth-First Search"
+  ],
+  "description": "There exists an undirected and initially unrooted tree with n nodes indexed from 0 to n - 1. You are given the integer n and a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\nEach node has an associated price. You are given an integer array price, where price[i] is the price of the ith node.\nThe price sum of a given path is the sum of the prices of all nodes lying on that path.\nThe tree can be rooted at any node root of your choice. The incurred cost after choosing root is the difference between the maximum and minimum price sum amongst all paths starting at root.\nReturn the maximum possible cost amongst all possible root choices.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 6, edges = [[0,1],[1,2],[1,3],[3,4],[3,5]], price = [9,8,7,6,10,5]\nOutput: 24\nExplanation: The diagram above denotes the tree after rooting it at node 2. The first part (colored in red) shows the path with the maximum price sum. The second part (colored in blue) shows the path with the minimum price sum.\n- The first path contains nodes [2,1,3,4]: the prices are [7,8,6,10], and the sum of the prices is 31.\n- The second path contains the node [2] with the price [7].\nThe difference between the maximum and minimum price sum is 24. It can be proved that 24 is the maximum cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/12/01/example14.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[0,1],[1,2]], price = [1,1,1]\nOutput: 2\nExplanation: The diagram above denotes the tree after rooting it at node 0. The first part (colored in red) shows the path with the maximum price sum. The second part (colored in blue) shows the path with the minimum price sum.\n- The first path contains nodes [0,1,2]: the prices are [1,1,1], and the sum of the prices is 3.\n- The second path contains node [0] with a price [1].\nThe difference between the maximum and minimum price sum is 2. It can be proved that 2 is the maximum cost.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/11/24/p1_example2.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "edges.length == n - 1",
+    "0 <= ai, bi <= n - 1",
+    "edges represents a valid tree.",
+    "price.length == n",
+    "1 <= price[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The minimum price sum is always the price of a rooted node.",
+    "Let’s root the tree at vertex 0 and find the answer from this perspective.",
+    "In the optimal answer maximum price is the sum of the prices of nodes on the path from “u” to “v” where either “u” or “v” is the parent of the second one or neither is a parent of the second one.",
+    "The first case is easy to find. For the second case, notice that in the optimal path, “u” and “v” are both leaves. Then we can use dynamic programming to find such a path.",
+    "Let DP(v,1) denote “the maximum price sum from node v to leaf, where v is a parent of that leaf” and let DP(v,0) denote “the maximum price sum from node v to leaf, where v is a parent of that leaf - price[leaf]”. Then the answer is maximum of DP(u,0) + DP(v,1) + price[parent] where u, v are directly connected to vertex “parent”."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxOutput(int n, int[][] edges, int[] price) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxOutput(self, n, edges, price):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type price: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxOutput(self, n: int, edges: List[List[int]], price: List[int]) -> int:\n        ",
+    "c": "long long maxOutput(int n, int** edges, int edgesSize, int* edgesColSize, int* price, int priceSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxOutput(int n, int[][] edges, int[] price) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[]} price\n * @return {number}\n */\nvar maxOutput = function(n, edges, price) {\n    \n};",
+    "typescript": "function maxOutput(n: number, edges: number[][], price: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[] $price\n     * @return Integer\n     */\n    function maxOutput($n, $edges, $price) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxOutput(_ n: Int, _ edges: [[Int]], _ price: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxOutput(n: Int, edges: Array<IntArray>, price: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxOutput(int n, List<List<int>> edges, List<int> price) {\n    \n  }\n}",
+    "golang": "func maxOutput(n int, edges [][]int, price []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[]} price\n# @return {Integer}\ndef max_output(n, edges, price)\n    \nend",
+    "scala": "object Solution {\n    def maxOutput(n: Int, edges: Array[Array[Int]], price: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_output(n: i32, edges: Vec<Vec<i32>>, price: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-output n edges price)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_output(N :: integer(), Edges :: [[integer()]], Price :: [integer()]) -> integer().\nmax_output(N, Edges, Price) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_output(n :: integer, edges :: [[integer]], price :: [integer]) :: integer\n  def max_output(n, edges, price) do\n    \n  end\nend"
+  }
+}

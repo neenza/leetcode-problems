@@ -1,0 +1,63 @@
+{
+  "title": "Count Pairs Of Similar Strings",
+  "problem_id": "2594",
+  "frontend_id": "2506",
+  "difficulty": "Easy",
+  "problem_slug": "count-pairs-of-similar-strings",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Counting"
+  ],
+  "description": "You are given a 0-indexed string array words.\nTwo strings are similar if they consist of the same characters.\nReturn the number of pairs (i, j) such that 0 <= i < j <= word.length - 1 and the two strings words[i] and words[j] are similar.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"aba\",\"aabb\",\"abcd\",\"bac\",\"aabc\"]\nOutput: 2\nExplanation: There are 2 pairs that satisfy the conditions:\n- i = 0 and j = 1 : both words[0] and words[1] only consist of characters 'a' and 'b'. \n- i = 3 and j = 4 : both words[3] and words[4] only consist of characters 'a', 'b', and 'c'.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"aabb\",\"ab\",\"ba\"]\nOutput: 3\nExplanation: There are 3 pairs that satisfy the conditions:\n- i = 0 and j = 1 : both words[0] and words[1] only consist of characters 'a' and 'b'. \n- i = 0 and j = 2 : both words[0] and words[2] only consist of characters 'a' and 'b'.\n- i = 1 and j = 2 : both words[1] and words[2] only consist of characters 'a' and 'b'.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"nba\",\"cba\",\"dba\"]\nOutput: 0\nExplanation: Since there does not exist any pair that satisfies the conditions, we return 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 100",
+    "words[i] consist of only lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How can you check if two strings are similar?",
+    "Use a hashSet to store the character of each string."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int similarPairs(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int similarPairs(String[] words) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def similarPairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def similarPairs(self, words: List[str]) -> int:\n        ",
+    "c": "int similarPairs(char** words, int wordsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SimilarPairs(string[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar similarPairs = function(words) {\n    \n};",
+    "typescript": "function similarPairs(words: string[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @return Integer\n     */\n    function similarPairs($words) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func similarPairs(_ words: [String]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun similarPairs(words: Array<String>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int similarPairs(List<String> words) {\n    \n  }\n}",
+    "golang": "func similarPairs(words []string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @return {Integer}\ndef similar_pairs(words)\n    \nend",
+    "scala": "object Solution {\n    def similarPairs(words: Array[String]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn similar_pairs(words: Vec<String>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (similar-pairs words)\n  (-> (listof string?) exact-integer?)\n  )",
+    "erlang": "-spec similar_pairs(Words :: [unicode:unicode_binary()]) -> integer().\nsimilar_pairs(Words) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec similar_pairs(words :: [String.t]) :: integer\n  def similar_pairs(words) do\n    \n  end\nend"
+  }
+}

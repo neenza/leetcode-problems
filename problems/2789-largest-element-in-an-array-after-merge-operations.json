@@ -1,0 +1,54 @@
+{
+  "title": "Largest Element in an Array after Merge Operations",
+  "problem_id": "2872",
+  "frontend_id": "2789",
+  "difficulty": "Medium",
+  "problem_slug": "largest-element-in-an-array-after-merge-operations",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given a 0-indexed array nums consisting of positive integers.\nYou can do the following operation on the array any number of times:\nReturn the value of the largest element that you can possibly obtain in the final array.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,7,9,3]\nOutput: 21\nExplanation: We can apply the following operations on the array:\n- Choose i = 0. The resulting array will be nums = [5,7,9,3].\n- Choose i = 1. The resulting array will be nums = [5,16,3].\n- Choose i = 0. The resulting array will be nums = [21,3].\nThe largest element in the final array is 21. It can be shown that we cannot obtain a larger element.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [5,3,3]\nOutput: 11\nExplanation: We can do the following operations on the array:\n- Choose i = 1. The resulting array will be nums = [5,6].\n- Choose i = 0. The resulting array will be nums = [11].\nThere is only one element in the final array, which is 11.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "1 <= nums[i] <= 106"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Start from the end of the array and keep merging elements together until it is no longer possible.",
+    "The answer will be the resulting element from the last merge operation."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxArrayValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxArrayValue(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxArrayValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxArrayValue(self, nums: List[int]) -> int:\n        ",
+    "c": "long long maxArrayValue(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxArrayValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxArrayValue = function(nums) {\n    \n};",
+    "typescript": "function maxArrayValue(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function maxArrayValue($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxArrayValue(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxArrayValue(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxArrayValue(List<int> nums) {\n    \n  }\n}",
+    "golang": "func maxArrayValue(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef max_array_value(nums)\n    \nend",
+    "scala": "object Solution {\n    def maxArrayValue(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_array_value(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-array-value nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_array_value(Nums :: [integer()]) -> integer().\nmax_array_value(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_array_value(nums :: [integer]) :: integer\n  def max_array_value(nums) do\n    \n  end\nend"
+  }
+}

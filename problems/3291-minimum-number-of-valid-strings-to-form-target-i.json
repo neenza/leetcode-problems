@@ -1,0 +1,71 @@
+{
+  "title": "Minimum Number of Valid Strings to Form Target I",
+  "problem_id": "3559",
+  "frontend_id": "3291",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-number-of-valid-strings-to-form-target-i",
+  "topics": [
+    "Array",
+    "String",
+    "Binary Search",
+    "Dynamic Programming",
+    "Trie",
+    "Segment Tree",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ],
+  "description": "You are given an array of strings words and a string target.\nA string x is called valid if x is a prefix of any string in words.\nReturn the minimum number of valid strings that can be concatenated to form target. If it is not possible to form target, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"abc\",\"aaaaa\",\"bcdef\"], target = \"aabcdabc\"\nOutput: 3\nExplanation:\nThe target string can be formed by concatenating:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"abababab\",\"ab\"], target = \"ababaababa\"\nOutput: 2\nExplanation:\nThe target string can be formed by concatenating:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"abcdef\"], target = \"xyz\"\nOutput: -1",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 5 * 103",
+    "The input is generated such that sum(words[i].length) <= 105.",
+    "words[i] consists only of lowercase English letters.",
+    "1 <= target.length <= 5 * 103",
+    "target consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>dp[i]</code> be the minimum cost to form the prefix of length <code>i</code> of <code>target</code>.",
+    "If <code>target[(i + 1)..j]</code> matches any prefix, update the range <code>dp[(i + 1)..j]</code> to minimum between original value and <code>dp[i] + 1</code>.",
+    "Use a Trie to check prefix matching."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minValidStrings(vector<string>& words, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minValidStrings(String[] words, String target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minValidStrings(self, words, target):\n        \"\"\"\n        :type words: List[str]\n        :type target: str\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minValidStrings(self, words: List[str], target: str) -> int:\n        ",
+    "c": "int minValidStrings(char** words, int wordsSize, char* target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinValidStrings(string[] words, string target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} target\n * @return {number}\n */\nvar minValidStrings = function(words, target) {\n    \n};",
+    "typescript": "function minValidStrings(words: string[], target: string): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $target\n     * @return Integer\n     */\n    function minValidStrings($words, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minValidStrings(_ words: [String], _ target: String) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minValidStrings(words: Array<String>, target: String): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minValidStrings(List<String> words, String target) {\n    \n  }\n}",
+    "golang": "func minValidStrings(words []string, target string) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} target\n# @return {Integer}\ndef min_valid_strings(words, target)\n    \nend",
+    "scala": "object Solution {\n    def minValidStrings(words: Array[String], target: String): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_valid_strings(words: Vec<String>, target: String) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-valid-strings words target)\n  (-> (listof string?) string? exact-integer?)\n  )",
+    "erlang": "-spec min_valid_strings(Words :: [unicode:unicode_binary()], Target :: unicode:unicode_binary()) -> integer().\nmin_valid_strings(Words, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_valid_strings(words :: [String.t], target :: String.t) :: integer\n  def min_valid_strings(words, target) do\n    \n  end\nend"
+  }
+}

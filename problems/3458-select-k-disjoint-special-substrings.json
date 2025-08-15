@@ -1,0 +1,64 @@
+{
+  "title": "Select K Disjoint Special Substrings",
+  "problem_id": "3771",
+  "frontend_id": "3458",
+  "difficulty": "Medium",
+  "problem_slug": "select-k-disjoint-special-substrings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "Given a string s of length n and an integer k, determine whether it is possible to select k disjoint special substrings.\nA special substring is a substring where:\nNote that all k substrings must be disjoint, meaning they cannot overlap.\nReturn true if it is possible to select k such disjoint special substrings; otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abcdbaefab\", k = 2\nOutput: true\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cdefdc\", k = 3\nOutput: false\nExplanation:\nThere can be at most 2 disjoint special substrings: \"e\" and \"f\" . Since k = 3 , the output is false .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"abeabe\", k = 0\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == s.length <= 5 * 104",
+    "0 <= k <= 26",
+    "s consists only of lowercase English letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "There are at most 26 start points (which are the first occurrence of each letter) and at most 26 end points (which are the last occurrence of each letter) of the substring.",
+    "Starting from each character, build the smallest special substring interval containing it.",
+    "Use dynamic programming on the obtained intervals to check if it's possible to pick at least <code>k</code> disjoint intervals."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool maxSubstringLength(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean maxSubstringLength(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubstringLength(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubstringLength(self, s: str, k: int) -> bool:\n        ",
+    "c": "bool maxSubstringLength(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool MaxSubstringLength(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {boolean}\n */\nvar maxSubstringLength = function(s, k) {\n    \n};",
+    "typescript": "function maxSubstringLength(s: string, k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Boolean\n     */\n    function maxSubstringLength($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubstringLength(_ s: String, _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubstringLength(s: String, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool maxSubstringLength(String s, int k) {\n    \n  }\n}",
+    "golang": "func maxSubstringLength(s string, k int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Boolean}\ndef max_substring_length(s, k)\n    \nend",
+    "scala": "object Solution {\n    def maxSubstringLength(s: String, k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_substring_length(s: String, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (max-substring-length s k)\n  (-> string? exact-integer? boolean?)\n  )",
+    "erlang": "-spec max_substring_length(S :: unicode:unicode_binary(), K :: integer()) -> boolean().\nmax_substring_length(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_substring_length(s :: String.t, k :: integer) :: boolean\n  def max_substring_length(s, k) do\n    \n  end\nend"
+  }
+}

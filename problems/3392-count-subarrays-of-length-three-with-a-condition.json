@@ -1,0 +1,53 @@
+{
+  "title": "Count Subarrays of Length Three With a Condition",
+  "problem_id": "3685",
+  "frontend_id": "3392",
+  "difficulty": "Easy",
+  "problem_slug": "count-subarrays-of-length-three-with-a-condition",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given an integer array nums, return the number of subarrays of length 3 such that the sum of the first and third numbers equals exactly half of the second number.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,1,4,1]\nOutput: 1\nExplanation:\nOnly the subarray [1,4,1] contains exactly 3 elements where the sum of the first and third numbers equals half the middle number.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,1,1]\nOutput: 0\nExplanation:\n[1,1,1] is the only subarray of length 3. However, its first and third numbers do not add to half the middle number.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= nums.length <= 100",
+    "-100 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "The constraints are small. Consider checking every subarray."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int countSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubarrays(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def countSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def countSubarrays(self, nums: List[int]) -> int:\n        ",
+    "c": "int countSubarrays(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int CountSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countSubarrays = function(nums) {\n    \n};",
+    "typescript": "function countSubarrays(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function countSubarrays($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func countSubarrays(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun countSubarrays(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int countSubarrays(List<int> nums) {\n    \n  }\n}",
+    "golang": "func countSubarrays(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef count_subarrays(nums)\n    \nend",
+    "scala": "object Solution {\n    def countSubarrays(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn count_subarrays(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (count-subarrays nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec count_subarrays(Nums :: [integer()]) -> integer().\ncount_subarrays(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec count_subarrays(nums :: [integer]) :: integer\n  def count_subarrays(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach: One-Time Traversal\n\n#### Intuition\n\nLet $n$ be the length of the array $\\textit{nums}$, and perform a traversal of the indices in the range $[1, n-2]$. When traversing to index $i$, if $\\textit{nums}[i]$ is equal to $(\\textit{nums}[i-1] + \\textit{nums}[i+1]) \\times 2$, then the answer increases by $1$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n\n- Space complexity: $O(1)$."
+}

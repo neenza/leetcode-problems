@@ -1,0 +1,58 @@
+{
+  "title": "Nim Game",
+  "problem_id": "292",
+  "frontend_id": "292",
+  "difficulty": "Easy",
+  "problem_slug": "nim-game",
+  "topics": [
+    "Math",
+    "Brainteaser",
+    "Game Theory"
+  ],
+  "description": "You are playing the following Nim Game with your friend:\nGiven n, the number of stones in the heap, return true if you can win the game assuming both you and your friend play optimally, otherwise return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4\nOutput: false\nExplanation: These are the possible outcomes:\n1. You remove 1 stone. Your friend removes 3 stones, including the last stone. Your friend wins.\n2. You remove 2 stones. Your friend removes 2 stones, including the last stone. Your friend wins.\n3. You remove 3 stones. Your friend removes the last stone. Your friend wins.\nIn all outcomes, your friend wins.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 1\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 2\nOutput: true",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 231 - 1"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If there are 5 stones in the heap, could you figure out a way to remove the stones such that you will always be the winner?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canWinNim(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canWinNim(int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canWinNim(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canWinNim(self, n: int) -> bool:\n        ",
+    "c": "bool canWinNim(int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanWinNim(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar canWinNim = function(n) {\n    \n};",
+    "typescript": "function canWinNim(n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @return Boolean\n     */\n    function canWinNim($n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canWinNim(_ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canWinNim(n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canWinNim(int n) {\n    \n  }\n}",
+    "golang": "func canWinNim(n int) bool {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @return {Boolean}\ndef can_win_nim(n)\n    \nend",
+    "scala": "object Solution {\n    def canWinNim(n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_win_nim(n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-win-nim n)\n  (-> exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_win_nim(N :: integer()) -> boolean().\ncan_win_nim(N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_win_nim(n :: integer) :: boolean\n  def can_win_nim(n) do\n    \n  end\nend"
+  }
+}

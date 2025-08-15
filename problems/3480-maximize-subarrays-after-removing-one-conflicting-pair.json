@@ -1,0 +1,63 @@
+{
+  "title": "Maximize Subarrays After Removing One Conflicting Pair",
+  "problem_id": "3789",
+  "frontend_id": "3480",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-subarrays-after-removing-one-conflicting-pair",
+  "topics": [
+    "Array",
+    "Segment Tree",
+    "Enumeration",
+    "Prefix Sum"
+  ],
+  "description": "You are given an integer n which represents an array nums containing the numbers from 1 to n in order. Additionally, you are given a 2D array conflictingPairs, where conflictingPairs[i] = [a, b] indicates that a and b form a conflicting pair.\nRemove exactly one element from conflictingPairs. Afterward, count the number of non-empty subarrays of nums which do not contain both a and b for any remaining conflicting pair [a, b].\nReturn the maximum number of subarrays possible after removing exactly one conflicting pair.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, conflictingPairs = [[2,3],[1,4]]\nOutput: 9\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, conflictingPairs = [[1,2],[2,5],[3,5]]\nOutput: 12\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= conflictingPairs.length <= 2 * n",
+    "conflictingPairs[i].length == 2",
+    "1 <= conflictingPairs[i][j] <= n",
+    "conflictingPairs[i][0] != conflictingPairs[i][1]"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Let <code>f[i]</code> (where <code>i = 1, 2, 3, ..., n</code>) be the end index of the longest valid subarray (without any conflicting pair) starting at index <code>i</code>.",
+    "The answer is: <code>sigma(f[i] - i + 1) for i in [1..n]</code>, which simplifies to: <code>sigma(f[i]) - n * (n + 1) / 2 + n</code>.",
+    "Focus on maintaining <code>f[i]</code>.",
+    "If we have a conflicting pair <code>(x, y)</code> with <code>x < y</code>: 1. Sort the conflicting pairs by <code>y</code> values in non-increasing order.  2. Update each prefix of the <code>f</code> array accordingly.",
+    "Use a segment tree or another suitable data structure to maintain the range update and sum query efficiently."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxSubarrays(int n, vector<vector<int>>& conflictingPairs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxSubarrays(int n, int[][] conflictingPairs) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSubarrays(self, n, conflictingPairs):\n        \"\"\"\n        :type n: int\n        :type conflictingPairs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSubarrays(self, n: int, conflictingPairs: List[List[int]]) -> int:\n        ",
+    "c": "long long maxSubarrays(int n, int** conflictingPairs, int conflictingPairsSize, int* conflictingPairsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxSubarrays(int n, int[][] conflictingPairs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} conflictingPairs\n * @return {number}\n */\nvar maxSubarrays = function(n, conflictingPairs) {\n    \n};",
+    "typescript": "function maxSubarrays(n: number, conflictingPairs: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $conflictingPairs\n     * @return Integer\n     */\n    function maxSubarrays($n, $conflictingPairs) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSubarrays(_ n: Int, _ conflictingPairs: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSubarrays(n: Int, conflictingPairs: Array<IntArray>): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSubarrays(int n, List<List<int>> conflictingPairs) {\n    \n  }\n}",
+    "golang": "func maxSubarrays(n int, conflictingPairs [][]int) int64 {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} conflicting_pairs\n# @return {Integer}\ndef max_subarrays(n, conflicting_pairs)\n    \nend",
+    "scala": "object Solution {\n    def maxSubarrays(n: Int, conflictingPairs: Array[Array[Int]]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_subarrays(n: i32, conflicting_pairs: Vec<Vec<i32>>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-subarrays n conflictingPairs)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_subarrays(N :: integer(), ConflictingPairs :: [[integer()]]) -> integer().\nmax_subarrays(N, ConflictingPairs) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_subarrays(n :: integer, conflicting_pairs :: [[integer]]) :: integer\n  def max_subarrays(n, conflicting_pairs) do\n    \n  end\nend"
+  },
+  "solution": "### Approach: Enumeration\n\n#### Intuition\n\nConsider a simplified version of the problem: calculating the number of valid subarrays that do not contain any conflicting pairs, without deleting any of them.\n\nFor the simplified problem, we first enumerate the left endpoint $i$ of the subarray. Then, under the condition that no conflicting pairs are included, we determine the range of valid values for the right endpoint $j$. For each conflicting pair $\\textit{conflictingPairs}[k] = [a_k, b_k]$, we assume $a_k < b_k$ (if not, we swap their positions). There are two cases:\n\n- If $a_k < i$, then no matter how $j$ is chosen, the subarray will not include both $a_k$ and $b_k$.\n\n- If $a_k \\ge i$, then we must have $j < b_k$.\n\nBased on this, we define $b_1 = \\min_{a_k \\ge i} b_k$, and the valid range for $j$ becomes:\n\n$$\ni \\le j \\lt \\min(b_1, n + 1)\n$$\n\nTherefore, the number of valid subarrays with left endpoint $i$ is $\\min(n + 1, b_1) - i$.\nTo compute $b_1$ efficiently, we use arrays $\\textit{bMin}_1$ and $\\textit{bMin}_2$ to record the smallest and second smallest values of $b$ among all conflicting pairs $(a, b)$ where $a < b$. Then, $b_1$ can be found using the suffix minimum of $\\textit{bMin}_1$.\n\nNow consider the case where we delete exactly one conflicting pair. For a subarray with left endpoint $i$, the valid range of its right endpoint $j$ is determined by $b_1$. If the deleted conflicting pair does not involve $b_1$, then the number of valid subarrays starting at $i$ remains unchanged.\n\nAssume $b_1$ is located at index $i_{b_1}$ in $\\textit{bMin}1$, i.e., $\\textit{bMin}1[i{b_1}] = b_1$. We define $\\textit{delCount}[i{b_1}]$ to record the number of additional valid subarrays that can be gained by deleting the conflicting pair associated with $b_1$.\n\nLet $b_2$ be the second smallest suffix value of $\\textit{bMin}_1$ starting at index $i$. After deleting $b_1$, the new $b_1'$ becomes $\\min(b_2, \\textit{bMin}2[i{b_1}])$. The number of additional valid subarrays gained is:\n\n$$\n\\min(b_1', n + 1) - \\min(b_1, n + 1)\n$$\n\nThis value is then added to $\\textit{delCount}[i_{b_1}]$.\n\nFinally, the maximum number of valid subarrays after deleting exactly one conflicting pair is equal to the number of valid subarrays without any deletion, plus the maximum value in $\\textit{delCount}$.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the array $\\textit{nums}$.\n\n- Time complexity: $O(n)$.\n  \n  We only need to traverse the array once.\n\n- Space complexity: $O(n)$.\n  \n  We use an array to record the number of valid subarrays added after deleting conflicting pairs.\n  \n---"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Special Array I",
+  "problem_id": "3429",
+  "frontend_id": "3151",
+  "difficulty": "Easy",
+  "problem_slug": "special-array-i",
+  "topics": [
+    "Array"
+  ],
+  "description": "An array is considered special if the parity of every pair of adjacent elements is different. In other words, one element in each pair must be even, and the other must be odd.\nYou are given an array of integers nums. Return true if nums is a special array, otherwise, return false.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1]\nOutput: true\nExplanation:\nThere is only one element. So the answer is true .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,1,4]\nOutput: true\nExplanation:\nThere is only two pairs: (2,1) and (1,4) , and both of them contain numbers with different parity. So the answer is true .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [4,3,1,6]\nOutput: false\nExplanation:\nnums[1] and nums[2] are both odd. So the answer is false .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100",
+    "1 <= nums[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Try to check the parity of each element and its previous element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isArraySpecial(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isArraySpecial(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isArraySpecial(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isArraySpecial(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool isArraySpecial(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsArraySpecial(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar isArraySpecial = function(nums) {\n    \n};",
+    "typescript": "function isArraySpecial(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function isArraySpecial($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isArraySpecial(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isArraySpecial(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isArraySpecial(List<int> nums) {\n    \n  }\n}",
+    "golang": "func isArraySpecial(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef is_array_special(nums)\n    \nend",
+    "scala": "object Solution {\n    def isArraySpecial(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_array_special(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-array-special nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec is_array_special(Nums :: [integer()]) -> boolean().\nis_array_special(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_array_special(nums :: [integer]) :: boolean\n  def is_array_special(nums) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution  \n \n---\n\n### Overview\n\nWe are given an array of integers, `nums`, and our task is to check whether the array is **special**. \n\nKey Definitions: \n- **Parity** refers to whether an integer is even or odd. \n- An array is **special** if every pair of adjacent numbers includes one even and one odd number.\n\nKnowing this, we can see that a special array is one in which all numbers have alternating parities.\n\nFrom the examples in the problem description, we can see that this condition requires the numbers in a special array to alternate in parity. An array with one integer is always considered special since it doesn't violate this condition.\n\n---\n\n### Approach 1: Modulo Comparisons\n\n#### Intuition\n\nTo solve this problem, we first need a way to determine a number's parity. This is where the **modulo** operation comes in handy. When we divide a number by `2`, the remainder tells us its parity:\n- If the remainder is `0`, the number is even (for example, `4 % 2 = 0` → 4 is even).  \n- If the remainder is `1`, the number is odd (for example, `5 % 2 = 1` → 5 is odd). \n\nNow, the solution is a matter of using a loop to iterate through `nums` and applying the modulo operator to determine if the integers have alternating parities. \n\n#### Algorithm\n\n1. Iterate through `nums` from index `0` to `n - 1`, where `n` is the length of `nums`:\n    * For each index `i`, compare the parities of numbers `nums[i]` and `nums[i + 1]`.\n        * If `nums[i] % 2` equals `nums[i + 1] % 2`, there are two adjacent numbers with the same parity, so it returns `false`.\n2. If the loop completes without finding two adjacent numbers with the same parity, return `true`, indicating the array is special.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the size of the `nums` array.\n\n* Time complexity: $O(n)$\n\n   In the best case, we find a pair of adjacent numbers with the same parity on the first iteration of the loop, which would take only $O(1)$ time. \n   \n   In the worst case, the program has to iterate $n - 1$ times to return a result if no adjacent numbers with the same parity are found, taking $O(n - 1)$ time. \n   \n   As a result, this leads to an overall time complexity of $O(n - 1)$, which can be simplified to $O(n)$.\n\n* Space complexity: $O(1)$\n\n   The space required does not depend on the size of the input array or any data structures that require additional space, so only constant $O(1)$ space is used.\n\n---\n\n### Approach 2: Bitwise Operations\n\n#### Intuition\n\nSimilar to the previous solution, we determine the parities of each number and compare adjacent numbers by iterating through a loop. However, rather than using the modulo operation, we can use **bitwise operations** to determine the parities of the numbers. \n\nFirst, we need to determine the bitwise characteristic that differentiates between even and odd numbers. When we look at the binary form of a number, the last digit tells us its parity:\n- If the last digit is `0`, the number is even (for example, `6` in binary is `110` → `6` is even).\n- If the last digit is `1`, the number is odd (for example, `7` in binary is `111` → `7` is odd).\n\nNext, we must choose a bitwise operation to compare individual bits directly. The **bitwise AND (&)** operation stands out as a notable option, as it returns `1` only if the two bits compared are `1`. Using this, we can check a number's last bit to determine its parity: an odd number AND `1` yields '1', while an even number AND `1` yields `0`.\n\nFinally, we need to choose a bitwise operation to compare the parities of adjacent numbers. The **bitwise XOR (^)** is ideal for this purpose, as it returns a `1` if two numbers have alternating parities and a `0` if they have matching parities.\n\n#### Algorithm\n\n1. Iterate through `nums` from index `0` to `n - 1`, where `n` is the length of `nums`:\n    * For each index `i`, compare the parities of numbers `nums[i]` and `nums[i + 1]`\n        * If `nums[i] & 1 ^ nums[i + 1] & 1` equals `0`, there are two adjacent numbers that have the same parity, so it returns `false`\n2. If the loop completes without finding two adjacent numbers with the same parity, return `true`, indicating the array is special.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of string `s`.\n\n* Time complexity: $O(n)$\n\n   In the best case, we find a pair of adjacent numbers with the same parity on the first iteration of the loop, which would take only $O(1)$ time. \n   \n   In the worst case, the program has to iterate $n - 1$ times to return a result if no adjacent numbers with the same parity are found, taking $O(n - 1)$ time. \n   \n   As a result, this leads to an overall time complexity of $O(n - 1)$, which can be simplified to $O(n)$.\n\n* Space complexity: $O(1)$\n\n   The space required does not depend on the size of the input array or any data structures that require additional space, so only constant $O(1)$ space is used.\n\n---"
+}

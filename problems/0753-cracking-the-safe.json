@@ -1,0 +1,55 @@
+{
+  "title": "Cracking the Safe",
+  "problem_id": "754",
+  "frontend_id": "753",
+  "difficulty": "Hard",
+  "problem_slug": "cracking-the-safe",
+  "topics": [
+    "Depth-First Search",
+    "Graph",
+    "Eulerian Circuit"
+  ],
+  "description": "There is a safe protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].\nThe safe has a peculiar way of checking the password. When you enter in a sequence, it checks the most recent n digits that were entered each time you type a digit.\nReturn any string of minimum length that will unlock the safe at some point of entering it.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1, k = 2\nOutput: \"10\"\nExplanation: The password is a single digit, so enter each digit. \"01\" would also unlock the safe.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, k = 2\nOutput: \"01100\"\nExplanation: For each possible password:\n- \"00\" is typed in starting from the 4th digit.\n- \"01\" is typed in starting from the 1st digit.\n- \"10\" is typed in starting from the 3rd digit.\n- \"11\" is typed in starting from the 2nd digit.\nThus \"01100\" will unlock the safe. \"10011\", and \"11001\" would also unlock the safe.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 4",
+    "1 <= k <= 10",
+    "1 <= kn <= 4096"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can think of this problem as the problem of finding an Euler path (a path visiting every edge exactly once) on the following graph: there are $$k^{n-1}$$ nodes with each node having $$k$$ edges.  It turns out this graph always has an Eulerian circuit (path starting where it ends.)\r\n\r\nWe should visit each node in \"post-order\" so as to not get stuck in the graph prematurely."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string crackSafe(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String crackSafe(int n, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def crackSafe(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def crackSafe(self, n: int, k: int) -> str:\n        ",
+    "c": "char* crackSafe(int n, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public string CrackSafe(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {string}\n */\nvar crackSafe = function(n, k) {\n    \n};",
+    "typescript": "function crackSafe(n: number, k: number): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $k\n     * @return String\n     */\n    function crackSafe($n, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func crackSafe(_ n: Int, _ k: Int) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun crackSafe(n: Int, k: Int): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String crackSafe(int n, int k) {\n    \n  }\n}",
+    "golang": "func crackSafe(n int, k int) string {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} k\n# @return {String}\ndef crack_safe(n, k)\n    \nend",
+    "scala": "object Solution {\n    def crackSafe(n: Int, k: Int): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn crack_safe(n: i32, k: i32) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (crack-safe n k)\n  (-> exact-integer? exact-integer? string?)\n  )",
+    "erlang": "-spec crack_safe(N :: integer(), K :: integer()) -> unicode:unicode_binary().\ncrack_safe(N, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec crack_safe(n :: integer, k :: integer) :: String.t\n  def crack_safe(n, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Smallest Rotation with Highest Score",
+  "problem_id": "814",
+  "frontend_id": "798",
+  "difficulty": "Hard",
+  "problem_slug": "smallest-rotation-with-highest-score",
+  "topics": [
+    "Array",
+    "Prefix Sum"
+  ],
+  "description": "You are given an array nums. You can rotate it by a non-negative integer k so that the array becomes [nums[k], nums[k + 1], ... nums[nums.length - 1], nums[0], nums[1], ..., nums[k-1]]. Afterward, any entries that are less than or equal to their index are worth one point.\nReturn the rotation index k that corresponds to the highest score we can achieve if we rotated nums by it. If there are multiple answers, return the smallest such index k.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,1,4,0]\nOutput: 3\nExplanation: Scores for each k are listed below: \nk = 0,  nums = [2,3,1,4,0],    score 2\nk = 1,  nums = [3,1,4,0,2],    score 3\nk = 2,  nums = [1,4,0,2,3],    score 3\nk = 3,  nums = [4,0,2,3,1],    score 4\nk = 4,  nums = [0,2,3,1,4],    score 3\nSo we should choose k = 3, which has the highest score.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,0,2,4]\nOutput: 0\nExplanation: nums will always have 3 points no matter how it shifts.\nSo we will choose the smallest k, which is 0.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "0 <= nums[i] < nums.length"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int bestRotation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bestRotation(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def bestRotation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def bestRotation(self, nums: List[int]) -> int:\n        ",
+    "c": "int bestRotation(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int BestRotation(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar bestRotation = function(nums) {\n    \n};",
+    "typescript": "function bestRotation(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function bestRotation($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func bestRotation(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun bestRotation(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int bestRotation(List<int> nums) {\n    \n  }\n}",
+    "golang": "func bestRotation(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef best_rotation(nums)\n    \nend",
+    "scala": "object Solution {\n    def bestRotation(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn best_rotation(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (best-rotation nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec best_rotation(Nums :: [integer()]) -> integer().\nbest_rotation(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec best_rotation(nums :: [integer]) :: integer\n  def best_rotation(nums) do\n    \n  end\nend"
+  }
+}

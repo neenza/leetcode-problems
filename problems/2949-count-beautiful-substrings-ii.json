@@ -1,0 +1,64 @@
+{
+  "title": "Count Beautiful Substrings II",
+  "problem_id": "3208",
+  "frontend_id": "2949",
+  "difficulty": "Hard",
+  "problem_slug": "count-beautiful-substrings-ii",
+  "topics": [
+    "Hash Table",
+    "Math",
+    "String",
+    "Number Theory",
+    "Prefix Sum"
+  ],
+  "description": "You are given a string s and a positive integer k.\nLet vowels and consonants be the number of vowels and consonants in a string.\nA string is beautiful if:\nReturn the number of non-empty beautiful substrings in the given string s.\nA substring is a contiguous sequence of characters in a string.\nVowel letters in English are 'a', 'e', 'i', 'o', and 'u'.\nConsonant letters in English are every letter except vowels.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"baeyh\", k = 2\nOutput: 2\nExplanation: There are 2 beautiful substrings in the given string.\n- Substring \"baeyh\", vowels = 2 ([\"a\",e\"]), consonants = 2 ([\"y\",\"h\"]).\nYou can see that string \"aeyh\" is beautiful as vowels == consonants and vowels * consonants % k == 0.\n- Substring \"baeyh\", vowels = 2 ([\"a\",e\"]), consonants = 2 ([\"b\",\"y\"]).\nYou can see that string \"baey\" is beautiful as vowels == consonants and vowels * consonants % k == 0.\nIt can be shown that there are only 2 beautiful substrings in the given string.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"abba\", k = 1\nOutput: 3\nExplanation: There are 3 beautiful substrings in the given string.\n- Substring \"abba\", vowels = 1 ([\"a\"]), consonants = 1 ([\"b\"]).\n- Substring \"abba\", vowels = 1 ([\"a\"]), consonants = 1 ([\"b\"]).\n- Substring \"abba\", vowels = 2 ([\"a\",\"a\"]), consonants = 2 ([\"b\",\"b\"]).\nIt can be shown that there are only 3 beautiful substrings in the given string.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"bcdf\", k = 1\nOutput: 0\nExplanation: There are no beautiful substrings in the given string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 5 * 104",
+    "1 <= k <= 1000",
+    "s consists of only English lowercase letters."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For the given <code>k</code> find all the <code>x</code> integers such that <code>x^2 % k == 0</code>. Notice, that there aren’t many such candidates.",
+    "We can iterate over all such <code>x</codes> values and count the number of substrings such that <code>vowels == consonants == x</code>.",
+    "This can be done with prefix sums and hash map."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long beautifulSubstrings(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long beautifulSubstrings(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def beautifulSubstrings(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def beautifulSubstrings(self, s: str, k: int) -> int:\n        ",
+    "c": "long long beautifulSubstrings(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long BeautifulSubstrings(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar beautifulSubstrings = function(s, k) {\n    \n};",
+    "typescript": "function beautifulSubstrings(s: string, k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Integer\n     */\n    function beautifulSubstrings($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func beautifulSubstrings(_ s: String, _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun beautifulSubstrings(s: String, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int beautifulSubstrings(String s, int k) {\n    \n  }\n}",
+    "golang": "func beautifulSubstrings(s string, k int) int64 {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Integer}\ndef beautiful_substrings(s, k)\n    \nend",
+    "scala": "object Solution {\n    def beautifulSubstrings(s: String, k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn beautiful_substrings(s: String, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (beautiful-substrings s k)\n  (-> string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec beautiful_substrings(S :: unicode:unicode_binary(), K :: integer()) -> integer().\nbeautiful_substrings(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec beautiful_substrings(s :: String.t, k :: integer) :: integer\n  def beautiful_substrings(s, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Maximum Distance in Arrays",
+  "problem_id": "624",
+  "frontend_id": "624",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-distance-in-arrays",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "You are given m arrays, where each array is sorted in ascending order.\nYou can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers a and b to be their absolute difference |a - b|.\nReturn the maximum distance.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: arrays = [[1,2,3],[4,5],[1,2,3]]\nOutput: 4\nExplanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: arrays = [[1],[1]]\nOutput: 0",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == arrays.length",
+    "2 <= m <= 105",
+    "1 <= arrays[i].length <= 500",
+    "-104 <= arrays[i][j] <= 104",
+    "arrays[i] is sorted in ascending order.",
+    "There will be at most 105 integers in all the arrays."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxDistance(vector<vector<int>>& arrays) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDistance(List<List<Integer>> arrays) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxDistance(self, arrays):\n        \"\"\"\n        :type arrays: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxDistance(self, arrays: List[List[int]]) -> int:\n        ",
+    "c": "int maxDistance(int** arrays, int arraysSize, int* arraysColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxDistance(IList<IList<int>> arrays) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} arrays\n * @return {number}\n */\nvar maxDistance = function(arrays) {\n    \n};",
+    "typescript": "function maxDistance(arrays: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $arrays\n     * @return Integer\n     */\n    function maxDistance($arrays) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxDistance(_ arrays: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxDistance(arrays: List<List<Int>>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxDistance(List<List<int>> arrays) {\n    \n  }\n}",
+    "golang": "func maxDistance(arrays [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} arrays\n# @return {Integer}\ndef max_distance(arrays)\n    \nend",
+    "scala": "object Solution {\n    def maxDistance(arrays: List[List[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_distance(arrays: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-distance arrays)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec max_distance(Arrays :: [[integer()]]) -> integer().\nmax_distance(Arrays) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_distance(arrays :: [[integer]]) :: integer\n  def max_distance(arrays) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Minimize Deviation in Array",
+  "problem_id": "1794",
+  "frontend_id": "1675",
+  "difficulty": "Hard",
+  "problem_slug": "minimize-deviation-in-array",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Heap (Priority Queue)",
+    "Ordered Set"
+  ],
+  "description": "You are given an array nums of n positive integers.\nYou can perform two types of operations on any element of the array any number of times:\nThe deviation of the array is the maximum difference between any two elements in the array.\nReturn the minimum deviation the array can have after performing some number of operations.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4]\nOutput: 1\nExplanation: You can transform the array to [1,2,3,2], then to [2,2,3,2], then the deviation will be 3 - 2 = 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [4,1,5,20,3]\nOutput: 3\nExplanation: You can transform the array after two operations to [4,2,5,5,3], then the deviation will be 5 - 2 = 3.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [2,10,8]\nOutput: 3",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "2 <= n <= 5 * 104",
+    "1 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Assume you start with the minimum possible value for each number so you can only multiply a number by 2 till it reaches its maximum possible value.",
+    "If there is a better solution than the current one, then it must have either its maximum value less than the current maximum value, or the minimum value larger than the current minimum value.",
+    "Since that we only increase numbers (multiply them by 2), we cannot decrease the current maximum value, so we must multiply the current minimum number by 2."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumDeviation(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDeviation(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumDeviation(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumDeviation(self, nums: List[int]) -> int:\n        ",
+    "c": "int minimumDeviation(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumDeviation(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDeviation = function(nums) {\n    \n};",
+    "typescript": "function minimumDeviation(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function minimumDeviation($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumDeviation(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumDeviation(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumDeviation(List<int> nums) {\n    \n  }\n}",
+    "golang": "func minimumDeviation(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef minimum_deviation(nums)\n    \nend",
+    "scala": "object Solution {\n    def minimumDeviation(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_deviation(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-deviation nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_deviation(Nums :: [integer()]) -> integer().\nminimum_deviation(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_deviation(nums :: [integer]) :: integer\n  def minimum_deviation(nums) do\n    \n  end\nend"
+  }
+}

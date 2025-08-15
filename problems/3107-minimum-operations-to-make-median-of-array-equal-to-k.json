@@ -1,0 +1,62 @@
+{
+  "title": "Minimum Operations to Make Median of Array Equal to K",
+  "problem_id": "3387",
+  "frontend_id": "3107",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-operations-to-make-median-of-array-equal-to-k",
+  "topics": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "You are given an integer array nums and a non-negative integer k. In one operation, you can increase or decrease any element by 1.\nReturn the minimum number of operations needed to make the median of nums equal to k.\nThe median of an array is defined as the middle element of the array when it is sorted in non-decreasing order. If there are two choices for a median, the larger of the two values is taken.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,5,6,8,5], k = 4\nOutput: 2\nExplanation:\nWe can subtract one from nums[1] and nums[4] to obtain [2, 4, 6, 8, 4] . The median of the resulting array is equal to k .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,5,6,8,5], k = 7\nOutput: 3\nExplanation:\nWe can add one to nums[1] twice and add one to nums[2] once to obtain [2, 7, 7, 8, 5] .",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4,5,6], k = 4\nOutput: 0\nExplanation:\nThe median of the array is already equal to k .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 2 * 105",
+    "1 <= nums[i] <= 109",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort <code>nums</code> in non-descending order.",
+    "For all the smaller values on the left side of the median, change them to <code>k</code> if they are larger than <code>k</code>.",
+    "For all the larger values on the right side of the median, change them to <code>k</code> if they are smaller than <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minOperationsToMakeMedianK(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minOperationsToMakeMedianK(int[] nums, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minOperationsToMakeMedianK(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minOperationsToMakeMedianK(self, nums: List[int], k: int) -> int:\n        ",
+    "c": "long long minOperationsToMakeMedianK(int* nums, int numsSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinOperationsToMakeMedianK(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minOperationsToMakeMedianK = function(nums, k) {\n    \n};",
+    "typescript": "function minOperationsToMakeMedianK(nums: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $k\n     * @return Integer\n     */\n    function minOperationsToMakeMedianK($nums, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minOperationsToMakeMedianK(_ nums: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minOperationsToMakeMedianK(nums: IntArray, k: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minOperationsToMakeMedianK(List<int> nums, int k) {\n    \n  }\n}",
+    "golang": "func minOperationsToMakeMedianK(nums []int, k int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} k\n# @return {Integer}\ndef min_operations_to_make_median_k(nums, k)\n    \nend",
+    "scala": "object Solution {\n    def minOperationsToMakeMedianK(nums: Array[Int], k: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_operations_to_make_median_k(nums: Vec<i32>, k: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-operations-to-make-median-k nums k)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_operations_to_make_median_k(Nums :: [integer()], K :: integer()) -> integer().\nmin_operations_to_make_median_k(Nums, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_operations_to_make_median_k(nums :: [integer], k :: integer) :: integer\n  def min_operations_to_make_median_k(nums, k) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Minimum XOR Sum of Two Arrays",
+  "problem_id": "1989",
+  "frontend_id": "1879",
+  "difficulty": "Hard",
+  "problem_slug": "minimum-xor-sum-of-two-arrays",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given two integer arrays nums1 and nums2 of length n.\nThe XOR sum of the two integer arrays is (nums1[0] XOR nums2[0]) + (nums1[1] XOR nums2[1]) + ... + (nums1[n - 1] XOR nums2[n - 1]) (0-indexed).\nRearrange the elements of nums2 such that the resulting XOR sum is minimized.\nReturn the XOR sum after the rearrangement.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [1,2], nums2 = [2,3]\nOutput: 2\nExplanation: Rearrange nums2 so that it becomes [3,2].\nThe XOR sum is (1 XOR 3) + (2 XOR 2) = 2 + 0 = 2.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [1,0,3], nums2 = [5,3,4]\nOutput: 8\nExplanation: Rearrange nums2 so that it becomes [5,4,3]. \nThe XOR sum is (1 XOR 5) + (0 XOR 4) + (3 XOR 3) = 4 + 4 + 0 = 8.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length",
+    "n == nums2.length",
+    "1 <= n <= 14",
+    "0 <= nums1[i], nums2[i] <= 107"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Since n <= 14, we can consider every subset of nums2.",
+    "We can represent every subset of nums2 using bitmasks."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumXORSum(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumXORSum(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumXORSum(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumXORSum(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "int minimumXORSum(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumXORSum(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar minimumXORSum = function(nums1, nums2) {\n    \n};",
+    "typescript": "function minimumXORSum(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function minimumXORSum($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumXORSum(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumXORSum(nums1: IntArray, nums2: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumXORSum(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func minimumXORSum(nums1 []int, nums2 []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef minimum_xor_sum(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def minimumXORSum(nums1: Array[Int], nums2: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_xor_sum(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-xor-sum nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec minimum_xor_sum(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\nminimum_xor_sum(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_xor_sum(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def minimum_xor_sum(nums1, nums2) do\n    \n  end\nend"
+  }
+}

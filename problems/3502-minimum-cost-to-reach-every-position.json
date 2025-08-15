@@ -1,0 +1,53 @@
+{
+  "title": "Minimum Cost to Reach Every Position",
+  "problem_id": "3832",
+  "frontend_id": "3502",
+  "difficulty": "Easy",
+  "problem_slug": "minimum-cost-to-reach-every-position",
+  "topics": [
+    "Array"
+  ],
+  "description": "You are given an integer array cost of size n. You are currently at position n (at the end of the line) in a line of n + 1 people (numbered from 0 to n).\nYou wish to move forward in the line, but each person in front of you charges a specific amount to swap places. The cost to swap with person i is given by cost[i].\nYou are allowed to swap places with people as follows:\nReturn an array answer of size n, where answer[i] is the minimum total cost to reach each position i in the line.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cost = [5,3,4,1,3,2]\nOutput: [5,3,3,1,1,1]\nExplanation:\nWe can get to each position in the following way:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cost = [1,2,4,6,7]\nOutput: [1,1,1,1,1]\nExplanation:\nWe can swap with person 0 for a cost of 1, then we will be able to reach any position i for free.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == cost.length <= 100",
+    "1 <= cost[i] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Note that once you swap to a position with a lower cost, you can reach any later position for free.",
+    "Use a min prefix array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> minCosts(vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] minCosts(int[] cost) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minCosts(self, cost):\n        \"\"\"\n        :type cost: List[int]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minCosts(self, cost: List[int]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* minCosts(int* cost, int costSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] MinCosts(int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cost\n * @return {number[]}\n */\nvar minCosts = function(cost) {\n    \n};",
+    "typescript": "function minCosts(cost: number[]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $cost\n     * @return Integer[]\n     */\n    function minCosts($cost) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minCosts(_ cost: [Int]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minCosts(cost: IntArray): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> minCosts(List<int> cost) {\n    \n  }\n}",
+    "golang": "func minCosts(cost []int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} cost\n# @return {Integer[]}\ndef min_costs(cost)\n    \nend",
+    "scala": "object Solution {\n    def minCosts(cost: Array[Int]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_costs(cost: Vec<i32>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (min-costs cost)\n  (-> (listof exact-integer?) (listof exact-integer?))\n  )",
+    "erlang": "-spec min_costs(Cost :: [integer()]) -> [integer()].\nmin_costs(Cost) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_costs(cost :: [integer]) :: [integer]\n  def min_costs(cost) do\n    \n  end\nend"
+  }
+}

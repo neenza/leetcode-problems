@@ -1,0 +1,59 @@
+{
+  "title": "Path Crossing",
+  "problem_id": "1619",
+  "frontend_id": "1496",
+  "difficulty": "Easy",
+  "problem_slug": "path-crossing",
+  "topics": [
+    "Hash Table",
+    "String"
+  ],
+  "description": "Given a string path, where path[i] = 'N', 'S', 'E' or 'W', each representing moving one unit north, south, east, or west, respectively. You start at the origin (0, 0) on a 2D plane and walk on the path specified by path.\nReturn true if the path crosses itself at any point, that is, if at any time you are on a location you have previously visited. Return false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: path = \"NES\"\nOutput: false \nExplanation: Notice that the path doesn't cross any point more than once.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/10/screen-shot-2020-06-10-at-123929-pm.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: path = \"NESWW\"\nOutput: true\nExplanation: Notice that the path visits the origin twice.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/06/10/screen-shot-2020-06-10-at-123843-pm.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= path.length <= 104",
+    "path[i] is either 'N', 'S', 'E', or 'W'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Simulate the process while keeping track of visited points.",
+    "Use a set to store previously visited points."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool isPathCrossing(string path) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPathCrossing(String path) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def isPathCrossing(self, path):\n        \"\"\"\n        :type path: str\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def isPathCrossing(self, path: str) -> bool:\n        ",
+    "c": "bool isPathCrossing(char* path) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool IsPathCrossing(string path) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} path\n * @return {boolean}\n */\nvar isPathCrossing = function(path) {\n    \n};",
+    "typescript": "function isPathCrossing(path: string): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $path\n     * @return Boolean\n     */\n    function isPathCrossing($path) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func isPathCrossing(_ path: String) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun isPathCrossing(path: String): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool isPathCrossing(String path) {\n    \n  }\n}",
+    "golang": "func isPathCrossing(path string) bool {\n    \n}",
+    "ruby": "# @param {String} path\n# @return {Boolean}\ndef is_path_crossing(path)\n    \nend",
+    "scala": "object Solution {\n    def isPathCrossing(path: String): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn is_path_crossing(path: String) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (is-path-crossing path)\n  (-> string? boolean?)\n  )",
+    "erlang": "-spec is_path_crossing(Path :: unicode:unicode_binary()) -> boolean().\nis_path_crossing(Path) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec is_path_crossing(path :: String.t) :: boolean\n  def is_path_crossing(path) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Hash Set\n\n**Intuition**\n\nWe can split the problem into two parts. First, how can we simulate the movement described by `path`. Second, how do we determine if there is a crossing?\n\nInitially, we are at the coordinates `(0, 0)`. At each step, we walk in one of four directions:\n\n- North: no change in `x` coordinate, `+1` to `y` coordinate.\n- South: no change in `x` coordinate, `-1` to `y` coordinate.\n- West: `-1` to `x` coordinate, no change in `y` coordinate.\n- East: `+1` to `x` coordinate, no change in `y` coordinate.\n\nWe can map each direction instruction in `path` to a change in `(x, y)` coordinates with a hash map `moves`:\n\n- `'N' : (0, 1)`\n- `'S' : (0, -1)`\n- `'W' : (-1, 0)`\n- `'E' : (1, 0)`\n\nLet's keep track of our current coordinates using two variables `x` and `y`. We can initialize both `x` and `y` to `0` and then iterate over `path`. At each character of `path`, we get the values `dx` and `dy` from `moves`, then apply the change in coordinates by performing `x += dx` and `y += dy`.\n\nHow do we determine if the path crosses itself at any point? Because each movement only changes our position by exactly `1` unit, there will be a crossing if and only if we visit the same coordinates twice. Thus, we can use a hash set `visited` that keeps track of coordinates we have already visited.\n\nWe will initialize `visited` with `(0, 0)` and for each movement in `path`, we will first apply the changes `(dx, dy)`, then check if the updated `(x, y)` is in `visited`. If it is, then we have visited this coordinate point before and there is a crossing at this point, so we return `true`. If not, we add `(x, y)` to `visited` and move on to the next character in `path`.\n\nIf we complete all instructions in `path` without finding a crossing, we can return `false` as there are no crossings.\n\n**Algorithm**\n\n1. Create a hash map `moves` that maps the characters `N, S, W, E` to the corresponding values from above.\n2. Initialize a hash set `visited` with `(0, 0)`.\n3. Initialize `x = 0` and `y = 0`.\n4. For each `c` in `path`:\n    - Get `(dx, dy)` from `moves[c]`.\n    - Add `dx` to `x` and `dy` to `y`.\n    - Check if `(x, y)` is in `visited`. If it is, return `true`.\n    - Add `(x, y)` to `visited`.\n5. Return `false`.\n\n**Implementation**\n\n> Note, in Java we use the `Pair` class and in C++ we convert our coordinates to strings for the purpose of hashing. In Python we can simply use tuples.\n>\n> We can't use `std::pair` in C++ because it doesn't natively support hashing. However, we can hash `string`, so we can express a pair of coordinates `(x, y)` as a string by separating the coordinates with a separator like a comma.**Complexity Analysis**\n\nGiven $$n$$ as the length of `path`,\n\n* Time complexity: $$O(n)$$\n\n    We iterate over each character of `path` once, performing $$O(1)$$ work at each iteration.\n\n* Space complexity: $$O(n)$$\n\n    When there are no crossings, `visited` will grow to a length of $$n$$.---"
+}

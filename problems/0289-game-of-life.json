@@ -1,0 +1,55 @@
+{
+  "title": "Game of Life",
+  "problem_id": "289",
+  "frontend_id": "289",
+  "difficulty": "Medium",
+  "problem_slug": "game-of-life",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "According to Wikipedia's article: \"The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.\"\nThe board is made up of an m x n grid of cells, where each cell has an initial state: live (represented by a 1) or dead (represented by a 0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):\nThe next state of the board is determined by applying the above rules simultaneously to every cell in the current state of the m x n grid board. In this process, births and deaths occur simultaneously.\nGiven the current state of the board, update the board to reflect its next state.\nNote that you do not need to return anything.\nExample 1:\nExample 2:\nConstraints:\nFollow up:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]\nOutput: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/12/26/grid1.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[1,1],[1,0]]\nOutput: [[1,1],[1,1]]",
+      "images": [
+        "https://assets.leetcode.com/uploads/2020/12/26/grid2.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == board.length",
+    "n == board[i].length",
+    "1 <= m, n <= 25",
+    "board[i][j] is 0 or 1."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    void gameOfLife(vector<vector<int>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void gameOfLife(int[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def gameOfLife(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: None Do not return anything, modify board in-place instead.\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def gameOfLife(self, board: List[List[int]]) -> None:\n        \"\"\"\n        Do not return anything, modify board in-place instead.\n        \"\"\"\n        ",
+    "c": "void gameOfLife(int** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public void GameOfLife(int[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} board\n * @return {void} Do not return anything, modify board in-place instead.\n */\nvar gameOfLife = function(board) {\n    \n};",
+    "typescript": "/**\n Do not return anything, modify board in-place instead.\n */\nfunction gameOfLife(board: number[][]): void {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $board\n     * @return NULL\n     */\n    function gameOfLife(&$board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func gameOfLife(_ board: inout [[Int]]) {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun gameOfLife(board: Array<IntArray>): Unit {\n        \n    }\n}",
+    "dart": "class Solution {\n  void gameOfLife(List<List<int>> board) {\n    \n  }\n}",
+    "golang": "func gameOfLife(board [][]int)  {\n    \n}",
+    "ruby": "# @param {Integer[][]} board\n# @return {Void} Do not return anything, modify board in-place instead.\ndef game_of_life(board)\n    \nend",
+    "scala": "object Solution {\n    def gameOfLife(board: Array[Array[Int]]): Unit = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn game_of_life(board: &mut Vec<Vec<i32>>) {\n        \n    }\n}"
+  }
+}

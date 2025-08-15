@@ -1,0 +1,57 @@
+{
+  "title": "Maximize the Minimum Game Score",
+  "problem_id": "3762",
+  "frontend_id": "3449",
+  "difficulty": "Hard",
+  "problem_slug": "maximize-the-minimum-game-score",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy"
+  ],
+  "description": "You are given an array points of size n and an integer m. There is another array gameScore of size n, where gameScore[i] represents the score achieved at the ith game. Initially, gameScore[i] == 0 for all i.\nYou start at index -1, which is outside the array (before the first position at index 0). You can make at most m moves. In each move, you can either:\nNote that the index must always remain within the bounds of the array after the first move.\nReturn the maximum possible minimum value in gameScore after at most m moves.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: points = [2,4], m = 3\nOutput: 4\nExplanation:\nInitially, index i = -1 and gameScore = [0, 0] .\nThe minimum value in gameScore is 4, and this is the maximum possible minimum among all configurations. Hence, 4 is the output.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: points = [1,2,3], m = 5\nOutput: 2\nExplanation:\nInitially, index i = -1 and gameScore = [0, 0, 0] .\nThe minimum value in gameScore is 2, and this is the maximum possible minimum among all configurations. Hence, 2 is the output.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= n == points.length <= 5 * 104",
+    "1 <= points[i] <= 106",
+    "1 <= m <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can we use binary search?",
+    "What happens if you fix the game score as x?",
+    "We should go from i to (i + 1) back and forth, making the value for each index i (from left to right) no less than x."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& points, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] points, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxScore(self, points, m):\n        \"\"\"\n        :type points: List[int]\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxScore(self, points: List[int], m: int) -> int:\n        ",
+    "c": "long long maxScore(int* points, int pointsSize, int m) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MaxScore(int[] points, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} points\n * @param {number} m\n * @return {number}\n */\nvar maxScore = function(points, m) {\n    \n};",
+    "typescript": "function maxScore(points: number[], m: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $points\n     * @param Integer $m\n     * @return Integer\n     */\n    function maxScore($points, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxScore(_ points: [Int], _ m: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxScore(points: IntArray, m: Int): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxScore(List<int> points, int m) {\n    \n  }\n}",
+    "golang": "func maxScore(points []int, m int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} points\n# @param {Integer} m\n# @return {Integer}\ndef max_score(points, m)\n    \nend",
+    "scala": "object Solution {\n    def maxScore(points: Array[Int], m: Int): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_score(points: Vec<i32>, m: i32) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (max-score points m)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec max_score(Points :: [integer()], M :: integer()) -> integer().\nmax_score(Points, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_score(points :: [integer], m :: integer) :: integer\n  def max_score(points, m) do\n    \n  end\nend"
+  }
+}

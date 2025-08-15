@@ -1,0 +1,54 @@
+{
+  "title": "Special Binary String",
+  "problem_id": "763",
+  "frontend_id": "761",
+  "difficulty": "Hard",
+  "problem_slug": "special-binary-string",
+  "topics": [
+    "String",
+    "Recursion"
+  ],
+  "description": "Special binary strings are binary strings with the following two properties:\nYou are given a special binary string s.\nA move consists of choosing two consecutive, non-empty, special substrings of s, and swapping them. Two strings are consecutive if the last character of the first string is exactly one index before the first character of the second string.\nReturn the lexicographically largest resulting string possible after applying the mentioned operations on the string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"11011000\"\nOutput: \"11100100\"\nExplanation: The strings \"10\" [occuring at s[1]] and \"1100\" [at s[3]] are swapped.\nThis is the lexicographically largest string possible after some number of swaps.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"10\"\nOutput: \"10\"",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 50",
+    "s[i] is either '0' or '1'.",
+    "s is a special binary string."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Draw a line from (x, y) to (x+1, y+1) if we see a \"1\", else to (x+1, y-1).\r\nA special substring is just a line that starts and ends at the same y-coordinate, and that is the lowest y-coordinate reached.\r\nCall a mountain a special substring with no special prefixes - ie. only at the beginning and end is the lowest y-coordinate reached.\r\nIf F is the answer function, and S has mountain decomposition M1,M2,M3,...,Mk,  then the answer is:\r\nreverse_sorted(F(M1), F(M2), ..., F(Mk)).\r\nHowever, you'll also need to deal with the case that S is a mountain, such as 11011000 -> 11100100."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string makeLargestSpecial(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String makeLargestSpecial(String s) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def makeLargestSpecial(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def makeLargestSpecial(self, s: str) -> str:\n        ",
+    "c": "char* makeLargestSpecial(char* s) {\n    \n}",
+    "csharp": "public class Solution {\n    public string MakeLargestSpecial(string s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar makeLargestSpecial = function(s) {\n    \n};",
+    "typescript": "function makeLargestSpecial(s: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @return String\n     */\n    function makeLargestSpecial($s) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func makeLargestSpecial(_ s: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun makeLargestSpecial(s: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String makeLargestSpecial(String s) {\n    \n  }\n}",
+    "golang": "func makeLargestSpecial(s string) string {\n    \n}",
+    "ruby": "# @param {String} s\n# @return {String}\ndef make_largest_special(s)\n    \nend",
+    "scala": "object Solution {\n    def makeLargestSpecial(s: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn make_largest_special(s: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (make-largest-special s)\n  (-> string? string?)\n  )",
+    "erlang": "-spec make_largest_special(S :: unicode:unicode_binary()) -> unicode:unicode_binary().\nmake_largest_special(S) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec make_largest_special(s :: String.t) :: String.t\n  def make_largest_special(s) do\n    \n  end\nend"
+  }
+}

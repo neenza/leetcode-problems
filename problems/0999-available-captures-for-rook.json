@@ -1,0 +1,59 @@
+{
+  "title": "Available Captures for Rook",
+  "problem_id": "1041",
+  "frontend_id": "999",
+  "difficulty": "Easy",
+  "problem_slug": "available-captures-for-rook",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
+  "description": "You are given an 8 x 8 matrix representing a chessboard. There is exactly one white rook represented by 'R', some number of white bishops 'B', and some number of black pawns 'p'. Empty squares are represented by '.'.\nA rook can move any number of squares horizontally or vertically (up, down, left, right) until it reaches another piece or the edge of the board. A rook is attacking a pawn if it can move to the pawn's square in one move.\nNote: A rook cannot move through other pieces, such as bishops or pawns. This means a rook cannot attack a pawn if there is another piece blocking the path.\nReturn the number of pawns the white rook is attacking.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: board = [[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"p\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"R\",\".\",\".\",\".\",\"p\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"p\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"]]\nOutput: 3\nExplanation:\nIn this example, the rook is attacking all the pawns.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: board = [[\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\"p\",\"p\",\"p\",\"p\",\"p\",\".\",\".\"],[\".\",\"p\",\"p\",\"B\",\"p\",\"p\",\".\",\".\"],[\".\",\"p\",\"B\",\"R\",\"B\",\"p\",\".\",\".\"],[\".\",\"p\",\"p\",\"B\",\"p\",\"p\",\".\",\".\"],[\".\",\"p\",\"p\",\"p\",\"p\",\"p\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"]]\nOutput: 0\nExplanation:\nThe bishops are blocking the rook from attacking any of the pawns.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: board = [[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"p\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"p\",\".\",\".\",\".\",\".\"],[\"p\",\"p\",\".\",\"R\",\".\",\"p\",\"B\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"B\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\"p\",\".\",\".\",\".\",\".\"],[\".\",\".\",\".\",\".\",\".\",\".\",\".\",\".\"]]\nOutput: 3\nExplanation:\nThe rook is attacking the pawns at positions b5, d6, and f5.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "board.length == 8",
+    "board[i].length == 8",
+    "board[i][j] is either 'R', '.', 'B', or 'p'",
+    "There is exactly one cell with board[i][j] == 'R'"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int numRookCaptures(vector<vector<char>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numRookCaptures(char[][] board) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def numRookCaptures(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def numRookCaptures(self, board: List[List[str]]) -> int:\n        ",
+    "c": "int numRookCaptures(char** board, int boardSize, int* boardColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int NumRookCaptures(char[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @return {number}\n */\nvar numRookCaptures = function(board) {\n    \n};",
+    "typescript": "function numRookCaptures(board: string[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $board\n     * @return Integer\n     */\n    function numRookCaptures($board) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func numRookCaptures(_ board: [[Character]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun numRookCaptures(board: Array<CharArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int numRookCaptures(List<List<String>> board) {\n    \n  }\n}",
+    "golang": "func numRookCaptures(board [][]byte) int {\n    \n}",
+    "ruby": "# @param {Character[][]} board\n# @return {Integer}\ndef num_rook_captures(board)\n    \nend",
+    "scala": "object Solution {\n    def numRookCaptures(board: Array[Array[Char]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn num_rook_captures(board: Vec<Vec<char>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (num-rook-captures board)\n  (-> (listof (listof char?)) exact-integer?)\n  )",
+    "erlang": "-spec num_rook_captures(Board :: [[char()]]) -> integer().\nnum_rook_captures(Board) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec num_rook_captures(board :: [[char]]) :: integer\n  def num_rook_captures(board) do\n    \n  end\nend"
+  }
+}

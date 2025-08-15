@@ -1,0 +1,52 @@
+{
+  "title": "Reach a Number",
+  "problem_id": "755",
+  "frontend_id": "754",
+  "difficulty": "Medium",
+  "problem_slug": "reach-a-number",
+  "topics": [
+    "Math",
+    "Binary Search"
+  ],
+  "description": "You are standing at position 0 on an infinite number line. There is a destination at position target.\nYou can make some number of moves numMoves so that:\nGiven the integer target, return the minimum number of moves required (i.e., the minimum numMoves) to reach the destination.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: target = 2\nOutput: 3\nExplanation:\nOn the 1st move, we step from 0 to 1 (1 step).\nOn the 2nd move, we step from 1 to -1 (2 steps).\nOn the 3rd move, we step from -1 to 2 (3 steps).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: target = 3\nOutput: 2\nExplanation:\nOn the 1st move, we step from 0 to 1 (1 step).\nOn the 2nd move, we step from 1 to 3 (2 steps).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "-109 <= target <= 109",
+    "target != 0"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int reachNumber(int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int reachNumber(int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def reachNumber(self, target):\n        \"\"\"\n        :type target: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def reachNumber(self, target: int) -> int:\n        ",
+    "c": "int reachNumber(int target) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ReachNumber(int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} target\n * @return {number}\n */\nvar reachNumber = function(target) {\n    \n};",
+    "typescript": "function reachNumber(target: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $target\n     * @return Integer\n     */\n    function reachNumber($target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func reachNumber(_ target: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun reachNumber(target: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int reachNumber(int target) {\n    \n  }\n}",
+    "golang": "func reachNumber(target int) int {\n    \n}",
+    "ruby": "# @param {Integer} target\n# @return {Integer}\ndef reach_number(target)\n    \nend",
+    "scala": "object Solution {\n    def reachNumber(target: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn reach_number(target: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (reach-number target)\n  (-> exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec reach_number(Target :: integer()) -> integer().\nreach_number(Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec reach_number(target :: integer) :: integer\n  def reach_number(target) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach #1: Mathematical [Accepted]\n\n**Intuition**\n\nThe crux of the problem is to put `+` and `-` signs on the numbers `1, 2, 3, ..., k` so that the sum is `target`.\n\nWhen `target < 0` and we made a sum of `target`, we could switch the signs of all the numbers so that it equals `Math.abs(target)`.  Thus, the answer for `target` is the same as `Math.abs(target)`, and so without loss of generality, we can consider only `target > 0`.\n\nNow let's say `k` is the smallest number with `S = 1 + 2 + ... + k >= target`.  If `S == target`, the answer is clearly `k`.\n\nIf `S > target`, we need to change some number signs.  If `delta = S - target` is even, then we can always find a subset of `{1, 2, ..., k}` equal to `delta / 2` and switch the signs, so the answer is `k`.  (This depends on `T = delta / 2` being at most `S`.)  [The proof is simple: either `T <= k` and we choose it, or we choose `k` in our subset and try to solve the same instance of the problem for `T -= k` and the set `{1, 2, ..., k-1}`.]\n\nOtherwise, if `delta` is odd, we can't do it, as every sign change from positive to negative changes the sum by an even number.  So let's consider a candidate answer of `k+1`, which changes `delta` by `k+1`.  If this is odd, then `delta` will be even and we can have an answer of `k+1`.  Otherwise, `delta` will be odd, and we will have an answer of `k+2`.\n\nFor concrete examples of the above four cases, consider the following:\n\n* If `target = 3`, then `k = 2, delta = 0` and the answer is `k = 2`.\n* If `target = 4`, then `k = 3, delta = 2`, delta is even and the answer is `k = 3`.\n* If `target = 7`, then `k = 4, delta = 3`, delta is odd and adding `k+1` makes delta even.  The answer is `k+1 = 5`.\n* If `target = 5`, then `k = 3, delta = 1`, delta is odd and adding `k+1` keeps delta odd.  The answer is `k+2 = 5`.\n\n**Algorithm**\n\nSubtract `++k` from `target` until it goes non-positive.  Then `k` will be as described, and `target` will be `delta` as described.  We can output the four cases above: if `delta` is even then the answer is `k`, if `delta` is odd then the answer is `k+1` or `k+2` depending on the parity of `k`.**Complexity Analysis**\n\n* Time Complexity: $$O(\\sqrt{\\text{target}})$$.  Our while loop needs this many steps, as $$1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$$.\n\n* Space Complexity: $$O(1)$$."
+}

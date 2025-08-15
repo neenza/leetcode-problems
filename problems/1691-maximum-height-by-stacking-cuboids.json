@@ -1,0 +1,63 @@
+{
+  "title": "Maximum Height by Stacking Cuboids ",
+  "problem_id": "1367",
+  "frontend_id": "1691",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-height-by-stacking-cuboids",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Sorting"
+  ],
+  "description": "Given n cuboids where the dimensions of the ith cuboid is cuboids[i] = [widthi, lengthi, heighti] (0-indexed). Choose a subset of cuboids and place them on each other.\nYou can place cuboid i on cuboid j if widthi <= widthj and lengthi <= lengthj and heighti <= heightj. You can rearrange any cuboid's dimensions by rotating it to put it on another cuboid.\nReturn the maximum height of the stacked cuboids.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: cuboids = [[50,45,20],[95,37,53],[45,23,12]]\nOutput: 190\nExplanation:\nCuboid 1 is placed on the bottom with the 53x37 side facing down with height 95.\nCuboid 0 is placed next with the 45x20 side facing down with height 50.\nCuboid 2 is placed next with the 23x12 side facing down with height 45.\nThe total height is 95 + 50 + 45 = 190.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/10/21/image.jpg"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: cuboids = [[38,25,45],[76,35,3]]\nOutput: 76\nExplanation:\nYou can't place any of the cuboids on the other.\nWe choose cuboid 1 and rotate it so that the 35x3 side is facing down and its height is 76.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/10/21/image.jpg"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: cuboids = [[7,11,17],[7,17,11],[11,7,17],[11,17,7],[17,7,11],[17,11,7]]\nOutput: 102\nExplanation:\nAfter rearranging the cuboids, you can see that all cuboids have the same dimension.\nYou can place the 11x7 side down on all cuboids so their heights are 17.\nThe maximum height of stacked cuboids is 6 * 17 = 102.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2019/10/21/image.jpg"
+      ]
+    }
+  ],
+  "constraints": [
+    "n == cuboids.length",
+    "1 <= n <= 100",
+    "1 <= widthi, lengthi, heighti <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Does the dynamic programming sound like the right algorithm after sorting?",
+    "Let's say box1 can be placed on top of box2. No matter what orientation box2 is in, we can rotate box1 so that it can be placed on top. Why don't we orient everything such that height is the biggest?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxHeight(vector<vector<int>>& cuboids) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxHeight(int[][] cuboids) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxHeight(self, cuboids):\n        \"\"\"\n        :type cuboids: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxHeight(self, cuboids: List[List[int]]) -> int:\n        ",
+    "c": "\n\nint maxHeight(int** cuboids, int cuboidsSize, int* cuboidsColSize){\n\n}",
+    "csharp": "public class Solution {\n    public int MaxHeight(int[][] cuboids) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} cuboids\n * @return {number}\n */\nvar maxHeight = function(cuboids) {\n    \n};",
+    "typescript": "function maxHeight(cuboids: number[][]): number {\n\n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $cuboids\n     * @return Integer\n     */\n    function maxHeight($cuboids) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxHeight(_ cuboids: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxHeight(cuboids: Array<IntArray>): Int {\n        \n    }\n}",
+    "golang": "func maxHeight(cuboids [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} cuboids\n# @return {Integer}\ndef max_height(cuboids)\n    \nend",
+    "scala": "object Solution {\n    def maxHeight(cuboids: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_height(cuboids: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}"
+  }
+}

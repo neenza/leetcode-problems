@@ -1,0 +1,55 @@
+{
+  "title": "Split Array by Prime Indices",
+  "problem_id": "3936",
+  "frontend_id": "3618",
+  "difficulty": "Medium",
+  "problem_slug": "split-array-by-prime-indices",
+  "topics": [
+    "Array",
+    "Math",
+    "Number Theory"
+  ],
+  "description": "You are given an integer array nums.\nSplit nums into two arrays A and B using the following rule:\nReturn the absolute difference between the sums of the two arrays: |sum(A) - sum(B)|.\nNote: An empty array has a sum of 0.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [2,3,4]\nOutput: 1\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [-1,5,7,0]\nOutput: 3\nExplanation:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 105",
+    "-109 <= nums[i] <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Generate all primes up to <code>nums.length</code> (e.g., with the Sieve of Eratosthenes).",
+    "Iterate through <code>nums</code>, adding <code>nums[i]</code> to <code>sumA</code> if <code>i</code> is prime, otherwise to <code>sumB</code>, then return <code>|sumA - sumB|</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long splitArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long splitArray(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def splitArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def splitArray(self, nums: List[int]) -> int:\n        ",
+    "c": "long long splitArray(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long SplitArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar splitArray = function(nums) {\n    \n};",
+    "typescript": "function splitArray(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function splitArray($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func splitArray(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun splitArray(nums: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int splitArray(List<int> nums) {\n    \n  }\n}",
+    "golang": "func splitArray(nums []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef split_array(nums)\n    \nend",
+    "scala": "object Solution {\n    def splitArray(nums: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn split_array(nums: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (split-array nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec split_array(Nums :: [integer()]) -> integer().\nsplit_array(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec split_array(nums :: [integer]) :: integer\n  def split_array(nums) do\n    \n  end\nend"
+  }
+}

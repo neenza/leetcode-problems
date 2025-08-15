@@ -1,0 +1,71 @@
+{
+  "title": "Path Existence Queries in a Graph II",
+  "problem_id": "3852",
+  "frontend_id": "3534",
+  "difficulty": "Hard",
+  "problem_slug": "path-existence-queries-in-a-graph-ii",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Greedy",
+    "Graph",
+    "Sorting"
+  ],
+  "description": "You are given an integer n representing the number of nodes in a graph, labeled from 0 to n - 1.\nYou are also given an integer array nums of length n and an integer maxDiff.\nAn undirected edge exists between nodes i and j if the absolute difference between nums[i] and nums[j] is at most maxDiff (i.e., |nums[i] - nums[j]| <= maxDiff).\nYou are also given a 2D integer array queries. For each queries[i] = [ui, vi], find the minimum distance between nodes ui and vi. If no path exists between the two nodes, return -1 for that query.\nReturn an array answer, where answer[i] is the result of the ith query.\nNote: The edges between the nodes are unweighted.\nExample 1:\nExample 2:\nThus, the output is [1, 2, -1, 1].\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 5, nums = [1,8,3,4,2], maxDiff = 3, queries = [[0,3],[2,4]]\nOutput: [1,1]\nExplanation:\nThe resulting graph is:\n\nThus, the output is [1, 1] .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/25/4149example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, nums = [5,3,1,9,10], maxDiff = 2, queries = [[0,1],[0,2],[2,3],[4,3]]\nOutput: [1,2,-1,1]\nExplanation:\nThe resulting graph is:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/25/4149example2drawio.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, nums = [3,6,1], maxDiff = 1, queries = [[0,0],[0,1],[1,2]]\nOutput: [0,-1,-1]\nExplanation:\nThere are no edges between any two nodes because:\nThus, no node can reach any other node, and the output is [0, -1, -1] .",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == nums.length <= 105",
+    "0 <= nums[i] <= 105",
+    "0 <= maxDiff <= 105",
+    "1 <= queries.length <= 105",
+    "queries[i] == [ui, vi]",
+    "0 <= ui, vi < n"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Sort the nodes according to <code>nums[i]</code>.",
+    "Can we use binary jumping?",
+    "Use binary jumping with a sparse table data structure."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> pathExistenceQueries(int n, vector<int>& nums, int maxDiff, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] pathExistenceQueries(int n, int[] nums, int maxDiff, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def pathExistenceQueries(self, n, nums, maxDiff, queries):\n        \"\"\"\n        :type n: int\n        :type nums: List[int]\n        :type maxDiff: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def pathExistenceQueries(self, n: int, nums: List[int], maxDiff: int, queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* pathExistenceQueries(int n, int* nums, int numsSize, int maxDiff, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] PathExistenceQueries(int n, int[] nums, int maxDiff, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} nums\n * @param {number} maxDiff\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar pathExistenceQueries = function(n, nums, maxDiff, queries) {\n    \n};",
+    "typescript": "function pathExistenceQueries(n: number, nums: number[], maxDiff: number, queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[] $nums\n     * @param Integer $maxDiff\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function pathExistenceQueries($n, $nums, $maxDiff, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func pathExistenceQueries(_ n: Int, _ nums: [Int], _ maxDiff: Int, _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun pathExistenceQueries(n: Int, nums: IntArray, maxDiff: Int, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> pathExistenceQueries(int n, List<int> nums, int maxDiff, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func pathExistenceQueries(n int, nums []int, maxDiff int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[]} nums\n# @param {Integer} max_diff\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef path_existence_queries(n, nums, max_diff, queries)\n    \nend",
+    "scala": "object Solution {\n    def pathExistenceQueries(n: Int, nums: Array[Int], maxDiff: Int, queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn path_existence_queries(n: i32, nums: Vec<i32>, max_diff: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (path-existence-queries n nums maxDiff queries)\n  (-> exact-integer? (listof exact-integer?) exact-integer? (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec path_existence_queries(N :: integer(), Nums :: [integer()], MaxDiff :: integer(), Queries :: [[integer()]]) -> [integer()].\npath_existence_queries(N, Nums, MaxDiff, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec path_existence_queries(n :: integer, nums :: [integer], max_diff :: integer, queries :: [[integer]]) :: [integer]\n  def path_existence_queries(n, nums, max_diff, queries) do\n    \n  end\nend"
+  }
+}

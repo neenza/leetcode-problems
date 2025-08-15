@@ -1,0 +1,57 @@
+{
+  "title": "Divisible and Non-divisible Sums Difference",
+  "problem_id": "3172",
+  "frontend_id": "2894",
+  "difficulty": "Easy",
+  "problem_slug": "divisible-and-non-divisible-sums-difference",
+  "topics": [
+    "Math"
+  ],
+  "description": "You are given positive integers n and m.\nDefine two integers as follows:\nReturn the integer num1 - num2.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 10, m = 3\nOutput: 19\nExplanation: In the given example:\n- Integers in the range [1, 10] that are not divisible by 3 are [1,2,4,5,7,8,10], num1 is the sum of those integers = 37.\n- Integers in the range [1, 10] that are divisible by 3 are [3,6,9], num2 is the sum of those integers = 18.\nWe return 37 - 18 = 19 as the answer.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 5, m = 6\nOutput: 15\nExplanation: In the given example:\n- Integers in the range [1, 5] that are not divisible by 6 are [1,2,3,4,5], num1 is the sum of those integers = 15.\n- Integers in the range [1, 5] that are divisible by 6 are [], num2 is the sum of those integers = 0.\nWe return 15 - 0 = 15 as the answer.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 5, m = 1\nOutput: -15\nExplanation: In the given example:\n- Integers in the range [1, 5] that are not divisible by 1 are [], num1 is the sum of those integers = 0.\n- Integers in the range [1, 5] that are divisible by 1 are [1,2,3,4,5], num2 is the sum of those integers = 15.\nWe return 0 - 15 = -15 as the answer.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n, m <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "With arithmetic progression we know that the sum of integers in the range <code>[1, n]</code> is <code>n * (n + 1) / 2 </code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int differenceOfSums(int n, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int differenceOfSums(int n, int m) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def differenceOfSums(self, n, m):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def differenceOfSums(self, n: int, m: int) -> int:\n        ",
+    "c": "int differenceOfSums(int n, int m) {\n    \n}",
+    "csharp": "public class Solution {\n    public int DifferenceOfSums(int n, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} m\n * @return {number}\n */\nvar differenceOfSums = function(n, m) {\n    \n};",
+    "typescript": "function differenceOfSums(n: number, m: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $m\n     * @return Integer\n     */\n    function differenceOfSums($n, $m) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func differenceOfSums(_ n: Int, _ m: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun differenceOfSums(n: Int, m: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int differenceOfSums(int n, int m) {\n    \n  }\n}",
+    "golang": "func differenceOfSums(n int, m int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} m\n# @return {Integer}\ndef difference_of_sums(n, m)\n    \nend",
+    "scala": "object Solution {\n    def differenceOfSums(n: Int, m: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn difference_of_sums(n: i32, m: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (difference-of-sums n m)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec difference_of_sums(N :: integer(), M :: integer()) -> integer().\ndifference_of_sums(N, M) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec difference_of_sums(n :: integer, m :: integer) :: integer\n  def difference_of_sums(n, m) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Traversal\n\n#### Intuition\n\nConsider the interval $[1, n]$. \n\n- Let $\\textit{num}_1$ be the sum of the integers in this range that aren’t divisible by `m`.\n- Let $\\textit{num}_2$ be the sum of those that are divisible by `m`.\n\nTo capture their combined effect, we introduce a running total called ans.\n\nAs we walk through each integer `x` from 1 to `n`:\n\n1. If `x` isn’t divisible by `m`, we add it to ans.\n2. If `x` is divisible by `m`, we subtract it from ans.\n\nWhen the traversal ends, the value stored in ans is exactly the result the problem asks for.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the given integer.\n\n- Time complexity: $O(n)$.\n  \n  We traverse all numbers from 1 to n.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{ans}$ was used.\n\n### Approach 2: Mathematical Derivation\n\n#### Intuition\n\nFirst, focus on the numbers that are divisible by `m`.\nThe *k-th* such number is *k × m*, so their sum is\n\n$$\n\\text{num}_2\n  = m + 2m + \\dots + k m\n  = (1 + 2 + \\dots + k)\\,m\n  = \\frac{k(k+1)}{2}\\,m,\n$$ -------------- ( 1 )\n\nwhere\n\n$$\nk=\\bigl\\lfloor\\tfrac{n}{m}\\bigr\\rfloor\n$$ \n\nis the count of multiples of `m` up to `n`.\n\n\nNext, look at the numbers **not** divisible by `m`.\nTheir sum is simply the total of the first `n` integers minus $\\text{num}_2$:\n\n$$\n\\text{num}_1\n  = (1 + 2 + \\dots + n) - \\text{num}_2\n  = \\frac{n(n+1)}{2} - \\text{num}_2.\n$$  --------------- ( 2 )\n\n\nPutting the two pieces together, the quantity the problem asks for is\n\n$$\n\\text{num}_1 - \\text{num}_2\n  = \\left[\\frac{n(n+1)}{2} - \\text{num}_2\\right] - \\text{num}_2\n  = \\frac{n(n+1)}{2} - 2\\,\\text{num}_2.\n$$\n\nFinally, substitute the closed form of $\\text{num}_2$:\n\n$$\n\\boxed{\\text{num}_1 - \\text{num}_2\n       = \\frac{n(n+1)}{2} \\;-\\; k(k+1)\\,m.}\n$$\n\nThis single formula lets us compute the desired result directly, without any iteration.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(1)$.\n\n- Space complexity: $O(1)$.\n  \n  Only one integer variable $\\textit{k}$ was used."
+}

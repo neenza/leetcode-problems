@@ -1,0 +1,62 @@
+{
+  "title": "Shortest Distance to Target String in a Circular Array",
+  "problem_id": "2598",
+  "frontend_id": "2515",
+  "difficulty": "Easy",
+  "problem_slug": "shortest-distance-to-target-string-in-a-circular-array",
+  "topics": [
+    "Array",
+    "String"
+  ],
+  "description": "You are given a 0-indexed circular string array words and a string target. A circular array means that the array's end connects to the array's beginning.\nStarting from startIndex, you can move to either the next word or the previous word with 1 step at a time.\nReturn the shortest distance needed to reach the string target. If the string target does not exist in words, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: words = [\"hello\",\"i\",\"am\",\"leetcode\",\"hello\"], target = \"hello\", startIndex = 1\nOutput: 1\nExplanation: We start from index 1 and can reach \"hello\" by\n- moving 3 units to the right to reach index 4.\n- moving 2 units to the left to reach index 4.\n- moving 4 units to the right to reach index 0.\n- moving 1 unit to the left to reach index 0.\nThe shortest distance to reach \"hello\" is 1.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: words = [\"a\",\"b\",\"leetcode\"], target = \"leetcode\", startIndex = 0\nOutput: 1\nExplanation: We start from index 0 and can reach \"leetcode\" by\n- moving 2 units to the right to reach index 3.\n- moving 1 unit to the left to reach index 3.\nThe shortest distance to reach \"leetcode\" is 1.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: words = [\"i\",\"eat\",\"leetcode\"], target = \"ate\", startIndex = 0\nOutput: -1\nExplanation: Since \"ate\" does not exist in words, we return -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= words.length <= 100",
+    "1 <= words[i].length <= 100",
+    "words[i] and target consist of only lowercase English letters.",
+    "0 <= startIndex < words.length"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "You have two options, either move straight to the left or move straight to the right.",
+    "Find the first target word and record the distance.",
+    "Choose the one with the minimum distance."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int closestTarget(vector<string>& words, string target, int startIndex) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int closestTarget(String[] words, String target, int startIndex) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def closestTarget(self, words, target, startIndex):\n        \"\"\"\n        :type words: List[str]\n        :type target: str\n        :type startIndex: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def closestTarget(self, words: List[str], target: str, startIndex: int) -> int:\n        ",
+    "c": "int closestTarget(char** words, int wordsSize, char* target, int startIndex) {\n    \n}",
+    "csharp": "public class Solution {\n    public int ClosestTarget(string[] words, string target, int startIndex) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} target\n * @param {number} startIndex\n * @return {number}\n */\nvar closestTarget = function(words, target, startIndex) {\n    \n};",
+    "typescript": "function closestTarget(words: string[], target: string, startIndex: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[] $words\n     * @param String $target\n     * @param Integer $startIndex\n     * @return Integer\n     */\n    function closestTarget($words, $target, $startIndex) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func closestTarget(_ words: [String], _ target: String, _ startIndex: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun closestTarget(words: Array<String>, target: String, startIndex: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int closestTarget(List<String> words, String target, int startIndex) {\n    \n  }\n}",
+    "golang": "func closestTarget(words []string, target string, startIndex int) int {\n    \n}",
+    "ruby": "# @param {String[]} words\n# @param {String} target\n# @param {Integer} start_index\n# @return {Integer}\ndef closest_target(words, target, start_index)\n    \nend",
+    "scala": "object Solution {\n    def closestTarget(words: Array[String], target: String, startIndex: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn closest_target(words: Vec<String>, target: String, start_index: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (closest-target words target startIndex)\n  (-> (listof string?) string? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec closest_target(Words :: [unicode:unicode_binary()], Target :: unicode:unicode_binary(), StartIndex :: integer()) -> integer().\nclosest_target(Words, Target, StartIndex) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec closest_target(words :: [String.t], target :: String.t, start_index :: integer) :: integer\n  def closest_target(words, target, start_index) do\n    \n  end\nend"
+  }
+}

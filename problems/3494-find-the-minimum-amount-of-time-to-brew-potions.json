@@ -1,0 +1,63 @@
+{
+  "title": "Find the Minimum Amount of Time to Brew Potions",
+  "problem_id": "3794",
+  "frontend_id": "3494",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-minimum-amount-of-time-to-brew-potions",
+  "topics": [
+    "Array",
+    "Simulation",
+    "Prefix Sum"
+  ],
+  "description": "You are given two integer arrays, skill and mana, of length n and m, respectively.\nIn a laboratory, n wizards must brew m potions in order. Each potion has a mana capacity mana[j] and must pass through all the wizards sequentially to be brewed properly. The time taken by the ith wizard on the jth potion is timeij = skill[i] * mana[j].\nSince the brewing process is delicate, a potion must be passed to the next wizard immediately after the current wizard completes their work. This means the timing must be synchronized so that each wizard begins working on a potion exactly when it arrives. ​\nReturn the minimum amount of time required for the potions to be brewed properly.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: skill = [1,5,2,4], mana = [5,1,4,2]\nOutput: 110\nExplanation:\nAs an example for why wizard 0 cannot start working on the 1 st potion before time t = 52 , consider the case where the wizards started preparing the 1 st potion at time t = 50 . At time t = 58 , wizard 2 is done with the 1 st potion, but wizard 3 will still be working on the 0 th potion till time t = 60 .",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: skill = [1,1,1], mana = [1,1,1]\nOutput: 5\nExplanation:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: skill = [1,2,3,4], mana = [1,2]\nOutput: 21",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == skill.length",
+    "m == mana.length",
+    "1 <= n, m <= 5000",
+    "1 <= mana[i], skill[i] <= 5000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Maintain each wizard's earliest free time (for the last potion) as <code>f[i]</code>.",
+    "Let <code>x</code> be the current mana value. Starting from <code>now = f[0]</code>, update <code>now = max(now + skill[i - 1] * x, f[i])</code> for <code>i in [1..n]</code>. Then, the final <code>f[n - 1] = now + skill[n - 1] * x</code> for this potion.",
+    "Update all other <code>f</code> values by <code>f[i] = f[i + 1] - skill[i + 1] * x</code> for <code>i in [0..n - 2]</code> (in reverse order)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long minTime(vector<int>& skill, vector<int>& mana) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minTime(int[] skill, int[] mana) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTime(self, skill, mana):\n        \"\"\"\n        :type skill: List[int]\n        :type mana: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTime(self, skill: List[int], mana: List[int]) -> int:\n        ",
+    "c": "long long minTime(int* skill, int skillSize, int* mana, int manaSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public long MinTime(int[] skill, int[] mana) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} skill\n * @param {number[]} mana\n * @return {number}\n */\nvar minTime = function(skill, mana) {\n    \n};",
+    "typescript": "function minTime(skill: number[], mana: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $skill\n     * @param Integer[] $mana\n     * @return Integer\n     */\n    function minTime($skill, $mana) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTime(_ skill: [Int], _ mana: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTime(skill: IntArray, mana: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTime(List<int> skill, List<int> mana) {\n    \n  }\n}",
+    "golang": "func minTime(skill []int, mana []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} skill\n# @param {Integer[]} mana\n# @return {Integer}\ndef min_time(skill, mana)\n    \nend",
+    "scala": "object Solution {\n    def minTime(skill: Array[Int], mana: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_time(skill: Vec<i32>, mana: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (min-time skill mana)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec min_time(Skill :: [integer()], Mana :: [integer()]) -> integer().\nmin_time(Skill, Mana) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_time(skill :: [integer], mana :: [integer]) :: integer\n  def min_time(skill, mana) do\n    \n  end\nend"
+  }
+}

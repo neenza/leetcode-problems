@@ -1,0 +1,67 @@
+{
+  "title": "Minimum Score of a Path Between Two Cities",
+  "problem_id": "2582",
+  "frontend_id": "2492",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-score-of-a-path-between-two-cities",
+  "topics": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph"
+  ],
+  "description": "You are given a positive integer n representing n cities numbered from 1 to n. You are also given a 2D array roads where roads[i] = [ai, bi, distancei] indicates that there is a bidirectional road between cities ai and bi with a distance equal to distancei. The cities graph is not necessarily connected.\nThe score of a path between two cities is defined as the minimum distance of a road in this path.\nReturn the minimum possible score of a path between cities 1 and n.\nNote:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 4, roads = [[1,2,9],[2,3,6],[2,4,5],[1,4,7]]\nOutput: 5\nExplanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 4. The score of this path is min(9,5) = 5.\nIt can be shown that no other path has less score.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/12/graph11.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 4, roads = [[1,2,2],[1,3,4],[3,4,7]]\nOutput: 2\nExplanation: The path from city 1 to 4 with the minimum score is: 1 -> 2 -> 1 -> 3 -> 4. The score of this path is min(2,2,4,7) = 2.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/10/12/graph22.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "2 <= n <= 105",
+    "1 <= roads.length <= 105",
+    "roads[i].length == 3",
+    "1 <= ai, bi <= n",
+    "ai != bi",
+    "1 <= distancei <= 104",
+    "There are no repeated edges.",
+    "There is at least one path between 1 and n."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you solve the problem if the whole graph is connected?",
+    "Notice that if the graph is connected, you can always use any edge of the graph in your path.",
+    "How to solve the general problem in a similar way? Remove all the nodes that are not connected to 1 and n, then apply the previous solution in the new graph."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minScore(int n, vector<vector<int>>& roads) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minScore(int n, int[][] roads) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minScore(self, n, roads):\n        \"\"\"\n        :type n: int\n        :type roads: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minScore(self, n: int, roads: List[List[int]]) -> int:\n        ",
+    "c": "int minScore(int n, int** roads, int roadsSize, int* roadsColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinScore(int n, int[][] roads) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} roads\n * @return {number}\n */\nvar minScore = function(n, roads) {\n    \n};",
+    "typescript": "function minScore(n: number, roads: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $roads\n     * @return Integer\n     */\n    function minScore($n, $roads) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minScore(_ n: Int, _ roads: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minScore(n: Int, roads: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minScore(int n, List<List<int>> roads) {\n    \n  }\n}",
+    "golang": "func minScore(n int, roads [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} roads\n# @return {Integer}\ndef min_score(n, roads)\n    \nend",
+    "scala": "object Solution {\n    def minScore(n: Int, roads: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_score(n: i32, roads: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-score n roads)\n  (-> exact-integer? (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec min_score(N :: integer(), Roads :: [[integer()]]) -> integer().\nmin_score(N, Roads) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_score(n :: integer, roads :: [[integer]]) :: integer\n  def min_score(n, roads) do\n    \n  end\nend"
+  }
+}

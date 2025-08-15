@@ -1,0 +1,56 @@
+{
+  "title": "Binary String With Substrings Representing 1 To N",
+  "problem_id": "1065",
+  "frontend_id": "1016",
+  "difficulty": "Medium",
+  "problem_slug": "binary-string-with-substrings-representing-1-to-n",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Sliding Window"
+  ],
+  "description": "Given a binary string s and a positive integer n, return true if the binary representation of all the integers in the range [1, n] are substrings of s, or false otherwise.\nA substring is a contiguous sequence of characters within a string.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"0110\", n = 3\nOutput: true",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"0110\", n = 4\nOutput: false",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 1000",
+    "s[i] is either '0' or '1'.",
+    "1 <= n <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We only need to check substrings of length at most 30, because 10^9 has 30 bits."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool queryString(string s, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean queryString(String s, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def queryString(self, s, n):\n        \"\"\"\n        :type s: str\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def queryString(self, s: str, n: int) -> bool:\n        ",
+    "c": "bool queryString(char* s, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool QueryString(string s, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} n\n * @return {boolean}\n */\nvar queryString = function(s, n) {\n    \n};",
+    "typescript": "function queryString(s: string, n: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $n\n     * @return Boolean\n     */\n    function queryString($s, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func queryString(_ s: String, _ n: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun queryString(s: String, n: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool queryString(String s, int n) {\n    \n  }\n}",
+    "golang": "func queryString(s string, n int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} n\n# @return {Boolean}\ndef query_string(s, n)\n    \nend",
+    "scala": "object Solution {\n    def queryString(s: String, n: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn query_string(s: String, n: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (query-string s n)\n  (-> string? exact-integer? boolean?)\n  )",
+    "erlang": "-spec query_string(S :: unicode:unicode_binary(), N :: integer()) -> boolean().\nquery_string(S, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec query_string(s :: String.t, n :: integer) :: boolean\n  def query_string(s, n) do\n    \n  end\nend"
+  }
+}

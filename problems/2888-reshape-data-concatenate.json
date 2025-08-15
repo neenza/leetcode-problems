@@ -1,0 +1,30 @@
+{
+  "title": "Reshape Data: Concatenate",
+  "problem_id": "3064",
+  "frontend_id": "2888",
+  "difficulty": "Easy",
+  "problem_slug": "reshape-data-concatenate",
+  "topics": [],
+  "description": "Write a solution to concatenate these two DataFrames vertically into one DataFrame.\nThe result format is in the following example.\nExample 1:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "DataFrame df1\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nDataFrame df2\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input:\ndf1\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n+------------+---------+-----+\ndf2\n+------------+------+-----+\n| student_id | name | age |\n+------------+------+-----+\n| 5          | Leo  | 7   |\n| 6          | Alex | 7   |\n+------------+------+-----+\nOutput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n| 5          | Leo     | 7   |\n| 6          | Alex    | 7   |\n+------------+---------+-----+\nExplanation:\nThe two DataFramess are stacked vertically, and their rows are combined.",
+      "images": []
+    }
+  ],
+  "constraints": [],
+  "follow_ups": [],
+  "hints": [
+    "Consider using a built-in function in pandas library with the appropriate axis argument."
+  ],
+  "code_snippets": {
+    "pythondata": "import pandas as pd\n\ndef concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:\n    "
+  },
+  "solution": "[TOC]\n\n## Solution\n--- \n### Overview\nIn the task presented, the goal is to concatenate two DataFrames, `df1` and `df2`, vertically. The DataFrames have the same structure with columns `student_id`, `name`, and `age`.\n\n**Key Concepts**: \n - `pd.concat()`: A convenient function within pandas used to concatenate DataFrames either vertically (by rows) or horizontally (by columns).\n   - The `objs` parameter is a sequence or mapping of Series or DataFrame objects to be concatenated.\n   - The `axis` parameter determines the direction of concatenation:\n      - `axis=0` is set as the default value, which means it will concatenate DataFrames vertically (by rows).\n      - `axis=1` will concatenate DataFrames horizontally (by columns).\n\n### Intuition\n\nThe process of concatenating DataFrames vertically involves stacking one DataFrame on top of the other, ensuring the order of columns is consistent.\n\nInside the `concatenateTables` function, we utilize the `pd.concat()` function to concatenate the DataFrames. Since we are concatenated `df1` and `df2` we pass the list `[df1, df2]` as the first argument for `objs`; and since we are concatenating vertically, we set `axis=0`.\n\n**Visualization of the `pd.concat()` function applied to the `df1` and `df2` DataFrames:**\n\n![fig](../Figures/3308/3308-1.png)\n\n### Implementation"
+}

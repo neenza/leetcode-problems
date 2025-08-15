@@ -1,0 +1,58 @@
+{
+  "title": "Remove One Element to Make the Array Strictly Increasing",
+  "problem_id": "2020",
+  "frontend_id": "1909",
+  "difficulty": "Easy",
+  "problem_slug": "remove-one-element-to-make-the-array-strictly-increasing",
+  "topics": [
+    "Array"
+  ],
+  "description": "Given a 0-indexed integer array nums, return true if it can be made strictly increasing after removing exactly one element, or false otherwise. If the array is already strictly increasing, return true.\nThe array nums is strictly increasing if nums[i - 1] < nums[i] for each index (1 <= i < nums.length).\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,10,5,7]\nOutput: true\nExplanation: By removing 10 at index 2 from nums, it becomes [1,2,5,7].\n[1,2,5,7] is strictly increasing, so return true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [2,3,1,2]\nOutput: false\nExplanation:\n[3,1,2] is the result of removing the element at index 0.\n[2,1,2] is the result of removing the element at index 1.\n[2,3,2] is the result of removing the element at index 2.\n[2,3,1] is the result of removing the element at index 3.\nNo resulting array is strictly increasing, so return false.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,1,1]\nOutput: false\nExplanation: The result of removing any element is [1,1].\n[1,1] is not strictly increasing, so return false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= nums.length <= 1000",
+    "1 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For each index i in nums remove this index.",
+    "If the array becomes sorted return true, otherwise revert to the original array and try different index."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canBeIncreasing(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canBeIncreasing(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canBeIncreasing(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canBeIncreasing(self, nums: List[int]) -> bool:\n        ",
+    "c": "bool canBeIncreasing(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanBeIncreasing(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar canBeIncreasing = function(nums) {\n    \n};",
+    "typescript": "function canBeIncreasing(nums: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Boolean\n     */\n    function canBeIncreasing($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canBeIncreasing(_ nums: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canBeIncreasing(nums: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canBeIncreasing(List<int> nums) {\n    \n  }\n}",
+    "golang": "func canBeIncreasing(nums []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Boolean}\ndef can_be_increasing(nums)\n    \nend",
+    "scala": "object Solution {\n    def canBeIncreasing(nums: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_be_increasing(nums: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-be-increasing nums)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec can_be_increasing(Nums :: [integer()]) -> boolean().\ncan_be_increasing(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_be_increasing(nums :: [integer]) :: boolean\n  def can_be_increasing(nums) do\n    \n  end\nend"
+  }
+}

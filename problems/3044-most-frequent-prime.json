@@ -1,0 +1,71 @@
+{
+  "title": "Most Frequent Prime",
+  "problem_id": "3314",
+  "frontend_id": "3044",
+  "difficulty": "Medium",
+  "problem_slug": "most-frequent-prime",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Matrix",
+    "Counting",
+    "Enumeration",
+    "Number Theory"
+  ],
+  "description": "You are given a m x n 0-indexed 2D matrix mat. From every cell, you can create numbers in the following way:\nReturn the most frequent prime number greater than 10 out of all the numbers created by traversing the matrix or -1 if no such prime number exists. If there are multiple prime numbers with the highest frequency, then return the largest among them.\nNote: It is invalid to change the direction during the move.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,1],[9,9],[1,1]]\nOutput: 19\nExplanation: \nFrom cell (0,0) there are 3 possible directions and the numbers greater than 10 which can be created in those directions are:\nEast: [11], South-East: [19], South: [19,191].\nNumbers greater than 10 created from the cell (0,1) in all possible directions are: [19,191,19,11].\nNumbers greater than 10 created from the cell (1,0) in all possible directions are: [99,91,91,91,91].\nNumbers greater than 10 created from the cell (1,1) in all possible directions are: [91,91,99,91,91].\nNumbers greater than 10 created from the cell (2,0) in all possible directions are: [11,19,191,19].\nNumbers greater than 10 created from the cell (2,1) in all possible directions are: [11,19,19,191].\nThe most frequent prime number among all the created numbers is 19.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/02/15/south"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[7]]\nOutput: -1\nExplanation: The only number which can be formed is 7. It is a prime number however it is not greater than 10, so return -1.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/02/15/south"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: mat = [[9,7,8],[4,6,5],[2,8,6]]\nOutput: 97\nExplanation: \nNumbers greater than 10 created from the cell (0,0) in all possible directions are: [97,978,96,966,94,942].\nNumbers greater than 10 created from the cell (0,1) in all possible directions are: [78,75,76,768,74,79].\nNumbers greater than 10 created from the cell (0,2) in all possible directions are: [85,856,86,862,87,879].\nNumbers greater than 10 created from the cell (1,0) in all possible directions are: [46,465,48,42,49,47].\nNumbers greater than 10 created from the cell (1,1) in all possible directions are: [65,66,68,62,64,69,67,68].\nNumbers greater than 10 created from the cell (1,2) in all possible directions are: [56,58,56,564,57,58].\nNumbers greater than 10 created from the cell (2,0) in all possible directions are: [28,286,24,249,26,268].\nNumbers greater than 10 created from the cell (2,1) in all possible directions are: [86,82,84,86,867,85].\nNumbers greater than 10 created from the cell (2,2) in all possible directions are: [68,682,66,669,65,658].\nThe most frequent prime number among all the created numbers is 97.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/02/15/south"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n <= 6",
+    "1 <= mat[i][j] <= 9"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use recursion to find all possible numbers for each cell and then check for prime."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int mostFrequentPrime(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mostFrequentPrime(int[][] mat) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def mostFrequentPrime(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def mostFrequentPrime(self, mat: List[List[int]]) -> int:\n        ",
+    "c": "int mostFrequentPrime(int** mat, int matSize, int* matColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MostFrequentPrime(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number}\n */\nvar mostFrequentPrime = function(mat) {\n    \n};",
+    "typescript": "function mostFrequentPrime(mat: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @return Integer\n     */\n    function mostFrequentPrime($mat) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func mostFrequentPrime(_ mat: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun mostFrequentPrime(mat: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int mostFrequentPrime(List<List<int>> mat) {\n    \n  }\n}",
+    "golang": "func mostFrequentPrime(mat [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @return {Integer}\ndef most_frequent_prime(mat)\n    \nend",
+    "scala": "object Solution {\n    def mostFrequentPrime(mat: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn most_frequent_prime(mat: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (most-frequent-prime mat)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec most_frequent_prime(Mat :: [[integer()]]) -> integer().\nmost_frequent_prime(Mat) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec most_frequent_prime(mat :: [[integer]]) :: integer\n  def most_frequent_prime(mat) do\n    \n  end\nend"
+  }
+}

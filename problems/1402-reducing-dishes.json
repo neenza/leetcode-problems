@@ -1,0 +1,62 @@
+{
+  "title": "Reducing Dishes",
+  "problem_id": "1503",
+  "frontend_id": "1402",
+  "difficulty": "Hard",
+  "problem_slug": "reducing-dishes",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy",
+    "Sorting"
+  ],
+  "description": "A chef has collected data on the satisfaction level of his n dishes. Chef can cook any dish in 1 unit of time.\nLike-time coefficient of a dish is defined as the time taken to cook that dish including previous dishes multiplied by its satisfaction level i.e. time[i] * satisfaction[i].\nReturn the maximum sum of like-time coefficient that the chef can obtain after preparing some amount of dishes.\nDishes can be prepared in any order and the chef can discard some dishes to get this maximum value.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: satisfaction = [-1,-8,0,5,-9]\nOutput: 14\nExplanation: After Removing the second and last dish, the maximum total like-time coefficient will be equal to (-1*1 + 0*2 + 5*3 = 14).\nEach dish is prepared in one unit of time.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: satisfaction = [4,3,2]\nOutput: 20\nExplanation: Dishes can be prepared in any order, (2*1 + 3*2 + 4*3 = 20)",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: satisfaction = [-1,-4,-5]\nOutput: 0\nExplanation: People do not like the dishes. No dish is prepared.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == satisfaction.length",
+    "1 <= n <= 500",
+    "-1000 <= satisfaction[i] <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use dynamic programming to find the optimal solution by saving the previous best like-time coefficient and its corresponding element sum.",
+    "If adding the current element to the previous best like-time coefficient and its corresponding element sum would increase the best like-time coefficient, then go ahead and add it. Otherwise, keep the previous best like-time coefficient."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maxSatisfaction(vector<int>& satisfaction) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSatisfaction(int[] satisfaction) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maxSatisfaction(self, satisfaction):\n        \"\"\"\n        :type satisfaction: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maxSatisfaction(self, satisfaction: List[int]) -> int:\n        ",
+    "c": "int maxSatisfaction(int* satisfaction, int satisfactionSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaxSatisfaction(int[] satisfaction) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} satisfaction\n * @return {number}\n */\nvar maxSatisfaction = function(satisfaction) {\n    \n};",
+    "typescript": "function maxSatisfaction(satisfaction: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $satisfaction\n     * @return Integer\n     */\n    function maxSatisfaction($satisfaction) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maxSatisfaction(_ satisfaction: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maxSatisfaction(satisfaction: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maxSatisfaction(List<int> satisfaction) {\n    \n  }\n}",
+    "golang": "func maxSatisfaction(satisfaction []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} satisfaction\n# @return {Integer}\ndef max_satisfaction(satisfaction)\n    \nend",
+    "scala": "object Solution {\n    def maxSatisfaction(satisfaction: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn max_satisfaction(satisfaction: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (max-satisfaction satisfaction)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec max_satisfaction(Satisfaction :: [integer()]) -> integer().\nmax_satisfaction(Satisfaction) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec max_satisfaction(satisfaction :: [integer]) :: integer\n  def max_satisfaction(satisfaction) do\n    \n  end\nend"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Lemonade Change",
+  "problem_id": "890",
+  "frontend_id": "860",
+  "difficulty": "Easy",
+  "problem_slug": "lemonade-change",
+  "topics": [
+    "Array",
+    "Greedy"
+  ],
+  "description": "At a lemonade stand, each lemonade costs $5. Customers are standing in a queue to buy from you and order one at a time (in the order specified by bills). Each customer will only buy one lemonade and pay with either a $5, $10, or $20 bill. You must provide the correct change to each customer so that the net transaction is that the customer pays $5.\nNote that you do not have any change in hand at first.\nGiven an integer array bills where bills[i] is the bill the ith customer pays, return true if you can provide every customer with the correct change, or false otherwise.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: bills = [5,5,5,10,20]\nOutput: true\nExplanation: \nFrom the first 3 customers, we collect three $5 bills in order.\nFrom the fourth customer, we collect a $10 bill and give back a $5.\nFrom the fifth customer, we give a $10 bill and a $5 bill.\nSince all customers got correct change, we output true.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: bills = [5,5,10,10,20]\nOutput: false\nExplanation: \nFrom the first two customers in order, we collect two $5 bills.\nFor the next two customers in order, we collect a $10 bill and give back a $5 bill.\nFor the last customer, we can not give the change of $15 back because we only have two $10 bills.\nSince not every customer received the correct change, the answer is false.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= bills.length <= 105",
+    "bills[i] is either 5, 10, or 20."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool lemonadeChange(vector<int>& bills) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean lemonadeChange(int[] bills) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def lemonadeChange(self, bills):\n        \"\"\"\n        :type bills: List[int]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def lemonadeChange(self, bills: List[int]) -> bool:\n        ",
+    "c": "bool lemonadeChange(int* bills, int billsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool LemonadeChange(int[] bills) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} bills\n * @return {boolean}\n */\nvar lemonadeChange = function(bills) {\n    \n};",
+    "typescript": "function lemonadeChange(bills: number[]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $bills\n     * @return Boolean\n     */\n    function lemonadeChange($bills) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func lemonadeChange(_ bills: [Int]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun lemonadeChange(bills: IntArray): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool lemonadeChange(List<int> bills) {\n    \n  }\n}",
+    "golang": "func lemonadeChange(bills []int) bool {\n    \n}",
+    "ruby": "# @param {Integer[]} bills\n# @return {Boolean}\ndef lemonade_change(bills)\n    \nend",
+    "scala": "object Solution {\n    def lemonadeChange(bills: Array[Int]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn lemonade_change(bills: Vec<i32>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (lemonade-change bills)\n  (-> (listof exact-integer?) boolean?)\n  )",
+    "erlang": "-spec lemonade_change(Bills :: [integer()]) -> boolean().\nlemonade_change(Bills) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec lemonade_change(bills :: [integer]) :: boolean\n  def lemonade_change(bills) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach: Simulation\n\n#### Intuition\n\nCustomers can pay in three ways:\n\n1. 5-dollar bill: Since each lemonade costs 5 dollars, no change is necessary. We simply add the 5-dollar bill to our collection.\n\n2. 10-dollar bill: We need to provide 5 dollars in change. If we have a 5-dollar bill available, we give it to the customer and add the 10-dollar bill to our collection. If we lack a 5-dollar bill, the transaction fails and we can return `false`. \n\n3. 20-dollar bill: We must provide 15 dollars in change. We can do this in two ways:\n   - Give one 10-dollar bill and one 5-dollar bill.\n   - Give three 5-dollar bills.\n\nTo solve this problem, we'll iterate through the `bills` array and keep track of the available change we have at any given turn. This means tracking the number of 5-dollar and 10-dollar bills. Interestingly, we won't need to track the 20-dollar bills since they aren't needed to make change.\n\nSince the 5-dollar bill is required for **both** the 10-dollar and 20-dollar transactions and the 10-dollar bill can only be used in the 20-dollar transactions, we want to prioritize using the 10-dollar bill when possible. \n\nThe solution to this problem involves making a series of individual decisions to optimize the final outcome. We don't need to revisit past choices, and by conserving critical resources (like 5-dollar bills), we increase the chances of completing all transactions. This straightforward, resource-conserving approach aligns perfectly with the principles of a greedy algorithm.\n\nThe slideshow below demonstrates this algorithm in action:\n\n!?!../Documents/860/slideshow.json:1210,742!?!Proof by InductionClaim: The greedy algorithm succeeds for n customers if and only if it's possible to make change for n customers.\n\n    Base case (n=0): Trivially true.\n\n    Inductive Hypothesis: Assume the claim holds for n customers. This means:\n\n    If the greedy algorithm succeeds for the first n customers, then it is possible to make change for all n customers.\n    If it is possible to make change for the first n customers, then the greedy algorithm succeeded for all n customers.\n    In other words, for any sequence of n customers, the greedy algorithm will have succeeded in making change if and only if it was possible to do so.\n\n    We consider three cases for the (n+1)th customer:\n\n    5-dollar bill: Always accepted, preserving the inductive hypothesis.\n\n    10-dollar bill: Requires one 5-dollar bill. If available, the greedy algorithm succeeds. If unavailable, no solution could exist (contradicting the possibility of making change), preserving the hypothesis.\n\n    20-dollar bill: Requires either (1x10 + 1x5) dollars or (3x5) dollars. If available, the greedy algorithm succeeds. If unavailable, no solution could exist, preserving the hypothesis.\n\n    In all cases, the greedy algorithm succeeds for the (n+1)th customer if and only if it's possible to make change, extending our hypothesis to n+1 customers.\n\n    Therefore, by induction, the claim holds for all n.#### Algorithm\n\n- Initialize two variables, `fiveDollarBills` and `tenDollarBills`, to keep track of the count of 5-dollar and 10-dollar bills, respectively.\n- Iterate through each bill `customerBill` in the `bills` array:\n  - If `customerBill` is `5`, increment `fiveDollarBills`.\n  - If `customerBill` is `10`:\n    - Check if there is at least one `fiveDollarBills`:\n      - If there is, decrement `fiveDollarBills` by `1` and increment `tenDollarBills` by `1`.\n      - Otherwise, return `false`.\n  - If `customerBill` is `20`:\n    - Check if there are at least one `fiveDollarBills` and one `tenDollarBills`:\n      - If there are, decrement `fiveDollarBills` and `tenDollarBills` by `1`.\n    - Else, check if there are at least three  `fiveDollarBills` available:\n      - If so, decrement `fiveDollarBills` by `3`.\n    - If neither conditions are met, return `false`.\n- Return `true` as our answer.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of the `bills` array. \n\n- Time complexity: $O(n)$\n\n    The algorithm loops over the length of `bills` once, taking $O(n)$ time. All operations within the loop are constant time operations.\n\n    Thus, the time complexity of the algorithm is $O(n)$.\n\n- Space complexity: $O(1)$\n\n    The algorithm does not use any additional data structures that scale with the input size. Thus, the space complexity remains constant.\n\n---"
+}

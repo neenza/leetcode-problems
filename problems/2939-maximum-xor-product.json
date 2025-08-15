@@ -1,0 +1,61 @@
+{
+  "title": "Maximum Xor Product",
+  "problem_id": "3192",
+  "frontend_id": "2939",
+  "difficulty": "Medium",
+  "problem_slug": "maximum-xor-product",
+  "topics": [
+    "Math",
+    "Greedy",
+    "Bit Manipulation"
+  ],
+  "description": "Given three integers a, b, and n, return the maximum value of (a XOR x) * (b XOR x) where 0 <= x < 2n.\nSince the answer may be too large, return it modulo 109 + 7.\nNote that XOR is the bitwise XOR operation.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: a = 12, b = 5, n = 4\nOutput: 98\nExplanation: For x = 2, (a XOR x) = 14 and (b XOR x) = 7. Hence, (a XOR x) * (b XOR x) = 98. \nIt can be shown that 98 is the maximum value of (a XOR x) * (b XOR x) for all 0 <= x < 2n.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: a = 6, b = 7 , n = 5\nOutput: 930\nExplanation: For x = 25, (a XOR x) = 31 and (b XOR x) = 30. Hence, (a XOR x) * (b XOR x) = 930.\nIt can be shown that 930 is the maximum value of (a XOR x) * (b XOR x) for all 0 <= x < 2n.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: a = 1, b = 6, n = 3\nOutput: 12\nExplanation: For x = 5, (a XOR x) = 4 and (b XOR x) = 3. Hence, (a XOR x) * (b XOR x) = 12.\nIt can be shown that 12 is the maximum value of (a XOR x) * (b XOR x) for all 0 <= x < 2n.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "0 <= a, b < 250",
+    "0 <= n <= 50"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Iterate over bits from most significant to least significant.",
+    "For the <code>i<sup>th</sup></code> bit, if both <code>a</code> and <code>b</code> have the same value, we can always make <code>x</code>’s <code>i<sup>th</sup></code> bit different from <code>a</code> and <code>b</code>, so <code>a ^ x</code> and <code>b ^ x</code> both have the <code>i<sup>th</sup></cod> bit set.",
+    "Otherwise, we can only set the <code>i<sup>th</sup></code> bit of one of <code>a ^ x</code> or <code>b ^ x</code>. Depending on the previous bits of  <code>a ^ x</code> or <code>b ^ x</code>, we should set the smaller value’s <code>i<sup>th</sup></code> bit."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumXorProduct(long long a, long long b, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumXorProduct(long a, long b, int n) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumXorProduct(self, a, b, n):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumXorProduct(self, a: int, b: int, n: int) -> int:\n        ",
+    "c": "int maximumXorProduct(long long a, long long b, int n) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumXorProduct(long a, long b, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} a\n * @param {number} b\n * @param {number} n\n * @return {number}\n */\nvar maximumXorProduct = function(a, b, n) {\n    \n};",
+    "typescript": "function maximumXorProduct(a: number, b: number, n: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $a\n     * @param Integer $b\n     * @param Integer $n\n     * @return Integer\n     */\n    function maximumXorProduct($a, $b, $n) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumXorProduct(_ a: Int, _ b: Int, _ n: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumXorProduct(a: Long, b: Long, n: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumXorProduct(int a, int b, int n) {\n    \n  }\n}",
+    "golang": "func maximumXorProduct(a int64, b int64, n int) int {\n    \n}",
+    "ruby": "# @param {Integer} a\n# @param {Integer} b\n# @param {Integer} n\n# @return {Integer}\ndef maximum_xor_product(a, b, n)\n    \nend",
+    "scala": "object Solution {\n    def maximumXorProduct(a: Long, b: Long, n: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_xor_product(a: i64, b: i64, n: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-xor-product a b n)\n  (-> exact-integer? exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_xor_product(A :: integer(), B :: integer(), N :: integer()) -> integer().\nmaximum_xor_product(A, B, N) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_xor_product(a :: integer, b :: integer, n :: integer) :: integer\n  def maximum_xor_product(a, b, n) do\n    \n  end\nend"
+  }
+}

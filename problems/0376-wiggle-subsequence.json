@@ -1,0 +1,59 @@
+{
+  "title": "Wiggle Subsequence",
+  "problem_id": "376",
+  "frontend_id": "376",
+  "difficulty": "Medium",
+  "problem_slug": "wiggle-subsequence",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Greedy"
+  ],
+  "description": "A wiggle sequence is a sequence where the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with one element and a sequence with two non-equal elements are trivially wiggle sequences.\nA subsequence is obtained by deleting some elements (possibly zero) from the original sequence, leaving the remaining elements in their original order.\nGiven an integer array nums, return the length of the longest wiggle subsequence of nums.\nExample 1:\nExample 2:\nExample 3:\nConstraints:\nFollow up: Could you solve this in O(n) time?",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,7,4,9,2,5]\nOutput: 6\nExplanation: The entire sequence is a wiggle sequence with differences (6, -3, 5, -7, 3).",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,17,5,10,13,15,10,5,16,8]\nOutput: 7\nExplanation: There are several subsequences that achieve this length.\nOne is [1, 17, 10, 13, 10, 16, 8] with differences (16, -7, 3, -3, 6, -8).",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [1,2,3,4,5,6,7,8,9]\nOutput: 2",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 1000",
+    "0 <= nums[i] <= 1000"
+  ],
+  "follow_ups": [
+    "Could you solve this in O(n) time?"
+  ],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int wiggleMaxLength(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int wiggleMaxLength(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def wiggleMaxLength(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def wiggleMaxLength(self, nums: List[int]) -> int:\n        ",
+    "c": "int wiggleMaxLength(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int WiggleMaxLength(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar wiggleMaxLength = function(nums) {\n    \n};",
+    "typescript": "function wiggleMaxLength(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function wiggleMaxLength($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func wiggleMaxLength(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun wiggleMaxLength(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int wiggleMaxLength(List<int> nums) {\n    \n  }\n}",
+    "golang": "func wiggleMaxLength(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef wiggle_max_length(nums)\n    \nend",
+    "scala": "object Solution {\n    def wiggleMaxLength(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn wiggle_max_length(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (wiggle-max-length nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec wiggle_max_length(Nums :: [integer()]) -> integer().\nwiggle_max_length(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec wiggle_max_length(nums :: [integer]) :: integer\n  def wiggle_max_length(nums) do\n    \n  end\nend"
+  }
+}

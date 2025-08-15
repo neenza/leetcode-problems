@@ -1,0 +1,58 @@
+{
+  "title": "Maximum AND Sum of Array",
+  "problem_id": "2291",
+  "frontend_id": "2172",
+  "difficulty": "Hard",
+  "problem_slug": "maximum-and-sum-of-array",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Bitmask"
+  ],
+  "description": "You are given an integer array nums of length n and an integer numSlots such that 2 * numSlots >= n. There are numSlots slots numbered from 1 to numSlots.\nYou have to place all n integers into the slots such that each slot contains at most two numbers. The AND sum of a given placement is the sum of the bitwise AND of every number with its respective slot number.\nReturn the maximum possible AND sum of nums given numSlots slots.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [1,2,3,4,5,6], numSlots = 3\nOutput: 9\nExplanation: One possible placement is [1, 4] into slot 1, [2, 6] into slot 2, and [3, 5] into slot 3. \nThis gives the maximum AND sum of (1 AND 1) + (4 AND 1) + (2 AND 2) + (6 AND 2) + (3 AND 3) + (5 AND 3) = 1 + 0 + 2 + 2 + 3 + 1 = 9.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [1,3,10,4,7,1], numSlots = 9\nOutput: 24\nExplanation: One possible placement is [1, 1] into slot 1, [3] into slot 3, [4] into slot 4, [7] into slot 7, and [10] into slot 9.\nThis gives the maximum AND sum of (1 AND 1) + (1 AND 1) + (3 AND 3) + (4 AND 4) + (7 AND 7) + (10 AND 9) = 1 + 1 + 3 + 4 + 7 + 8 = 24.\nNote that slots 2, 5, 6, and 8 are empty which is permitted.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums.length",
+    "1 <= numSlots <= 9",
+    "1 <= n <= 2 * numSlots",
+    "1 <= nums[i] <= 15"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Can you think of a dynamic programming solution to this problem?",
+    "Can you use a bitmask to represent the state of the slots?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int maximumANDSum(vector<int>& nums, int numSlots) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumANDSum(int[] nums, int numSlots) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def maximumANDSum(self, nums, numSlots):\n        \"\"\"\n        :type nums: List[int]\n        :type numSlots: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def maximumANDSum(self, nums: List[int], numSlots: int) -> int:\n        ",
+    "c": "int maximumANDSum(int* nums, int numsSize, int numSlots) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MaximumANDSum(int[] nums, int numSlots) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} numSlots\n * @return {number}\n */\nvar maximumANDSum = function(nums, numSlots) {\n    \n};",
+    "typescript": "function maximumANDSum(nums: number[], numSlots: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @param Integer $numSlots\n     * @return Integer\n     */\n    function maximumANDSum($nums, $numSlots) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func maximumANDSum(_ nums: [Int], _ numSlots: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun maximumANDSum(nums: IntArray, numSlots: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int maximumANDSum(List<int> nums, int numSlots) {\n    \n  }\n}",
+    "golang": "func maximumANDSum(nums []int, numSlots int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @param {Integer} num_slots\n# @return {Integer}\ndef maximum_and_sum(nums, num_slots)\n    \nend",
+    "scala": "object Solution {\n    def maximumANDSum(nums: Array[Int], numSlots: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn maximum_and_sum(nums: Vec<i32>, num_slots: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (maximum-and-sum nums numSlots)\n  (-> (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec maximum_and_sum(Nums :: [integer()], NumSlots :: integer()) -> integer().\nmaximum_and_sum(Nums, NumSlots) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec maximum_and_sum(nums :: [integer], num_slots :: integer) :: integer\n  def maximum_and_sum(nums, num_slots) do\n    \n  end\nend"
+  }
+}

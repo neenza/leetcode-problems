@@ -1,0 +1,60 @@
+{
+  "title": "Two Sum II - Input Array Is Sorted",
+  "problem_id": "167",
+  "frontend_id": "167",
+  "difficulty": "Medium",
+  "problem_slug": "two-sum-ii-input-array-is-sorted",
+  "topics": [
+    "Array",
+    "Two Pointers",
+    "Binary Search"
+  ],
+  "description": "Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.\nReturn the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.\nThe tests are generated such that there is exactly one solution. You may not use the same element twice.\nYour solution must use only constant extra space.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: numbers = [2,7,11,15], target = 9\nOutput: [1,2]\nExplanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: numbers = [2,3,4], target = 6\nOutput: [1,3]\nExplanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: numbers = [-1,0], target = -1\nOutput: [1,2]\nExplanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "2 <= numbers.length <= 3 * 104",
+    "-1000 <= numbers[i] <= 1000",
+    "numbers is sorted in non-decreasing order.",
+    "-1000 <= target <= 1000",
+    "The tests are generated such that there is exactly one solution."
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& numbers, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def twoSum(self, numbers, target):\n        \"\"\"\n        :type numbers: List[int]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def twoSum(self, numbers: List[int], target: int) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* twoSum(int* numbers, int numbersSize, int target, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] TwoSum(int[] numbers, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} numbers\n * @param {number} target\n * @return {number[]}\n */\nvar twoSum = function(numbers, target) {\n    \n};",
+    "typescript": "function twoSum(numbers: number[], target: number): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $numbers\n     * @param Integer $target\n     * @return Integer[]\n     */\n    function twoSum($numbers, $target) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun twoSum(numbers: IntArray, target: Int): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> twoSum(List<int> numbers, int target) {\n    \n  }\n}",
+    "golang": "func twoSum(numbers []int, target int) []int {\n    \n}",
+    "ruby": "# @param {Integer[]} numbers\n# @param {Integer} target\n# @return {Integer[]}\ndef two_sum(numbers, target)\n    \nend",
+    "scala": "object Solution {\n    def twoSum(numbers: Array[Int], target: Int): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (two-sum numbers target)\n  (-> (listof exact-integer?) exact-integer? (listof exact-integer?))\n  )",
+    "erlang": "-spec two_sum(Numbers :: [integer()], Target :: integer()) -> [integer()].\ntwo_sum(Numbers, Target) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec two_sum(numbers :: [integer], target :: integer) :: [integer]\n  def two_sum(numbers, target) do\n    \n  end\nend"
+  }
+}

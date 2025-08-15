@@ -1,0 +1,60 @@
+{
+  "title": "Count Special Triplets",
+  "problem_id": "3885",
+  "frontend_id": "3583",
+  "difficulty": "Medium",
+  "problem_slug": "count-special-triplets",
+  "topics": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ],
+  "description": "You are given an integer array nums.\nA special triplet is defined as a triplet of indices (i, j, k) such that:\nReturn the total number of special triplets in the array.\nSince the answer may be large, return it modulo 109 + 7.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums = [6,3,6]\nOutput: 1\nExplanation:\nThe only special triplet is (i, j, k) = (0, 1, 2) , where:",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums = [0,1,0,0]\nOutput: 1\nExplanation:\nThe only special triplet is (i, j, k) = (0, 2, 3) , where:",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: nums = [8,4,2,8,4]\nOutput: 2\nExplanation:\nThere are exactly two special triplets:",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= n == nums.length <= 105",
+    "0 <= nums[i] <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use frequency arrays or maps, e.g. <code>freqPrev</code> and <code>freqNext</code>—to track how many times each value appears before and after the current index.",
+    "For each index <code>j</code> in the triplet (<code>i</code>,<code>j</code>,<code>k</code>), compute its contribution to the answer using your freqPrev and freqNext counts."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int specialTriplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int specialTriplets(int[] nums) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def specialTriplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def specialTriplets(self, nums: List[int]) -> int:\n        ",
+    "c": "int specialTriplets(int* nums, int numsSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int SpecialTriplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar specialTriplets = function(nums) {\n    \n};",
+    "typescript": "function specialTriplets(nums: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums\n     * @return Integer\n     */\n    function specialTriplets($nums) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func specialTriplets(_ nums: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun specialTriplets(nums: IntArray): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int specialTriplets(List<int> nums) {\n    \n  }\n}",
+    "golang": "func specialTriplets(nums []int) int {\n    \n}",
+    "ruby": "# @param {Integer[]} nums\n# @return {Integer}\ndef special_triplets(nums)\n    \nend",
+    "scala": "object Solution {\n    def specialTriplets(nums: Array[Int]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn special_triplets(nums: Vec<i32>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (special-triplets nums)\n  (-> (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec special_triplets(Nums :: [integer()]) -> integer().\nspecial_triplets(Nums) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec special_triplets(nums :: [integer]) :: integer\n  def special_triplets(nums) do\n    \n  end\nend"
+  }
+}

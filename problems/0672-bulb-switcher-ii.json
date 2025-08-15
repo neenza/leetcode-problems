@@ -1,0 +1,59 @@
+{
+  "title": "Bulb Switcher II",
+  "problem_id": "672",
+  "frontend_id": "672",
+  "difficulty": "Medium",
+  "problem_slug": "bulb-switcher-ii",
+  "topics": [
+    "Math",
+    "Bit Manipulation",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ],
+  "description": "There is a room with n bulbs labeled from 1 to n that all are turned on initially, and four buttons on the wall. Each of the four buttons has a different functionality where:\nYou must make exactly presses button presses in total. For each press, you may pick any of the four buttons to press.\nGiven the two integers n and presses, return the number of different possible statuses after performing all presses button presses.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 1, presses = 1\nOutput: 2\nExplanation: Status can be:\n- [off] by pressing button 1\n- [on] by pressing button 2",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 2, presses = 1\nOutput: 3\nExplanation: Status can be:\n- [off, off] by pressing button 1\n- [on, off] by pressing button 2\n- [off, on] by pressing button 3",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 3, presses = 1\nOutput: 4\nExplanation: Status can be:\n- [off, off, off] by pressing button 1\n- [off, on, off] by pressing button 2\n- [on, off, on] by pressing button 3\n- [off, on, on] by pressing button 4",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 1000",
+    "0 <= presses <= 1000"
+  ],
+  "follow_ups": [],
+  "hints": [],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int flipLights(int n, int presses) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int flipLights(int n, int presses) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def flipLights(self, n, presses):\n        \"\"\"\n        :type n: int\n        :type presses: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def flipLights(self, n: int, presses: int) -> int:\n        ",
+    "c": "int flipLights(int n, int presses) {\n    \n}",
+    "csharp": "public class Solution {\n    public int FlipLights(int n, int presses) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} presses\n * @return {number}\n */\nvar flipLights = function(n, presses) {\n    \n};",
+    "typescript": "function flipLights(n: number, presses: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer $presses\n     * @return Integer\n     */\n    function flipLights($n, $presses) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func flipLights(_ n: Int, _ presses: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun flipLights(n: Int, presses: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int flipLights(int n, int presses) {\n    \n  }\n}",
+    "golang": "func flipLights(n int, presses int) int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer} presses\n# @return {Integer}\ndef flip_lights(n, presses)\n    \nend",
+    "scala": "object Solution {\n    def flipLights(n: Int, presses: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn flip_lights(n: i32, presses: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (flip-lights n presses)\n  (-> exact-integer? exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec flip_lights(N :: integer(), Presses :: integer()) -> integer().\nflip_lights(N, Presses) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec flip_lights(n :: integer, presses :: integer) :: integer\n  def flip_lights(n, presses) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n### Approach 1: Reduce Search Space [Accepted]\n\n### Intuition\n\nAs the search space is very large ($$2^N$$ states of lights, naively $$4^M$$ operation sequences), let us try to reduce it.\n\nThe first 6 lights uniquely determine the rest of the lights. This is because every operation that modifies the $$x$$-th light also modifies the $$(x+6)$$-th light.\n\nAlso, operations commute: doing operation A followed by B is the same as doing operation B followed by A. So we can assume we do all the operations in order.\n\nFinally, doing the same operation twice in a row is the same as doing nothing. So we only need to consider whether each operation was done 0 or 1 times.\n\n#### Algorithm\n\nSay we do the $$i$$-th operation $$f_i$$ times. Let's first figure out what sets of residues are possible: that is, what sets $$c_i = f_i$$ ($$\\mod 2$$ ) are possible.\n\nBecause $$c_i \\equiv f_i$$ and $$c_i \\leq f_i$$, if $$\\sum f_i \\not\\equiv \\sum c_i$$, or if $$\\sum f_i < \\sum c_i$$, it isn't possible. Otherwise, it is possible by a simple construction: do the operations specified by $$c_i$$, then do operation number 1 with the even number of operations you have left.\n\nFor each possible set of residues, let's simulate and remember what the first 6 lights will look like, storing it in a *Set* structure `seen`. At the end, we'll return the size of this set.\n\nIn Java, we make use of bit manipulations to manage the state of lights, whereas in Python we simulate it directly.\n\n#### Implementation#### Complexity Analysis\n\n* Time Complexity: $$O(1)$$. Our checks are bounded by a constant.\n\n* Space Complexity: $$O(1)$$, the size of the data structures used.\n\n---\n### Approach 2: Mathematical [Accepted]\n\n#### Intuition and Algorithm\n\nAs before, the first 6 lights uniquely determine the rest of the lights. This is because every operation that modifies the $$x$$-th light also modifies the $$(x+6)$$-th light, so the $$x$$-th light is always equal to the $$(x+6)$$-th light.\n\nActually, the first 3 lights uniquely determine the rest of the sequence, as shown by the table below for performing the operations a, b, c, d:\n\n* Light 1 = 1 + a + c + d\n* Light 2 = 1 + a + b\n* Light 3 = 1 + a + c\n* Light 4 = 1 + a + b + d\n* Light 5 = 1 + a + c\n* Light 6 = 1 + a + b\n\nSo that (modulo 2):\n\n* Light 4 = (Light 1) + (Light 2) - (Light 3)\n* Light 5 = Light 3\n* Light 6 = Light 2\n\nThe above justify taking $$n = min(n, 3)$$ without loss of generality. The rest is now casework.\n\nLet's denote the state of lights by the tuple $$(a, b, c)$$. The transitions are to XOR by $$(1, 1, 1), (0, 1, 0), (1, 0, 1),$$ or $$(1, 0, 0)$$.\n\nWhen $$m = 0$$, all the lights are on, and there is only one state $$(1, 1, 1)$$. The answer in this case is always 1.\n\nWhen $$m = 1$$, we could get states $$(0, 0, 0)$$, $$(1, 0, 1)$$, $$(0, 1, 0)$$, or $$(0, 1, 1)$$. The answer in this case is either $$2, 3, 4$$ for $$n = 1, 2, 3$$ respectively.\n\nWhen $$m = 2$$, we can manually check that we can get 7 states: all of them except for $$(0, 1, 1)$$. The answer in this case is either $$2, 4, 7$$ for $$n = 1, 2, 3$$ respectively.\n\nWhen $$m = 3$$, we can get all 8 states. The answer in this case is either $$2, 4, 8$$ for $$n = 1, 2, 3$$ respectively.\n\n#### Implementation#### Complexity Analysis\n\n* Time and Space Complexity: $$O(1)$$. The entire program uses constants."
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Largest 3-Same-Digit Number in String",
+  "problem_id": "2346",
+  "frontend_id": "2264",
+  "difficulty": "Easy",
+  "problem_slug": "largest-3-same-digit-number-in-string",
+  "topics": [
+    "String"
+  ],
+  "description": "You are given a string num representing a large integer. An integer is good if it meets the following conditions:\nReturn the maximum good integer as a string or an empty string \"\" if no such integer exists.\nNote:\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: num = \"6777133339\"\nOutput: \"777\"\nExplanation: There are two distinct good integers: \"777\" and \"333\".\n\"777\" is the largest, so we return \"777\".",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: num = \"2300019\"\nOutput: \"000\"\nExplanation: \"000\" is the only good integer.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: num = \"42352338\"\nOutput: \"\"\nExplanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "3 <= num.length <= 1000",
+    "num only consists of digits."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "We can sequentially check if “999”, “888”, “777”, … , “000” exists in num in that order. The first to be found is the maximum good integer.",
+    "If we cannot find any of the above integers, we return an empty string “”."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    string largestGoodInteger(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestGoodInteger(String num) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def largestGoodInteger(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: str\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def largestGoodInteger(self, num: str) -> str:\n        ",
+    "c": "char* largestGoodInteger(char* num) {\n    \n}",
+    "csharp": "public class Solution {\n    public string LargestGoodInteger(string num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {string}\n */\nvar largestGoodInteger = function(num) {\n    \n};",
+    "typescript": "function largestGoodInteger(num: string): string {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $num\n     * @return String\n     */\n    function largestGoodInteger($num) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func largestGoodInteger(_ num: String) -> String {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun largestGoodInteger(num: String): String {\n        \n    }\n}",
+    "dart": "class Solution {\n  String largestGoodInteger(String num) {\n    \n  }\n}",
+    "golang": "func largestGoodInteger(num string) string {\n    \n}",
+    "ruby": "# @param {String} num\n# @return {String}\ndef largest_good_integer(num)\n    \nend",
+    "scala": "object Solution {\n    def largestGoodInteger(num: String): String = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn largest_good_integer(num: String) -> String {\n        \n    }\n}",
+    "racket": "(define/contract (largest-good-integer num)\n  (-> string? string?)\n  )",
+    "erlang": "-spec largest_good_integer(Num :: unicode:unicode_binary()) -> unicode:unicode_binary().\nlargest_good_integer(Num) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec largest_good_integer(num :: String.t) :: String.t\n  def largest_good_integer(num) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Approach 1: Multiple Iterations, One For Each Digit.\n\n#### Intuition  \n\nAs outlined in the problem statement, our objective is to find the largest number. We will sequentially examine whether any of the strings `\"999\", \"888\", \"777\", ... ,` or `\"000\"` appear in the string `num`.\n\n![slide_1a](../Figures/2264/Slide1a.jpg)\n\nTo determine if the `sameDigitNumber` string exists within string `num`, we maintain a window of size `3`, starting from the $$0^{th}$$ position of `num`. We compare the three characters in the window with the characters of `sameDigitNumber`. If any of them do not match, we shift the window one position to the right and continue this process until either all of the three characters in the window match or we have finished the iteration.\n\n![slide_1b](../Figures/2264/Slide1b.jpg)\n\n\n#### Algorithm\n\n1. Create a `sameDigitNumbers` array containing all the same 3-digit numbers from `\"999\"` to `\"000\"` in decreasing order.\n\n2. Create a method `contains(sameDigitNumber, num)` to check whether the string `num` only contains `sameDigitNumber`.\n    - In this method, iterate over string `num` from index `idx = 0` till `num.size() - 3` and return `true` if for any index `idx`, characters at indices `idx`, `(idx + 1)`, and `(idx + 2)` are `sameDigitNumber`. Otherwise, return `false`.\n\n3. Iterate over each `sameDigitNumber` of the `sameDigitNumbers` array, if for any `sameDigitNumber`, `contains(sameDigitNumber, num)` returns `true`, return string `sameDigitNumber`.\n\n4. Otherwise, return an empty string.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the maximum length of the `num` string.\n\n* Time complexity:  $O(n)$\n    - The initialization of array `sameDigitNumbers` of size $10$ with strings of size $3$, is considered a constant time operation.\n    - In the `largestGoodInteger(num)` method, we iterate over $10$ `sameDigitNumbers` strings, for each `sameDigitNumber` we call the `contains(sameDigitNumbers, num)` method, and in this method, we iterate over the whole `num` string which is $O(n)$ time operation.  \n   - Thus, overall it will take $O(10 \\cdot n) = O(n)$ time.\n\n* Space complexity: $O(1)$\n    - We create an additional array `sameDigitNumbers` of size $10$, which takes constant space.---\n\n\n### Approach 2: Single Iteration\n\n#### Intuition  \n\n> The previous approach is sufficient for solving the given problem during an interview. This approach offers no additional advantages over the time and space complexities of the initial approach but it is listed here for the completeness of the article.\n> \n> However, if faced with a follow-up question where the numbers are represented in a non-decimal base and the number of digits (denoted as `b`) can be significantly larger, the previous approach will become sub-optimal and we would be expected to propose a more optimized solution. This approach will be independent of the number of digits in the number system.\n\nThis alternative approach involves iterating through the `num` string using a window of size `3`. While iterating, if all characters of the window are the same then we store the character in `maxDigit` if it is bigger than the character already stored in `maxDigit`. In the end, we return a string of size `3` formed using `maxDigit`.\n\n![slide_2](../Figures/2264/Slide2.jpg)\n\n> ASCII values of characters `0` to `9` range from `48` to `57`. We need to initialize `maxDigit` with the character having an ASCII value smaller than `48`. Here we will initialize it with NUL `\\0` character which has ASCII value `0`.\n\n#### Algorithm\n\n1. Create a variable `maxDigit` initially assigned to the NUL character `\\0`.\n\n2. Iterate on string `num` from index `idx = 0` till `num.size() - 3`.\n    - For any index `idx`, if the `idx`, `(idx + 1)`, and `(idx + 2)` index characters are the same then store the maximum of `maxDigit` and `num[idx]` in `maxDigit`.\n\n3. If `maxDigit` stores the NUL character, return an empty string. Otherwise, return a string having three `maxDigit` characters.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the maximum length of the `num` string.\n\n* Time complexity:  $O(n)$\n    - In the `largestGoodInteger(num)` method, we iterate over the whole `num` string which takes $O(n)$ time.  \n\n* Space complexity: $O(1)$\n    - We only use an additional variable `maxDigit`."
+}

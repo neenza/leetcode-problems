@@ -1,0 +1,64 @@
+{
+  "title": "Construct K Palindrome Strings",
+  "problem_id": "1502",
+  "frontend_id": "1400",
+  "difficulty": "Medium",
+  "problem_slug": "construct-k-palindrome-strings",
+  "topics": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Counting"
+  ],
+  "description": "Given a string s and an integer k, return true if you can use all the characters in s to construct non-empty k palindrome strings or false otherwise.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"annabelle\", k = 2\nOutput: true\nExplanation: You can construct two palindromes using all characters in s.\nSome possible constructions \"anna\" + \"elble\", \"anbna\" + \"elle\", \"anellena\" + \"b\"",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"leetcode\", k = 3\nOutput: false\nExplanation: It is impossible to construct 3 palindromes using all the characters of s.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"true\", k = 4\nOutput: true\nExplanation: The only possible solution is to put each character in a separate string.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= s.length <= 105",
+    "s consists of lowercase English letters.",
+    "1 <= k <= 105"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "If the s.length < k we cannot construct k strings from s and answer is false.",
+    "If the number of characters that have odd counts is > k then the minimum number of palindrome strings we can construct is > k and answer is false.",
+    "Otherwise you can construct exactly k palindrome strings and answer is true (why ?)."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool canConstruct(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canConstruct(String s, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def canConstruct(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def canConstruct(self, s: str, k: int) -> bool:\n        ",
+    "c": "bool canConstruct(char* s, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool CanConstruct(string s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {boolean}\n */\nvar canConstruct = function(s, k) {\n    \n};",
+    "typescript": "function canConstruct(s: string, k: number): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer $k\n     * @return Boolean\n     */\n    function canConstruct($s, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func canConstruct(_ s: String, _ k: Int) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun canConstruct(s: String, k: Int): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool canConstruct(String s, int k) {\n    \n  }\n}",
+    "golang": "func canConstruct(s string, k int) bool {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer} k\n# @return {Boolean}\ndef can_construct(s, k)\n    \nend",
+    "scala": "object Solution {\n    def canConstruct(s: String, k: Int): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn can_construct(s: String, k: i32) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (can-construct s k)\n  (-> string? exact-integer? boolean?)\n  )",
+    "erlang": "-spec can_construct(S :: unicode:unicode_binary(), K :: integer()) -> boolean().\ncan_construct(S, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec can_construct(s :: String.t, k :: integer) :: boolean\n  def can_construct(s, k) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n---\n\n### Overview \n\nWe are given a string `s` composed of lowercase letters and an integer `k`. Our goal is to determine if it's possible to rearrange the characters of the string into exactly `k` palindromic substrings.\n\nA palindrome is a string that reads the same forward and backward, showing symmetry with respect to its center. For example, the string `\"babac\"` can form 5 palindromic groupings, such as:\n- 1 part: `\"bacab\"`\n- 2 parts: `\"aca\"` + `\"bb\"`\n- 3 parts: `\"aa\"` + `\"bb\"` + `\"c\"`\n- 4 parts: `\"aa\"` + `\"b\"` + `\"b\"` + `\"c\"`\n- 5 parts: `\"a\"` + `\"a\"` + `\"b\"` + `\"b\"` + `\"c\"`\n\nIn order to approach this problem, we need to understand the properties of palindromes, especially how character frequencies determine if a string can be rearranged into a palindrome. The key properties are:\n\n1. **Single Character Strings:** Any string of length 1 is a palindrome. For example, the string `\"a\"` is a palindrome.\n2. **Even Frequency Characters:** A palindrome can have characters that all appear an even number of times, which allows them to form symmetric halves around the center. For example, `\"aabb\"` can form the palindrome `\"abba\"`.\n3. **One Odd Frequency Character:** A palindrome can have exactly one character with an odd frequency, which will sit at the center of the string, with the other characters forming symmetric halves. For example, `\"abcba\"` has the center `\"c\"` and symmetric halves `\"ab\"` and `\"ba\"`.\n\nKnowing this, we can determine whether forming exactly `k` palindromes is possible by analyzing the frequencies of the characters within the string.\n\n---\n\n### Approach 1: Count Odd Frequencies\n\n#### Intuition\n\nTo approach this problem, we need to consider how the frequencies of characters in the string `s` affect the ability to form palindromes. \n\nWhat key insight can we gain from knowing that a single character can be a palindrome? If every individual character in the string can be a palindrome, then the maximum number of palindromes we can form is the length of the string `s`. If `k` is greater than the length of `s`, it’s impossible to form `k` palindromes, so the answer will be `false`. Similarly, if `k` equals the length of `s`, we can form `k` palindromes, with each character of `s` forming its own palindrome.\n\nNext, consider even-frequency characters. These characters can be used to form the mirrored halves of palindromes, meaning we can freely distribute them across multiple palindromes without any issue. Thus, even-frequency characters do not limit the number of palindromes we can form.\n\nThe real challenge lies with odd-frequency characters. A palindrome can only have one odd-frequency character at its center; the rest must appear in even numbers. Therefore, the number of odd-frequency characters in the string determines how many palindromes we can form. Specifically, the minimum number of palindromes we can make is equal to the number of odd-frequency characters, because each odd-frequency character requires its own palindrome.\n\nThus, if the number of odd-frequency characters is greater than `k`, it’s impossible to form `k` palindromes, so we return `false`. If the number of odd-frequency characters is less than or equal to `k`, we can form `k` palindromes, and the answer will be `true`. \n\n#### Algorithm\n\n1. Handle initial edge cases, comparing the length of `s` to `k`.\n    * If the length of `s` is less than k, we return `false`, as we do not have enough characters to form k palindromes.\n    * If the length of `s` is equal to `k`, we return `true`, as we can simply use each character of `s` to form a palindrome.\n2. Initialize:\n    * an array `freq` of size `26`, representing the frequencies of each alphabetical character.\n    * an integer `oddCount`, representing the number of odd frequencies found in the string.\n3. Iterate through `s`, incrementing the value of the index in `freq` corresponding to the character.\n4. Iterate through the `freq`, incrementing `oddCount` when a frequency is odd.\n5. Return `true` if `oddCount` is less than or equal to `k`; return `false` otherwise.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of string `s`.\n\n* Time complexity: $O(n)$\n\n    We traverse the string of length $n$ only once. \n\n    All other operations performed happen in constant time. This includes traversing `freq`, as the size of the array is a fixed size of `26`.\n\n* Space complexity: $O(1)$\n\n    The space required does not depend on the size of the input string, so only constant space is used. \n    \n    Since we are limited to only lowercase letters in `s`, we can store the frequencies in constant space with an array of size `26`, `freq`.\n\n---\n\n### Approach 2: Bit Manipulation\n\n#### Intuition\n\nIn the previous solution, we tracked the frequency of each character and checked whether they were even or odd. However, we can optimize this approach by focusing only on whether the frequencies are even or odd, without needing to store the full count for each character. This way we can avoid the overhead of storing and counting individual frequencies.\n\nWe know that a palindrome can have at most one character with an odd frequency. This observation allows us to simplify the problem by only tracking the parity (even or odd) of the character frequencies. We don't need to store the actual frequency of each character - just whether it's odd or even is enough to solve the problem.\n\nTo efficiently track whether a character's frequency is even or odd, we can use bit manipulation. We can represent the frequencies as bits in an integer, where each bit corresponds to whether a particular character has an odd or even frequency. By toggling the corresponding bit for each character, we can keep track of the number of characters with odd frequencies.\n\nOnce we've processed the entire string, the number of odd-frequency characters is simply the count of `1` bits in the bitmask. If the number of odd-frequency characters is greater than `k`, it's impossible to form `k` palindromes, so we return `false`. If the number of odd-frequency characters is less than or equal to `k`, we can form `k` palindromes, and the answer will be `true`.\n \n#### Algorithm\n\n1. Handle initial edge cases, comparing the length of `s` to `k`.\n    * If the length of `s` is less than `k`, we return `false`, as we do not have enough characters to form k palindromes.\n    * If the length of `s` is equal to `k`, we return `true`, as we can simply use each character of `s` to form a palindrome.\n2. Initialize an integer `oddCount`, which is used as a bitmask to track characters with odd frequencies\n3. Iterate through `s`. For each character, we flip the bit tracking that character, with a set bit of `1` representing an odd frequency and a cleared bit `0` representing an even frequency\n4. Return `true` if the number of `1` bits is less than or equal to `k`; return `false` otherwise.\n\n#### Implementation#### Complexity Analysis\n\nLet $n$ be the length of string `s`.\n\n* Time complexity: $O(n)$\n\n    The loop iterates over each character in the string `s`, which takes $O(n)$ time. The built-in function to count bits operates in $O(1)$ time since it works on a fixed-size integer (32 bits). Therefore, the overall time complexity is dominated by the loop, resulting in $O(n)$.\n  \n* Space complexity: $O(1)$\n\n    The space required does not depend on the size of the input string, so only constant space is used.\n\n---"
+}

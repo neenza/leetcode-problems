@@ -1,0 +1,80 @@
+{
+  "title": "Shortest Path in a Weighted Tree",
+  "problem_id": "3829",
+  "frontend_id": "3515",
+  "difficulty": "Hard",
+  "problem_slug": "shortest-path-in-a-weighted-tree",
+  "topics": [
+    "Array",
+    "Tree",
+    "Depth-First Search",
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ],
+  "description": "You are given an integer n and an undirected, weighted tree rooted at node 1 with n nodes numbered from 1 to n. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, wi] indicates an undirected edge from node ui to vi with weight wi.\nYou are also given a 2D integer array queries of length q, where each queries[i] is either:\nReturn an integer array answer, where answer[i] is the shortest path distance from node 1 to x for the ith query of [2, x].\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: n = 2, edges = [[1,2,7]], queries = [[2,2],[1,1,2,4],[2,2]]\nOutput: [7,4]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/13/screenshot-2025-03-13-at-133524.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: n = 3, edges = [[1,2,2],[1,3,4]], queries = [[2,1],[2,3],[1,1,3,7],[2,2],[2,3]]\nOutput: [0,4,2,7]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/13/screenshot-2025-03-13-at-132247.png"
+      ]
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: n = 4, edges = [[1,2,2],[2,3,1],[3,4,5]], queries = [[2,4],[2,3],[1,2,3,3],[2,2],[2,3]]\nOutput: [8,3,2,5]\nExplanation:\n",
+      "images": [
+        "https://assets.leetcode.com/uploads/2025/03/13/screenshot-2025-03-13-at-133306.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 105",
+    "edges.length == n - 1",
+    "edges[i] == [ui, vi, wi]",
+    "1 <= ui, vi <= n",
+    "1 <= wi <= 104",
+    "The input is generated such that edges represents a valid tree.",
+    "1 <= queries.length == q <= 105",
+    "queries[i].length == 2 or 4\n\nqueries[i] == [1, u, v, w'] or,\nqueries[i] == [2, x]\n1 <= u, v, x <= n\n(u, v) is always an edge from edges.\n1 <= w' <= 104",
+    "queries[i] == [1, u, v, w'] or,",
+    "queries[i] == [2, x]",
+    "1 <= u, v, x <= n",
+    "(u, v) is always an edge from edges.",
+    "1 <= w' <= 104"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Use an Euler tour to flatten the tree into an array so each node’s subtree corresponds to a contiguous segment.",
+    "Build a segment tree over this Euler tour to support efficient range updates and point queries.",
+    "For an update query [1, <code>u</code>, <code>v</code>, <code>w'</code>], adjust the distance for all descendants by applying a delta update to the corresponding range in the flattened array."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<int> treeQueries(int n, vector<vector<int>>& edges, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] treeQueries(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def treeQueries(self, n, edges, queries):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def treeQueries(self, n: int, edges: List[List[int]], queries: List[List[int]]) -> List[int]:\n        ",
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* treeQueries(int n, int** edges, int edgesSize, int* edgesColSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[] TreeQueries(int n, int[][] edges, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar treeQueries = function(n, edges, queries) {\n    \n};",
+    "typescript": "function treeQueries(n: number, edges: number[][], queries: number[][]): number[] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer $n\n     * @param Integer[][] $edges\n     * @param Integer[][] $queries\n     * @return Integer[]\n     */\n    function treeQueries($n, $edges, $queries) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func treeQueries(_ n: Int, _ edges: [[Int]], _ queries: [[Int]]) -> [Int] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun treeQueries(n: Int, edges: Array<IntArray>, queries: Array<IntArray>): IntArray {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<int> treeQueries(int n, List<List<int>> edges, List<List<int>> queries) {\n    \n  }\n}",
+    "golang": "func treeQueries(n int, edges [][]int, queries [][]int) []int {\n    \n}",
+    "ruby": "# @param {Integer} n\n# @param {Integer[][]} edges\n# @param {Integer[][]} queries\n# @return {Integer[]}\ndef tree_queries(n, edges, queries)\n    \nend",
+    "scala": "object Solution {\n    def treeQueries(n: Int, edges: Array[Array[Int]], queries: Array[Array[Int]]): Array[Int] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn tree_queries(n: i32, edges: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {\n        \n    }\n}",
+    "racket": "(define/contract (tree-queries n edges queries)\n  (-> exact-integer? (listof (listof exact-integer?)) (listof (listof exact-integer?)) (listof exact-integer?))\n  )",
+    "erlang": "-spec tree_queries(N :: integer(), Edges :: [[integer()]], Queries :: [[integer()]]) -> [integer()].\ntree_queries(N, Edges, Queries) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec tree_queries(n :: integer, edges :: [[integer]], queries :: [[integer]]) :: [integer]\n  def tree_queries(n, edges, queries) do\n    \n  end\nend"
+  }
+}

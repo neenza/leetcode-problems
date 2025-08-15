@@ -1,0 +1,63 @@
+{
+  "title": "Count Good Triplets in an Array",
+  "problem_id": "2280",
+  "frontend_id": "2179",
+  "difficulty": "Hard",
+  "problem_slug": "count-good-triplets-in-an-array",
+  "topics": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Merge Sort",
+    "Ordered Set"
+  ],
+  "description": "You are given two 0-indexed arrays nums1 and nums2 of length n, both of which are permutations of [0, 1, ..., n - 1].\nA good triplet is a set of 3 distinct values which are present in increasing order by position both in nums1 and nums2. In other words, if we consider pos1v as the index of the value v in nums1 and pos2v as the index of the value v in nums2, then a good triplet will be a set (x, y, z) where 0 <= x, y, z <= n - 1, such that pos1x < pos1y < pos1z and pos2x < pos2y < pos2z.\nReturn the total number of good triplets.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: nums1 = [2,0,1,3], nums2 = [0,1,2,3]\nOutput: 1\nExplanation: \nThere are 4 triplets (x,y,z) such that pos1x < pos1y < pos1z. They are (2,0,1), (2,0,3), (2,1,3), and (0,1,3). \nOut of those triplets, only the triplet (0,1,3) satisfies pos2x < pos2y < pos2z. Hence, there is only 1 good triplet.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: nums1 = [4,0,1,3,2], nums2 = [4,1,0,2,3]\nOutput: 4\nExplanation: The 4 good triplets are (4,0,3), (4,0,2), (4,1,3), and (4,1,2).",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "n == nums1.length == nums2.length",
+    "3 <= n <= 105",
+    "0 <= nums1[i], nums2[i] <= n - 1",
+    "nums1 and nums2 are permutations of [0, 1, ..., n - 1]."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "For every value y, how can you find the number of values x  (0 ≤ x, y ≤ n - 1) such that x appears before y in both of the arrays?",
+    "Similarly, for every value y, try finding the number of values z (0 ≤ y, z ≤ n - 1) such that z appears after y in both of the arrays.",
+    "Now, for every value y, count the number of good triplets that can be formed if y is considered as the middle element."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long goodTriplets(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def goodTriplets(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def goodTriplets(self, nums1: List[int], nums2: List[int]) -> int:\n        ",
+    "c": "long long goodTriplets(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "csharp": "public class Solution {\n    public long GoodTriplets(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar goodTriplets = function(nums1, nums2) {\n    \n};",
+    "typescript": "function goodTriplets(nums1: number[], nums2: number[]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[] $nums1\n     * @param Integer[] $nums2\n     * @return Integer\n     */\n    function goodTriplets($nums1, $nums2) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func goodTriplets(_ nums1: [Int], _ nums2: [Int]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun goodTriplets(nums1: IntArray, nums2: IntArray): Long {\n        \n    }\n}",
+    "dart": "class Solution {\n  int goodTriplets(List<int> nums1, List<int> nums2) {\n    \n  }\n}",
+    "golang": "func goodTriplets(nums1 []int, nums2 []int) int64 {\n    \n}",
+    "ruby": "# @param {Integer[]} nums1\n# @param {Integer[]} nums2\n# @return {Integer}\ndef good_triplets(nums1, nums2)\n    \nend",
+    "scala": "object Solution {\n    def goodTriplets(nums1: Array[Int], nums2: Array[Int]): Long = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn good_triplets(nums1: Vec<i32>, nums2: Vec<i32>) -> i64 {\n        \n    }\n}",
+    "racket": "(define/contract (good-triplets nums1 nums2)\n  (-> (listof exact-integer?) (listof exact-integer?) exact-integer?)\n  )",
+    "erlang": "-spec good_triplets(Nums1 :: [integer()], Nums2 :: [integer()]) -> integer().\ngood_triplets(Nums1, Nums2) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec good_triplets(nums1 :: [integer], nums2 :: [integer]) :: integer\n  def good_triplets(nums1, nums2) do\n    \n  end\nend"
+  },
+  "solution": "[TOC]\n\n## Solution\n\n--- \n\n### Approach 1: Binary Indexed Tree\n\n#### Intuition\n\nIf $i, j, k$ satisfy $0 \\leq i < j < k < n$ and $0 \\leq \\textit{pos2}_{\\textit{nums1}[i]} < \\textit{pos2}_{\\textit{nums1}[j]} < \\textit{pos2}_{\\textit{nums1}[k]} < n$, then $\\textit{nums1}[i]$, $\\textit{nums1}[j]$, $\\textit{nums1}[k]$ form a good triplet. Because both $\\textit{nums1}$ and $\\textit{nums2}$ are permutations of $0$ to $n-1$, we can count the number of good triplets by calculating the number of triplets $i, j, k$ that meet the conditions.\n\nAn array $\\textit{indexMapping}$ is used to express the above relationship, where $\\textit{indexMapping}[i] = \\textit{pos2}_{\\textit{nums1}[i]}$, and $\\textit{indexMapping}$ is also a permutation of $0$ to $n-1$. When calculating the number of triplets $i, j, k$ that meet the conditions, we can first fix $j$, then count how many numbers are less than $\\textit{indexMapping}[j]$ in the $\\textit{indexMapping}$ array to the left of index $j$, and denote it as $\\textit{left}$. Next, count how many numbers are greater than $\\textit{indexMapping}[j]$ to the right of index $j$, and denote it as $\\textit{right}$. Thus, $\\textit{left}\\times\\textit{right}$ represents the number of triplets with the middle element as $j$. By traversing all $j$, the answer can be calculated.\n\nThe above calculation process can be referred to [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/), using a binary indexed tree to solve. The binary indexed tree can complete increment and prefix sum operations for a certain index in $O(\\log{n})$ time. When applying the binary indexed tree, we need to traverse the values in $\\textit{indexMapping}$ from small to large, and calculate the prefix sum for the current index $\\textit{pos}$, which represents how many numbers are less than $\\textit{indexMapping}[pos]$ to the left of index $pos$. We can also calculate how many numbers are greater than $\\textit{indexMapping}[pos]$ to the right of index $pos$, and then add $1$ to the value of the current index. Since we are traversing according to the value size, we need another array $\\textit{reversedIndexMapping}$ to save the indices of each value in $\\textit{indexMapping}$. In the code, the variable $\\textit{indexMapping}$ can be omitted. The result can be returned after the traversal is completed.\n\n#### Implementation#### Complexity Analysis\n\n- Time complexity: $O(n\\times\\log{n})$.\n\nThe binary indexed tree requires $O(\\log{n})$ for each query and update operation, and we need to perform query and update operations on each index of the array during traversal.\n\n- Space complexity: $O(n)$.\n\nThe binary indexed tree requires $O(n)$ space."
+}

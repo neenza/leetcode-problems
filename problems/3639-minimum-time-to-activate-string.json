@@ -1,0 +1,59 @@
+{
+  "title": "Minimum Time to Activate String",
+  "problem_id": "3944",
+  "frontend_id": "3639",
+  "difficulty": "Medium",
+  "problem_slug": "minimum-time-to-activate-string",
+  "topics": [],
+  "description": "You are given a string s of length n and an integer array order, where order is a permutation of the numbers in the range [0, n - 1].\nStarting from time t = 0, replace the character at index order[t] in s with '*' at each time step.\nA substring is valid if it contains at least one '*'.\nA string is active if the total number of valid substrings is greater than or equal to k.\nReturn the minimum time t at which the string s becomes active. If it is impossible, return -1.\nExample 1:\nExample 2:\nExample 3:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: s = \"abc\", order = [1,0,2], k = 2\nOutput: 0\nExplanation:\nThe string s becomes active at t = 0 . Thus, the answer is 0.",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: s = \"cat\", order = [0,2,1], k = 6\nOutput: 2\nExplanation:\nThe string s becomes active at t = 2 . Thus, the answer is 2.",
+      "images": []
+    },
+    {
+      "example_num": 3,
+      "example_text": "Input: s = \"xy\", order = [0,1], k = 4\nOutput: -1\nExplanation:\nEven after all replacements, it is impossible to obtain k = 4 valid substrings. Thus, the answer is -1.",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "1 <= n == s.length <= 105",
+    "order.length == n",
+    "0 <= order[i] <= n - 1",
+    "s consists of lowercase English letters.",
+    "order is a permutation of integers from 0 to n - 1.",
+    "1 <= k <= 109"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Binary-search on <code>t</code> and for each <code>t</code> mark the first <code>t+1</code> positions in <code>order</code> as <code></code>, then in one pass subtract from <code>n(n+1)/2</code> the substrings of each non-<code></code> run of length <code>L</code> (<code>L(L+1)/2</code>) and check if the remainder >= <code>k</code>."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minTime(string s, vector<int>& order, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minTime(String s, int[] order, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minTime(self, s, order, k):\n        \"\"\"\n        :type s: str\n        :type order: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minTime(self, s: str, order: List[int], k: int) -> int:\n        ",
+    "c": "int minTime(char* s, int* order, int orderSize, int k) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinTime(string s, int[] order, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[]} order\n * @param {number} k\n * @return {number}\n */\nvar minTime = function(s, order, k) {\n    \n};",
+    "typescript": "function minTime(s: string, order: number[], k: number): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String $s\n     * @param Integer[] $order\n     * @param Integer $k\n     * @return Integer\n     */\n    function minTime($s, $order, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minTime(_ s: String, _ order: [Int], _ k: Int) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minTime(s: String, order: IntArray, k: Int): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minTime(String s, List<int> order, int k) {\n    \n  }\n}",
+    "golang": "func minTime(s string, order []int, k int) int {\n    \n}",
+    "ruby": "# @param {String} s\n# @param {Integer[]} order\n# @param {Integer} k\n# @return {Integer}\ndef min_time(s, order, k)\n    \nend",
+    "scala": "object Solution {\n    def minTime(s: String, order: Array[Int], k: Int): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn min_time(s: String, order: Vec<i32>, k: i32) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (min-time s order k)\n  (-> string? (listof exact-integer?) exact-integer? exact-integer?)\n  )",
+    "erlang": "-spec min_time(S :: unicode:unicode_binary(), Order :: [integer()], K :: integer()) -> integer().\nmin_time(S, Order, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec min_time(s :: String.t, order :: [integer], k :: integer) :: integer\n  def min_time(s, order, k) do\n    \n  end\nend"
+  }
+}

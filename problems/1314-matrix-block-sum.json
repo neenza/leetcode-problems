@@ -1,0 +1,58 @@
+{
+  "title": "Matrix Block Sum",
+  "problem_id": "1242",
+  "frontend_id": "1314",
+  "difficulty": "Medium",
+  "problem_slug": "matrix-block-sum",
+  "topics": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ],
+  "description": "Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for:\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 1\nOutput: [[12,21,16],[27,45,33],[24,39,28]]",
+      "images": []
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 2\nOutput: [[45,45,45],[45,45,45],[45,45,45]]",
+      "images": []
+    }
+  ],
+  "constraints": [
+    "m == mat.length",
+    "n == mat[i].length",
+    "1 <= m, n, k <= 100",
+    "1 <= mat[i][j] <= 100"
+  ],
+  "follow_ups": [],
+  "hints": [
+    "How to calculate the required sum for a cell (i,j) fast ?",
+    "Use the concept of cumulative sum array.",
+    "Create a cumulative sum matrix where dp[i][j] is the sum of all cells in the rectangle from (0,0) to (i,j), use inclusion-exclusion idea."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] matrixBlockSum(int[][] mat, int k) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def matrixBlockSum(self, mat, k):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:\n        ",
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** matrixBlockSum(int** mat, int matSize, int* matColSize, int k, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "csharp": "public class Solution {\n    public int[][] MatrixBlockSum(int[][] mat, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} k\n * @return {number[][]}\n */\nvar matrixBlockSum = function(mat, k) {\n    \n};",
+    "typescript": "function matrixBlockSum(mat: number[][], k: number): number[][] {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $mat\n     * @param Integer $k\n     * @return Integer[][]\n     */\n    function matrixBlockSum($mat, $k) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func matrixBlockSum(_ mat: [[Int]], _ k: Int) -> [[Int]] {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun matrixBlockSum(mat: Array<IntArray>, k: Int): Array<IntArray> {\n        \n    }\n}",
+    "dart": "class Solution {\n  List<List<int>> matrixBlockSum(List<List<int>> mat, int k) {\n    \n  }\n}",
+    "golang": "func matrixBlockSum(mat [][]int, k int) [][]int {\n    \n}",
+    "ruby": "# @param {Integer[][]} mat\n# @param {Integer} k\n# @return {Integer[][]}\ndef matrix_block_sum(mat, k)\n    \nend",
+    "scala": "object Solution {\n    def matrixBlockSum(mat: Array[Array[Int]], k: Int): Array[Array[Int]] = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn matrix_block_sum(mat: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {\n        \n    }\n}",
+    "racket": "(define/contract (matrix-block-sum mat k)\n  (-> (listof (listof exact-integer?)) exact-integer? (listof (listof exact-integer?)))\n  )",
+    "erlang": "-spec matrix_block_sum(Mat :: [[integer()]], K :: integer()) -> [[integer()]].\nmatrix_block_sum(Mat, K) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec matrix_block_sum(mat :: [[integer]], k :: integer) :: [[integer]]\n  def matrix_block_sum(mat, k) do\n    \n  end\nend"
+  }
+}

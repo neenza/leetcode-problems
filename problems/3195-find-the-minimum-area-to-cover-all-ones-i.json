@@ -1,0 +1,58 @@
+{
+  "title": "Find the Minimum Area to Cover All Ones I",
+  "problem_id": "3461",
+  "frontend_id": "3195",
+  "difficulty": "Medium",
+  "problem_slug": "find-the-minimum-area-to-cover-all-ones-i",
+  "topics": [
+    "Array",
+    "Matrix"
+  ],
+  "description": "You are given a 2D binary array grid. Find a rectangle with horizontal and vertical sides with the smallest area, such that all the 1's in grid lie inside this rectangle.\nReturn the minimum possible area of the rectangle.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[0,1,0],[1,0,1]]\nOutput: 6\nExplanation:\n\nThe smallest rectangle has a height of 2 and a width of 3, so it has an area of 2 * 3 = 6 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/08/examplerect0.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[1,0],[0,0]]\nOutput: 1\nExplanation:\n\nThe smallest rectangle has both height and width 1, so its area is 1 * 1 = 1 .",
+      "images": [
+        "https://assets.leetcode.com/uploads/2024/05/08/examplerect1.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "1 <= grid.length, grid[i].length <= 1000",
+    "grid[i][j] is either 0 or 1.",
+    "The input is generated such that there is at least one 1 in grid."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "Find the minimum and maximum coordinates of a cell with a value of 1 in both directions."
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    int minimumArea(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumArea(int[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def minimumArea(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def minimumArea(self, grid: List[List[int]]) -> int:\n        ",
+    "c": "int minimumArea(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public int MinimumArea(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumArea = function(grid) {\n    \n};",
+    "typescript": "function minimumArea(grid: number[][]): number {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param Integer[][] $grid\n     * @return Integer\n     */\n    function minimumArea($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func minimumArea(_ grid: [[Int]]) -> Int {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun minimumArea(grid: Array<IntArray>): Int {\n        \n    }\n}",
+    "dart": "class Solution {\n  int minimumArea(List<List<int>> grid) {\n    \n  }\n}",
+    "golang": "func minimumArea(grid [][]int) int {\n    \n}",
+    "ruby": "# @param {Integer[][]} grid\n# @return {Integer}\ndef minimum_area(grid)\n    \nend",
+    "scala": "object Solution {\n    def minimumArea(grid: Array[Array[Int]]): Int = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn minimum_area(grid: Vec<Vec<i32>>) -> i32 {\n        \n    }\n}",
+    "racket": "(define/contract (minimum-area grid)\n  (-> (listof (listof exact-integer?)) exact-integer?)\n  )",
+    "erlang": "-spec minimum_area(Grid :: [[integer()]]) -> integer().\nminimum_area(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec minimum_area(grid :: [[integer]]) :: integer\n  def minimum_area(grid) do\n    \n  end\nend"
+  }
+}

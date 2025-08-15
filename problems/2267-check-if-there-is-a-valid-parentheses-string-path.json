@@ -1,0 +1,62 @@
+{
+  "title": " Check if There Is a Valid Parentheses String Path",
+  "problem_id": "2349",
+  "frontend_id": "2267",
+  "difficulty": "Hard",
+  "problem_slug": "check-if-there-is-a-valid-parentheses-string-path",
+  "topics": [
+    "Array",
+    "Dynamic Programming",
+    "Matrix"
+  ],
+  "description": "A parentheses string is a non-empty string consisting only of '(' and ')'. It is valid if any of the following conditions is true:\nYou are given an m x n matrix of parentheses grid. A valid parentheses string path in the grid is a path satisfying all of the following conditions:\nReturn true if there exists a valid parentheses string path in the grid. Otherwise, return false.\nExample 1:\nExample 2:\nConstraints:",
+  "examples": [
+    {
+      "example_num": 1,
+      "example_text": "Input: grid = [[\"(\",\"(\",\"(\"],[\")\",\"(\",\")\"],[\"(\",\"(\",\")\"],[\"(\",\"(\",\")\"]]\nOutput: true\nExplanation: The above diagram shows two possible paths that form valid parentheses strings.\nThe first path shown results in the valid parentheses string \"()(())\".\nThe second path shown results in the valid parentheses string \"((()))\".\nNote that there may be other valid parentheses string paths.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/15/example1drawio.png"
+      ]
+    },
+    {
+      "example_num": 2,
+      "example_text": "Input: grid = [[\")\",\")\"],[\"(\",\"(\"]]\nOutput: false\nExplanation: The two possible paths form the parentheses strings \"))(\" and \")((\". Since neither of them are valid parentheses strings, we return false.",
+      "images": [
+        "https://assets.leetcode.com/uploads/2022/03/15/example2drawio.png"
+      ]
+    }
+  ],
+  "constraints": [
+    "m == grid.length",
+    "n == grid[i].length",
+    "1 <= m, n <= 100",
+    "grid[i][j] is either '(' or ')'."
+  ],
+  "follow_ups": [],
+  "hints": [
+    "What observations can you make about the number of open brackets and close brackets for any prefix of a valid bracket sequence?",
+    "The number of open brackets must always be greater than or equal to the number of close brackets.",
+    "Could you use dynamic programming?"
+  ],
+  "code_snippets": {
+    "cpp": "class Solution {\npublic:\n    bool hasValidPath(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasValidPath(char[][] grid) {\n        \n    }\n}",
+    "python": "class Solution(object):\n    def hasValidPath(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        ",
+    "python3": "class Solution:\n    def hasValidPath(self, grid: List[List[str]]) -> bool:\n        ",
+    "c": "bool hasValidPath(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "csharp": "public class Solution {\n    public bool HasValidPath(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {boolean}\n */\nvar hasValidPath = function(grid) {\n    \n};",
+    "typescript": "function hasValidPath(grid: string[][]): boolean {\n    \n};",
+    "php": "class Solution {\n\n    /**\n     * @param String[][] $grid\n     * @return Boolean\n     */\n    function hasValidPath($grid) {\n        \n    }\n}",
+    "swift": "class Solution {\n    func hasValidPath(_ grid: [[Character]]) -> Bool {\n        \n    }\n}",
+    "kotlin": "class Solution {\n    fun hasValidPath(grid: Array<CharArray>): Boolean {\n        \n    }\n}",
+    "dart": "class Solution {\n  bool hasValidPath(List<List<String>> grid) {\n    \n  }\n}",
+    "golang": "func hasValidPath(grid [][]byte) bool {\n    \n}",
+    "ruby": "# @param {Character[][]} grid\n# @return {Boolean}\ndef has_valid_path(grid)\n    \nend",
+    "scala": "object Solution {\n    def hasValidPath(grid: Array[Array[Char]]): Boolean = {\n        \n    }\n}",
+    "rust": "impl Solution {\n    pub fn has_valid_path(grid: Vec<Vec<char>>) -> bool {\n        \n    }\n}",
+    "racket": "(define/contract (has-valid-path grid)\n  (-> (listof (listof char?)) boolean?)\n  )",
+    "erlang": "-spec has_valid_path(Grid :: [[char()]]) -> boolean().\nhas_valid_path(Grid) ->\n  .",
+    "elixir": "defmodule Solution do\n  @spec has_valid_path(grid :: [[char]]) :: boolean\n  def has_valid_path(grid) do\n    \n  end\nend"
+  }
+}
